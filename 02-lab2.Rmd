@@ -1,0 +1,48 @@
+# Efeitos de Pólos e Zeros na Dinâmica
+
+## Apresentação do Laboratório
+
+### Objetivo
+
+Nesta experiência, verificaremos a influência dos pólos e zeros de uma Função de Transferência na resposta dinâmica para entradas do tipo degrau e também para entradas senoidais. Utilizaremos o Matlab para realizar as
+simulações.
+
+### Polos e Zeros
+
+Considere uma função de Trasnferência da forma
+
+$$
+G(s) = \frac{Y(s)}{U(s)} = \frac{N(s)}{D(s)} = \frac{b_1s^m +b_2s^{m-1} + \dots + b_ms + b_{m+1}}{s^n + a_1s^{n-1}+ \dots + a_{n-1}s + a_n}
+$$
+
+onde $Y(s)$ é a saída, $U(s)$ é a entrada, $n \geq m$ e todos os coeficientes são reais. Temos as seguintes definições:
+
+1. Os pólos $G(s)$ são as raízes de $D(s)$ ($D(s) = 0$);
+2. Os *zeros* de $G(s)$ são as raízes de $N(s)$ ($N(s) = 0$);
+3. $G(s)$ é *estável* quando todos os pólos possuem parte real negativa, ou seja, estão no semi-plano esquerdo (SPE) do plano $s$;
+4. $G(s)$ é *instável* quando existe ao menos um pólo com parte real positiva, ou seja, no semi-plano (SPD);
+5. $G(s)$ é de *fase não-mínima* quando há polos ou zeros no SPF.
+
+Considere que $G(s)$ é estável, ou seja, todos os pólos estão no SPE. Em geral, para entradas do tipo degrau, temos:
+
+1. A componente da resposta dinâmica referente a um pólo afastado da origem (do plano $s$) é relativamente rápida;
+2. A componente da resposta dinâmica referente a um pólo próximo da origem é relativamente lenta;
+3. Um zero tende a fazer com que a resposta dinâmica apresente sobressinal. Quanto mais próximo da origem estiver o zero, maior o sobressinal. E, quanto mais longe da origem, menor se torna o sobressinal, podendo o mesmo não existir. Assim, um sistema de segunda ordem com pólos reais e um zero poderá apresentar um sobressinal dependendo do posicionamento do zero no plano $s$;
+4. Um zero bem próximo de um pólo tende a anular os efeitos dos mesmos na resposta dinâmica.
+
+## Procedimentos
+
+### Problema 1 {-}
+
+Considere o sistema de primeira ordem
+$$
+G(s) = \frac{1}{\tau s +1},
+$$
+onde $\tau = 1$, $\tau = 0.5$. Para cada valor de $\tau$, determine o pólo e sua posição no plano $s$ (use os comandos `zpk` e `pzmap` no Matlab), e conclua sobre a estabilidade e a rapidez da resposta do sistema. Simule para uma entrada do tipo degrau unitário. Analise e compare os resultados. Agora, repita o procedimento para o sistema
+$$
+G(s) = \frac{1}{s-1}.
+$$
+
+#### Resolução {-}
+
+Working on it :)

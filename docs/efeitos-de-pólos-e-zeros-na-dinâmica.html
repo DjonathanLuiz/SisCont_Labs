@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Laboratório de Sistemas de Controle</title>
+  <title>Laboratório 2 Efeitos de Pólos e Zeros na Dinâmica | Laboratório de Sistemas de Controle</title>
   <meta name="description" content="Este livro tem o objetivo de apresentar as respostas dos laboratórios da disciplina DAS5317 Sistemas de Controle da Universidade Federal de Santa Catarina para o semestre 2020.1 desenvolvidas pelo acadêmico Djonathan Luiz de Oliveira Quadras." />
   <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Laboratório de Sistemas de Controle" />
+  <meta property="og:title" content="Laboratório 2 Efeitos de Pólos e Zeros na Dinâmica | Laboratório de Sistemas de Controle" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Laboratório de Sistemas de Controle" />
+  <meta name="twitter:title" content="Laboratório 2 Efeitos de Pólos e Zeros na Dinâmica | Laboratório de Sistemas de Controle" />
   
   <meta name="twitter:description" content="Este livro tem o objetivo de apresentar as respostas dos laboratórios da disciplina DAS5317 Sistemas de Controle da Universidade Federal de Santa Catarina para o semestre 2020.1 desenvolvidas pelo acadêmico Djonathan Luiz de Oliveira Quadras." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="simulação-de-sistemas.html"/>
+<link rel="prev" href="simulação-de-sistemas.html"/>
+<link rel="next" href="identificação-de-sistemas.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -101,23 +101,65 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Laboratório de Sistemas de Controle</h1>
-<p class="author"><em>Djonathan Luiz de Oliveira Quadras</em></p>
-<p class="date"><em>2020-05-26</em></p>
+<div id="efeitos-de-pólos-e-zeros-na-dinâmica" class="section level1">
+<h1><span class="header-section-number">Laboratório 2</span> Efeitos de Pólos e Zeros na Dinâmica</h1>
+<div id="apresentação-do-laboratório" class="section level2">
+<h2><span class="header-section-number">2.1</span> Apresentação do Laboratório</h2>
+<div id="objetivo" class="section level3">
+<h3><span class="header-section-number">2.1.1</span> Objetivo</h3>
+<p>Nesta experiência, verificaremos a influência dos pólos e zeros de uma Função de Transferência na resposta dinâmica para entradas do tipo degrau e também para entradas senoidais. Utilizaremos o Matlab para realizar as
+simulações.</p>
 </div>
-<div id="apresentação" class="section level1 unnumbered">
-<h1>Apresentação</h1>
+<div id="polos-e-zeros" class="section level3">
+<h3><span class="header-section-number">2.1.2</span> Polos e Zeros</h3>
+<p>Considere uma função de Trasnferência da forma</p>
+<p><span class="math display">\[
+G(s) = \frac{Y(s)}{U(s)} = \frac{N(s)}{D(s)} = \frac{b_1s^m +b_2s^{m-1} + \dots + b_ms + b_{m+1}}{s^n + a_1s^{n-1}+ \dots + a_{n-1}s + a_n}
+\]</span></p>
+<p>onde <span class="math inline">\(Y(s)\)</span> é a saída, <span class="math inline">\(U(s)\)</span> é a entrada, <span class="math inline">\(n \geq m\)</span> e todos os coeficientes são reais. Temos as seguintes definições:</p>
+<ol style="list-style-type: decimal">
+<li>Os pólos <span class="math inline">\(G(s)\)</span> são as raízes de <span class="math inline">\(D(s)\)</span> (<span class="math inline">\(D(s) = 0\)</span>);</li>
+<li>Os <em>zeros</em> de <span class="math inline">\(G(s)\)</span> são as raízes de <span class="math inline">\(N(s)\)</span> (<span class="math inline">\(N(s) = 0\)</span>);</li>
+<li><span class="math inline">\(G(s)\)</span> é <em>estável</em> quando todos os pólos possuem parte real negativa, ou seja, estão no semi-plano esquerdo (SPE) do plano <span class="math inline">\(s\)</span>;</li>
+<li><span class="math inline">\(G(s)\)</span> é <em>instável</em> quando existe ao menos um pólo com parte real positiva, ou seja, no semi-plano (SPD);</li>
+<li><span class="math inline">\(G(s)\)</span> é de <em>fase não-mínima</em> quando há polos ou zeros no SPF.</li>
+</ol>
+<p>Considere que <span class="math inline">\(G(s)\)</span> é estável, ou seja, todos os pólos estão no SPE. Em geral, para entradas do tipo degrau, temos:</p>
+<ol style="list-style-type: decimal">
+<li>A componente da resposta dinâmica referente a um pólo afastado da origem (do plano <span class="math inline">\(s\)</span>) é relativamente rápida;</li>
+<li>A componente da resposta dinâmica referente a um pólo próximo da origem é relativamente lenta;</li>
+<li>Um zero tende a fazer com que a resposta dinâmica apresente sobressinal. Quanto mais próximo da origem estiver o zero, maior o sobressinal. E, quanto mais longe da origem, menor se torna o sobressinal, podendo o mesmo não existir. Assim, um sistema de segunda ordem com pólos reais e um zero poderá apresentar um sobressinal dependendo do posicionamento do zero no plano <span class="math inline">\(s\)</span>;</li>
+<li>Um zero bem próximo de um pólo tende a anular os efeitos dos mesmos na resposta dinâmica.</li>
+</ol>
+</div>
+</div>
+<div id="procedimentos" class="section level2">
+<h2><span class="header-section-number">2.2</span> Procedimentos</h2>
+<div id="problema-1" class="section level3 unnumbered">
+<h3>Problema 1</h3>
+<p>Considere o sistema de primeira ordem
+<span class="math display">\[
+G(s) = \frac{1}{\tau s +1},
+\]</span>
+onde <span class="math inline">\(\tau = 1\)</span>, <span class="math inline">\(\tau = 0.5\)</span>. Para cada valor de <span class="math inline">\(\tau\)</span>, determine o pólo e sua posição no plano <span class="math inline">\(s\)</span> (use os comandos <code>zpk</code> e <code>pzmap</code> no Matlab), e conclua sobre a estabilidade e a rapidez da resposta do sistema. Simule para uma entrada do tipo degrau unitário. Analise e compare os resultados. Agora, repita o procedimento para o sistema
+<span class="math display">\[
+G(s) = \frac{1}{s-1}.
+\]</span></p>
+<div id="resolução" class="section level4 unnumbered">
+<h4>Resolução</h4>
 <p>Working on it :)</p>
 
+</div>
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="simulação-de-sistemas.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="simulação-de-sistemas.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="identificação-de-sistemas.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

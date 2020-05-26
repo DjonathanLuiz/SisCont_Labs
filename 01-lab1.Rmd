@@ -1,0 +1,3 @@
+# Simulação de Sistemas
+
+Este laboratório consistiu apenas na apresentação da disciplina, da ferramenta e do método que será aplicado. Não teve nehuma atividade desenvolvida.

@@ -1,13 +1,13 @@
 --- 
-title: "A Minimal Book Example"
-author: "Yihui Xie"
+title: "Laboratório de Sistemas de Controle"
+author: "Djonathan Luiz de Oliveira Quadras"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
-description: "This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook."
+description: "Este livro tem o objetivo de apresentar as respostas dos laboratórios da disciplina DAS5317 Sistemas de Controle da Universidade Federal de Santa Catarina para o semestre 2020.1 desenvolvidas pelo acadêmico Djonathan Luiz de Oliveira Quadras."
 ---
 
 # Prerequisites

@@ -1,4 +1,5 @@
 book_filename: "SisCont_Labs"
+output_dir: "docs"
 delete_merged_file: true
 language:
   ui:

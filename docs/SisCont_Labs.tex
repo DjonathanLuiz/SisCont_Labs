@@ -344,6 +344,75 @@ O resultado apresentado pelo \emph{scope} é apresentado na figura abaixo.
 
 O resultado comprova o esperado. O sistema se comporta de forma instável para a função de transferência dada por \(G(s) = \frac {1}{s-1}\).
 
+\hypertarget{problema-2}{%
+\subsection*{Problema 2}\label{problema-2}}
+\addcontentsline{toc}{subsection}{Problema 2}
+
+Considere o sistema de primeira ordem (integrador)
+\[
+G(s) = \frac {1}{s}.
+\]
+
+Determine o pólo e a sua posição no plano \(s\) e simule para uma entrada do tipo degrau unitário e também para \(\sin {(t)}\) (para \(\sin {(t)}\), escolha \textbf{Max Step Size = 0.1} em \textbf{Simulation \(\implies\) Configurarion Parameters}). Note que a saída é a integral da entrada. Tais resultados eram esperados? Dica: relembre que \(Y(s) = G(s)U(s)\), e que se \(x(t) \iff X(S)\), então \(\int_0^t x(\tau) \mathrm{d}\tau \iff X(s)/s\).
+
+\hypertarget{resoluuxe7uxe3o-1}{%
+\subsubsection*{Resolução}\label{resoluuxe7uxe3o-1}}
+\addcontentsline{toc}{subsubsection}{Resolução}
+
+O código utilizado no \texttt{Matlab} é apresentado abaixo.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{g = tf([}\FloatTok{1}\NormalTok{], [}\FloatTok{1} \FloatTok{0}\NormalTok{])}
+\NormalTok{[p,z] = pzmap(g)}
+\NormalTok{pzmap(g)}
+\end{Highlighting}
+\end{Shaded}
+
+Obtendo como resultado:
+
+\begin{verbatim}
+p =
+
+     0
+
+
+z =
+
+  0×1 empty double column vector
+\end{verbatim}
+
+Conclue-se então que a função de transferência \(G(s) = \frac {1}{s}\) não tem zeros e tem pólo em \(s = 0\). O mapa da posição no plano é mostrado na figura abaixo.
+
+\includegraphics{Imagens/Lab2/prob2.jpg}
+
+Isso mostra que o sistema é um caso crítico. Neste caso a resposta em regime permanente do sistema a uma entrada de amplitude limitada será uma senóide.
+
+A simulação feita em \texttt{Matlab} está apresentada na figura abaixo.
+
+\includegraphics{Imagens/Lab2/simP2.jpg}
+
+O resultado da simulação é apresentado na figura abaixo.
+
+\includegraphics{Imagens/Lab2/prob2B.jpg}
+
+O resultados eram esperados, uma vez que em um estado crítico a função de transferência pode estar em um estado permanente senoidal caso a entrada seja senoidal ou pode divergir caso a entrada seja um sinal constante.
+
+\hypertarget{problema-3}{%
+\subsection*{Problema 3}\label{problema-3}}
+\addcontentsline{toc}{subsection}{Problema 3}
+
+Considere o sistema de segunda ordem
+\[
+G(s) = \frac {1}{s^2 +25}.
+\]
+
+Determine os pólos e suas posições no plano \(s\). Simule para as seguintes entradas: degrau unitário, \(\sin (4t)\), \(\sin(6t)\). Observe que a saída é limitada. Agora, semule para a entrada \(\sin(5t)\). Note que a amplitude de saída cresce indefinidamente. Tal fenômeno é denominado de \emph{ressonância}. De moro mais geral, para
+\[
+G(s) = \frac {1}{s^2+\omega_0^2},
+\]
+teremos ressonância quando aplicamos uma entrada senoidal da forma \(\sin(\omega_0t + \phi)\). Note que a \emph{frequência de ressonância} \(\omega_0\) é igual a parte imaginária dos pólos de \(G(s)\).
+
 \hypertarget{identificauxe7uxe3o-de-sistemas}{%
 \chapter{Identificação de Sistemas}\label{identificauxe7uxe3o-de-sistemas}}
 

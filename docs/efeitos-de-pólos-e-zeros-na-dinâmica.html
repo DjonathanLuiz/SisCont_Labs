@@ -140,6 +140,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#procedimentos"><i class="fa fa-check"></i><b>2.2</b> Procedimentos</a><ul>
 <li class="chapter" data-level="" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#problema-1"><i class="fa fa-check"></i>Problema 1</a></li>
+<li class="chapter" data-level="" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#problema-2"><i class="fa fa-check"></i>Problema 2</a></li>
+<li class="chapter" data-level="" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#problema-3"><i class="fa fa-check"></i>Problema 3</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html"><i class="fa fa-check"></i><b>3</b> Identificação de Sistemas</a></li>
@@ -294,9 +296,53 @@ z =
 <p>O resultado apresentado pelo <em>scope</em> é apresentado na figura abaixo.</p>
 <p><img src="Imagens/Lab2/resultSim2.jpg" /></p>
 <p>O resultado comprova o esperado. O sistema se comporta de forma instável para a função de transferência dada por <span class="math inline">\(G(s) = \frac {1}{s-1}\)</span>.</p>
+</div>
+</div>
+</div>
+<div id="problema-2" class="section level3 unnumbered">
+<h3>Problema 2</h3>
+<p>Considere o sistema de primeira ordem (integrador)
+<span class="math display">\[
+G(s) = \frac {1}{s}.
+\]</span></p>
+<p>Determine o pólo e a sua posição no plano <span class="math inline">\(s\)</span> e simule para uma entrada do tipo degrau unitário e também para <span class="math inline">\(\sin {(t)}\)</span> (para <span class="math inline">\(\sin {(t)}\)</span>, escolha <strong>Max Step Size = 0.1</strong> em <strong>Simulation <span class="math inline">\(\implies\)</span> Configurarion Parameters</strong>). Note que a saída é a integral da entrada. Tais resultados eram esperados? Dica: relembre que <span class="math inline">\(Y(s) = G(s)U(s)\)</span>, e que se <span class="math inline">\(x(t) \iff X(S)\)</span>, então <span class="math inline">\(\int_0^t x(\tau) \mathrm{d}\tau \iff X(s)/s\)</span>.</p>
+<div id="resolução-1" class="section level4 unnumbered">
+<h4>Resolução</h4>
+<p>O código utilizado no <code>Matlab</code> é apresentado abaixo.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode matlab"><code class="sourceCode matlab"><a class="sourceLine" id="cb7-1" title="1">g = tf([<span class="fl">1</span>], [<span class="fl">1</span> <span class="fl">0</span>])</a>
+<a class="sourceLine" id="cb7-2" title="2">[p,z] = pzmap(g)</a>
+<a class="sourceLine" id="cb7-3" title="3">pzmap(g)</a></code></pre></div>
+<p>Obtendo como resultado:</p>
+<pre><code>p =
 
+     0
+
+
+z =
+
+  0×1 empty double column vector</code></pre>
+<p>Conclue-se então que a função de transferência <span class="math inline">\(G(s) = \frac {1}{s}\)</span> não tem zeros e tem pólo em <span class="math inline">\(s = 0\)</span>. O mapa da posição no plano é mostrado na figura abaixo.</p>
+<p><img src="Imagens/Lab2/prob2.jpg" /></p>
+<p>Isso mostra que o sistema é um caso crítico. Neste caso a resposta em regime permanente do sistema a uma entrada de amplitude limitada será uma senóide.</p>
+<p>A simulação feita em <code>Matlab</code> está apresentada na figura abaixo.</p>
+<p><img src="Imagens/Lab2/simP2.jpg" /></p>
+<p>O resultado da simulação é apresentado na figura abaixo.</p>
+<p><img src="Imagens/Lab2/prob2B.jpg" /></p>
+<p>O resultados eram esperados, uma vez que em um estado crítico a função de transferência pode estar em um estado permanente senoidal caso a entrada seja senoidal ou pode divergir caso a entrada seja um sinal constante.</p>
 </div>
 </div>
+<div id="problema-3" class="section level3 unnumbered">
+<h3>Problema 3</h3>
+<p>Considere o sistema de segunda ordem
+<span class="math display">\[
+G(s) = \frac {1}{s^2 +25}.
+\]</span></p>
+<p>Determine os pólos e suas posições no plano <span class="math inline">\(s\)</span>. Simule para as seguintes entradas: degrau unitário, <span class="math inline">\(\sin (4t)\)</span>, <span class="math inline">\(\sin(6t)\)</span>. Observe que a saída é limitada. Agora, semule para a entrada <span class="math inline">\(\sin(5t)\)</span>. Note que a amplitude de saída cresce indefinidamente. Tal fenômeno é denominado de <em>ressonância</em>. De moro mais geral, para
+<span class="math display">\[
+G(s) = \frac {1}{s^2+\omega_0^2},
+\]</span>
+teremos ressonância quando aplicamos uma entrada senoidal da forma <span class="math inline">\(\sin(\omega_0t + \phi)\)</span>. Note que a <em>frequência de ressonância</em> <span class="math inline">\(\omega_0\)</span> é igual a parte imaginária dos pólos de <span class="math inline">\(G(s)\)</span>.</p>
+
 </div>
 </div>
 </div>

@@ -45,4 +45,75 @@ $$
 
 #### Resolução {-}
 
-Working on it :)
+A resolução será feita em quatro partes: (1) a resolução para $\tau = 1$ usando `pzmap`, (2) a resolução para $\tau = 0.5$ usando `pzmap`, (3) a simulação e comparação dos resultados e, por fim, (4) a resolução para $G(s) =\frac {1}{s-1}$.
+
+##### Parte 1 {-}
+
+Para $\tau = 1$, temos a função de transferência dada por 
+$$
+G(S)= \frac {1}{s+1}.
+$$
+
+O código implementado no `Matlab` foi o apresentado abaixo.
+
+```{matlab}
+g = tf([1], [1 1])
+[p, z] = pzmap(g)
+pzmap(g)
+```
+
+Tendo como resultados de polos e zeros:
+
+```
+p =
+
+    -1
+
+
+z =
+
+  0×1 empty double column vector
+```
+
+Ou seja, a função de transferência não apresenta zeros e tem seu polo em $s = -1$. A sua posição no plano é apresentada na figura abaixo.
+
+![](Imagens/Lab2/tau1.jpg)
+
+Como o polo da função de transferência se encontra na SPE, conclui-se que o sistema se compartará de uma forma estável.
+
+##### Parte 2 {-}
+
+Para $\tau = 0.5$, temos a função de transferência dada por 
+$$
+G(S)= \frac {1}{0.5s+1}.
+$$
+
+O código implementado no `Matlab` foi o apresentado abaixo.
+
+```{matlab}
+g = tf([1], [0.5 1])
+[p, z] = pzmap(g)
+pzmap(g)
+```
+
+Tendo como resultados de polos e zeros:
+
+```
+p =
+
+    -2
+
+
+z =
+
+  0×1 empty double column vector
+```
+
+Ou seja, a função de transferência não apresenta zeros e tem seu polo em $s = -2$. A sua posição no plano é apresentada na figura abaixo
+
+![](Imagens/Lab2/tau2.jpg)
+
+Como o polo da função de transferência se encontra na SPE, conclui-se que o sistema se compartará de uma forma estável.
+
+##### Parte 3 {-}
+

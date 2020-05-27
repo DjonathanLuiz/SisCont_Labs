@@ -258,10 +258,42 @@ z =
   0×1 empty double column vector</code></pre>
 <p>Ou seja, a função de transferência não apresenta zeros e tem seu polo em <span class="math inline">\(s = -2\)</span>. A sua posição no plano é apresentada na figura abaixo</p>
 <p><img src="Imagens/Lab2/tau2.jpg" /></p>
-<p>Como o polo da função de transferência se encontra na SPE, conclui-se que o sistema se compartará de uma forma estável.</p>
+<p>Como o polo da função de transferência se encontra na SPE, conclui-se que o sistema se compartará de uma forma estável. Também é possível concluir que o sistema alcanraça a estabilidade mais rápido para <span class="math inline">\(\tau = 0.5\)</span>.</p>
 </div>
 <div id="parte-3" class="section level5 unnumbered">
 <h5>Parte 3</h5>
+<p>A simulação do sistema implementada em <code>Matlab</code> está apresentado na figura abaixo.</p>
+<p><img src="Imagens/Lab2/sim1.jpg" /></p>
+<p>O resultado apresentado pelo <em>scope</em> é apresentado na figura abaixo.</p>
+<p><img src="Imagens/Lab2/resultSim1.jpg" /></p>
+<p>Percebe-se que, assim como esperado, o sistema se comporta de forma estável e tem uma convergência mais rápida para <span class="math inline">\(\tau = 0.5\)</span>.</p>
+</div>
+<div id="parte-4" class="section level5 unnumbered">
+<h5>Parte 4</h5>
+<p>Para a última etapa temos a função de transferência dada por
+<span class="math display">\[
+G(S)= \frac {1}{s-1}.
+\]</span></p>
+<p>O código implementado no <code>Matlab</code> foi o apresentado abaixo.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode matlab"><code class="sourceCode matlab"><a class="sourceLine" id="cb5-1" title="1">g = tf([<span class="fl">1</span>], [<span class="fl">1</span> -<span class="fl">1</span>])</a>
+<a class="sourceLine" id="cb5-2" title="2">[p, z] = pzmap(g)</a>
+<a class="sourceLine" id="cb5-3" title="3">pzmap(g)</a></code></pre></div>
+<p>Tendo como resultados de polos e zeros:</p>
+<pre><code>p =
+
+    1
+
+
+z =
+
+  0×1 empty double column vector</code></pre>
+<p>Ou seja, a função de transferência não apresenta zeros e tem seu polo em <span class="math inline">\(s = 1\)</span>. A sua posição no plano é apresentada na figura abaixo</p>
+<p><img src="Imagens/Lab2/tau3.jpg" /></p>
+<p>Como o polo da função de transferência se encontra na SPD, conclui-se que o sistema se compartará de uma forma instável. A simulação em <code>Matlab</code> está apresentada na figura abaixo.</p>
+<p><img src="Imagens/Lab2/sim2.jpg" /></p>
+<p>O resultado apresentado pelo <em>scope</em> é apresentado na figura abaixo.</p>
+<p><img src="Imagens/Lab2/resultSim2.jpg" /></p>
+<p>O resultado comprova o esperado. O sistema se comporta de forma instável para a função de transferência dada por <span class="math inline">\(G(s) = \frac {1}{s-1}\)</span>.</p>
 
 </div>
 </div>

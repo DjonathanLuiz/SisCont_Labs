@@ -41,6 +41,46 @@
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 \urlstyle{same} % disable monospaced font for URLs
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \usepackage{longtable,booktabs}
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
@@ -73,7 +113,7 @@
 
 \title{Laboratório de Sistemas de Controle}
 \author{Djonathan Luiz de Oliveira Quadras}
-\date{2020-05-26}
+\date{2020-05-27}
 
 \begin{document}
 \maketitle
@@ -166,12 +206,159 @@ G(s) = \frac{1}{s-1}.
 \subsubsection*{Resolução}\label{resoluuxe7uxe3o}}
 \addcontentsline{toc}{subsubsection}{Resolução}
 
-Working on it :)
+A resolução será feita em quatro partes: (1) a resolução para \(\tau = 1\) usando \texttt{pzmap}, (2) a resolução para \(\tau = 0.5\) usando \texttt{pzmap}, (3) a simulação e comparação dos resultados e, por fim, (4) a resolução para \(G(s) =\frac {1}{s-1}\).
+
+\hypertarget{parte-1}{%
+\paragraph{Parte 1}\label{parte-1}}
+\addcontentsline{toc}{paragraph}{Parte 1}
+
+Para \(\tau = 1\), temos a função de transferência dada por
+\[
+G(S)= \frac {1}{s+1}.
+\]
+
+O código implementado no \texttt{Matlab} foi o apresentado abaixo.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{g = tf([}\FloatTok{1}\NormalTok{], [}\FloatTok{1} \FloatTok{1}\NormalTok{])}
+\NormalTok{[p, z] = pzmap(g)}
+\NormalTok{pzmap(g)}
+\end{Highlighting}
+\end{Shaded}
+
+Tendo como resultados de polos e zeros:
+
+\begin{verbatim}
+p =
+
+    -1
+
+
+z =
+
+  0×1 empty double column vector
+\end{verbatim}
+
+Ou seja, a função de transferência não apresenta zeros e tem seu polo em \(s = -1\). A sua posição no plano é apresentada na figura abaixo.
+
+\includegraphics{Imagens/Lab2/tau1.jpg}
+
+Como o polo da função de transferência se encontra na SPE, conclui-se que o sistema se compartará de uma forma estável.
+
+\hypertarget{parte-2}{%
+\paragraph{Parte 2}\label{parte-2}}
+\addcontentsline{toc}{paragraph}{Parte 2}
+
+Para \(\tau = 0.5\), temos a função de transferência dada por
+\[
+G(S)= \frac {1}{0.5s+1}.
+\]
+
+O código implementado no \texttt{Matlab} foi o apresentado abaixo.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{g = tf([}\FloatTok{1}\NormalTok{], [}\FloatTok{0.5} \FloatTok{1}\NormalTok{])}
+\NormalTok{[p, z] = pzmap(g)}
+\NormalTok{pzmap(g)}
+\end{Highlighting}
+\end{Shaded}
+
+Tendo como resultados de polos e zeros:
+
+\begin{verbatim}
+p =
+
+    -2
+
+
+z =
+
+  0×1 empty double column vector
+\end{verbatim}
+
+Ou seja, a função de transferência não apresenta zeros e tem seu polo em \(s = -2\). A sua posição no plano é apresentada na figura abaixo
+
+\includegraphics{Imagens/Lab2/tau2.jpg}
+
+Como o polo da função de transferência se encontra na SPE, conclui-se que o sistema se compartará de uma forma estável. Também é possível concluir que o sistema alcanraça a estabilidade mais rápido para \(\tau = 0.5\).
+
+\hypertarget{parte-3}{%
+\paragraph{Parte 3}\label{parte-3}}
+\addcontentsline{toc}{paragraph}{Parte 3}
+
+A simulação do sistema implementada em \texttt{Matlab} está apresentado na figura abaixo.
+
+\includegraphics{Imagens/Lab2/sim1.jpg}
+
+O resultado apresentado pelo \emph{scope} é apresentado na figura abaixo.
+
+\includegraphics{Imagens/Lab2/resultSim1.jpg}
+
+Percebe-se que, assim como esperado, o sistema se comporta de forma estável e tem uma convergência mais rápida para \(\tau = 0.5\).
+
+\hypertarget{parte-4}{%
+\paragraph{Parte 4}\label{parte-4}}
+\addcontentsline{toc}{paragraph}{Parte 4}
+
+Para a última etapa temos a função de transferência dada por
+\[
+G(S)= \frac {1}{s-1}.
+\]
+
+O código implementado no \texttt{Matlab} foi o apresentado abaixo.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{g = tf([}\FloatTok{1}\NormalTok{], [}\FloatTok{1}\NormalTok{ -}\FloatTok{1}\NormalTok{])}
+\NormalTok{[p, z] = pzmap(g)}
+\NormalTok{pzmap(g)}
+\end{Highlighting}
+\end{Shaded}
+
+Tendo como resultados de polos e zeros:
+
+\begin{verbatim}
+p =
+
+    1
+
+
+z =
+
+  0×1 empty double column vector
+\end{verbatim}
+
+Ou seja, a função de transferência não apresenta zeros e tem seu polo em \(s = 1\). A sua posição no plano é apresentada na figura abaixo
+
+\includegraphics{Imagens/Lab2/tau3.jpg}
+
+Como o polo da função de transferência se encontra na SPD, conclui-se que o sistema se compartará de uma forma instável. A simulação em \texttt{Matlab} está apresentada na figura abaixo.
+
+\includegraphics{Imagens/Lab2/sim2.jpg}
+
+O resultado apresentado pelo \emph{scope} é apresentado na figura abaixo.
+
+\includegraphics{Imagens/Lab2/resultSim2.jpg}
+
+O resultado comprova o esperado. O sistema se comporta de forma instável para a função de transferência dada por \(G(s) = \frac {1}{s-1}\).
 
 \hypertarget{identificauxe7uxe3o-de-sistemas}{%
 \chapter{Identificação de Sistemas}\label{identificauxe7uxe3o-de-sistemas}}
 
 Working on it :)
+
+\hypertarget{applications}{%
+\chapter{Applications}\label{applications}}
+
+Some \emph{significant} applications are demonstrated in this chapter.
+
+\hypertarget{example-one}{%
+\section{Example one}\label{example-one}}
+
+\hypertarget{example-two}{%
+\section{Example two}\label{example-two}}
 
   \bibliography{book.bib,packages.bib}
 

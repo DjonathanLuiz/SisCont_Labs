@@ -113,7 +113,58 @@ Ou seja, a função de transferência não apresenta zeros e tem seu polo em $s 
 
 ![](Imagens/Lab2/tau2.jpg)
 
-Como o polo da função de transferência se encontra na SPE, conclui-se que o sistema se compartará de uma forma estável.
+Como o polo da função de transferência se encontra na SPE, conclui-se que o sistema se compartará de uma forma estável. Também é possível concluir que o sistema alcanraça a estabilidade mais rápido para $\tau = 0.5$.
 
 ##### Parte 3 {-}
 
+A simulação do sistema implementada em `Matlab` está apresentado na figura abaixo.
+
+![](Imagens/Lab2/sim1.jpg)
+
+O resultado apresentado pelo *scope* é apresentado na figura abaixo.
+
+![](Imagens/Lab2/resultSim1.jpg)
+
+Percebe-se que, assim como esperado, o sistema se comporta de forma estável e tem uma convergência mais rápida para $\tau = 0.5$.
+
+##### Parte 4 {-}
+
+Para a última etapa temos a função de transferência dada por 
+$$
+G(S)= \frac {1}{s-1}.
+$$
+
+O código implementado no `Matlab` foi o apresentado abaixo.
+
+```{matlab}
+g = tf([1], [1 -1])
+[p, z] = pzmap(g)
+pzmap(g)
+```
+
+Tendo como resultados de polos e zeros:
+
+```
+p =
+
+    1
+
+
+z =
+
+  0×1 empty double column vector
+```
+
+Ou seja, a função de transferência não apresenta zeros e tem seu polo em $s = 1$. A sua posição no plano é apresentada na figura abaixo
+
+![](Imagens/Lab2/tau3.jpg)
+
+Como o polo da função de transferência se encontra na SPD, conclui-se que o sistema se compartará de uma forma instável. A simulação em `Matlab` está apresentada na figura abaixo.
+
+![](Imagens/Lab2/sim2.jpg)
+
+O resultado apresentado pelo *scope* é apresentado na figura abaixo.
+
+![](Imagens/Lab2/resultSim2.jpg)
+
+O resultado comprova o esperado. O sistema se comporta de forma instável para a função de transferência dada por $G(s) = \frac {1}{s-1}$.

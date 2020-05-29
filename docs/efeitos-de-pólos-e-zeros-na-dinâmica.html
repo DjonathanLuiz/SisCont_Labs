@@ -24,7 +24,7 @@
 <meta name="author" content="Djonathan Luiz de Oliveira Quadras" />
 
 
-<meta name="date" content="2020-05-28" />
+<meta name="date" content="2020-05-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -145,10 +145,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html"><i class="fa fa-check"></i><b>3</b> Identificação de Sistemas</a></li>
-<li class="chapter" data-level="4" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>4</b> Applications</a><ul>
-<li class="chapter" data-level="4.1" data-path="applications.html"><a href="applications.html#example-one"><i class="fa fa-check"></i><b>4.1</b> Example one</a></li>
-<li class="chapter" data-level="4.2" data-path="applications.html"><a href="applications.html#example-two"><i class="fa fa-check"></i><b>4.2</b> Example two</a></li>
-</ul></li>
+<li class="chapter" data-level="4" data-path="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html"><a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html"><i class="fa fa-check"></i><b>4</b> Rastreamento de Referências e Rejeição de Perturbações - Erro em Regime Permanente</a></li>
+<li class="chapter" data-level="5" data-path="projeto-de-controladores-por-métodos-algébricos.html"><a href="projeto-de-controladores-por-métodos-algébricos.html"><i class="fa fa-check"></i><b>5</b> Projeto de Controladores por Métodos Algébricos</a></li>
+<li class="chapter" data-level="6" data-path="linearização-de-sistemas-não-lineares.html"><a href="linearização-de-sistemas-não-lineares.html"><i class="fa fa-check"></i><b>6</b> Linearização de Sistemas Não-Lineares</a></li>
+<li class="chapter" data-level="7" data-path="controle-de-sistemas-não-lineares.html"><a href="controle-de-sistemas-não-lineares.html"><i class="fa fa-check"></i><b>7</b> Controle de Sistemas Não-Lineares</a></li>
+<li class="chapter" data-level="8" data-path="análise-pelo-lugar-das-raízes.html"><a href="análise-pelo-lugar-das-raízes.html"><i class="fa fa-check"></i><b>8</b> Análise pelo Lugar das Raízes</a></li>
+<li class="chapter" data-level="9" data-path="projeto-de-controladores-pelo-lugar-das-raízes.html"><a href="projeto-de-controladores-pelo-lugar-das-raízes.html"><i class="fa fa-check"></i><b>9</b> Projeto de Controladores pelo Lugar das Raízes</a></li>
+<li class="chapter" data-level="10" data-path="projeto-do-controlador-atraso-de-fase.html"><a href="projeto-do-controlador-atraso-de-fase.html"><i class="fa fa-check"></i><b>10</b> Projeto do controlador atraso de fase</a></li>
+<li class="chapter" data-level="11" data-path="análise-pelos-diagramas-de-bode-e-nyquist.html"><a href="análise-pelos-diagramas-de-bode-e-nyquist.html"><i class="fa fa-check"></i><b>11</b> Análise pelos Diagramas de Bode e Nyquist</a></li>
+<li class="chapter" data-level="12" data-path="projeto-de-controladores-pelo-diagrama-de-bode.html"><a href="projeto-de-controladores-pelo-diagrama-de-bode.html"><i class="fa fa-check"></i><b>12</b> Projeto de Controladores pelo Diagrama de Bode</a></li>
+<li class="chapter" data-level="13" data-path="digitalização-de-controladores-analógicos.html"><a href="digitalização-de-controladores-analógicos.html"><i class="fa fa-check"></i><b>13</b> Digitalização de Controladores Analógicos</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -342,7 +348,31 @@ G(s) = \frac {1}{s^2 +25}.
 G(s) = \frac {1}{s^2+\omega_0^2},
 \]</span>
 teremos ressonância quando aplicamos uma entrada senoidal da forma <span class="math inline">\(\sin(\omega_0t + \phi)\)</span>. Note que a <em>frequência de ressonância</em> <span class="math inline">\(\omega_0\)</span> é igual a parte imaginária dos pólos de <span class="math inline">\(G(s)\)</span>.</p>
+<div id="resolução-2" class="section level4 unnumbered">
+<h4>Resolução</h4>
+<p>O código utilizado no <code>Matlab</code> é apresentado abaixo.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode matlab"><code class="sourceCode matlab"><a class="sourceLine" id="cb9-1" title="1">g = tf([<span class="fl">1</span>], [<span class="fl">1</span> <span class="fl">0</span> <span class="fl">25</span>])</a>
+<a class="sourceLine" id="cb9-2" title="2">[p,z] = pzmap(g)</a>
+<a class="sourceLine" id="cb9-3" title="3">pzmap(g)</a></code></pre></div>
+<p>Obtendo como resultado:</p>
+<pre><code>p =
 
+   0.0000 + 5.0000i
+   0.0000 - 5.0000i
+
+
+z =
+
+  0×1 empty double column vector</code></pre>
+<p>Conclue-se então que a função de transferência <span class="math inline">\(G(s) = \frac {1}{s^2 +25}\)</span> não tem zeros e tem pólo em <span class="math inline">\(s = \pm 5i\)</span>. O mapa da posição no plano é mostrado na figura abaixo.</p>
+<p><img src="Imagens/Lab2/prob3.jpg" /></p>
+<p>De acordo com o mapa de posição, pode-se concluir que a função de transferência é classificada como um caso crítico. A figura abaixo apresenta o modelo de simulação criado no <code>Simulink</code>.</p>
+<p><img src="Imagens/Lab2/modelSim3.jpg" /></p>
+<p>O resultado da simulação é apresentado abaixo.</p>
+<p><img src="Imagens/Lab2/prob3Sim.jpg" /></p>
+<p>É fácil perceber que o modelo se comporta de maneira instável com a entrada <span class="math inline">\(u(t) = \sin(5t)\)</span>, se mostrando estável nas demais situações.</p>
+
+</div>
 </div>
 </div>
 </div>

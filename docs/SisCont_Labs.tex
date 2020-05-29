@@ -113,7 +113,7 @@
 
 \title{Laboratório de Sistemas de Controle}
 \author{Djonathan Luiz de Oliveira Quadras}
-\date{2020-05-28}
+\date{2020-05-29}
 
 \begin{document}
 \maketitle
@@ -413,21 +413,102 @@ G(s) = \frac {1}{s^2+\omega_0^2},
 \]
 teremos ressonância quando aplicamos uma entrada senoidal da forma \(\sin(\omega_0t + \phi)\). Note que a \emph{frequência de ressonância} \(\omega_0\) é igual a parte imaginária dos pólos de \(G(s)\).
 
+\hypertarget{resoluuxe7uxe3o-2}{%
+\subsubsection*{Resolução}\label{resoluuxe7uxe3o-2}}
+\addcontentsline{toc}{subsubsection}{Resolução}
+
+O código utilizado no \texttt{Matlab} é apresentado abaixo.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{g = tf([}\FloatTok{1}\NormalTok{], [}\FloatTok{1} \FloatTok{0} \FloatTok{25}\NormalTok{])}
+\NormalTok{[p,z] = pzmap(g)}
+\NormalTok{pzmap(g)}
+\end{Highlighting}
+\end{Shaded}
+
+Obtendo como resultado:
+
+\begin{verbatim}
+p =
+
+   0.0000 + 5.0000i
+   0.0000 - 5.0000i
+
+
+z =
+
+  0×1 empty double column vector
+\end{verbatim}
+
+Conclue-se então que a função de transferência \(G(s) = \frac {1}{s^2 +25}\) não tem zeros e tem pólo em \(s = \pm 5i\). O mapa da posição no plano é mostrado na figura abaixo.
+
+\includegraphics{Imagens/Lab2/prob3.jpg}
+
+De acordo com o mapa de posição, pode-se concluir que a função de transferência é classificada como um caso crítico. A figura abaixo apresenta o modelo de simulação criado no \texttt{Simulink}.
+
+\includegraphics{Imagens/Lab2/modelSim3.jpg}
+
+O resultado da simulação é apresentado abaixo.
+
+\includegraphics{Imagens/Lab2/prob3Sim.jpg}
+
+É fácil perceber que o modelo se comporta de maneira instável com a entrada \(u(t) = \sin(5t)\), se mostrando estável nas demais situações.
+
 \hypertarget{identificauxe7uxe3o-de-sistemas}{%
 \chapter{Identificação de Sistemas}\label{identificauxe7uxe3o-de-sistemas}}
 
 Working on it :)
 
-\hypertarget{applications}{%
-\chapter{Applications}\label{applications}}
+\hypertarget{rastreamento-de-referuxeancias-e-rejeiuxe7uxe3o-de-perturbauxe7uxf5es---erro-em-regime-permanente}{%
+\chapter{Rastreamento de Referências e Rejeição de Perturbações - Erro em Regime Permanente}\label{rastreamento-de-referuxeancias-e-rejeiuxe7uxe3o-de-perturbauxe7uxf5es---erro-em-regime-permanente}}
 
-Some \emph{significant} applications are demonstrated in this chapter.
+Working on it :)
 
-\hypertarget{example-one}{%
-\section{Example one}\label{example-one}}
+\hypertarget{projeto-de-controladores-por-muxe9todos-alguxe9bricos}{%
+\chapter{Projeto de Controladores por Métodos Algébricos}\label{projeto-de-controladores-por-muxe9todos-alguxe9bricos}}
 
-\hypertarget{example-two}{%
-\section{Example two}\label{example-two}}
+Working on it :)
+
+\hypertarget{linearizauxe7uxe3o-de-sistemas-nuxe3o-lineares}{%
+\chapter{Linearização de Sistemas Não-Lineares}\label{linearizauxe7uxe3o-de-sistemas-nuxe3o-lineares}}
+
+Working on it :)
+
+\hypertarget{controle-de-sistemas-nuxe3o-lineares}{%
+\chapter{Controle de Sistemas Não-Lineares}\label{controle-de-sistemas-nuxe3o-lineares}}
+
+Working on it :)
+
+\hypertarget{anuxe1lise-pelo-lugar-das-rauxedzes}{%
+\chapter{Análise pelo Lugar das Raízes}\label{anuxe1lise-pelo-lugar-das-rauxedzes}}
+
+Working on it :)
+
+\hypertarget{projeto-de-controladores-pelo-lugar-das-rauxedzes}{%
+\chapter{Projeto de Controladores pelo Lugar das Raízes}\label{projeto-de-controladores-pelo-lugar-das-rauxedzes}}
+
+Working on it :)
+
+\hypertarget{projeto-do-controlador-atraso-de-fase}{%
+\chapter{Projeto do controlador atraso de fase}\label{projeto-do-controlador-atraso-de-fase}}
+
+Working on it :)
+
+\hypertarget{anuxe1lise-pelos-diagramas-de-bode-e-nyquist}{%
+\chapter{Análise pelos Diagramas de Bode e Nyquist}\label{anuxe1lise-pelos-diagramas-de-bode-e-nyquist}}
+
+Working on it :)
+
+\hypertarget{projeto-de-controladores-pelo-diagrama-de-bode}{%
+\chapter{Projeto de Controladores pelo Diagrama de Bode}\label{projeto-de-controladores-pelo-diagrama-de-bode}}
+
+Working on it :)
+
+\hypertarget{digitalizauxe7uxe3o-de-controladores-analuxf3gicos}{%
+\chapter{Digitalização de Controladores Analógicos}\label{digitalizauxe7uxe3o-de-controladores-analuxf3gicos}}
+
+Working on it :)
 
   \bibliography{book.bib,packages.bib}
 

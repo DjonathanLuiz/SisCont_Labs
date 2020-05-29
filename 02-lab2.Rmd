@@ -233,3 +233,42 @@ $$
 G(s) = \frac {1}{s^2+\omega_0^2},
 $$
 teremos ressonância quando aplicamos uma entrada senoidal da forma $\sin(\omega_0t + \phi)$. Note que a *frequência de ressonância* $\omega_0$ é igual a parte imaginária dos pólos de $G(s)$.
+
+
+#### Resolução {-}
+
+O código utilizado no `Matlab` é apresentado abaixo.
+
+```{matlab}
+g = tf([1], [1 0 25])
+[p,z] = pzmap(g)
+pzmap(g)
+```
+
+Obtendo como resultado:
+
+```
+p =
+
+   0.0000 + 5.0000i
+   0.0000 - 5.0000i
+
+
+z =
+
+  0×1 empty double column vector
+```
+
+Conclue-se então que a função de transferência $G(s) = \frac {1}{s^2 +25}$ não tem zeros e tem pólo em $s = \pm 5i$. O mapa da posição no plano é mostrado na figura abaixo.
+
+![](Imagens/Lab2/prob3.jpg)
+
+De acordo com o mapa de posição, pode-se concluir que a função de transferência é classificada como um caso crítico. A figura abaixo apresenta o modelo de simulação criado no `Simulink`.
+
+![](Imagens/Lab2/modelSim3.jpg)
+
+O resultado da simulação é apresentado abaixo.
+
+![](Imagens/Lab2/prob3Sim.jpg)
+
+É fácil perceber que o modelo se comporta de maneira instável com a entrada $u(t) = \sin(5t)$, se mostrando estável nas demais situações.

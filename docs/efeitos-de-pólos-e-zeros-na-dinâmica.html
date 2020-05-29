@@ -142,6 +142,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#problema-1"><i class="fa fa-check"></i>Problema 1</a></li>
 <li class="chapter" data-level="" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#problema-2"><i class="fa fa-check"></i>Problema 2</a></li>
 <li class="chapter" data-level="" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#problema-3"><i class="fa fa-check"></i>Problema 3</a></li>
+<li class="chapter" data-level="" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#problema-4"><i class="fa fa-check"></i>Problema 4</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html"><i class="fa fa-check"></i><b>3</b> Identificação de Sistemas</a></li>
@@ -371,6 +372,25 @@ z =
 <p>O resultado da simulação é apresentado abaixo.</p>
 <p><img src="Imagens/Lab2/prob3Sim.jpg" /></p>
 <p>É fácil perceber que o modelo se comporta de maneira instável com a entrada <span class="math inline">\(u(t) = \sin(5t)\)</span>, se mostrando estável nas demais situações.</p>
+</div>
+</div>
+<div id="problema-4" class="section level3 unnumbered">
+<h3>Problema 4</h3>
+<p>Considere o sistema de segunda orde
+<span class="math display">\[
+G(s) = \frac {1.6}{(s+1)(s+2)} = \frac {0.8}{0.5s^2+1.5s+1}.
+\]</span></p>
+<p>Determine os pólos e suas posições no plano <span class="math inline">\(s\)</span> e simule para uma entrada do tipo degrau unitário. Note que não há sobressinal. Tal resultado era esperado? Justifique.</p>
+<p>Agora, adicionando um zero, temos
+<span class="math display">\[
+G(s) = \frac {1.6(\beta s+1)}{(s+1)(s+2)} = \frac {0.8(\beta s+1)}{0.5s^2 +1.5s +1},
+\]</span>
+onde <span class="math inline">\(\beta = 0.1\)</span>, <span class="math inline">\(\beta = 0.6\)</span>, <span class="math inline">\(\beta = 0.99\)</span>, <span class="math inline">\(\beta = 1.2\)</span>, <span class="math inline">\(\beta = 2\)</span>, <span class="math inline">\(\beta = 10\)</span>. Para cada valor de <span class="math inline">\(\beta\)</span>, determine os pólos e zeros, suas posições no plano <span class="math inline">\(s\)</span> e simule para uma entrada do tipo degrau unitário. Analise e compare os resultados. Note que dependendo da posição do zero o sobressinal será maior ou menor, podendo também não estar presente.</p>
+<div id="resolução-3" class="section level4 unnumbered">
+<h4>Resolução</h4>
+<p>Utilizando a função <code>pzmap()</code> do <code>Matlab</code> para encontrar os pólos da função de transferência <span class="math inline">\(G(s) = \frac {0.8}{0.5s^2+1.5s+1}\)</span> temos que a função não possui zeros e possui polos para <span class="math inline">\(s = -2\)</span> e <span class="math inline">\(s = -1\)</span>. O mapa de posições é apresentado na figura abaixo.</p>
+<p><img src="Imagens/Lab2/prob4.jpg" /></p>
+<p>O resultado da função de transferência é apresentado na figura abaixo.</p>
 
 </div>
 </div>

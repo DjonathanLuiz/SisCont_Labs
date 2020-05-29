@@ -32,7 +32,7 @@ Considere que $G(s)$ é estável, ou seja, todos os pólos estão no SPE. Em ger
 
 ## Procedimentos
 
-### Problema 1 {-}
+### Problema 1{-}
 
 Considere o sistema de primeira ordem
 $$
@@ -272,3 +272,27 @@ O resultado da simulação é apresentado abaixo.
 ![](Imagens/Lab2/prob3Sim.jpg)
 
 É fácil perceber que o modelo se comporta de maneira instável com a entrada $u(t) = \sin(5t)$, se mostrando estável nas demais situações.
+
+### Problema 4{-}
+
+Considere o sistema de segunda orde
+$$
+G(s) = \frac {1.6}{(s+1)(s+2)} = \frac {0.8}{0.5s^2+1.5s+1}.
+$$
+
+Determine os pólos e suas posições no plano $s$ e simule para uma entrada do tipo degrau unitário. Note que não há sobressinal. Tal resultado era esperado? Justifique.
+
+Agora, adicionando um zero, temos
+$$
+G(s) = \frac {1.6(\beta s+1)}{(s+1)(s+2)} = \frac {0.8(\beta s+1)}{0.5s^2 +1.5s +1},
+$$
+onde $\beta = 0.1$, $\beta = 0.6$, $\beta = 0.99$, $\beta = 1.2$, $\beta = 2$, $\beta = 10$. Para cada valor de $\beta$, determine os pólos e zeros, suas posições no plano $s$ e simule para uma entrada do tipo degrau unitário. Analise e compare os resultados. Note que dependendo da posição do zero o sobressinal será maior ou menor, podendo também não estar presente.
+
+#### Resolução{-}
+
+Utilizando a função `pzmap()` do `Matlab` para encontrar os pólos da função de transferência $G(s) = \frac {0.8}{0.5s^2+1.5s+1}$ temos que a função não possui zeros e possui polos para $s = -2$ e $s = -1$. O mapa de posições é apresentado na figura abaixo.
+
+![](Imagens/Lab2/prob4.jpg)
+
+O resultado da função de transferência é apresentado na figura abaixo.
+

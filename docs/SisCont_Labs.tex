@@ -113,7 +113,7 @@
 
 \title{Laboratório de Sistemas de Controle}
 \author{Djonathan Luiz de Oliveira Quadras}
-\date{2020-05-29}
+\date{2020-05-30}
 
 \begin{document}
 \maketitle
@@ -481,6 +481,37 @@ Utilizando a função \texttt{pzmap()} do \texttt{Matlab} para encontrar os pól
 \includegraphics{Imagens/Lab2/prob4.jpg}
 
 O resultado da função de transferência é apresentado na figura abaixo.
+
+\includegraphics{imagens/Lab2/prob41.jpg}
+
+Agora, considerando a função de transferência
+\[
+G(s) = \frac {0.8(\beta s+1)}{0.5s^2+1.5s+1},
+\]
+e substituindo os valores de \(\beta\) pelos valores propostos temos os valores de zero e pólo apresentados na tabela abaixo.
+
+\begin{table}
+
+\caption{\label{tab:unnamed-chunk-6}Valores de Pólo e Zero variando $\beta$}
+\centering
+\begin{tabular}[t]{lll}
+\toprule
+  & Pólos & Zeros\\
+\midrule
+$\beta = 0.1$ & {-2, -1} & -10.0\\
+$\beta = 0.6$ & {-2, -1} & -1.67\\
+$\beta = 0.99$ & {-2, -1} & -1.01\\
+$\beta = 1.2$ & {-2, -1} & -0.83\\
+$\beta = 2$ & {-2, -1} & -0.50\\
+\addlinespace
+$\beta = 10$ & {-2, -1} & -0.10\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Os gráficos de posição estão apresentados abaixo.
+
+\includegraphics{Imagens/Lab2/prob4Varios.jpg}
 
 \hypertarget{identificauxe7uxe3o-de-sistemas}{%
 \chapter{Identificação de Sistemas}\label{identificauxe7uxe3o-de-sistemas}}

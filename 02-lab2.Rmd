@@ -296,3 +296,30 @@ Utilizando a função `pzmap()` do `Matlab` para encontrar os pólos da função
 
 O resultado da função de transferência é apresentado na figura abaixo.
 
+![](imagens/Lab2/prob41.jpg)
+
+Agora, considerando a função de transferência
+$$
+G(s) = \frac {0.8(\beta s+1)}{0.5s^2+1.5s+1},
+$$
+e substituindo os valores de $\beta$ pelos valores propostos temos os valores de zero e pólo apresentados na tabela abaixo.
+
+```{r, echo=FALSE}
+resultados <- data.frame(Pólos = c("{-2, -1}",
+                                   "{-2, -1}",
+                                   "{-2, -1}",
+                                   "{-2, -1}",
+                                   "{-2, -1}",
+                                   "{-2, -1}"),
+                         Zeros = c("-10.0", "-1.67",
+                                   "-1.01", "-0.83",
+                                   "-0.50", "-0.10"))
+rownames(resultados) <- c("$\\beta = 0.1$", "$\\beta = 0.6$", "$\\beta = 0.99$", "$\\beta = 1.2$", "$\\beta = 2$", "$\\beta = 10$")
+knitr::kable(resultados, booktabs = T, escape = FALSE, caption = "Valores de Pólo e Zero variando $\\beta$")
+```
+
+Os gráficos de posição estão apresentados abaixo.
+
+![](Imagens/Lab2/prob4Varios.jpg)
+
+

@@ -33,6 +33,7 @@
   
 <link rel="prev" href="simulação-de-sistemas.html"/>
 <link rel="next" href="identificação-de-sistemas.html"/>
+<script src="libs/header-attrs-2.1/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -53,25 +54,26 @@
 
 
 <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
+    border: none; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -80,9 +82,9 @@ pre.numberSource a.sourceLine::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {  }
+  {   }
 @media screen {
-a.sourceLine::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -133,12 +135,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Apresentação</a></li>
 <li class="chapter" data-level="1" data-path="simulação-de-sistemas.html"><a href="simulação-de-sistemas.html"><i class="fa fa-check"></i><b>1</b> Simulação de Sistemas</a></li>
-<li class="chapter" data-level="2" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html"><i class="fa fa-check"></i><b>2</b> Efeitos de Pólos e Zeros na Dinâmica</a><ul>
-<li class="chapter" data-level="2.1" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#apresentação-do-laboratório"><i class="fa fa-check"></i><b>2.1</b> Apresentação do Laboratório</a><ul>
+<li class="chapter" data-level="2" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html"><i class="fa fa-check"></i><b>2</b> Efeitos de Pólos e Zeros na Dinâmica</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#apresentação-do-laboratório"><i class="fa fa-check"></i><b>2.1</b> Apresentação do Laboratório</a>
+<ul>
 <li class="chapter" data-level="2.1.1" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#objetivo"><i class="fa fa-check"></i><b>2.1.1</b> Objetivo</a></li>
 <li class="chapter" data-level="2.1.2" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#polos-e-zeros"><i class="fa fa-check"></i><b>2.1.2</b> Polos e Zeros</a></li>
 </ul></li>
-<li class="chapter" data-level="2.2" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#procedimentos"><i class="fa fa-check"></i><b>2.2</b> Procedimentos</a><ul>
+<li class="chapter" data-level="2.2" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#procedimentos"><i class="fa fa-check"></i><b>2.2</b> Procedimentos</a>
+<ul>
 <li class="chapter" data-level="" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#problema-1"><i class="fa fa-check"></i>Problema 1</a></li>
 <li class="chapter" data-level="" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#problema-2"><i class="fa fa-check"></i>Problema 2</a></li>
 <li class="chapter" data-level="" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#problema-3"><i class="fa fa-check"></i>Problema 3</a></li>
@@ -147,15 +152,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#problema-6"><i class="fa fa-check"></i>Problema 6</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html"><i class="fa fa-check"></i><b>3</b> Identificação de Sistemas</a><ul>
-<li class="chapter" data-level="3.1" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#apresentação-do-laboratório-1"><i class="fa fa-check"></i><b>3.1</b> Apresentação do Laboratório</a><ul>
+<li class="chapter" data-level="3" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html"><i class="fa fa-check"></i><b>3</b> Identificação de Sistemas</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#apresentação-do-laboratório-1"><i class="fa fa-check"></i><b>3.1</b> Apresentação do Laboratório</a>
+<ul>
 <li class="chapter" data-level="3.1.1" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#objetivo-1"><i class="fa fa-check"></i><b>3.1.1</b> Objetivo</a></li>
 <li class="chapter" data-level="3.1.2" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#modelagem-de-sistemas-lineares"><i class="fa fa-check"></i><b>3.1.2</b> Modelagem de Sistemas Lineares</a></li>
 <li class="chapter" data-level="3.1.3" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#identificação-de-sistemas-de-primeira-ordem"><i class="fa fa-check"></i><b>3.1.3</b> Identificação de sistemas de primeira ordem</a></li>
 <li class="chapter" data-level="3.1.4" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#identificação-de-sistemas-de-segunda-ordem"><i class="fa fa-check"></i><b>3.1.4</b> Identificação de Sistemas de Segunda Ordem</a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#procedimentos-1"><i class="fa fa-check"></i><b>3.2</b> Procedimentos</a><ul>
+<li class="chapter" data-level="3.2" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#procedimentos-1"><i class="fa fa-check"></i><b>3.2</b> Procedimentos</a>
+<ul>
 <li class="chapter" data-level="" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#problema-1-1"><i class="fa fa-check"></i>Problema 1</a></li>
+<li class="chapter" data-level="" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#problema-2-1"><i class="fa fa-check"></i>Problema 2</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html"><a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html"><i class="fa fa-check"></i><b>4</b> Rastreamento de Referências e Rejeição de Perturbações - Erro em Regime Permanente</a></li>
@@ -188,16 +197,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="efeitos-de-pólos-e-zeros-na-dinâmica" class="section level1">
+<div id="efeitos-de-pólos-e-zeros-na-dinâmica" class="section level1" number="2">
 <h1><span class="header-section-number">Laboratório 2</span> Efeitos de Pólos e Zeros na Dinâmica</h1>
-<div id="apresentação-do-laboratório" class="section level2">
+<div id="apresentação-do-laboratório" class="section level2" number="2.1">
 <h2><span class="header-section-number">2.1</span> Apresentação do Laboratório</h2>
-<div id="objetivo" class="section level3">
+<div id="objetivo" class="section level3" number="2.1.1">
 <h3><span class="header-section-number">2.1.1</span> Objetivo</h3>
 <p>Nesta experiência, verificaremos a influência dos pólos e zeros de uma Função de Transferência na resposta dinâmica para entradas do tipo degrau e também para entradas senoidais. Utilizaremos o Matlab para realizar as
 simulações.</p>
 </div>
-<div id="polos-e-zeros" class="section level3">
+<div id="polos-e-zeros" class="section level3" number="2.1.2">
 <h3><span class="header-section-number">2.1.2</span> Polos e Zeros</h3>
 <p>Considere uma função de Trasnferência da forma</p>
 <p><span class="math display">\[
@@ -220,9 +229,9 @@ G(s) = \frac{Y(s)}{U(s)} = \frac{N(s)}{D(s)} = \frac{b_1s^m +b_2s^{m-1} + \dots 
 </ol>
 </div>
 </div>
-<div id="procedimentos" class="section level2">
+<div id="procedimentos" class="section level2" number="2.2">
 <h2><span class="header-section-number">2.2</span> Procedimentos</h2>
-<div id="problema-1" class="section level3 unnumbered">
+<div id="problema-1" class="section level3 unnumbered" number="">
 <h3>Problema 1</h3>
 <p>Considere o sistema de primeira ordem
 <span class="math display">\[
@@ -232,19 +241,19 @@ onde <span class="math inline">\(\tau = 1\)</span>, <span class="math inline">\(
 <span class="math display">\[
 G(s) = \frac{1}{s-1}.
 \]</span></p>
-<div id="resolução" class="section level4 unnumbered">
+<div id="resolução" class="section level4 unnumbered" number="">
 <h4>Resolução</h4>
 <p>A resolução será feita em quatro partes: (1) a resolução para <span class="math inline">\(\tau = 1\)</span> usando <code>pzmap</code>, (2) a resolução para <span class="math inline">\(\tau = 0.5\)</span> usando <code>pzmap</code>, (3) a simulação e comparação dos resultados e, por fim, (4) a resolução para <span class="math inline">\(G(s) =\frac {1}{s-1}\)</span>.</p>
-<div id="parte-1" class="section level5 unnumbered">
+<div id="parte-1" class="section level5 unnumbered" number="">
 <h5>Parte 1</h5>
 <p>Para <span class="math inline">\(\tau = 1\)</span>, temos a função de transferência dada por
 <span class="math display">\[
 G(S)= \frac {1}{s+1}.
 \]</span></p>
 <p>O código implementado no <code>Matlab</code> foi o apresentado abaixo.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode matlab"><code class="sourceCode matlab"><a class="sourceLine" id="cb1-1" title="1">g = tf([<span class="fl">1</span>], [<span class="fl">1</span> <span class="fl">1</span>])</a>
-<a class="sourceLine" id="cb1-2" title="2">[p, z] = pzmap(g)</a>
-<a class="sourceLine" id="cb1-3" title="3">pzmap(g)</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode matlab"><code class="sourceCode matlab"><span id="cb1-1"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#cb1-1"></a><span class="va">g</span> <span class="op">=</span> <span class="va">tf</span>([<span class="fl">1</span>]<span class="op">,</span> [<span class="fl">1</span> <span class="fl">1</span>])</span>
+<span id="cb1-2"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#cb1-2"></a>[<span class="va">p</span><span class="op">,</span> <span class="va">z</span>] <span class="op">=</span> <span class="va">pzmap</span>(<span class="va">g</span>)</span>
+<span id="cb1-3"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#cb1-3"></a><span class="va">pzmap</span>(<span class="va">g</span>)</span></code></pre></div>
 <p>Tendo como resultados de polos e zeros:</p>
 <pre><code>p =
 
@@ -258,16 +267,16 @@ z =
 <p><img src="Imagens/Lab2/tau1.jpg" /></p>
 <p>Como o polo da função de transferência se encontra na SPE, conclui-se que o sistema se compartará de uma forma estável.</p>
 </div>
-<div id="parte-2" class="section level5 unnumbered">
+<div id="parte-2" class="section level5 unnumbered" number="">
 <h5>Parte 2</h5>
 <p>Para <span class="math inline">\(\tau = 0.5\)</span>, temos a função de transferência dada por
 <span class="math display">\[
 G(S)= \frac {1}{0.5s+1}.
 \]</span></p>
 <p>O código implementado no <code>Matlab</code> foi o apresentado abaixo.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode matlab"><code class="sourceCode matlab"><a class="sourceLine" id="cb3-1" title="1">g = tf([<span class="fl">1</span>], [<span class="fl">0.5</span> <span class="fl">1</span>])</a>
-<a class="sourceLine" id="cb3-2" title="2">[p, z] = pzmap(g)</a>
-<a class="sourceLine" id="cb3-3" title="3">pzmap(g)</a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode matlab"><code class="sourceCode matlab"><span id="cb3-1"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#cb3-1"></a><span class="va">g</span> <span class="op">=</span> <span class="va">tf</span>([<span class="fl">1</span>]<span class="op">,</span> [<span class="fl">0.5</span> <span class="fl">1</span>])</span>
+<span id="cb3-2"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#cb3-2"></a>[<span class="va">p</span><span class="op">,</span> <span class="va">z</span>] <span class="op">=</span> <span class="va">pzmap</span>(<span class="va">g</span>)</span>
+<span id="cb3-3"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#cb3-3"></a><span class="va">pzmap</span>(<span class="va">g</span>)</span></code></pre></div>
 <p>Tendo como resultados de polos e zeros:</p>
 <pre><code>p =
 
@@ -281,7 +290,7 @@ z =
 <p><img src="Imagens/Lab2/tau2.jpg" /></p>
 <p>Como o polo da função de transferência se encontra na SPE, conclui-se que o sistema se compartará de uma forma estável. Também é possível concluir que o sistema alcanraça a estabilidade mais rápido para <span class="math inline">\(\tau = 0.5\)</span>.</p>
 </div>
-<div id="parte-3" class="section level5 unnumbered">
+<div id="parte-3" class="section level5 unnumbered" number="">
 <h5>Parte 3</h5>
 <p>A simulação do sistema implementada em <code>Matlab</code> está apresentado na figura abaixo.</p>
 <p><img src="Imagens/Lab2/sim1.jpg" /></p>
@@ -289,16 +298,16 @@ z =
 <p><img src="Imagens/Lab2/resultSim1.jpg" /></p>
 <p>Percebe-se que, assim como esperado, o sistema se comporta de forma estável e tem uma convergência mais rápida para <span class="math inline">\(\tau = 0.5\)</span>.</p>
 </div>
-<div id="parte-4" class="section level5 unnumbered">
+<div id="parte-4" class="section level5 unnumbered" number="">
 <h5>Parte 4</h5>
 <p>Para a última etapa temos a função de transferência dada por
 <span class="math display">\[
 G(S)= \frac {1}{s-1}.
 \]</span></p>
 <p>O código implementado no <code>Matlab</code> foi o apresentado abaixo.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode matlab"><code class="sourceCode matlab"><a class="sourceLine" id="cb5-1" title="1">g = tf([<span class="fl">1</span>], [<span class="fl">1</span> -<span class="fl">1</span>])</a>
-<a class="sourceLine" id="cb5-2" title="2">[p, z] = pzmap(g)</a>
-<a class="sourceLine" id="cb5-3" title="3">pzmap(g)</a></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode matlab"><code class="sourceCode matlab"><span id="cb5-1"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#cb5-1"></a><span class="va">g</span> <span class="op">=</span> <span class="va">tf</span>([<span class="fl">1</span>]<span class="op">,</span> [<span class="fl">1</span> <span class="op">-</span><span class="fl">1</span>])</span>
+<span id="cb5-2"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#cb5-2"></a>[<span class="va">p</span><span class="op">,</span> <span class="va">z</span>] <span class="op">=</span> <span class="va">pzmap</span>(<span class="va">g</span>)</span>
+<span id="cb5-3"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#cb5-3"></a><span class="va">pzmap</span>(<span class="va">g</span>)</span></code></pre></div>
 <p>Tendo como resultados de polos e zeros:</p>
 <pre><code>p =
 
@@ -318,19 +327,19 @@ z =
 </div>
 </div>
 </div>
-<div id="problema-2" class="section level3 unnumbered">
+<div id="problema-2" class="section level3 unnumbered" number="">
 <h3>Problema 2</h3>
 <p>Considere o sistema de primeira ordem (integrador)
 <span class="math display">\[
 G(s) = \frac {1}{s}.
 \]</span></p>
 <p>Determine o pólo e a sua posição no plano <span class="math inline">\(s\)</span> e simule para uma entrada do tipo degrau unitário e também para <span class="math inline">\(\sin {(t)}\)</span> (para <span class="math inline">\(\sin {(t)}\)</span>, escolha <strong>Max Step Size = 0.1</strong> em <strong>Simulation <span class="math inline">\(\implies\)</span> Configurarion Parameters</strong>). Note que a saída é a integral da entrada. Tais resultados eram esperados? Dica: relembre que <span class="math inline">\(Y(s) = G(s)U(s)\)</span>, e que se <span class="math inline">\(x(t) \iff X(S)\)</span>, então <span class="math inline">\(\int_0^t x(\tau) \mathrm{d}\tau \iff X(s)/s\)</span>.</p>
-<div id="resolução-1" class="section level4 unnumbered">
+<div id="resolução-1" class="section level4 unnumbered" number="">
 <h4>Resolução</h4>
 <p>O código utilizado no <code>Matlab</code> é apresentado abaixo.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode matlab"><code class="sourceCode matlab"><a class="sourceLine" id="cb7-1" title="1">g = tf([<span class="fl">1</span>], [<span class="fl">1</span> <span class="fl">0</span>])</a>
-<a class="sourceLine" id="cb7-2" title="2">[p,z] = pzmap(g)</a>
-<a class="sourceLine" id="cb7-3" title="3">pzmap(g)</a></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode matlab"><code class="sourceCode matlab"><span id="cb7-1"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#cb7-1"></a><span class="va">g</span> <span class="op">=</span> <span class="va">tf</span>([<span class="fl">1</span>]<span class="op">,</span> [<span class="fl">1</span> <span class="fl">0</span>])</span>
+<span id="cb7-2"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#cb7-2"></a>[<span class="va">p</span><span class="op">,</span><span class="va">z</span>] <span class="op">=</span> <span class="va">pzmap</span>(<span class="va">g</span>)</span>
+<span id="cb7-3"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#cb7-3"></a><span class="va">pzmap</span>(<span class="va">g</span>)</span></code></pre></div>
 <p>Obtendo como resultado:</p>
 <pre><code>p =
 
@@ -350,7 +359,7 @@ z =
 <p>O resultados eram esperados, uma vez que em um estado crítico a função de transferência pode estar em um estado permanente senoidal caso a entrada seja senoidal ou pode divergir caso a entrada seja um sinal constante.</p>
 </div>
 </div>
-<div id="problema-3" class="section level3 unnumbered">
+<div id="problema-3" class="section level3 unnumbered" number="">
 <h3>Problema 3</h3>
 <p>Considere o sistema de segunda ordem
 <span class="math display">\[
@@ -361,12 +370,12 @@ G(s) = \frac {1}{s^2 +25}.
 G(s) = \frac {1}{s^2+\omega_0^2},
 \]</span>
 teremos ressonância quando aplicamos uma entrada senoidal da forma <span class="math inline">\(\sin(\omega_0t + \phi)\)</span>. Note que a <em>frequência de ressonância</em> <span class="math inline">\(\omega_0\)</span> é igual a parte imaginária dos pólos de <span class="math inline">\(G(s)\)</span>.</p>
-<div id="resolução-2" class="section level4 unnumbered">
+<div id="resolução-2" class="section level4 unnumbered" number="">
 <h4>Resolução</h4>
 <p>O código utilizado no <code>Matlab</code> é apresentado abaixo.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode matlab"><code class="sourceCode matlab"><a class="sourceLine" id="cb9-1" title="1">g = tf([<span class="fl">1</span>], [<span class="fl">1</span> <span class="fl">0</span> <span class="fl">25</span>])</a>
-<a class="sourceLine" id="cb9-2" title="2">[p,z] = pzmap(g)</a>
-<a class="sourceLine" id="cb9-3" title="3">pzmap(g)</a></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode matlab"><code class="sourceCode matlab"><span id="cb9-1"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#cb9-1"></a><span class="va">g</span> <span class="op">=</span> <span class="va">tf</span>([<span class="fl">1</span>]<span class="op">,</span> [<span class="fl">1</span> <span class="fl">0</span> <span class="fl">25</span>])</span>
+<span id="cb9-2"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#cb9-2"></a>[<span class="va">p</span><span class="op">,</span><span class="va">z</span>] <span class="op">=</span> <span class="va">pzmap</span>(<span class="va">g</span>)</span>
+<span id="cb9-3"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#cb9-3"></a><span class="va">pzmap</span>(<span class="va">g</span>)</span></code></pre></div>
 <p>Obtendo como resultado:</p>
 <pre><code>p =
 
@@ -386,7 +395,7 @@ z =
 <p>É fácil perceber que o modelo se comporta de maneira instável com a entrada <span class="math inline">\(u(t) = \sin(5t)\)</span>, se mostrando estável nas demais situações.</p>
 </div>
 </div>
-<div id="problema-4" class="section level3 unnumbered">
+<div id="problema-4" class="section level3 unnumbered" number="">
 <h3>Problema 4</h3>
 <p>Considere o sistema de segunda orde
 <span class="math display">\[
@@ -398,7 +407,7 @@ G(s) = \frac {1.6}{(s+1)(s+2)} = \frac {0.8}{0.5s^2+1.5s+1}.
 G(s) = \frac {1.6(\beta s+1)}{(s+1)(s+2)} = \frac {0.8(\beta s+1)}{0.5s^2 +1.5s +1},
 \]</span>
 onde <span class="math inline">\(\beta = 0.1\)</span>, <span class="math inline">\(\beta = 0.6\)</span>, <span class="math inline">\(\beta = 0.99\)</span>, <span class="math inline">\(\beta = 1.2\)</span>, <span class="math inline">\(\beta = 2\)</span>, <span class="math inline">\(\beta = 10\)</span>. Para cada valor de <span class="math inline">\(\beta\)</span>, determine os pólos e zeros, suas posições no plano <span class="math inline">\(s\)</span> e simule para uma entrada do tipo degrau unitário. Analise e compare os resultados. Note que dependendo da posição do zero o sobressinal será maior ou menor, podendo também não estar presente.</p>
-<div id="resolução-3" class="section level4 unnumbered">
+<div id="resolução-3" class="section level4 unnumbered" number="">
 <h4>Resolução</h4>
 <p>Utilizando a função <code>pzmap()</code> do <code>Matlab</code> para encontrar os pólos da função de transferência <span class="math inline">\(G(s) = \frac {0.8}{0.5s^2+1.5s+1}\)</span> temos que a função não possui zeros e possui polos para <span class="math inline">\(s = -2\)</span> e <span class="math inline">\(s = -1\)</span>. O mapa de posições é apresentado na figura abaixo.</p>
 <p><img src="Imagens/Lab2/prob4.jpg" /></p>
@@ -460,7 +469,7 @@ e substituindo os valores de <span class="math inline">\(\beta\)</span> pelos va
 <p>É possível perceber que quanto mais alto o valor de <span class="math inline">\(\beta\)</span> maior o sobressinal. Também é possível perceber que há um intervalo no qual o tempo de reação aumenta, encontrando seu tempo de reação mínimo, voltando então a aumentar.</p>
 </div>
 </div>
-<div id="problema-5" class="section level3 unnumbered">
+<div id="problema-5" class="section level3 unnumbered" number="">
 <h3>Problema 5</h3>
 <p>Considere o sistema de segunda ordem
 <span class="math display">\[
@@ -472,7 +481,7 @@ G(s) = \frac {0.9}{s^2+s+1}.
 G_z(s) = \frac {0.9(\beta s+1)}{s^2+s+1},
 \]</span>
 onde <span class="math inline">\(\beta = 0.05\)</span>, <span class="math inline">\(\beta = 0.5\)</span>, <span class="math inline">\(\beta = 1\)</span> e <span class="math inline">\(\beta = 2.5\)</span>. Para cada valor de <span class="math inline">\(\beta\)</span> determine os pólos e zeros, suas posições no plano <span class="math inline">\(s\)</span> e simule para uma entrada do tipo degrau unitário. Analise e compare os resultados.</p>
-<div id="resolução-4" class="section level4 unnumbered">
+<div id="resolução-4" class="section level4 unnumbered" number="">
 <h4>Resolução</h4>
 <p>Utilizando a função <code>pzmap()</code> do <code>Matlab</code> para encontrar os pólos da função de transferência <span class="math inline">\(G(s) = \frac {0.9}{s^2+s+1}\)</span> temos que a função não possui zeros e possui polos para <span class="math inline">\(s = -0.5 + 0.86i\)</span> e <span class="math inline">\(s = -0.5 -0.86i\)</span>. O mapa de posições é apresentado na figura abaixo.</p>
 <p><img src="Imagens/Lab2/prob5.jpg" /></p>
@@ -521,7 +530,7 @@ onde <span class="math inline">\(\beta = 0.05\)</span>, <span class="math inline
 <p>É possível perceber que quanto mais alto o valor de <span class="math inline">\(\beta\)</span> maior o sobressinal e o tempo de resposta do sistema.</p>
 </div>
 </div>
-<div id="problema-6" class="section level3 unnumbered">
+<div id="problema-6" class="section level3 unnumbered" number="">
 <h3>Problema 6</h3>
 <p>Considere o sistema de segunda ordem de fase não-mínima
 <span class="math display">\[
@@ -541,7 +550,7 @@ Y(s) = G(s)U(s) = G_1(s)U(s)-G_2(s)U(s) = \underbrace{G_1(s)U(s)}_{Y_1(s)} - \un
 y(t) = y_1(t)-y_2(t)=y_1(t)- \frac {dy_1(t)}{dt}.
 \]</span></p>
 <p>Verifique a validade da equação acima no Simulink (utilize o bloco <strong>Derivative</strong> no Simulink) para uma entrada do tipo degrau unitário. Analise o motivo da resposta ser negativa nos instantes iniciais.</p>
-<div id="resolução-5" class="section level4 unnumbered">
+<div id="resolução-5" class="section level4 unnumbered" number="">
 <h4>Resolução</h4>
 <p><span class="math display">\[\begin{align}
     r  = \frac{1}{n-1} \sum_{i=1}^{n} \frac{(X_i - \bar{X})(Y_i - \bar{Y})}{S_xS_y}

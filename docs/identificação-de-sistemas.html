@@ -33,6 +33,7 @@
   
 <link rel="prev" href="efeitos-de-pólos-e-zeros-na-dinâmica.html"/>
 <link rel="next" href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html"/>
+<script src="libs/header-attrs-2.1/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -53,25 +54,26 @@
 
 
 <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
+    border: none; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -80,9 +82,9 @@ pre.numberSource a.sourceLine::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {  }
+  {   }
 @media screen {
-a.sourceLine::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -133,12 +135,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Apresentação</a></li>
 <li class="chapter" data-level="1" data-path="simulação-de-sistemas.html"><a href="simulação-de-sistemas.html"><i class="fa fa-check"></i><b>1</b> Simulação de Sistemas</a></li>
-<li class="chapter" data-level="2" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html"><i class="fa fa-check"></i><b>2</b> Efeitos de Pólos e Zeros na Dinâmica</a><ul>
-<li class="chapter" data-level="2.1" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#apresentação-do-laboratório"><i class="fa fa-check"></i><b>2.1</b> Apresentação do Laboratório</a><ul>
+<li class="chapter" data-level="2" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html"><i class="fa fa-check"></i><b>2</b> Efeitos de Pólos e Zeros na Dinâmica</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#apresentação-do-laboratório"><i class="fa fa-check"></i><b>2.1</b> Apresentação do Laboratório</a>
+<ul>
 <li class="chapter" data-level="2.1.1" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#objetivo"><i class="fa fa-check"></i><b>2.1.1</b> Objetivo</a></li>
 <li class="chapter" data-level="2.1.2" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#polos-e-zeros"><i class="fa fa-check"></i><b>2.1.2</b> Polos e Zeros</a></li>
 </ul></li>
-<li class="chapter" data-level="2.2" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#procedimentos"><i class="fa fa-check"></i><b>2.2</b> Procedimentos</a><ul>
+<li class="chapter" data-level="2.2" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#procedimentos"><i class="fa fa-check"></i><b>2.2</b> Procedimentos</a>
+<ul>
 <li class="chapter" data-level="" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#problema-1"><i class="fa fa-check"></i>Problema 1</a></li>
 <li class="chapter" data-level="" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#problema-2"><i class="fa fa-check"></i>Problema 2</a></li>
 <li class="chapter" data-level="" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#problema-3"><i class="fa fa-check"></i>Problema 3</a></li>
@@ -147,15 +152,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#problema-6"><i class="fa fa-check"></i>Problema 6</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html"><i class="fa fa-check"></i><b>3</b> Identificação de Sistemas</a><ul>
-<li class="chapter" data-level="3.1" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#apresentação-do-laboratório-1"><i class="fa fa-check"></i><b>3.1</b> Apresentação do Laboratório</a><ul>
+<li class="chapter" data-level="3" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html"><i class="fa fa-check"></i><b>3</b> Identificação de Sistemas</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#apresentação-do-laboratório-1"><i class="fa fa-check"></i><b>3.1</b> Apresentação do Laboratório</a>
+<ul>
 <li class="chapter" data-level="3.1.1" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#objetivo-1"><i class="fa fa-check"></i><b>3.1.1</b> Objetivo</a></li>
 <li class="chapter" data-level="3.1.2" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#modelagem-de-sistemas-lineares"><i class="fa fa-check"></i><b>3.1.2</b> Modelagem de Sistemas Lineares</a></li>
 <li class="chapter" data-level="3.1.3" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#identificação-de-sistemas-de-primeira-ordem"><i class="fa fa-check"></i><b>3.1.3</b> Identificação de sistemas de primeira ordem</a></li>
 <li class="chapter" data-level="3.1.4" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#identificação-de-sistemas-de-segunda-ordem"><i class="fa fa-check"></i><b>3.1.4</b> Identificação de Sistemas de Segunda Ordem</a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#procedimentos-1"><i class="fa fa-check"></i><b>3.2</b> Procedimentos</a><ul>
+<li class="chapter" data-level="3.2" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#procedimentos-1"><i class="fa fa-check"></i><b>3.2</b> Procedimentos</a>
+<ul>
 <li class="chapter" data-level="" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#problema-1-1"><i class="fa fa-check"></i>Problema 1</a></li>
+<li class="chapter" data-level="" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#problema-2-1"><i class="fa fa-check"></i>Problema 2</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html"><a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html"><i class="fa fa-check"></i><b>4</b> Rastreamento de Referências e Rejeição de Perturbações - Erro em Regime Permanente</a></li>
@@ -188,21 +197,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="identificação-de-sistemas" class="section level1">
+<div id="identificação-de-sistemas" class="section level1" number="3">
 <h1><span class="header-section-number">Laboratório 3</span> Identificação de Sistemas</h1>
-<div id="apresentação-do-laboratório-1" class="section level2">
+<div id="apresentação-do-laboratório-1" class="section level2" number="3.1">
 <h2><span class="header-section-number">3.1</span> Apresentação do Laboratório</h2>
-<div id="objetivo-1" class="section level3">
+<div id="objetivo-1" class="section level3" number="3.1.1">
 <h3><span class="header-section-number">3.1.1</span> Objetivo</h3>
 <p>Nesta experiência, veremos como modelar matematicamente um sistema linear por uma Função de Transferência. Identificaremos os parâmetros de uma Função de Transferência de primeira e de segunda ordem. Compararemos a dinâmica do sistema com a do modelo matemático.</p>
 </div>
-<div id="modelagem-de-sistemas-lineares" class="section level3">
+<div id="modelagem-de-sistemas-lineares" class="section level3" number="3.1.2">
 <h3><span class="header-section-number">3.1.2</span> Modelagem de Sistemas Lineares</h3>
 <p>Encontrar um modelo matemático que capture as características dinâmicas relevantes de um sistema real é de fundamental importância para a análise e controle do sistema. No Laboratório 1 estudamos um modelo linear com motor CC. Tal modelo pode ser obtido a partir das leis da física (mecânica e eletromagnetismo) e os valores dos parâmetros dependem de constantes e coeficientes físicos (indutância do enrolamento, resistência do enrolamento, constante de torque do motor, coeficiente de atrito ciscoso). Em situações reais, não conheceremos uma estimativa para os mesmos. Por exemplo, todo resistor possui um valor normal e uma faixa de tolerância percentual (e.g. <span class="math inline">\(R = 100 \Omega \pm 5\%\)</span>). Além disso, muitas vezes a determinação de um modelo matemático para um sistema a partir de leis naturais é extremamente difícil e, mesmo no caso em que isso é possível, o modelo obtido pode ser demasiadamente complexo para ser estudado matematicamente.</p>
 <p>Devido às dificuldades que acabamos de expor, em geral buscamos um modelo matemático relativamente simples mas que capture, ao menos aproximadamente, as características dinâmicas relevantes do sistema. Assim, primeiramente fixamos um modelo (<em>modelagem</em> do sistema) e em seguida determinamos de maneira aproximada o valor de seus parâmetros (<em>identificação</em> dos parâmetros).</p>
 <p>Nesta experiência, consideraremos apenas sistemas lineares que possam ser modelados por uma função de Transferência <span class="math inline">\(G(s)\)</span> de primeira ordem ou de segunda ordem. Veremos então como identificar os parâmetros de <span class="math inline">\(G(s)\)</span>.</p>
 </div>
-<div id="identificação-de-sistemas-de-primeira-ordem" class="section level3">
+<div id="identificação-de-sistemas-de-primeira-ordem" class="section level3" number="3.1.3">
 <h3><span class="header-section-number">3.1.3</span> Identificação de sistemas de primeira ordem</h3>
 <p>Toda Função de Transferência <span class="math inline">\(G(s)\)</span> de primeira ordem pode ser escrita na forma padrão como</p>
 <p><span class="math display" id="eq:eq1">\[\begin{align}
@@ -222,7 +231,7 @@ e o tempo de acomodação de <span class="math inline">\(5\%\)</span> é dado po
 \]</span></p>
 <p>Isto é ilustrado na figura 1.</p>
 <div class="figure">
-<img src="Imagens/Lab3/Explicação/fig1.jpg" alt="Figura 1: Resposta de um sistema de primeira ordem ao degrau." />
+<img src="Imagens/Lab3/Explicação/fig1.jpg" alt="" />
 <p class="caption">Figura 1: Resposta de um sistema de primeira ordem ao degrau.</p>
 </div>
 <p>Logo,</p>
@@ -230,7 +239,7 @@ e o tempo de acomodação de <span class="math inline">\(5\%\)</span> é dado po
 K = \frac{y(\infty)}{A},  \tau = \frac {t_s(5\%)}{3}. \tag{3.2}
 \end{align}\]</span></p>
 </div>
-<div id="identificação-de-sistemas-de-segunda-ordem" class="section level3">
+<div id="identificação-de-sistemas-de-segunda-ordem" class="section level3" number="3.1.4">
 <h3><span class="header-section-number">3.1.4</span> Identificação de Sistemas de Segunda Ordem</h3>
 <p>Toda Função de Transferência <span class="math inline">\(G(s)\)</span> de segunda ordem com pólos não-nulos pode ser escrita como</p>
 <p><span class="math display" id="eq:eq3">\[\begin{align}
@@ -248,11 +257,11 @@ p_{1,2} = - \xi \omega_n \pm \sqrt{\xi^2 -1}.
 <li>Sistema super-amortecido (<span class="math inline">\(\xi &gt;1\)</span>): os pólos são reais, negativos e diferentes e a resposta ao degrau não apresenta oscilação nem sobressinal.</li>
 <li>Sistema instável (<span class="math inline">\(\xi &lt; 0\)</span>): os pólos possuem parte real positiva.</li>
 </ol>
-<div id="sistemas-sub-amortecidos" class="section level4">
+<div id="sistemas-sub-amortecidos" class="section level4" number="3.1.4.1">
 <h4><span class="header-section-number">3.1.4.1</span> Sistemas sub-amortecidos</h4>
 <p>Suponha que <span class="math inline">\(G(s)\)</span> é estável com <span class="math inline">\(0 &lt; \xi &lt; 1\)</span> (sub-amortecido). Considere uma entrada <span class="math inline">\(u(t) = A\)</span> do tipo degrau de magnitude <span class="math inline">\(A\)</span>. A resposta correspondente <span class="math inline">\(y(t)\)</span> é ilustrada na figura 2.</p>
 <div class="figure">
-<img src="Imagens/Lab3/Explicação/fig2.jpg" alt="Figura 2: Resposta de um sistema de segunda ordem sub-amortecido ao degrau." />
+<img src="Imagens/Lab3/Explicação/fig2.jpg" alt="" />
 <p class="caption">Figura 2: Resposta de um sistema de segunda ordem sub-amortecido ao degrau.</p>
 </div>
 <p>Temos que
@@ -265,11 +274,11 @@ t_p = \frac {\pi}{\omega_n\sqrt{1-\xi^2}}.
 K = \frac {y(\infty)}{A}, \quad M_p = \frac {y_p - y(\infty)}{y(\infty)}, \quad \xi = \sqrt{\frac {(\ln{M_p})^2}{(\ln{M_p})^2+\pi^2}}, \quad \omega_n = \frac {\pi}{t_p\sqrt{1-\xi^2}}.  \tag{3.4}
 \end{align}\]</span></p>
 </div>
-<div id="sistemas-criticamente-amortecidos-e-super-amortecidos" class="section level4">
+<div id="sistemas-criticamente-amortecidos-e-super-amortecidos" class="section level4" number="3.1.4.2">
 <h4><span class="header-section-number">3.1.4.2</span> Sistemas criticamente amortecidos e super-amortecidos</h4>
 <p>Suponha que <span class="math inline">\(G(s)\)</span> é estável com <span class="math inline">\(\xi \geq 1\)</span> (criticamente amortecido ou super-amortecido). Neste caso, os dois pólos de <span class="math inline">\(G(s)\)</span> são reais e a resposta ao degrau se assemelha ao de um sistema de primeira ordem (não apresenta oscilação nem sobressinal). Podemos identificar <span class="math inline">\(G(s)\)</span> indiretamente através da identificação da Função de Transferência <span class="math inline">\(F(s)\)</span> em malha-fechada. Considere o diagrama de blocos em malha-fechada mostrando na Figura 3, onde <span class="math inline">\(K_c &gt; 0\)</span> é o ganho de um controlador proporcional e <span class="math inline">\(r\)</span> é a referência.</p>
 <div class="figure">
-<img src="Imagens/Lab3/Explicação/fig3.jpg" alt="Figura 3: Diagrama de blocos em malha-fechada." />
+<img src="Imagens/Lab3/Explicação/fig3.jpg" alt="" />
 <p class="caption">Figura 3: Diagrama de blocos em malha-fechada.</p>
 </div>
 <p>Relembre que
@@ -283,12 +292,37 @@ F(s) = \frac {K_cG(s)}{1+K_cG(s)} \implies G(s) = \frac {F(s)}{K_c - K_cF(s)}.  
 </div>
 </div>
 </div>
-<div id="procedimentos-1" class="section level2">
+<div id="procedimentos-1" class="section level2" number="3.2">
 <h2><span class="header-section-number">3.2</span> Procedimentos</h2>
-<div id="problema-1-1" class="section level3 unnumbered">
+<div id="problema-1-1" class="section level3 unnumbered" number="">
 <h3>Problema 1</h3>
 <p>Aplique um degrau <span class="math inline">\(u(t) = 2\)</span> no Sistema 1 do arquivo <code>MatLab3.mdl</code> do Simulink. Pelas características da resposta, modele o Sistema 1 como uma Função de Transferência <span class="math inline">\(G_1(s)%\)</span> de primeira ou segunda ordem. Em seguida, identifique os parâmetros do modelo utilizando a equação 3.2 ou 3.4. Compare a resposta do modelo identificado com a do Sistema 1.</p>
+<div id="resolução-6" class="section level4 unnumbered" number="">
+<h4>Resolução</h4>
+<p>Simulando o sistema do modelo 1 obtemos o resultado abaixo.</p>
+<p><img src="Imagens/Lab3/Resolução/prob1A.jpg" /></p>
+<p>Pela curva feita espera-se que a Função de Transferência seja de primeira ordem. Utilizando as ferramentas fornecidas pelo <code>Simulink</code> foi estimado que
+<span class="math display">\[
+y(\infty) = 1.6 \\
+0.95y(\infty) = 1.52 \implies  t_s(5\%) = 9.97s \implies \tau = 3.33
+\]</span></p>
+<p>Assim,
+<span class="math display">\[
+G_1(s) = \frac {0.8}{3.33s+1}.
+\]</span></p>
+<p>Simulando <span class="math inline">\(G_1(s)\)</span>, temos o resultado apresentado abaixo.</p>
+<p><img src="Imagens/Lab3/Resolução/prob1B.jpg" /></p>
+<p>Percebe-se, assim, que a Função de Transferência <span class="math inline">\(G_1(s)\)</span> se aproxima satisfatoriamente bem do Sistema 1.</p>
+</div>
+</div>
+<div id="problema-2-1" class="section level3 unnumbered" number="">
+<h3>Problema 2</h3>
+<p>Aplique um degrau <span class="math inline">\(u(t) = 4\)</span> no Sistema 2. Pelas características da resposta modele o Sistema 2 como uma Função de Transferência <span class="math inline">\(G_2(s)\)</span> de primeira ou segunda ordem. Em seguida, identifique os parâmetros do modelo utilizando a equação 3.2 ou 3.4. Realize os cálculos na linha de comando do <code>Matlab</code> (<span class="math inline">\(\ln{(x)} \implies \log{(x)}\)</span> e <span class="math inline">\(\sqrt{x} \implies \text{sqrt(x)}\)</span>).Compare a resposta do modelo identificando com a do Sistema 2.</p>
+<div id="resolução-7" class="section level4 unnumbered" number="">
+<h4>Resolução</h4>
+<p>Continua.</p>
 
+</div>
 </div>
 </div>
 </div>

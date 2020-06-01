@@ -90,7 +90,7 @@
 % Allow footnotes in longtable head/foot
 \IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
 \makesavenoteenv{longtable}
-\usepackage{graphicx,grffile}
+\usepackage{graphicx}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
 \def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
@@ -209,7 +209,7 @@ G(s) = \frac{1}{s-1}.
 A resolução será feita em quatro partes: (1) a resolução para \(\tau = 1\) usando \texttt{pzmap}, (2) a resolução para \(\tau = 0.5\) usando \texttt{pzmap}, (3) a simulação e comparação dos resultados e, por fim, (4) a resolução para \(G(s) =\frac {1}{s-1}\).
 
 \hypertarget{parte-1}{%
-\paragraph{Parte 1}\label{parte-1}}
+\paragraph*{Parte 1}\label{parte-1}}
 \addcontentsline{toc}{paragraph}{Parte 1}
 
 Para \(\tau = 1\), temos a função de transferência dada por
@@ -221,9 +221,9 @@ O código implementado no \texttt{Matlab} foi o apresentado abaixo.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{g = tf([}\FloatTok{1}\NormalTok{], [}\FloatTok{1} \FloatTok{1}\NormalTok{])}
-\NormalTok{[p, z] = pzmap(g)}
-\NormalTok{pzmap(g)}
+\VariableTok{g} \OperatorTok{=} \VariableTok{tf}\NormalTok{([}\FloatTok{1}\NormalTok{]}\OperatorTok{,}\NormalTok{ [}\FloatTok{1} \FloatTok{1}\NormalTok{])}
+\NormalTok{[}\VariableTok{p}\OperatorTok{,} \VariableTok{z}\NormalTok{] }\OperatorTok{=} \VariableTok{pzmap}\NormalTok{(}\VariableTok{g}\NormalTok{)}
+\VariableTok{pzmap}\NormalTok{(}\VariableTok{g}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -247,7 +247,7 @@ Ou seja, a função de transferência não apresenta zeros e tem seu polo em \(s
 Como o polo da função de transferência se encontra na SPE, conclui-se que o sistema se compartará de uma forma estável.
 
 \hypertarget{parte-2}{%
-\paragraph{Parte 2}\label{parte-2}}
+\paragraph*{Parte 2}\label{parte-2}}
 \addcontentsline{toc}{paragraph}{Parte 2}
 
 Para \(\tau = 0.5\), temos a função de transferência dada por
@@ -259,9 +259,9 @@ O código implementado no \texttt{Matlab} foi o apresentado abaixo.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{g = tf([}\FloatTok{1}\NormalTok{], [}\FloatTok{0.5} \FloatTok{1}\NormalTok{])}
-\NormalTok{[p, z] = pzmap(g)}
-\NormalTok{pzmap(g)}
+\VariableTok{g} \OperatorTok{=} \VariableTok{tf}\NormalTok{([}\FloatTok{1}\NormalTok{]}\OperatorTok{,}\NormalTok{ [}\FloatTok{0.5} \FloatTok{1}\NormalTok{])}
+\NormalTok{[}\VariableTok{p}\OperatorTok{,} \VariableTok{z}\NormalTok{] }\OperatorTok{=} \VariableTok{pzmap}\NormalTok{(}\VariableTok{g}\NormalTok{)}
+\VariableTok{pzmap}\NormalTok{(}\VariableTok{g}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -285,7 +285,7 @@ Ou seja, a função de transferência não apresenta zeros e tem seu polo em \(s
 Como o polo da função de transferência se encontra na SPE, conclui-se que o sistema se compartará de uma forma estável. Também é possível concluir que o sistema alcanraça a estabilidade mais rápido para \(\tau = 0.5\).
 
 \hypertarget{parte-3}{%
-\paragraph{Parte 3}\label{parte-3}}
+\paragraph*{Parte 3}\label{parte-3}}
 \addcontentsline{toc}{paragraph}{Parte 3}
 
 A simulação do sistema implementada em \texttt{Matlab} está apresentado na figura abaixo.
@@ -299,7 +299,7 @@ O resultado apresentado pelo \emph{scope} é apresentado na figura abaixo.
 Percebe-se que, assim como esperado, o sistema se comporta de forma estável e tem uma convergência mais rápida para \(\tau = 0.5\).
 
 \hypertarget{parte-4}{%
-\paragraph{Parte 4}\label{parte-4}}
+\paragraph*{Parte 4}\label{parte-4}}
 \addcontentsline{toc}{paragraph}{Parte 4}
 
 Para a última etapa temos a função de transferência dada por
@@ -311,9 +311,9 @@ O código implementado no \texttt{Matlab} foi o apresentado abaixo.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{g = tf([}\FloatTok{1}\NormalTok{], [}\FloatTok{1}\NormalTok{ -}\FloatTok{1}\NormalTok{])}
-\NormalTok{[p, z] = pzmap(g)}
-\NormalTok{pzmap(g)}
+\VariableTok{g} \OperatorTok{=} \VariableTok{tf}\NormalTok{([}\FloatTok{1}\NormalTok{]}\OperatorTok{,}\NormalTok{ [}\FloatTok{1} \OperatorTok{{-}}\FloatTok{1}\NormalTok{])}
+\NormalTok{[}\VariableTok{p}\OperatorTok{,} \VariableTok{z}\NormalTok{] }\OperatorTok{=} \VariableTok{pzmap}\NormalTok{(}\VariableTok{g}\NormalTok{)}
+\VariableTok{pzmap}\NormalTok{(}\VariableTok{g}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -363,9 +363,9 @@ O código utilizado no \texttt{Matlab} é apresentado abaixo.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{g = tf([}\FloatTok{1}\NormalTok{], [}\FloatTok{1} \FloatTok{0}\NormalTok{])}
-\NormalTok{[p,z] = pzmap(g)}
-\NormalTok{pzmap(g)}
+\VariableTok{g} \OperatorTok{=} \VariableTok{tf}\NormalTok{([}\FloatTok{1}\NormalTok{]}\OperatorTok{,}\NormalTok{ [}\FloatTok{1} \FloatTok{0}\NormalTok{])}
+\NormalTok{[}\VariableTok{p}\OperatorTok{,}\VariableTok{z}\NormalTok{] }\OperatorTok{=} \VariableTok{pzmap}\NormalTok{(}\VariableTok{g}\NormalTok{)}
+\VariableTok{pzmap}\NormalTok{(}\VariableTok{g}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -421,9 +421,9 @@ O código utilizado no \texttt{Matlab} é apresentado abaixo.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{g = tf([}\FloatTok{1}\NormalTok{], [}\FloatTok{1} \FloatTok{0} \FloatTok{25}\NormalTok{])}
-\NormalTok{[p,z] = pzmap(g)}
-\NormalTok{pzmap(g)}
+\VariableTok{g} \OperatorTok{=} \VariableTok{tf}\NormalTok{([}\FloatTok{1}\NormalTok{]}\OperatorTok{,}\NormalTok{ [}\FloatTok{1} \FloatTok{0} \FloatTok{25}\NormalTok{])}
+\NormalTok{[}\VariableTok{p}\OperatorTok{,}\VariableTok{z}\NormalTok{] }\OperatorTok{=} \VariableTok{pzmap}\NormalTok{(}\VariableTok{g}\NormalTok{)}
+\VariableTok{pzmap}\NormalTok{(}\VariableTok{g}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -764,6 +764,43 @@ F(s) = \frac {K_cG(s)}{1+K_cG(s)} \implies G(s) = \frac {F(s)}{K_c - K_cF(s)}.  
 
 Aplique um degrau \(u(t) = 2\) no Sistema 1 do arquivo \texttt{MatLab3.mdl} do Simulink. Pelas características da resposta, modele o Sistema 1 como uma Função de Transferência \(G_1(s)%
 \) de primeira ou segunda ordem. Em seguida, identifique os parâmetros do modelo utilizando a equação 3.2 ou 3.4. Compare a resposta do modelo identificado com a do Sistema 1.
+
+\hypertarget{resoluuxe7uxe3o-6}{%
+\subsubsection*{Resolução}\label{resoluuxe7uxe3o-6}}
+\addcontentsline{toc}{subsubsection}{Resolução}
+
+Simulando o sistema do modelo 1 obtemos o resultado abaixo.
+
+\includegraphics{Imagens/Lab3/Resolução/prob1A.jpg}
+
+Pela curva feita espera-se que a Função de Transferência seja de primeira ordem. Utilizando as ferramentas fornecidas pelo \texttt{Simulink} foi estimado que
+\[
+y(\infty) = 1.6 \\
+0.95y(\infty) = 1.52 \implies  t_s(5\%) = 9.97s \implies \tau = 3.33
+\]
+
+Assim,
+\[
+G_1(s) = \frac {0.8}{3.33s+1}.
+\]
+
+Simulando \(G_1(s)\), temos o resultado apresentado abaixo.
+
+\includegraphics{Imagens/Lab3/Resolução/prob1B.jpg}
+
+Percebe-se, assim, que a Função de Transferência \(G_1(s)\) se aproxima satisfatoriamente bem do Sistema 1.
+
+\hypertarget{problema-2-1}{%
+\subsection*{Problema 2}\label{problema-2-1}}
+\addcontentsline{toc}{subsection}{Problema 2}
+
+Aplique um degrau \(u(t) = 4\) no Sistema 2. Pelas características da resposta modele o Sistema 2 como uma Função de Transferência \(G_2(s)\) de primeira ou segunda ordem. Em seguida, identifique os parâmetros do modelo utilizando a equação 3.2 ou 3.4. Realize os cálculos na linha de comando do \texttt{Matlab} (\(\ln{(x)} \implies \log{(x)}\) e \(\sqrt{x} \implies \text{sqrt(x)}\)).Compare a resposta do modelo identificando com a do Sistema 2.
+
+\hypertarget{resoluuxe7uxe3o-7}{%
+\subsubsection*{Resolução}\label{resoluuxe7uxe3o-7}}
+\addcontentsline{toc}{subsubsection}{Resolução}
+
+Continua.
 
 \hypertarget{rastreamento-de-referuxeancias-e-rejeiuxe7uxe3o-de-perturbauxe7uxf5es---erro-em-regime-permanente}{%
 \chapter{Rastreamento de Referências e Rejeição de Perturbações - Erro em Regime Permanente}\label{rastreamento-de-referuxeancias-e-rejeiuxe7uxe3o-de-perturbauxe7uxf5es---erro-em-regime-permanente}}

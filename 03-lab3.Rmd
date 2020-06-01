@@ -107,3 +107,34 @@ F(s) = \frac {K_cG(s)}{1+K_cG(s)} \implies G(s) = \frac {F(s)}{K_c - K_cF(s)}.  
 ### Problema 1 {-}
 
 Aplique um degrau $u(t) = 2$ no Sistema 1 do arquivo `MatLab3.mdl` do Simulink. Pelas características da resposta, modele o Sistema 1 como uma Função de Transferência $G_1(s)%$ de primeira ou segunda ordem. Em seguida, identifique os parâmetros do modelo utilizando a equação 3.2 ou 3.4. Compare a resposta do modelo identificado com a do Sistema 1.
+
+#### Resolução {-}
+
+Simulando o sistema do modelo 1 obtemos o resultado abaixo.
+
+![](Imagens/Lab3/Resolução/prob1A.jpg)
+
+Pela curva feita espera-se que a Função de Transferência seja de primeira ordem. Utilizando as ferramentas fornecidas pelo `Simulink` foi estimado que
+$$
+y(\infty) = 1.6 \\
+0.95y(\infty) = 1.52 \implies  t_s(5\%) = 9.97s \implies \tau = 3.33
+$$
+
+Assim,
+$$
+G_1(s) = \frac {0.8}{3.33s+1}.
+$$
+
+Simulando $G_1(s)$, temos o resultado apresentado abaixo.
+
+![](Imagens/Lab3/Resolução/prob1B.jpg)
+
+Percebe-se, assim, que a Função de Transferência $G_1(s)$ se aproxima satisfatoriamente bem do Sistema 1.
+
+### Problema 2{-}
+
+Aplique um degrau $u(t) = 4$ no Sistema 2. Pelas características da resposta modele o Sistema 2 como uma Função de Transferência $G_2(s)$ de primeira ou segunda ordem. Em seguida, identifique os parâmetros do modelo utilizando a equação 3.2 ou 3.4. Realize os cálculos na linha de comando do `Matlab` ($\ln{(x)} \implies \log{(x)}$ e $\sqrt{x} \implies \text{sqrt(x)}$).Compare a resposta do modelo identificando com a do Sistema 2.
+
+#### Resolução {-}
+
+Continua.

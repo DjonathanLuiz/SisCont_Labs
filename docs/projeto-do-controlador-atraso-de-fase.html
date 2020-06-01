@@ -33,6 +33,7 @@
   
 <link rel="prev" href="projeto-de-controladores-pelo-lugar-das-raízes.html"/>
 <link rel="next" href="análise-pelos-diagramas-de-bode-e-nyquist.html"/>
+<script src="libs/header-attrs-2.1/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -53,25 +54,26 @@
 
 
 <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
+    border: none; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -80,9 +82,9 @@ pre.numberSource a.sourceLine::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {  }
+  {   }
 @media screen {
-a.sourceLine::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -133,12 +135,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Apresentação</a></li>
 <li class="chapter" data-level="1" data-path="simulação-de-sistemas.html"><a href="simulação-de-sistemas.html"><i class="fa fa-check"></i><b>1</b> Simulação de Sistemas</a></li>
-<li class="chapter" data-level="2" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html"><i class="fa fa-check"></i><b>2</b> Efeitos de Pólos e Zeros na Dinâmica</a><ul>
-<li class="chapter" data-level="2.1" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#apresentação-do-laboratório"><i class="fa fa-check"></i><b>2.1</b> Apresentação do Laboratório</a><ul>
+<li class="chapter" data-level="2" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html"><i class="fa fa-check"></i><b>2</b> Efeitos de Pólos e Zeros na Dinâmica</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#apresentação-do-laboratório"><i class="fa fa-check"></i><b>2.1</b> Apresentação do Laboratório</a>
+<ul>
 <li class="chapter" data-level="2.1.1" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#objetivo"><i class="fa fa-check"></i><b>2.1.1</b> Objetivo</a></li>
 <li class="chapter" data-level="2.1.2" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#polos-e-zeros"><i class="fa fa-check"></i><b>2.1.2</b> Polos e Zeros</a></li>
 </ul></li>
-<li class="chapter" data-level="2.2" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#procedimentos"><i class="fa fa-check"></i><b>2.2</b> Procedimentos</a><ul>
+<li class="chapter" data-level="2.2" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#procedimentos"><i class="fa fa-check"></i><b>2.2</b> Procedimentos</a>
+<ul>
 <li class="chapter" data-level="" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#problema-1"><i class="fa fa-check"></i>Problema 1</a></li>
 <li class="chapter" data-level="" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#problema-2"><i class="fa fa-check"></i>Problema 2</a></li>
 <li class="chapter" data-level="" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#problema-3"><i class="fa fa-check"></i>Problema 3</a></li>
@@ -147,15 +152,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#problema-6"><i class="fa fa-check"></i>Problema 6</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html"><i class="fa fa-check"></i><b>3</b> Identificação de Sistemas</a><ul>
-<li class="chapter" data-level="3.1" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#apresentação-do-laboratório-1"><i class="fa fa-check"></i><b>3.1</b> Apresentação do Laboratório</a><ul>
+<li class="chapter" data-level="3" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html"><i class="fa fa-check"></i><b>3</b> Identificação de Sistemas</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#apresentação-do-laboratório-1"><i class="fa fa-check"></i><b>3.1</b> Apresentação do Laboratório</a>
+<ul>
 <li class="chapter" data-level="3.1.1" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#objetivo-1"><i class="fa fa-check"></i><b>3.1.1</b> Objetivo</a></li>
 <li class="chapter" data-level="3.1.2" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#modelagem-de-sistemas-lineares"><i class="fa fa-check"></i><b>3.1.2</b> Modelagem de Sistemas Lineares</a></li>
 <li class="chapter" data-level="3.1.3" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#identificação-de-sistemas-de-primeira-ordem"><i class="fa fa-check"></i><b>3.1.3</b> Identificação de sistemas de primeira ordem</a></li>
 <li class="chapter" data-level="3.1.4" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#identificação-de-sistemas-de-segunda-ordem"><i class="fa fa-check"></i><b>3.1.4</b> Identificação de Sistemas de Segunda Ordem</a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#procedimentos-1"><i class="fa fa-check"></i><b>3.2</b> Procedimentos</a><ul>
+<li class="chapter" data-level="3.2" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#procedimentos-1"><i class="fa fa-check"></i><b>3.2</b> Procedimentos</a>
+<ul>
 <li class="chapter" data-level="" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#problema-1-1"><i class="fa fa-check"></i>Problema 1</a></li>
+<li class="chapter" data-level="" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#problema-2-1"><i class="fa fa-check"></i>Problema 2</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html"><a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html"><i class="fa fa-check"></i><b>4</b> Rastreamento de Referências e Rejeição de Perturbações - Erro em Regime Permanente</a></li>
@@ -188,7 +197,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="projeto-do-controlador-atraso-de-fase" class="section level1">
+<div id="projeto-do-controlador-atraso-de-fase" class="section level1" number="10">
 <h1><span class="header-section-number">Laboratório 10</span> Projeto do controlador atraso de fase</h1>
 <p>Working on it :)</p>
 

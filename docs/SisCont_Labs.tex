@@ -667,7 +667,11 @@ e o tempo de acomodação de \(5\%\) é dado por
 
 Isto é ilustrado na figura 1.
 
+\begin{figure}
+\centering
 \includegraphics{Imagens/Lab3/Explicação/fig1.jpg}
+\caption{Figura 1: Resposta de um sistema de primeira ordem ao degrau.}
+\end{figure}
 
 Logo,
 
@@ -709,7 +713,57 @@ Temos as seguintes situações:
 \hypertarget{sistemas-sub-amortecidos}{%
 \subsubsection{Sistemas sub-amortecidos}\label{sistemas-sub-amortecidos}}
 
-Continua.
+Suponha que \(G(s)\) é estável com \(0 < \xi < 1\) (sub-amortecido). Considere uma entrada \(u(t) = A\) do tipo degrau de magnitude \(A\). A resposta correspondente \(y(t)\) é ilustrada na figura 2.
+
+\begin{figure}
+\centering
+\includegraphics{Imagens/Lab3/Explicação/fig2.jpg}
+\caption{Figura 2: Resposta de um sistema de segunda ordem sub-amortecido ao degrau.}
+\end{figure}
+
+Temos que
+\[
+y(\infty) = KA, \quad M_p= \frac {y_p-y(\infty)}{y(\infty)} = e^{\frac {-(\xi \pi)}{\sqrt{1-\xi^2}}}, \quad
+t_p = \frac {\pi}{\omega_n\sqrt{1-\xi^2}}.
+\]
+
+Logo,
+
+\begin{align}
+K = \frac {y(\infty)}{A}, \quad M_p = \frac {y_p - y(\infty)}{y(\infty)}, \quad \xi = \sqrt{\frac {(\ln{M_p})^2}{(\ln{M_p})^2+\pi^2}}, \quad \omega_n = \frac {\pi}{t_p\sqrt{1-\xi^2}}.  \label{eq:eq4}
+\end{align}
+
+\hypertarget{sistemas-criticamente-amortecidos-e-super-amortecidos}{%
+\subsubsection{Sistemas criticamente amortecidos e super-amortecidos}\label{sistemas-criticamente-amortecidos-e-super-amortecidos}}
+
+Suponha que \(G(s)\) é estável com \(\xi \geq 1\) (criticamente amortecido ou super-amortecido). Neste caso, os dois pólos de \(G(s)\) são reais e a resposta ao degrau se assemelha ao de um sistema de primeira ordem (não apresenta oscilação nem sobressinal). Podemos identificar \(G(s)\) indiretamente através da identificação da Função de Transferência \(F(s)\) em malha-fechada. Considere o diagrama de blocos em malha-fechada mostrando na Figura 3, onde \(K_c > 0\) é o ganho de um controlador proporcional e \(r\) é a referência.
+
+\begin{figure}
+\centering
+\includegraphics{Imagens/Lab3/Explicação/fig3.jpg}
+\caption{Figura 3: Diagrama de blocos em malha-fechada.}
+\end{figure}
+
+Relembre que
+\[
+F(s) = \frac {Y(s)}{R(s)} = \frac {K_cG(s)}{1+K_cG(s)}.
+\]
+
+Para qualquer \(K_c > 0\), temos que \(F(s)\) é um sistema de segunda ordem estável. E, quando \(K_c > 0\) for suficientemente grade, temos que \(F(s)\) será um sistema de segunda ordem sub-amortecido. Assim, escolhemos \(K_c\) de modo que \(F(s)\) seja sub-amortecido e então identificamos \(F(s)\) conforme descrito na seção anterior aplicando uma referência \(r(t) = A\) do tipo degrau de magnitude \(A\). Desta maneira, identificaremos \(G(s)\) indiretamente pois
+
+\begin{align}
+F(s) = \frac {K_cG(s)}{1+K_cG(s)} \implies G(s) = \frac {F(s)}{K_c - K_cF(s)}.  \label{eq:eq5}
+\end{align}
+
+\hypertarget{procedimentos-1}{%
+\section{Procedimentos}\label{procedimentos-1}}
+
+\hypertarget{problema-1-1}{%
+\subsection*{Problema 1}\label{problema-1-1}}
+\addcontentsline{toc}{subsection}{Problema 1}
+
+Aplique um degrau \(u(t) = 2\) no Sistema 1 do arquivo \texttt{MatLab3.mdl} do Simulink. Pelas características da resposta, modele o Sistema 1 como uma Função de Transferência \(G_1(s)%
+\) de primeira ou segunda ordem. Em seguida, identifique os parâmetros do modelo utilizando a equação 3.2 ou 3.4. Compare a resposta do modelo identificado com a do Sistema 1.
 
 \hypertarget{rastreamento-de-referuxeancias-e-rejeiuxe7uxe3o-de-perturbauxe7uxf5es---erro-em-regime-permanente}{%
 \chapter{Rastreamento de Referências e Rejeição de Perturbações - Erro em Regime Permanente}\label{rastreamento-de-referuxeancias-e-rejeiuxe7uxe3o-de-perturbauxe7uxf5es---erro-em-regime-permanente}}

@@ -154,6 +154,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.1.3" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#identificação-de-sistemas-de-primeira-ordem"><i class="fa fa-check"></i><b>3.1.3</b> Identificação de sistemas de primeira ordem</a></li>
 <li class="chapter" data-level="3.1.4" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#identificação-de-sistemas-de-segunda-ordem"><i class="fa fa-check"></i><b>3.1.4</b> Identificação de Sistemas de Segunda Ordem</a></li>
 </ul></li>
+<li class="chapter" data-level="3.2" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#procedimentos-1"><i class="fa fa-check"></i><b>3.2</b> Procedimentos</a><ul>
+<li class="chapter" data-level="" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#problema-1-1"><i class="fa fa-check"></i>Problema 1</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html"><a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html"><i class="fa fa-check"></i><b>4</b> Rastreamento de Referências e Rejeição de Perturbações - Erro em Regime Permanente</a></li>
 <li class="chapter" data-level="5" data-path="projeto-de-controladores-por-métodos-algébricos.html"><a href="projeto-de-controladores-por-métodos-algébricos.html"><i class="fa fa-check"></i><b>5</b> Projeto de Controladores por Métodos Algébricos</a></li>
@@ -218,7 +221,10 @@ e o tempo de acomodação de <span class="math inline">\(5\%\)</span> é dado po
 0.95KA = KA(1- e^{\frac {-t_s(5\%)}{\tau}}) \implies t_s(5\%) =3 \tau.
 \]</span></p>
 <p>Isto é ilustrado na figura 1.</p>
-<p><img src="Imagens/Lab3/Explicação/fig1.jpg" /></p>
+<div class="figure">
+<img src="Imagens/Lab3/Explicação/fig1.jpg" alt="Figura 1: Resposta de um sistema de primeira ordem ao degrau." />
+<p class="caption">Figura 1: Resposta de um sistema de primeira ordem ao degrau.</p>
+</div>
 <p>Logo,</p>
 <p><span class="math display" id="eq:eq2">\[\begin{align}
 K = \frac{y(\infty)}{A},  \tau = \frac {t_s(5\%)}{3}. \tag{3.2}
@@ -244,9 +250,45 @@ p_{1,2} = - \xi \omega_n \pm \sqrt{\xi^2 -1}.
 </ol>
 <div id="sistemas-sub-amortecidos" class="section level4">
 <h4><span class="header-section-number">3.1.4.1</span> Sistemas sub-amortecidos</h4>
-<p>Continua.</p>
-
+<p>Suponha que <span class="math inline">\(G(s)\)</span> é estável com <span class="math inline">\(0 &lt; \xi &lt; 1\)</span> (sub-amortecido). Considere uma entrada <span class="math inline">\(u(t) = A\)</span> do tipo degrau de magnitude <span class="math inline">\(A\)</span>. A resposta correspondente <span class="math inline">\(y(t)\)</span> é ilustrada na figura 2.</p>
+<div class="figure">
+<img src="Imagens/Lab3/Explicação/fig2.jpg" alt="Figura 2: Resposta de um sistema de segunda ordem sub-amortecido ao degrau." />
+<p class="caption">Figura 2: Resposta de um sistema de segunda ordem sub-amortecido ao degrau.</p>
 </div>
+<p>Temos que
+<span class="math display">\[
+y(\infty) = KA, \quad M_p= \frac {y_p-y(\infty)}{y(\infty)} = e^{\frac {-(\xi \pi)}{\sqrt{1-\xi^2}}}, \quad
+t_p = \frac {\pi}{\omega_n\sqrt{1-\xi^2}}.
+\]</span></p>
+<p>Logo,</p>
+<p><span class="math display" id="eq:eq4">\[\begin{align}
+K = \frac {y(\infty)}{A}, \quad M_p = \frac {y_p - y(\infty)}{y(\infty)}, \quad \xi = \sqrt{\frac {(\ln{M_p})^2}{(\ln{M_p})^2+\pi^2}}, \quad \omega_n = \frac {\pi}{t_p\sqrt{1-\xi^2}}.  \tag{3.4}
+\end{align}\]</span></p>
+</div>
+<div id="sistemas-criticamente-amortecidos-e-super-amortecidos" class="section level4">
+<h4><span class="header-section-number">3.1.4.2</span> Sistemas criticamente amortecidos e super-amortecidos</h4>
+<p>Suponha que <span class="math inline">\(G(s)\)</span> é estável com <span class="math inline">\(\xi \geq 1\)</span> (criticamente amortecido ou super-amortecido). Neste caso, os dois pólos de <span class="math inline">\(G(s)\)</span> são reais e a resposta ao degrau se assemelha ao de um sistema de primeira ordem (não apresenta oscilação nem sobressinal). Podemos identificar <span class="math inline">\(G(s)\)</span> indiretamente através da identificação da Função de Transferência <span class="math inline">\(F(s)\)</span> em malha-fechada. Considere o diagrama de blocos em malha-fechada mostrando na Figura 3, onde <span class="math inline">\(K_c &gt; 0\)</span> é o ganho de um controlador proporcional e <span class="math inline">\(r\)</span> é a referência.</p>
+<div class="figure">
+<img src="Imagens/Lab3/Explicação/fig3.jpg" alt="Figura 3: Diagrama de blocos em malha-fechada." />
+<p class="caption">Figura 3: Diagrama de blocos em malha-fechada.</p>
+</div>
+<p>Relembre que
+<span class="math display">\[
+F(s) = \frac {Y(s)}{R(s)} = \frac {K_cG(s)}{1+K_cG(s)}.
+\]</span></p>
+<p>Para qualquer <span class="math inline">\(K_c &gt; 0\)</span>, temos que <span class="math inline">\(F(s)\)</span> é um sistema de segunda ordem estável. E, quando <span class="math inline">\(K_c &gt; 0\)</span> for suficientemente grade, temos que <span class="math inline">\(F(s)\)</span> será um sistema de segunda ordem sub-amortecido. Assim, escolhemos <span class="math inline">\(K_c\)</span> de modo que <span class="math inline">\(F(s)\)</span> seja sub-amortecido e então identificamos <span class="math inline">\(F(s)\)</span> conforme descrito na seção anterior aplicando uma referência <span class="math inline">\(r(t) = A\)</span> do tipo degrau de magnitude <span class="math inline">\(A\)</span>. Desta maneira, identificaremos <span class="math inline">\(G(s)\)</span> indiretamente pois</p>
+<p><span class="math display" id="eq:eq5">\[\begin{align}
+F(s) = \frac {K_cG(s)}{1+K_cG(s)} \implies G(s) = \frac {F(s)}{K_c - K_cF(s)}.  \tag{3.5}
+\end{align}\]</span></p>
+</div>
+</div>
+</div>
+<div id="procedimentos-1" class="section level2">
+<h2><span class="header-section-number">3.2</span> Procedimentos</h2>
+<div id="problema-1-1" class="section level3 unnumbered">
+<h3>Problema 1</h3>
+<p>Aplique um degrau <span class="math inline">\(u(t) = 2\)</span> no Sistema 1 do arquivo <code>MatLab3.mdl</code> do Simulink. Pelas características da resposta, modele o Sistema 1 como uma Função de Transferência <span class="math inline">\(G_1(s)%\)</span> de primeira ou segunda ordem. Em seguida, identifique os parâmetros do modelo utilizando a equação 3.2 ou 3.4. Compare a resposta do modelo identificado com a do Sistema 1.</p>
+
 </div>
 </div>
 </div>

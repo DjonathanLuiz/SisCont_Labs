@@ -305,7 +305,7 @@ $$
 e substituindo os valores de $\beta$ pelos valores propostos temos os valores de zero e pólo apresentados na tabela abaixo.
 
 ```{r, echo=FALSE}
-resultados <- data.frame(Pólos = c("{-2, -1}",
+resultados <- data.frame("Pólos" = c("{-2, -1}",
                                    "{-2, -1}",
                                    "{-2, -1}",
                                    "{-2, -1}",
@@ -322,4 +322,98 @@ Os gráficos de posição estão apresentados abaixo.
 
 ![](Imagens/Lab2/prob4Varios.jpg)
 
+A simulação feita em `Matlab` está apresentada na figura abaixo.
 
+![](Imagens/Lab2/modelSim4.jpg)
+
+O resultado da simulação está apresentado na figura abaixo.
+
+![](Imagens/Lab2/prob4SimResult.jpg)
+
+É possível perceber que quanto mais alto o valor de $\beta$ maior o sobressinal. Também é possível perceber que há um intervalo no qual o tempo de reação aumenta, encontrando seu tempo de reação mínimo, voltando então a aumentar.
+
+### Problema 5{-}
+
+Considere o sistema de segunda ordem
+$$
+G(s) = \frac {0.9}{s^2+s+1}.
+$$
+
+Determine os pólos e suas posições no plano $s$ e simule para uma entrada do tipo degrau unitário. Note que há sobressinal. Tal resultado era esperado? Justifique.
+
+Agora, adicionando um zero, temos
+$$
+G_z(s) = \frac {0.9(\beta s+1)}{s^2+s+1},
+$$
+onde $\beta = 0.05$, $\beta = 0.5$, $\beta = 1$ e $\beta = 2.5$. Para cada valor de $\beta$ determine os pólos e zeros, suas posições no plano $s$ e simule para uma entrada do tipo degrau unitário. Analise e compare os resultados.
+
+#### Resolução{-}
+
+Utilizando a função `pzmap()` do `Matlab` para encontrar os pólos da função de transferência $G(s) = \frac {0.9}{s^2+s+1}$ temos que a função não possui zeros e possui polos para $s = -0.5 + 0.86i$ e $s = -0.5 -0.86i$. O mapa de posições é apresentado na figura abaixo.
+
+![](Imagens/Lab2/prob5.jpg)
+
+O resultado da função de transferência é apresentado na figura abaixo.
+
+![](imagens/Lab2/prob5Sim.jpg)
+
+É possível perceber que há sobressinal.
+
+Agora, considerando a função de transferência $G_z(s) = \frac {0.9(\beta s+1)}{s^2+s+1}$, e substituindo os valores de $\beta$ pelos valores propostos temos os valores de zero e pólo apresentados na tabela abaixo.
+
+```{r, echo=FALSE}
+resultados <- data.frame("Pólos" = c("{$-0.5 \\pm 0.86i$}",
+                                     "{$-0.5 \\pm 0.86i$}",
+                                     "{$-0.5 \\pm 0.86i$}",
+                                     "{$-0.5 \\pm 0.86i$}"),
+                         Zeros = c("-20.0", "-2.0",
+                                   "-1.0", "-0.4"))
+rownames(resultados) <- c("$\\beta = 0.05$", "$\\beta = 0.5$", "$\\beta = 1$", "$\\beta = 2.5$")
+knitr::kable(resultados, booktabs = T, escape = FALSE, caption = "Valores de Pólo e Zero variando $\\beta$")
+```
+
+Os gráficos de posição estão apresentados abaixo.
+
+![](Imagens/Lab2/prob5Varios.jpg)
+
+A simulação feita em `Matlab` está apresentada na figura abaixo.
+
+![](Imagens/Lab2/modelSim5.jpg)
+
+O resultado da simulação está apresentado na figura abaixo.
+
+![](Imagens/Lab2/prob5SimResult.jpg)
+
+É possível perceber que quanto mais alto o valor de $\beta$ maior o sobressinal e o tempo de resposta do sistema.
+
+### Problema 6{-}
+
+Considere o sistema de segunda ordem de fase não-mínima
+$$
+G(s) = \frac {-s+1}{0.5s^2+1.5s+1}.
+$$
+
+Determine os pólos e o zero, suas posições no plano $s$ e simule para uma entrada do tipo degrau unitário. Note que a resposta é negativa nos instantes iniciais. Justificaremos tal comportamento no que se segue.
+
+Escrevemos
+$$
+G(s) = \frac {-s+1}{0.5s^2+1.5s+1} = \overbrace{\frac {1}{0.5s^2+1.5s+1}}^{G_1(s)} - \overbrace{\frac {s}{0.5s^2+1.5s+1}}^{G_2(s) = sG_1(S)}.
+$$
+
+Assim,
+$$
+Y(s) = G(s)U(s) = G_1(s)U(s)-G_2(s)U(s) = \underbrace{G_1(s)U(s)}_{Y_1(s)} - \underbrace{sG_1(s)U(s)}_{Y_2(s) = sY_1(s)}.
+$$
+
+Relembre-se que se $x(t) \iff X(S)$ com $x(0) = 0$, então $dx(t)/dt \iff sX(s)$. Portanto,
+$$
+y(t) = y_1(t)-y_2(t)=y_1(t)- \frac {dy_1(t)}{dt}.
+$$
+
+Verifique a validade da equação acima no Simulink (utilize o bloco **Derivative** no Simulink) para uma entrada do tipo degrau unitário. Analise o motivo da resposta ser negativa nos instantes iniciais.
+
+#### Resolução {-}
+
+\begin{align}
+    r  = \frac{1}{n-1} \sum_{i=1}^{n} \frac{(X_i - \bar{X})(Y_i - \bar{Y})}{S_xS_y}
+\end{align}

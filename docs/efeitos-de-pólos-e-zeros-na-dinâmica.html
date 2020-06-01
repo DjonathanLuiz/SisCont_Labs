@@ -24,7 +24,7 @@
 <meta name="author" content="Djonathan Luiz de Oliveira Quadras" />
 
 
-<meta name="date" content="2020-05-30" />
+<meta name="date" content="2020-06-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -143,9 +143,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#problema-2"><i class="fa fa-check"></i>Problema 2</a></li>
 <li class="chapter" data-level="" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#problema-3"><i class="fa fa-check"></i>Problema 3</a></li>
 <li class="chapter" data-level="" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#problema-4"><i class="fa fa-check"></i>Problema 4</a></li>
+<li class="chapter" data-level="" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#problema-5"><i class="fa fa-check"></i>Problema 5</a></li>
+<li class="chapter" data-level="" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#problema-6"><i class="fa fa-check"></i>Problema 6</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html"><i class="fa fa-check"></i><b>3</b> Identificação de Sistemas</a></li>
+<li class="chapter" data-level="3" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html"><i class="fa fa-check"></i><b>3</b> Identificação de Sistemas</a><ul>
+<li class="chapter" data-level="3.1" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#apresentação-do-laboratório-1"><i class="fa fa-check"></i><b>3.1</b> Apresentação do Laboratório</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#objetivo-1"><i class="fa fa-check"></i><b>3.1.1</b> Objetivo</a></li>
+<li class="chapter" data-level="3.1.2" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#modelagem-de-sistemas-lineares"><i class="fa fa-check"></i><b>3.1.2</b> Modelagem de Sistemas Lineares</a></li>
+<li class="chapter" data-level="3.1.3" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#identificação-de-sistemas-de-primeira-ordem"><i class="fa fa-check"></i><b>3.1.3</b> Identificação de sistemas de primeira ordem</a></li>
+<li class="chapter" data-level="3.1.4" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#identificação-de-sistemas-de-segunda-ordem"><i class="fa fa-check"></i><b>3.1.4</b> Identificação de Sistemas de Segunda Ordem</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="4" data-path="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html"><a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html"><i class="fa fa-check"></i><b>4</b> Rastreamento de Referências e Rejeição de Perturbações - Erro em Regime Permanente</a></li>
 <li class="chapter" data-level="5" data-path="projeto-de-controladores-por-métodos-algébricos.html"><a href="projeto-de-controladores-por-métodos-algébricos.html"><i class="fa fa-check"></i><b>5</b> Projeto de Controladores por Métodos Algébricos</a></li>
 <li class="chapter" data-level="6" data-path="linearização-de-sistemas-não-lineares.html"><a href="linearização-de-sistemas-não-lineares.html"><i class="fa fa-check"></i><b>6</b> Linearização de Sistemas Não-Lineares</a></li>
@@ -441,6 +450,99 @@ e substituindo os valores de <span class="math inline">\(\beta\)</span> pelos va
 </table>
 <p>Os gráficos de posição estão apresentados abaixo.</p>
 <p><img src="Imagens/Lab2/prob4Varios.jpg" /></p>
+<p>A simulação feita em <code>Matlab</code> está apresentada na figura abaixo.</p>
+<p><img src="Imagens/Lab2/modelSim4.jpg" /></p>
+<p>O resultado da simulação está apresentado na figura abaixo.</p>
+<p><img src="Imagens/Lab2/prob4SimResult.jpg" /></p>
+<p>É possível perceber que quanto mais alto o valor de <span class="math inline">\(\beta\)</span> maior o sobressinal. Também é possível perceber que há um intervalo no qual o tempo de reação aumenta, encontrando seu tempo de reação mínimo, voltando então a aumentar.</p>
+</div>
+</div>
+<div id="problema-5" class="section level3 unnumbered">
+<h3>Problema 5</h3>
+<p>Considere o sistema de segunda ordem
+<span class="math display">\[
+G(s) = \frac {0.9}{s^2+s+1}.
+\]</span></p>
+<p>Determine os pólos e suas posições no plano <span class="math inline">\(s\)</span> e simule para uma entrada do tipo degrau unitário. Note que há sobressinal. Tal resultado era esperado? Justifique.</p>
+<p>Agora, adicionando um zero, temos
+<span class="math display">\[
+G_z(s) = \frac {0.9(\beta s+1)}{s^2+s+1},
+\]</span>
+onde <span class="math inline">\(\beta = 0.05\)</span>, <span class="math inline">\(\beta = 0.5\)</span>, <span class="math inline">\(\beta = 1\)</span> e <span class="math inline">\(\beta = 2.5\)</span>. Para cada valor de <span class="math inline">\(\beta\)</span> determine os pólos e zeros, suas posições no plano <span class="math inline">\(s\)</span> e simule para uma entrada do tipo degrau unitário. Analise e compare os resultados.</p>
+<div id="resolução-4" class="section level4 unnumbered">
+<h4>Resolução</h4>
+<p>Utilizando a função <code>pzmap()</code> do <code>Matlab</code> para encontrar os pólos da função de transferência <span class="math inline">\(G(s) = \frac {0.9}{s^2+s+1}\)</span> temos que a função não possui zeros e possui polos para <span class="math inline">\(s = -0.5 + 0.86i\)</span> e <span class="math inline">\(s = -0.5 -0.86i\)</span>. O mapa de posições é apresentado na figura abaixo.</p>
+<p><img src="Imagens/Lab2/prob5.jpg" /></p>
+<p>O resultado da função de transferência é apresentado na figura abaixo.</p>
+<p><img src="Imagens/Lab2/prob5Sim.jpg" /></p>
+<p>É possível perceber que há sobressinal.</p>
+<p>Agora, considerando a função de transferência <span class="math inline">\(G_z(s) = \frac {0.9(\beta s+1)}{s^2+s+1}\)</span>, e substituindo os valores de <span class="math inline">\(\beta\)</span> pelos valores propostos temos os valores de zero e pólo apresentados na tabela abaixo.</p>
+<table>
+<caption><span id="tab:unnamed-chunk-7">Table 2.2: </span>Valores de Pólo e Zero variando <span class="math inline">\(\beta\)</span></caption>
+<thead>
+<tr class="header">
+<th></th>
+<th align="left">Pólos</th>
+<th align="left">Zeros</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\beta = 0.05\)</span></td>
+<td align="left">{<span class="math inline">\(-0.5 \pm 0.86i\)</span>}</td>
+<td align="left">-20.0</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\beta = 0.5\)</span></td>
+<td align="left">{<span class="math inline">\(-0.5 \pm 0.86i\)</span>}</td>
+<td align="left">-2.0</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\beta = 1\)</span></td>
+<td align="left">{<span class="math inline">\(-0.5 \pm 0.86i\)</span>}</td>
+<td align="left">-1.0</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\beta = 2.5\)</span></td>
+<td align="left">{<span class="math inline">\(-0.5 \pm 0.86i\)</span>}</td>
+<td align="left">-0.4</td>
+</tr>
+</tbody>
+</table>
+<p>Os gráficos de posição estão apresentados abaixo.</p>
+<p><img src="Imagens/Lab2/prob5Varios.jpg" /></p>
+<p>A simulação feita em <code>Matlab</code> está apresentada na figura abaixo.</p>
+<p><img src="Imagens/Lab2/modelSim5.jpg" /></p>
+<p>O resultado da simulação está apresentado na figura abaixo.</p>
+<p><img src="Imagens/Lab2/prob5SimResult.jpg" /></p>
+<p>É possível perceber que quanto mais alto o valor de <span class="math inline">\(\beta\)</span> maior o sobressinal e o tempo de resposta do sistema.</p>
+</div>
+</div>
+<div id="problema-6" class="section level3 unnumbered">
+<h3>Problema 6</h3>
+<p>Considere o sistema de segunda ordem de fase não-mínima
+<span class="math display">\[
+G(s) = \frac {-s+1}{0.5s^2+1.5s+1}.
+\]</span></p>
+<p>Determine os pólos e o zero, suas posições no plano <span class="math inline">\(s\)</span> e simule para uma entrada do tipo degrau unitário. Note que a resposta é negativa nos instantes iniciais. Justificaremos tal comportamento no que se segue.</p>
+<p>Escrevemos
+<span class="math display">\[
+G(s) = \frac {-s+1}{0.5s^2+1.5s+1} = \overbrace{\frac {1}{0.5s^2+1.5s+1}}^{G_1(s)} - \overbrace{\frac {s}{0.5s^2+1.5s+1}}^{G_2(s) = sG_1(S)}.
+\]</span></p>
+<p>Assim,
+<span class="math display">\[
+Y(s) = G(s)U(s) = G_1(s)U(s)-G_2(s)U(s) = \underbrace{G_1(s)U(s)}_{Y_1(s)} - \underbrace{sG_1(s)U(s)}_{Y_2(s) = sY_1(s)}.
+\]</span></p>
+<p>Relembre-se que se <span class="math inline">\(x(t) \iff X(S)\)</span> com <span class="math inline">\(x(0) = 0\)</span>, então <span class="math inline">\(dx(t)/dt \iff sX(s)\)</span>. Portanto,
+<span class="math display">\[
+y(t) = y_1(t)-y_2(t)=y_1(t)- \frac {dy_1(t)}{dt}.
+\]</span></p>
+<p>Verifique a validade da equação acima no Simulink (utilize o bloco <strong>Derivative</strong> no Simulink) para uma entrada do tipo degrau unitário. Analise o motivo da resposta ser negativa nos instantes iniciais.</p>
+<div id="resolução-5" class="section level4 unnumbered">
+<h4>Resolução</h4>
+<p><span class="math display">\[\begin{align}
+    r  = \frac{1}{n-1} \sum_{i=1}^{n} \frac{(X_i - \bar{X})(Y_i - \bar{Y})}{S_xS_y}
+\end{align}\]</span></p>
 
 </div>
 </div>
@@ -468,8 +570,8 @@ e substituindo os valores de <span class="math inline">\(\beta\)</span> pelos va
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
-"github": false,
-"facebook": true,
+"github": true,
+"facebook": false,
 "twitter": true,
 "linkedin": false,
 "weibo": false,

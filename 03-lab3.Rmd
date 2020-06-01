@@ -1,3 +1,72 @@
 # Identificação de Sistemas
 
-Working on it :)
+## Apresentação do Laboratório
+
+### Objetivo
+
+Nesta experiência, veremos como modelar matematicamente um sistema linear por uma Função de Transferência. Identificaremos os parâmetros de uma Função de Transferência de primeira e de segunda ordem. Compararemos a dinâmica do sistema com a do modelo matemático.
+
+### Modelagem de Sistemas Lineares
+
+Encontrar um modelo matemático que capture as características dinâmicas relevantes de um sistema real é de fundamental importância para a análise e controle do sistema. No Laboratório 1 estudamos um modelo linear com motor CC. Tal modelo pode ser obtido a partir das leis da física (mecânica e eletromagnetismo) e os valores dos parâmetros dependem de constantes e coeficientes físicos (indutância do enrolamento, resistência do enrolamento, constante de torque do motor, coeficiente de atrito ciscoso). Em situações reais, não conheceremos uma estimativa para os mesmos. Por exemplo, todo resistor possui um valor normal e uma faixa de tolerância percentual (e.g. $R = 100 \Omega \pm 5\%$). Além disso, muitas vezes a determinação de um modelo matemático para um sistema a partir de leis naturais é extremamente difícil e, mesmo no caso em que isso é possível, o modelo obtido pode ser demasiadamente complexo para ser estudado matematicamente.
+
+Devido às dificuldades que acabamos de expor, em geral buscamos um modelo matemático relativamente simples mas que capture, ao menos aproximadamente, as características dinâmicas relevantes do sistema. Assim, primeiramente fixamos um modelo (*modelagem* do sistema) e em seguida determinamos de maneira aproximada o valor de seus parâmetros (*identificação* dos parâmetros).
+
+Nesta experiência, consideraremos apenas sistemas lineares que possam ser modelados por uma função de Transferência $G(s)$ de primeira ordem ou de segunda ordem. Veremos então como identificar os parâmetros de $G(s)$.
+
+### Identificação de sistemas de primeira ordem
+
+Toda Função de Transferência $G(s)$ de primeira ordem pode ser escrita na forma padrão como
+
+\begin{align}
+G(s) = \frac{K}{\tau s+1}. (\#eq:eq1)
+\end{align}
+
+Supunha que $G(s)$ é estável, ou seja, $\tau > 0$. considere uma entrada $u(t) = A$ do tipo degrau de magnitude $A$. Temos que a saída correspondente é
+$$
+y(t) = AK(1- e^{\frac {-t}{\tau}}).
+$$
+
+O valor da saída em regime permanente é
+$$
+y(\infty) = AK,
+$$
+e o tempo de acomodação de $5\%$ é dado por
+$$
+0.95KA = KA(1- e^{\frac {-t_s(5\%)}{\tau}}) \implies t_s(5\%) =3 \tau.
+$$
+
+Isto é ilustrado na figura 1.
+
+![](Imagens/Lab3/Explicação/fig1.jpg)
+
+Logo,
+
+\begin{align}
+K = \frac{y(\infty)}{A},  \tau = \frac {t_s(5\%)}{3}. (\#eq:eq2)
+\end{align}
+
+### Identificação de Sistemas de Segunda Ordem
+
+Toda Função de Transferência $G(s)$ de segunda ordem com pólos não-nulos pode ser escrita como
+
+\begin{align}
+G(s) = \frac {K \omega_n^2}{s^2+2\xi \omega_n+ \omega_n^2}, (\#eq:eq3)
+\end{align}
+
+onde $\omega_n > 0$. Os pólos de $G(s)$ são:
+$$
+p_{1,2} = - \xi \omega_n \pm \sqrt{\xi^2 -1}.
+$$
+
+Temos as seguintes situações:
+
+1. Sistema não-amortecido ($\xi = 0$): os pólos são complexos com $p_{1,2} = \pm j \omega_n$, e a resposta a uma entrada do tipo degrau é senoidal.
+2. Sistema sub-amortecido ($0< \xi <1$): os pólos são complexos com $p_{1,2} = - \xi \omega_n \pm j \omega_n\sqrt{1 - \xi^2}$ e a resposta ao degrau apresenta oscilação e sobressinal.
+3. Sistema criticamente amortecido ($\xi = 1$): os pólos são reais e iguais com $p_{1,2} = -\xi \omega_n$ e a resposta ao degrau não apresenta oscilação nem sobressinal.
+4. Sistema super-amortecido ($\xi >1$): os pólos são reais, negativos e diferentes e a resposta ao degrau não apresenta oscilação nem sobressinal.
+5. Sistema instável ($\xi < 0$): os pólos possuem parte real positiva.
+
+#### Sistemas sub-amortecidos
+
+Continua.

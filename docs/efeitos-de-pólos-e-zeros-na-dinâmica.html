@@ -140,7 +140,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.1" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#apresentação-do-laboratório"><i class="fa fa-check"></i><b>2.1</b> Apresentação do Laboratório</a>
 <ul>
 <li class="chapter" data-level="2.1.1" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#objetivo"><i class="fa fa-check"></i><b>2.1.1</b> Objetivo</a></li>
-<li class="chapter" data-level="2.1.2" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#polos-e-zeros"><i class="fa fa-check"></i><b>2.1.2</b> Polos e Zeros</a></li>
+<li class="chapter" data-level="2.1.2" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#pólos-e-zeros"><i class="fa fa-check"></i><b>2.1.2</b> Pólos e Zeros</a></li>
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#procedimentos"><i class="fa fa-check"></i><b>2.2</b> Procedimentos</a>
 <ul>
@@ -207,8 +207,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Nesta experiência, verificaremos a influência dos pólos e zeros de uma Função de Transferência na resposta dinâmica para entradas do tipo degrau e também para entradas senoidais. Utilizaremos o Matlab para realizar as
 simulações.</p>
 </div>
-<div id="polos-e-zeros" class="section level3" number="2.1.2">
-<h3><span class="header-section-number">2.1.2</span> Polos e Zeros</h3>
+<div id="pólos-e-zeros" class="section level3" number="2.1.2">
+<h3><span class="header-section-number">2.1.2</span> Pólos e Zeros</h3>
 <p>Considere uma função de Trasnferência da forma</p>
 <p><span class="math display">\[
 G(s) = \frac{Y(s)}{U(s)} = \frac{N(s)}{D(s)} = \frac{b_1s^m +b_2s^{m-1} + \dots + b_ms + b_{m+1}}{s^n + a_1s^{n-1}+ \dots + a_{n-1}s + a_n}
@@ -219,7 +219,7 @@ G(s) = \frac{Y(s)}{U(s)} = \frac{N(s)}{D(s)} = \frac{b_1s^m +b_2s^{m-1} + \dots 
 <li>Os <em>zeros</em> de <span class="math inline">\(G(s)\)</span> são as raízes de <span class="math inline">\(N(s)\)</span> (<span class="math inline">\(N(s) = 0\)</span>);</li>
 <li><span class="math inline">\(G(s)\)</span> é <em>estável</em> quando todos os pólos possuem parte real negativa, ou seja, estão no semi-plano esquerdo (SPE) do plano <span class="math inline">\(s\)</span>;</li>
 <li><span class="math inline">\(G(s)\)</span> é <em>instável</em> quando existe ao menos um pólo com parte real positiva, ou seja, no semi-plano (SPD);</li>
-<li><span class="math inline">\(G(s)\)</span> é de <em>fase não-mínima</em> quando há polos ou zeros no SPF.</li>
+<li><span class="math inline">\(G(s)\)</span> é de <em>fase não-mínima</em> quando há pólos ou zeros no SPE.</li>
 </ol>
 <p>Considere que <span class="math inline">\(G(s)\)</span> é estável, ou seja, todos os pólos estão no SPE. Em geral, para entradas do tipo degrau, temos:</p>
 <ol style="list-style-type: decimal">
@@ -255,7 +255,7 @@ G(S)= \frac {1}{s+1}.
 <div class="sourceCode" id="cb1"><pre class="sourceCode matlab"><code class="sourceCode matlab"><span id="cb1-1"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#cb1-1"></a><span class="va">g</span> <span class="op">=</span> <span class="va">tf</span>([<span class="fl">1</span>]<span class="op">,</span> [<span class="fl">1</span> <span class="fl">1</span>])</span>
 <span id="cb1-2"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#cb1-2"></a>[<span class="va">p</span><span class="op">,</span> <span class="va">z</span>] <span class="op">=</span> <span class="va">pzmap</span>(<span class="va">g</span>)</span>
 <span id="cb1-3"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#cb1-3"></a><span class="va">pzmap</span>(<span class="va">g</span>)</span></code></pre></div>
-<p>Tendo como resultados de polos e zeros:</p>
+<p>Tendo como resultados de pólos e zeros:</p>
 <pre><code>p =
 
     -1
@@ -264,9 +264,9 @@ G(S)= \frac {1}{s+1}.
 z =
 
   0×1 empty double column vector</code></pre>
-<p>Ou seja, a função de transferência não apresenta zeros e tem seu polo em <span class="math inline">\(s = -1\)</span>. A sua posição no plano é apresentada na figura abaixo.</p>
+<p>Ou seja, a função de transferência não apresenta zeros e tem seu pólo em <span class="math inline">\(s = -1\)</span>. A sua posição no plano é apresentada na figura abaixo.</p>
 <p><img src="Imagens/Lab2/tau1.jpg" /></p>
-<p>Como o polo da função de transferência se encontra na SPE, conclui-se que o sistema se compartará de uma forma estável.</p>
+<p>Como o pólo da função de transferência se encontra na SPE, conclui-se que o sistema se compartará de uma forma estável.</p>
 </div>
 <div id="parte-2" class="section level5 unnumbered" number="">
 <h5>Parte 2</h5>
@@ -278,7 +278,7 @@ G(S)= \frac {1}{0.5s+1}.
 <div class="sourceCode" id="cb3"><pre class="sourceCode matlab"><code class="sourceCode matlab"><span id="cb3-1"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#cb3-1"></a><span class="va">g</span> <span class="op">=</span> <span class="va">tf</span>([<span class="fl">1</span>]<span class="op">,</span> [<span class="fl">0.5</span> <span class="fl">1</span>])</span>
 <span id="cb3-2"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#cb3-2"></a>[<span class="va">p</span><span class="op">,</span> <span class="va">z</span>] <span class="op">=</span> <span class="va">pzmap</span>(<span class="va">g</span>)</span>
 <span id="cb3-3"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#cb3-3"></a><span class="va">pzmap</span>(<span class="va">g</span>)</span></code></pre></div>
-<p>Tendo como resultados de polos e zeros:</p>
+<p>Tendo como resultados de pólos e zeros:</p>
 <pre><code>p =
 
     -2
@@ -287,9 +287,9 @@ G(S)= \frac {1}{0.5s+1}.
 z =
 
   0×1 empty double column vector</code></pre>
-<p>Ou seja, a função de transferência não apresenta zeros e tem seu polo em <span class="math inline">\(s = -2\)</span>. A sua posição no plano é apresentada na figura abaixo</p>
+<p>Ou seja, a função de transferência não apresenta zeros e tem seu pólo em <span class="math inline">\(s = -2\)</span>. A sua posição no plano é apresentada na figura abaixo</p>
 <p><img src="Imagens/Lab2/tau2.jpg" /></p>
-<p>Como o polo da função de transferência se encontra na SPE, conclui-se que o sistema se compartará de uma forma estável. Também é possível concluir que o sistema alcanraça a estabilidade mais rápido para <span class="math inline">\(\tau = 0.5\)</span>.</p>
+<p>Como o pólo da função de transferência se encontra na SPE, conclui-se que o sistema se compartará de uma forma estável. Também é possível concluir que o sistema alcanraça a estabilidade mais rápido para <span class="math inline">\(\tau = 0.5\)</span>.</p>
 </div>
 <div id="parte-3" class="section level5 unnumbered" number="">
 <h5>Parte 3</h5>
@@ -309,7 +309,7 @@ G(S)= \frac {1}{s-1}.
 <div class="sourceCode" id="cb5"><pre class="sourceCode matlab"><code class="sourceCode matlab"><span id="cb5-1"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#cb5-1"></a><span class="va">g</span> <span class="op">=</span> <span class="va">tf</span>([<span class="fl">1</span>]<span class="op">,</span> [<span class="fl">1</span> <span class="op">-</span><span class="fl">1</span>])</span>
 <span id="cb5-2"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#cb5-2"></a>[<span class="va">p</span><span class="op">,</span> <span class="va">z</span>] <span class="op">=</span> <span class="va">pzmap</span>(<span class="va">g</span>)</span>
 <span id="cb5-3"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#cb5-3"></a><span class="va">pzmap</span>(<span class="va">g</span>)</span></code></pre></div>
-<p>Tendo como resultados de polos e zeros:</p>
+<p>Tendo como resultados de pólos e zeros:</p>
 <pre><code>p =
 
     1
@@ -318,9 +318,9 @@ G(S)= \frac {1}{s-1}.
 z =
 
   0×1 empty double column vector</code></pre>
-<p>Ou seja, a função de transferência não apresenta zeros e tem seu polo em <span class="math inline">\(s = 1\)</span>. A sua posição no plano é apresentada na figura abaixo</p>
+<p>Ou seja, a função de transferência não apresenta zeros e tem seu pólo em <span class="math inline">\(s = 1\)</span>. A sua posição no plano é apresentada na figura abaixo</p>
 <p><img src="Imagens/Lab2/tau3.jpg" /></p>
-<p>Como o polo da função de transferência se encontra na SPD, conclui-se que o sistema se compartará de uma forma instável. A simulação em <code>Matlab</code> está apresentada na figura abaixo.</p>
+<p>Como o pólo da função de transferência se encontra na SPD, conclui-se que o sistema se compartará de uma forma instável. A simulação em <code>Matlab</code> está apresentada na figura abaixo.</p>
 <p><img src="Imagens/Lab2/sim2.jpg" /></p>
 <p>O resultado apresentado pelo <em>scope</em> é apresentado na figura abaixo.</p>
 <p><img src="Imagens/Lab2/resultSim2.jpg" /></p>
@@ -410,11 +410,11 @@ G(s) = \frac {1.6(\beta s+1)}{(s+1)(s+2)} = \frac {0.8(\beta s+1)}{0.5s^2 +1.5s 
 onde <span class="math inline">\(\beta = 0.1\)</span>, <span class="math inline">\(\beta = 0.6\)</span>, <span class="math inline">\(\beta = 0.99\)</span>, <span class="math inline">\(\beta = 1.2\)</span>, <span class="math inline">\(\beta = 2\)</span>, <span class="math inline">\(\beta = 10\)</span>. Para cada valor de <span class="math inline">\(\beta\)</span>, determine os pólos e zeros, suas posições no plano <span class="math inline">\(s\)</span> e simule para uma entrada do tipo degrau unitário. Analise e compare os resultados. Note que dependendo da posição do zero o sobressinal será maior ou menor, podendo também não estar presente.</p>
 <div id="resolução-3" class="section level4 unnumbered" number="">
 <h4>Resolução</h4>
-<p>Utilizando a função <code>pzmap()</code> do <code>Matlab</code> para encontrar os pólos da função de transferência <span class="math inline">\(G(s) = \frac {0.8}{0.5s^2+1.5s+1}\)</span> temos que a função não possui zeros e possui polos para <span class="math inline">\(s = -2\)</span> e <span class="math inline">\(s = -1\)</span>. O mapa de posições é apresentado na figura abaixo.</p>
+<p>Utilizando a função <code>pzmap()</code> do <code>Matlab</code> para encontrar os pólos da função de transferência <span class="math inline">\(G(s) = \frac {0.8}{0.5s^2+1.5s+1}\)</span> temos que a função não possui zeros e possui pólos para <span class="math inline">\(s = -2\)</span> e <span class="math inline">\(s = -1\)</span>. O mapa de posições é apresentado na figura abaixo.</p>
 <p><img src="Imagens/Lab2/prob4.jpg" /></p>
 <p>O resultado da função de transferência é apresentado na figura abaixo.</p>
 <p><img src="Imagens/Lab2/prob41.jpg" /></p>
-<p>Agora, considerando a função de transferência
+<p>O resultado não era esperado pois, para uma Função de Transferência de segundo grau é esperado que a resposta tenha sobressinal. Agora, considerando a função de transferência
 <span class="math display">\[
 G(s) = \frac {0.8(\beta s+1)}{0.5s^2+1.5s+1},
 \]</span>
@@ -484,7 +484,7 @@ G_z(s) = \frac {0.9(\beta s+1)}{s^2+s+1},
 onde <span class="math inline">\(\beta = 0.05\)</span>, <span class="math inline">\(\beta = 0.5\)</span>, <span class="math inline">\(\beta = 1\)</span> e <span class="math inline">\(\beta = 2.5\)</span>. Para cada valor de <span class="math inline">\(\beta\)</span> determine os pólos e zeros, suas posições no plano <span class="math inline">\(s\)</span> e simule para uma entrada do tipo degrau unitário. Analise e compare os resultados.</p>
 <div id="resolução-4" class="section level4 unnumbered" number="">
 <h4>Resolução</h4>
-<p>Utilizando a função <code>pzmap()</code> do <code>Matlab</code> para encontrar os pólos da função de transferência <span class="math inline">\(G(s) = \frac {0.9}{s^2+s+1}\)</span> temos que a função não possui zeros e possui polos para <span class="math inline">\(s = -0.5 + 0.86i\)</span> e <span class="math inline">\(s = -0.5 -0.86i\)</span>. O mapa de posições é apresentado na figura abaixo.</p>
+<p>Utilizando a função <code>pzmap()</code> do <code>Matlab</code> para encontrar os pólos da função de transferência <span class="math inline">\(G(s) = \frac {0.9}{s^2+s+1}\)</span> temos que a função não possui zeros e possui pólos para <span class="math inline">\(s = -0.5 + 0.86i\)</span> e <span class="math inline">\(s = -0.5 -0.86i\)</span>. O mapa de posições é apresentado na figura abaixo.</p>
 <p><img src="Imagens/Lab2/prob5.jpg" /></p>
 <p>O resultado da função de transferência é apresentado na figura abaixo.</p>
 <p><img src="Imagens/Lab2/prob5Sim.jpg" /></p>
@@ -553,9 +553,13 @@ y(t) = y_1(t)-y_2(t)=y_1(t)- \frac {dy_1(t)}{dt}.
 <p>Verifique a validade da equação acima no Simulink (utilize o bloco <strong>Derivative</strong> no Simulink) para uma entrada do tipo degrau unitário. Analise o motivo da resposta ser negativa nos instantes iniciais.</p>
 <div id="resolução-5" class="section level4 unnumbered" number="">
 <h4>Resolução</h4>
-<p><span class="math display">\[\begin{align}
-    r  = \frac{1}{n-1} \sum_{i=1}^{n} \frac{(X_i - \bar{X})(Y_i - \bar{Y})}{S_xS_y}
-\end{align}\]</span></p>
+<p>Utilizando a função <code>pzmap()</code> do <code>Matlab</code> para encontrar os pólos da função de transferência <span class="math inline">\(G(s) = \frac {-s +1}{0.5s^2+1.5s+1}\)</span> temos que a função possui zeros para <span class="math inline">\(s=1\)</span> e possui pólos para <span class="math inline">\(s = -2\)</span> e <span class="math inline">\(s = -1\)</span>. O mapa de posições é apresentado na figura abaixo.</p>
+<p><img src="Imagens/Lab2/prob6A.jpg" /></p>
+<p>A resposta de <span class="math inline">\(G(s)\)</span> a uma função degrau unitário é apresentada na figura abaixo.</p>
+<p><img src="Imagens/Lab2/prob6B.jpg" /></p>
+<p>A validade da equação proposta pelo programa é apresentada na figura abaixo. Pode-se perceber que a equação é valida pois as curvas são satisfatoriamente similares.</p>
+<p><img src="Imagens/Lab2/prob6C.jpg" /></p>
+<p>O motivo da resposta ser negativa se deve ao fato de o zero da função <span class="math inline">\(G(s)\)</span> se encontrar no SPD.</p>
 
 </div>
 </div>

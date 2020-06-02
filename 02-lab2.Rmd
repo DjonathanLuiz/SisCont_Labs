@@ -7,7 +7,7 @@
 Nesta experiência, verificaremos a influência dos pólos e zeros de uma Função de Transferência na resposta dinâmica para entradas do tipo degrau e também para entradas senoidais. Utilizaremos o Matlab para realizar as
 simulações.
 
-### Polos e Zeros
+### Pólos e Zeros
 
 Considere uma função de Trasnferência da forma
 
@@ -21,7 +21,7 @@ onde $Y(s)$ é a saída, $U(s)$ é a entrada, $n \geq m$ e todos os coeficientes
 2. Os *zeros* de $G(s)$ são as raízes de $N(s)$ ($N(s) = 0$);
 3. $G(s)$ é *estável* quando todos os pólos possuem parte real negativa, ou seja, estão no semi-plano esquerdo (SPE) do plano $s$;
 4. $G(s)$ é *instável* quando existe ao menos um pólo com parte real positiva, ou seja, no semi-plano (SPD);
-5. $G(s)$ é de *fase não-mínima* quando há polos ou zeros no SPF.
+5. $G(s)$ é de *fase não-mínima* quando há pólos ou zeros no SPE.
 
 Considere que $G(s)$ é estável, ou seja, todos os pólos estão no SPE. Em geral, para entradas do tipo degrau, temos:
 
@@ -62,7 +62,7 @@ g = tf([1], [1 1])
 pzmap(g)
 ```
 
-Tendo como resultados de polos e zeros:
+Tendo como resultados de pólos e zeros:
 
 ```
 p =
@@ -75,11 +75,11 @@ z =
   0×1 empty double column vector
 ```
 
-Ou seja, a função de transferência não apresenta zeros e tem seu polo em $s = -1$. A sua posição no plano é apresentada na figura abaixo.
+Ou seja, a função de transferência não apresenta zeros e tem seu pólo em $s = -1$. A sua posição no plano é apresentada na figura abaixo.
 
 ![](Imagens/Lab2/tau1.jpg)
 
-Como o polo da função de transferência se encontra na SPE, conclui-se que o sistema se compartará de uma forma estável.
+Como o pólo da função de transferência se encontra na SPE, conclui-se que o sistema se compartará de uma forma estável.
 
 ##### Parte 2 {-}
 
@@ -96,7 +96,7 @@ g = tf([1], [0.5 1])
 pzmap(g)
 ```
 
-Tendo como resultados de polos e zeros:
+Tendo como resultados de pólos e zeros:
 
 ```
 p =
@@ -109,11 +109,11 @@ z =
   0×1 empty double column vector
 ```
 
-Ou seja, a função de transferência não apresenta zeros e tem seu polo em $s = -2$. A sua posição no plano é apresentada na figura abaixo
+Ou seja, a função de transferência não apresenta zeros e tem seu pólo em $s = -2$. A sua posição no plano é apresentada na figura abaixo
 
 ![](Imagens/Lab2/tau2.jpg)
 
-Como o polo da função de transferência se encontra na SPE, conclui-se que o sistema se compartará de uma forma estável. Também é possível concluir que o sistema alcanraça a estabilidade mais rápido para $\tau = 0.5$.
+Como o pólo da função de transferência se encontra na SPE, conclui-se que o sistema se compartará de uma forma estável. Também é possível concluir que o sistema alcanraça a estabilidade mais rápido para $\tau = 0.5$.
 
 ##### Parte 3 {-}
 
@@ -142,7 +142,7 @@ g = tf([1], [1 -1])
 pzmap(g)
 ```
 
-Tendo como resultados de polos e zeros:
+Tendo como resultados de pólos e zeros:
 
 ```
 p =
@@ -155,11 +155,11 @@ z =
   0×1 empty double column vector
 ```
 
-Ou seja, a função de transferência não apresenta zeros e tem seu polo em $s = 1$. A sua posição no plano é apresentada na figura abaixo
+Ou seja, a função de transferência não apresenta zeros e tem seu pólo em $s = 1$. A sua posição no plano é apresentada na figura abaixo
 
 ![](Imagens/Lab2/tau3.jpg)
 
-Como o polo da função de transferência se encontra na SPD, conclui-se que o sistema se compartará de uma forma instável. A simulação em `Matlab` está apresentada na figura abaixo.
+Como o pólo da função de transferência se encontra na SPD, conclui-se que o sistema se compartará de uma forma instável. A simulação em `Matlab` está apresentada na figura abaixo.
 
 ![](Imagens/Lab2/sim2.jpg)
 
@@ -290,7 +290,7 @@ onde $\beta = 0.1$, $\beta = 0.6$, $\beta = 0.99$, $\beta = 1.2$, $\beta = 2$, $
 
 #### Resolução{-}
 
-Utilizando a função `pzmap()` do `Matlab` para encontrar os pólos da função de transferência $G(s) = \frac {0.8}{0.5s^2+1.5s+1}$ temos que a função não possui zeros e possui polos para $s = -2$ e $s = -1$. O mapa de posições é apresentado na figura abaixo.
+Utilizando a função `pzmap()` do `Matlab` para encontrar os pólos da função de transferência $G(s) = \frac {0.8}{0.5s^2+1.5s+1}$ temos que a função não possui zeros e possui pólos para $s = -2$ e $s = -1$. O mapa de posições é apresentado na figura abaixo.
 
 ![](Imagens/Lab2/prob4.jpg)
 
@@ -298,7 +298,7 @@ O resultado da função de transferência é apresentado na figura abaixo.
 
 ![](imagens/Lab2/prob41.jpg)
 
-Agora, considerando a função de transferência
+O resultado não era esperado pois, para uma Função de Transferência de segundo grau é esperado que a resposta tenha sobressinal. Agora, considerando a função de transferência
 $$
 G(s) = \frac {0.8(\beta s+1)}{0.5s^2+1.5s+1},
 $$
@@ -349,7 +349,7 @@ onde $\beta = 0.05$, $\beta = 0.5$, $\beta = 1$ e $\beta = 2.5$. Para cada valor
 
 #### Resolução{-}
 
-Utilizando a função `pzmap()` do `Matlab` para encontrar os pólos da função de transferência $G(s) = \frac {0.9}{s^2+s+1}$ temos que a função não possui zeros e possui polos para $s = -0.5 + 0.86i$ e $s = -0.5 -0.86i$. O mapa de posições é apresentado na figura abaixo.
+Utilizando a função `pzmap()` do `Matlab` para encontrar os pólos da função de transferência $G(s) = \frac {0.9}{s^2+s+1}$ temos que a função não possui zeros e possui pólos para $s = -0.5 + 0.86i$ e $s = -0.5 -0.86i$. O mapa de posições é apresentado na figura abaixo.
 
 ![](Imagens/Lab2/prob5.jpg)
 
@@ -414,6 +414,16 @@ Verifique a validade da equação acima no Simulink (utilize o bloco **Derivativ
 
 #### Resolução {-}
 
-\begin{align}
-    r  = \frac{1}{n-1} \sum_{i=1}^{n} \frac{(X_i - \bar{X})(Y_i - \bar{Y})}{S_xS_y}
-\end{align}
+Utilizando a função `pzmap()` do `Matlab` para encontrar os pólos da função de transferência $G(s) = \frac {-s +1}{0.5s^2+1.5s+1}$ temos que a função possui zeros para $s=1$ e possui pólos para $s = -2$ e $s = -1$. O mapa de posições é apresentado na figura abaixo.
+
+![](Imagens/Lab2/prob6A.jpg)
+
+A resposta de $G(s)$ a uma função degrau unitário é apresentada na figura abaixo.
+
+![](Imagens/Lab2/prob6B.jpg)
+
+A validade da equação proposta pelo programa é apresentada na figura abaixo. Pode-se perceber que a equação é valida pois as curvas são satisfatoriamente similares.
+
+![](Imagens/Lab2/prob6C.jpg)
+
+O motivo da resposta ser negativa se deve ao fato de o zero da função $G(s)$ se encontrar no SPD.

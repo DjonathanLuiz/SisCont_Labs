@@ -270,7 +270,7 @@ e(\infty) = \lim\limits_{t \to \infty}{e(t)} = e_r(\infty) - y_w(\infty), \tag{4
 <span class="math display">\[
 F(s) = \frac {Y(s)}{R(s)} = \frac{G(s)}{1+G(s)} = \frac {N(s)}{D(s)+N(s)}, \quad \text{(para } w=0 \text{).}
 \]</span></p>
-<p>Desse modo, estamos assumindo que <span class="math inline">\(F(s)\)</span> é estável para <span class="math inline">\(w=0\)</span>. Com base no Teorema do Valor Final, podemos construir a <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab1">4.1</a> e a <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab2">4.2</a> mostradas abaixo. Note que os valores de <span class="math inline">\(e_r(\infty)\)</span> e de <span class="math inline">\(y_w(\infty)\)</span> (regime permanente) dependem apenas da constante de posição <span class="math inline">\(K_p\)</span>, da constante de velocidade <span class="math inline">\(K_v\)</span> e da cosntante de aceleração <span class="math inline">\(K_a\)</span>. Tl nomenclatura tem origem em sistemas mecânicos de controle. Por exemplo, para um sistema Tipo 0 e <span class="math inline">\(r(t)=A\)</span> (degrau) temos que (Teorema do Valor Final)
+<p>Desse modo, estamos assumindo que <span class="math inline">\(F(s)\)</span> é estável para <span class="math inline">\(w=0\)</span>. Com base no Teorema do Valor Final, podemos construir a tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab1">4.1</a> e a tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab2">4.2</a> mostradas abaixo. Note que os valores de <span class="math inline">\(e_r(\infty)\)</span> e de <span class="math inline">\(y_w(\infty)\)</span> (regime permanente) dependem apenas da constante de posição <span class="math inline">\(K_p\)</span>, da constante de velocidade <span class="math inline">\(K_v\)</span> e da cosntante de aceleração <span class="math inline">\(K_a\)</span>. Tl nomenclatura tem origem em sistemas mecânicos de controle. Por exemplo, para um sistema Tipo 0 e <span class="math inline">\(r(t)=A\)</span> (degrau) temos que (Teorema do Valor Final)
 <span class="math display">\[
 e_r(\infty) = \lim\limits_{s \to 0}{sE_R(s)}=\lim\limits_{s\to0}{\frac{D(s)}{D(s)+N(s)}\frac{A}{s}} = \lim\limits_{s\to0}{\frac{AD(s)}{D(s)+N(s)}} \\
 = \frac{AD(0)}{D(0) + N(0)} = \frac{A}{1+N(0)/D(0)} = \frac{A}{1+G(0)} = \frac {A}{1+K_p}.
@@ -282,7 +282,7 @@ e_r(\infty) = \lim\limits_{s \to 0}{sE_r(s) = \lim\limits_{s \to 0}{s\frac{D(s)}
 =\lim\limits_{s \to 0}{\frac{sBD_0(s)}{D(s)+N(s)}}=\frac{0BD(0)}{N(0)+D(0)}=0,
 \]</span>
 pois <span class="math inline">\(D(0) + N(0) \neq 0\)</span> (<span class="math inline">\(F(s)\)</span> é estável) e não há divisão por zero!</p>
-<p>Observamos que a <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab1">4.1</a> e a <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab2">4.2</a> são válidas apenas para sistemas com realimentação unitária com perturbação na saída (veja a Figura 1) e tais que a Função de Transferência em malha-fechada é estável para <span class="math inline">\(w=0\)</span>.</p>
+<p>Observamos que a tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab1">4.1</a> e a tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab2">4.2</a> são válidas apenas para sistemas com realimentação unitária com perturbação na saída (veja a Figura 1) e tais que a Função de Transferência em malha-fechada é estável para <span class="math inline">\(w=0\)</span>.</p>
 <table>
 <caption><span id="tab:tab1">Table 4.1: </span>Valores de <span class="math inline">\(e_r(\infty)\)</span> (<span class="math inline">\(w=0\)</span>)</caption>
 <thead>
@@ -345,10 +345,47 @@ pois <span class="math inline">\(D(0) + N(0) \neq 0\)</span> (<span class="math 
 </tr>
 </tbody>
 </table>
+<p>Agora, considere o sistema mostrado na Figura 2 e assuma que <span class="math inline">\(G_2(s)\)</span> não possui <em>zeros</em> em <span class="math inline">\(s=0\)</span>. Para tal sistema, a Tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab1">4.1</a> continua válida para <span class="math inline">\(G(s) = G_1(s)G_2(s)\)</span>. No entanto, a Tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab2">4.2</a> deve ser substituída pela Tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab3">4.3</a>. Ressaltamos que os valores <span class="math inline">\(\neq 0\)</span> na Tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab3">4.3</a> podem ser calculados analiticamente a partir de <span class="math inline">\(G_1(s) \text{ e } G_2(s)\)</span>. Entretanto, isso não é o objeto de estudo desta experiência.</p>
+<div class="figure">
+<img src="Imagens/Lab4/Apresentação/fig2.jpg" alt="" />
+<p class="caption">Figura 2: Sistema em malha-fechada com perturbação na entrada de <span class="math inline">\(G_s(s)\)</span> e <span class="math inline">\(G_2(s)\)</span> não possui <em>zeros</em> em <span class="math inline">\(s=0\)</span></p>
+</div>
+<table>
+<caption><span id="tab:tab3">Table 4.3: </span>Valores de <span class="math inline">\(y_r(\infty)\)</span> (<span class="math inline">\(r=0\)</span> e <span class="math inline">\(w\)</span> na saída de <span class="math inline">\(G_2(s)\)</span>)</caption>
+<thead>
+<tr class="header">
+<th align="left">Sistema <span class="math inline">\(G(s)\)</span> / Perturbação</th>
+<th align="left"><span class="math inline">\(w(t)=A\)</span></th>
+<th align="left"><span class="math inline">\(w(t) = Bt\)</span></th>
+<th align="left"><span class="math inline">\(w(t) = Ct^2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Tipo 0</td>
+<td align="left"><span class="math inline">\(\neq 0\)</span></td>
+<td align="left"><span class="math inline">\(\infty\)</span></td>
+<td align="left"><span class="math inline">\(\infty\)</span></td>
+</tr>
+<tr class="even">
+<td align="left">Tipo 1</td>
+<td align="left">0</td>
+<td align="left"><span class="math inline">\(\neq 0\)</span></td>
+<td align="left"><span class="math inline">\(\infty\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left">Tipo 2</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left"><span class="math inline">\(\neq 0\)</span></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div id="procedimentos-2" class="section level2" number="4.2">
 <h2><span class="header-section-number">4.2</span> Procedimentos</h2>
+<p>Working on it :)</p>
 
 </div>
 </div>

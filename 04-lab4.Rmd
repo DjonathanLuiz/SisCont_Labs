@@ -1,3 +1,50 @@
 # Rastreamento de Referências e Rejeição de Perturbações - Erro em Regime Permanente 
 
-Working on it :)
+## Apresentação do Laboratório
+
+### Objetivos
+
+Nesta experiência analisaremos o erro em regime permanente de sistemas em malha-fechada para o rastreamento de referências e a rejeição de perturbações. Consideraremos referências e perturbações do tipo degrau, rampa e parábola. Comprovaremos os resultados teóricos através de simulações no Simulink/Matlab.
+
+### Tipos de Sistemas
+
+Considere a Função de Transferência
+$$
+G(s) = \frac {N(s)}{D(s)}
+$$
+onde $N(s)$ e $D(s)$ são polinômios em $s$ sem raízes em comum e com $\text{grau}(N) \leq \text{grau}(D)$. Temos a seguinte classificação para $G(s)$:
+
+-Tipo 0: $G(s)$ não possui pólos em $s=0$. Denominamos $K_p = G(0)$ de *constante de posição*. Note que $K_p = \lim\limits_{s \to 0} G(s)$.
+- Tipo 1: $G(s)$ tem um (e apenas um) pólo em $s=0$. Podemos então escrever
+$$
+G(s) = \frac {1}{s}G_0(s),
+$$
+onde $G_0(s) = \frac {N(s)}{D_0(s)}$ não possui pólos em $s=0$. Chamamos $K_v= G_0(0) \neq 0$ de *constante de velocidade*. Note que $K_v = \lim\limits_{s \to 0} sG(s)$.
+- Tipo 2: $G(s)$ tem dois (e apenas dois) pólos em $s=0$. Podemos escrever
+$$
+G(s) = \frac {1}{s^2}G_0(s),
+$$
+onde$G_0(s) = \frac {N(s)}{D_0(s)}$ não possui pólos em $s=0$. Denominamos $K_a = G_0(0) \neq 0$ de *constante de aceleração*. Note que $K_a =\lim\limits_{s \to 0} s^2G(s)$.
+
+### Erro em regime permanente
+
+Considere o sistema em malha-fechada com realimentação unitária mostrado na Figura 1, onde:
+$$
+\begin{cases}
+  y(t) & \quad \text{: saída}\\
+  r(t) & \quad \text{: referência}\\
+  e(t) = r(t)-y(t) & \quad \text{: erro de rastreamento}\\
+  w(t) &\quad \text{: perturbação externa que não é possível de ser medida}
+\end{cases}
+$$
+
+![Figura 1: Sistema em malha-fechada com perturbação na saída](Imagens/Lab4/Apresentação/fig1.jpg)
+
+Desejamos analisar o erro em regime permanente ($t \to \infty$) quando existem perturbações externas. Temos que
+
+$$
+E(s) = R(s) - Y(s) = R(s) - [G(s)E(s) + W(s)]
+$$
+
+
+## Procedimentos

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.2.3)  3 JUN 2020 15:44
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.2.3)  3 JUN 2020 16:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -733,11 +733,7 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibsep=\skip59
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count296
-) (./SisCont_Labs.aux
-
-LaTeX Warning: Label `eq:eq1' multiply defined.
-
-)
+) (./SisCont_Labs.aux)
 \openout1 = `SisCont_Labs.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 118.
@@ -1266,6 +1262,9 @@ File: Imagens/Lab3/Resolução/prob3AB.jpg Graphic file (type bmp)
 File: Imagens/Lab3/Resolução/prob3AC.jpg Graphic file (type bmp)
 <Imagens/Lab3/Resolução/prob3AC.jpg>
 [43]
+
+LaTeX Warning: Reference `eq:eq55' on page 44 undefined on input line 882.
+
 File: Imagens/Lab3/Resolução/prob3BA.jpg Graphic file (type bmp)
 <Imagens/Lab3/Resolução/prob3BA.jpg>
 
@@ -1378,15 +1377,15 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1110.
 Package rerunfilecheck Info: File `SisCont_Labs.out' has not changed.
 (rerunfilecheck)             Checksum: 2222ED5CC0BD25E766047183557E606F;4516.
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: There were undefined references.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1110.
  ) 
 Here is how much of TeX's memory you used:
- 29585 strings out of 494432
+ 29587 strings out of 494432
  538753 string characters out of 6170871
- 723889 words of memory out of 5000000
- 33658 multiletter control sequences out of 15000+600000
+ 724889 words of memory out of 5000000
+ 33660 multiletter control sequences out of 15000+600000
  538764 words of font info for 81 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  55i,10n,115p,966b,2146s stack positions out of 5000i,500n,10000p,200000b,80000s

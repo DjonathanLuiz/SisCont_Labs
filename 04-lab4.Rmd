@@ -51,7 +51,7 @@ $$
 Note que $E = E_R$ quando $W= 0$ e que $Y = Y_W$ quando $R=0$. Podemos então analisar $E$ através de $E_R$ e $Y_R$. O erro em regime permanente é dado por
 
 \begin{align}
-e(\infty) = \lim\limits_{t \to \infty}{e(t)} = e_r(\infty) - y_w(\infty), (\#eq:eq1)
+e(\infty) = \lim\limits_{t \to \infty}{e(t)} = e_r(\infty) - y_w(\infty), (\#eq:eq41)
 \end{align}
 
 desde que os limites $e_r(\infty) = \lim\limits_{t\to \infty}{e_r(t)}$ e $y_w(\infty) = \lim\limits_{t \to \infty}{y_w(t)}$ existam. Dezemos que há *rastreamento de referência* quando $e_r(\infty) = 0$. De maneira semelhante, dizemos que há *rejeição de perturbação* quando $y_w(\infty) = 0$. Portanto, quando há rastreamento de referência e rejeição de perturbação teremos que $e(\infty) = 0$.

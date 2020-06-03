@@ -67,7 +67,7 @@ $$
 F(s) = \frac {Y(s)}{R(s)} = \frac{G(s)}{1+G(s)} = \frac {N(s)}{D(s)+N(s)}, \quad \text{(para } w=0 \text{).}
 $$
 
-Desse modo, estamos assumindo que $F(s)$ é estável para $w=0$. Com base no Teorema do Valor Final, podemos construir a Tabela 1 e a Tabela 2 mostradas abaixo. Note que os valores de $e_r(\infty)$ e de $y_w(\infty)$ (regime permanente) dependem apenas da constante de posição $K_p$, da constante de velocidade $K_v$ e da cosntante de aceleração $K_a$. Tl nomenclatura tem origem em sistemas mecânicos de controle. Por exemplo, para um sistema Tipo 0 e $r(t)=A$ (degrau) temos que (Teorema do Valor Final)
+Desse modo, estamos assumindo que $F(s)$ é estável para $w=0$. Com base no Teorema do Valor Final, podemos construir a \@ref(tab:tab1) e a \@ref(tab:tab2) mostradas abaixo. Note que os valores de $e_r(\infty)$ e de $y_w(\infty)$ (regime permanente) dependem apenas da constante de posição $K_p$, da constante de velocidade $K_v$ e da cosntante de aceleração $K_a$. Tl nomenclatura tem origem em sistemas mecânicos de controle. Por exemplo, para um sistema Tipo 0 e $r(t)=A$ (degrau) temos que (Teorema do Valor Final)
 $$
 e_r(\infty) = \lim\limits_{s \to 0}{sE_R(s)}=\lim\limits_{s\to0}{\frac{D(s)}{D(s)+N(s)}\frac{A}{s}} = \lim\limits_{s\to0}{\frac{AD(s)}{D(s)+N(s)}} \\
 = \frac{AD(0)}{D(0) + N(0)} = \frac{A}{1+N(0)/D(0)} = \frac{A}{1+G(0)} = \frac {A}{1+K_p}.
@@ -81,18 +81,25 @@ e_r(\infty) = \lim\limits_{s \to 0}{sE_r(s) = \lim\limits_{s \to 0}{s\frac{D(s)}
 $$
 pois $D(0) + N(0) \neq 0$ ($F(s)$ é estável) e não há divisão por zero!
 
-Observamos que a Tabela 1 e a Tabela 2 são válidas apenas para sistemas com realimentação unitária com perturbação na saída (veja a Figura 1) e tais que a Função de Transferência em malha-fechada é estável para $w=0$.
+Observamos que a \@ref(tab:tab1) e a \@ref(tab:tab2) são válidas apenas para sistemas com realimentação unitária com perturbação na saída (veja a Figura 1) e tais que a Função de Transferência em malha-fechada é estável para $w=0$.
 
-$$
-\begin{array}{|c|c|c|c|} \hline
-\text{Sistema } G(s) \text{ / Referência} & r(t) = A & r(t) = Bt & r(t) = Ct^2 \\ \hline
-\text{Tipo 0} & \frac{A}{1 + K_p} & \infty & \infty \\\hline
-\text{Tipo 1} & 0 & \frac{B}{K_v} & \infty \\\hline
-\text{Tipo 2} & 0 & 0 & \frac{2C}{K_a} \\\hline
-\end{array}
-$$
+```{r tab1, echo=FALSE}
+resultados <- data.frame(T1 = c("Tipo 0", "Tipo 1", "Tipo 2"),
+                         T2 = c("$\\frac{A}{1 + K_p}$", "0", "0"),
+                         T3 = c("$\\infty$", "$\\frac{B}{K_v}$", "0"),
+                         T4 = c("$\\infty$", "$\\infty$", "$\\frac{2C}{K_a}$"))
+colnames(resultados) <- c("Sistema $G(s)$ / Referência", "$r(t)=A$", "$r(t) = Bt$", "$r(t) = Ct^2$")
+knitr::kable(resultados, booktabs = T, escape = FALSE, caption = "Valores de $e_r(\\infty)$ ($w=0$)")
+```
 
-
+```{r tab2, echo=FALSE}
+resultados <- data.frame(T1 = c("Tipo 0", "Tipo 1", "Tipo 2"),
+                         T2 = c("$\\frac{A}{1 + K_p}$", "0", "0"),
+                         T3 = c("$\\infty$", "$\\frac{B}{K_v}$", "0"),
+                         T4 = c("$\\infty$", "$\\infty$", "$\\frac{2C}{K_a}$"))
+colnames(resultados) <- c("Sistema $G(s)$ / Perturbação", "$w(t)=A$", "$w(t) = Bt$", "$w(t) = Ct^2$")
+knitr::kable(resultados, booktabs = T, escape = FALSE, caption = "Valores de $y_r(\\infty)$ ($r=0$ e $w$ na saída de $G(s)$)")
+```
 
 
 

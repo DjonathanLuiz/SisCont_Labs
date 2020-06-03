@@ -53,69 +53,6 @@
 
 
 
-<style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -257,7 +194,7 @@ E(s) = R(s) - Y(s) = R(s) - [G(s)E(s) + W(s)]\\
 \]</span></p>
 <p>Note que <span class="math inline">\(E = E_R\)</span> quando <span class="math inline">\(W= 0\)</span> e que <span class="math inline">\(Y = Y_W\)</span> quando <span class="math inline">\(R=0\)</span>. Podemos então analisar <span class="math inline">\(E\)</span> através de <span class="math inline">\(E_R\)</span> e <span class="math inline">\(Y_R\)</span>. O erro em regime permanente é dado por</p>
 <p><span class="math display" id="eq:eq1">\[\begin{align}
-e(\infty) = \lim\limits_{t \to \infty}{e(t)} = e_r(\infty) - y_w(\infty), \tag{3.1}
+e(\infty) = \lim\limits_{t \to \infty}{e(t)} = e_r(\infty) - y_w(\infty), \tag{4.1}
 \end{align}\]</span></p>
 <p>desde que os limites <span class="math inline">\(e_r(\infty) = \lim\limits_{t\to \infty}{e_r(t)}\)</span> e <span class="math inline">\(y_w(\infty) = \lim\limits_{t \to \infty}{y_w(t)}\)</span> existam. Dezemos que há <em>rastreamento de referência</em> quando <span class="math inline">\(e_r(\infty) = 0\)</span>. De maneira semelhante, dizemos que há <em>rejeição de perturbação</em> quando <span class="math inline">\(y_w(\infty) = 0\)</span>. Portanto, quando há rastreamento de referência e rejeição de perturbação teremos que <span class="math inline">\(e(\infty) = 0\)</span>.</p>
 <p>Iremos agora analisar <span class="math inline">\(e_r(\infty)\)</span> e <span class="math inline">\(y_w(\infty)\)</span> através de <span class="math inline">\(E_R(s)\)</span> e <span class="math inline">\(Y_W(s)\)</span>, respectivamente, considerando que a referência <span class="math inline">\(r\)</span> e a perturbação externa <span class="math inline">\(w\)</span> são do tipo degrau, rampa ou parábola. Relembramos que:</p>
@@ -270,7 +207,7 @@ e(\infty) = \lim\limits_{t \to \infty}{e(t)} = e_r(\infty) - y_w(\infty), \tag{3
 <span class="math display">\[
 F(s) = \frac {Y(s)}{R(s)} = \frac{G(s)}{1+G(s)} = \frac {N(s)}{D(s)+N(s)}, \quad \text{(para } w=0 \text{).}
 \]</span></p>
-<p>Desse modo, estamos assumindo que <span class="math inline">\(F(s)\)</span> é estável para <span class="math inline">\(w=0\)</span>. Com base no Teorema do Valor Final, podemos construir a Tabela 1 e a Tabela 2 mostradas abaixo. Note que os valores de <span class="math inline">\(e_r(\infty)\)</span> e de <span class="math inline">\(y_w(\infty)\)</span> (regime permanente) dependem apenas da constante de posição <span class="math inline">\(K_p\)</span>, da constante de velocidade <span class="math inline">\(K_v\)</span> e da cosntante de aceleração <span class="math inline">\(K_a\)</span>. Tl nomenclatura tem origem em sistemas mecânicos de controle. Por exemplo, para um sistema Tipo 0 e <span class="math inline">\(r(t)=A\)</span> (degrau) temos que (Teorema do Valor Final)
+<p>Desse modo, estamos assumindo que <span class="math inline">\(F(s)\)</span> é estável para <span class="math inline">\(w=0\)</span>. Com base no Teorema do Valor Final, podemos construir a <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab1">4.1</a> e a <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab2">4.2</a> mostradas abaixo. Note que os valores de <span class="math inline">\(e_r(\infty)\)</span> e de <span class="math inline">\(y_w(\infty)\)</span> (regime permanente) dependem apenas da constante de posição <span class="math inline">\(K_p\)</span>, da constante de velocidade <span class="math inline">\(K_v\)</span> e da cosntante de aceleração <span class="math inline">\(K_a\)</span>. Tl nomenclatura tem origem em sistemas mecânicos de controle. Por exemplo, para um sistema Tipo 0 e <span class="math inline">\(r(t)=A\)</span> (degrau) temos que (Teorema do Valor Final)
 <span class="math display">\[
 e_r(\infty) = \lim\limits_{s \to 0}{sE_R(s)}=\lim\limits_{s\to0}{\frac{D(s)}{D(s)+N(s)}\frac{A}{s}} = \lim\limits_{s\to0}{\frac{AD(s)}{D(s)+N(s)}} \\
 = \frac{AD(0)}{D(0) + N(0)} = \frac{A}{1+N(0)/D(0)} = \frac{A}{1+G(0)} = \frac {A}{1+K_p}.
@@ -282,15 +219,69 @@ e_r(\infty) = \lim\limits_{s \to 0}{sE_r(s) = \lim\limits_{s \to 0}{s\frac{D(s)}
 =\lim\limits_{s \to 0}{\frac{sBD_0(s)}{D(s)+N(s)}}=\frac{0BD(0)}{N(0)+D(0)}=0,
 \]</span>
 pois <span class="math inline">\(D(0) + N(0) \neq 0\)</span> (<span class="math inline">\(F(s)\)</span> é estável) e não há divisão por zero!</p>
-<p>Observamos que a Tabela 1 e a Tabela 2 são válidas apenas para sistemas com realimentação unitária com perturbação na saída (veja a Figura 1) e tais que a Função de Transferência em malha-fechada é estável para <span class="math inline">\(w=0\)</span>.</p>
-<p><span class="math display">\[
-\begin{array}{|c|c|c|c|} \hline
-\text{Sistema } G(s) \text{ / Referência} &amp; r(t) = A &amp; r(t) = Bt &amp; r(t) = Ct^2 \\ \hline
-\text{Tipo 0} &amp; \frac{A}{1 + K_p} &amp; \infty &amp; \infty \\\hline
-\text{Tipo 1} &amp; 0 &amp; \frac{B}{K_v} &amp; \infty \\\hline
-\text{Tipo 2} &amp; 0 &amp; 0 &amp; \frac{2C}{K_a} \\\hline
-\end{array}
-\]</span></p>
+<p>Observamos que a <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab1">4.1</a> e a <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab2">4.2</a> são válidas apenas para sistemas com realimentação unitária com perturbação na saída (veja a Figura 1) e tais que a Função de Transferência em malha-fechada é estável para <span class="math inline">\(w=0\)</span>.</p>
+<table>
+<caption><span id="tab:tab1">Table 4.1: </span>Valores de <span class="math inline">\(e_r(\infty)\)</span> (<span class="math inline">\(w=0\)</span>)</caption>
+<thead>
+<tr class="header">
+<th align="left">Sistema <span class="math inline">\(G(s)\)</span> / Referência</th>
+<th align="left"><span class="math inline">\(r(t)=A\)</span></th>
+<th align="left"><span class="math inline">\(r(t) = Bt\)</span></th>
+<th align="left"><span class="math inline">\(r(t) = Ct^2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Tipo 0</td>
+<td align="left"><span class="math inline">\(\frac{A}{1 + K_p}\)</span></td>
+<td align="left"><span class="math inline">\(\infty\)</span></td>
+<td align="left"><span class="math inline">\(\infty\)</span></td>
+</tr>
+<tr class="even">
+<td align="left">Tipo 1</td>
+<td align="left">0</td>
+<td align="left"><span class="math inline">\(\frac{B}{K_v}\)</span></td>
+<td align="left"><span class="math inline">\(\infty\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left">Tipo 2</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left"><span class="math inline">\(\frac{2C}{K_a}\)</span></td>
+</tr>
+</tbody>
+</table>
+<table>
+<caption><span id="tab:tab2">Table 4.2: </span>Valores de <span class="math inline">\(y_r(\infty)\)</span> (<span class="math inline">\(r=0\)</span> e <span class="math inline">\(w\)</span> na saída de <span class="math inline">\(G(s)\)</span>)</caption>
+<thead>
+<tr class="header">
+<th align="left">Sistema <span class="math inline">\(G(s)\)</span> / Perturbação</th>
+<th align="left"><span class="math inline">\(w(t)=A\)</span></th>
+<th align="left"><span class="math inline">\(w(t) = Bt\)</span></th>
+<th align="left"><span class="math inline">\(w(t) = Ct^2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Tipo 0</td>
+<td align="left"><span class="math inline">\(\frac{A}{1 + K_p}\)</span></td>
+<td align="left"><span class="math inline">\(\infty\)</span></td>
+<td align="left"><span class="math inline">\(\infty\)</span></td>
+</tr>
+<tr class="even">
+<td align="left">Tipo 1</td>
+<td align="left">0</td>
+<td align="left"><span class="math inline">\(\frac{B}{K_v}\)</span></td>
+<td align="left"><span class="math inline">\(\infty\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left">Tipo 2</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left"><span class="math inline">\(\frac{2C}{K_a}\)</span></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div id="procedimentos-2" class="section level2" number="4.2">

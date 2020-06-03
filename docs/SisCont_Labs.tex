@@ -1027,14 +1027,35 @@ pois \(D(0) + N(0) \neq 0\) (\(F(s)\) é estável) e não há divisão por zero!
 
 Observamos que a Tabela 1 e a Tabela 2 são válidas apenas para sistemas com realimentação unitária com perturbação na saída (veja a Figura 1) e tais que a Função de Transferência em malha-fechada é estável para \(w=0\).
 
-\[
-\begin{array}{|c|c|c|c|} \hline
-\text{Sistema } G(s) \text{ / Referência} & r(t) = A & r(t) = Bt & r(t) = Ct^2 \\ \hline
-\text{Tipo 0} & \frac{A}{1 + K_p} & \infty & \infty \\\hline
-\text{Tipo 1} & 0 & \frac{B}{K_v} & \infty \\\hline
-\text{Tipo 2} & 0 & 0 & \frac{2C}{K_a} \\\hline
-\end{array}
-\]
+\begin{table}
+
+\caption{\label{tab:unnamed-chunk-9}Valores de $e_r(\infty)$ ($w=0$)}
+\centering
+\begin{tabular}[t]{llll}
+\toprule
+Sistema $G(s)$ / Referência & $r(t)=A$ & $r(t) = Bt$ & $r(t) = Ct^2$\\
+\midrule
+Tipo 0 & $\frac{A}{1 + K_p}$ & $\infty$ & $\infty$\\
+Tipo 1 & 0 & $\frac{B}{K_v}$ & $\infty$\\
+Tipo 2 & 0 & 0 & $\frac{2C}{K_a}$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}
+
+\caption{\label{tab:unnamed-chunk-10}Valores de $y_r(\infty)$ ($r=0$ e $w$ na saída de $G(s)$)}
+\centering
+\begin{tabular}[t]{llll}
+\toprule
+Sistema $G(s)$ / Perturbação & $w(t)=A$ & $w(t) = Bt$ & $w(t) = Ct^2$\\
+\midrule
+Tipo 0 & $\frac{A}{1 + K_p}$ & $\infty$ & $\infty$\\
+Tipo 1 & 0 & $\frac{B}{K_v}$ & $\infty$\\
+Tipo 2 & 0 & 0 & $\frac{2C}{K_a}$\\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \hypertarget{procedimentos-2}{%
 \section{Procedimentos}\label{procedimentos-2}}

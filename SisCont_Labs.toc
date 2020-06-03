@@ -44,7 +44,7 @@
 \contentsline {subsection}{\numberline {4.1.1}Objetivos}{47}{subsection.4.1.1}%
 \contentsline {subsection}{\numberline {4.1.2}Tipos de Sistemas}{47}{subsection.4.1.2}%
 \contentsline {subsection}{\numberline {4.1.3}Erro em regime permanente}{48}{subsection.4.1.3}%
-\contentsline {section}{\numberline {4.2}Procedimentos}{49}{section.4.2}%
+\contentsline {section}{\numberline {4.2}Procedimentos}{50}{section.4.2}%
 \contentsline {chapter}{\numberline {5}Projeto de Controladores por Métodos Algébricos}{51}{chapter.5}%
 \contentsline {chapter}{\numberline {6}Linearização de Sistemas Não-Lineares}{53}{chapter.6}%
 \contentsline {chapter}{\numberline {7}Controle de Sistemas Não-Lineares}{55}{chapter.7}%

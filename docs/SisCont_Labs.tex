@@ -980,7 +980,60 @@ Considere o sistema em malha-fechada com realimentação unitária mostrado na F
 Desejamos analisar o erro em regime permanente (\(t \to \infty\)) quando existem perturbações externas. Temos que
 
 \[
-E(s) = R(s) - Y(s) = R(s) - [G(s)E(s) + W(s)]
+E(s) = R(s) - Y(s) = R(s) - [G(s)E(s) + W(s)]\\
+\implies E(s) = \frac {1}{1 + G(s)}R(s) - \frac {1}{1+G(s)}W(s) \\
+\implies E(s) = \underbrace{\frac {D(s)}{D(s) + N(s)}R(s)}_{E_R(s)} - \underbrace{\frac {D(s)}{D(s) + N(s)}W(s)}_{Y_W(s)}
+\]
+
+Note que \(E = E_R\) quando \(W= 0\) e que \(Y = Y_W\) quando \(R=0\). Podemos então analisar \(E\) através de \(E_R\) e \(Y_R\). O erro em regime permanente é dado por
+
+\begin{align}
+e(\infty) = \lim\limits_{t \to \infty}{e(t)} = e_r(\infty) - y_w(\infty), \label{eq:eq1}
+\end{align}
+
+desde que os limites \(e_r(\infty) = \lim\limits_{t\to \infty}{e_r(t)}\) e \(y_w(\infty) = \lim\limits_{t \to \infty}{y_w(t)}\) existam. Dezemos que há \emph{rastreamento de referência} quando \(e_r(\infty) = 0\). De maneira semelhante, dizemos que há \emph{rejeição de perturbação} quando \(y_w(\infty) = 0\). Portanto, quando há rastreamento de referência e rejeição de perturbação teremos que \(e(\infty) = 0\).
+
+Iremos agora analisar \(e_r(\infty)\) e \(y_w(\infty)\) através de \(E_R(s)\) e \(Y_W(s)\), respectivamente, considerando que a referência \(r\) e a perturbação externa \(w\) são do tipo degrau, rampa ou parábola. Relembramos que:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Degrau: \(x(t) = A \iff X(s) = \frac {A}{s}\)
+\item
+  Rampa: \(x(t) = Bt \iff X(s) = \frac {B}{s^2}\)
+\item
+  Parábola: \(x(t) = Ct^2 \iff X(s) = \frac {2C}{s^3}\)
+\end{enumerate}
+
+Suponha que \(D(s) + N(s) = 0\) possui todas as raízes no SPE (Semi-Plano Esquerdo do plano \(s\)) e que \(D(s)R(s)\) e \(D(s)W(s)\) possuem no máximo um pólo em \(s=0\). Isto garante que \(e_r(\infty)\) e \(y_w(\infty)\) existem e, assim, o Teorema do Valor Final pode ser aplicado. Ressaltamos que as raízes de \(D(s) + N(s) = 0\) nada mais são do que os pólos da Função de Transferência de malha-fechada quando não há perturbação (\(w=0\))
+\[
+F(s) = \frac {Y(s)}{R(s)} = \frac{G(s)}{1+G(s)} = \frac {N(s)}{D(s)+N(s)}, \quad \text{(para } w=0 \text{).}
+\]
+
+Desse modo, estamos assumindo que \(F(s)\) é estável para \(w=0\). Com base no Teorema do Valor Final, podemos construir a Tabela 1 e a Tabela 2 mostradas abaixo. Note que os valores de \(e_r(\infty)\) e de \(y_w(\infty)\) (regime permanente) dependem apenas da constante de posição \(K_p\), da constante de velocidade \(K_v\) e da cosntante de aceleração \(K_a\). Tl nomenclatura tem origem em sistemas mecânicos de controle. Por exemplo, para um sistema Tipo 0 e \(r(t)=A\) (degrau) temos que (Teorema do Valor Final)
+\[
+e_r(\infty) = \lim\limits_{s \to 0}{sE_R(s)}=\lim\limits_{s\to0}{\frac{D(s)}{D(s)+N(s)}\frac{A}{s}} = \lim\limits_{s\to0}{\frac{AD(s)}{D(s)+N(s)}} \\
+= \frac{AD(0)}{D(0) + N(0)} = \frac{A}{1+N(0)/D(0)} = \frac{A}{1+G(0)} = \frac {A}{1+K_p}.
+\]
+pois como \(D(0) + N(0) \neq 0\) (\(F(s)\) é estável) e \(D(0) \neq 0\) (\(G(0)\) é de Tipo 0) não há divisão por zero!
+
+E, para um sistema Tipo 2 e \(r(t) = Bt\) (rampa), temos \(G(s) = \frac{N(s)}{D(s)} = \frac{N(s)}{s^2D_0(s)}\) e
+\[
+e_r(\infty) = \lim\limits_{s \to 0}{sE_r(s) = \lim\limits_{s \to 0}{s\frac{D(s)}{D(s)+N(s)}\frac{B}{s^2}}} = \lim\limits_{s \to 0}{s\frac{s^2D_0(s)}{D(s)+N(s)}\frac{B}{s^2}}\\
+=\lim\limits_{s \to 0}{\frac{sBD_0(s)}{D(s)+N(s)}}=\frac{0BD(0)}{N(0)+D(0)}=0,
+\]
+pois \(D(0) + N(0) \neq 0\) (\(F(s)\) é estável) e não há divisão por zero!
+
+Observamos que a Tabela 1 e a Tabela 2 são válidas apenas para sistemas com realimentação unitária com perturbação na saída (veja a Figura 1) e tais que a Função de Transferência em malha-fechada é estável para \(w=0\).
+
+\[
+\begin{array}{|c|c|c|c|} \hline
+\text{Sistema } G(s) \text{ / Referência} & r(t) = A & r(t) = Bt & r(t) = Ct^2 \\ \hline
+\text{Tipo 0} & \frac{A}{1 + K_p} & \infty & \infty \\\hline
+\text{Tipo 1} & 0 & \frac{B}{K_v} & \infty \\\hline
+\text{Tipo 2} & 0 & 0 & \frac{2C}{K_a} \\\hline
+\end{array}
 \]
 
 \hypertarget{procedimentos-2}{%

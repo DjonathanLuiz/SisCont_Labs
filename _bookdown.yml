@@ -4,3 +4,6 @@ delete_merged_file: true
 language:
   ui:
     chapter_name: "Laboratório "
+  label:
+    fig: "Figura "
+    tab: "Tabela "

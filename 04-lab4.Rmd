@@ -28,7 +28,7 @@ onde$G_0(s) = \frac {N(s)}{D_0(s)}$ não possui pólos em $s=0$. Denominamos $K_
 
 ### Erro em regime permanente
 
-Considere o sistema em malha-fechada com realimentação unitária mostrado na Figura 1, onde:
+Considere o sistema em malha-fechada com realimentação unitária mostrado na Figura \@ref{fig:fig1}, onde:
 $$
 \begin{cases}
   y(t) & \quad \text{: saída}\\
@@ -38,7 +38,9 @@ $$
 \end{cases}
 $$
 
-![Figura 1: Sistema em malha-fechada com perturbação na saída](Imagens/Lab4/Apresentação/fig1.jpg)
+```{r fig1, echo=FALSE, fig.cap='Sistema em malha-fechada com perturbação na saída.', out.width='100%'}
+knitr::include_graphics('Imagens/Lab4/Apresentação/fig1.jpg', dpi = NA)
+```
 
 Desejamos analisar o erro em regime permanente ($t \to \infty$) quando existem perturbações externas. Temos que
 
@@ -64,7 +66,7 @@ Iremos agora analisar $e_r(\infty)$ e $y_w(\infty)$ através de $E_R(s)$ e $Y_W(
 
 Suponha que $D(s) + N(s) = 0$ possui todas as raízes no SPE (Semi-Plano Esquerdo do plano $s$) e que $D(s)R(s)$ e $D(s)W(s)$ possuem no máximo um pólo em $s=0$. Isto garante que $e_r(\infty)$ e $y_w(\infty)$ existem e, assim, o Teorema do Valor Final pode ser aplicado. Ressaltamos que as raízes de $D(s) + N(s) = 0$ nada mais são do que os pólos da Função de Transferência de malha-fechada quando não há perturbação ($w=0$)
 $$
-F(s) = \frac {Y(s)}{R(s)} = \frac{G(s)}{1+G(s)} = \frac {N(s)}{D(s)+N(s)}, \quad \text{(para } w=0 \text{).}
+F(s) = \frac {Y(s)}{R(s)} = \frac{G(s)}{1+G(s)} = \frac {N(s)}{D(s)+N(s)}, \quad \text{(para } w=0 \text{).} 
 $$
 
 Desse modo, estamos assumindo que $F(s)$ é estável para $w=0$. Com base no Teorema do Valor Final, podemos construir a tabela \@ref(tab:tab1) e a tabela \@ref(tab:tab2) mostradas abaixo. Note que os valores de $e_r(\infty)$ e de $y_w(\infty)$ (regime permanente) dependem apenas da constante de posição $K_p$, da constante de velocidade $K_v$ e da cosntante de aceleração $K_a$. Tl nomenclatura tem origem em sistemas mecânicos de controle. Por exemplo, para um sistema Tipo 0 e $r(t)=A$ (degrau) temos que (Teorema do Valor Final)
@@ -81,7 +83,7 @@ e_r(\infty) = \lim\limits_{s \to 0}{sE_r(s) = \lim\limits_{s \to 0}{s\frac{D(s)}
 $$
 pois $D(0) + N(0) \neq 0$ ($F(s)$ é estável) e não há divisão por zero!
 
-Observamos que a tabela \@ref(tab:tab1) e a tabela \@ref(tab:tab2) são válidas apenas para sistemas com realimentação unitária com perturbação na saída (veja a Figura 1) e tais que a Função de Transferência em malha-fechada é estável para $w=0$.
+Observamos que a tabela \@ref(tab:tab1) e a tabela \@ref(tab:tab2) são válidas apenas para sistemas com realimentação unitária com perturbação na saída (veja a Figura \@ref(fig:fig1)) e tais que a Função de Transferência em malha-fechada é estável para $w=0$.
 
 ```{r tab1, echo=FALSE}
 resultados <- data.frame(T1 = c("Tipo 0", "Tipo 1", "Tipo 2"),
@@ -101,9 +103,11 @@ colnames(resultados) <- c("Sistema $G(s)$ / Perturbação", "$w(t)=A$", "$w(t) =
 knitr::kable(resultados, booktabs = T, escape = FALSE, caption = "Valores de $y_r(\\infty)$ ($r=0$ e $w$ na saída de $G(s)$)")
 ```
 
-Agora, considere o sistema mostrado na Figura 2 e assuma que $G_2(s)$ não possui *zeros* em $s=0$. Para tal sistema, a Tabela \@ref(tab:tab1) continua válida para $G(s) = G_1(s)G_2(s)$. No entanto, a Tabela \@ref(tab:tab2) deve ser substituída pela Tabela \@ref(tab:tab3). Ressaltamos que os valores $\neq 0$ na Tabela \@ref(tab:tab3) podem ser calculados analiticamente a partir de $G_1(s) \text{ e } G_2(s)$. Entretanto, isso não é o objeto de estudo desta experiência.
+Agora, considere o sistema mostrado na Figura \@ref(fig:fig2) e assuma que $G_2(s)$ não possui *zeros* em $s=0$. Para tal sistema, a Tabela \@ref(tab:tab1) continua válida para $G(s) = G_1(s)G_2(s)$. No entanto, a Tabela \@ref(tab:tab2) deve ser substituída pela Tabela \@ref(tab:tab3). Ressaltamos que os valores $\neq 0$ na Tabela \@ref(tab:tab3) podem ser calculados analiticamente a partir de $G_1(s) \text{ e } G_2(s)$. Entretanto, isso não é o objeto de estudo desta experiência.
 
-![Figura 2: Sistema em malha-fechada com perturbação na entrada de $G_s(s)$ e $G_2(s)$ não possui *zeros* em $s=0$](Imagens/Lab4/Apresentação/fig2.jpg)
+```{r fig2, echo=FALSE, fig.cap='Sistema em malha-fechada com perturbação na entrada de $G_s(s)$ e $G_2(s)$ não possui *zeros* em $s=0$.', out.width='100%'}
+knitr::include_graphics('Imagens/Lab4/Apresentação/fig2.jpg', dpi = NA)
+```
 
 ```{r tab3, echo=FALSE}
 resultados <- data.frame(T1 = c("Tipo 0", "Tipo 1", "Tipo 2"),
@@ -115,5 +119,45 @@ knitr::kable(resultados, booktabs = T, escape = FALSE, caption = "Valores de $y_
 ```
 
 ## Procedimentos
+
+Em todos os itens abaixo consideramos o sistema em malha-fechada mostrado na Figura \@ref(fig:fig3) onde $C(s)$ é o controlador, $G(s)$ é a planta (processo) e $u(t)$ é o sinal de controle.
+
+```{r fig3, echo=FALSE, fig.cap='Sistema em malha-fechada.', out.width='100%'}
+knitr::include_graphics('Imagens/Lab4/Apresentação/fig3.jpg', dpi = NA)
+```
+
+### Problema 1 {-}
+
+Considere que
+
+$$
+G(s) = \frac {1}{0.5s+1}, \quad C(s) = K_c \quad \text{(proporcional)}, \quad w=0 \quad \text{(sem perturbação)}.
+$$
+
+a. Simule para $r(t) = 1$ (degrau unitário) e $K_c = 1$ Determine $e(\infty) = e_r(\infty)$ por simulação e compare com a Tabela \@ref(tab:tab1) (note que $K_p = Kc$). Repita para $K_c = 10$ e $K_c = 100$, analisando também o regime transitório de saída $y(t)$.
+b. Percebemos que $e(\infty)$ diminui a merdida que aumentamos o ganho $K_c$ do controlador. Poderíamos então escolher $K_c = \infty$ para que $e(\infty) = 0$? Justifique sua resposta (dica: observe o sinal de controle $u(t)$).
+c. Com $K_c = 1$ simule para $r(t) = t$ (rampa) e $r(t) = 0.5t^2$ (parábola). Determine o erro em regime permanente e verifique se os resultados estão de acordo com o esperado.
+
+#### Resolução {-}
+
+Working on it :)
+
+### Problema 2 {-}
+
+Considere que
+$$
+G(s) = \frac {1}{0.5s+1}, \quad C(s) = \frac{K_c}{s} \text{ (integral)}, \quad w=0 \text{ (sem perturbação).}
+$$
+
+a. Simule para $r(t) = 1$ (degrau unitário) e $K_c = 1$. Determine $e(\infty) = e_r(\infty)$ por simulação e compare com a Tabela \@ref(tab:tab1). Analise também o regime transitório da saída para $y(t)$ (sobressinal, por exemplo). Repita para $K_c = 10$. Observe o aumento no sobressinal.
+b. Simule para $K_c = 2$ e $r(t) = t$ (rampa). Determine $e(\infty)$ por simulação e compare com a Tabela \@ref(tab:tab1 (note que $K_v = K_c$). Encontre analiticamente $K_c$ de modo que o erro à rampa $r(t) = t$ em regime permanente seja igual a 0.1. Agora verifique se as simulações estão de acordo com o valor calculado de $K_c$.
+c. Simule para $K_c = 2$ e $r(t) = 0.5t^2$ (parábola). Determine o erro em regime permanente por simulação e analise os resultados.
+d. Agora suponha que
+$$
+G(s) = \frac {-s+2}{0.5s+1}, \quad C(s)= \frac{2}{s}, \quad r(t) = 1 \text{ (degrau).}
+$$
+Determine $e(\infty)$ por simulação. Note que o erro não converge para zero. O resultado está de acordo com o esperado? Relembre que a Tabela \@ref(tab:tab1) e a Tabela \@ref(tab:tab2) são validas apenas quando o sistema em malha-fechada para $w=0$ é estável (os pólos estão no SPE).
+
+#### Resulução {-}
 
 Working on it :)

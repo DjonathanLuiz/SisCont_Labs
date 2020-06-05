@@ -14,21 +14,13 @@ G(s) = \frac {N(s)}{D(s)}
 $$
 onde $N(s)$ e $D(s)$ são polinômios em $s$ sem raízes em comum e com $\text{grau}(N) \leq \text{grau}(D)$. Temos a seguinte classificação para $G(s)$:
 
--Tipo 0: $G(s)$ não possui pólos em $s=0$. Denominamos $K_p = G(0)$ de *constante de posição*. Note que $K_p = \lim\limits_{s \to 0} G(s)$.
-- Tipo 1: $G(s)$ tem um (e apenas um) pólo em $s=0$. Podemos então escrever
-$$
-G(s) = \frac {1}{s}G_0(s),
-$$
-onde $G_0(s) = \frac {N(s)}{D_0(s)}$ não possui pólos em $s=0$. Chamamos $K_v= G_0(0) \neq 0$ de *constante de velocidade*. Note que $K_v = \lim\limits_{s \to 0} sG(s)$.
-- Tipo 2: $G(s)$ tem dois (e apenas dois) pólos em $s=0$. Podemos escrever
-$$
-G(s) = \frac {1}{s^2}G_0(s),
-$$
-onde$G_0(s) = \frac {N(s)}{D_0(s)}$ não possui pólos em $s=0$. Denominamos $K_a = G_0(0) \neq 0$ de *constante de aceleração*. Note que $K_a =\lim\limits_{s \to 0} s^2G(s)$.
+- Tipo 0: $G(s)$ não possui pólos em $s=0$. Denominamos $K_p = G(0)$ de *constante de posição*. Note que $K_p = \lim\limits_{s \to 0} G(s)$.
+- Tipo 1: $G(s)$ tem um (e apenas um) pólo em $s=0$. Podemos então escrever $$G(s) = \frac {1}{s}G_0(s)$$, onde $G_0(s) = \frac {N(s)}{D_0(s)}$ não possui pólos em $s=0$. Chamamos $K_v= G_0(0) \neq 0$ de *constante de velocidade*. Note que $K_v = \lim\limits_{s \to 0} sG(s)$.
+- Tipo 2: $G(s)$ tem dois (e apenas dois) pólos em $s=0$. Podemos escrever $$G(s) = \frac {1}{s^2}G_0(s)$$, onde $G_0(s) = \frac {N(s)}{D_0(s)}$ não possui pólos em $s=0$. Denominamos $K_a = G_0(0) \neq 0$ de *constante de aceleração*. Note que $K_a =\lim\limits_{s \to 0} s^2G(s)$.
 
 ### Erro em regime permanente
 
-Considere o sistema em malha-fechada com realimentação unitária mostrado na Figura \@ref{fig:fig1}, onde:
+Considere o sistema em malha-fechada com realimentação unitária mostrado na Figura \@ref{fig:fig41}, onde:
 $$
 \begin{cases}
   y(t) & \quad \text{: saída}\\
@@ -38,7 +30,7 @@ $$
 \end{cases}
 $$
 
-```{r fig1, echo=FALSE, fig.cap='Sistema em malha-fechada com perturbação na saída.', out.width='100%'}
+```{r fig41, echo=FALSE, fig.cap='Sistema em malha-fechada com perturbação na saída.', out.width='100%'}
 knitr::include_graphics('Imagens/Lab4/Apresentação/fig1.jpg', dpi = NA)
 ```
 
@@ -56,7 +48,7 @@ Note que $E = E_R$ quando $W= 0$ e que $Y = Y_W$ quando $R=0$. Podemos então an
 e(\infty) = \lim\limits_{t \to \infty}{e(t)} = e_r(\infty) - y_w(\infty), (\#eq:eq41)
 \end{align}
 
-desde que os limites $e_r(\infty) = \lim\limits_{t\to \infty}{e_r(t)}$ e $y_w(\infty) = \lim\limits_{t \to \infty}{y_w(t)}$ existam. Dezemos que há *rastreamento de referência* quando $e_r(\infty) = 0$. De maneira semelhante, dizemos que há *rejeição de perturbação* quando $y_w(\infty) = 0$. Portanto, quando há rastreamento de referência e rejeição de perturbação teremos que $e(\infty) = 0$.
+desde que os limites $e_r(\infty) = \lim\limits_{t\to \infty}{e_r(t)}$ e $y_w(\infty) = \lim\limits_{t \to \infty}{y_w(t)}$ existam. Dizemos que há *rastreamento de referência* quando $e_r(\infty) = 0$. De maneira semelhante, dizemos que há *rejeição de perturbação* quando $y_w(\infty) = 0$. Portanto, quando há rastreamento de referência e rejeição de perturbação teremos que $e(\infty) = 0$.
 
 Iremos agora analisar $e_r(\infty)$ e $y_w(\infty)$ através de $E_R(s)$ e $Y_W(s)$, respectivamente, considerando que a referência $r$ e a perturbação externa $w$ são do tipo degrau, rampa ou parábola. Relembramos que:
 
@@ -83,7 +75,7 @@ e_r(\infty) = \lim\limits_{s \to 0}{sE_r(s) = \lim\limits_{s \to 0}{s\frac{D(s)}
 $$
 pois $D(0) + N(0) \neq 0$ ($F(s)$ é estável) e não há divisão por zero!
 
-Observamos que a tabela \@ref(tab:tab1) e a tabela \@ref(tab:tab2) são válidas apenas para sistemas com realimentação unitária com perturbação na saída (veja a Figura \@ref(fig:fig1)) e tais que a Função de Transferência em malha-fechada é estável para $w=0$.
+Observamos que a tabela \@ref(tab:tab1) e a tabela \@ref(tab:tab2) são válidas apenas para sistemas com realimentação unitária com perturbação na saída (veja a Figura \@ref(fig:fig41)) e tais que a Função de Transferência em malha-fechada é estável para $w=0$.
 
 ```{r tab1, echo=FALSE}
 resultados <- data.frame(T1 = c("Tipo 0", "Tipo 1", "Tipo 2"),
@@ -103,9 +95,9 @@ colnames(resultados) <- c("Sistema $G(s)$ / Perturbação", "$w(t)=A$", "$w(t) =
 knitr::kable(resultados, booktabs = T, escape = FALSE, caption = "Valores de $y_r(\\infty)$ ($r=0$ e $w$ na saída de $G(s)$)")
 ```
 
-Agora, considere o sistema mostrado na Figura \@ref(fig:fig2) e assuma que $G_2(s)$ não possui *zeros* em $s=0$. Para tal sistema, a Tabela \@ref(tab:tab1) continua válida para $G(s) = G_1(s)G_2(s)$. No entanto, a Tabela \@ref(tab:tab2) deve ser substituída pela Tabela \@ref(tab:tab3). Ressaltamos que os valores $\neq 0$ na Tabela \@ref(tab:tab3) podem ser calculados analiticamente a partir de $G_1(s) \text{ e } G_2(s)$. Entretanto, isso não é o objeto de estudo desta experiência.
+Agora, considere o sistema mostrado na Figura \@ref(fig:fig42) e assuma que $G_2(s)$ não possui *zeros* em $s=0$. Para tal sistema, a Tabela \@ref(tab:tab1) continua válida para $G(s) = G_1(s)G_2(s)$. No entanto, a Tabela \@ref(tab:tab2) deve ser substituída pela Tabela \@ref(tab:tab3). Ressaltamos que os valores $\neq 0$ na Tabela \@ref(tab:tab3) podem ser calculados analiticamente a partir de $G_1(s) \text{ e } G_2(s)$. Entretanto, isso não é o objeto de estudo desta experiência.
 
-```{r fig2, echo=FALSE, fig.cap='Sistema em malha-fechada com perturbação na entrada de $G_s(s)$ e $G_2(s)$ não possui *zeros* em $s=0$.', out.width='100%'}
+```{r fig42, echo=FALSE, fig.cap='Sistema em malha-fechada com perturbação na entrada de $G_s(s)$ e $G_2(s)$ não possui *zeros* em $s=0$.', out.width='100%'}
 knitr::include_graphics('Imagens/Lab4/Apresentação/fig2.jpg', dpi = NA)
 ```
 
@@ -120,9 +112,9 @@ knitr::kable(resultados, booktabs = T, escape = FALSE, caption = "Valores de $y_
 
 ## Procedimentos
 
-Em todos os itens abaixo consideramos o sistema em malha-fechada mostrado na Figura \@ref(fig:fig3) onde $C(s)$ é o controlador, $G(s)$ é a planta (processo) e $u(t)$ é o sinal de controle.
+Em todos os itens abaixo consideramos o sistema em malha-fechada mostrado na Figura \@ref(fig:fig43) onde $C(s)$ é o controlador, $G(s)$ é a planta (processo) e $u(t)$ é o sinal de controle.
 
-```{r fig3, echo=FALSE, fig.cap='Sistema em malha-fechada.', out.width='100%'}
+```{r fig43, echo=FALSE, fig.cap='Sistema em malha-fechada.', out.width='100%'}
 knitr::include_graphics('Imagens/Lab4/Apresentação/fig3.jpg', dpi = NA)
 ```
 

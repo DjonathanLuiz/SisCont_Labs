@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.2.3)  5 JUN 2020 13:16
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.2.3)  5 JUN 2020 18:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1278,14 +1278,14 @@ File: Imagens/Lab3/Resolução/prob3BB.jpg Graphic file (type bmp)
 ]
 Chapter 4.
 [47]
-Overfull \hbox (1.36087pt too wide) detected at line 972
+Overfull \hbox (1.36087pt too wide) detected at line 970
 []
  []
 
 File: Imagens/Lab4/Apresentação/fig1.jpg Graphic file (type bmp)
 <Imagens/Lab4/Apresentação/fig1.jpg>
 
-Overfull \hbox (274.57115pt too wide) detected at line 984
+Overfull \hbox (274.57115pt too wide) detected at line 982
 [][][][] [] [][][][] [] [][][][] [] [][][][] [] [][][][][][][][][] [] [][][][][
 ][]   []  [][][][] [] [][][][][] [] [][][][][][]   []  [][][][] [] [] [] []
  []
@@ -1297,12 +1297,12 @@ EIÇÃO DE PERTURBAÇÕES - ERRO EM REGIME PERMANENTE
  []
 
 [48]
-Overfull \hbox (180.34149pt too wide) detected at line 1016
+Overfull \hbox (180.34149pt too wide) detected at line 1014
 [][][][][] [] [] [] [] [] [] [] [] [][]  [] [] [] [] [] [] [] [][]
  []
 
 
-Overfull \hbox (125.07266pt too wide) detected at line 1023
+Overfull \hbox (125.07266pt too wide) detected at line 1021
 [][][][][] [] [] [] [] [] [][]  [] [] [] [] [] [] [][]
  []
 
@@ -1384,23 +1384,23 @@ AGRAMA DE BODE
 ]
 Chapter 13.
 No file SisCont_Labs.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1194.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1192.
 [71]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1194.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1192.
 (./SisCont_Labs.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1194.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1194.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1192.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1192.
 
 Package rerunfilecheck Info: File `SisCont_Labs.out' has not changed.
 (rerunfilecheck)             Checksum: 2222ED5CC0BD25E766047183557E606F;4516.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1194.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1192.
  ) 
 Here is how much of TeX's memory you used:
  29631 strings out of 494432
- 539944 string characters out of 6170871
+ 539947 string characters out of 6170871
  723889 words of memory out of 5000000
  33699 multiletter control sequences out of 15000+600000
  538764 words of font info for 81 fonts, out of 8000000 for 9000

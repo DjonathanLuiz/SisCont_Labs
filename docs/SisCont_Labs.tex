@@ -1099,7 +1099,7 @@ G(s) = \frac {1}{0.5s+1}, \quad C(s) = K_c \quad \text{(proporcional)}, \quad w=
 \item
   Simule para \(r(t) = 1\) (degrau unitário) e \(K_c = 1\) Determine \(e(\infty) = e_r(\infty)\) por simulação e compare com a Tabela \ref{tab:tab1} (note que \(K_p = Kc\)). Repita para \(K_c = 10\) e \(K_c = 100\), analisando também o regime transitório de saída \(y(t)\).
 \item
-  Percebemos que \(e(\infty)\) diminui a merdida que aumentamos o ganho \(K_c\) do controlador. Poderíamos então escolher \(K_c = \infty\) para que \(e(\infty) = 0\)? Justifique sua resposta (dica: observe o sinal de controle \(u(t)\)).
+  Percebemos que \(e(\infty)\) diminui a medida que aumentamos o ganho \(K_c\) do controlador. Poderíamos então escolher \(K_c = \infty\) para que \(e(\infty) = 0\)? Justifique sua resposta (dica: observe o sinal de controle \(u(t)\)).
 \item
   Com \(K_c = 1\) simule para \(r(t) = t\) (rampa) e \(r(t) = 0.5t^2\) (parábola). Determine o erro em regime permanente e verifique se os resultados estão de acordo com o esperado.
 \end{enumerate}
@@ -1112,13 +1112,41 @@ G(s) = \frac {1}{0.5s+1}, \quad C(s) = K_c \quad \text{(proporcional)}, \quad w=
 \subsubsection*{Parte A}\label{parte-a-1}}
 \addcontentsline{toc}{subsubsection}{Parte A}
 
-Por meio da simulação foi encontrado o valor de \(e(\infty) = e_r(\infty) = 0.5\) conforme apresenta a Figura \ref{fig:fig441}.
+Por meio da simulação foi encontrado o valor de \(e(\infty) = e_r(\infty) = 0.5\) conforme apresenta a Figura \ref{fig:fig41A1}.
 
 \begin{figure}
-\includegraphics[width=0.5\linewidth]{Imagens/Lab4/Resolução/prob1A1} \caption{Valor de $e(r)$.}\label{fig:fig441}
+\includegraphics[width=0.5\linewidth]{Imagens/Lab4/Resolução/prob1A1} \caption{Valor de $e(r)$.}\label{fig:fig41A1}
 \end{figure}
 
-Utilizando a Tabela \ref{tab:tab1} temos que \(\frac{A}{1 + K_p}\).
+Utilizando a Tabela \ref{tab:tab1} temos que \(e_r(\infty)=\frac{A}{1 + K_p}\). Assim, tendo \(A = 1\) e \(K_c = 1\), temos que \(e_r(\infty) = \frac {1}{2} = 0.5\), o que está de acordo com o resultado encontrado na simulação. A figura \ref{fig:fig41A2} apresenta os valores de \(e(s) = e_r(s)\) e \(Y(s)\) para \(K_c = 10\) e \(K_c = 100\).
+
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{Imagens/Lab4/Resolução/prob1A2} \caption{Valores para $K_c = 10$ e $K_c = 100$.}\label{fig:fig41A2}
+\end{figure}
+
+\hypertarget{parte-b-1}{%
+\subsubsection*{Parte B}\label{parte-b-1}}
+\addcontentsline{toc}{subsubsection}{Parte B}
+
+Dúvida
+
+\hypertarget{parte-c}{%
+\subsubsection*{Parte C}\label{parte-c}}
+\addcontentsline{toc}{subsubsection}{Parte C}
+
+A Figura \ref{fig:fig41C1} apresenta os valores de \(y(s)\) e \(e(s)\) para uma entrada \(r(t) = t\) (rampa).
+
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{Imagens/Lab4/Resolução/prob1C1} \caption{Valores para entrada do tipo rampa.}\label{fig:fig41C1}
+\end{figure}
+
+A Figura \ref{fig:fig41C2} apresenta os valores de \(y(s)\) e \(e(s)\) para uma entrada \(r(t) = 0.5t^2\) (parábola).
+
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{Imagens/Lab4/Resolução/prob1C2} \caption{Valores para entrada do tipo parábola.}\label{fig:fig41C2}
+\end{figure}
+
+É possível perceber que, como o esperado, \(e(\infty)= e_r(\infty) = \infty\) para ambos os casos.
 
 \hypertarget{problema-2-2}{%
 \subsection*{Problema 2}\label{problema-2-2}}

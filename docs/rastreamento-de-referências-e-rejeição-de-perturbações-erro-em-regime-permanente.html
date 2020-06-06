@@ -402,7 +402,7 @@ G(s) = \frac {1}{0.5s+1}, \quad C(s) = K_c \quad \text{(proporcional)}, \quad w=
 \]</span></p>
 <ol style="list-style-type: lower-alpha">
 <li>Simule para <span class="math inline">\(r(t) = 1\)</span> (degrau unitário) e <span class="math inline">\(K_c = 1\)</span> Determine <span class="math inline">\(e(\infty) = e_r(\infty)\)</span> por simulação e compare com a Tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab1">4.1</a> (note que <span class="math inline">\(K_p = Kc\)</span>). Repita para <span class="math inline">\(K_c = 10\)</span> e <span class="math inline">\(K_c = 100\)</span>, analisando também o regime transitório de saída <span class="math inline">\(y(t)\)</span>.</li>
-<li>Percebemos que <span class="math inline">\(e(\infty)\)</span> diminui a merdida que aumentamos o ganho <span class="math inline">\(K_c\)</span> do controlador. Poderíamos então escolher <span class="math inline">\(K_c = \infty\)</span> para que <span class="math inline">\(e(\infty) = 0\)</span>? Justifique sua resposta (dica: observe o sinal de controle <span class="math inline">\(u(t)\)</span>).</li>
+<li>Percebemos que <span class="math inline">\(e(\infty)\)</span> diminui a medida que aumentamos o ganho <span class="math inline">\(K_c\)</span> do controlador. Poderíamos então escolher <span class="math inline">\(K_c = \infty\)</span> para que <span class="math inline">\(e(\infty) = 0\)</span>? Justifique sua resposta (dica: observe o sinal de controle <span class="math inline">\(u(t)\)</span>).</li>
 <li>Com <span class="math inline">\(K_c = 1\)</span> simule para <span class="math inline">\(r(t) = t\)</span> (rampa) e <span class="math inline">\(r(t) = 0.5t^2\)</span> (parábola). Determine o erro em regime permanente e verifique se os resultados estão de acordo com o esperado.</li>
 </ol>
 <div id="resolução-10" class="section level4 unnumbered" number="">
@@ -410,14 +410,42 @@ G(s) = \frac {1}{0.5s+1}, \quad C(s) = K_c \quad \text{(proporcional)}, \quad w=
 </div>
 <div id="parte-a-1" class="section level4 unnumbered" number="">
 <h4>Parte A</h4>
-<p>Por meio da simulação foi encontrado o valor de <span class="math inline">\(e(\infty) = e_r(\infty) = 0.5\)</span> conforme apresenta a Figura <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#fig:fig441">4.4</a>.</p>
-<div class="figure"><span id="fig:fig441"></span>
+<p>Por meio da simulação foi encontrado o valor de <span class="math inline">\(e(\infty) = e_r(\infty) = 0.5\)</span> conforme apresenta a Figura <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#fig:fig41A1">4.4</a>.</p>
+<div class="figure"><span id="fig:fig41A1"></span>
 <img src="Imagens/Lab4/Resolução/prob1A1.jpg" alt="Valor de $e(r)$." width="50%" />
 <p class="caption">
 Figura 4.4: Valor de <span class="math inline">\(e(r)\)</span>.
 </p>
 </div>
-<p>Utilizando a Tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab1">4.1</a> temos que <span class="math inline">\(\frac{A}{1 + K_p}\)</span>.</p>
+<p>Utilizando a Tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab1">4.1</a> temos que <span class="math inline">\(e_r(\infty)=\frac{A}{1 + K_p}\)</span>. Assim, tendo <span class="math inline">\(A = 1\)</span> e <span class="math inline">\(K_c = 1\)</span>, temos que <span class="math inline">\(e_r(\infty) = \frac {1}{2} = 0.5\)</span>, o que está de acordo com o resultado encontrado na simulação. A figura <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#fig:fig41A2">4.5</a> apresenta os valores de <span class="math inline">\(e(s) = e_r(s)\)</span> e <span class="math inline">\(Y(s)\)</span> para <span class="math inline">\(K_c = 10\)</span> e <span class="math inline">\(K_c = 100\)</span>.</p>
+<div class="figure"><span id="fig:fig41A2"></span>
+<img src="Imagens/Lab4/Resolução/prob1A2.jpg" alt="Valores para $K_c = 10$ e $K_c = 100$." width="50%" />
+<p class="caption">
+Figura 4.5: Valores para <span class="math inline">\(K_c = 10\)</span> e <span class="math inline">\(K_c = 100\)</span>.
+</p>
+</div>
+</div>
+<div id="parte-b-1" class="section level4 unnumbered" number="">
+<h4>Parte B</h4>
+<p>Dúvida</p>
+</div>
+<div id="parte-c" class="section level4 unnumbered" number="">
+<h4>Parte C</h4>
+<p>A Figura <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#fig:fig41C1">4.6</a> apresenta os valores de <span class="math inline">\(y(s)\)</span> e <span class="math inline">\(e(s)\)</span> para uma entrada <span class="math inline">\(r(t) = t\)</span> (rampa).</p>
+<div class="figure"><span id="fig:fig41C1"></span>
+<img src="Imagens/Lab4/Resolução/prob1C1.jpg" alt="Valores para entrada do tipo rampa." width="50%" />
+<p class="caption">
+Figura 4.6: Valores para entrada do tipo rampa.
+</p>
+</div>
+<p>A Figura <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#fig:fig41C2">4.7</a> apresenta os valores de <span class="math inline">\(y(s)\)</span> e <span class="math inline">\(e(s)\)</span> para uma entrada <span class="math inline">\(r(t) = 0.5t^2\)</span> (parábola).</p>
+<div class="figure"><span id="fig:fig41C2"></span>
+<img src="Imagens/Lab4/Resolução/prob1C2.jpg" alt="Valores para entrada do tipo parábola." width="50%" />
+<p class="caption">
+Figura 4.7: Valores para entrada do tipo parábola.
+</p>
+</div>
+<p>É possível perceber que, como o esperado, <span class="math inline">\(e(\infty)= e_r(\infty) = \infty\)</span> para ambos os casos.</p>
 </div>
 </div>
 <div id="problema-2-2" class="section level3 unnumbered" number="">

@@ -127,20 +127,44 @@ G(s) = \frac {1}{0.5s+1}, \quad C(s) = K_c \quad \text{(proporcional)}, \quad w=
 $$
 
 a. Simule para $r(t) = 1$ (degrau unitário) e $K_c = 1$ Determine $e(\infty) = e_r(\infty)$ por simulação e compare com a Tabela \@ref(tab:tab1) (note que $K_p = Kc$). Repita para $K_c = 10$ e $K_c = 100$, analisando também o regime transitório de saída $y(t)$.
-b. Percebemos que $e(\infty)$ diminui a merdida que aumentamos o ganho $K_c$ do controlador. Poderíamos então escolher $K_c = \infty$ para que $e(\infty) = 0$? Justifique sua resposta (dica: observe o sinal de controle $u(t)$).
+b. Percebemos que $e(\infty)$ diminui a medida que aumentamos o ganho $K_c$ do controlador. Poderíamos então escolher $K_c = \infty$ para que $e(\infty) = 0$? Justifique sua resposta (dica: observe o sinal de controle $u(t)$).
 c. Com $K_c = 1$ simule para $r(t) = t$ (rampa) e $r(t) = 0.5t^2$ (parábola). Determine o erro em regime permanente e verifique se os resultados estão de acordo com o esperado.
 
 #### Resolução {-}
 
 #### Parte A {-}
 
-Por meio da simulação foi encontrado o valor de $e(\infty) = e_r(\infty) = 0.5$ conforme apresenta a Figura \@ref(fig:fig441).
+Por meio da simulação foi encontrado o valor de $e(\infty) = e_r(\infty) = 0.5$ conforme apresenta a Figura \@ref(fig:fig41A1).
 
-```{r fig441, echo=FALSE, fig.cap='Valor de $e(r)$.', out.width='50%'}
+```{r fig41A1, echo=FALSE, fig.cap='Valor de $e(r)$.', out.width='50%'}
 knitr::include_graphics('Imagens/Lab4/Resolução/prob1A1.jpg', dpi = NA)
 ```
 
-Utilizando a Tabela \@ref(tab:tab1) temos que $\frac{A}{1 + K_p}$.
+Utilizando a Tabela \@ref(tab:tab1) temos que $e_r(\infty)=\frac{A}{1 + K_p}$. Assim, tendo $A = 1$ e $K_c = 1$, temos que $e_r(\infty) = \frac {1}{2} = 0.5$, o que está de acordo com o resultado encontrado na simulação. A figura \@ref(fig:fig41A2) apresenta os valores de $e(s) = e_r(s)$ e $Y(s)$ para $K_c = 10$ e $K_c = 100$.
+
+```{r fig41A2, echo=FALSE, fig.cap='Valores para $K_c = 10$ e $K_c = 100$.', out.width='50%'}
+knitr::include_graphics('Imagens/Lab4/Resolução/prob1A2.jpg', dpi = NA)
+```
+
+#### Parte B{-}
+
+Dúvida
+
+#### Parte C {-}
+
+A Figura \@ref(fig:fig41C1) apresenta os valores de $y(s)$ e $e(s)$ para uma entrada $r(t) = t$ (rampa).
+
+```{r fig41C1, echo=FALSE, fig.cap='Valores para entrada do tipo rampa.', out.width='50%'}
+knitr::include_graphics('Imagens/Lab4/Resolução/prob1C1.jpg', dpi = NA)
+```
+
+A Figura \@ref(fig:fig41C2) apresenta os valores de $y(s)$ e $e(s)$ para uma entrada $r(t) = 0.5t^2$ (parábola).
+
+```{r fig41C2, echo=FALSE, fig.cap='Valores para entrada do tipo parábola.', out.width='50%'}
+knitr::include_graphics('Imagens/Lab4/Resolução/prob1C2.jpg', dpi = NA)
+```
+
+É possível perceber que, como o esperado, $e(\infty)= e_r(\infty) = \infty$ para ambos os casos.
 
 ### Problema 2 {-}
 

@@ -113,7 +113,7 @@
 
 \title{Laboratório de Sistemas de Controle}
 \author{Djonathan Luiz de Oliveira Quadras}
-\date{2020-06-05}
+\date{2020-06-06}
 
 \begin{document}
 \maketitle
@@ -951,9 +951,9 @@ onde \(N(s)\) e \(D(s)\) são polinômios em \(s\) sem raízes em comum e com \(
 \item
   Tipo 0: \(G(s)\) não possui pólos em \(s=0\). Denominamos \(K_p = G(0)\) de \emph{constante de posição}. Note que \(K_p = \lim\limits_{s \to 0} G(s)\).
 \item
-  Tipo 1: \(G(s)\) tem um (e apenas um) pólo em \(s=0\). Podemos então escrever \[G(s) = \frac {1}{s}G_0(s)\], onde \(G_0(s) = \frac {N(s)}{D_0(s)}\) não possui pólos em \(s=0\). Chamamos \(K_v= G_0(0) \neq 0\) de \emph{constante de velocidade}. Note que \(K_v = \lim\limits_{s \to 0} sG(s)\).
+  Tipo 1: \(G(s)\) tem um (e apenas um) pólo em \(s=0\). Podemos então escrever \[G(s) = \frac {1}{s}G_0(s),\] onde \(G_0(s) = \frac {N(s)}{D_0(s)}\) não possui pólos em \(s=0\). Chamamos \(K_v= G_0(0) \neq 0\) de \emph{constante de velocidade}. Note que \(K_v = \lim\limits_{s \to 0} sG(s)\).
 \item
-  Tipo 2: \(G(s)\) tem dois (e apenas dois) pólos em \(s=0\). Podemos escrever \[G(s) = \frac {1}{s^2}G_0(s)\], onde \(G_0(s) = \frac {N(s)}{D_0(s)}\) não possui pólos em \(s=0\). Denominamos \(K_a = G_0(0) \neq 0\) de \emph{constante de aceleração}. Note que \(K_a =\lim\limits_{s \to 0} s^2G(s)\).
+  Tipo 2: \(G(s)\) tem dois (e apenas dois) pólos em \(s=0\). Podemos escrever \[G(s) = \frac {1}{s^2}G_0(s),\] onde \(G_0(s) = \frac {N(s)}{D_0(s)}\) não possui pólos em \(s=0\). Denominamos \(K_a = G_0(0) \neq 0\) de \emph{constante de aceleração}. Note que \(K_a =\lim\limits_{s \to 0} s^2G(s)\).
 \end{itemize}
 
 \hypertarget{erro-em-regime-permanente}{%
@@ -1108,7 +1108,17 @@ G(s) = \frac {1}{0.5s+1}, \quad C(s) = K_c \quad \text{(proporcional)}, \quad w=
 \subsubsection*{Resolução}\label{resoluuxe7uxe3o-10}}
 \addcontentsline{toc}{subsubsection}{Resolução}
 
-Working on it :)
+\hypertarget{parte-a-1}{%
+\subsubsection*{Parte A}\label{parte-a-1}}
+\addcontentsline{toc}{subsubsection}{Parte A}
+
+Por meio da simulação foi encontrado o valor de \(e(\infty) = e_r(\infty) = 0.5\) conforme apresenta a Figura \ref{fig:fig441}.
+
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{Imagens/Lab4/Resolução/prob1A1} \caption{Valor de $e(r)$.}\label{fig:fig441}
+\end{figure}
+
+Utilizando a Tabela \ref{tab:tab1} temos que \(\frac{A}{1 + K_p}\).
 
 \hypertarget{problema-2-2}{%
 \subsection*{Problema 2}\label{problema-2-2}}

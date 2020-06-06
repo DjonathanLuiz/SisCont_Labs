@@ -15,8 +15,8 @@ $$
 onde $N(s)$ e $D(s)$ são polinômios em $s$ sem raízes em comum e com $\text{grau}(N) \leq \text{grau}(D)$. Temos a seguinte classificação para $G(s)$:
 
 - Tipo 0: $G(s)$ não possui pólos em $s=0$. Denominamos $K_p = G(0)$ de *constante de posição*. Note que $K_p = \lim\limits_{s \to 0} G(s)$.
-- Tipo 1: $G(s)$ tem um (e apenas um) pólo em $s=0$. Podemos então escrever $$G(s) = \frac {1}{s}G_0(s)$$, onde $G_0(s) = \frac {N(s)}{D_0(s)}$ não possui pólos em $s=0$. Chamamos $K_v= G_0(0) \neq 0$ de *constante de velocidade*. Note que $K_v = \lim\limits_{s \to 0} sG(s)$.
-- Tipo 2: $G(s)$ tem dois (e apenas dois) pólos em $s=0$. Podemos escrever $$G(s) = \frac {1}{s^2}G_0(s)$$, onde $G_0(s) = \frac {N(s)}{D_0(s)}$ não possui pólos em $s=0$. Denominamos $K_a = G_0(0) \neq 0$ de *constante de aceleração*. Note que $K_a =\lim\limits_{s \to 0} s^2G(s)$.
+- Tipo 1: $G(s)$ tem um (e apenas um) pólo em $s=0$. Podemos então escrever $$G(s) = \frac {1}{s}G_0(s),$$ onde $G_0(s) = \frac {N(s)}{D_0(s)}$ não possui pólos em $s=0$. Chamamos $K_v= G_0(0) \neq 0$ de *constante de velocidade*. Note que $K_v = \lim\limits_{s \to 0} sG(s)$.
+- Tipo 2: $G(s)$ tem dois (e apenas dois) pólos em $s=0$. Podemos escrever $$G(s) = \frac {1}{s^2}G_0(s),$$ onde $G_0(s) = \frac {N(s)}{D_0(s)}$ não possui pólos em $s=0$. Denominamos $K_a = G_0(0) \neq 0$ de *constante de aceleração*. Note que $K_a =\lim\limits_{s \to 0} s^2G(s)$.
 
 ### Erro em regime permanente
 
@@ -132,7 +132,15 @@ c. Com $K_c = 1$ simule para $r(t) = t$ (rampa) e $r(t) = 0.5t^2$ (parábola). D
 
 #### Resolução {-}
 
-Working on it :)
+#### Parte A {-}
+
+Por meio da simulação foi encontrado o valor de $e(\infty) = e_r(\infty) = 0.5$ conforme apresenta a Figura \@ref(fig:fig441).
+
+```{r fig441, echo=FALSE, fig.cap='Valor de $e(r)$.', out.width='50%'}
+knitr::include_graphics('Imagens/Lab4/Resolução/prob1A1.jpg', dpi = NA)
+```
+
+Utilizando a Tabela \@ref(tab:tab1) temos que $\frac{A}{1 + K_p}$.
 
 ### Problema 2 {-}
 
@@ -153,3 +161,4 @@ Determine $e(\infty)$ por simulação. Note que o erro não converge para zero. 
 #### Resulução {-}
 
 Working on it :)
+

@@ -174,7 +174,7 @@ G(s) = \frac {1}{0.5s+1}, \quad C(s) = \frac{K_c}{s} \text{ (integral)}, \quad w
 $$
 
 a. Simule para $r(t) = 1$ (degrau unitário) e $K_c = 1$. Determine $e(\infty) = e_r(\infty)$ por simulação e compare com a Tabela \@ref(tab:tab1). Analise também o regime transitório da saída para $y(t)$ (sobressinal, por exemplo). Repita para $K_c = 10$. Observe o aumento no sobressinal.
-b. Simule para $K_c = 2$ e $r(t) = t$ (rampa). Determine $e(\infty)$ por simulação e compare com a Tabela \@ref(tab:tab1 (note que $K_v = K_c$). Encontre analiticamente $K_c$ de modo que o erro à rampa $r(t) = t$ em regime permanente seja igual a 0.1. Agora verifique se as simulações estão de acordo com o valor calculado de $K_c$.
+b. Simule para $K_c = 2$ e $r(t) = t$ (rampa). Determine $e(\infty)$ por simulação e compare com a Tabela \@ref(tab:tab1) (note que $K_v = K_c$). Encontre analiticamente $K_c$ de modo que o erro à rampa $r(t) = t$ em regime permanente seja igual a 0.1. Agora verifique se as simulações estão de acordo com o valor calculado de $K_c$.
 c. Simule para $K_c = 2$ e $r(t) = 0.5t^2$ (parábola). Determine o erro em regime permanente por simulação e analise os resultados.
 d. Agora suponha que
 $$

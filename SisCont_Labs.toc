@@ -44,20 +44,25 @@
 \contentsline {subsection}{\numberline {4.1.1}Objetivos}{47}{subsection.4.1.1}%
 \contentsline {subsection}{\numberline {4.1.2}Tipos de Sistemas}{47}{subsection.4.1.2}%
 \contentsline {subsection}{\numberline {4.1.3}Erro em regime permanente}{48}{subsection.4.1.3}%
-\contentsline {section}{\numberline {4.2}Procedimentos}{50}{section.4.2}%
-\contentsline {subsection}{Problema 1}{52}{section*.28}%
+\contentsline {section}{\numberline {4.2}Procedimentos}{51}{section.4.2}%
+\contentsline {subsection}{Problema 1}{51}{section*.28}%
 \contentsline {subsubsection}{Resolução}{52}{section*.29}%
 \contentsline {subsubsection}{Parte A}{52}{section*.30}%
-\contentsline {subsubsection}{Parte B}{53}{section*.31}%
+\contentsline {subsubsection}{Parte B}{52}{section*.31}%
 \contentsline {subsubsection}{Parte C}{53}{section*.32}%
-\contentsline {subsection}{Problema 2}{54}{section*.33}%
-\contentsline {subsubsection}{Resulução}{54}{section*.34}%
-\contentsline {chapter}{\numberline {5}Projeto de Controladores por Métodos Algébricos}{55}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Linearização de Sistemas Não-Lineares}{57}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Controle de Sistemas Não-Lineares}{59}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Análise pelo Lugar das Raízes}{61}{chapter.8}%
-\contentsline {chapter}{\numberline {9}Projeto de Controladores pelo Lugar das Raízes}{63}{chapter.9}%
-\contentsline {chapter}{\numberline {10}Projeto do controlador atraso de fase}{65}{chapter.10}%
-\contentsline {chapter}{\numberline {11}Análise pelos Diagramas de Bode e Nyquist}{67}{chapter.11}%
-\contentsline {chapter}{\numberline {12}Projeto de Controladores pelo Diagrama de Bode}{69}{chapter.12}%
-\contentsline {chapter}{\numberline {13}Digitalização de Controladores Analógicos}{71}{chapter.13}%
+\contentsline {subsection}{Problema 2}{53}{section*.33}%
+\contentsline {subsubsection}{Resulução}{55}{section*.34}%
+\contentsline {paragraph}{Parte A}{55}{section*.35}%
+\contentsline {paragraph}{Parte B}{55}{section*.36}%
+\contentsline {paragraph}{Parte C}{55}{section*.37}%
+\contentsline {paragraph}{Parte D}{59}{section*.38}%
+\contentsline {subsection}{Problema 3}{59}{section*.39}%
+\contentsline {chapter}{\numberline {5}Projeto de Controladores por Métodos Algébricos}{61}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Linearização de Sistemas Não-Lineares}{63}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Controle de Sistemas Não-Lineares}{65}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Análise pelo Lugar das Raízes}{67}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Projeto de Controladores pelo Lugar das Raízes}{69}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Projeto do controlador atraso de fase}{71}{chapter.10}%
+\contentsline {chapter}{\numberline {11}Análise pelos Diagramas de Bode e Nyquist}{73}{chapter.11}%
+\contentsline {chapter}{\numberline {12}Projeto de Controladores pelo Diagrama de Bode}{75}{chapter.12}%
+\contentsline {chapter}{\numberline {13}Digitalização de Controladores Analógicos}{77}{chapter.13}%

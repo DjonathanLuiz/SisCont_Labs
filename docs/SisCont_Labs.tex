@@ -970,7 +970,7 @@ Considere o sistema em malha-fechada com realimentação unitária mostrado na F
 \]
 
 \begin{figure}
-\includegraphics[width=1\linewidth]{Imagens/Lab4/Apresentação/fig1} \caption{Sistema em malha-fechada com perturbação na saída.}\label{fig:fig41}
+\includegraphics[width=0.8\linewidth]{Imagens/Lab4/Apresentação/fig1} \caption{Sistema em malha-fechada com perturbação na saída.}\label{fig:fig41}
 \end{figure}
 
 Desejamos analisar o erro em regime permanente (\(t \to \infty\)) quando existem perturbações externas. Temos que
@@ -1056,7 +1056,7 @@ Tipo 2 & 0 & 0 & $\frac{2C}{K_a}$\\
 Agora, considere o sistema mostrado na Figura \ref{fig:fig42} e assuma que \(G_2(s)\) não possui \emph{zeros} em \(s=0\). Para tal sistema, a Tabela \ref{tab:tab1} continua válida para \(G(s) = G_1(s)G_2(s)\). No entanto, a Tabela \ref{tab:tab2} deve ser substituída pela Tabela \ref{tab:tab3}. Ressaltamos que os valores \(\neq 0\) na Tabela \ref{tab:tab3} podem ser calculados analiticamente a partir de \(G_1(s) \text{ e } G_2(s)\). Entretanto, isso não é o objeto de estudo desta experiência.
 
 \begin{figure}
-\includegraphics[width=1\linewidth]{Imagens/Lab4/Apresentação/fig2} \caption{Sistema em malha-fechada com perturbação na entrada de $G_s(s)$ e $G_2(s)$ não possui *zeros* em $s=0$.}\label{fig:fig42}
+\includegraphics[width=0.8\linewidth]{Imagens/Lab4/Apresentação/fig2} \caption{Sistema em malha-fechada com perturbação na entrada de $G_s(s)$ e $G_2(s)$ não possui *zeros* em $s=0$.}\label{fig:fig42}
 \end{figure}
 
 \begin{table}
@@ -1080,7 +1080,7 @@ Tipo 2 & 0 & 0 & $\neq 0$\\
 Em todos os itens abaixo consideramos o sistema em malha-fechada mostrado na Figura \ref{fig:fig43} onde \(C(s)\) é o controlador, \(G(s)\) é a planta (processo) e \(u(t)\) é o sinal de controle.
 
 \begin{figure}
-\includegraphics[width=1\linewidth]{Imagens/Lab4/Apresentação/fig3} \caption{Sistema em malha-fechada.}\label{fig:fig43}
+\includegraphics[width=0.8\linewidth]{Imagens/Lab4/Apresentação/fig3} \caption{Sistema em malha-fechada.}\label{fig:fig43}
 \end{figure}
 
 \hypertarget{problema-1-2}{%
@@ -1115,13 +1115,13 @@ G(s) = \frac {1}{0.5s+1}, \quad C(s) = K_c \quad \text{(proporcional)}, \quad w=
 Por meio da simulação foi encontrado o valor de \(e(\infty) = e_r(\infty) = 0.5\) conforme apresenta a Figura \ref{fig:fig41A1}.
 
 \begin{figure}
-\includegraphics[width=0.5\linewidth]{Imagens/Lab4/Resolução/prob1A1} \caption{Valor de $e(r)$.}\label{fig:fig41A1}
+\includegraphics[width=0.8\linewidth]{Imagens/Lab4/Resolução/prob1A1} \caption{Valor de $e(r)$.}\label{fig:fig41A1}
 \end{figure}
 
 Utilizando a Tabela \ref{tab:tab1} temos que \(e_r(\infty)=\frac{A}{1 + K_p}\). Assim, tendo \(A = 1\) e \(K_c = 1\), temos que \(e_r(\infty) = \frac {1}{2} = 0.5\), o que está de acordo com o resultado encontrado na simulação. A figura \ref{fig:fig41A2} apresenta os valores de \(e(s) = e_r(s)\) e \(Y(s)\) para \(K_c = 10\) e \(K_c = 100\).
 
 \begin{figure}
-\includegraphics[width=0.5\linewidth]{Imagens/Lab4/Resolução/prob1A2} \caption{Valores para $K_c = 10$ e $K_c = 100$.}\label{fig:fig41A2}
+\includegraphics[width=0.8\linewidth]{Imagens/Lab4/Resolução/prob1A2} \caption{Valores para $K_c = 10$ e $K_c = 100$.}\label{fig:fig41A2}
 \end{figure}
 
 \hypertarget{parte-b-1}{%
@@ -1142,13 +1142,13 @@ Entretanto, não existe um sistema prático que retorne um ganho infinito. O ide
 A Figura \ref{fig:fig41C1} apresenta os valores de \(y(s)\) e \(e(s)\) para uma entrada \(r(t) = t\) (rampa).
 
 \begin{figure}
-\includegraphics[width=0.5\linewidth]{Imagens/Lab4/Resolução/prob1C1} \caption{Valores para entrada do tipo rampa.}\label{fig:fig41C1}
+\includegraphics[width=0.8\linewidth]{Imagens/Lab4/Resolução/prob1C1} \caption{Valores para entrada do tipo rampa.}\label{fig:fig41C1}
 \end{figure}
 
 A Figura \ref{fig:fig41C2} apresenta os valores de \(y(s)\) e \(e(s)\) para uma entrada \(r(t) = 0.5t^2\) (parábola).
 
 \begin{figure}
-\includegraphics[width=0.5\linewidth]{Imagens/Lab4/Resolução/prob1C2} \caption{Valores para entrada do tipo parábola.}\label{fig:fig41C2}
+\includegraphics[width=0.8\linewidth]{Imagens/Lab4/Resolução/prob1C2} \caption{Valores para entrada do tipo parábola.}\label{fig:fig41C2}
 \end{figure}
 
 É possível perceber que, como o esperado, \(e(\infty)= e_r(\infty) = \infty\) para ambos os casos.
@@ -1182,6 +1182,74 @@ G(s) = \frac {1}{0.5s+1}, \quad C(s) = \frac{K_c}{s} \text{ (integral)}, \quad w
 \hypertarget{resuluuxe7uxe3o}{%
 \subsubsection*{Resulução}\label{resuluuxe7uxe3o}}
 \addcontentsline{toc}{subsubsection}{Resulução}
+
+\hypertarget{parte-a-2}{%
+\paragraph*{Parte A}\label{parte-a-2}}
+\addcontentsline{toc}{paragraph}{Parte A}
+
+Aplicando um controle \(C(s) = \frac {K_c}{s}\) em série a uma função \(G(s) = \frac {1}{0.5s+1}\) temos como resultado a Função de Transferência\\
+\[
+G_t(s) = C(s)G(s) = \frac {K_c}{s} \frac{1}{0.5s+1} = \frac {K_c}{s(0.5s+1)},
+\]
+que não possui zeros e possui pólos em \(s = 0\) e \(s = 2\). Deste modo, o sistema se caracteriza como um sistema do Tipo 1. Simulando o sistema temos como resultado a Figura \ref{fig:fig42A1}.
+
+\begin{figure}
+\includegraphics[width=0.8\linewidth]{Imagens/Lab4/Resolução/prob2A1} \caption{Valores para $K_c = 1$.}\label{fig:fig42A1}
+\end{figure}
+
+Simulando para \(K_c = 10\), temos o resultado abaixo.
+
+\begin{figure}
+\includegraphics[width=0.8\linewidth]{Imagens/Lab4/Resolução/prob2A2} \caption{Valores para $K_c = 10$.}\label{fig:fig42A2}
+\end{figure}
+
+\hypertarget{parte-b-2}{%
+\paragraph*{Parte B}\label{parte-b-2}}
+\addcontentsline{toc}{paragraph}{Parte B}
+
+Simulando o sistema para um \(K_c = 2\) e uma entrada tipo rampa, temos que o sistema tem \(e(\infty) = 0.5\), o que está de acordo com a Tabela \ref{tab:tab1}. O resultado da simulação está apresentado abaixo.
+
+\begin{figure}
+\includegraphics[width=0.8\linewidth]{Imagens/Lab4/Resolução/prob2B1} \caption{Valores para $K_c = 2$ e entrada do tipo rampa.}\label{fig:fig42B1}
+\end{figure}
+
+Analiticamente, é possível calcular o valor de \(K_v\) para que \(e(\infty) = 0.1\).
+
+\[
+0.1 = \frac {1}{K_v} \implies K_v = 10
+\]
+
+Simulando o sistema o valor foi comprovado.
+
+\begin{figure}
+\includegraphics[width=0.8\linewidth]{Imagens/Lab4/Resolução/prob2B2} \caption{Valores para $K_c = 10$ e entrada do tipo rampa.}\label{fig:fig42B2}
+\end{figure}
+
+\hypertarget{parte-c-1}{%
+\paragraph*{Parte C}\label{parte-c-1}}
+\addcontentsline{toc}{paragraph}{Parte C}
+
+Simulando o sistema para \(K_c = 2\) e uma entrada do tipo parábola, temos \(e(\infty) = \infty\), o que está de acordo com a Tabela \ref{tab:tab1}.
+
+\begin{figure}
+\includegraphics[width=0.8\linewidth]{Imagens/Lab4/Resolução/prob2C1} \caption{Valores para $K_c = 2$ e entrada do tipo parábola.}\label{fig:fig42C1}
+\end{figure}
+
+\hypertarget{parte-d}{%
+\paragraph*{Parte D}\label{parte-d}}
+\addcontentsline{toc}{paragraph}{Parte D}
+
+Simulando a Função de Transferência \(G(s) = \frac {-s+2}{0.5s +1}\), controle \(C(s) = \frac {2}{s}\) e entrada do tipo degrau temos o resultado apresentado na Figura \ref{fig:fig42D1}.
+
+\begin{figure}
+\includegraphics[width=0.8\linewidth]{Imagens/Lab4/Resolução/prob2D1} \caption{Valores de $e(s)$ e $y(s)$.}\label{fig:fig42D1}
+\end{figure}
+
+Diferentemente do esperado (que o \(e(\infty) = 0\)) uma vez que segundo a Tabela \ref{tab:tab1} para sistemas do Tipo 1 para entrada igual degrau o erro esperado é nulo, o erro não converge. Na realidade, é possível notar que o sistema não se comportou de forma estável.
+
+\hypertarget{problema-3-2}{%
+\subsection*{Problema 3}\label{problema-3-2}}
+\addcontentsline{toc}{subsection}{Problema 3}
 
 Working on it :)
 

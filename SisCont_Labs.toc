@@ -57,6 +57,7 @@
 \contentsline {paragraph}{Parte C}{55}{section*.37}%
 \contentsline {paragraph}{Parte D}{59}{section*.38}%
 \contentsline {subsection}{Problema 3}{59}{section*.39}%
+\contentsline {subsubsection}{Resolução}{59}{section*.40}%
 \contentsline {chapter}{\numberline {5}Projeto de Controladores por Métodos Algébricos}{61}{chapter.5}%
 \contentsline {chapter}{\numberline {6}Linearização de Sistemas Não-Lineares}{63}{chapter.6}%
 \contentsline {chapter}{\numberline {7}Controle de Sistemas Não-Lineares}{65}{chapter.7}%

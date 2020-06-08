@@ -148,7 +148,12 @@ knitr::include_graphics('Imagens/Lab4/Resolução/prob1A2.jpg', dpi = NA)
 
 #### Parte B{-}
 
-Dúvida
+Teoricamente, é possível encontrar um erro nulo $e(\infty) = 0$ se utilizado um ganho infinito $K_c = \infty$. Pois, de acordo com a Tabela \@ref(tab:tab1), temos que
+$$
+e(\infty) = \frac {A}{1+K_c} = \frac {A}{1+\infty} = 0.
+$$
+
+Entretanto, não existe um sistema prático que retorne um ganho infinito. O ideal seria considerar um sistema que seja de Tipo 1 ou 2 para que, ao aplicar uma entrada do tipo degrau ele retorne um erro nulo.
 
 #### Parte C {-}
 

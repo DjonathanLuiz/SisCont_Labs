@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.2.3)  6 JUN 2020 20:59
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.2.3)  8 JUN 2020 14:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1333,9 +1333,6 @@ File: Imagens/Lab4/Resolução/prob1C1.jpg Graphic file (type bmp)
 <Imagens/Lab4/Resolução/prob1C1.jpg>
 File: Imagens/Lab4/Resolução/prob1C2.jpg Graphic file (type bmp)
 <Imagens/Lab4/Resolução/prob1C2.jpg>
-
-Underfull \vbox (badness 2818) has occurred while \output is active []
-
 [53]
 Overfull \hbox (251.97905pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 54 \TU/lmr/m/sl/10 CHAPTER 4.  RASTREAMENTO DE REFERÊNCIAS E REJ
@@ -1397,19 +1394,19 @@ AGRAMA DE BODE
 ]
 Chapter 13.
 No file SisCont_Labs.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1230.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1235.
 [71]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1230.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1235.
 (./SisCont_Labs.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1230.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1230.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1235.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1235.
 
 Package rerunfilecheck Info: File `SisCont_Labs.out' has not changed.
 (rerunfilecheck)             Checksum: 2222ED5CC0BD25E766047183557E606F;4516.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1230.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1235.
  ) 
 Here is how much of TeX's memory you used:
  29691 strings out of 494432

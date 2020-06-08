@@ -113,7 +113,7 @@
 
 \title{Laboratório de Sistemas de Controle}
 \author{Djonathan Luiz de Oliveira Quadras}
-\date{2020-06-06}
+\date{2020-06-08}
 
 \begin{document}
 \maketitle
@@ -1128,7 +1128,12 @@ Utilizando a Tabela \ref{tab:tab1} temos que \(e_r(\infty)=\frac{A}{1 + K_p}\). 
 \subsubsection*{Parte B}\label{parte-b-1}}
 \addcontentsline{toc}{subsubsection}{Parte B}
 
-Dúvida
+Teoricamente, é possível encontrar um erro nulo \(e(\infty) = 0\) se utilizado um ganho infinito \(K_c = \infty\). Pois, de acordo com a Tabela \ref{tab:tab1}, temos que
+\[
+e(\infty) = \frac {A}{1+K_c} = \frac {A}{1+\infty} = 0.
+\]
+
+Entretanto, não existe um sistema prático que retorne um ganho infinito. O ideal seria considerar um sistema que seja de Tipo 1 ou 2 para que, ao aplicar uma entrada do tipo degrau ele retorne um erro nulo.
 
 \hypertarget{parte-c}{%
 \subsubsection*{Parte C}\label{parte-c}}

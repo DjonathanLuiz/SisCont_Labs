@@ -181,6 +181,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html"><a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#problema-1-2"><i class="fa fa-check"></i>Problema 1</a></li>
 <li class="chapter" data-level="" data-path="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html"><a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#problema-2-2"><i class="fa fa-check"></i>Problema 2</a></li>
 <li class="chapter" data-level="" data-path="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html"><a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#problema-3-2"><i class="fa fa-check"></i>Problema 3</a></li>
+<li class="chapter" data-level="" data-path="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html"><a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#problema-4-1"><i class="fa fa-check"></i>Problema 4</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="projeto-de-controladores-por-métodos-algébricos.html"><a href="projeto-de-controladores-por-métodos-algébricos.html"><i class="fa fa-check"></i><b>5</b> Projeto de Controladores por Métodos Algébricos</a></li>
@@ -612,8 +613,46 @@ Figura 4.18: Valores para referência e perturbação tipo rampa.
 <span class="math display">\[
 e(\infty) = e_r(\infty) - y_w(\infty) = 1 - 0.5 = 0.5
 \]</span></p>
-
 </div>
+</div>
+</div>
+<div id="problema-4-1" class="section level3 unnumbered" number="">
+<h3>Problema 4</h3>
+<p>Considere que
+<span class="math display">\[
+G(s) = \frac {2s +1}{0.5s+1}, \quad C(s) = \frac {K_c}{s^2}, \quad r(t) = t, \quad w(t) = 0.1t.
+\]</span></p>
+<ol style="list-style-type: lower-alpha">
+<li>Considere que <span class="math inline">\(K_c =1\)</span>. Determine <span class="math inline">\(e(\infty)\)</span> por simulação. O Resultado está de acordo com o esperado?</li>
+<li>Considere que <span class="math inline">\(K_c =2\)</span>, <span class="math inline">\(r(t) = t^2\)</span>, <span class="math inline">\(w(t) = 0.5t^2\)</span>. Determine <span class="math inline">\(e(\infty)\)</span> por simulação e verifique se o mesmo está de acordo com o esperado. Note que <span class="math inline">\(K_a = K_c\)</span>.</li>
+</ol>
+<div id="parte-a-4" class="section level4 unnumbered" number="">
+<h4>Parte A</h4>
+<p>O resultado da simulação está apresentado na Figura <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#fig:fig44A1">4.19</a>.</p>
+<div class="figure"><span id="fig:fig44A1"></span>
+<img src="Imagens/Lab4/Resolução/prob4A1.jpg" alt="Valores para rampa com perturbação." width="80%" />
+<p class="caption">
+Figura 4.19: Valores para rampa com perturbação.
+</p>
+</div>
+<p>O resultado era esperado pois, para uma entrada tipo rampa com perturbação tipo rampa, um sistema do Tipo 2 retorna <span class="math inline">\(e_r(\infty) = 0\)</span> e <span class="math inline">\(y_w(\infty) = 0\)</span>, resultando em <span class="math inline">\(e(\infty) = 0\)</span>.</p>
+</div>
+<div id="parte-b-4" class="section level4 unnumbered" number="">
+<h4>Parte B</h4>
+<p>O resultado da simulação está apresentado na Figura <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#fig:fig44B1">4.20</a>.</p>
+<div class="figure"><span id="fig:fig44B1"></span>
+<img src="Imagens/Lab4/Resolução/prob4B1.jpg" alt="Valores para parábola com perturbação." width="80%" />
+<p class="caption">
+Figura 4.20: Valores para parábola com perturbação.
+</p>
+</div>
+<p>O resultado era esperado pois temos (<span class="math inline">\(e_r(\infty)\)</span> e <span class="math inline">\(y_w(\infty)\)</span> obtidos por meio de simulação)
+<span class="math display">\[
+e_r(\infty) = 0.5 \\
+y_w(\infty) = 0.25 \\
+e(\infty) = 0.25.
+\]</span></p>
+
 </div>
 </div>
 </div>

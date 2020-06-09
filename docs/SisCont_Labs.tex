@@ -1340,6 +1340,53 @@ Percebe-se que o resultado está de acordo com o esperado, pois, de acordo com a
 e(\infty) = e_r(\infty) - y_w(\infty) = 1 - 0.5 = 0.5
 \]
 
+\hypertarget{problema-4-1}{%
+\subsection*{Problema 4}\label{problema-4-1}}
+\addcontentsline{toc}{subsection}{Problema 4}
+
+Considere que
+\[
+G(s) = \frac {2s +1}{0.5s+1}, \quad C(s) = \frac {K_c}{s^2}, \quad r(t) = t, \quad w(t) = 0.1t.
+\]
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Considere que \(K_c =1\). Determine \(e(\infty)\) por simulação. O Resultado está de acordo com o esperado?
+\item
+  Considere que \(K_c =2\), \(r(t) = t^2\), \(w(t) = 0.5t^2\). Determine \(e(\infty)\) por simulação e verifique se o mesmo está de acordo com o esperado. Note que \(K_a = K_c\).
+\end{enumerate}
+
+\hypertarget{parte-a-4}{%
+\subsubsection*{Parte A}\label{parte-a-4}}
+\addcontentsline{toc}{subsubsection}{Parte A}
+
+O resultado da simulação está apresentado na Figura \ref{fig:fig44A1}.
+
+\begin{figure}
+\includegraphics[width=0.8\linewidth]{Imagens/Lab4/Resolução/prob4A1} \caption{Valores para rampa com perturbação.}\label{fig:fig44A1}
+\end{figure}
+
+O resultado era esperado pois, para uma entrada tipo rampa com perturbação tipo rampa, um sistema do Tipo 2 retorna \(e_r(\infty) = 0\) e \(y_w(\infty) = 0\), resultando em \(e(\infty) = 0\).
+
+\hypertarget{parte-b-4}{%
+\subsubsection*{Parte B}\label{parte-b-4}}
+\addcontentsline{toc}{subsubsection}{Parte B}
+
+O resultado da simulação está apresentado na Figura \ref{fig:fig44B1}.
+
+\begin{figure}
+\includegraphics[width=0.8\linewidth]{Imagens/Lab4/Resolução/prob4B1} \caption{Valores para parábola com perturbação.}\label{fig:fig44B1}
+\end{figure}
+
+O resultado era esperado pois temos (\(e_r(\infty)\) e \(y_w(\infty)\) obtidos por meio de simulação)
+\[
+e_r(\infty) = 0.5 \\
+y_w(\infty) = 0.25 \\
+e(\infty) = 0.25.
+\]
+
 \hypertarget{projeto-de-controladores-por-muxe9todos-alguxe9bricos}{%
 \chapter{Projeto de Controladores por Métodos Algébricos}\label{projeto-de-controladores-por-muxe9todos-alguxe9bricos}}
 

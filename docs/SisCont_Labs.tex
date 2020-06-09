@@ -1007,7 +1007,7 @@ Suponha que \(D(s) + N(s) = 0\) possui todas as raízes no SPE (Semi-Plano Esque
 F(s) = \frac {Y(s)}{R(s)} = \frac{G(s)}{1+G(s)} = \frac {N(s)}{D(s)+N(s)}, \quad \text{(para } w=0 \text{).} 
 \]
 
-Desse modo, estamos assumindo que \(F(s)\) é estável para \(w=0\). Com base no Teorema do Valor Final, podemos construir a tabela \ref{tab:tab1} e a tabela \ref{tab:tab2} mostradas abaixo. Note que os valores de \(e_r(\infty)\) e de \(y_w(\infty)\) (regime permanente) dependem apenas da constante de posição \(K_p\), da constante de velocidade \(K_v\) e da cosntante de aceleração \(K_a\). Tl nomenclatura tem origem em sistemas mecânicos de controle. Por exemplo, para um sistema Tipo 0 e \(r(t)=A\) (degrau) temos que (Teorema do Valor Final)
+Desse modo, estamos assumindo que \(F(s)\) é estável para \(w=0\). Com base no Teorema do Valor Final, podemos construir a tabela \ref{tab:tab41} e a tabela \ref{tab:tab42} mostradas abaixo. Note que os valores de \(e_r(\infty)\) e de \(y_w(\infty)\) (regime permanente) dependem apenas da constante de posição \(K_p\), da constante de velocidade \(K_v\) e da cosntante de aceleração \(K_a\). Tl nomenclatura tem origem em sistemas mecânicos de controle. Por exemplo, para um sistema Tipo 0 e \(r(t)=A\) (degrau) temos que (Teorema do Valor Final)
 \[
 e_r(\infty) = \lim\limits_{s \to 0}{sE_R(s)}=\lim\limits_{s\to0}{\frac{D(s)}{D(s)+N(s)}\frac{A}{s}} = \lim\limits_{s\to0}{\frac{AD(s)}{D(s)+N(s)}} \\
 = \frac{AD(0)}{D(0) + N(0)} = \frac{A}{1+N(0)/D(0)} = \frac{A}{1+G(0)} = \frac {A}{1+K_p}.
@@ -1021,11 +1021,11 @@ e_r(\infty) = \lim\limits_{s \to 0}{sE_r(s) = \lim\limits_{s \to 0}{s\frac{D(s)}
 \]
 pois \(D(0) + N(0) \neq 0\) (\(F(s)\) é estável) e não há divisão por zero!
 
-Observamos que a tabela \ref{tab:tab1} e a tabela \ref{tab:tab2} são válidas apenas para sistemas com realimentação unitária com perturbação na saída (veja a Figura \ref{fig:fig41}) e tais que a Função de Transferência em malha-fechada é estável para \(w=0\).
+Observamos que a tabela \ref{tab:tab41} e a tabela \ref{tab:tab42} são válidas apenas para sistemas com realimentação unitária com perturbação na saída (veja a Figura \ref{fig:fig41}) e tais que a Função de Transferência em malha-fechada é estável para \(w=0\).
 
 \begin{table}
 
-\caption{\label{tab:tab1}Valores de $e_r(\infty)$ ($w=0$)}
+\caption{\label{tab:tab41}Valores de $e_r(\infty)$ ($w=0$)}
 \centering
 \begin{tabular}[t]{llll}
 \toprule
@@ -1040,7 +1040,7 @@ Tipo 2 & 0 & 0 & $\frac{2C}{K_a}$\\
 
 \begin{table}
 
-\caption{\label{tab:tab2}Valores de $y_r(\infty)$ ($r=0$ e $w$ na saída de $G(s)$)}
+\caption{\label{tab:tab42}Valores de $y_r(\infty)$ ($r=0$ e $w$ na saída de $G(s)$)}
 \centering
 \begin{tabular}[t]{llll}
 \toprule
@@ -1053,7 +1053,7 @@ Tipo 2 & 0 & 0 & $\frac{2C}{K_a}$\\
 \end{tabular}
 \end{table}
 
-Agora, considere o sistema mostrado na Figura \ref{fig:fig42} e assuma que \(G_2(s)\) não possui \emph{zeros} em \(s=0\). Para tal sistema, a Tabela \ref{tab:tab1} continua válida para \(G(s) = G_1(s)G_2(s)\). No entanto, a Tabela \ref{tab:tab2} deve ser substituída pela Tabela \ref{tab:tab3}. Ressaltamos que os valores \(\neq 0\) na Tabela \ref{tab:tab3} podem ser calculados analiticamente a partir de \(G_1(s) \text{ e } G_2(s)\). Entretanto, isso não é o objeto de estudo desta experiência.
+Agora, considere o sistema mostrado na Figura \ref{fig:fig42} e assuma que \(G_2(s)\) não possui \emph{zeros} em \(s=0\). Para tal sistema, a Tabela \ref{tab:tab41} continua válida para \(G(s) = G_1(s)G_2(s)\). No entanto, a Tabela \ref{tab:tab42} deve ser substituída pela Tabela \ref{tab:tab43}. Ressaltamos que os valores \(\neq 0\) na Tabela \ref{tab:tab43} podem ser calculados analiticamente a partir de \(G_1(s) \text{ e } G_2(s)\). Entretanto, isso não é o objeto de estudo desta experiência.
 
 \begin{figure}
 \includegraphics[width=0.8\linewidth]{Imagens/Lab4/Apresentação/fig2} \caption{Sistema em malha-fechada com perturbação na entrada de $G_s(s)$ e $G_2(s)$ não possui *zeros* em $s=0$.}\label{fig:fig42}
@@ -1061,7 +1061,7 @@ Agora, considere o sistema mostrado na Figura \ref{fig:fig42} e assuma que \(G_2
 
 \begin{table}
 
-\caption{\label{tab:tab3}Valores de $y_r(\infty)$ ($r=0$ e $w$ na saída de $G_2(s)$)}
+\caption{\label{tab:tab43}Valores de $y_r(\infty)$ ($r=0$ e $w$ na saída de $G_2(s)$)}
 \centering
 \begin{tabular}[t]{llll}
 \toprule
@@ -1097,7 +1097,7 @@ G(s) = \frac {1}{0.5s+1}, \quad C(s) = K_c \quad \text{(proporcional)}, \quad w=
 \def\labelenumi{\alph{enumi}.}
 \tightlist
 \item
-  Simule para \(r(t) = 1\) (degrau unitário) e \(K_c = 1\) Determine \(e(\infty) = e_r(\infty)\) por simulação e compare com a Tabela \ref{tab:tab1} (note que \(K_p = Kc\)). Repita para \(K_c = 10\) e \(K_c = 100\), analisando também o regime transitório de saída \(y(t)\).
+  Simule para \(r(t) = 1\) (degrau unitário) e \(K_c = 1\) Determine \(e(\infty) = e_r(\infty)\) por simulação e compare com a Tabela \ref{tab:tab41} (note que \(K_p = Kc\)). Repita para \(K_c = 10\) e \(K_c = 100\), analisando também o regime transitório de saída \(y(t)\).
 \item
   Percebemos que \(e(\infty)\) diminui a medida que aumentamos o ganho \(K_c\) do controlador. Poderíamos então escolher \(K_c = \infty\) para que \(e(\infty) = 0\)? Justifique sua resposta (dica: observe o sinal de controle \(u(t)\)).
 \item
@@ -1118,7 +1118,7 @@ Por meio da simulação foi encontrado o valor de \(e(\infty) = e_r(\infty) = 0.
 \includegraphics[width=0.8\linewidth]{Imagens/Lab4/Resolução/prob1A1} \caption{Valor de $e(r)$.}\label{fig:fig41A1}
 \end{figure}
 
-Utilizando a Tabela \ref{tab:tab1} temos que \(e_r(\infty)=\frac{A}{1 + K_p}\). Assim, tendo \(A = 1\) e \(K_c = 1\), temos que \(e_r(\infty) = \frac {1}{2} = 0.5\), o que está de acordo com o resultado encontrado na simulação. A figura \ref{fig:fig41A2} apresenta os valores de \(e(s) = e_r(s)\) e \(Y(s)\) para \(K_c = 10\) e \(K_c = 100\).
+Utilizando a Tabela \ref{tab:tab41} temos que \(e_r(\infty)=\frac{A}{1 + K_p}\). Assim, tendo \(A = 1\) e \(K_c = 1\), temos que \(e_r(\infty) = \frac {1}{2} = 0.5\), o que está de acordo com o resultado encontrado na simulação. A figura \ref{fig:fig41A2} apresenta os valores de \(e(s) = e_r(s)\) e \(Y(s)\) para \(K_c = 10\) e \(K_c = 100\).
 
 \begin{figure}
 \includegraphics[width=0.8\linewidth]{Imagens/Lab4/Resolução/prob1A2} \caption{Valores para $K_c = 10$ e $K_c = 100$.}\label{fig:fig41A2}
@@ -1128,7 +1128,7 @@ Utilizando a Tabela \ref{tab:tab1} temos que \(e_r(\infty)=\frac{A}{1 + K_p}\). 
 \subsubsection*{Parte B}\label{parte-b-1}}
 \addcontentsline{toc}{subsubsection}{Parte B}
 
-Teoricamente, é possível encontrar um erro nulo \(e(\infty) = 0\) se utilizado um ganho infinito \(K_c = \infty\). Pois, de acordo com a Tabela \ref{tab:tab1}, temos que
+Teoricamente, é possível encontrar um erro nulo \(e(\infty) = 0\) se utilizado um ganho infinito \(K_c = \infty\). Pois, de acordo com a Tabela \ref{tab:tab41}, temos que
 \[
 e(\infty) = \frac {A}{1+K_c} = \frac {A}{1+\infty} = 0.
 \]
@@ -1166,9 +1166,9 @@ G(s) = \frac {1}{0.5s+1}, \quad C(s) = \frac{K_c}{s} \text{ (integral)}, \quad w
 \def\labelenumi{\alph{enumi}.}
 \tightlist
 \item
-  Simule para \(r(t) = 1\) (degrau unitário) e \(K_c = 1\). Determine \(e(\infty) = e_r(\infty)\) por simulação e compare com a Tabela \ref{tab:tab1}. Analise também o regime transitório da saída para \(y(t)\) (sobressinal, por exemplo). Repita para \(K_c = 10\). Observe o aumento no sobressinal.
+  Simule para \(r(t) = 1\) (degrau unitário) e \(K_c = 1\). Determine \(e(\infty) = e_r(\infty)\) por simulação e compare com a Tabela \ref{tab:tab41}. Analise também o regime transitório da saída para \(y(t)\) (sobressinal, por exemplo). Repita para \(K_c = 10\). Observe o aumento no sobressinal.
 \item
-  Simule para \(K_c = 2\) e \(r(t) = t\) (rampa). Determine \(e(\infty)\) por simulação e compare com a Tabela \ref{tab:tab1} (note que \(K_v = K_c\)). Encontre analiticamente \(K_c\) de modo que o erro à rampa \(r(t) = t\) em regime permanente seja igual a 0.1. Agora verifique se as simulações estão de acordo com o valor calculado de \(K_c\).
+  Simule para \(K_c = 2\) e \(r(t) = t\) (rampa). Determine \(e(\infty)\) por simulação e compare com a Tabela \ref{tab:tab41} (note que \(K_v = K_c\)). Encontre analiticamente \(K_c\) de modo que o erro à rampa \(r(t) = t\) em regime permanente seja igual a 0.1. Agora verifique se as simulações estão de acordo com o valor calculado de \(K_c\).
 \item
   Simule para \(K_c = 2\) e \(r(t) = 0.5t^2\) (parábola). Determine o erro em regime permanente por simulação e analise os resultados.
 \item
@@ -1176,7 +1176,7 @@ G(s) = \frac {1}{0.5s+1}, \quad C(s) = \frac{K_c}{s} \text{ (integral)}, \quad w
   \[
   G(s) = \frac {-s+2}{0.5s+1}, \quad C(s)= \frac{2}{s}, \quad r(t) = 1 \text{ (degrau).}
   \]
-  Determine \(e(\infty)\) por simulação. Note que o erro não converge para zero. O resultado está de acordo com o esperado? Relembre que a Tabela \ref{tab:tab1} e a Tabela \ref{tab:tab2} são validas apenas quando o sistema em malha-fechada para \(w=0\) é estável (os pólos estão no SPE).
+  Determine \(e(\infty)\) por simulação. Note que o erro não converge para zero. O resultado está de acordo com o esperado? Relembre que a Tabela \ref{tab:tab41} e a Tabela \ref{tab:tab42} são validas apenas quando o sistema em malha-fechada para \(w=0\) é estável (os pólos estão no SPE).
 \end{enumerate}
 
 \hypertarget{resuluuxe7uxe3o}{%
@@ -1207,7 +1207,7 @@ Simulando para \(K_c = 10\), temos o resultado abaixo.
 \paragraph*{Parte B}\label{parte-b-2}}
 \addcontentsline{toc}{paragraph}{Parte B}
 
-Simulando o sistema para um \(K_c = 2\) e uma entrada tipo rampa, temos que o sistema tem \(e(\infty) = 0.5\), o que está de acordo com a Tabela \ref{tab:tab1}. O resultado da simulação está apresentado abaixo.
+Simulando o sistema para um \(K_c = 2\) e uma entrada tipo rampa, temos que o sistema tem \(e(\infty) = 0.5\), o que está de acordo com a Tabela \ref{tab:tab41}. O resultado da simulação está apresentado abaixo.
 
 \begin{figure}
 \includegraphics[width=0.8\linewidth]{Imagens/Lab4/Resolução/prob2B1} \caption{Valores para $K_c = 2$ e entrada do tipo rampa.}\label{fig:fig42B1}
@@ -1229,7 +1229,7 @@ Simulando o sistema o valor foi comprovado.
 \paragraph*{Parte C}\label{parte-c-1}}
 \addcontentsline{toc}{paragraph}{Parte C}
 
-Simulando o sistema para \(K_c = 2\) e uma entrada do tipo parábola, temos \(e(\infty) = \infty\), o que está de acordo com a Tabela \ref{tab:tab1}.
+Simulando o sistema para \(K_c = 2\) e uma entrada do tipo parábola, temos \(e(\infty) = \infty\), o que está de acordo com a Tabela \ref{tab:tab41}.
 
 \begin{figure}
 \includegraphics[width=0.8\linewidth]{Imagens/Lab4/Resolução/prob2C1} \caption{Valores para $K_c = 2$ e entrada do tipo parábola.}\label{fig:fig42C1}
@@ -1245,7 +1245,7 @@ Simulando a Função de Transferência \(G(s) = \frac {-s+2}{0.5s +1}\), control
 \includegraphics[width=0.8\linewidth]{Imagens/Lab4/Resolução/prob2D1} \caption{Valores de $e(s)$ e $y(s)$.}\label{fig:fig42D1}
 \end{figure}
 
-Diferentemente do esperado (que o \(e(\infty) = 0\)) uma vez que segundo a Tabela \ref{tab:tab1} para sistemas do Tipo 1 para entrada igual degrau o erro esperado é nulo, o erro não converge. Na realidade, é possível notar que o sistema não se comportou de forma estável.
+Diferentemente do esperado (que o \(e(\infty) = 0\)) uma vez que segundo a Tabela \ref{tab:tab41} para sistemas do Tipo 1 para entrada igual degrau o erro esperado é nulo, o erro não converge. Na realidade, é possível notar que o sistema não se comportou de forma estável.
 
 \hypertarget{problema-3-2}{%
 \subsection*{Problema 3}\label{problema-3-2}}
@@ -1260,13 +1260,13 @@ G(s) = \frac {1}{0.5s +1}, \quad C(s) = \frac {2}{s} \text{ (integral)}.
 \def\labelenumi{\alph{enumi}.}
 \tightlist
 \item
-  Determine \(y(\infty) = y(\infty)\) por simulação para \(w =1\) (degrau unitário) e \(r=0\). Compare com a Tabela \ref{tab:tab2}.
+  Determine \(y(\infty) = y(\infty)\) por simulação para \(w =1\) (degrau unitário) e \(r=0\). Compare com a Tabela \ref{tab:tab42}.
 \item
-  considere que \(r(t) = 5\) (degrau em \(t=0\)) e aplique uma perturbação \(w=1\) (degrau) no instante \(t=9\). Determine \(e(\infty)\) e analise os resultados (talvez seja necessário aumentar o tempo de simulação).
+  Considere que \(r(t) = 5\) (degrau em \(t=0\)) e aplique uma perturbação \(w=1\) (degrau) no instante \(t=9\). Determine \(e(\infty)\) e analise os resultados (talvez seja necessário aumentar o tempo de simulação).
 \item
-  Considere que \(r(t) = 2t\) (rampa) e \(w=0\). Determine \(e(\infty) = e_r(\infty)\) por simulação e compare com a Tabela \ref{tab:tab1}.
+  Considere que \(r(t) = 2t\) (rampa) e \(w=0\). Determine \(e(\infty) = e_r(\infty)\) por simulação e compare com a Tabela \ref{tab:tab41}.
 \item
-  Considere que \(r(t) = 0\) e \(w=t\) (rampa). Determine \(y(\infty) = y_w(\infty)\) por simulação e compare com a Tabela \ref{tab:tab2}.
+  Considere que \(r(t) = 0\) e \(w=t\) (rampa). Determine \(y(\infty) = y_w(\infty)\) por simulação e compare com a Tabela \ref{tab:tab42}.
 \item
   Considere que \(r(t) = 2t\) (rampa) e \(w=t\) (rampa). Determine \(e(\infty)\) por simulação e verifique que tal valor é a diferença dos valores obtidos nas letras c e d.~Tal resultado era esperado? Justifique (relembre \eqref{eq:eq41}).
 \end{enumerate}
@@ -1275,7 +1275,70 @@ G(s) = \frac {1}{0.5s +1}, \quad C(s) = \frac {2}{s} \text{ (integral)}.
 \subsubsection*{Resolução}\label{resoluuxe7uxe3o-11}}
 \addcontentsline{toc}{subsubsection}{Resolução}
 
-Working on it :)
+\hypertarget{parte-a-3}{%
+\paragraph*{Parte A}\label{parte-a-3}}
+\addcontentsline{toc}{paragraph}{Parte A}
+
+Simulando o sistema com uma referência em zero e uma perturbação do tipo degrau unitário, temos o resultado apresentando na Figura \ref{fig:fig43A1} que está de acordo com o resultado esperado da Tabela \ref{tab:tab42}, retornando um valor de \(y(\infty) = 0\)
+
+\begin{figure}
+\includegraphics[width=0.8\linewidth]{Imagens/Lab4/Resolução/prob3A1} \caption{Valores para sistema sem referência, apenas com perturbação.}\label{fig:fig43A1}
+\end{figure}
+
+\hypertarget{parte-b-3}{%
+\paragraph*{Parte B}\label{parte-b-3}}
+\addcontentsline{toc}{paragraph}{Parte B}
+
+Simulando o sistema tendo uma entrada degrau de amplitude 5 e uma perturbação de amplitude 1, temos o resultado apresentado na figura \ref{fig:fig43B1}. O resultado mostra que o sistema era estável e havia convergido para 0. Ao receber a perturbação, o sistema se comportou de forma semelhante (a resposta voltou ao pico do sobressinal que havia chegado inicialmente) ao início da simulação, voltando a convergir para 0 em \(t=\infty\).
+
+\begin{figure}
+\includegraphics[width=0.8\linewidth]{Imagens/Lab4/Resolução/prob3B1} \caption{Valores para referência tipo degrau com perturbação.}\label{fig:fig43B1}
+\end{figure}
+
+\hypertarget{parte-c-2}{%
+\paragraph*{Parte C}\label{parte-c-2}}
+\addcontentsline{toc}{paragraph}{Parte C}
+
+A simulação para um sistema com referência \(r(t) = 2t\) e sem perturbação é mostrada na Figura \ref{fig:fig43C1}.
+
+\begin{figure}
+\includegraphics[width=0.8\linewidth]{Imagens/Lab4/Resolução/prob3C1} \caption{Valores para rampa sem perturbação.}\label{fig:fig43C1}
+\end{figure}
+
+Percebe-se que o resultado está de acordo com o esperado, pois, de acordo com a tabela \ref{tab:tab41}, temos que
+\[
+e(\infty) = \frac {B}{K_v} = \frac {2}{2} = 1.
+\]
+
+\hypertarget{parte-d-1}{%
+\paragraph*{Parte D}\label{parte-d-1}}
+\addcontentsline{toc}{paragraph}{Parte D}
+
+A simulação para um sistema com referência nula e perturbação \(w(t) = t\) é mostrada na Figura \ref{fig:fig43D1}.
+
+\begin{figure}
+\includegraphics[width=0.8\linewidth]{Imagens/Lab4/Resolução/prob3D1} \caption{Valores para rampa sem perturbação.}\label{fig:fig43D1}
+\end{figure}
+
+Percebe-se que o resultado está de acordo com o esperado, pois, de acordo com a tabela \ref{tab:tab42}, temos que
+\[
+y(\infty) = \frac {B}{K_v} = \frac {1}{2} = 0.5.
+\]
+
+\hypertarget{parte-e}{%
+\paragraph*{Parte E}\label{parte-e}}
+\addcontentsline{toc}{paragraph}{Parte E}
+
+A simulação para um sistema com referência \(r(t) = 2t\) e perturbação \(w(t) = t\) é mostrada na Figura \ref{fig:fig43E1}.
+
+\begin{figure}
+\includegraphics[width=0.8\linewidth]{Imagens/Lab4/Resolução/prob3E1} \caption{Valores para referência e perturbação tipo rampa.}\label{fig:fig43E1}
+\end{figure}
+
+Percebe-se que o resultado está de acordo com o esperado, pois, de acordo com a equação \eqref{eq:eq41}, temos que
+\[
+e(\infty) = e_r(\infty) - y_w(\infty) = 1 - 0.5 = 0.5
+\]
 
 \hypertarget{projeto-de-controladores-por-muxe9todos-alguxe9bricos}{%
 \chapter{Projeto de Controladores por Métodos Algébricos}\label{projeto-de-controladores-por-muxe9todos-alguxe9bricos}}

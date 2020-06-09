@@ -271,7 +271,7 @@ e(\infty) = \lim\limits_{t \to \infty}{e(t)} = e_r(\infty) - y_w(\infty), \tag{4
 <span class="math display">\[
 F(s) = \frac {Y(s)}{R(s)} = \frac{G(s)}{1+G(s)} = \frac {N(s)}{D(s)+N(s)}, \quad \text{(para } w=0 \text{).} 
 \]</span></p>
-<p>Desse modo, estamos assumindo que <span class="math inline">\(F(s)\)</span> é estável para <span class="math inline">\(w=0\)</span>. Com base no Teorema do Valor Final, podemos construir a tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab1">4.1</a> e a tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab2">4.2</a> mostradas abaixo. Note que os valores de <span class="math inline">\(e_r(\infty)\)</span> e de <span class="math inline">\(y_w(\infty)\)</span> (regime permanente) dependem apenas da constante de posição <span class="math inline">\(K_p\)</span>, da constante de velocidade <span class="math inline">\(K_v\)</span> e da cosntante de aceleração <span class="math inline">\(K_a\)</span>. Tl nomenclatura tem origem em sistemas mecânicos de controle. Por exemplo, para um sistema Tipo 0 e <span class="math inline">\(r(t)=A\)</span> (degrau) temos que (Teorema do Valor Final)
+<p>Desse modo, estamos assumindo que <span class="math inline">\(F(s)\)</span> é estável para <span class="math inline">\(w=0\)</span>. Com base no Teorema do Valor Final, podemos construir a tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab41">4.1</a> e a tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab42">4.2</a> mostradas abaixo. Note que os valores de <span class="math inline">\(e_r(\infty)\)</span> e de <span class="math inline">\(y_w(\infty)\)</span> (regime permanente) dependem apenas da constante de posição <span class="math inline">\(K_p\)</span>, da constante de velocidade <span class="math inline">\(K_v\)</span> e da cosntante de aceleração <span class="math inline">\(K_a\)</span>. Tl nomenclatura tem origem em sistemas mecânicos de controle. Por exemplo, para um sistema Tipo 0 e <span class="math inline">\(r(t)=A\)</span> (degrau) temos que (Teorema do Valor Final)
 <span class="math display">\[
 e_r(\infty) = \lim\limits_{s \to 0}{sE_R(s)}=\lim\limits_{s\to0}{\frac{D(s)}{D(s)+N(s)}\frac{A}{s}} = \lim\limits_{s\to0}{\frac{AD(s)}{D(s)+N(s)}} \\
 = \frac{AD(0)}{D(0) + N(0)} = \frac{A}{1+N(0)/D(0)} = \frac{A}{1+G(0)} = \frac {A}{1+K_p}.
@@ -283,9 +283,9 @@ e_r(\infty) = \lim\limits_{s \to 0}{sE_r(s) = \lim\limits_{s \to 0}{s\frac{D(s)}
 =\lim\limits_{s \to 0}{\frac{sBD_0(s)}{D(s)+N(s)}}=\frac{0BD(0)}{N(0)+D(0)}=0,
 \]</span>
 pois <span class="math inline">\(D(0) + N(0) \neq 0\)</span> (<span class="math inline">\(F(s)\)</span> é estável) e não há divisão por zero!</p>
-<p>Observamos que a tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab1">4.1</a> e a tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab2">4.2</a> são válidas apenas para sistemas com realimentação unitária com perturbação na saída (veja a Figura <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#fig:fig41">4.1</a>) e tais que a Função de Transferência em malha-fechada é estável para <span class="math inline">\(w=0\)</span>.</p>
+<p>Observamos que a tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab41">4.1</a> e a tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab42">4.2</a> são válidas apenas para sistemas com realimentação unitária com perturbação na saída (veja a Figura <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#fig:fig41">4.1</a>) e tais que a Função de Transferência em malha-fechada é estável para <span class="math inline">\(w=0\)</span>.</p>
 <table>
-<caption><span id="tab:tab1">Tabela 4.1: </span>Valores de <span class="math inline">\(e_r(\infty)\)</span> (<span class="math inline">\(w=0\)</span>)</caption>
+<caption><span id="tab:tab41">Tabela 4.1: </span>Valores de <span class="math inline">\(e_r(\infty)\)</span> (<span class="math inline">\(w=0\)</span>)</caption>
 <thead>
 <tr class="header">
 <th align="left">Sistema <span class="math inline">\(G(s)\)</span> / Referência</th>
@@ -316,7 +316,7 @@ pois <span class="math inline">\(D(0) + N(0) \neq 0\)</span> (<span class="math 
 </tbody>
 </table>
 <table>
-<caption><span id="tab:tab2">Tabela 4.2: </span>Valores de <span class="math inline">\(y_r(\infty)\)</span> (<span class="math inline">\(r=0\)</span> e <span class="math inline">\(w\)</span> na saída de <span class="math inline">\(G(s)\)</span>)</caption>
+<caption><span id="tab:tab42">Tabela 4.2: </span>Valores de <span class="math inline">\(y_r(\infty)\)</span> (<span class="math inline">\(r=0\)</span> e <span class="math inline">\(w\)</span> na saída de <span class="math inline">\(G(s)\)</span>)</caption>
 <thead>
 <tr class="header">
 <th align="left">Sistema <span class="math inline">\(G(s)\)</span> / Perturbação</th>
@@ -346,7 +346,7 @@ pois <span class="math inline">\(D(0) + N(0) \neq 0\)</span> (<span class="math 
 </tr>
 </tbody>
 </table>
-<p>Agora, considere o sistema mostrado na Figura <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#fig:fig42">4.2</a> e assuma que <span class="math inline">\(G_2(s)\)</span> não possui <em>zeros</em> em <span class="math inline">\(s=0\)</span>. Para tal sistema, a Tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab1">4.1</a> continua válida para <span class="math inline">\(G(s) = G_1(s)G_2(s)\)</span>. No entanto, a Tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab2">4.2</a> deve ser substituída pela Tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab3">4.3</a>. Ressaltamos que os valores <span class="math inline">\(\neq 0\)</span> na Tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab3">4.3</a> podem ser calculados analiticamente a partir de <span class="math inline">\(G_1(s) \text{ e } G_2(s)\)</span>. Entretanto, isso não é o objeto de estudo desta experiência.</p>
+<p>Agora, considere o sistema mostrado na Figura <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#fig:fig42">4.2</a> e assuma que <span class="math inline">\(G_2(s)\)</span> não possui <em>zeros</em> em <span class="math inline">\(s=0\)</span>. Para tal sistema, a Tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab41">4.1</a> continua válida para <span class="math inline">\(G(s) = G_1(s)G_2(s)\)</span>. No entanto, a Tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab42">4.2</a> deve ser substituída pela Tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab43">4.3</a>. Ressaltamos que os valores <span class="math inline">\(\neq 0\)</span> na Tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab43">4.3</a> podem ser calculados analiticamente a partir de <span class="math inline">\(G_1(s) \text{ e } G_2(s)\)</span>. Entretanto, isso não é o objeto de estudo desta experiência.</p>
 <div class="figure"><span id="fig:fig42"></span>
 <img src="Imagens/Lab4/Apresentação/fig2.jpg" alt="Sistema em malha-fechada com perturbação na entrada de $G_s(s)$ e $G_2(s)$ não possui *zeros* em $s=0$." width="80%" />
 <p class="caption">
@@ -354,7 +354,7 @@ Figura 4.2: Sistema em malha-fechada com perturbação na entrada de <span class
 </p>
 </div>
 <table>
-<caption><span id="tab:tab3">Tabela 4.3: </span>Valores de <span class="math inline">\(y_r(\infty)\)</span> (<span class="math inline">\(r=0\)</span> e <span class="math inline">\(w\)</span> na saída de <span class="math inline">\(G_2(s)\)</span>)</caption>
+<caption><span id="tab:tab43">Tabela 4.3: </span>Valores de <span class="math inline">\(y_r(\infty)\)</span> (<span class="math inline">\(r=0\)</span> e <span class="math inline">\(w\)</span> na saída de <span class="math inline">\(G_2(s)\)</span>)</caption>
 <thead>
 <tr class="header">
 <th align="left">Sistema <span class="math inline">\(G(s)\)</span> / Perturbação</th>
@@ -402,7 +402,7 @@ Figura 4.3: Sistema em malha-fechada.
 G(s) = \frac {1}{0.5s+1}, \quad C(s) = K_c \quad \text{(proporcional)}, \quad w=0 \quad \text{(sem perturbação)}.
 \]</span></p>
 <ol style="list-style-type: lower-alpha">
-<li>Simule para <span class="math inline">\(r(t) = 1\)</span> (degrau unitário) e <span class="math inline">\(K_c = 1\)</span> Determine <span class="math inline">\(e(\infty) = e_r(\infty)\)</span> por simulação e compare com a Tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab1">4.1</a> (note que <span class="math inline">\(K_p = Kc\)</span>). Repita para <span class="math inline">\(K_c = 10\)</span> e <span class="math inline">\(K_c = 100\)</span>, analisando também o regime transitório de saída <span class="math inline">\(y(t)\)</span>.</li>
+<li>Simule para <span class="math inline">\(r(t) = 1\)</span> (degrau unitário) e <span class="math inline">\(K_c = 1\)</span> Determine <span class="math inline">\(e(\infty) = e_r(\infty)\)</span> por simulação e compare com a Tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab41">4.1</a> (note que <span class="math inline">\(K_p = Kc\)</span>). Repita para <span class="math inline">\(K_c = 10\)</span> e <span class="math inline">\(K_c = 100\)</span>, analisando também o regime transitório de saída <span class="math inline">\(y(t)\)</span>.</li>
 <li>Percebemos que <span class="math inline">\(e(\infty)\)</span> diminui a medida que aumentamos o ganho <span class="math inline">\(K_c\)</span> do controlador. Poderíamos então escolher <span class="math inline">\(K_c = \infty\)</span> para que <span class="math inline">\(e(\infty) = 0\)</span>? Justifique sua resposta (dica: observe o sinal de controle <span class="math inline">\(u(t)\)</span>).</li>
 <li>Com <span class="math inline">\(K_c = 1\)</span> simule para <span class="math inline">\(r(t) = t\)</span> (rampa) e <span class="math inline">\(r(t) = 0.5t^2\)</span> (parábola). Determine o erro em regime permanente e verifique se os resultados estão de acordo com o esperado.</li>
 </ol>
@@ -418,7 +418,7 @@ G(s) = \frac {1}{0.5s+1}, \quad C(s) = K_c \quad \text{(proporcional)}, \quad w=
 Figura 4.4: Valor de <span class="math inline">\(e(r)\)</span>.
 </p>
 </div>
-<p>Utilizando a Tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab1">4.1</a> temos que <span class="math inline">\(e_r(\infty)=\frac{A}{1 + K_p}\)</span>. Assim, tendo <span class="math inline">\(A = 1\)</span> e <span class="math inline">\(K_c = 1\)</span>, temos que <span class="math inline">\(e_r(\infty) = \frac {1}{2} = 0.5\)</span>, o que está de acordo com o resultado encontrado na simulação. A figura <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#fig:fig41A2">4.5</a> apresenta os valores de <span class="math inline">\(e(s) = e_r(s)\)</span> e <span class="math inline">\(Y(s)\)</span> para <span class="math inline">\(K_c = 10\)</span> e <span class="math inline">\(K_c = 100\)</span>.</p>
+<p>Utilizando a Tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab41">4.1</a> temos que <span class="math inline">\(e_r(\infty)=\frac{A}{1 + K_p}\)</span>. Assim, tendo <span class="math inline">\(A = 1\)</span> e <span class="math inline">\(K_c = 1\)</span>, temos que <span class="math inline">\(e_r(\infty) = \frac {1}{2} = 0.5\)</span>, o que está de acordo com o resultado encontrado na simulação. A figura <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#fig:fig41A2">4.5</a> apresenta os valores de <span class="math inline">\(e(s) = e_r(s)\)</span> e <span class="math inline">\(Y(s)\)</span> para <span class="math inline">\(K_c = 10\)</span> e <span class="math inline">\(K_c = 100\)</span>.</p>
 <div class="figure"><span id="fig:fig41A2"></span>
 <img src="Imagens/Lab4/Resolução/prob1A2.jpg" alt="Valores para $K_c = 10$ e $K_c = 100$." width="80%" />
 <p class="caption">
@@ -428,7 +428,7 @@ Figura 4.5: Valores para <span class="math inline">\(K_c = 10\)</span> e <span c
 </div>
 <div id="parte-b-1" class="section level4 unnumbered" number="">
 <h4>Parte B</h4>
-<p>Teoricamente, é possível encontrar um erro nulo <span class="math inline">\(e(\infty) = 0\)</span> se utilizado um ganho infinito <span class="math inline">\(K_c = \infty\)</span>. Pois, de acordo com a Tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab1">4.1</a>, temos que
+<p>Teoricamente, é possível encontrar um erro nulo <span class="math inline">\(e(\infty) = 0\)</span> se utilizado um ganho infinito <span class="math inline">\(K_c = \infty\)</span>. Pois, de acordo com a Tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab41">4.1</a>, temos que
 <span class="math display">\[
 e(\infty) = \frac {A}{1+K_c} = \frac {A}{1+\infty} = 0.
 \]</span></p>
@@ -460,14 +460,14 @@ Figura 4.7: Valores para entrada do tipo parábola.
 G(s) = \frac {1}{0.5s+1}, \quad C(s) = \frac{K_c}{s} \text{ (integral)}, \quad w=0 \text{ (sem perturbação).}
 \]</span></p>
 <ol style="list-style-type: lower-alpha">
-<li>Simule para <span class="math inline">\(r(t) = 1\)</span> (degrau unitário) e <span class="math inline">\(K_c = 1\)</span>. Determine <span class="math inline">\(e(\infty) = e_r(\infty)\)</span> por simulação e compare com a Tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab1">4.1</a>. Analise também o regime transitório da saída para <span class="math inline">\(y(t)\)</span> (sobressinal, por exemplo). Repita para <span class="math inline">\(K_c = 10\)</span>. Observe o aumento no sobressinal.</li>
-<li>Simule para <span class="math inline">\(K_c = 2\)</span> e <span class="math inline">\(r(t) = t\)</span> (rampa). Determine <span class="math inline">\(e(\infty)\)</span> por simulação e compare com a Tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab1">4.1</a> (note que <span class="math inline">\(K_v = K_c\)</span>). Encontre analiticamente <span class="math inline">\(K_c\)</span> de modo que o erro à rampa <span class="math inline">\(r(t) = t\)</span> em regime permanente seja igual a 0.1. Agora verifique se as simulações estão de acordo com o valor calculado de <span class="math inline">\(K_c\)</span>.</li>
+<li>Simule para <span class="math inline">\(r(t) = 1\)</span> (degrau unitário) e <span class="math inline">\(K_c = 1\)</span>. Determine <span class="math inline">\(e(\infty) = e_r(\infty)\)</span> por simulação e compare com a Tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab41">4.1</a>. Analise também o regime transitório da saída para <span class="math inline">\(y(t)\)</span> (sobressinal, por exemplo). Repita para <span class="math inline">\(K_c = 10\)</span>. Observe o aumento no sobressinal.</li>
+<li>Simule para <span class="math inline">\(K_c = 2\)</span> e <span class="math inline">\(r(t) = t\)</span> (rampa). Determine <span class="math inline">\(e(\infty)\)</span> por simulação e compare com a Tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab41">4.1</a> (note que <span class="math inline">\(K_v = K_c\)</span>). Encontre analiticamente <span class="math inline">\(K_c\)</span> de modo que o erro à rampa <span class="math inline">\(r(t) = t\)</span> em regime permanente seja igual a 0.1. Agora verifique se as simulações estão de acordo com o valor calculado de <span class="math inline">\(K_c\)</span>.</li>
 <li>Simule para <span class="math inline">\(K_c = 2\)</span> e <span class="math inline">\(r(t) = 0.5t^2\)</span> (parábola). Determine o erro em regime permanente por simulação e analise os resultados.</li>
 <li>Agora suponha que
 <span class="math display">\[
 G(s) = \frac {-s+2}{0.5s+1}, \quad C(s)= \frac{2}{s}, \quad r(t) = 1 \text{ (degrau).}
 \]</span>
-Determine <span class="math inline">\(e(\infty)\)</span> por simulação. Note que o erro não converge para zero. O resultado está de acordo com o esperado? Relembre que a Tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab1">4.1</a> e a Tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab2">4.2</a> são validas apenas quando o sistema em malha-fechada para <span class="math inline">\(w=0\)</span> é estável (os pólos estão no SPE).</li>
+Determine <span class="math inline">\(e(\infty)\)</span> por simulação. Note que o erro não converge para zero. O resultado está de acordo com o esperado? Relembre que a Tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab41">4.1</a> e a Tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab42">4.2</a> são validas apenas quando o sistema em malha-fechada para <span class="math inline">\(w=0\)</span> é estável (os pólos estão no SPE).</li>
 </ol>
 <div id="resulução" class="section level4 unnumbered" number="">
 <h4>Resulução</h4>
@@ -494,7 +494,7 @@ Figura 4.9: Valores para <span class="math inline">\(K_c = 10\)</span>.
 </div>
 <div id="parte-b-2" class="section level5 unnumbered" number="">
 <h5>Parte B</h5>
-<p>Simulando o sistema para um <span class="math inline">\(K_c = 2\)</span> e uma entrada tipo rampa, temos que o sistema tem <span class="math inline">\(e(\infty) = 0.5\)</span>, o que está de acordo com a Tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab1">4.1</a>. O resultado da simulação está apresentado abaixo.</p>
+<p>Simulando o sistema para um <span class="math inline">\(K_c = 2\)</span> e uma entrada tipo rampa, temos que o sistema tem <span class="math inline">\(e(\infty) = 0.5\)</span>, o que está de acordo com a Tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab41">4.1</a>. O resultado da simulação está apresentado abaixo.</p>
 <div class="figure"><span id="fig:fig42B1"></span>
 <img src="Imagens/Lab4/Resolução/prob2B1.jpg" alt="Valores para $K_c = 2$ e entrada do tipo rampa." width="80%" />
 <p class="caption">
@@ -515,7 +515,7 @@ Figura 4.11: Valores para <span class="math inline">\(K_c = 10\)</span> e entrad
 </div>
 <div id="parte-c-1" class="section level5 unnumbered" number="">
 <h5>Parte C</h5>
-<p>Simulando o sistema para <span class="math inline">\(K_c = 2\)</span> e uma entrada do tipo parábola, temos <span class="math inline">\(e(\infty) = \infty\)</span>, o que está de acordo com a Tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab1">4.1</a>.</p>
+<p>Simulando o sistema para <span class="math inline">\(K_c = 2\)</span> e uma entrada do tipo parábola, temos <span class="math inline">\(e(\infty) = \infty\)</span>, o que está de acordo com a Tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab41">4.1</a>.</p>
 <div class="figure"><span id="fig:fig42C1"></span>
 <img src="Imagens/Lab4/Resolução/prob2C1.jpg" alt="Valores para $K_c = 2$ e entrada do tipo parábola." width="80%" />
 <p class="caption">
@@ -532,7 +532,7 @@ Figura 4.12: Valores para <span class="math inline">\(K_c = 2\)</span> e entrada
 Figura 4.13: Valores de <span class="math inline">\(e(s)\)</span> e <span class="math inline">\(y(s)\)</span>.
 </p>
 </div>
-<p>Diferentemente do esperado (que o <span class="math inline">\(e(\infty) = 0\)</span>) uma vez que segundo a Tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab1">4.1</a> para sistemas do Tipo 1 para entrada igual degrau o erro esperado é nulo, o erro não converge. Na realidade, é possível notar que o sistema não se comportou de forma estável.</p>
+<p>Diferentemente do esperado (que o <span class="math inline">\(e(\infty) = 0\)</span>) uma vez que segundo a Tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab41">4.1</a> para sistemas do Tipo 1 para entrada igual degrau o erro esperado é nulo, o erro não converge. Na realidade, é possível notar que o sistema não se comportou de forma estável.</p>
 </div>
 </div>
 </div>
@@ -543,16 +543,77 @@ Figura 4.13: Valores de <span class="math inline">\(e(s)\)</span> e <span class=
 G(s) = \frac {1}{0.5s +1}, \quad C(s) = \frac {2}{s} \text{ (integral)}.
 \]</span></p>
 <ol style="list-style-type: lower-alpha">
-<li>Determine <span class="math inline">\(y(\infty) = y(\infty)\)</span> por simulação para <span class="math inline">\(w =1\)</span> (degrau unitário) e <span class="math inline">\(r=0\)</span>. Compare com a Tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab2">4.2</a>.</li>
-<li>considere que <span class="math inline">\(r(t) = 5\)</span> (degrau em <span class="math inline">\(t=0\)</span>) e aplique uma perturbação <span class="math inline">\(w=1\)</span> (degrau) no instante <span class="math inline">\(t=9\)</span>. Determine <span class="math inline">\(e(\infty)\)</span> e analise os resultados (talvez seja necessário aumentar o tempo de simulação).</li>
-<li>Considere que <span class="math inline">\(r(t) = 2t\)</span> (rampa) e <span class="math inline">\(w=0\)</span>. Determine <span class="math inline">\(e(\infty) = e_r(\infty)\)</span> por simulação e compare com a Tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab1">4.1</a>.</li>
-<li>Considere que <span class="math inline">\(r(t) = 0\)</span> e <span class="math inline">\(w=t\)</span> (rampa). Determine <span class="math inline">\(y(\infty) = y_w(\infty)\)</span> por simulação e compare com a Tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab2">4.2</a>.</li>
+<li>Determine <span class="math inline">\(y(\infty) = y(\infty)\)</span> por simulação para <span class="math inline">\(w =1\)</span> (degrau unitário) e <span class="math inline">\(r=0\)</span>. Compare com a Tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab42">4.2</a>.</li>
+<li>Considere que <span class="math inline">\(r(t) = 5\)</span> (degrau em <span class="math inline">\(t=0\)</span>) e aplique uma perturbação <span class="math inline">\(w=1\)</span> (degrau) no instante <span class="math inline">\(t=9\)</span>. Determine <span class="math inline">\(e(\infty)\)</span> e analise os resultados (talvez seja necessário aumentar o tempo de simulação).</li>
+<li>Considere que <span class="math inline">\(r(t) = 2t\)</span> (rampa) e <span class="math inline">\(w=0\)</span>. Determine <span class="math inline">\(e(\infty) = e_r(\infty)\)</span> por simulação e compare com a Tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab41">4.1</a>.</li>
+<li>Considere que <span class="math inline">\(r(t) = 0\)</span> e <span class="math inline">\(w=t\)</span> (rampa). Determine <span class="math inline">\(y(\infty) = y_w(\infty)\)</span> por simulação e compare com a Tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab42">4.2</a>.</li>
 <li>Considere que <span class="math inline">\(r(t) = 2t\)</span> (rampa) e <span class="math inline">\(w=t\)</span> (rampa). Determine <span class="math inline">\(e(\infty)\)</span> por simulação e verifique que tal valor é a diferença dos valores obtidos nas letras c e d. Tal resultado era esperado? Justifique (relembre <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#eq:eq41">(4.1)</a>).</li>
 </ol>
 <div id="resolução-11" class="section level4 unnumbered" number="">
 <h4>Resolução</h4>
-<p>Working on it :)</p>
+<div id="parte-a-3" class="section level5 unnumbered" number="">
+<h5>Parte A</h5>
+<p>Simulando o sistema com uma referência em zero e uma perturbação do tipo degrau unitário, temos o resultado apresentando na Figura <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#fig:fig43A1">4.14</a> que está de acordo com o resultado esperado da Tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab42">4.2</a>, retornando um valor de <span class="math inline">\(y(\infty) = 0\)</span></p>
+<div class="figure"><span id="fig:fig43A1"></span>
+<img src="Imagens/Lab4/Resolução/prob3A1.jpg" alt="Valores para sistema sem referência, apenas com perturbação." width="80%" />
+<p class="caption">
+Figura 4.14: Valores para sistema sem referência, apenas com perturbação.
+</p>
+</div>
+</div>
+<div id="parte-b-3" class="section level5 unnumbered" number="">
+<h5>Parte B</h5>
+<p>Simulando o sistema tendo uma entrada degrau de amplitude 5 e uma perturbação de amplitude 1, temos o resultado apresentado na figura <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#fig:fig43B1">4.15</a>. O resultado mostra que o sistema era estável e havia convergido para 0. Ao receber a perturbação, o sistema se comportou de forma semelhante (a resposta voltou ao pico do sobressinal que havia chegado inicialmente) ao início da simulação, voltando a convergir para 0 em <span class="math inline">\(t=\infty\)</span>.</p>
+<div class="figure"><span id="fig:fig43B1"></span>
+<img src="Imagens/Lab4/Resolução/prob3B1.jpg" alt="Valores para referência tipo degrau com perturbação." width="80%" />
+<p class="caption">
+Figura 4.15: Valores para referência tipo degrau com perturbação.
+</p>
+</div>
+</div>
+<div id="parte-c-2" class="section level5 unnumbered" number="">
+<h5>Parte C</h5>
+<p>A simulação para um sistema com referência <span class="math inline">\(r(t) = 2t\)</span> e sem perturbação é mostrada na Figura <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#fig:fig43C1">4.16</a>.</p>
+<div class="figure"><span id="fig:fig43C1"></span>
+<img src="Imagens/Lab4/Resolução/prob3C1.jpg" alt="Valores para rampa sem perturbação." width="80%" />
+<p class="caption">
+Figura 4.16: Valores para rampa sem perturbação.
+</p>
+</div>
+<p>Percebe-se que o resultado está de acordo com o esperado, pois, de acordo com a tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab41">4.1</a>, temos que
+<span class="math display">\[
+e(\infty) = \frac {B}{K_v} = \frac {2}{2} = 1.
+\]</span></p>
+</div>
+<div id="parte-d-1" class="section level5 unnumbered" number="">
+<h5>Parte D</h5>
+<p>A simulação para um sistema com referência nula e perturbação <span class="math inline">\(w(t) = t\)</span> é mostrada na Figura <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#fig:fig43D1">4.17</a>.</p>
+<div class="figure"><span id="fig:fig43D1"></span>
+<img src="Imagens/Lab4/Resolução/prob3D1.jpg" alt="Valores para rampa sem perturbação." width="80%" />
+<p class="caption">
+Figura 4.17: Valores para rampa sem perturbação.
+</p>
+</div>
+<p>Percebe-se que o resultado está de acordo com o esperado, pois, de acordo com a tabela <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tab:tab42">4.2</a>, temos que
+<span class="math display">\[
+y(\infty) = \frac {B}{K_v} = \frac {1}{2} = 0.5.
+\]</span></p>
+</div>
+<div id="parte-e" class="section level5 unnumbered" number="">
+<h5>Parte E</h5>
+<p>A simulação para um sistema com referência <span class="math inline">\(r(t) = 2t\)</span> e perturbação <span class="math inline">\(w(t) = t\)</span> é mostrada na Figura <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#fig:fig43E1">4.18</a>.</p>
+<div class="figure"><span id="fig:fig43E1"></span>
+<img src="Imagens/Lab4/Resolução/prob3E1.jpg" alt="Valores para referência e perturbação tipo rampa." width="80%" />
+<p class="caption">
+Figura 4.18: Valores para referência e perturbação tipo rampa.
+</p>
+</div>
+<p>Percebe-se que o resultado está de acordo com o esperado, pois, de acordo com a equação <a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#eq:eq41">(4.1)</a>, temos que
+<span class="math display">\[
+e(\infty) = e_r(\infty) - y_w(\infty) = 1 - 0.5 = 0.5
+\]</span></p>
 
+</div>
 </div>
 </div>
 </div>

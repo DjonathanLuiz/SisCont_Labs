@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.2.3)  8 JUN 2020 18:33
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.2.3)  8 JUN 2020 22:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1372,88 +1372,106 @@ Overfull \hbox (251.97905pt too wide) has occurred while \output is active
 EIÇÃO DE PERTURBAÇÕES - ERRO EM REGIME PERMANENTE
  []
 
-[58] [59]
+[58]
+File: Imagens/Lab4/Resolução/prob3A1.jpg Graphic file (type bmp)
+<Imagens/Lab4/Resolução/prob3A1.jpg>
+File: Imagens/Lab4/Resolução/prob3B1.jpg Graphic file (type bmp)
+<Imagens/Lab4/Resolução/prob3B1.jpg>
+File: Imagens/Lab4/Resolução/prob3C1.jpg Graphic file (type bmp)
+<Imagens/Lab4/Resolução/prob3C1.jpg>
+[59]
 Overfull \hbox (251.97905pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 60 \TU/lmr/m/sl/10 CHAPTER 4.  RASTREAMENTO DE REFERÊNCIAS E REJ
 EIÇÃO DE PERTURBAÇÕES - ERRO EM REGIME PERMANENTE
  []
 
-[60
+[60]
+File: Imagens/Lab4/Resolução/prob3D1.jpg Graphic file (type bmp)
+<Imagens/Lab4/Resolução/prob3D1.jpg>
+File: Imagens/Lab4/Resolução/prob3E1.jpg Graphic file (type bmp)
+<Imagens/Lab4/Resolução/prob3E1.jpg>
+[61]
+Overfull \hbox (251.97905pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 62 \TU/lmr/m/sl/10 CHAPTER 4.  RASTREAMENTO DE REFERÊNCIAS E REJ
+EIÇÃO DE PERTURBAÇÕES - ERRO EM REGIME PERMANENTE
+ []
+
+[62]
+Chapter 5.
+[63
 
 ]
-Chapter 5.
-[61]
 Overfull \hbox (40.28453pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 62 \TU/lmr/m/sl/10 CHAPTER 5.  PROJETO DE CONTROLADORES POR MÉTO
+\TU/lmr/m/n/10 64 \TU/lmr/m/sl/10 CHAPTER 5.  PROJETO DE CONTROLADORES POR MÉTO
 DOS ALGÉBRICOS
  []
 
-[62
+[64
 
 ]
 Chapter 6.
-[63] [64
-
-]
-Chapter 7.
 [65] [66
 
 ]
-Chapter 8.
+Chapter 7.
 [67] [68
 
 ]
+Chapter 8.
+[69] [70
+
+]
 Chapter 9.
-[69]
+[71]
 Overfull \hbox (23.05342pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 70 \TU/lmr/m/sl/10 CHAPTER 9.  PROJETO DE CONTROLADORES PELO LUG
+\TU/lmr/m/n/10 72 \TU/lmr/m/sl/10 CHAPTER 9.  PROJETO DE CONTROLADORES PELO LUG
 AR DAS RAÍZES
  []
 
-[70
+[72
 
 ]
 Chapter 10.
-[71] [72
-
-]
-Chapter 11.
 [73] [74
 
 ]
+Chapter 11.
+[75] [76
+
+]
 Chapter 12.
-[75]
+[77]
 Overfull \hbox (35.83342pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 76 \TU/lmr/m/sl/10 CHAPTER 12.  PROJETO DE CONTROLADORES PELO DI
+\TU/lmr/m/n/10 78 \TU/lmr/m/sl/10 CHAPTER 12.  PROJETO DE CONTROLADORES PELO DI
 AGRAMA DE BODE
  []
 
-[76
+[78
 
 ]
 Chapter 13.
 No file SisCont_Labs.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1327.
-[77]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1327.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1390.
+[79]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1390.
 (./SisCont_Labs.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1327.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1327.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1390.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1390.
 
 Package rerunfilecheck Info: File `SisCont_Labs.out' has not changed.
 (rerunfilecheck)             Checksum: 2222ED5CC0BD25E766047183557E606F;4516.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1327.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1390.
  ) 
 Here is how much of TeX's memory you used:
- 29781 strings out of 494432
- 544457 string characters out of 6170871
+ 29856 strings out of 494432
+ 546703 string characters out of 6170871
  723889 words of memory out of 5000000
- 33838 multiletter control sequences out of 15000+600000
+ 33908 multiletter control sequences out of 15000+600000
  538764 words of font info for 81 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  55i,10n,115p,966b,2146s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on SisCont_Labs.pdf (77 pages).
+Output written on SisCont_Labs.pdf (79 pages).

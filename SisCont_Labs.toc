@@ -58,12 +58,17 @@
 \contentsline {paragraph}{Parte D}{59}{section*.38}%
 \contentsline {subsection}{Problema 3}{59}{section*.39}%
 \contentsline {subsubsection}{Resolução}{59}{section*.40}%
-\contentsline {chapter}{\numberline {5}Projeto de Controladores por Métodos Algébricos}{61}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Linearização de Sistemas Não-Lineares}{63}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Controle de Sistemas Não-Lineares}{65}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Análise pelo Lugar das Raízes}{67}{chapter.8}%
-\contentsline {chapter}{\numberline {9}Projeto de Controladores pelo Lugar das Raízes}{69}{chapter.9}%
-\contentsline {chapter}{\numberline {10}Projeto do controlador atraso de fase}{71}{chapter.10}%
-\contentsline {chapter}{\numberline {11}Análise pelos Diagramas de Bode e Nyquist}{73}{chapter.11}%
-\contentsline {chapter}{\numberline {12}Projeto de Controladores pelo Diagrama de Bode}{75}{chapter.12}%
-\contentsline {chapter}{\numberline {13}Digitalização de Controladores Analógicos}{77}{chapter.13}%
+\contentsline {paragraph}{Parte A}{59}{section*.41}%
+\contentsline {paragraph}{Parte B}{59}{section*.42}%
+\contentsline {paragraph}{Parte C}{61}{section*.43}%
+\contentsline {paragraph}{Parte D}{61}{section*.44}%
+\contentsline {paragraph}{Parte E}{61}{section*.45}%
+\contentsline {chapter}{\numberline {5}Projeto de Controladores por Métodos Algébricos}{63}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Linearização de Sistemas Não-Lineares}{65}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Controle de Sistemas Não-Lineares}{67}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Análise pelo Lugar das Raízes}{69}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Projeto de Controladores pelo Lugar das Raízes}{71}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Projeto do controlador atraso de fase}{73}{chapter.10}%
+\contentsline {chapter}{\numberline {11}Análise pelos Diagramas de Bode e Nyquist}{75}{chapter.11}%
+\contentsline {chapter}{\numberline {12}Projeto de Controladores pelo Diagrama de Bode}{77}{chapter.12}%
+\contentsline {chapter}{\numberline {13}Digitalização de Controladores Analógicos}{79}{chapter.13}%

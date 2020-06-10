@@ -1,3 +1,27 @@
 # Projeto de Controladores por Métodos Algébricos
 
-Working on it :)
+## Apresentação do Laboratório
+
+### Objetivos
+
+Nesta experiência projetaremos controladores que atendam determinadas especificações de regime transitório e de regime permanente em malha-fechada por métodos algébricos. Comprovaremos por simulação no Matlab o desempenho do sistema em malha-fechada.
+
+### Controladores Clássicos
+
+Considere o diagrama de blocos $G(s)$ em malha-fechada da Figura \@ref(fig:fig51) onde $r(t)$ é a referência, $w(t)$ é uma perturbação externa, $y(t)$ é a saída, $e(t) = r(t) - y(t)$ é o erro de rastreamento, $u(t)$ é o controle e $C(s)$ é o controlador a ser projetado.
+
+Relebramos que se $G(s) = \frac {N(s)}{D(s)}$ então os *zeros* de $G(s)$ são as raízes de $N(s)$ e os *pólos* de $G(s)$ são as raízes de $D(s)$. Além disso, uma Função de Transferência é estável quando todos os pólos estão no SPE (Semi-Plano Esquerdo do plano complexo) e instável quando existe algum pólo no SPD (Semi-Plano Direito).
+
+```{r fig51, fig.align='center', echo=FALSE, fig.cap='Diagrama de blocos do processos $G(s)$ em malha-fechada com perturbação $w$.', out.width='80%'}
+knitr::include_graphics('Imagens/Lab4/Apresentação/fig1.jpg', dpi = NA)
+```
+
+*Projetar* um controlador significa definir uma estrutura para
+$$
+C(s) = \frac {N_c(s)}{D_c(s)}
+$$
+e então escolher adequadamente os parâmetros correspondentes de modo que o sistema em malha-fechada atenda determinadas especificações de regime transitório (tempo de acomodação e sobressinal, por exemplo) e de regime permanente (erro nulo em regime permanente para referências e perturbações do tipo degrau, por exemplo). Na prática as seguintes estruturas de controladores são amplamente utilizadas, onde $K_c>0$:
+
+1. Proporcional (P): $\boxed{C(s) = K_c}$
+2. Integral (I): $\boxed{C(s) = \frac {K_c}{s}}$
+3. Proporcional-Integral (PI): $\boxed{C(s) = \frac{K_c(s+z)}{s}}$

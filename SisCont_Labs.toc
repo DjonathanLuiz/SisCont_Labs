@@ -67,6 +67,9 @@
 \contentsline {subsubsection}{Parte A}{63}{section*.47}%
 \contentsline {subsubsection}{Parte B}{63}{section*.48}%
 \contentsline {chapter}{\numberline {5}Projeto de Controladores por Métodos Algébricos}{65}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Apresentação do Laboratório}{65}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Objetivos}{65}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Controladores Clássicos}{65}{subsection.5.1.2}%
 \contentsline {chapter}{\numberline {6}Linearização de Sistemas Não-Lineares}{67}{chapter.6}%
 \contentsline {chapter}{\numberline {7}Controle de Sistemas Não-Lineares}{69}{chapter.7}%
 \contentsline {chapter}{\numberline {8}Análise pelo Lugar das Raízes}{71}{chapter.8}%

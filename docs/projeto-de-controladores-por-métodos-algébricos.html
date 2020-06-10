@@ -24,7 +24,7 @@
 <meta name="author" content="Djonathan Luiz de Oliveira Quadras" />
 
 
-<meta name="date" content="2020-06-08" />
+<meta name="date" content="2020-06-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -184,7 +184,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html"><a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#problema-4-1"><i class="fa fa-check"></i>Problema 4</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="projeto-de-controladores-por-métodos-algébricos.html"><a href="projeto-de-controladores-por-métodos-algébricos.html"><i class="fa fa-check"></i><b>5</b> Projeto de Controladores por Métodos Algébricos</a></li>
+<li class="chapter" data-level="5" data-path="projeto-de-controladores-por-métodos-algébricos.html"><a href="projeto-de-controladores-por-métodos-algébricos.html"><i class="fa fa-check"></i><b>5</b> Projeto de Controladores por Métodos Algébricos</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="projeto-de-controladores-por-métodos-algébricos.html"><a href="projeto-de-controladores-por-métodos-algébricos.html#apresentação-do-laboratório-3"><i class="fa fa-check"></i><b>5.1</b> Apresentação do Laboratório</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="projeto-de-controladores-por-métodos-algébricos.html"><a href="projeto-de-controladores-por-métodos-algébricos.html#objetivos-1"><i class="fa fa-check"></i><b>5.1.1</b> Objetivos</a></li>
+<li class="chapter" data-level="5.1.2" data-path="projeto-de-controladores-por-métodos-algébricos.html"><a href="projeto-de-controladores-por-métodos-algébricos.html#controladores-clássicos"><i class="fa fa-check"></i><b>5.1.2</b> Controladores Clássicos</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="6" data-path="linearização-de-sistemas-não-lineares.html"><a href="linearização-de-sistemas-não-lineares.html"><i class="fa fa-check"></i><b>6</b> Linearização de Sistemas Não-Lineares</a></li>
 <li class="chapter" data-level="7" data-path="controle-de-sistemas-não-lineares.html"><a href="controle-de-sistemas-não-lineares.html"><i class="fa fa-check"></i><b>7</b> Controle de Sistemas Não-Lineares</a></li>
 <li class="chapter" data-level="8" data-path="análise-pelo-lugar-das-raízes.html"><a href="análise-pelo-lugar-das-raízes.html"><i class="fa fa-check"></i><b>8</b> Análise pelo Lugar das Raízes</a></li>
@@ -215,8 +222,35 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="projeto-de-controladores-por-métodos-algébricos" class="section level1" number="5">
 <h1><span class="header-section-number">Laboratório 5</span> Projeto de Controladores por Métodos Algébricos</h1>
-<p>Working on it :)</p>
+<div id="apresentação-do-laboratório-3" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> Apresentação do Laboratório</h2>
+<div id="objetivos-1" class="section level3" number="5.1.1">
+<h3><span class="header-section-number">5.1.1</span> Objetivos</h3>
+<p>Nesta experiência projetaremos controladores que atendam determinadas especificações de regime transitório e de regime permanente em malha-fechada por métodos algébricos. Comprovaremos por simulação no Matlab o desempenho do sistema em malha-fechada.</p>
+</div>
+<div id="controladores-clássicos" class="section level3" number="5.1.2">
+<h3><span class="header-section-number">5.1.2</span> Controladores Clássicos</h3>
+<p>Considere o diagrama de blocos <span class="math inline">\(G(s)\)</span> em malha-fechada da Figura <a href="projeto-de-controladores-por-métodos-algébricos.html#fig:fig51">5.1</a> onde <span class="math inline">\(r(t)\)</span> é a referência, <span class="math inline">\(w(t)\)</span> é uma perturbação externa, <span class="math inline">\(y(t)\)</span> é a saída, <span class="math inline">\(e(t) = r(t) - y(t)\)</span> é o erro de rastreamento, <span class="math inline">\(u(t)\)</span> é o controle e <span class="math inline">\(C(s)\)</span> é o controlador a ser projetado.</p>
+<p>Relebramos que se <span class="math inline">\(G(s) = \frac {N(s)}{D(s)}\)</span> então os <em>zeros</em> de <span class="math inline">\(G(s)\)</span> são as raízes de <span class="math inline">\(N(s)\)</span> e os <em>pólos</em> de <span class="math inline">\(G(s)\)</span> são as raízes de <span class="math inline">\(D(s)\)</span>. Além disso, uma Função de Transferência é estável quando todos os pólos estão no SPE (Semi-Plano Esquerdo do plano complexo) e instável quando existe algum pólo no SPD (Semi-Plano Direito).</p>
+<div class="figure" style="text-align: center"><span id="fig:fig51"></span>
+<img src="Imagens/Lab4/Apresentação/fig1.jpg" alt="Diagrama de blocos do processos $G(s)$ em malha-fechada com perturbação $w$." width="80%" />
+<p class="caption">
+Figura 5.1: Diagrama de blocos do processos <span class="math inline">\(G(s)\)</span> em malha-fechada com perturbação <span class="math inline">\(w\)</span>.
+</p>
+</div>
+<p><em>Projetar</em> um controlador significa definir uma estrutura para
+<span class="math display">\[
+C(s) = \frac {N_c(s)}{D_c(s)}
+\]</span>
+e então escolher adequadamente os parâmetros correspondentes de modo que o sistema em malha-fechada atenda determinadas especificações de regime transitório (tempo de acomodação e sobressinal, por exemplo) e de regime permanente (erro nulo em regime permanente para referências e perturbações do tipo degrau, por exemplo). Na prática as seguintes estruturas de controladores são amplamente utilizadas, onde <span class="math inline">\(K_c&gt;0\)</span>:</p>
+<ol style="list-style-type: decimal">
+<li>Proporcional (P): <span class="math inline">\(\boxed{C(s) = K_c}\)</span></li>
+<li>Integral (I): <span class="math inline">\(\boxed{C(s) = \frac {K_c}{s}}\)</span></li>
+<li>Proporcional-Integral (PI): <span class="math inline">\(\boxed{C(s) = \frac{K_c(s+z)}{s}}\)</span></li>
+</ol>
 
+</div>
+</div>
 </div>
             </section>
 

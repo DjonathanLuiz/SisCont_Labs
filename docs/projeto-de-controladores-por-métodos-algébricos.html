@@ -24,7 +24,7 @@
 <meta name="author" content="Djonathan Luiz de Oliveira Quadras" />
 
 
-<meta name="date" content="2020-06-10" />
+<meta name="date" content="2020-06-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -190,6 +190,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="5.1.1" data-path="projeto-de-controladores-por-métodos-algébricos.html"><a href="projeto-de-controladores-por-métodos-algébricos.html#objetivos-1"><i class="fa fa-check"></i><b>5.1.1</b> Objetivos</a></li>
 <li class="chapter" data-level="5.1.2" data-path="projeto-de-controladores-por-métodos-algébricos.html"><a href="projeto-de-controladores-por-métodos-algébricos.html#controladores-clássicos"><i class="fa fa-check"></i><b>5.1.2</b> Controladores Clássicos</a></li>
+<li class="chapter" data-level="5.1.3" data-path="projeto-de-controladores-por-métodos-algébricos.html"><a href="projeto-de-controladores-por-métodos-algébricos.html#método-algébrico-de-projeto-de-controladores"><i class="fa fa-check"></i><b>5.1.3</b> Método Algébrico de Projeto de Controladores</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="linearização-de-sistemas-não-lineares.html"><a href="linearização-de-sistemas-não-lineares.html"><i class="fa fa-check"></i><b>6</b> Linearização de Sistemas Não-Lineares</a></li>
@@ -247,6 +248,21 @@ e então escolher adequadamente os parâmetros correspondentes de modo que o sis
 <li>Proporcional (P): <span class="math inline">\(\boxed{C(s) = K_c}\)</span></li>
 <li>Integral (I): <span class="math inline">\(\boxed{C(s) = \frac {K_c}{s}}\)</span></li>
 <li>Proporcional-Integral (PI): <span class="math inline">\(\boxed{C(s) = \frac{K_c(s+z)}{s}}\)</span></li>
+</ol>
+<p>É importante ressaltar que em situações reais devemos sempre procurar utilizar controladores com a estrutura mais simples possível. Isto implica em menos dificuldades na implementação e em menores custos. Na próxima seção veremos um método algébrico de projeto de controladores.</p>
+</div>
+<div id="método-algébrico-de-projeto-de-controladores" class="section level3" number="5.1.3">
+<h3><span class="header-section-number">5.1.3</span> Método Algébrico de Projeto de Controladores</h3>
+<p>Considerando que <span class="math inline">\(w=0\)</span> (sem perturbação), temos que a Função de Transferência em malha-fechada da figura <a href="projeto-de-controladores-por-métodos-algébricos.html#fig:fig51">5.1</a> é
+<span class="math display">\[
+F(s) = \frac {Y(s)}{R(s)} = \frac {C(s)G(s)}{1+C(s)G(s)}= \frac {N_c(s)N(s)}{D_c(s)D(s)+N_c(s)N(s)}, \quad \text{ para } w=0.
+\]</span></p>
+<p>Uma maneira de projetarmos o controlador é primeiramente escolhermos a estrutura de <span class="math inline">\(C(s)\)</span> de modo que as especificações de regime permanente sejam atendidas e que <span class="math inline">\(F(s)\)</span> seja uma função de Transferência de primeira ou de segunda ordem (relembre que a ordem de <span class="math inline">\(F(s)\)</span> é igual a ordem de <span class="math inline">\(C(s)G(s)\)</span>). Em muitos casos, isto pode ser alcançado através de um cancelamento entre um zero de <span class="math inline">\(C(s)\)</span> e um pólo de <span class="math inline">\(G(s)\)</span>. Em seguida os parâmetros de <span class="math inline">\(C(s)\)</span> são determinados por igualdade polinomial. Na prática, <span class="math inline">\(F(s)\)</span> sempre feverá ser estável. Assim, sempre consideramos que <span class="math inline">\(F(s)\)</span> é estável. No entanto, tal método algébrico apresenta algumas restrições.</p>
+<ol style="list-style-type: decimal">
+<li>Em geral, o método é válido para <span class="math inline">\(G(s)\)</span> de primeira ou segunda ordem;</li>
+<li>Cancelamentos pólo-zero em <span class="math inline">\(C(s)G(s)\)</span> que estão no SPD (instável) não podem ser efetuados;</li>
+<li>Mesmo quando fazemos cancelamento pólo-zero em <span class="math inline">\(C(s)G(s)\)</span> que está no SPE (estável), temos que o regime transitório referente à perturbação <span class="math inline">\(w\)</span> será influenciado pelo pólo de <span class="math inline">\(G(s)\)</span> que foi cancelado. Desse modo, se o pólo cancelado de <span class="math inline">\(G(s)\)</span> é muito lento, ou seja, está muito próximo do eixo imaginário, a dinâmica da rejeição de tais perturbações também será bastante lenta;</li>
+<li>Quando desejamos que <span class="math inline">\(F(s)\)</span> seja de segunda ordem, muitas vezes não conseguimos atender simultaneamente as especificações de tempo de acomodação (<span class="math inline">\(t_s(5\%)\)</span>) e de sobressinal (<span class="math inline">\(M_p\)</span>).</li>
 </ol>
 
 </div>

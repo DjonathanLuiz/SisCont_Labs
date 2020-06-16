@@ -80,11 +80,16 @@
 \contentsline {subsection}{Problema 1}{70}{section*.49}%
 \contentsline {subsubsection}{Resolução}{70}{section*.50}%
 \contentsline {subsection}{Problema 2}{70}{section*.51}%
-\contentsline {chapter}{\numberline {6}Linearização de Sistemas Não-Lineares}{71}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Controle de Sistemas Não-Lineares}{73}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Análise pelo Lugar das Raízes}{75}{chapter.8}%
-\contentsline {chapter}{\numberline {9}Projeto de Controladores pelo Lugar das Raízes}{77}{chapter.9}%
-\contentsline {chapter}{\numberline {10}Projeto do controlador atraso de fase}{79}{chapter.10}%
-\contentsline {chapter}{\numberline {11}Análise pelos Diagramas de Bode e Nyquist}{81}{chapter.11}%
-\contentsline {chapter}{\numberline {12}Projeto de Controladores pelo Diagrama de Bode}{83}{chapter.12}%
-\contentsline {chapter}{\numberline {13}Digitalização de Controladores Analógicos}{85}{chapter.13}%
+\contentsline {subsubsection}{Resolução}{71}{section*.52}%
+\contentsline {subsection}{Problema 3}{71}{section*.53}%
+\contentsline {subsubsection}{Resolução}{71}{section*.54}%
+\contentsline {subsection}{Problema 4}{71}{section*.55}%
+\contentsline {subsubsection}{Resolução}{71}{section*.56}%
+\contentsline {chapter}{\numberline {6}Linearização de Sistemas Não-Lineares}{73}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Controle de Sistemas Não-Lineares}{75}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Análise pelo Lugar das Raízes}{77}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Projeto de Controladores pelo Lugar das Raízes}{79}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Projeto do controlador atraso de fase}{81}{chapter.10}%
+\contentsline {chapter}{\numberline {11}Análise pelos Diagramas de Bode e Nyquist}{83}{chapter.11}%
+\contentsline {chapter}{\numberline {12}Projeto de Controladores pelo Diagrama de Bode}{85}{chapter.12}%
+\contentsline {chapter}{\numberline {13}Digitalização de Controladores Analógicos}{87}{chapter.13}%

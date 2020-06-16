@@ -172,4 +172,43 @@ Working on it :)
 
 ### Problema 2 {-}
 
-Working on it :) 
+Considere que não há perturbações ($w=0$) e
+$$
+G(s) = \frac{0.9}{s(s+1)}.
+$$
+
+(a) Note que $G(s)$ tem um pólo em $s=0$. Simule $G(s)$ em malha-aberta para $u(t) = 5$ do tipo degrau e analise os resultados. Note que $y(t) \to \infty$ quando $t \to \infty$. Isto era esperado? Justifique.
+(b) Projete $C(s)$ de modo que $M_p = 0.2$ (sobressinal de $20\%$) e que se tenha erro nulo em regime permanente para $r(t)$ do tipo degrau (dica: utilize um controlador proporcional $C(s) = K_c$).
+(c) Simule o sistema em malha-fechada para $r(t) = 5$ do tipo degrau e verifique se os requisitos de desempenho foram realmente atendidos. Visualize o sinal de controle $u(t)$.
+(d) Repita o item anterior, mas agora aplicando uma perturbação do tipo degrau $w(t)$ não nula. Explique o motivo pelo qual $e(\infty) \neq 0$.
+
+#### Resolução {-}
+
+Working on it :)
+
+### Problema 3 {-}
+
+Considere
+$$
+G(s) = \frac{1.2}{s^2+4s+3} = \frac{1.2}{(s+1)(s+3)}.
+$$
+
+(a) Simule $G(s)$ em malha-aberta para $u(t) =3$ do tipo degrau e analise os resultados. Note que a saída $y(t)$ não apresenta sobressinal. Isto era esperado? Justifique.
+(b) Projete $C(s)$ de modo que se tenha erro nulo em regime permanente para $r(t)$ e $w(t)$ do tipo degrau unitário e que $M_p=0.05$ (sobressinal de $5\%$) para referências do tipo degrau. Dica: utilize um controlador PI que cancele o polo mais lendo de $G(s)$ ($s=-1$) para que se obtenha um $t_s(5\%)$ menor.
+(c) Simule o sistema em malha-fechada para $r(t) = 3$ e $w(t) = 0.5$ do tipo degrau, aplicando $w(t)$ em $t=15$. Verifique se os requisitos de desempenho foram realmente atendidos. Visualize o sinal de controle $u(t)$.
+
+#### Resolução {-}
+
+Working on it :)
+
+### Problema 4 {-}
+
+Repita o problema 1 para
+$$
+G(s) = \frac{0.5}{s-1} \quad \text{(instável),}
+$$
+e simule (dica: basta mudar o numerador do PI projetado no Problema 1 para $s-1$). Agora mantenha o mesmo controlador $C(s)$ obtido mas altere o denominador de $G(s)$ para $s-0.99$ (incerteza de $1\%$ no pólo de $G(s)$) e simule. Observe que $y(t) \to -\infty$ quando $t\to\infty$. Isto mostra o motivo pelo qual não podemos efetual cancelamentos pólo-zero instáveis em $C(s)G(s)$.
+
+#### Resolução {-}
+
+Working on it :)

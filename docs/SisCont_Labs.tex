@@ -113,7 +113,7 @@
 
 \title{Laboratório de Sistemas de Controle}
 \author{Djonathan Luiz de Oliveira Quadras}
-\date{2020-06-15}
+\date{2020-06-16}
 
 \begin{document}
 \maketitle
@@ -1455,6 +1455,158 @@ Uma maneira de projetarmos o controlador é primeiramente escolhermos a estrutur
 \item
   Quando desejamos que \(F(s)\) seja de segunda ordem, muitas vezes não conseguimos atender simultaneamente as especificações de tempo de acomodação (\(t_s(5\%)\)) e de sobressinal (\(M_p\)).
 \end{enumerate}
+
+\hypertarget{erro-em-regime-permanente-1}{%
+\subsection{Erro em Regime Permanente}\label{erro-em-regime-permanente-1}}
+
+Relembramos o Teorema do Valor Final:
+
+\textbf{Teorema 1} (Teorema do Valor Final). Seja \(X(s)\) a Transformada de Laplace de um sinal \(x(t)\). Suponha que \(X(s)\) ou \(sX(s)\) tem todos os pólos no SPE. Então, o limite \(x(\infty) = \lim\limits_{t \to \infty}{x(t)}\) existe e é dado por
+\[
+x(\infty) = \lim\limits_{t \to \infty}{x(t)} = \lim\limits_{s \to 0}{sX(s)}.
+\]
+
+Analisaremos agora o erro de rastreamento \(e(t) = e(t)-y(t)\) em regime permanente (\(t\to\infty\)) para referências e perturbações do tipo degrau. Suponha que \(F(s)\) é estável, ou seja, todas as raízes de
+\[
+D_c(s)D(s) + N_c(s)N(s)
+\]
+estão no SPE. Isto garante que \(e(\infty)=\lim\limits_{t\to\infty}{e(t)}\) existe e, assim, o Teorema do Valor Final pode ser aplicado.
+
+Temos que
+\[
+E(s) = R(s) - Y(s)=R(s)-[C(s)G(s)E(s) + G(s)W(s)]\\
+\implies E(s) = \frac {1}{1+C(s)G(s)}R(s) - \frac {G(s)}{1+C(s)G(s)}W(s) \\
+\boxed{\implies E(s) = \frac{D_c(s)D(s)}{D_c(s)D(s)+N_c(s)N(s)}R(s)-\frac{D_c(s)N(s)}{D_c(s)D(s)+N_c(s)N(s)}W(s)}.
+\]
+
+Considere que \(r(t)\) e \(w(t)\) são do tipo degrau de magnitudes \(A\) e \(B\), respectivamente. Assim,
+\[
+R(s) = \frac{A}{s}, \quad W(s) = \frac{B}{s}.
+\]
+
+\hypertarget{b0-sem-perturbauxe7uxe3o}{%
+\subsubsection{\texorpdfstring{\textbf{\(B=0\) (sem perturbação)}}{B=0 (sem perturbação)}}\label{b0-sem-perturbauxe7uxe3o}}
+
+Suponha que \(D_c(s)D(s) = s\overline{D}(s)\), ou seja, \(C(s)G(s)\) tem um pólo em \(s=0\) (integrador). Temos que
+\[
+E(s) = \frac{D_c(s)D(s)}{D_c(s)D(s)+N_c(s)N(s)}R(s) = \frac{s\overline{D}(s)}{D_c(s)D(s)+N_c(s)N(s)}\frac{A}{s}\\
+= \frac{A\overline{D}(s)}{D_c(s)D(s)+N_c(s)N(s)}
+\]
+e (Teorema do Valor Final)
+\[
+e(\infty) = \lim\limits_{s\to0}{sE(s)} =
+\lim\limits_{s\to0}{\frac{sA\overline{D}(s)}{D_c(s)D(s)+N_c(s)N(s)}} = \frac{0A\overline{D}(0)}{D_c(0)D(0)+N_c(0)N(0)} \\
+\boxed{=0}
+\]
+pois \(D_c(0)D(0) + N_c(0)N(0) \neq 0\) (\(F(s)\) é estável) enão há divisão por zero! Desse modo, \(e(\infty) = 0\) independente da magnitude \(A\) de \(r(t)\). Isto significa que a saída \(y(t)\) rastreia a referência \(r(t)\) do tipo degrau em regime permanente.
+
+\hypertarget{bneq0-com-perturbauxe7uxe3o}{%
+\subsubsection{\texorpdfstring{\textbf{\(B\neq0\) (com perturbação)}}{B\textbackslash neq0 (com perturbação)}}\label{bneq0-com-perturbauxe7uxe3o}}
+
+Suponha que \(D_c(s) = s\overline{D_c}(s)\), ou seja, \(C(s)\) tem um pólo em \(s=0\) (integrador). Temos que
+\[
+E(s) = \frac{D_c(s)D(s)}{D_c(s)D(s)+N_c(s)N(s)}R(s)-\frac{D_c(s)N(s)}{D_c(s)D(s)+N_c(s)N(s)}W(s) \\
+= \frac{s\overline{D}(s)}{D_c(s)D(s)+N_c(s)N(s)}\frac{A}{s} - \frac{s\overline{D_c}(s)N(s)}{D_c(s)D(s)+N_c(s)N(s)}\frac{B}{s}\\
+= \frac{A\overline{D_c}(s)D(s) - B\overline{D_c}(s)N(s)}{D_c(s)D(s)+N_c(s)N(s)}
+\]
+e (Teorema do Valor Final)
+\[
+e(\infty) = \lim\limits_{s\to0}{sE(s)} =
+\lim\limits_{s\to0}{\frac{A\overline{D_c}(s)D(s) - B\overline{D_c}(s)N(s)}{D_c(s)D(s)+N_c(s)N(s)}} \\
+= \frac{0[A\overline{D_c}(0)D(0) - B\overline{D_c}(0)N(0)]}{D_c(0)D(0)+N_c(0)N(0)} =
+\boxed{0}
+\]
+pois \(D_c(0)D(0) + N_c(0)N(0) \neq 0\) (\(F(s)\) é estável) enão há divisão por zero! Desse modo, \(e(\infty) = 0\) independente da magnitude \(A\) e \(B\) de \(r(t)\) e \(w(t)\), respectivamente. Portanto, em regime permanente, a saída \(y(t)\) rastreia a referência \(r(t)\) com rejeição da perturbação \(w(t)\).
+
+\hypertarget{fs-de-primeira-ordem}{%
+\subsection{\texorpdfstring{\(F(s)\) de primeira ordem}{F(s) de primeira ordem}}\label{fs-de-primeira-ordem}}
+
+Suponha que \(F(s)\) é uma Função de Transferência de primeira ordem da forma
+\[
+F(s) = \frac{1}{\tau s+1},
+\]
+onde \(\tau > 0\) (pólo estável em \(s=\frac{-1}{\tau}\)). Para referências \(r(t)\) do tipo degrau, não há sobressinal em \(y(t)\) e
+\[
+\boxed{t_s(5\%) = 3\tau, \quad e(\infty) =0}.
+\]
+
+\hypertarget{fs-de-segunda-ordem}{%
+\subsection{\texorpdfstring{\(F(s)\) de segunda ordem}{F(s) de segunda ordem}}\label{fs-de-segunda-ordem}}
+
+Suponha que \(F(s)\) é uma Função de Transferência de segunda ordem da forma
+\[
+F(s) = \frac{\omega_n^2}{s^2+2\xi\omega_ns+\omega_n^2},
+\]
+onde \(0<\xi<1\) e \(\omega_n>0\) (pólos estáveis em \(s=-\xi\omega \pm j \sqrt{1-\xi^2}\)). Para referências \(r(t)\) do tipo degrau temos que
+\[
+\boxed{M_p=\frac{y_p-y(\infty)}{y(\infty)}, \quad \xi=\sqrt{\frac{(\ln{M_p})^2}{(\ln{M_p})^2+\pi^2}}, \quad t_s(5\%) \cong \frac{3}{\xi\omega_n}, \quad e(\infty) =0}.
+\]
+(\(M_p\) é o sobressinal relativo e \(y(\infty)\) é o valor em regime permanente da saída \(y(t)\)).
+
+\textbf{Exemplo 2.} Seja
+
+\[
+G(s) = \frac{1}{s+2}.
+\]
+Queremos projetar \(C(s)\) de modo que tenhamos: (i) erro nulo em regime permanente ara referências e perturbações do tipo degrau e (ii) \(M_p=0.05\) (sobressinal de \(5\%\)) para referências do tipo degrau. Para que (i) seja entendida, \(C(s)\) deve ter um integrador (pólo em \(s=0\)) (desde que \(F(s)\) seja estável). Escolhemos então um controlador integral
+\[
+C(s)=\frac{K_c}{s}.
+\]
+Logo,
+\[
+F(s) = \frac{C(s)G(s)}{1+C(s)G(s)} = \frac{\frac{K_c}{s}\frac{1}{s+2}}{1+\frac{K_c}{s}\frac{1}{s+2}} = \boxed{\frac{K_c}{s^2+2s+K_c} = \frac{\omega_n^2}{s^2+2\xi\omega_n+\omega^2_n}}
+\]
+e
+\[
+M_p=0.05 \implies \boxed{\xi = 0.69}.
+\]
+
+Por igualdade polinomial, obtemos que
+\[
+\xi\omega_n=1 \implies \omega = \frac{1}{0.69}\\
+K_c=\omega_n^2 \implies K_c = 2.1
+\]
+Assim,
+\[
+\boxed{C(s)=\frac{2.1}{s}}.
+\]
+
+\hypertarget{procedimentos-3}{%
+\section{Procedimentos}\label{procedimentos-3}}
+
+\hypertarget{problema-1-3}{%
+\subsection*{Problema 1}\label{problema-1-3}}
+\addcontentsline{toc}{subsection}{Problema 1}
+
+Considere
+\[
+G(s) = \frac {0.5}{10s+1}.
+\]
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  Simule \(G(s)\) em malha-aberta para \(u(t) = 1\) do tipo degrau. Conforme o esperado, observe que \(t_s(5\%) = 30\) e \(y(\infty) = G(0) = 0.5\). Agora, aplique uma perturbação \(w(t) = 0.25\) do tipo degrau em \(t=100\). Note que a perturbação não é rejeitada.
+\item
+  Projete \(C(S)\) de modo que se tenha: (i) erro nulo em regime permanente para \(r(s)\) e \(w(s)\) do tipo degrau; (ii) \(t_s^{MF}(5\%) = \frac {t_s^{MA}(5\%)}{2}\) e a saída \(y(t)\) não apresenta sobressinal para referências do tipo degrau. Dica: utilize um controlador PI \(C(s) = \frac{K_c(10s+1)}{s}\) (cancelamento pólo-zero.
+\item
+  Simule o sistema em malha-fechada para \(r(t) =1\) e \(w(t) = 0.25\) do tipo degrau, aplicando \(w(t)\) em \(t=100\). Verifique se os requisitos de desempenho foram realmente atendidos e visualize o sinal de controle \(u(t)\). Note que \(u(\infty) = \frac {1}{G(0)}-0.25 = 1.75\) Isto era esperado? Justifique.
+\item
+  Mantendo o mesmo controlador \(C(s)\) repita o item anterior para \(G(s) = \frac {0.45}{9.9s+1}\). Explique o motivo pelo qual ainda temos \(e(\infty) = 0\).
+\end{enumerate}
+
+\hypertarget{resoluuxe7uxe3o-12}{%
+\subsubsection*{Resolução}\label{resoluuxe7uxe3o-12}}
+\addcontentsline{toc}{subsubsection}{Resolução}
+
+Working on it :)
+
+\hypertarget{problema-2-3}{%
+\subsection*{Problema 2}\label{problema-2-3}}
+\addcontentsline{toc}{subsection}{Problema 2}
+
+Working on it :)
 
 \hypertarget{linearizauxe7uxe3o-de-sistemas-nuxe3o-lineares}{%
 \chapter{Linearização de Sistemas Não-Lineares}\label{linearizauxe7uxe3o-de-sistemas-nuxe3o-lineares}}

@@ -229,10 +229,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="erro-em-regime-permanente" class="section level2" number="5.3">
 <h2><span class="header-section-number">5.3</span> Erro em Regime Permanente</h2>
 <p>Relembramos o Teorema do Valor Final:</p>
-<p><strong>Teorema 1</strong> (Teorema do Valor Final). Seja <span class="math inline">\(X(s)\)</span> a Transformada de Laplace de um sinal <span class="math inline">\(x(t)\)</span>. Suponha que <span class="math inline">\(X(s)\)</span> ou <span class="math inline">\(sX(s)\)</span> tem todos os pólos no SPE. Então, o limite <span class="math inline">\(x(\infty) = \lim\limits_{t \to \infty}{x(t)}\)</span> existe e é dado por
+
+<div class="theorem">
+<span id="thm:TVF" class="theorem"><strong>Theorem 5.1  (Teorema do Valor Final)  </strong></span>Seja <span class="math inline">\(X(s)\)</span> a Transformada de Laplace de um sinal <span class="math inline">\(x(t)\)</span>. Suponha que <span class="math inline">\(X(s)\)</span> ou <span class="math inline">\(sX(s)\)</span> tem todos os pólos no SPE. Então, o limite <span class="math inline">\(x(\infty) = \lim\limits_{t \to \infty}{x(t)}\)</span> existe e é dado por
 <span class="math display">\[
 x(\infty) = \lim\limits_{t \to \infty}{x(t)} = \lim\limits_{s \to 0}{sX(s)}.
-\]</span></p>
+\]</span>
+</div>
 <p>Analisaremos agora o erro de rastreamento <span class="math inline">\(e(t) = e(t)-y(t)\)</span> em regime permanente (<span class="math inline">\(t\to\infty\)</span>) para referências e perturbações do tipo degrau. Suponha que <span class="math inline">\(F(s)\)</span> é estável, ou seja, todas as raízes de
 <span class="math display">\[
 D_c(s)D(s) + N_c(s)N(s)
@@ -271,7 +274,7 @@ E(s) = \frac{D_c(s)D(s)}{D_c(s)D(s)+N_c(s)N(s)}R(s)-\frac{D_c(s)N(s)}{D_c(s)D(s)
 = \frac{s\overline{D}(s)}{D_c(s)D(s)+N_c(s)N(s)}\frac{A}{s} - \frac{s\overline{D_c}(s)N(s)}{D_c(s)D(s)+N_c(s)N(s)}\frac{B}{s}\\
 = \frac{A\overline{D_c}(s)D(s) - B\overline{D_c}(s)N(s)}{D_c(s)D(s)+N_c(s)N(s)}
 \]</span>
-e (Teorema do Valor Final)
+e <a href="erro-em-regime-permanente.html#thm:TVF">5.1</a>
 <span class="math display">\[
 e(\infty) = \lim\limits_{s\to0}{sE(s)} =
 \lim\limits_{s\to0}{\frac{A\overline{D_c}(s)D(s) - B\overline{D_c}(s)N(s)}{D_c(s)D(s)+N_c(s)N(s)}} \\

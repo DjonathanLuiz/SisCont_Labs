@@ -42,10 +42,12 @@ Uma maneira de projetarmos o controlador é primeiramente escolhermos a estrutur
 
 Relembramos o Teorema do Valor Final:
 
-**Teorema 1** (Teorema do Valor Final). Seja $X(s)$ a Transformada de Laplace de um sinal $x(t)$. Suponha que $X(s)$ ou $sX(s)$ tem todos os pólos no SPE. Então, o limite $x(\infty) = \lim\limits_{t \to \infty}{x(t)}$ existe e é dado por
+```{theorem, TVF, name="Teorema do Valor Final"}
+Seja $X(s)$ a Transformada de Laplace de um sinal $x(t)$. Suponha que $X(s)$ ou $sX(s)$ tem todos os pólos no SPE. Então, o limite $x(\infty) = \lim\limits_{t \to \infty}{x(t)}$ existe e é dado por
 $$
 x(\infty) = \lim\limits_{t \to \infty}{x(t)} = \lim\limits_{s \to 0}{sX(s)}.
 $$
+```
 
 Analisaremos agora o erro de rastreamento $e(t) = e(t)-y(t)$ em regime permanente ($t\to\infty$) para referências e perturbações do tipo degrau. Suponha que $F(s)$ é estável, ou seja, todas as raízes de
 $$
@@ -88,7 +90,7 @@ E(s) = \frac{D_c(s)D(s)}{D_c(s)D(s)+N_c(s)N(s)}R(s)-\frac{D_c(s)N(s)}{D_c(s)D(s)
 = \frac{s\overline{D}(s)}{D_c(s)D(s)+N_c(s)N(s)}\frac{A}{s} - \frac{s\overline{D_c}(s)N(s)}{D_c(s)D(s)+N_c(s)N(s)}\frac{B}{s}\\
 = \frac{A\overline{D_c}(s)D(s) - B\overline{D_c}(s)N(s)}{D_c(s)D(s)+N_c(s)N(s)}
 $$
-e (Teorema do Valor Final)
+e \@ref(thm:TVF)
 $$
 e(\infty) = \lim\limits_{s\to0}{sE(s)} =
 \lim\limits_{s\to0}{\frac{A\overline{D_c}(s)D(s) - B\overline{D_c}(s)N(s)}{D_c(s)D(s)+N_c(s)N(s)}} \\
@@ -164,10 +166,15 @@ $$
 
 #### Resolução {-}
 
-Working on it :)
+##### Parte A {-}
+
+O resultado da simulação está apresentado na figura \@ref(fig:prob1A1)
+
+```{r prob1A1, fig.align='center', echo=FALSE, fig.cap='Diagrama de blocos do processos $G(s)$ em malha-fechada com perturbação $w$.', out.width='80%'}
+knitr::include_graphics('Imagens/Lab5/Resolução/prob1A1.jpg', dpi = NA)
+```
 
 
-<!-- ----------------------------------------------------------------------- -->
 
 
 ### Problema 2 {-}

@@ -71,12 +71,13 @@
 \contentsline {section}{Procedimentos Lab 5}{70}{section*.58}%
 \contentsline {subsection}{Problema 1}{70}{section*.59}%
 \contentsline {subsubsection}{Resolução}{70}{section*.60}%
-\contentsline {subsection}{Problema 2}{70}{section*.61}%
-\contentsline {subsubsection}{Resolução}{71}{section*.62}%
-\contentsline {subsection}{Problema 3}{71}{section*.63}%
-\contentsline {subsubsection}{Resolução}{71}{section*.64}%
-\contentsline {subsection}{Problema 4}{71}{section*.65}%
-\contentsline {subsubsection}{Resolução}{71}{section*.66}%
+\contentsline {paragraph}{Parte A}{70}{section*.61}%
+\contentsline {subsection}{Problema 2}{70}{section*.62}%
+\contentsline {subsubsection}{Resolução}{71}{section*.63}%
+\contentsline {subsection}{Problema 3}{71}{section*.64}%
+\contentsline {subsubsection}{Resolução}{72}{section*.65}%
+\contentsline {subsection}{Problema 4}{72}{section*.66}%
+\contentsline {subsubsection}{Resolução}{72}{section*.67}%
 \contentsline {chapter}{\numberline {6}Linearização de Sistemas Não-Lineares}{73}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Apresentação do Laboratório}{73}{section.6.1}%
 \contentsline {subsection}{\numberline {6.1.1}Objetivos}{73}{subsection.6.1.1}%

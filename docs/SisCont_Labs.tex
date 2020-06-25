@@ -115,6 +115,21 @@
 \author{Djonathan Luiz de Oliveira Quadras}
 \date{2020-06-25}
 
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+\newtheorem{corollary}{Corollary}[chapter]
+\newtheorem{proposition}{Proposition}[chapter]
+\newtheorem{conjecture}{Conjecture}[chapter]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[chapter]
+\theoremstyle{definition}
+\newtheorem{example}{Example}[chapter]
+\theoremstyle{definition}
+\newtheorem{exercise}{Exercise}[chapter]
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\newtheorem*{solution}{Solution}
 \begin{document}
 \maketitle
 
@@ -1442,10 +1457,12 @@ Uma maneira de projetarmos o controlador é primeiramente escolhermos a estrutur
 
 Relembramos o Teorema do Valor Final:
 
-\textbf{Teorema 1} (Teorema do Valor Final). Seja \(X(s)\) a Transformada de Laplace de um sinal \(x(t)\). Suponha que \(X(s)\) ou \(sX(s)\) tem todos os pólos no SPE. Então, o limite \(x(\infty) = \lim\limits_{t \to \infty}{x(t)}\) existe e é dado por
+\begin{theorem}[Teorema do Valor Final]
+\protect\hypertarget{thm:TVF}{}{\label{thm:TVF} \iffalse (Teorema do Valor Final) \fi{} }Seja \(X(s)\) a Transformada de Laplace de um sinal \(x(t)\). Suponha que \(X(s)\) ou \(sX(s)\) tem todos os pólos no SPE. Então, o limite \(x(\infty) = \lim\limits_{t \to \infty}{x(t)}\) existe e é dado por
 \[
 x(\infty) = \lim\limits_{t \to \infty}{x(t)} = \lim\limits_{s \to 0}{sX(s)}.
 \]
+\end{theorem}
 
 Analisaremos agora o erro de rastreamento \(e(t) = e(t)-y(t)\) em regime permanente (\(t\to\infty\)) para referências e perturbações do tipo degrau. Suponha que \(F(s)\) é estável, ou seja, todas as raízes de
 \[
@@ -1492,7 +1509,7 @@ E(s) = \frac{D_c(s)D(s)}{D_c(s)D(s)+N_c(s)N(s)}R(s)-\frac{D_c(s)N(s)}{D_c(s)D(s)
 = \frac{s\overline{D}(s)}{D_c(s)D(s)+N_c(s)N(s)}\frac{A}{s} - \frac{s\overline{D_c}(s)N(s)}{D_c(s)D(s)+N_c(s)N(s)}\frac{B}{s}\\
 = \frac{A\overline{D_c}(s)D(s) - B\overline{D_c}(s)N(s)}{D_c(s)D(s)+N_c(s)N(s)}
 \]
-e (Teorema do Valor Final)
+e \ref{thm:TVF}
 \[
 e(\infty) = \lim\limits_{s\to0}{sE(s)} =
 \lim\limits_{s\to0}{\frac{A\overline{D_c}(s)D(s) - B\overline{D_c}(s)N(s)}{D_c(s)D(s)+N_c(s)N(s)}} \\
@@ -1586,7 +1603,20 @@ G(s) = \frac {0.5}{10s+1}.
 \subsubsection*{Resolução}\label{resoluuxe7uxe3o}}
 \addcontentsline{toc}{subsubsection}{Resolução}
 
-Working on it :)
+\hypertarget{parte-a}{%
+\paragraph*{Parte A}\label{parte-a}}
+\addcontentsline{toc}{paragraph}{Parte A}
+
+O resultado da simulação está apresentado na figura \ref{fig:prob1A1}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imagens/Lab5/Resolução/prob1A1} 
+
+}
+
+\caption{Diagrama de blocos do processos $G(s)$ em malha-fechada com perturbação $w$.}\label{fig:prob1A1}
+\end{figure}
 
 \hypertarget{problema-2}{%
 \subsection*{Problema 2}\label{problema-2}}

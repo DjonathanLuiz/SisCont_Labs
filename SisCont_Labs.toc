@@ -74,21 +74,26 @@
 \contentsline {paragraph}{Parte A}{70}{section*.61}%
 \contentsline {paragraph}{Parte B}{70}{section*.62}%
 \contentsline {paragraph}{Parte C}{72}{section*.63}%
-\contentsline {subsection}{Problema 2}{72}{section*.64}%
-\contentsline {subsubsection}{Resolução}{72}{section*.65}%
-\contentsline {subsection}{Problema 3}{72}{section*.66}%
-\contentsline {subsubsection}{Resolução}{73}{section*.67}%
-\contentsline {subsection}{Problema 4}{73}{section*.68}%
-\contentsline {subsubsection}{Resolução}{73}{section*.69}%
-\contentsline {chapter}{\numberline {6}Linearização de Sistemas Não-Lineares}{75}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Apresentação do Laboratório}{75}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Objetivos}{75}{subsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}Sistema de um tanque}{75}{subsection.6.1.2}%
-\contentsline {subsection}{\numberline {6.1.3}Pontos de equilíbrio}{77}{subsection.6.1.3}%
-\contentsline {chapter}{\numberline {7}Controle de Sistemas Não-Lineares}{79}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Análise pelo Lugar das Raízes}{81}{chapter.8}%
-\contentsline {chapter}{\numberline {9}Projeto de Controladores pelo Lugar das Raízes}{83}{chapter.9}%
-\contentsline {chapter}{\numberline {10}Projeto do controlador atraso de fase}{85}{chapter.10}%
-\contentsline {chapter}{\numberline {11}Análise pelos Diagramas de Bode e Nyquist}{87}{chapter.11}%
-\contentsline {chapter}{\numberline {12}Projeto de Controladores pelo Diagrama de Bode}{89}{chapter.12}%
-\contentsline {chapter}{\numberline {13}Digitalização de Controladores Analógicos}{91}{chapter.13}%
+\contentsline {paragraph}{Parte D}{72}{section*.64}%
+\contentsline {subsection}{Problema 2}{74}{section*.65}%
+\contentsline {subsubsection}{Resolução}{74}{section*.66}%
+\contentsline {paragraph}{Parte A}{74}{section*.67}%
+\contentsline {paragraph}{Parte B}{74}{section*.68}%
+\contentsline {paragraph}{Parte C}{74}{section*.69}%
+\contentsline {paragraph}{Parte D}{76}{section*.70}%
+\contentsline {subsection}{Problema 3}{76}{section*.71}%
+\contentsline {subsubsection}{Resolução}{77}{section*.72}%
+\contentsline {subsection}{Problema 4}{77}{section*.73}%
+\contentsline {subsubsection}{Resolução}{77}{section*.74}%
+\contentsline {chapter}{\numberline {6}Linearização de Sistemas Não-Lineares}{79}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Apresentação do Laboratório}{79}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Objetivos}{79}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Sistema de um tanque}{79}{subsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.1.3}Pontos de equilíbrio}{81}{subsection.6.1.3}%
+\contentsline {chapter}{\numberline {7}Controle de Sistemas Não-Lineares}{83}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Análise pelo Lugar das Raízes}{85}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Projeto de Controladores pelo Lugar das Raízes}{87}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Projeto do controlador atraso de fase}{89}{chapter.10}%
+\contentsline {chapter}{\numberline {11}Análise pelos Diagramas de Bode e Nyquist}{91}{chapter.11}%
+\contentsline {chapter}{\numberline {12}Projeto de Controladores pelo Diagrama de Bode}{93}{chapter.12}%
+\contentsline {chapter}{\numberline {13}Digitalização de Controladores Analógicos}{95}{chapter.13}%

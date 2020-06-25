@@ -172,13 +172,13 @@ $$
 
 O resultado da simulação está apresentado na figura \@ref(fig:prob1A1). Conforme esperado, tem-se que $t_s(5\%) = 30$ e $y(\infty) = G(0) = 0.5$.
 
-```{r prob1A1, fig.align='center', echo=FALSE, fig.cap='Simulação 1', out.width='80%'}
+```{r prob1A1, fig.align='center', echo=FALSE, fig.cap='Simulação A1', out.width='80%'}
 knitr::include_graphics('Imagens/Lab5/Resolução/prob1A1.jpg', dpi = NA)
 ```
 
 Simulando agora com uma perturbação temos o resultado presente na figura \@ref(fig:prob1A2). A perturbação não é rejeitada e o sistema alcança um novo valor para $y(\infty)$.
 
-```{r prob1A2, fig.align='center', echo=FALSE, fig.cap='Simulação 2', out.width='80%'}
+```{r prob1A2, fig.align='center', echo=FALSE, fig.cap='Simulação A2', out.width='80%'}
 knitr::include_graphics('Imagens/Lab5/Resolução/prob1A2.jpg', dpi = NA)
 ```
 
@@ -216,6 +216,30 @@ $$
 
 ##### Parte C {-}
 
+O resultado da simulação está apresentado na figura \@ref(fig:prob1C1).
+
+```{r prob1C1, fig.align='center', echo=FALSE, fig.cap='Simulação A3', out.width='80%'}
+knitr::include_graphics('Imagens/Lab5/Resolução/prob1C1.jpg', dpi = NA)
+```
+
+Percebe-se que como esperado o erro é nulo para regime permanente, $t_s = 15$ e não há sobressinal. O resultado de $u(s)$ está apresentado na figura \@ref(fig:prob1C2).
+
+```{r prob1C2, fig.align='center', echo=FALSE, fig.cap='$u(s)$', out.width='80%'}
+knitr::include_graphics('Imagens/Lab5/Resolução/prob1C2.jpg', dpi = NA)
+```
+
+Assim como o esperado, $u(\infty) =1.75$.
+
+##### Parte D {-}
+
+O resultado da simulação está apresentado na figura \@ref(fig:prob1D1).
+
+```{r prob1D1, fig.align='center', echo=FALSE, fig.cap='Simulação A4', out.width='80%'}
+knitr::include_graphics('Imagens/Lab5/Resolução/prob1D1.jpg', dpi = NA)
+```
+
+O erro continua convergindo para 0 pois a mudança foi realizada no valor que multiplica o $s$ o que interfere no sobressinal e na amplitude do sinal enquanto o valor independente interfere no erro.
+
 ### Problema 2 {-}
 
 Considere que não há perturbações ($w=0$) e
@@ -230,7 +254,54 @@ $$
 
 #### Resolução {-}
 
-Working on it :)
+##### Parte A{-}
+
+O resultado da simulação está apresentado na figura \@ref(fig:prob2A1). O resultado era esperado pois o sistema é um sistema do Tipo 1.
+
+```{r prob2A1, fig.align='center', echo=FALSE, fig.cap='Simulação B1', out.width='80%'}
+knitr::include_graphics('Imagens/Lab5/Resolução/prob2A1.jpg', dpi = NA)
+```
+
+
+##### Parte B{-}
+
+Utilizando $C(s) = K_c$ temos que
+$$
+F(s) = \frac{C(s)G(s)}{1+C(S)G(s)} \implies F(s) = \frac{\frac{0.9K_c}{s(s+1)}}{1+\frac{0.9K_c}{s(s+1)}} \\
+\implies \boxed{\frac{0.9K_c}{s^2+s+K_c} = \frac{\omega_n^2}{s^2+2\xi\omega_ns+\omega_n^2}}.
+$$
+
+Como temos que $M_p = 0.2$ e 
+$$
+\xi = \sqrt{\frac{\ln{(M_p)}^2}{\ln{(M_p)}^2+\pi^2}}, \quad 2\xi\omega_n=1, \quad K_c=\frac{\omega_n^2}{0.9}
+$$
+encontramos que
+$$
+\xi = 0.4559\quad \omega_n = 1.0967 \implies \boxed{K_c = 1.3364}. 
+$$
+
+
+##### Parte C{-}
+
+O resultado da simulação está apresentado na figura \@ref(fig:prob2C1). Percebe-se que os requisitos de desempenho foram atendidos.
+
+```{r prob2C1, fig.align='center', echo=FALSE, fig.cap='Simulação B3', out.width='80%'}
+knitr::include_graphics('Imagens/Lab5/Resolução/prob2C1.jpg', dpi = NA)
+```
+
+O valor de $u(t)$ está apresentado abaixo. Percebe-se que o valor é praticamente nulo.
+
+```{r prob2C2, fig.align='center', echo=FALSE, fig.cap='$u(s)$', out.width='80%'}
+knitr::include_graphics('Imagens/Lab5/Resolução/prob2C2.jpg', dpi = NA)
+```
+
+##### Parte D{-}
+
+O resultado da simulação está apresentado na figura \@ref(fig:prob2D1). O controlador é do tipo P (um ganho), entretanto, para que $e(\infty) = 0$ quando $\omega \neq0$  seria necessário de um controlador PI.
+
+```{r prob2D1, fig.align='center', echo=FALSE, fig.cap='Simulação B4', out.width='80%'}
+knitr::include_graphics('Imagens/Lab5/Resolução/prob2D1.jpg', dpi = NA)
+```
 
 ### Problema 3 {-}
 

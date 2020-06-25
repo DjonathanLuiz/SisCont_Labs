@@ -246,16 +246,16 @@ G(s) = \frac {0.5}{10s+1}.
 <h5>Parte A</h5>
 <p>O resultado da simulação está apresentado na figura <a href="procedimentos-lab-5.html#fig:prob1A1">5.2</a>. Conforme esperado, tem-se que <span class="math inline">\(t_s(5\%) = 30\)</span> e <span class="math inline">\(y(\infty) = G(0) = 0.5\)</span>.</p>
 <div class="figure" style="text-align: center"><span id="fig:prob1A1"></span>
-<img src="Imagens/Lab5/Resolução/prob1A1.jpg" alt="Simulação 1" width="80%" />
+<img src="Imagens/Lab5/Resolução/prob1A1.jpg" alt="Simulação A1" width="80%" />
 <p class="caption">
-Figura 5.2: Simulação 1
+Figura 5.2: Simulação A1
 </p>
 </div>
 <p>Simulando agora com uma perturbação temos o resultado presente na figura <a href="procedimentos-lab-5.html#fig:prob1A2">5.3</a>. A perturbação não é rejeitada e o sistema alcança um novo valor para <span class="math inline">\(y(\infty)\)</span>.</p>
 <div class="figure" style="text-align: center"><span id="fig:prob1A2"></span>
-<img src="Imagens/Lab5/Resolução/prob1A2.jpg" alt="Simulação 2" width="80%" />
+<img src="Imagens/Lab5/Resolução/prob1A2.jpg" alt="Simulação A2" width="80%" />
 <p class="caption">
-Figura 5.3: Simulação 2
+Figura 5.3: Simulação A2
 </p>
 </div>
 </div>
@@ -289,6 +289,32 @@ C(s) = \frac{0.4(10s+1)}{s}
 </div>
 <div id="parte-c" class="section level5 unnumbered" number="">
 <h5>Parte C</h5>
+<p>O resultado da simulação está apresentado na figura <a href="procedimentos-lab-5.html#fig:prob1C1">5.4</a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:prob1C1"></span>
+<img src="Imagens/Lab5/Resolução/prob1C1.jpg" alt="Simulação A3" width="80%" />
+<p class="caption">
+Figura 5.4: Simulação A3
+</p>
+</div>
+<p>Percebe-se que como esperado o erro é nulo para regime permanente, <span class="math inline">\(t_s = 15\)</span> e não há sobressinal. O resultado de <span class="math inline">\(u(s)\)</span> está apresentado na figura <a href="procedimentos-lab-5.html#fig:prob1C2">5.5</a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:prob1C2"></span>
+<img src="Imagens/Lab5/Resolução/prob1C2.jpg" alt="$u(s)$" width="80%" />
+<p class="caption">
+Figura 5.5: <span class="math inline">\(u(s)\)</span>
+</p>
+</div>
+<p>Assim como o esperado, <span class="math inline">\(u(\infty) =1.75\)</span>.</p>
+</div>
+<div id="parte-d" class="section level5 unnumbered" number="">
+<h5>Parte D</h5>
+<p>O resultado da simulação está apresentado na figura <a href="procedimentos-lab-5.html#fig:prob1D1">5.6</a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:prob1D1"></span>
+<img src="Imagens/Lab5/Resolução/prob1D1.jpg" alt="Simulação A4" width="80%" />
+<p class="caption">
+Figura 5.6: Simulação A4
+</p>
+</div>
+<p>O erro continua convergindo para 0 pois a mudança foi realizada no valor que multiplica o <span class="math inline">\(s\)</span> o que interfere no sobressinal e na amplitude do sinal enquanto o valor independente interfere no erro.</p>
 </div>
 </div>
 </div>
@@ -306,7 +332,59 @@ G(s) = \frac{0.9}{s(s+1)}.
 </ol>
 <div id="resolução-1" class="section level4 unnumbered" number="">
 <h4>Resolução</h4>
-<p>Working on it :)</p>
+<div id="parte-a-1" class="section level5 unnumbered" number="">
+<h5>Parte A</h5>
+<p>O resultado da simulação está apresentado na figura <a href="procedimentos-lab-5.html#fig:prob2A1">5.7</a>. O resultado era esperado pois o sistema é um sistema do Tipo 1.</p>
+<div class="figure" style="text-align: center"><span id="fig:prob2A1"></span>
+<img src="Imagens/Lab5/Resolução/prob2A1.jpg" alt="Simulação B1" width="80%" />
+<p class="caption">
+Figura 5.7: Simulação B1
+</p>
+</div>
+</div>
+<div id="parte-b-1" class="section level5 unnumbered" number="">
+<h5>Parte B</h5>
+<p>Utilizando <span class="math inline">\(C(s) = K_c\)</span> temos que
+<span class="math display">\[
+F(s) = \frac{C(s)G(s)}{1+C(S)G(s)} \implies F(s) = \frac{\frac{0.9K_c}{s(s+1)}}{1+\frac{0.9K_c}{s(s+1)}} \\
+\implies \boxed{\frac{0.9K_c}{s^2+s+K_c} = \frac{\omega_n^2}{s^2+2\xi\omega_ns+\omega_n^2}}.
+\]</span></p>
+<p>Como temos que <span class="math inline">\(M_p = 0.2\)</span> e
+<span class="math display">\[
+\xi = \sqrt{\frac{\ln{(M_p)}^2}{\ln{(M_p)}^2+\pi^2}}, \quad 2\xi\omega_n=1, \quad K_c=\frac{\omega_n^2}{0.9}
+\]</span>
+encontramos que
+<span class="math display">\[
+\xi = 0.4559\quad \omega_n = 1.0967 \implies \boxed{K_c = 1.3364}. 
+\]</span></p>
+</div>
+<div id="parte-c-1" class="section level5 unnumbered" number="">
+<h5>Parte C</h5>
+<p>O resultado da simulação está apresentado na figura <a href="procedimentos-lab-5.html#fig:prob2C1">5.8</a>. Percebe-se que os requisitos de desempenho foram atendidos.</p>
+<div class="figure" style="text-align: center"><span id="fig:prob2C1"></span>
+<img src="Imagens/Lab5/Resolução/prob2C1.jpg" alt="Simulação B3" width="80%" />
+<p class="caption">
+Figura 5.8: Simulação B3
+</p>
+</div>
+<p>O valor de <span class="math inline">\(u(t)\)</span> está apresentado abaixo. Percebe-se que o valor é praticamente nulo.</p>
+<div class="figure" style="text-align: center"><span id="fig:prob2C2"></span>
+<img src="Imagens/Lab5/Resolução/prob2C2.jpg" alt="$u(s)$" width="80%" />
+<p class="caption">
+Figura 5.9: <span class="math inline">\(u(s)\)</span>
+</p>
+</div>
+</div>
+<div id="parte-d-1" class="section level5 unnumbered" number="">
+<h5>Parte D</h5>
+<p>O resultado da simulação está apresentado na figura <a href="procedimentos-lab-5.html#fig:prob2D1">5.10</a>. O controlador é do tipo P (um ganho), entretanto, para que <span class="math inline">\(e(\infty) = 0\)</span> quando <span class="math inline">\(\omega \neq0\)</span> seria necessário de um controlador PI.</p>
+<div class="figure" style="text-align: center"><span id="fig:prob2D1"></span>
+<img src="Imagens/Lab5/Resolução/prob2D1.jpg" alt="Simulação B4" width="80%" />
+<p class="caption">
+Figura 5.10: Simulação B4
+</p>
+</div>
+</div>
 </div>
 </div>
 <div id="problema-3" class="section level3 unnumbered" number="">

@@ -244,13 +244,51 @@ G(s) = \frac {0.5}{10s+1}.
 <h4>Resolução</h4>
 <div id="parte-a" class="section level5 unnumbered" number="">
 <h5>Parte A</h5>
-<p>O resultado da simulação está apresentado na figura <a href="procedimentos-lab-5.html#fig:prob1A1">5.2</a></p>
+<p>O resultado da simulação está apresentado na figura <a href="procedimentos-lab-5.html#fig:prob1A1">5.2</a>. Conforme esperado, tem-se que <span class="math inline">\(t_s(5\%) = 30\)</span> e <span class="math inline">\(y(\infty) = G(0) = 0.5\)</span>.</p>
 <div class="figure" style="text-align: center"><span id="fig:prob1A1"></span>
-<img src="Imagens/Lab5/Resolução/prob1A1.jpg" alt="Diagrama de blocos do processos $G(s)$ em malha-fechada com perturbação $w$." width="80%" />
+<img src="Imagens/Lab5/Resolução/prob1A1.jpg" alt="Simulação 1" width="80%" />
 <p class="caption">
-Figura 5.2: Diagrama de blocos do processos <span class="math inline">\(G(s)\)</span> em malha-fechada com perturbação <span class="math inline">\(w\)</span>.
+Figura 5.2: Simulação 1
 </p>
 </div>
+<p>Simulando agora com uma perturbação temos o resultado presente na figura <a href="procedimentos-lab-5.html#fig:prob1A2">5.3</a>. A perturbação não é rejeitada e o sistema alcança um novo valor para <span class="math inline">\(y(\infty)\)</span>.</p>
+<div class="figure" style="text-align: center"><span id="fig:prob1A2"></span>
+<img src="Imagens/Lab5/Resolução/prob1A2.jpg" alt="Simulação 2" width="80%" />
+<p class="caption">
+Figura 5.3: Simulação 2
+</p>
+</div>
+</div>
+<div id="parte-b" class="section level5 unnumbered" number="">
+<h5>Parte B</h5>
+<p>Para calcular <span class="math inline">\(C(s)\)</span> utilizamos <span class="math inline">\(F(s) = \frac{C(s)G(s)}{1+C(s)G(s)}\)</span>, sendo <span class="math inline">\(G(s) = \frac{0.5}{10s+1}\)</span> e <span class="math inline">\(C(s) = \frac{k_c(10s+1)}{s}\)</span>. Assim,
+<span class="math display">\[
+F(s) = \frac{\frac{k_c(10s+1)}{s}\frac{0.5}{10s+1}}{1+\frac{k_c(10s+1)}{s}\frac{0.5}{10s+1}} \\
+F(s) = \frac{\frac{0.5K_c}{s}}{\frac{s+0.5K_c}{s}}\\
+\boxed{F(s) = \frac{0.5K_c}{s+0.5K_c}}
+\]</span></p>
+<p>Comparando com uma Função de Transferência de primeira ordem, temos
+<span class="math display">\[
+F(s) = \frac{0.5K_c}{s+0.5K_c} = \frac{1}{\tau s+1}.
+\]</span></p>
+<p>E como <span class="math inline">\(t_s^{MF}(5\%) = \frac{t_s^{MA}(5\%)}{2}\)</span> e <span class="math inline">\(t_s(5\%) = 3\tau\)</span>, temos que
+<span class="math display">\[
+t_s^{MF}(5\%) = \frac{t_s^{MA}(5\%)}{2} = 3\tau \\
+\implies \frac{30}{2}=3\tau \\
+\implies \boxed{\tau = 5}.
+\]</span></p>
+<p>Portanto,
+<span class="math display">\[
+\frac{0.5K_c}{s+0.5K_c}=\frac{1}{5s+1}
+\implies \boxed{K_c = 0.4}.
+\]</span></p>
+<p>Portanto,
+<span class="math display">\[
+C(s) = \frac{0.4(10s+1)}{s}
+\]</span></p>
+</div>
+<div id="parte-c" class="section level5 unnumbered" number="">
+<h5>Parte C</h5>
 </div>
 </div>
 </div>

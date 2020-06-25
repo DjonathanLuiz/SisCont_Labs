@@ -1609,7 +1609,7 @@ G(s) = \frac {0.5}{10s+1}.
 \paragraph*{Parte A}\label{parte-a}}
 \addcontentsline{toc}{paragraph}{Parte A}
 
-O resultado da simulação está apresentado na figura \ref{fig:prob1A1}
+O resultado da simulação está apresentado na figura \ref{fig:prob1A1}. Conforme esperado, tem-se que \(t_s(5\%) = 30\) e \(y(\infty) = G(0) = 0.5\).
 
 \begin{figure}
 
@@ -1617,8 +1617,57 @@ O resultado da simulação está apresentado na figura \ref{fig:prob1A1}
 
 }
 
-\caption{Diagrama de blocos do processos $G(s)$ em malha-fechada com perturbação $w$.}\label{fig:prob1A1}
+\caption{Simulação 1}\label{fig:prob1A1}
 \end{figure}
+
+Simulando agora com uma perturbação temos o resultado presente na figura \ref{fig:prob1A2}. A perturbação não é rejeitada e o sistema alcança um novo valor para \(y(\infty)\).
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imagens/Lab5/Resolução/prob1A2} 
+
+}
+
+\caption{Simulação 2}\label{fig:prob1A2}
+\end{figure}
+
+\hypertarget{parte-b}{%
+\paragraph*{Parte B}\label{parte-b}}
+\addcontentsline{toc}{paragraph}{Parte B}
+
+Para calcular \(C(s)\) utilizamos \(F(s) = \frac{C(s)G(s)}{1+C(s)G(s)}\), sendo \(G(s) = \frac{0.5}{10s+1}\) e \(C(s) = \frac{k_c(10s+1)}{s}\). Assim,
+\[
+F(s) = \frac{\frac{k_c(10s+1)}{s}\frac{0.5}{10s+1}}{1+\frac{k_c(10s+1)}{s}\frac{0.5}{10s+1}} \\
+F(s) = \frac{\frac{0.5K_c}{s}}{\frac{s+0.5K_c}{s}}\\
+\boxed{F(s) = \frac{0.5K_c}{s+0.5K_c}}
+\]
+
+Comparando com uma Função de Transferência de primeira ordem, temos
+\[
+F(s) = \frac{0.5K_c}{s+0.5K_c} = \frac{1}{\tau s+1}.
+\]
+
+E como \(t_s^{MF}(5\%) = \frac{t_s^{MA}(5\%)}{2}\) e \(t_s(5\%) = 3\tau\), temos que
+\[
+t_s^{MF}(5\%) = \frac{t_s^{MA}(5\%)}{2} = 3\tau \\
+\implies \frac{30}{2}=3\tau \\
+\implies \boxed{\tau = 5}.
+\]
+
+Portanto,
+\[
+\frac{0.5K_c}{s+0.5K_c}=\frac{1}{5s+1}
+\implies \boxed{K_c = 0.4}.
+\]
+
+Portanto,
+\[
+C(s) = \frac{0.4(10s+1)}{s}
+\]
+
+\hypertarget{parte-c}{%
+\paragraph*{Parte C}\label{parte-c}}
+\addcontentsline{toc}{paragraph}{Parte C}
 
 \hypertarget{problema-2}{%
 \subsection*{Problema 2}\label{problema-2}}

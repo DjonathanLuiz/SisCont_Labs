@@ -154,7 +154,7 @@ $$
 
 ## Procedimentos Lab 5 {-}
 
-### Problema 1 {-}
+### Problema 5.1 {-}
 
 Considere
 $$
@@ -240,7 +240,7 @@ knitr::include_graphics('Imagens/Lab5/Resolução/prob1D1.jpg', dpi = NA)
 
 O erro continua convergindo para 0 pois a mudança foi realizada no valor que multiplica o $s$ o que interfere no sobressinal e na amplitude do sinal enquanto o valor independente interfere no erro.
 
-### Problema 2 {-}
+### Problema 5.2 {-}
 
 Considere que não há perturbações ($w=0$) e
 $$
@@ -303,7 +303,7 @@ O resultado da simulação está apresentado na figura \@ref(fig:prob2D1). O con
 knitr::include_graphics('Imagens/Lab5/Resolução/prob2D1.jpg', dpi = NA)
 ```
 
-### Problema 3 {-}
+### Problema 5.3 {-}
 
 Considere
 $$
@@ -318,7 +318,7 @@ $$
 
 Working on it :)
 
-### Problema 4 {-}
+### Problema 5.4 {-}
 
 Repita o problema 1 para
 $$

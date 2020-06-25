@@ -115,7 +115,7 @@ Em todos os itens abaixo consideramos o sistema em malha-fechada mostrado na Fig
 knitr::include_graphics('Imagens/Lab4/Apresentação/fig3.jpg', dpi = NA)
 ```
 
-### Problema 1 {-}
+### Problema 4.1 {-}
 
 Considere que
 
@@ -171,7 +171,7 @@ knitr::include_graphics('Imagens/Lab4/Resolução/prob1C2.jpg', dpi = NA)
 
 <!-- ----------------------------------------------------------------------- -->
 
-### Problema 2 {-}
+### Problema 4.2 {-}
 
 Considere que
 $$
@@ -248,7 +248,7 @@ Diferentemente do esperado (que o $e(\infty) = 0$) uma vez que segundo a Tabela 
 
 <!-- ----------------------------------------------------------------------- -->
 
-### Problema 3 {-}
+### Problema 4.3 {-}
 
 Considere que
 $$
@@ -322,7 +322,7 @@ $$
 
 <!-- ----------------------------------------------------------------------- -->
 
-### Problema 4 {-}
+### Problema 4.4 {-}
 
 Considere que
 $$

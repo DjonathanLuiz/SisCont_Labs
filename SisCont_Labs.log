@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.2.3)  25 JUN 2020 19:48
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.2.3)  25 JUN 2020 19:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -756,28 +756,16 @@ Package: amsthm 2017/10/31 v2.20.4
 \c@exercise=\count304
 (./SisCont_Labs.aux
 
-LaTeX Warning: Label `problema-1' multiply defined.
-
-
 LaTeX Warning: Label `resoluuxe7uxe3o' multiply defined.
 
 
-LaTeX Warning: Label `problema-2' multiply defined.
-
-
 LaTeX Warning: Label `resoluuxe7uxe3o-1' multiply defined.
-
-
-LaTeX Warning: Label `problema-3' multiply defined.
 
 
 LaTeX Warning: Label `resoluuxe7uxe3o-2' multiply defined.
 
 
 LaTeX Warning: Label `resoluuxe7uxe3o-3' multiply defined.
-
-
-LaTeX Warning: Label `problema-1' multiply defined.
 
 
 LaTeX Warning: Label `resoluuxe7uxe3o' multiply defined.
@@ -789,19 +777,7 @@ LaTeX Warning: Label `parte-a' multiply defined.
 LaTeX Warning: Label `parte-b' multiply defined.
 
 
-LaTeX Warning: Label `problema-2' multiply defined.
-
-
-LaTeX Warning: Label `problema-3' multiply defined.
-
-
 LaTeX Warning: Label `resoluuxe7uxe3o-1' multiply defined.
-
-
-LaTeX Warning: Label `problema-4' multiply defined.
-
-
-LaTeX Warning: Label `problema-1' multiply defined.
 
 
 LaTeX Warning: Label `resoluuxe7uxe3o' multiply defined.
@@ -819,9 +795,6 @@ LaTeX Warning: Label `parte-c' multiply defined.
 LaTeX Warning: Label `parte-d' multiply defined.
 
 
-LaTeX Warning: Label `problema-2' multiply defined.
-
-
 LaTeX Warning: Label `resoluuxe7uxe3o-1' multiply defined.
 
 
@@ -837,13 +810,7 @@ LaTeX Warning: Label `parte-c-1' multiply defined.
 LaTeX Warning: Label `parte-d-1' multiply defined.
 
 
-LaTeX Warning: Label `problema-3' multiply defined.
-
-
 LaTeX Warning: Label `resoluuxe7uxe3o-2' multiply defined.
-
-
-LaTeX Warning: Label `problema-4' multiply defined.
 
 
 LaTeX Warning: Label `resoluuxe7uxe3o-3' multiply defined.
@@ -1694,10 +1661,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1958.
  ) 
 Here is how much of TeX's memory you used:
- 30155 strings out of 494432
- 554013 string characters out of 6170871
- 727136 words of memory out of 5000000
- 34193 multiletter control sequences out of 15000+600000
+ 30166 strings out of 494432
+ 554179 string characters out of 6170871
+ 727587 words of memory out of 5000000
+ 34204 multiletter control sequences out of 15000+600000
  538780 words of font info for 83 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  55i,13n,115p,966b,2146s stack positions out of 5000i,500n,10000p,200000b,80000s

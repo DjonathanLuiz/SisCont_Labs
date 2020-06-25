@@ -28,7 +28,7 @@ Considere que $G(s)$ é estável, ou seja, todos os pólos estão no SPE. Em ger
 
 ## Procedimentos Lab 2 {-}
 
-### Problema 1{-}
+### Problema 2.1 {-}
 
 Considere o sistema de primeira ordem
 $$
@@ -166,7 +166,7 @@ O resultado apresentado pelo *scope* é apresentado na figura abaixo.
 O resultado comprova o esperado. O sistema se comporta de forma instável para a função de transferência dada por $G(s) = \frac {1}{s-1}$.
 
 
-### Problema 2{-}
+### Problema 2.2 {-}
 
 Considere o sistema de primeira ordem (integrador)
 $$
@@ -217,7 +217,7 @@ O resultados eram esperados, uma vez que em um estado crítico a função de tra
 
 
 
-### Problema 3{-}
+### Problema 2.3 {-}
 
 Considere o sistema de segunda ordem
 $$
@@ -269,7 +269,7 @@ O resultado da simulação é apresentado abaixo.
 
 É fácil perceber que o modelo se comporta de maneira instável com a entrada $u(t) = \sin(5t)$, se mostrando estável nas demais situações.
 
-### Problema 4{-}
+### Problema 2.4 {-}
 
 Considere o sistema de segunda orde
 $$
@@ -328,7 +328,7 @@ O resultado da simulação está apresentado na figura abaixo.
 
 É possível perceber que quanto mais alto o valor de $\beta$ maior o sobressinal. Também é possível perceber que há um intervalo no qual o tempo de reação aumenta, encontrando seu tempo de reação mínimo, voltando então a aumentar.
 
-### Problema 5{-}
+### Problema 2.5 {-}
 
 Considere o sistema de segunda ordem
 $$
@@ -382,7 +382,7 @@ O resultado da simulação está apresentado na figura abaixo.
 
 É possível perceber que quanto mais alto o valor de $\beta$ maior o sobressinal e o tempo de resposta do sistema.
 
-### Problema 6{-}
+### Problema 2.6 {-}
 
 Considere o sistema de segunda ordem de fase não-mínima
 $$

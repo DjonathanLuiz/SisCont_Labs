@@ -122,7 +122,8 @@ $$
 $$
 ($M_p$ é o sobressinal relativo e $y(\infty)$ é o valor em regime permanente da saída $y(t)$).
 
-**Exemplo 2.** Seja
+```{example}
+Seja
 
 $$
 G(s) = \frac{1}{s+2}.
@@ -149,6 +150,7 @@ Assim,
 $$
 \boxed{C(s)=\frac{2.1}{s}}.
 $$
+```
 
 ## Procedimentos Lab 5 {-}
 

@@ -7,3 +7,11 @@ language:
   label:
     fig: "Figura "
     tab: "Tabela "
+    thm: "Teorema "
+    exm: "Exemplo "
+    lem: "Lema "
+    cor: "Corolário "
+    prp: "Proposição "
+    cnj: "Conjectura "
+    def: "Definição "
+    exr: "Exercício "

@@ -231,7 +231,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Relembramos o Teorema do Valor Final:</p>
 
 <div class="theorem">
-<span id="thm:TVF" class="theorem"><strong>Theorem 5.1  (Teorema do Valor Final)  </strong></span>Seja <span class="math inline">\(X(s)\)</span> a Transformada de Laplace de um sinal <span class="math inline">\(x(t)\)</span>. Suponha que <span class="math inline">\(X(s)\)</span> ou <span class="math inline">\(sX(s)\)</span> tem todos os pólos no SPE. Então, o limite <span class="math inline">\(x(\infty) = \lim\limits_{t \to \infty}{x(t)}\)</span> existe e é dado por
+<span id="thm:TVF" class="theorem"><strong>Teorema 5.1  (Teorema do Valor Final)  </strong></span>Seja <span class="math inline">\(X(s)\)</span> a Transformada de Laplace de um sinal <span class="math inline">\(x(t)\)</span>. Suponha que <span class="math inline">\(X(s)\)</span> ou <span class="math inline">\(sX(s)\)</span> tem todos os pólos no SPE. Então, o limite <span class="math inline">\(x(\infty) = \lim\limits_{t \to \infty}{x(t)}\)</span> existe e é dado por
 <span class="math display">\[
 x(\infty) = \lim\limits_{t \to \infty}{x(t)} = \lim\limits_{s \to 0}{sX(s)}.
 \]</span>
@@ -305,7 +305,9 @@ onde <span class="math inline">\(0&lt;\xi&lt;1\)</span> e <span class="math inli
 \boxed{M_p=\frac{y_p-y(\infty)}{y(\infty)}, \quad \xi=\sqrt{\frac{(\ln{M_p})^2}{(\ln{M_p})^2+\pi^2}}, \quad t_s(5\%) \cong \frac{3}{\xi\omega_n}, \quad e(\infty) =0}.
 \]</span>
 (<span class="math inline">\(M_p\)</span> é o sobressinal relativo e <span class="math inline">\(y(\infty)\)</span> é o valor em regime permanente da saída <span class="math inline">\(y(t)\)</span>).</p>
-<p><strong>Exemplo 2.</strong> Seja</p>
+
+<div class="example">
+<p><span id="exm:unnamed-chunk-9" class="example"><strong>Exemplo 5.1  </strong></span>Seja</p>
 <p><span class="math display">\[
 G(s) = \frac{1}{s+2}.
 \]</span>
@@ -321,7 +323,7 @@ e
 <span class="math display">\[
 M_p=0.05 \implies \boxed{\xi = 0.69}.
 \]</span></p>
-<p>Por igualdade polinomial, obtemos que
+Por igualdade polinomial, obtemos que
 <span class="math display">\[
 \xi\omega_n=1 \implies \omega = \frac{1}{0.69}\\
 K_c=\omega_n^2 \implies K_c = 2.1
@@ -329,7 +331,8 @@ K_c=\omega_n^2 \implies K_c = 2.1
 Assim,
 <span class="math display">\[
 \boxed{C(s)=\frac{2.1}{s}}.
-\]</span></p>
+\]</span>
+</div>
 </div>
 </div>
             </section>

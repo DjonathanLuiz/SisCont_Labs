@@ -1,10 +1,8 @@
 # Identificação de Sistemas
 
-### Objetivo {-}
-
 Nesta experiência, veremos como modelar matematicamente um sistema linear por uma Função de Transferência. Identificaremos os parâmetros de uma Função de Transferência de primeira e de segunda ordem. Compararemos a dinâmica do sistema com a do modelo matemático.
 
-### Modelagem de Sistemas Lineares {-}
+## Modelagem de Sistemas Lineares 
 
 Encontrar um modelo matemático que capture as características dinâmicas relevantes de um sistema real é de fundamental importância para a análise e controle do sistema. No Laboratório 1 estudamos um modelo linear com motor CC. Tal modelo pode ser obtido a partir das leis da física (mecânica e eletromagnetismo) e os valores dos parâmetros dependem de constantes e coeficientes físicos (indutância do enrolamento, resistência do enrolamento, constante de torque do motor, coeficiente de atrito ciscoso). Em situações reais, não conheceremos uma estimativa para os mesmos. Por exemplo, todo resistor possui um valor normal e uma faixa de tolerância percentual (e.g. $R = 100 \Omega \pm 5\%$). Além disso, muitas vezes a determinação de um modelo matemático para um sistema a partir de leis naturais é extremamente difícil e, mesmo no caso em que isso é possível, o modelo obtido pode ser demasiadamente complexo para ser estudado matematicamente.
 
@@ -12,7 +10,7 @@ Devido às dificuldades que acabamos de expor, em geral buscamos um modelo matem
 
 Nesta experiência, consideraremos apenas sistemas lineares que possam ser modelados por uma função de Transferência $G(s)$ de primeira ordem ou de segunda ordem. Veremos então como identificar os parâmetros de $G(s)$.
 
-### Identificação de sistemas de primeira ordem {-}
+## Identificação de sistemas de primeira ordem 
 
 Toda Função de Transferência $G(s)$ de primeira ordem pode ser escrita na forma padrão como
 
@@ -44,7 +42,7 @@ Logo,
 K = \frac{y(\infty)}{A},  \tau = \frac {t_s(5\%)}{3}. (\#eq:eq32)
 \end{align}
 
-### Identificação de Sistemas de Segunda Ordem {-}
+## Identificação de Sistemas de Segunda Ordem 
 
 Toda Função de Transferência $G(s)$ de segunda ordem com pólos não-nulos pode ser escrita como
 
@@ -100,7 +98,7 @@ Para qualquer $K_c > 0$, temos que $F(s)$ é um sistema de segunda ordem estáve
 F(s) = \frac {K_cG(s)}{1+K_cG(s)} \implies G(s) = \frac {F(s)}{K_c - K_cF(s)}.  (\#eq:eq35)
 \end{align}
 
-## Procedimentos do Laboratório 3 {-}
+## Procedimentos Lab 3 {-}
 
 ### Problema 1 {-}
 

@@ -136,16 +136,11 @@ Este laboratório consistiu apenas na apresentação da disciplina, da ferrament
 \hypertarget{efeitos-de-puxf3los-e-zeros-na-dinuxe2mica}{%
 \chapter{Efeitos de Pólos e Zeros na Dinâmica}\label{efeitos-de-puxf3los-e-zeros-na-dinuxe2mica}}
 
-\hypertarget{objetivo}{%
-\subsection*{Objetivo}\label{objetivo}}
-\addcontentsline{toc}{subsection}{Objetivo}
-
 Nesta experiência, verificaremos a influência dos pólos e zeros de uma Função de Transferência na resposta dinâmica para entradas do tipo degrau e também para entradas senoidais. Utilizaremos o Matlab para realizar as
 simulações.
 
 \hypertarget{puxf3los-e-zeros}{%
-\subsection*{Pólos e Zeros}\label{puxf3los-e-zeros}}
-\addcontentsline{toc}{subsection}{Pólos e Zeros}
+\section{Pólos e Zeros}\label{puxf3los-e-zeros}}
 
 Considere uma função de Trasnferência da forma
 
@@ -185,9 +180,9 @@ Considere que \(G(s)\) é estável, ou seja, todos os pólos estão no SPE. Em g
   Um zero bem próximo de um pólo tende a anular os efeitos dos mesmos na resposta dinâmica.
 \end{enumerate}
 
-\hypertarget{procedimentos-dolaboratuxf3rio-2}{%
-\section*{Procedimentos doLaboratório 2}\label{procedimentos-dolaboratuxf3rio-2}}
-\addcontentsline{toc}{section}{Procedimentos doLaboratório 2}
+\hypertarget{procedimentos-lab-2}{%
+\section*{Procedimentos Lab 2}\label{procedimentos-lab-2}}
+\addcontentsline{toc}{section}{Procedimentos Lab 2}
 
 \hypertarget{problema-1}{%
 \subsection*{Problema 1}\label{problema-1}}
@@ -635,15 +630,10 @@ O motivo da resposta ser negativa se deve ao fato de o zero da função \(G(s)\)
 \hypertarget{identificauxe7uxe3o-de-sistemas}{%
 \chapter{Identificação de Sistemas}\label{identificauxe7uxe3o-de-sistemas}}
 
-\hypertarget{objetivo}{%
-\subsection*{Objetivo}\label{objetivo}}
-\addcontentsline{toc}{subsection}{Objetivo}
-
 Nesta experiência, veremos como modelar matematicamente um sistema linear por uma Função de Transferência. Identificaremos os parâmetros de uma Função de Transferência de primeira e de segunda ordem. Compararemos a dinâmica do sistema com a do modelo matemático.
 
 \hypertarget{modelagem-de-sistemas-lineares}{%
-\subsection*{Modelagem de Sistemas Lineares}\label{modelagem-de-sistemas-lineares}}
-\addcontentsline{toc}{subsection}{Modelagem de Sistemas Lineares}
+\section{Modelagem de Sistemas Lineares}\label{modelagem-de-sistemas-lineares}}
 
 Encontrar um modelo matemático que capture as características dinâmicas relevantes de um sistema real é de fundamental importância para a análise e controle do sistema. No Laboratório 1 estudamos um modelo linear com motor CC. Tal modelo pode ser obtido a partir das leis da física (mecânica e eletromagnetismo) e os valores dos parâmetros dependem de constantes e coeficientes físicos (indutância do enrolamento, resistência do enrolamento, constante de torque do motor, coeficiente de atrito ciscoso). Em situações reais, não conheceremos uma estimativa para os mesmos. Por exemplo, todo resistor possui um valor normal e uma faixa de tolerância percentual (e.g.~\(R = 100 \Omega \pm 5\%\)). Além disso, muitas vezes a determinação de um modelo matemático para um sistema a partir de leis naturais é extremamente difícil e, mesmo no caso em que isso é possível, o modelo obtido pode ser demasiadamente complexo para ser estudado matematicamente.
 
@@ -652,8 +642,7 @@ Devido às dificuldades que acabamos de expor, em geral buscamos um modelo matem
 Nesta experiência, consideraremos apenas sistemas lineares que possam ser modelados por uma função de Transferência \(G(s)\) de primeira ordem ou de segunda ordem. Veremos então como identificar os parâmetros de \(G(s)\).
 
 \hypertarget{identificauxe7uxe3o-de-sistemas-de-primeira-ordem}{%
-\subsection*{Identificação de sistemas de primeira ordem}\label{identificauxe7uxe3o-de-sistemas-de-primeira-ordem}}
-\addcontentsline{toc}{subsection}{Identificação de sistemas de primeira ordem}
+\section{Identificação de sistemas de primeira ordem}\label{identificauxe7uxe3o-de-sistemas-de-primeira-ordem}}
 
 Toda Função de Transferência \(G(s)\) de primeira ordem pode ser escrita na forma padrão como
 
@@ -690,8 +679,7 @@ K = \frac{y(\infty)}{A},  \tau = \frac {t_s(5\%)}{3}. \label{eq:eq32}
 \end{align}
 
 \hypertarget{identificauxe7uxe3o-de-sistemas-de-segunda-ordem}{%
-\subsection*{Identificação de Sistemas de Segunda Ordem}\label{identificauxe7uxe3o-de-sistemas-de-segunda-ordem}}
-\addcontentsline{toc}{subsection}{Identificação de Sistemas de Segunda Ordem}
+\section{Identificação de Sistemas de Segunda Ordem}\label{identificauxe7uxe3o-de-sistemas-de-segunda-ordem}}
 
 Toda Função de Transferência \(G(s)\) de segunda ordem com pólos não-nulos pode ser escrita como
 
@@ -768,9 +756,9 @@ Para qualquer \(K_c > 0\), temos que \(F(s)\) é um sistema de segunda ordem est
 F(s) = \frac {K_cG(s)}{1+K_cG(s)} \implies G(s) = \frac {F(s)}{K_c - K_cF(s)}.  \label{eq:eq35}
 \end{align}
 
-\hypertarget{procedimentos-do-laboratuxf3rio-3}{%
-\section*{Procedimentos do Laboratório 3}\label{procedimentos-do-laboratuxf3rio-3}}
-\addcontentsline{toc}{section}{Procedimentos do Laboratório 3}
+\hypertarget{procedimentos-lab-3}{%
+\section*{Procedimentos Lab 3}\label{procedimentos-lab-3}}
+\addcontentsline{toc}{section}{Procedimentos Lab 3}
 
 \hypertarget{problema-1}{%
 \subsection*{Problema 1}\label{problema-1}}
@@ -933,15 +921,10 @@ Percebe-se que, considerando o modelo como uma Função de Transferência de seg
 \hypertarget{rastreamento-de-referuxeancias-e-rejeiuxe7uxe3o-de-perturbauxe7uxf5es---erro-em-regime-permanente}{%
 \chapter{Rastreamento de Referências e Rejeição de Perturbações - Erro em Regime Permanente}\label{rastreamento-de-referuxeancias-e-rejeiuxe7uxe3o-de-perturbauxe7uxf5es---erro-em-regime-permanente}}
 
-\hypertarget{objetivos}{%
-\subsection*{Objetivos}\label{objetivos}}
-\addcontentsline{toc}{subsection}{Objetivos}
-
 Nesta experiência analisaremos o erro em regime permanente de sistemas em malha-fechada para o rastreamento de referências e a rejeição de perturbações. Consideraremos referências e perturbações do tipo degrau, rampa e parábola. Comprovaremos os resultados teóricos através de simulações no Simulink/Matlab.
 
 \hypertarget{tipos-de-sistemas}{%
-\subsection*{Tipos de Sistemas}\label{tipos-de-sistemas}}
-\addcontentsline{toc}{subsection}{Tipos de Sistemas}
+\section{Tipos de Sistemas}\label{tipos-de-sistemas}}
 
 Considere a Função de Transferência
 \[
@@ -959,9 +942,8 @@ onde \(N(s)\) e \(D(s)\) são polinômios em \(s\) sem raízes em comum e com \(
   Tipo 2: \(G(s)\) tem dois (e apenas dois) pólos em \(s=0\). Podemos escrever \[G(s) = \frac {1}{s^2}G_0(s),\] onde \(G_0(s) = \frac {N(s)}{D_0(s)}\) não possui pólos em \(s=0\). Denominamos \(K_a = G_0(0) \neq 0\) de \emph{constante de aceleração}. Note que \(K_a =\lim\limits_{s \to 0} s^2G(s)\).
 \end{itemize}
 
-\hypertarget{erro-em-regime-permanente}{%
-\subsection*{Erro em regime permanente}\label{erro-em-regime-permanente}}
-\addcontentsline{toc}{subsection}{Erro em regime permanente}
+\hypertarget{erro-em-regime-permanente.}{%
+\section{Erro em regime permanente.}\label{erro-em-regime-permanente.}}
 
 Considere o sistema em malha-fechada com realimentação unitária mostrado na Figura @ref\{fig:fig41\}, onde:
 \[
@@ -1078,9 +1060,9 @@ Tipo 2 & 0 & 0 & $\neq 0$\\
 \end{tabular}
 \end{table}
 
-\hypertarget{procedimentos-do-laboratuxf3rio-4}{%
-\section*{Procedimentos do Laboratório 4}\label{procedimentos-do-laboratuxf3rio-4}}
-\addcontentsline{toc}{section}{Procedimentos do Laboratório 4}
+\hypertarget{procedimentos-lab-4}{%
+\section*{Procedimentos Lab 4}\label{procedimentos-lab-4}}
+\addcontentsline{toc}{section}{Procedimentos Lab 4}
 
 Em todos os itens abaixo consideramos o sistema em malha-fechada mostrado na Figura \ref{fig:fig43} onde \(C(s)\) é o controlador, \(G(s)\) é a planta (processo) e \(u(t)\) é o sinal de controle.
 
@@ -1395,15 +1377,10 @@ e(\infty) = 0.25.
 \hypertarget{projeto-de-controladores-por-muxe9todos-alguxe9bricos}{%
 \chapter{Projeto de Controladores por Métodos Algébricos}\label{projeto-de-controladores-por-muxe9todos-alguxe9bricos}}
 
-\hypertarget{objetivos}{%
-\subsection*{Objetivos}\label{objetivos}}
-\addcontentsline{toc}{subsection}{Objetivos}
-
 Nesta experiência projetaremos controladores que atendam determinadas especificações de regime transitório e de regime permanente em malha-fechada por métodos algébricos. Comprovaremos por simulação no Matlab o desempenho do sistema em malha-fechada.
 
 \hypertarget{controladores-cluxe1ssicos}{%
-\subsection*{Controladores Clássicos}\label{controladores-cluxe1ssicos}}
-\addcontentsline{toc}{subsection}{Controladores Clássicos}
+\section{Controladores Clássicos}\label{controladores-cluxe1ssicos}}
 
 Considere o diagrama de blocos \(G(s)\) em malha-fechada da Figura \ref{fig:fig51} onde \(r(t)\) é a referência, \(w(t)\) é uma perturbação externa, \(y(t)\) é a saída, \(e(t) = r(t) - y(t)\) é o erro de rastreamento, \(u(t)\) é o controle e \(C(s)\) é o controlador a ser projetado.
 
@@ -1438,8 +1415,7 @@ e então escolher adequadamente os parâmetros correspondentes de modo que o sis
 É importante ressaltar que em situações reais devemos sempre procurar utilizar controladores com a estrutura mais simples possível. Isto implica em menos dificuldades na implementação e em menores custos. Na próxima seção veremos um método algébrico de projeto de controladores.
 
 \hypertarget{muxe9todo-alguxe9brico-de-projeto-de-controladores}{%
-\subsection*{Método Algébrico de Projeto de Controladores}\label{muxe9todo-alguxe9brico-de-projeto-de-controladores}}
-\addcontentsline{toc}{subsection}{Método Algébrico de Projeto de Controladores}
+\section{Método Algébrico de Projeto de Controladores}\label{muxe9todo-alguxe9brico-de-projeto-de-controladores}}
 
 Considerando que \(w=0\) (sem perturbação), temos que a Função de Transferência em malha-fechada da figura \ref{fig:fig51} é
 \[
@@ -1462,8 +1438,7 @@ Uma maneira de projetarmos o controlador é primeiramente escolhermos a estrutur
 \end{enumerate}
 
 \hypertarget{erro-em-regime-permanente}{%
-\subsection*{Erro em Regime Permanente}\label{erro-em-regime-permanente}}
-\addcontentsline{toc}{subsection}{Erro em Regime Permanente}
+\section{Erro em Regime Permanente}\label{erro-em-regime-permanente}}
 
 Relembramos o Teorema do Valor Final:
 
@@ -1581,9 +1556,9 @@ Assim,
 \boxed{C(s)=\frac{2.1}{s}}.
 \]
 
-\hypertarget{procedimentos-do-laboratuxf3rio-5}{%
-\section*{Procedimentos do Laboratório 5}\label{procedimentos-do-laboratuxf3rio-5}}
-\addcontentsline{toc}{section}{Procedimentos do Laboratório 5}
+\hypertarget{procedimentos-lab-5}{%
+\section*{Procedimentos Lab 5}\label{procedimentos-lab-5}}
+\addcontentsline{toc}{section}{Procedimentos Lab 5}
 
 \hypertarget{problema-1}{%
 \subsection*{Problema 1}\label{problema-1}}

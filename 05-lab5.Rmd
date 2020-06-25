@@ -1,10 +1,8 @@
 # Projeto de Controladores por Métodos Algébricos
 
-### Objetivos {-}
-
 Nesta experiência projetaremos controladores que atendam determinadas especificações de regime transitório e de regime permanente em malha-fechada por métodos algébricos. Comprovaremos por simulação no Matlab o desempenho do sistema em malha-fechada.
 
-### Controladores Clássicos {-}
+## Controladores Clássicos
 
 Considere o diagrama de blocos $G(s)$ em malha-fechada da Figura \@ref(fig:fig51) onde $r(t)$ é a referência, $w(t)$ é uma perturbação externa, $y(t)$ é a saída, $e(t) = r(t) - y(t)$ é o erro de rastreamento, $u(t)$ é o controle e $C(s)$ é o controlador a ser projetado.
 
@@ -26,7 +24,7 @@ e então escolher adequadamente os parâmetros correspondentes de modo que o sis
 
 É importante ressaltar que em situações reais devemos sempre procurar utilizar controladores com a estrutura mais simples possível. Isto implica em menos dificuldades na implementação e em menores custos. Na próxima seção veremos um método algébrico de projeto de controladores.
 
-### Método Algébrico de Projeto de Controladores {-}
+## Método Algébrico de Projeto de Controladores
 
 Considerando que $w=0$ (sem perturbação), temos que a Função de Transferência em malha-fechada  da figura \@ref(fig:fig51) é
 $$
@@ -40,7 +38,7 @@ Uma maneira de projetarmos o controlador é primeiramente escolhermos a estrutur
 3. Mesmo quando fazemos cancelamento pólo-zero em $C(s)G(s)$ que está no SPE (estável), temos que o regime transitório referente à perturbação $w$ será influenciado pelo pólo de $G(s)$ que foi cancelado. Desse modo, se o pólo cancelado de $G(s)$ é muito lento, ou seja, está muito próximo do eixo imaginário, a dinâmica da rejeição de tais perturbações também será bastante lenta;
 4. Quando desejamos que $F(s)$ seja de segunda ordem, muitas vezes não conseguimos atender simultaneamente as especificações de tempo de acomodação ($t_s(5\%)$) e de sobressinal ($M_p$).
 
-### Erro em Regime Permanente {-}
+## Erro em Regime Permanente
 
 Relembramos o Teorema do Valor Final:
 
@@ -150,7 +148,7 @@ $$
 \boxed{C(s)=\frac{2.1}{s}}.
 $$
 
-## Procedimentos do Laboratório 5 {-}
+## Procedimentos Lab 5 {-}
 
 ### Problema 1 {-}
 

@@ -1,10 +1,8 @@
 # Rastreamento de Referências e Rejeição de Perturbações - Erro em Regime Permanente
 
-### Objetivos {-}
-
 Nesta experiência analisaremos o erro em regime permanente de sistemas em malha-fechada para o rastreamento de referências e a rejeição de perturbações. Consideraremos referências e perturbações do tipo degrau, rampa e parábola. Comprovaremos os resultados teóricos através de simulações no Simulink/Matlab.
 
-### Tipos de Sistemas {-}
+## Tipos de Sistemas
 
 Considere a Função de Transferência
 $$
@@ -16,7 +14,7 @@ onde $N(s)$ e $D(s)$ são polinômios em $s$ sem raízes em comum e com $\text{g
 - Tipo 1: $G(s)$ tem um (e apenas um) pólo em $s=0$. Podemos então escrever $$G(s) = \frac {1}{s}G_0(s),$$ onde $G_0(s) = \frac {N(s)}{D_0(s)}$ não possui pólos em $s=0$. Chamamos $K_v= G_0(0) \neq 0$ de *constante de velocidade*. Note que $K_v = \lim\limits_{s \to 0} sG(s)$.
 - Tipo 2: $G(s)$ tem dois (e apenas dois) pólos em $s=0$. Podemos escrever $$G(s) = \frac {1}{s^2}G_0(s),$$ onde $G_0(s) = \frac {N(s)}{D_0(s)}$ não possui pólos em $s=0$. Denominamos $K_a = G_0(0) \neq 0$ de *constante de aceleração*. Note que $K_a =\lim\limits_{s \to 0} s^2G(s)$.
 
-### Erro em regime permanente {-}
+## Erro em regime permanente.
 
 Considere o sistema em malha-fechada com realimentação unitária mostrado na Figura \@ref{fig:fig41}, onde:
 $$
@@ -109,9 +107,7 @@ knitr::kable(resultados, booktabs = T, escape = FALSE, caption = "Valores de $y_
 ```
 
 
-<!-- ----------------------------------------------------------------------- -->
-
-## Procedimentos do Laboratório 4 {-}
+## Procedimentos Lab 4 {-}
 
 Em todos os itens abaixo consideramos o sistema em malha-fechada mostrado na Figura \@ref(fig:fig43) onde $C(s)$ é o controlador, $G(s)$ é a planta (processo) e $u(t)$ é o sinal de controle.
 

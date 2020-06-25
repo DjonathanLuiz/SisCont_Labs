@@ -113,7 +113,7 @@
 
 \title{Laboratório de Sistemas de Controle}
 \author{Djonathan Luiz de Oliveira Quadras}
-\date{2020-06-16}
+\date{2020-06-25}
 
 \begin{document}
 \maketitle
@@ -136,17 +136,16 @@ Este laboratório consistiu apenas na apresentação da disciplina, da ferrament
 \hypertarget{efeitos-de-puxf3los-e-zeros-na-dinuxe2mica}{%
 \chapter{Efeitos de Pólos e Zeros na Dinâmica}\label{efeitos-de-puxf3los-e-zeros-na-dinuxe2mica}}
 
-\hypertarget{apresentauxe7uxe3o-do-laboratuxf3rio}{%
-\section{Apresentação do Laboratório}\label{apresentauxe7uxe3o-do-laboratuxf3rio}}
-
 \hypertarget{objetivo}{%
-\subsection{Objetivo}\label{objetivo}}
+\subsection*{Objetivo}\label{objetivo}}
+\addcontentsline{toc}{subsection}{Objetivo}
 
 Nesta experiência, verificaremos a influência dos pólos e zeros de uma Função de Transferência na resposta dinâmica para entradas do tipo degrau e também para entradas senoidais. Utilizaremos o Matlab para realizar as
 simulações.
 
 \hypertarget{puxf3los-e-zeros}{%
-\subsection{Pólos e Zeros}\label{puxf3los-e-zeros}}
+\subsection*{Pólos e Zeros}\label{puxf3los-e-zeros}}
+\addcontentsline{toc}{subsection}{Pólos e Zeros}
 
 Considere uma função de Trasnferência da forma
 
@@ -186,8 +185,9 @@ Considere que \(G(s)\) é estável, ou seja, todos os pólos estão no SPE. Em g
   Um zero bem próximo de um pólo tende a anular os efeitos dos mesmos na resposta dinâmica.
 \end{enumerate}
 
-\hypertarget{procedimentos}{%
-\section{Procedimentos}\label{procedimentos}}
+\hypertarget{procedimentos-dolaboratuxf3rio-2}{%
+\section*{Procedimentos doLaboratório 2}\label{procedimentos-dolaboratuxf3rio-2}}
+\addcontentsline{toc}{section}{Procedimentos doLaboratório 2}
 
 \hypertarget{problema-1}{%
 \subsection*{Problema 1}\label{problema-1}}
@@ -635,16 +635,15 @@ O motivo da resposta ser negativa se deve ao fato de o zero da função \(G(s)\)
 \hypertarget{identificauxe7uxe3o-de-sistemas}{%
 \chapter{Identificação de Sistemas}\label{identificauxe7uxe3o-de-sistemas}}
 
-\hypertarget{apresentauxe7uxe3o-do-laboratuxf3rio-1}{%
-\section{Apresentação do Laboratório}\label{apresentauxe7uxe3o-do-laboratuxf3rio-1}}
-
-\hypertarget{objetivo-1}{%
-\subsection{Objetivo}\label{objetivo-1}}
+\hypertarget{objetivo}{%
+\subsection*{Objetivo}\label{objetivo}}
+\addcontentsline{toc}{subsection}{Objetivo}
 
 Nesta experiência, veremos como modelar matematicamente um sistema linear por uma Função de Transferência. Identificaremos os parâmetros de uma Função de Transferência de primeira e de segunda ordem. Compararemos a dinâmica do sistema com a do modelo matemático.
 
 \hypertarget{modelagem-de-sistemas-lineares}{%
-\subsection{Modelagem de Sistemas Lineares}\label{modelagem-de-sistemas-lineares}}
+\subsection*{Modelagem de Sistemas Lineares}\label{modelagem-de-sistemas-lineares}}
+\addcontentsline{toc}{subsection}{Modelagem de Sistemas Lineares}
 
 Encontrar um modelo matemático que capture as características dinâmicas relevantes de um sistema real é de fundamental importância para a análise e controle do sistema. No Laboratório 1 estudamos um modelo linear com motor CC. Tal modelo pode ser obtido a partir das leis da física (mecânica e eletromagnetismo) e os valores dos parâmetros dependem de constantes e coeficientes físicos (indutância do enrolamento, resistência do enrolamento, constante de torque do motor, coeficiente de atrito ciscoso). Em situações reais, não conheceremos uma estimativa para os mesmos. Por exemplo, todo resistor possui um valor normal e uma faixa de tolerância percentual (e.g.~\(R = 100 \Omega \pm 5\%\)). Além disso, muitas vezes a determinação de um modelo matemático para um sistema a partir de leis naturais é extremamente difícil e, mesmo no caso em que isso é possível, o modelo obtido pode ser demasiadamente complexo para ser estudado matematicamente.
 
@@ -653,7 +652,8 @@ Devido às dificuldades que acabamos de expor, em geral buscamos um modelo matem
 Nesta experiência, consideraremos apenas sistemas lineares que possam ser modelados por uma função de Transferência \(G(s)\) de primeira ordem ou de segunda ordem. Veremos então como identificar os parâmetros de \(G(s)\).
 
 \hypertarget{identificauxe7uxe3o-de-sistemas-de-primeira-ordem}{%
-\subsection{Identificação de sistemas de primeira ordem}\label{identificauxe7uxe3o-de-sistemas-de-primeira-ordem}}
+\subsection*{Identificação de sistemas de primeira ordem}\label{identificauxe7uxe3o-de-sistemas-de-primeira-ordem}}
+\addcontentsline{toc}{subsection}{Identificação de sistemas de primeira ordem}
 
 Toda Função de Transferência \(G(s)\) de primeira ordem pode ser escrita na forma padrão como
 
@@ -690,7 +690,8 @@ K = \frac{y(\infty)}{A},  \tau = \frac {t_s(5\%)}{3}. \label{eq:eq32}
 \end{align}
 
 \hypertarget{identificauxe7uxe3o-de-sistemas-de-segunda-ordem}{%
-\subsection{Identificação de Sistemas de Segunda Ordem}\label{identificauxe7uxe3o-de-sistemas-de-segunda-ordem}}
+\subsection*{Identificação de Sistemas de Segunda Ordem}\label{identificauxe7uxe3o-de-sistemas-de-segunda-ordem}}
+\addcontentsline{toc}{subsection}{Identificação de Sistemas de Segunda Ordem}
 
 Toda Função de Transferência \(G(s)\) de segunda ordem com pólos não-nulos pode ser escrita como
 
@@ -721,7 +722,8 @@ Temos as seguintes situações:
 \end{enumerate}
 
 \hypertarget{sistemas-sub-amortecidos}{%
-\subsubsection{Sistemas sub-amortecidos}\label{sistemas-sub-amortecidos}}
+\subsubsection*{Sistemas sub-amortecidos}\label{sistemas-sub-amortecidos}}
+\addcontentsline{toc}{subsubsection}{Sistemas sub-amortecidos}
 
 Suponha que \(G(s)\) é estável com \(0 < \xi < 1\) (sub-amortecido). Considere uma entrada \(u(t) = A\) do tipo degrau de magnitude \(A\). A resposta correspondente \(y(t)\) é ilustrada na figura 2.
 
@@ -744,7 +746,8 @@ K = \frac {y(\infty)}{A}, \quad M_p = \frac {y_p - y(\infty)}{y(\infty)}, \quad 
 \end{align}
 
 \hypertarget{sistemas-criticamente-amortecidos-e-super-amortecidos}{%
-\subsubsection{Sistemas criticamente amortecidos e super-amortecidos}\label{sistemas-criticamente-amortecidos-e-super-amortecidos}}
+\subsubsection*{Sistemas criticamente amortecidos e super-amortecidos}\label{sistemas-criticamente-amortecidos-e-super-amortecidos}}
+\addcontentsline{toc}{subsubsection}{Sistemas criticamente amortecidos e super-amortecidos}
 
 Suponha que \(G(s)\) é estável com \(\xi \geq 1\) (criticamente amortecido ou super-amortecido). Neste caso, os dois pólos de \(G(s)\) são reais e a resposta ao degrau se assemelha ao de um sistema de primeira ordem (não apresenta oscilação nem sobressinal). Podemos identificar \(G(s)\) indiretamente através da identificação da Função de Transferência \(F(s)\) em malha-fechada. Considere o diagrama de blocos em malha-fechada mostrando na Figura 3, onde \(K_c > 0\) é o ganho de um controlador proporcional e \(r\) é a referência.
 
@@ -765,18 +768,19 @@ Para qualquer \(K_c > 0\), temos que \(F(s)\) é um sistema de segunda ordem est
 F(s) = \frac {K_cG(s)}{1+K_cG(s)} \implies G(s) = \frac {F(s)}{K_c - K_cF(s)}.  \label{eq:eq35}
 \end{align}
 
-\hypertarget{procedimentos-1}{%
-\section{Procedimentos}\label{procedimentos-1}}
+\hypertarget{procedimentos-do-laboratuxf3rio-3}{%
+\section*{Procedimentos do Laboratório 3}\label{procedimentos-do-laboratuxf3rio-3}}
+\addcontentsline{toc}{section}{Procedimentos do Laboratório 3}
 
-\hypertarget{problema-1-1}{%
-\subsection*{Problema 1}\label{problema-1-1}}
+\hypertarget{problema-1}{%
+\subsection*{Problema 1}\label{problema-1}}
 \addcontentsline{toc}{subsection}{Problema 1}
 
 Aplique um degrau \(u(t) = 2\) no Sistema 1 do arquivo \texttt{MatLab3.mdl} do Simulink. Pelas características da resposta, modele o Sistema 1 como uma Função de Transferência \(G_1(s)%
 \) de primeira ou segunda ordem. Em seguida, identifique os parâmetros do modelo utilizando a equação \eqref{eq:eq32} ou \eqref{eq:eq34}. Compare a resposta do modelo identificado com a do Sistema 1.
 
-\hypertarget{resoluuxe7uxe3o-6}{%
-\subsubsection*{Resolução}\label{resoluuxe7uxe3o-6}}
+\hypertarget{resoluuxe7uxe3o}{%
+\subsubsection*{Resolução}\label{resoluuxe7uxe3o}}
 \addcontentsline{toc}{subsubsection}{Resolução}
 
 Simulando o sistema do modelo 1 obtemos o resultado abaixo.
@@ -800,14 +804,14 @@ Simulando \(G_1(s)\), temos o resultado apresentado abaixo.
 
 Percebe-se, assim, que a Função de Transferência \(G_1(s)\) se aproxima satisfatoriamente bem do Sistema 1.
 
-\hypertarget{problema-2-1}{%
-\subsection*{Problema 2}\label{problema-2-1}}
+\hypertarget{problema-2}{%
+\subsection*{Problema 2}\label{problema-2}}
 \addcontentsline{toc}{subsection}{Problema 2}
 
 Aplique um degrau \(u(t) = 4\) no Sistema 2. Pelas características da resposta modele o Sistema 2 como uma Função de Transferência \(G_2(s)\) de primeira ou segunda ordem. Em seguida, identifique os parâmetros do modelo utilizando a equação \eqref{eq:eq32} ou \eqref{eq:eq34}. Realize os cálculos na linha de comando do \texttt{Matlab} (\(\ln{(x)} \implies \log{(x)}\) e \(\sqrt{x} \implies \text{sqrt(x)}\)).Compare a resposta do modelo identificando com a do Sistema 2.
 
-\hypertarget{resoluuxe7uxe3o-7}{%
-\subsubsection*{Resolução}\label{resoluuxe7uxe3o-7}}
+\hypertarget{resoluuxe7uxe3o-1}{%
+\subsubsection*{Resolução}\label{resoluuxe7uxe3o-1}}
 \addcontentsline{toc}{subsubsection}{Resolução}
 
 Simulando o sistema do modelo 1 obtemos o resultado abaixo.
@@ -836,8 +840,8 @@ Simulando \(G_2(s)\), temos o resultado apresentado abaixo.
 
 Percebe-se, assim, que a Função de Transferência \(G_2(s)\) se assemelha ao Sistema 2,porém, com menor precisão que a função \(G_1(s)\) se aproximou do Sistema 2.
 
-\hypertarget{problema-3-1}{%
-\subsection*{Problema 3}\label{problema-3-1}}
+\hypertarget{problema-3}{%
+\subsection*{Problema 3}\label{problema-3}}
 \addcontentsline{toc}{subsection}{Problema 3}
 
 \hypertarget{parte-a}{%
@@ -846,8 +850,8 @@ Percebe-se, assim, que a Função de Transferência \(G_2(s)\) se assemelha ao S
 
 Aplique um degrau \(u(t) = 3\) no Sistema 3. Obtenha um modelo aproximado para o Sistema 3 como uma Função de Transferência \(G(s)\) de primeira ordem. Agora implemente o diagrama de blocos em malha fechada da Figura 3 para o Sistema 3 com \(r(t) = 1\) do tipo degrau e \(K_c = 3\)Observamos que, na Figura 3, se \(G(s)\) é de primeira ordem, então a Função de Transferência em malha fechada \(F(s)\) também será de primeira ordem para qualquer valor de \(K_c > 0\). A resposta do Sistema 3 em malha-fechada está de acordo com tal propriedade? O que pode estar errado?
 
-\hypertarget{resoluuxe7uxe3o-8}{%
-\paragraph*{Resolução}\label{resoluuxe7uxe3o-8}}
+\hypertarget{resoluuxe7uxe3o-2}{%
+\paragraph*{Resolução}\label{resoluuxe7uxe3o-2}}
 \addcontentsline{toc}{paragraph}{Resolução}
 
 Simulando o sistema do modelo 1 obtemos o resultado abaixo.
@@ -891,8 +895,8 @@ Identifique \(F(s)\). Em seguida, identifique \(G(s)\)indiretamente através da 
 
 Note que \(G(s)\) é de segunda ordem com pólos reais. Neste momento, temos condições de responderm o que estava errado em nossa modelagem inicial do Sistema 3 como um sistema de primeira ordem. Compare a resposta em malha-aberta de \(G(s)\) (identificando indiretamente) com a do Sistema 3 para \(u(t) = 3\) do tipo degrau.
 
-\hypertarget{resoluuxe7uxe3o-9}{%
-\paragraph*{Resolução}\label{resoluuxe7uxe3o-9}}
+\hypertarget{resoluuxe7uxe3o-3}{%
+\paragraph*{Resolução}\label{resoluuxe7uxe3o-3}}
 \addcontentsline{toc}{paragraph}{Resolução}
 
 Simulando o sistema do Sistema 3 em malha fechada e utilizando as ferramentas fornecidas pelo \texttt{Simulink} foi estimado que
@@ -929,16 +933,15 @@ Percebe-se que, considerando o modelo como uma Função de Transferência de seg
 \hypertarget{rastreamento-de-referuxeancias-e-rejeiuxe7uxe3o-de-perturbauxe7uxf5es---erro-em-regime-permanente}{%
 \chapter{Rastreamento de Referências e Rejeição de Perturbações - Erro em Regime Permanente}\label{rastreamento-de-referuxeancias-e-rejeiuxe7uxe3o-de-perturbauxe7uxf5es---erro-em-regime-permanente}}
 
-\hypertarget{apresentauxe7uxe3o-do-laboratuxf3rio-2}{%
-\section{Apresentação do Laboratório}\label{apresentauxe7uxe3o-do-laboratuxf3rio-2}}
-
 \hypertarget{objetivos}{%
-\subsection{Objetivos}\label{objetivos}}
+\subsection*{Objetivos}\label{objetivos}}
+\addcontentsline{toc}{subsection}{Objetivos}
 
 Nesta experiência analisaremos o erro em regime permanente de sistemas em malha-fechada para o rastreamento de referências e a rejeição de perturbações. Consideraremos referências e perturbações do tipo degrau, rampa e parábola. Comprovaremos os resultados teóricos através de simulações no Simulink/Matlab.
 
 \hypertarget{tipos-de-sistemas}{%
-\subsection{Tipos de Sistemas}\label{tipos-de-sistemas}}
+\subsection*{Tipos de Sistemas}\label{tipos-de-sistemas}}
+\addcontentsline{toc}{subsection}{Tipos de Sistemas}
 
 Considere a Função de Transferência
 \[
@@ -957,7 +960,8 @@ onde \(N(s)\) e \(D(s)\) são polinômios em \(s\) sem raízes em comum e com \(
 \end{itemize}
 
 \hypertarget{erro-em-regime-permanente}{%
-\subsection{Erro em regime permanente}\label{erro-em-regime-permanente}}
+\subsection*{Erro em regime permanente}\label{erro-em-regime-permanente}}
+\addcontentsline{toc}{subsection}{Erro em regime permanente}
 
 Considere o sistema em malha-fechada com realimentação unitária mostrado na Figura @ref\{fig:fig41\}, onde:
 \[
@@ -1074,8 +1078,9 @@ Tipo 2 & 0 & 0 & $\neq 0$\\
 \end{tabular}
 \end{table}
 
-\hypertarget{procedimentos-2}{%
-\section{Procedimentos}\label{procedimentos-2}}
+\hypertarget{procedimentos-do-laboratuxf3rio-4}{%
+\section*{Procedimentos do Laboratório 4}\label{procedimentos-do-laboratuxf3rio-4}}
+\addcontentsline{toc}{section}{Procedimentos do Laboratório 4}
 
 Em todos os itens abaixo consideramos o sistema em malha-fechada mostrado na Figura \ref{fig:fig43} onde \(C(s)\) é o controlador, \(G(s)\) é a planta (processo) e \(u(t)\) é o sinal de controle.
 
@@ -1083,8 +1088,8 @@ Em todos os itens abaixo consideramos o sistema em malha-fechada mostrado na Fig
 \includegraphics[width=0.8\linewidth]{Imagens/Lab4/Apresentação/fig3} \caption{Sistema em malha-fechada.}\label{fig:fig43}
 \end{figure}
 
-\hypertarget{problema-1-2}{%
-\subsection*{Problema 1}\label{problema-1-2}}
+\hypertarget{problema-1}{%
+\subsection*{Problema 1}\label{problema-1}}
 \addcontentsline{toc}{subsection}{Problema 1}
 
 Considere que
@@ -1104,12 +1109,12 @@ G(s) = \frac {1}{0.5s+1}, \quad C(s) = K_c \quad \text{(proporcional)}, \quad w=
   Com \(K_c = 1\) simule para \(r(t) = t\) (rampa) e \(r(t) = 0.5t^2\) (parábola). Determine o erro em regime permanente e verifique se os resultados estão de acordo com o esperado.
 \end{enumerate}
 
-\hypertarget{resoluuxe7uxe3o-10}{%
-\subsubsection*{Resolução}\label{resoluuxe7uxe3o-10}}
+\hypertarget{resoluuxe7uxe3o}{%
+\subsubsection*{Resolução}\label{resoluuxe7uxe3o}}
 \addcontentsline{toc}{subsubsection}{Resolução}
 
-\hypertarget{parte-a-1}{%
-\subsubsection*{Parte A}\label{parte-a-1}}
+\hypertarget{parte-a}{%
+\subsubsection*{Parte A}\label{parte-a}}
 \addcontentsline{toc}{subsubsection}{Parte A}
 
 Por meio da simulação foi encontrado o valor de \(e(\infty) = e_r(\infty) = 0.5\) conforme apresenta a Figura \ref{fig:fig41A1}.
@@ -1124,8 +1129,8 @@ Utilizando a Tabela \ref{tab:tab41} temos que \(e_r(\infty)=\frac{A}{1 + K_p}\).
 \includegraphics[width=0.8\linewidth]{Imagens/Lab4/Resolução/prob1A2} \caption{Valores para $K_c = 10$ e $K_c = 100$.}\label{fig:fig41A2}
 \end{figure}
 
-\hypertarget{parte-b-1}{%
-\subsubsection*{Parte B}\label{parte-b-1}}
+\hypertarget{parte-b}{%
+\subsubsection*{Parte B}\label{parte-b}}
 \addcontentsline{toc}{subsubsection}{Parte B}
 
 Teoricamente, é possível encontrar um erro nulo \(e(\infty) = 0\) se utilizado um ganho infinito \(K_c = \infty\). Pois, de acordo com a Tabela \ref{tab:tab41}, temos que
@@ -1153,8 +1158,8 @@ A Figura \ref{fig:fig41C2} apresenta os valores de \(y(s)\) e \(e(s)\) para uma 
 
 É possível perceber que, como o esperado, \(e(\infty)= e_r(\infty) = \infty\) para ambos os casos.
 
-\hypertarget{problema-2-2}{%
-\subsection*{Problema 2}\label{problema-2-2}}
+\hypertarget{problema-2}{%
+\subsection*{Problema 2}\label{problema-2}}
 \addcontentsline{toc}{subsection}{Problema 2}
 
 Considere que
@@ -1183,8 +1188,8 @@ G(s) = \frac {1}{0.5s+1}, \quad C(s) = \frac{K_c}{s} \text{ (integral)}, \quad w
 \subsubsection*{Resulução}\label{resuluuxe7uxe3o}}
 \addcontentsline{toc}{subsubsection}{Resulução}
 
-\hypertarget{parte-a-2}{%
-\paragraph*{Parte A}\label{parte-a-2}}
+\hypertarget{parte-a-1}{%
+\paragraph*{Parte A}\label{parte-a-1}}
 \addcontentsline{toc}{paragraph}{Parte A}
 
 Aplicando um controle \(C(s) = \frac {K_c}{s}\) em série a uma função \(G(s) = \frac {1}{0.5s+1}\) temos como resultado a Função de Transferência\\
@@ -1203,8 +1208,8 @@ Simulando para \(K_c = 10\), temos o resultado abaixo.
 \includegraphics[width=0.8\linewidth]{Imagens/Lab4/Resolução/prob2A2} \caption{Valores para $K_c = 10$.}\label{fig:fig42A2}
 \end{figure}
 
-\hypertarget{parte-b-2}{%
-\paragraph*{Parte B}\label{parte-b-2}}
+\hypertarget{parte-b-1}{%
+\paragraph*{Parte B}\label{parte-b-1}}
 \addcontentsline{toc}{paragraph}{Parte B}
 
 Simulando o sistema para um \(K_c = 2\) e uma entrada tipo rampa, temos que o sistema tem \(e(\infty) = 0.5\), o que está de acordo com a Tabela \ref{tab:tab41}. O resultado da simulação está apresentado abaixo.
@@ -1247,8 +1252,8 @@ Simulando a Função de Transferência \(G(s) = \frac {-s+2}{0.5s +1}\), control
 
 Diferentemente do esperado (que o \(e(\infty) = 0\)) uma vez que segundo a Tabela \ref{tab:tab41} para sistemas do Tipo 1 para entrada igual degrau o erro esperado é nulo, o erro não converge. Na realidade, é possível notar que o sistema não se comportou de forma estável.
 
-\hypertarget{problema-3-2}{%
-\subsection*{Problema 3}\label{problema-3-2}}
+\hypertarget{problema-3}{%
+\subsection*{Problema 3}\label{problema-3}}
 \addcontentsline{toc}{subsection}{Problema 3}
 
 Considere que
@@ -1271,12 +1276,12 @@ G(s) = \frac {1}{0.5s +1}, \quad C(s) = \frac {2}{s} \text{ (integral)}.
   Considere que \(r(t) = 2t\) (rampa) e \(w=t\) (rampa). Determine \(e(\infty)\) por simulação e verifique que tal valor é a diferença dos valores obtidos nas letras c e d.~Tal resultado era esperado? Justifique (relembre \eqref{eq:eq41}).
 \end{enumerate}
 
-\hypertarget{resoluuxe7uxe3o-11}{%
-\subsubsection*{Resolução}\label{resoluuxe7uxe3o-11}}
+\hypertarget{resoluuxe7uxe3o-1}{%
+\subsubsection*{Resolução}\label{resoluuxe7uxe3o-1}}
 \addcontentsline{toc}{subsubsection}{Resolução}
 
-\hypertarget{parte-a-3}{%
-\paragraph*{Parte A}\label{parte-a-3}}
+\hypertarget{parte-a-2}{%
+\paragraph*{Parte A}\label{parte-a-2}}
 \addcontentsline{toc}{paragraph}{Parte A}
 
 Simulando o sistema com uma referência em zero e uma perturbação do tipo degrau unitário, temos o resultado apresentando na Figura \ref{fig:fig43A1} que está de acordo com o resultado esperado da Tabela \ref{tab:tab42}, retornando um valor de \(y(\infty) = 0\)
@@ -1285,8 +1290,8 @@ Simulando o sistema com uma referência em zero e uma perturbação do tipo degr
 \includegraphics[width=0.8\linewidth]{Imagens/Lab4/Resolução/prob3A1} \caption{Valores para sistema sem referência, apenas com perturbação.}\label{fig:fig43A1}
 \end{figure}
 
-\hypertarget{parte-b-3}{%
-\paragraph*{Parte B}\label{parte-b-3}}
+\hypertarget{parte-b-2}{%
+\paragraph*{Parte B}\label{parte-b-2}}
 \addcontentsline{toc}{paragraph}{Parte B}
 
 Simulando o sistema tendo uma entrada degrau de amplitude 5 e uma perturbação de amplitude 1, temos o resultado apresentado na figura \ref{fig:fig43B1}. O resultado mostra que o sistema era estável e havia convergido para 0. Ao receber a perturbação, o sistema se comportou de forma semelhante (a resposta voltou ao pico do sobressinal que havia chegado inicialmente) ao início da simulação, voltando a convergir para 0 em \(t=\infty\).
@@ -1340,8 +1345,8 @@ Percebe-se que o resultado está de acordo com o esperado, pois, de acordo com a
 e(\infty) = e_r(\infty) - y_w(\infty) = 1 - 0.5 = 0.5
 \]
 
-\hypertarget{problema-4-1}{%
-\subsection*{Problema 4}\label{problema-4-1}}
+\hypertarget{problema-4}{%
+\subsection*{Problema 4}\label{problema-4}}
 \addcontentsline{toc}{subsection}{Problema 4}
 
 Considere que
@@ -1358,8 +1363,8 @@ G(s) = \frac {2s +1}{0.5s+1}, \quad C(s) = \frac {K_c}{s^2}, \quad r(t) = t, \qu
   Considere que \(K_c =2\), \(r(t) = t^2\), \(w(t) = 0.5t^2\). Determine \(e(\infty)\) por simulação e verifique se o mesmo está de acordo com o esperado. Note que \(K_a = K_c\).
 \end{enumerate}
 
-\hypertarget{parte-a-4}{%
-\subsubsection*{Parte A}\label{parte-a-4}}
+\hypertarget{parte-a-3}{%
+\subsubsection*{Parte A}\label{parte-a-3}}
 \addcontentsline{toc}{subsubsection}{Parte A}
 
 O resultado da simulação está apresentado na Figura \ref{fig:fig44A1}.
@@ -1370,8 +1375,8 @@ O resultado da simulação está apresentado na Figura \ref{fig:fig44A1}.
 
 O resultado era esperado pois, para uma entrada tipo rampa com perturbação tipo rampa, um sistema do Tipo 2 retorna \(e_r(\infty) = 0\) e \(y_w(\infty) = 0\), resultando em \(e(\infty) = 0\).
 
-\hypertarget{parte-b-4}{%
-\subsubsection*{Parte B}\label{parte-b-4}}
+\hypertarget{parte-b-3}{%
+\subsubsection*{Parte B}\label{parte-b-3}}
 \addcontentsline{toc}{subsubsection}{Parte B}
 
 O resultado da simulação está apresentado na Figura \ref{fig:fig44B1}.
@@ -1390,16 +1395,15 @@ e(\infty) = 0.25.
 \hypertarget{projeto-de-controladores-por-muxe9todos-alguxe9bricos}{%
 \chapter{Projeto de Controladores por Métodos Algébricos}\label{projeto-de-controladores-por-muxe9todos-alguxe9bricos}}
 
-\hypertarget{apresentauxe7uxe3o-do-laboratuxf3rio-3}{%
-\section{Apresentação do Laboratório}\label{apresentauxe7uxe3o-do-laboratuxf3rio-3}}
-
-\hypertarget{objetivos-1}{%
-\subsection{Objetivos}\label{objetivos-1}}
+\hypertarget{objetivos}{%
+\subsection*{Objetivos}\label{objetivos}}
+\addcontentsline{toc}{subsection}{Objetivos}
 
 Nesta experiência projetaremos controladores que atendam determinadas especificações de regime transitório e de regime permanente em malha-fechada por métodos algébricos. Comprovaremos por simulação no Matlab o desempenho do sistema em malha-fechada.
 
 \hypertarget{controladores-cluxe1ssicos}{%
-\subsection{Controladores Clássicos}\label{controladores-cluxe1ssicos}}
+\subsection*{Controladores Clássicos}\label{controladores-cluxe1ssicos}}
+\addcontentsline{toc}{subsection}{Controladores Clássicos}
 
 Considere o diagrama de blocos \(G(s)\) em malha-fechada da Figura \ref{fig:fig51} onde \(r(t)\) é a referência, \(w(t)\) é uma perturbação externa, \(y(t)\) é a saída, \(e(t) = r(t) - y(t)\) é o erro de rastreamento, \(u(t)\) é o controle e \(C(s)\) é o controlador a ser projetado.
 
@@ -1434,7 +1438,8 @@ e então escolher adequadamente os parâmetros correspondentes de modo que o sis
 É importante ressaltar que em situações reais devemos sempre procurar utilizar controladores com a estrutura mais simples possível. Isto implica em menos dificuldades na implementação e em menores custos. Na próxima seção veremos um método algébrico de projeto de controladores.
 
 \hypertarget{muxe9todo-alguxe9brico-de-projeto-de-controladores}{%
-\subsection{Método Algébrico de Projeto de Controladores}\label{muxe9todo-alguxe9brico-de-projeto-de-controladores}}
+\subsection*{Método Algébrico de Projeto de Controladores}\label{muxe9todo-alguxe9brico-de-projeto-de-controladores}}
+\addcontentsline{toc}{subsection}{Método Algébrico de Projeto de Controladores}
 
 Considerando que \(w=0\) (sem perturbação), temos que a Função de Transferência em malha-fechada da figura \ref{fig:fig51} é
 \[
@@ -1456,8 +1461,9 @@ Uma maneira de projetarmos o controlador é primeiramente escolhermos a estrutur
   Quando desejamos que \(F(s)\) seja de segunda ordem, muitas vezes não conseguimos atender simultaneamente as especificações de tempo de acomodação (\(t_s(5\%)\)) e de sobressinal (\(M_p\)).
 \end{enumerate}
 
-\hypertarget{erro-em-regime-permanente-1}{%
-\subsection{Erro em Regime Permanente}\label{erro-em-regime-permanente-1}}
+\hypertarget{erro-em-regime-permanente}{%
+\subsection*{Erro em Regime Permanente}\label{erro-em-regime-permanente}}
+\addcontentsline{toc}{subsection}{Erro em Regime Permanente}
 
 Relembramos o Teorema do Valor Final:
 
@@ -1485,7 +1491,8 @@ R(s) = \frac{A}{s}, \quad W(s) = \frac{B}{s}.
 \]
 
 \hypertarget{b0-sem-perturbauxe7uxe3o}{%
-\subsubsection{\texorpdfstring{\textbf{\(B=0\) (sem perturbação)}}{B=0 (sem perturbação)}}\label{b0-sem-perturbauxe7uxe3o}}
+\subsubsection*{\texorpdfstring{\textbf{\(B=0\) (sem perturbação)}}{B=0 (sem perturbação)}}\label{b0-sem-perturbauxe7uxe3o}}
+\addcontentsline{toc}{subsubsection}{\textbf{\(B=0\) (sem perturbação)}}
 
 Suponha que \(D_c(s)D(s) = s\overline{D}(s)\), ou seja, \(C(s)G(s)\) tem um pólo em \(s=0\) (integrador). Temos que
 \[
@@ -1501,7 +1508,8 @@ e(\infty) = \lim\limits_{s\to0}{sE(s)} =
 pois \(D_c(0)D(0) + N_c(0)N(0) \neq 0\) (\(F(s)\) é estável) enão há divisão por zero! Desse modo, \(e(\infty) = 0\) independente da magnitude \(A\) de \(r(t)\). Isto significa que a saída \(y(t)\) rastreia a referência \(r(t)\) do tipo degrau em regime permanente.
 
 \hypertarget{bneq0-com-perturbauxe7uxe3o}{%
-\subsubsection{\texorpdfstring{\textbf{\(B\neq0\) (com perturbação)}}{B\textbackslash neq0 (com perturbação)}}\label{bneq0-com-perturbauxe7uxe3o}}
+\subsubsection*{\texorpdfstring{\textbf{\(B\neq0\) (com perturbação)}}{B\textbackslash neq0 (com perturbação)}}\label{bneq0-com-perturbauxe7uxe3o}}
+\addcontentsline{toc}{subsubsection}{\textbf{\(B\neq0\) (com perturbação)}}
 
 Suponha que \(D_c(s) = s\overline{D_c}(s)\), ou seja, \(C(s)\) tem um pólo em \(s=0\) (integrador). Temos que
 \[
@@ -1519,7 +1527,8 @@ e(\infty) = \lim\limits_{s\to0}{sE(s)} =
 pois \(D_c(0)D(0) + N_c(0)N(0) \neq 0\) (\(F(s)\) é estável) enão há divisão por zero! Desse modo, \(e(\infty) = 0\) independente da magnitude \(A\) e \(B\) de \(r(t)\) e \(w(t)\), respectivamente. Portanto, em regime permanente, a saída \(y(t)\) rastreia a referência \(r(t)\) com rejeição da perturbação \(w(t)\).
 
 \hypertarget{fs-de-primeira-ordem}{%
-\subsection{\texorpdfstring{\(F(s)\) de primeira ordem}{F(s) de primeira ordem}}\label{fs-de-primeira-ordem}}
+\subsection*{\texorpdfstring{\(F(s)\) de primeira ordem}{F(s) de primeira ordem}}\label{fs-de-primeira-ordem}}
+\addcontentsline{toc}{subsection}{\(F(s)\) de primeira ordem}
 
 Suponha que \(F(s)\) é uma Função de Transferência de primeira ordem da forma
 \[
@@ -1531,7 +1540,8 @@ onde \(\tau > 0\) (pólo estável em \(s=\frac{-1}{\tau}\)). Para referências \
 \]
 
 \hypertarget{fs-de-segunda-ordem}{%
-\subsection{\texorpdfstring{\(F(s)\) de segunda ordem}{F(s) de segunda ordem}}\label{fs-de-segunda-ordem}}
+\subsection*{\texorpdfstring{\(F(s)\) de segunda ordem}{F(s) de segunda ordem}}\label{fs-de-segunda-ordem}}
+\addcontentsline{toc}{subsection}{\(F(s)\) de segunda ordem}
 
 Suponha que \(F(s)\) é uma Função de Transferência de segunda ordem da forma
 \[
@@ -1571,11 +1581,12 @@ Assim,
 \boxed{C(s)=\frac{2.1}{s}}.
 \]
 
-\hypertarget{procedimentos-3}{%
-\section{Procedimentos}\label{procedimentos-3}}
+\hypertarget{procedimentos-do-laboratuxf3rio-5}{%
+\section*{Procedimentos do Laboratório 5}\label{procedimentos-do-laboratuxf3rio-5}}
+\addcontentsline{toc}{section}{Procedimentos do Laboratório 5}
 
-\hypertarget{problema-1-3}{%
-\subsection*{Problema 1}\label{problema-1-3}}
+\hypertarget{problema-1}{%
+\subsection*{Problema 1}\label{problema-1}}
 \addcontentsline{toc}{subsection}{Problema 1}
 
 Considere
@@ -1589,21 +1600,21 @@ G(s) = \frac {0.5}{10s+1}.
 \item
   Simule \(G(s)\) em malha-aberta para \(u(t) = 1\) do tipo degrau. Conforme o esperado, observe que \(t_s(5\%) = 30\) e \(y(\infty) = G(0) = 0.5\). Agora, aplique uma perturbação \(w(t) = 0.25\) do tipo degrau em \(t=100\). Note que a perturbação não é rejeitada.
 \item
-  Projete \(C(S)\) de modo que se tenha: (i) erro nulo em regime permanente para \(r(s)\) e \(w(s)\) do tipo degrau; (ii) \(t_s^{MF}(5\%) = \frac {t_s^{MA}(5\%)}{2}\) e a saída \(y(t)\) não apresenta sobressinal para referências do tipo degrau. Dica: utilize um controlador PI \(C(s) = \frac{K_c(10s+1)}{s}\) (cancelamento pólo-zero.
+  Projete \(C(S)\) de modo que se tenha: (i) erro nulo em regime permanente para \(r(s)\) e \(w(s)\) do tipo degrau; (ii) \(t_s^{MF}(5\%) = \frac {t_s^{MA}(5\%)}{2}\) e a saída \(y(t)\) não apresenta sobressinal para referências do tipo degrau. Dica: utilize um controlador PI \(C(s) = \frac{K_c(10s+1)}{s}\) (cancelamento pólo-zero).
 \item
   Simule o sistema em malha-fechada para \(r(t) =1\) e \(w(t) = 0.25\) do tipo degrau, aplicando \(w(t)\) em \(t=100\). Verifique se os requisitos de desempenho foram realmente atendidos e visualize o sinal de controle \(u(t)\). Note que \(u(\infty) = \frac {1}{G(0)}-0.25 = 1.75\) Isto era esperado? Justifique.
 \item
   Mantendo o mesmo controlador \(C(s)\) repita o item anterior para \(G(s) = \frac {0.45}{9.9s+1}\). Explique o motivo pelo qual ainda temos \(e(\infty) = 0\).
 \end{enumerate}
 
-\hypertarget{resoluuxe7uxe3o-12}{%
-\subsubsection*{Resolução}\label{resoluuxe7uxe3o-12}}
+\hypertarget{resoluuxe7uxe3o}{%
+\subsubsection*{Resolução}\label{resoluuxe7uxe3o}}
 \addcontentsline{toc}{subsubsection}{Resolução}
 
 Working on it :)
 
-\hypertarget{problema-2-3}{%
-\subsection*{Problema 2}\label{problema-2-3}}
+\hypertarget{problema-2}{%
+\subsection*{Problema 2}\label{problema-2}}
 \addcontentsline{toc}{subsection}{Problema 2}
 
 Considere que não há perturbações (\(w=0\)) e
@@ -1624,14 +1635,14 @@ G(s) = \frac{0.9}{s(s+1)}.
   Repita o item anterior, mas agora aplicando uma perturbação do tipo degrau \(w(t)\) não nula. Explique o motivo pelo qual \(e(\infty) \neq 0\).
 \end{enumerate}
 
-\hypertarget{resoluuxe7uxe3o-13}{%
-\subsubsection*{Resolução}\label{resoluuxe7uxe3o-13}}
+\hypertarget{resoluuxe7uxe3o-1}{%
+\subsubsection*{Resolução}\label{resoluuxe7uxe3o-1}}
 \addcontentsline{toc}{subsubsection}{Resolução}
 
 Working on it :)
 
-\hypertarget{problema-3-3}{%
-\subsection*{Problema 3}\label{problema-3-3}}
+\hypertarget{problema-3}{%
+\subsection*{Problema 3}\label{problema-3}}
 \addcontentsline{toc}{subsection}{Problema 3}
 
 Considere
@@ -1650,14 +1661,14 @@ G(s) = \frac{1.2}{s^2+4s+3} = \frac{1.2}{(s+1)(s+3)}.
   Simule o sistema em malha-fechada para \(r(t) = 3\) e \(w(t) = 0.5\) do tipo degrau, aplicando \(w(t)\) em \(t=15\). Verifique se os requisitos de desempenho foram realmente atendidos. Visualize o sinal de controle \(u(t)\).
 \end{enumerate}
 
-\hypertarget{resoluuxe7uxe3o-14}{%
-\subsubsection*{Resolução}\label{resoluuxe7uxe3o-14}}
+\hypertarget{resoluuxe7uxe3o-2}{%
+\subsubsection*{Resolução}\label{resoluuxe7uxe3o-2}}
 \addcontentsline{toc}{subsubsection}{Resolução}
 
 Working on it :)
 
-\hypertarget{problema-4-2}{%
-\subsection*{Problema 4}\label{problema-4-2}}
+\hypertarget{problema-4}{%
+\subsection*{Problema 4}\label{problema-4}}
 \addcontentsline{toc}{subsection}{Problema 4}
 
 Repita o problema 1 para
@@ -1666,8 +1677,8 @@ G(s) = \frac{0.5}{s-1} \quad \text{(instável),}
 \]
 e simule (dica: basta mudar o numerador do PI projetado no Problema 1 para \(s-1\)). Agora mantenha o mesmo controlador \(C(s)\) obtido mas altere o denominador de \(G(s)\) para \(s-0.99\) (incerteza de \(1\%\) no pólo de \(G(s)\)) e simule. Observe que \(y(t) \to -\infty\) quando \(t\to\infty\). Isto mostra o motivo pelo qual não podemos efetual cancelamentos pólo-zero instáveis em \(C(s)G(s)\).
 
-\hypertarget{resoluuxe7uxe3o-15}{%
-\subsubsection*{Resolução}\label{resoluuxe7uxe3o-15}}
+\hypertarget{resoluuxe7uxe3o-3}{%
+\subsubsection*{Resolução}\label{resoluuxe7uxe3o-3}}
 \addcontentsline{toc}{subsubsection}{Resolução}
 
 Working on it :)
@@ -1675,7 +1686,67 @@ Working on it :)
 \hypertarget{linearizauxe7uxe3o-de-sistemas-nuxe3o-lineares}{%
 \chapter{Linearização de Sistemas Não-Lineares}\label{linearizauxe7uxe3o-de-sistemas-nuxe3o-lineares}}
 
-Working on it :)
+\hypertarget{apresentauxe7uxe3o-do-laboratuxf3rio}{%
+\section{Apresentação do Laboratório}\label{apresentauxe7uxe3o-do-laboratuxf3rio}}
+
+\hypertarget{objetivos}{%
+\subsection{Objetivos}\label{objetivos}}
+
+Nesta experiência, veremos como podemos simular um sistema não-linear utilizando pacotes computacionais de simulação. Analisaremos os resultados de simulação do sistema de um tanque do Simulink/Matlab e verificaremos a noção de ponto de equilibrio. Por fim, com base na Função de Transferência do sistema linearizado, compararemos a dinâmica do mesmo com a dinâmica do sistema não-linear original por simulação.
+
+\hypertarget{sistema-de-um-tanque}{%
+\subsection{Sistema de um tanque}\label{sistema-de-um-tanque}}
+
+Considere o sistema de um tanque ilustrado na Figura \ref{fig:fig61}. A equação diferencial que descreve a dinâmica da altura do nível \(H\) do tanque é
+
+\begin{align}
+H(t) = \frac{1}{A}(Q_e(t)-Q_s(t)) = \boxed{\frac{1}{A}(Q_e(t)-\beta\sqrt{H(t)})}, \label{eq:eq61}
+\end{align}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{Imagens/Lab6/Apresentação/fig1} 
+
+}
+
+\caption{Tanque}\label{fig:fig61}
+\end{figure}
+
+onde
+
+\[
+  \begin{cases}
+    H & \quad \text{ : altura do nível,}\\
+    Q_e & \quad \text{ : vazão de entrada,}\\
+    Q_s = \beta\sqrt{H} & \quad \text{ : vazão de saída,}\\
+    \beta \geq 0 & \quad \text{ : parâmetro do tanque,}\\
+    A & \quad \text{ : área da base do tanque.}
+  \end{cases}
+\]
+
+Note que \eqref{eq:eq61} é uma equação diferencial não-linear. O diagrama de blocos corresponde à equação diferencial \eqref{eq:eq61} é mostrado abaixo, onde \(H(0)\) é a condição inicial.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{Imagens/Lab6/Apresentação/fig2} 
+
+}
+
+\caption{Diagrama de blocos da dinâmica da altura do nível $H$ do tanque.}\label{fig:fig62}
+\end{figure}
+
+A implementação deste diagrama de blocos em um pacote computacional de simulação fornece a solução da equação diferencial \eqref{eq:eq61} através de métodos numéricos de integração. Consequentemente, podemos analisar o comportamento dinâmico da altura do nível \(H(t)\) em função do tempo \(t\) para uma determinada escolha da vazão de entrada \(Q_e(t)\), \(t\geq 0\).
+
+\hypertarget{pontos-de-equiluxedbrio}{%
+\subsection{Pontos de equilíbrio}\label{pontos-de-equiluxedbrio}}
+
+Intuitivamente, pensamos que um sistema está em \emph{equilibrio} quando o mesmo apresenta um comportamento estático, ou seja, o sistema não exisbe qualquer dinâmica. Veremos agora como definir matematicamente tal noção.
+
+Considere um sistema não-linear descrito pela equação diferencial
+\begin{align}
+\dot{x}(t) = f(x(t),u(t)), \label{eq:eq62}
+\end{align}
+onde
 
 \hypertarget{controle-de-sistemas-nuxe3o-lineares}{%
 \chapter{Controle de Sistemas Não-Lineares}\label{controle-de-sistemas-nuxe3o-lineares}}

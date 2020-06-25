@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Laboratório 13 Digitalização de Controladores Analógicos | Laboratório de Sistemas de Controle</title>
+  <title>Procedimentos do Laboratório 5 | Laboratório de Sistemas de Controle</title>
   <meta name="description" content="Este livro tem o objetivo de apresentar as respostas dos laboratórios da disciplina DAS5317 Sistemas de Controle da Universidade Federal de Santa Catarina para o semestre 2020.1 desenvolvidas pelo acadêmico Djonathan Luiz de Oliveira Quadras." />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Laboratório 13 Digitalização de Controladores Analógicos | Laboratório de Sistemas de Controle" />
+  <meta property="og:title" content="Procedimentos do Laboratório 5 | Laboratório de Sistemas de Controle" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Laboratório 13 Digitalização de Controladores Analógicos | Laboratório de Sistemas de Controle" />
+  <meta name="twitter:title" content="Procedimentos do Laboratório 5 | Laboratório de Sistemas de Controle" />
   
   <meta name="twitter:description" content="Este livro tem o objetivo de apresentar as respostas dos laboratórios da disciplina DAS5317 Sistemas de Controle da Universidade Federal de Santa Catarina para o semestre 2020.1 desenvolvidas pelo acadêmico Djonathan Luiz de Oliveira Quadras." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="projeto-de-controladores-pelo-diagrama-de-bode.html"/>
-
+<link rel="prev" href="projeto-de-controladores-por-métodos-algébricos.html"/>
+<link rel="next" href="linearização-de-sistemas-não-lineares.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -228,18 +228,81 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="digitalização-de-controladores-analógicos" class="section level1" number="13">
-<h1><span class="header-section-number">Laboratório 13</span> Digitalização de Controladores Analógicos</h1>
+<div id="procedimentos-do-laboratório-5" class="section level2 unnumbered" number="">
+<h2>Procedimentos do Laboratório 5</h2>
+<div id="problema-1" class="section level3 unnumbered" number="">
+<h3>Problema 1</h3>
+<p>Considere
+<span class="math display">\[
+G(s) = \frac {0.5}{10s+1}.
+\]</span></p>
+<ol style="list-style-type: lower-alpha">
+<li>Simule <span class="math inline">\(G(s)\)</span> em malha-aberta para <span class="math inline">\(u(t) = 1\)</span> do tipo degrau. Conforme o esperado, observe que <span class="math inline">\(t_s(5\%) = 30\)</span> e <span class="math inline">\(y(\infty) = G(0) = 0.5\)</span>. Agora, aplique uma perturbação <span class="math inline">\(w(t) = 0.25\)</span> do tipo degrau em <span class="math inline">\(t=100\)</span>. Note que a perturbação não é rejeitada.</li>
+<li>Projete <span class="math inline">\(C(S)\)</span> de modo que se tenha: (i) erro nulo em regime permanente para <span class="math inline">\(r(s)\)</span> e <span class="math inline">\(w(s)\)</span> do tipo degrau; (ii) <span class="math inline">\(t_s^{MF}(5\%) = \frac {t_s^{MA}(5\%)}{2}\)</span> e a saída <span class="math inline">\(y(t)\)</span> não apresenta sobressinal para referências do tipo degrau. Dica: utilize um controlador PI <span class="math inline">\(C(s) = \frac{K_c(10s+1)}{s}\)</span> (cancelamento pólo-zero).</li>
+<li>Simule o sistema em malha-fechada para <span class="math inline">\(r(t) =1\)</span> e <span class="math inline">\(w(t) = 0.25\)</span> do tipo degrau, aplicando <span class="math inline">\(w(t)\)</span> em <span class="math inline">\(t=100\)</span>. Verifique se os requisitos de desempenho foram realmente atendidos e visualize o sinal de controle <span class="math inline">\(u(t)\)</span>. Note que <span class="math inline">\(u(\infty) = \frac {1}{G(0)}-0.25 = 1.75\)</span> Isto era esperado? Justifique.</li>
+<li>Mantendo o mesmo controlador <span class="math inline">\(C(s)\)</span> repita o item anterior para <span class="math inline">\(G(s) = \frac {0.45}{9.9s+1}\)</span>. Explique o motivo pelo qual ainda temos <span class="math inline">\(e(\infty) = 0\)</span>.</li>
+</ol>
+<div id="resolução" class="section level4 unnumbered" number="">
+<h4>Resolução</h4>
+<p>Working on it :)</p>
+<!-- ----------------------------------------------------------------------- -->
+</div>
+</div>
+<div id="problema-2" class="section level3 unnumbered" number="">
+<h3>Problema 2</h3>
+<p>Considere que não há perturbações (<span class="math inline">\(w=0\)</span>) e
+<span class="math display">\[
+G(s) = \frac{0.9}{s(s+1)}.
+\]</span></p>
+<ol style="list-style-type: lower-alpha">
+<li>Note que <span class="math inline">\(G(s)\)</span> tem um pólo em <span class="math inline">\(s=0\)</span>. Simule <span class="math inline">\(G(s)\)</span> em malha-aberta para <span class="math inline">\(u(t) = 5\)</span> do tipo degrau e analise os resultados. Note que <span class="math inline">\(y(t) \to \infty\)</span> quando <span class="math inline">\(t \to \infty\)</span>. Isto era esperado? Justifique.</li>
+<li>Projete <span class="math inline">\(C(s)\)</span> de modo que <span class="math inline">\(M_p = 0.2\)</span> (sobressinal de <span class="math inline">\(20\%\)</span>) e que se tenha erro nulo em regime permanente para <span class="math inline">\(r(t)\)</span> do tipo degrau (dica: utilize um controlador proporcional <span class="math inline">\(C(s) = K_c\)</span>).</li>
+<li>Simule o sistema em malha-fechada para <span class="math inline">\(r(t) = 5\)</span> do tipo degrau e verifique se os requisitos de desempenho foram realmente atendidos. Visualize o sinal de controle <span class="math inline">\(u(t)\)</span>.</li>
+<li>Repita o item anterior, mas agora aplicando uma perturbação do tipo degrau <span class="math inline">\(w(t)\)</span> não nula. Explique o motivo pelo qual <span class="math inline">\(e(\infty) \neq 0\)</span>.</li>
+</ol>
+<div id="resolução-1" class="section level4 unnumbered" number="">
+<h4>Resolução</h4>
+<p>Working on it :)</p>
+</div>
+</div>
+<div id="problema-3" class="section level3 unnumbered" number="">
+<h3>Problema 3</h3>
+<p>Considere
+<span class="math display">\[
+G(s) = \frac{1.2}{s^2+4s+3} = \frac{1.2}{(s+1)(s+3)}.
+\]</span></p>
+<ol style="list-style-type: lower-alpha">
+<li>Simule <span class="math inline">\(G(s)\)</span> em malha-aberta para <span class="math inline">\(u(t) =3\)</span> do tipo degrau e analise os resultados. Note que a saída <span class="math inline">\(y(t)\)</span> não apresenta sobressinal. Isto era esperado? Justifique.</li>
+<li>Projete <span class="math inline">\(C(s)\)</span> de modo que se tenha erro nulo em regime permanente para <span class="math inline">\(r(t)\)</span> e <span class="math inline">\(w(t)\)</span> do tipo degrau unitário e que <span class="math inline">\(M_p=0.05\)</span> (sobressinal de <span class="math inline">\(5\%\)</span>) para referências do tipo degrau. Dica: utilize um controlador PI que cancele o polo mais lendo de <span class="math inline">\(G(s)\)</span> (<span class="math inline">\(s=-1\)</span>) para que se obtenha um <span class="math inline">\(t_s(5\%)\)</span> menor.</li>
+<li>Simule o sistema em malha-fechada para <span class="math inline">\(r(t) = 3\)</span> e <span class="math inline">\(w(t) = 0.5\)</span> do tipo degrau, aplicando <span class="math inline">\(w(t)\)</span> em <span class="math inline">\(t=15\)</span>. Verifique se os requisitos de desempenho foram realmente atendidos. Visualize o sinal de controle <span class="math inline">\(u(t)\)</span>.</li>
+</ol>
+<div id="resolução-2" class="section level4 unnumbered" number="">
+<h4>Resolução</h4>
+<p>Working on it :)</p>
+</div>
+</div>
+<div id="problema-4" class="section level3 unnumbered" number="">
+<h3>Problema 4</h3>
+<p>Repita o problema 1 para
+<span class="math display">\[
+G(s) = \frac{0.5}{s-1} \quad \text{(instável),}
+\]</span>
+e simule (dica: basta mudar o numerador do PI projetado no Problema 1 para <span class="math inline">\(s-1\)</span>). Agora mantenha o mesmo controlador <span class="math inline">\(C(s)\)</span> obtido mas altere o denominador de <span class="math inline">\(G(s)\)</span> para <span class="math inline">\(s-0.99\)</span> (incerteza de <span class="math inline">\(1\%\)</span> no pólo de <span class="math inline">\(G(s)\)</span>) e simule. Observe que <span class="math inline">\(y(t) \to -\infty\)</span> quando <span class="math inline">\(t\to\infty\)</span>. Isto mostra o motivo pelo qual não podemos efetual cancelamentos pólo-zero instáveis em <span class="math inline">\(C(s)G(s)\)</span>.</p>
+<div id="resolução-3" class="section level4 unnumbered" number="">
+<h4>Resolução</h4>
 <p>Working on it :)</p>
 
 </div>
+</div>
+</div>
+<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="projeto-de-controladores-pelo-diagrama-de-bode.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="projeto-de-controladores-por-métodos-algébricos.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="linearização-de-sistemas-não-lineares.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

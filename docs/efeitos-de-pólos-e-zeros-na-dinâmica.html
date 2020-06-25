@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Laboratório 2 Efeitos de Pólos e Zeros na Dinâmica | Laboratório de Sistemas de Controle</title>
   <meta name="description" content="Este livro tem o objetivo de apresentar as respostas dos laboratórios da disciplina DAS5317 Sistemas de Controle da Universidade Federal de Santa Catarina para o semestre 2020.1 desenvolvidas pelo acadêmico Djonathan Luiz de Oliveira Quadras." />
-  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Laboratório 2 Efeitos de Pólos e Zeros na Dinâmica | Laboratório de Sistemas de Controle" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Djonathan Luiz de Oliveira Quadras" />
 
 
-<meta name="date" content="2020-06-16" />
+<meta name="date" content="2020-06-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,8 +32,8 @@
   
   
 <link rel="prev" href="simulação-de-sistemas.html"/>
-<link rel="next" href="identificação-de-sistemas.html"/>
-<script src="libs/header-attrs-2.1/header-attrs.js"></script>
+<link rel="next" href="procedimentos-dolaboratório-2.html"/>
+<script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -51,6 +51,7 @@
 
 
 
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 
 
 <style type="text/css">
@@ -137,73 +138,69 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1" data-path="simulação-de-sistemas.html"><a href="simulação-de-sistemas.html"><i class="fa fa-check"></i><b>1</b> Simulação de Sistemas</a></li>
 <li class="chapter" data-level="2" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html"><i class="fa fa-check"></i><b>2</b> Efeitos de Pólos e Zeros na Dinâmica</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#apresentação-do-laboratório"><i class="fa fa-check"></i><b>2.1</b> Apresentação do Laboratório</a>
+<li class="chapter" data-level="" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#objetivo"><i class="fa fa-check"></i>Objetivo</a></li>
+<li class="chapter" data-level="" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#pólos-e-zeros"><i class="fa fa-check"></i>Pólos e Zeros</a></li>
+<li class="chapter" data-level="" data-path="procedimentos-dolaboratório-2.html"><a href="procedimentos-dolaboratório-2.html"><i class="fa fa-check"></i>Procedimentos doLaboratório 2</a>
 <ul>
-<li class="chapter" data-level="2.1.1" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#objetivo"><i class="fa fa-check"></i><b>2.1.1</b> Objetivo</a></li>
-<li class="chapter" data-level="2.1.2" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#pólos-e-zeros"><i class="fa fa-check"></i><b>2.1.2</b> Pólos e Zeros</a></li>
-</ul></li>
-<li class="chapter" data-level="2.2" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#procedimentos"><i class="fa fa-check"></i><b>2.2</b> Procedimentos</a>
-<ul>
-<li class="chapter" data-level="" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#problema-1"><i class="fa fa-check"></i>Problema 1</a></li>
-<li class="chapter" data-level="" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#problema-2"><i class="fa fa-check"></i>Problema 2</a></li>
-<li class="chapter" data-level="" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#problema-3"><i class="fa fa-check"></i>Problema 3</a></li>
-<li class="chapter" data-level="" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#problema-4"><i class="fa fa-check"></i>Problema 4</a></li>
-<li class="chapter" data-level="" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#problema-5"><i class="fa fa-check"></i>Problema 5</a></li>
-<li class="chapter" data-level="" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#problema-6"><i class="fa fa-check"></i>Problema 6</a></li>
+<li class="chapter" data-level="" data-path="procedimentos-dolaboratório-2.html"><a href="procedimentos-dolaboratório-2.html#problema-1"><i class="fa fa-check"></i>Problema 1</a></li>
+<li class="chapter" data-level="" data-path="procedimentos-dolaboratório-2.html"><a href="procedimentos-dolaboratório-2.html#problema-2"><i class="fa fa-check"></i>Problema 2</a></li>
+<li class="chapter" data-level="" data-path="procedimentos-dolaboratório-2.html"><a href="procedimentos-dolaboratório-2.html#problema-3"><i class="fa fa-check"></i>Problema 3</a></li>
+<li class="chapter" data-level="" data-path="procedimentos-dolaboratório-2.html"><a href="procedimentos-dolaboratório-2.html#problema-4"><i class="fa fa-check"></i>Problema 4</a></li>
+<li class="chapter" data-level="" data-path="procedimentos-dolaboratório-2.html"><a href="procedimentos-dolaboratório-2.html#problema-5"><i class="fa fa-check"></i>Problema 5</a></li>
+<li class="chapter" data-level="" data-path="procedimentos-dolaboratório-2.html"><a href="procedimentos-dolaboratório-2.html#problema-6"><i class="fa fa-check"></i>Problema 6</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html"><i class="fa fa-check"></i><b>3</b> Identificação de Sistemas</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#apresentação-do-laboratório-1"><i class="fa fa-check"></i><b>3.1</b> Apresentação do Laboratório</a>
+<li class="chapter" data-level="" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#objetivo"><i class="fa fa-check"></i>Objetivo</a></li>
+<li class="chapter" data-level="" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#modelagem-de-sistemas-lineares"><i class="fa fa-check"></i>Modelagem de Sistemas Lineares</a></li>
+<li class="chapter" data-level="" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#identificação-de-sistemas-de-primeira-ordem"><i class="fa fa-check"></i>Identificação de sistemas de primeira ordem</a></li>
+<li class="chapter" data-level="" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#identificação-de-sistemas-de-segunda-ordem"><i class="fa fa-check"></i>Identificação de Sistemas de Segunda Ordem</a></li>
+<li class="chapter" data-level="" data-path="procedimentos-do-laboratório-3.html"><a href="procedimentos-do-laboratório-3.html"><i class="fa fa-check"></i>Procedimentos do Laboratório 3</a>
 <ul>
-<li class="chapter" data-level="3.1.1" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#objetivo-1"><i class="fa fa-check"></i><b>3.1.1</b> Objetivo</a></li>
-<li class="chapter" data-level="3.1.2" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#modelagem-de-sistemas-lineares"><i class="fa fa-check"></i><b>3.1.2</b> Modelagem de Sistemas Lineares</a></li>
-<li class="chapter" data-level="3.1.3" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#identificação-de-sistemas-de-primeira-ordem"><i class="fa fa-check"></i><b>3.1.3</b> Identificação de sistemas de primeira ordem</a></li>
-<li class="chapter" data-level="3.1.4" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#identificação-de-sistemas-de-segunda-ordem"><i class="fa fa-check"></i><b>3.1.4</b> Identificação de Sistemas de Segunda Ordem</a></li>
-</ul></li>
-<li class="chapter" data-level="3.2" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#procedimentos-1"><i class="fa fa-check"></i><b>3.2</b> Procedimentos</a>
-<ul>
-<li class="chapter" data-level="" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#problema-1-1"><i class="fa fa-check"></i>Problema 1</a></li>
-<li class="chapter" data-level="" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#problema-2-1"><i class="fa fa-check"></i>Problema 2</a></li>
-<li class="chapter" data-level="" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#problema-3-1"><i class="fa fa-check"></i>Problema 3</a></li>
+<li class="chapter" data-level="" data-path="procedimentos-dolaboratório-2.html"><a href="procedimentos-dolaboratório-2.html#problema-1"><i class="fa fa-check"></i>Problema 1</a></li>
+<li class="chapter" data-level="" data-path="procedimentos-dolaboratório-2.html"><a href="procedimentos-dolaboratório-2.html#problema-2"><i class="fa fa-check"></i>Problema 2</a></li>
+<li class="chapter" data-level="" data-path="procedimentos-dolaboratório-2.html"><a href="procedimentos-dolaboratório-2.html#problema-3"><i class="fa fa-check"></i>Problema 3</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html"><a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html"><i class="fa fa-check"></i><b>4</b> Rastreamento de Referências e Rejeição de Perturbações - Erro em Regime Permanente</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html"><a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#apresentação-do-laboratório-2"><i class="fa fa-check"></i><b>4.1</b> Apresentação do Laboratório</a>
+<li class="chapter" data-level="" data-path="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html"><a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#objetivos"><i class="fa fa-check"></i>Objetivos</a></li>
+<li class="chapter" data-level="" data-path="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html"><a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tipos-de-sistemas"><i class="fa fa-check"></i>Tipos de Sistemas</a></li>
+<li class="chapter" data-level="" data-path="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html"><a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#erro-em-regime-permanente"><i class="fa fa-check"></i>Erro em regime permanente</a></li>
+<li class="chapter" data-level="" data-path="procedimentos-do-laboratório-4.html"><a href="procedimentos-do-laboratório-4.html"><i class="fa fa-check"></i>Procedimentos do Laboratório 4</a>
 <ul>
-<li class="chapter" data-level="4.1.1" data-path="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html"><a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#objetivos"><i class="fa fa-check"></i><b>4.1.1</b> Objetivos</a></li>
-<li class="chapter" data-level="4.1.2" data-path="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html"><a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tipos-de-sistemas"><i class="fa fa-check"></i><b>4.1.2</b> Tipos de Sistemas</a></li>
-<li class="chapter" data-level="4.1.3" data-path="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html"><a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#erro-em-regime-permanente"><i class="fa fa-check"></i><b>4.1.3</b> Erro em regime permanente</a></li>
-</ul></li>
-<li class="chapter" data-level="4.2" data-path="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html"><a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#procedimentos-2"><i class="fa fa-check"></i><b>4.2</b> Procedimentos</a>
-<ul>
-<li class="chapter" data-level="" data-path="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html"><a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#problema-1-2"><i class="fa fa-check"></i>Problema 1</a></li>
-<li class="chapter" data-level="" data-path="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html"><a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#problema-2-2"><i class="fa fa-check"></i>Problema 2</a></li>
-<li class="chapter" data-level="" data-path="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html"><a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#problema-3-2"><i class="fa fa-check"></i>Problema 3</a></li>
-<li class="chapter" data-level="" data-path="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html"><a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#problema-4-1"><i class="fa fa-check"></i>Problema 4</a></li>
+<li class="chapter" data-level="" data-path="procedimentos-dolaboratório-2.html"><a href="procedimentos-dolaboratório-2.html#problema-1"><i class="fa fa-check"></i>Problema 1</a></li>
+<li class="chapter" data-level="" data-path="procedimentos-dolaboratório-2.html"><a href="procedimentos-dolaboratório-2.html#problema-2"><i class="fa fa-check"></i>Problema 2</a></li>
+<li class="chapter" data-level="" data-path="procedimentos-dolaboratório-2.html"><a href="procedimentos-dolaboratório-2.html#problema-3"><i class="fa fa-check"></i>Problema 3</a></li>
+<li class="chapter" data-level="" data-path="procedimentos-dolaboratório-2.html"><a href="procedimentos-dolaboratório-2.html#problema-4"><i class="fa fa-check"></i>Problema 4</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="projeto-de-controladores-por-métodos-algébricos.html"><a href="projeto-de-controladores-por-métodos-algébricos.html"><i class="fa fa-check"></i><b>5</b> Projeto de Controladores por Métodos Algébricos</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="projeto-de-controladores-por-métodos-algébricos.html"><a href="projeto-de-controladores-por-métodos-algébricos.html#apresentação-do-laboratório-3"><i class="fa fa-check"></i><b>5.1</b> Apresentação do Laboratório</a>
+<li class="chapter" data-level="" data-path="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html"><a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#objetivos"><i class="fa fa-check"></i>Objetivos</a></li>
+<li class="chapter" data-level="" data-path="projeto-de-controladores-por-métodos-algébricos.html"><a href="projeto-de-controladores-por-métodos-algébricos.html#controladores-clássicos"><i class="fa fa-check"></i>Controladores Clássicos</a></li>
+<li class="chapter" data-level="" data-path="projeto-de-controladores-por-métodos-algébricos.html"><a href="projeto-de-controladores-por-métodos-algébricos.html#método-algébrico-de-projeto-de-controladores"><i class="fa fa-check"></i>Método Algébrico de Projeto de Controladores</a></li>
+<li class="chapter" data-level="" data-path="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html"><a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#erro-em-regime-permanente"><i class="fa fa-check"></i>Erro em Regime Permanente</a></li>
+<li><a href="projeto-de-controladores-por-métodos-algébricos.html#fs-de-primeira-ordem"><span class="math inline">\(F(s)\)</span> de primeira ordem</a></li>
+<li><a href="projeto-de-controladores-por-métodos-algébricos.html#fs-de-segunda-ordem"><span class="math inline">\(F(s)\)</span> de segunda ordem</a></li>
+<li class="chapter" data-level="" data-path="procedimentos-do-laboratório-5.html"><a href="procedimentos-do-laboratório-5.html"><i class="fa fa-check"></i>Procedimentos do Laboratório 5</a>
 <ul>
-<li class="chapter" data-level="5.1.1" data-path="projeto-de-controladores-por-métodos-algébricos.html"><a href="projeto-de-controladores-por-métodos-algébricos.html#objetivos-1"><i class="fa fa-check"></i><b>5.1.1</b> Objetivos</a></li>
-<li class="chapter" data-level="5.1.2" data-path="projeto-de-controladores-por-métodos-algébricos.html"><a href="projeto-de-controladores-por-métodos-algébricos.html#controladores-clássicos"><i class="fa fa-check"></i><b>5.1.2</b> Controladores Clássicos</a></li>
-<li class="chapter" data-level="5.1.3" data-path="projeto-de-controladores-por-métodos-algébricos.html"><a href="projeto-de-controladores-por-métodos-algébricos.html#método-algébrico-de-projeto-de-controladores"><i class="fa fa-check"></i><b>5.1.3</b> Método Algébrico de Projeto de Controladores</a></li>
-<li class="chapter" data-level="5.1.4" data-path="projeto-de-controladores-por-métodos-algébricos.html"><a href="projeto-de-controladores-por-métodos-algébricos.html#erro-em-regime-permanente-1"><i class="fa fa-check"></i><b>5.1.4</b> Erro em Regime Permanente</a></li>
-<li class="chapter" data-level="5.1.5" data-path="projeto-de-controladores-por-métodos-algébricos.html"><a href="projeto-de-controladores-por-métodos-algébricos.html#fs-de-primeira-ordem"><i class="fa fa-check"></i><b>5.1.5</b> <span class="math inline">\(F(s)\)</span> de primeira ordem</a></li>
-<li class="chapter" data-level="5.1.6" data-path="projeto-de-controladores-por-métodos-algébricos.html"><a href="projeto-de-controladores-por-métodos-algébricos.html#fs-de-segunda-ordem"><i class="fa fa-check"></i><b>5.1.6</b> <span class="math inline">\(F(s)\)</span> de segunda ordem</a></li>
+<li class="chapter" data-level="" data-path="procedimentos-dolaboratório-2.html"><a href="procedimentos-dolaboratório-2.html#problema-1"><i class="fa fa-check"></i>Problema 1</a></li>
+<li class="chapter" data-level="" data-path="procedimentos-dolaboratório-2.html"><a href="procedimentos-dolaboratório-2.html#problema-2"><i class="fa fa-check"></i>Problema 2</a></li>
+<li class="chapter" data-level="" data-path="procedimentos-dolaboratório-2.html"><a href="procedimentos-dolaboratório-2.html#problema-3"><i class="fa fa-check"></i>Problema 3</a></li>
+<li class="chapter" data-level="" data-path="procedimentos-dolaboratório-2.html"><a href="procedimentos-dolaboratório-2.html#problema-4"><i class="fa fa-check"></i>Problema 4</a></li>
 </ul></li>
-<li class="chapter" data-level="5.2" data-path="projeto-de-controladores-por-métodos-algébricos.html"><a href="projeto-de-controladores-por-métodos-algébricos.html#procedimentos-3"><i class="fa fa-check"></i><b>5.2</b> Procedimentos</a>
+</ul></li>
+<li class="chapter" data-level="6" data-path="linearização-de-sistemas-não-lineares.html"><a href="linearização-de-sistemas-não-lineares.html"><i class="fa fa-check"></i><b>6</b> Linearização de Sistemas Não-Lineares</a>
 <ul>
-<li class="chapter" data-level="" data-path="projeto-de-controladores-por-métodos-algébricos.html"><a href="projeto-de-controladores-por-métodos-algébricos.html#problema-1-3"><i class="fa fa-check"></i>Problema 1</a></li>
-<li class="chapter" data-level="" data-path="projeto-de-controladores-por-métodos-algébricos.html"><a href="projeto-de-controladores-por-métodos-algébricos.html#problema-2-3"><i class="fa fa-check"></i>Problema 2</a></li>
-<li class="chapter" data-level="" data-path="projeto-de-controladores-por-métodos-algébricos.html"><a href="projeto-de-controladores-por-métodos-algébricos.html#problema-3-3"><i class="fa fa-check"></i>Problema 3</a></li>
-<li class="chapter" data-level="" data-path="projeto-de-controladores-por-métodos-algébricos.html"><a href="projeto-de-controladores-por-métodos-algébricos.html#problema-4-2"><i class="fa fa-check"></i>Problema 4</a></li>
+<li class="chapter" data-level="6.1" data-path="apresentação-do-laboratório.html"><a href="apresentação-do-laboratório.html"><i class="fa fa-check"></i><b>6.1</b> Apresentação do Laboratório</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html"><a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#objetivos"><i class="fa fa-check"></i><b>6.1.1</b> Objetivos</a></li>
+<li class="chapter" data-level="6.1.2" data-path="apresentação-do-laboratório.html"><a href="apresentação-do-laboratório.html#sistema-de-um-tanque"><i class="fa fa-check"></i><b>6.1.2</b> Sistema de um tanque</a></li>
+<li class="chapter" data-level="6.1.3" data-path="apresentação-do-laboratório.html"><a href="apresentação-do-laboratório.html#pontos-de-equilíbrio"><i class="fa fa-check"></i><b>6.1.3</b> Pontos de equilíbrio</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="linearização-de-sistemas-não-lineares.html"><a href="linearização-de-sistemas-não-lineares.html"><i class="fa fa-check"></i><b>6</b> Linearização de Sistemas Não-Lineares</a></li>
 <li class="chapter" data-level="7" data-path="controle-de-sistemas-não-lineares.html"><a href="controle-de-sistemas-não-lineares.html"><i class="fa fa-check"></i><b>7</b> Controle de Sistemas Não-Lineares</a></li>
 <li class="chapter" data-level="8" data-path="análise-pelo-lugar-das-raízes.html"><a href="análise-pelo-lugar-das-raízes.html"><i class="fa fa-check"></i><b>8</b> Análise pelo Lugar das Raízes</a></li>
 <li class="chapter" data-level="9" data-path="projeto-de-controladores-pelo-lugar-das-raízes.html"><a href="projeto-de-controladores-pelo-lugar-das-raízes.html"><i class="fa fa-check"></i><b>9</b> Projeto de Controladores pelo Lugar das Raízes</a></li>
@@ -233,15 +230,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="efeitos-de-pólos-e-zeros-na-dinâmica" class="section level1" number="2">
 <h1><span class="header-section-number">Laboratório 2</span> Efeitos de Pólos e Zeros na Dinâmica</h1>
-<div id="apresentação-do-laboratório" class="section level2" number="2.1">
-<h2><span class="header-section-number">2.1</span> Apresentação do Laboratório</h2>
-<div id="objetivo" class="section level3" number="2.1.1">
-<h3><span class="header-section-number">2.1.1</span> Objetivo</h3>
+<div id="objetivo" class="section level3 unnumbered" number="">
+<h3>Objetivo</h3>
 <p>Nesta experiência, verificaremos a influência dos pólos e zeros de uma Função de Transferência na resposta dinâmica para entradas do tipo degrau e também para entradas senoidais. Utilizaremos o Matlab para realizar as
 simulações.</p>
 </div>
-<div id="pólos-e-zeros" class="section level3" number="2.1.2">
-<h3><span class="header-section-number">2.1.2</span> Pólos e Zeros</h3>
+<div id="pólos-e-zeros" class="section level3 unnumbered" number="">
+<h3>Pólos e Zeros</h3>
 <p>Considere uma função de Trasnferência da forma</p>
 <p><span class="math display">\[
 G(s) = \frac{Y(s)}{U(s)} = \frac{N(s)}{D(s)} = \frac{b_1s^m +b_2s^{m-1} + \dots + b_ms + b_{m+1}}{s^n + a_1s^{n-1}+ \dots + a_{n-1}s + a_n}
@@ -263,348 +258,13 @@ G(s) = \frac{Y(s)}{U(s)} = \frac{N(s)}{D(s)} = \frac{b_1s^m +b_2s^{m-1} + \dots 
 </ol>
 </div>
 </div>
-<div id="procedimentos" class="section level2" number="2.2">
-<h2><span class="header-section-number">2.2</span> Procedimentos</h2>
-<div id="problema-1" class="section level3 unnumbered" number="">
-<h3>Problema 1</h3>
-<p>Considere o sistema de primeira ordem
-<span class="math display">\[
-G(s) = \frac{1}{\tau s +1},
-\]</span>
-onde <span class="math inline">\(\tau = 1\)</span>, <span class="math inline">\(\tau = 0.5\)</span>. Para cada valor de <span class="math inline">\(\tau\)</span>, determine o pólo e sua posição no plano <span class="math inline">\(s\)</span> (use os comandos <code>zpk</code> e <code>pzmap</code> no Matlab), e conclua sobre a estabilidade e a rapidez da resposta do sistema. Simule para uma entrada do tipo degrau unitário. Analise e compare os resultados. Agora, repita o procedimento para o sistema
-<span class="math display">\[
-G(s) = \frac{1}{s-1}.
-\]</span></p>
-<div id="resolução" class="section level4 unnumbered" number="">
-<h4>Resolução</h4>
-<p>A resolução será feita em quatro partes: (1) a resolução para <span class="math inline">\(\tau = 1\)</span> usando <code>pzmap</code>, (2) a resolução para <span class="math inline">\(\tau = 0.5\)</span> usando <code>pzmap</code>, (3) a simulação e comparação dos resultados e, por fim, (4) a resolução para <span class="math inline">\(G(s) =\frac {1}{s-1}\)</span>.</p>
-<div id="parte-1" class="section level5 unnumbered" number="">
-<h5>Parte 1</h5>
-<p>Para <span class="math inline">\(\tau = 1\)</span>, temos a função de transferência dada por
-<span class="math display">\[
-G(S)= \frac {1}{s+1}.
-\]</span></p>
-<p>O código implementado no <code>Matlab</code> foi o apresentado abaixo.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode matlab"><code class="sourceCode matlab"><span id="cb1-1"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#cb1-1"></a><span class="va">g</span> <span class="op">=</span> <span class="va">tf</span>([<span class="fl">1</span>]<span class="op">,</span> [<span class="fl">1</span> <span class="fl">1</span>])</span>
-<span id="cb1-2"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#cb1-2"></a>[<span class="va">p</span><span class="op">,</span> <span class="va">z</span>] <span class="op">=</span> <span class="va">pzmap</span>(<span class="va">g</span>)</span>
-<span id="cb1-3"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#cb1-3"></a><span class="va">pzmap</span>(<span class="va">g</span>)</span></code></pre></div>
-<p>Tendo como resultados de pólos e zeros:</p>
-<pre><code>p =
-
-    -1
-
-
-z =
-
-  0×1 empty double column vector</code></pre>
-<p>Ou seja, a função de transferência não apresenta zeros e tem seu pólo em <span class="math inline">\(s = -1\)</span>. A sua posição no plano é apresentada na figura abaixo.</p>
-<p><img src="Imagens/Lab2/tau1.jpg" /></p>
-<p>Como o pólo da função de transferência se encontra na SPE, conclui-se que o sistema se compartará de uma forma estável.</p>
-</div>
-<div id="parte-2" class="section level5 unnumbered" number="">
-<h5>Parte 2</h5>
-<p>Para <span class="math inline">\(\tau = 0.5\)</span>, temos a função de transferência dada por
-<span class="math display">\[
-G(S)= \frac {1}{0.5s+1}.
-\]</span></p>
-<p>O código implementado no <code>Matlab</code> foi o apresentado abaixo.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode matlab"><code class="sourceCode matlab"><span id="cb3-1"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#cb3-1"></a><span class="va">g</span> <span class="op">=</span> <span class="va">tf</span>([<span class="fl">1</span>]<span class="op">,</span> [<span class="fl">0.5</span> <span class="fl">1</span>])</span>
-<span id="cb3-2"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#cb3-2"></a>[<span class="va">p</span><span class="op">,</span> <span class="va">z</span>] <span class="op">=</span> <span class="va">pzmap</span>(<span class="va">g</span>)</span>
-<span id="cb3-3"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#cb3-3"></a><span class="va">pzmap</span>(<span class="va">g</span>)</span></code></pre></div>
-<p>Tendo como resultados de pólos e zeros:</p>
-<pre><code>p =
-
-    -2
-
-
-z =
-
-  0×1 empty double column vector</code></pre>
-<p>Ou seja, a função de transferência não apresenta zeros e tem seu pólo em <span class="math inline">\(s = -2\)</span>. A sua posição no plano é apresentada na figura abaixo</p>
-<p><img src="Imagens/Lab2/tau2.jpg" /></p>
-<p>Como o pólo da função de transferência se encontra na SPE, conclui-se que o sistema se compartará de uma forma estável. Também é possível concluir que o sistema alcanraça a estabilidade mais rápido para <span class="math inline">\(\tau = 0.5\)</span>.</p>
-</div>
-<div id="parte-3" class="section level5 unnumbered" number="">
-<h5>Parte 3</h5>
-<p>A simulação do sistema implementada em <code>Matlab</code> está apresentado na figura abaixo.</p>
-<p><img src="Imagens/Lab2/sim1.jpg" /></p>
-<p>O resultado apresentado pelo <em>scope</em> é apresentado na figura abaixo.</p>
-<p><img src="Imagens/Lab2/resultSim1.jpg" /></p>
-<p>Percebe-se que, assim como esperado, o sistema se comporta de forma estável e tem uma convergência mais rápida para <span class="math inline">\(\tau = 0.5\)</span>.</p>
-</div>
-<div id="parte-4" class="section level5 unnumbered" number="">
-<h5>Parte 4</h5>
-<p>Para a última etapa temos a função de transferência dada por
-<span class="math display">\[
-G(S)= \frac {1}{s-1}.
-\]</span></p>
-<p>O código implementado no <code>Matlab</code> foi o apresentado abaixo.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode matlab"><code class="sourceCode matlab"><span id="cb5-1"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#cb5-1"></a><span class="va">g</span> <span class="op">=</span> <span class="va">tf</span>([<span class="fl">1</span>]<span class="op">,</span> [<span class="fl">1</span> <span class="op">-</span><span class="fl">1</span>])</span>
-<span id="cb5-2"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#cb5-2"></a>[<span class="va">p</span><span class="op">,</span> <span class="va">z</span>] <span class="op">=</span> <span class="va">pzmap</span>(<span class="va">g</span>)</span>
-<span id="cb5-3"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#cb5-3"></a><span class="va">pzmap</span>(<span class="va">g</span>)</span></code></pre></div>
-<p>Tendo como resultados de pólos e zeros:</p>
-<pre><code>p =
-
-    1
-
-
-z =
-
-  0×1 empty double column vector</code></pre>
-<p>Ou seja, a função de transferência não apresenta zeros e tem seu pólo em <span class="math inline">\(s = 1\)</span>. A sua posição no plano é apresentada na figura abaixo</p>
-<p><img src="Imagens/Lab2/tau3.jpg" /></p>
-<p>Como o pólo da função de transferência se encontra na SPD, conclui-se que o sistema se compartará de uma forma instável. A simulação em <code>Matlab</code> está apresentada na figura abaixo.</p>
-<p><img src="Imagens/Lab2/sim2.jpg" /></p>
-<p>O resultado apresentado pelo <em>scope</em> é apresentado na figura abaixo.</p>
-<p><img src="Imagens/Lab2/resultSim2.jpg" /></p>
-<p>O resultado comprova o esperado. O sistema se comporta de forma instável para a função de transferência dada por <span class="math inline">\(G(s) = \frac {1}{s-1}\)</span>.</p>
-</div>
-</div>
-</div>
-<div id="problema-2" class="section level3 unnumbered" number="">
-<h3>Problema 2</h3>
-<p>Considere o sistema de primeira ordem (integrador)
-<span class="math display">\[
-G(s) = \frac {1}{s}.
-\]</span></p>
-<p>Determine o pólo e a sua posição no plano <span class="math inline">\(s\)</span> e simule para uma entrada do tipo degrau unitário e também para <span class="math inline">\(\sin {(t)}\)</span> (para <span class="math inline">\(\sin {(t)}\)</span>, escolha <strong>Max Step Size = 0.1</strong> em <strong>Simulation <span class="math inline">\(\implies\)</span> Configurarion Parameters</strong>). Note que a saída é a integral da entrada. Tais resultados eram esperados? Dica: relembre que <span class="math inline">\(Y(s) = G(s)U(s)\)</span>, e que se <span class="math inline">\(x(t) \iff X(S)\)</span>, então <span class="math inline">\(\int_0^t x(\tau) \mathrm{d}\tau \iff X(s)/s\)</span>.</p>
-<div id="resolução-1" class="section level4 unnumbered" number="">
-<h4>Resolução</h4>
-<p>O código utilizado no <code>Matlab</code> é apresentado abaixo.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode matlab"><code class="sourceCode matlab"><span id="cb7-1"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#cb7-1"></a><span class="va">g</span> <span class="op">=</span> <span class="va">tf</span>([<span class="fl">1</span>]<span class="op">,</span> [<span class="fl">1</span> <span class="fl">0</span>])</span>
-<span id="cb7-2"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#cb7-2"></a>[<span class="va">p</span><span class="op">,</span><span class="va">z</span>] <span class="op">=</span> <span class="va">pzmap</span>(<span class="va">g</span>)</span>
-<span id="cb7-3"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#cb7-3"></a><span class="va">pzmap</span>(<span class="va">g</span>)</span></code></pre></div>
-<p>Obtendo como resultado:</p>
-<pre><code>p =
-
-     0
-
-
-z =
-
-  0×1 empty double column vector</code></pre>
-<p>Conclue-se então que a função de transferência <span class="math inline">\(G(s) = \frac {1}{s}\)</span> não tem zeros e tem pólo em <span class="math inline">\(s = 0\)</span>. O mapa da posição no plano é mostrado na figura abaixo.</p>
-<p><img src="Imagens/Lab2/prob2.jpg" /></p>
-<p>Isso mostra que o sistema é um caso crítico. Neste caso a resposta em regime permanente do sistema a uma entrada de amplitude limitada será uma senóide.</p>
-<p>A simulação feita em <code>Matlab</code> está apresentada na figura abaixo.</p>
-<p><img src="Imagens/Lab2/simP2.jpg" /></p>
-<p>O resultado da simulação é apresentado na figura abaixo.</p>
-<p><img src="Imagens/Lab2/prob2B.jpg" /></p>
-<p>O resultados eram esperados, uma vez que em um estado crítico a função de transferência pode estar em um estado permanente senoidal caso a entrada seja senoidal ou pode divergir caso a entrada seja um sinal constante.</p>
-</div>
-</div>
-<div id="problema-3" class="section level3 unnumbered" number="">
-<h3>Problema 3</h3>
-<p>Considere o sistema de segunda ordem
-<span class="math display">\[
-G(s) = \frac {1}{s^2 +25}.
-\]</span></p>
-<p>Determine os pólos e suas posições no plano <span class="math inline">\(s\)</span>. Simule para as seguintes entradas: degrau unitário, <span class="math inline">\(\sin (4t)\)</span>, <span class="math inline">\(\sin(6t)\)</span>. Observe que a saída é limitada. Agora, semule para a entrada <span class="math inline">\(\sin(5t)\)</span>. Note que a amplitude de saída cresce indefinidamente. Tal fenômeno é denominado de <em>ressonância</em>. De moro mais geral, para
-<span class="math display">\[
-G(s) = \frac {1}{s^2+\omega_0^2},
-\]</span>
-teremos ressonância quando aplicamos uma entrada senoidal da forma <span class="math inline">\(\sin(\omega_0t + \phi)\)</span>. Note que a <em>frequência de ressonância</em> <span class="math inline">\(\omega_0\)</span> é igual a parte imaginária dos pólos de <span class="math inline">\(G(s)\)</span>.</p>
-<div id="resolução-2" class="section level4 unnumbered" number="">
-<h4>Resolução</h4>
-<p>O código utilizado no <code>Matlab</code> é apresentado abaixo.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode matlab"><code class="sourceCode matlab"><span id="cb9-1"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#cb9-1"></a><span class="va">g</span> <span class="op">=</span> <span class="va">tf</span>([<span class="fl">1</span>]<span class="op">,</span> [<span class="fl">1</span> <span class="fl">0</span> <span class="fl">25</span>])</span>
-<span id="cb9-2"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#cb9-2"></a>[<span class="va">p</span><span class="op">,</span><span class="va">z</span>] <span class="op">=</span> <span class="va">pzmap</span>(<span class="va">g</span>)</span>
-<span id="cb9-3"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#cb9-3"></a><span class="va">pzmap</span>(<span class="va">g</span>)</span></code></pre></div>
-<p>Obtendo como resultado:</p>
-<pre><code>p =
-
-   0.0000 + 5.0000i
-   0.0000 - 5.0000i
-
-
-z =
-
-  0×1 empty double column vector</code></pre>
-<p>Conclue-se então que a função de transferência <span class="math inline">\(G(s) = \frac {1}{s^2 +25}\)</span> não tem zeros e tem pólo em <span class="math inline">\(s = \pm 5i\)</span>. O mapa da posição no plano é mostrado na figura abaixo.</p>
-<p><img src="Imagens/Lab2/prob3.jpg" /></p>
-<p>De acordo com o mapa de posição, pode-se concluir que a função de transferência é classificada como um caso crítico. A figura abaixo apresenta o modelo de simulação criado no <code>Simulink</code>.</p>
-<p><img src="Imagens/Lab2/modelSim3.jpg" /></p>
-<p>O resultado da simulação é apresentado abaixo.</p>
-<p><img src="Imagens/Lab2/prob3Sim.jpg" /></p>
-<p>É fácil perceber que o modelo se comporta de maneira instável com a entrada <span class="math inline">\(u(t) = \sin(5t)\)</span>, se mostrando estável nas demais situações.</p>
-</div>
-</div>
-<div id="problema-4" class="section level3 unnumbered" number="">
-<h3>Problema 4</h3>
-<p>Considere o sistema de segunda orde
-<span class="math display">\[
-G(s) = \frac {1.6}{(s+1)(s+2)} = \frac {0.8}{0.5s^2+1.5s+1}.
-\]</span></p>
-<p>Determine os pólos e suas posições no plano <span class="math inline">\(s\)</span> e simule para uma entrada do tipo degrau unitário. Note que não há sobressinal. Tal resultado era esperado? Justifique.</p>
-<p>Agora, adicionando um zero, temos
-<span class="math display">\[
-G(s) = \frac {1.6(\beta s+1)}{(s+1)(s+2)} = \frac {0.8(\beta s+1)}{0.5s^2 +1.5s +1},
-\]</span>
-onde <span class="math inline">\(\beta = 0.1\)</span>, <span class="math inline">\(\beta = 0.6\)</span>, <span class="math inline">\(\beta = 0.99\)</span>, <span class="math inline">\(\beta = 1.2\)</span>, <span class="math inline">\(\beta = 2\)</span>, <span class="math inline">\(\beta = 10\)</span>. Para cada valor de <span class="math inline">\(\beta\)</span>, determine os pólos e zeros, suas posições no plano <span class="math inline">\(s\)</span> e simule para uma entrada do tipo degrau unitário. Analise e compare os resultados. Note que dependendo da posição do zero o sobressinal será maior ou menor, podendo também não estar presente.</p>
-<div id="resolução-3" class="section level4 unnumbered" number="">
-<h4>Resolução</h4>
-<p>Utilizando a função <code>pzmap()</code> do <code>Matlab</code> para encontrar os pólos da função de transferência <span class="math inline">\(G(s) = \frac {0.8}{0.5s^2+1.5s+1}\)</span> temos que a função não possui zeros e possui pólos para <span class="math inline">\(s = -2\)</span> e <span class="math inline">\(s = -1\)</span>. O mapa de posições é apresentado na figura abaixo.</p>
-<p><img src="Imagens/Lab2/prob4.jpg" /></p>
-<p>O resultado da função de transferência é apresentado na figura abaixo.</p>
-<p><img src="Imagens/Lab2/prob41.jpg" /></p>
-<p>O resultado não era esperado pois, para uma Função de Transferência de segundo grau é esperado que a resposta tenha sobressinal. Agora, considerando a função de transferência
-<span class="math display">\[
-G(s) = \frac {0.8(\beta s+1)}{0.5s^2+1.5s+1},
-\]</span>
-e substituindo os valores de <span class="math inline">\(\beta\)</span> pelos valores propostos temos os valores de zero e pólo apresentados na tabela abaixo.</p>
-<table>
-<caption><span id="tab:unnamed-chunk-6">Tabela 2.1: </span>Valores de Pólo e Zero variando <span class="math inline">\(\beta\)</span></caption>
-<thead>
-<tr class="header">
-<th></th>
-<th align="left">Pólos</th>
-<th align="left">Zeros</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="math inline">\(\beta = 0.1\)</span></td>
-<td align="left">{-2, -1}</td>
-<td align="left">-10.0</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\beta = 0.6\)</span></td>
-<td align="left">{-2, -1}</td>
-<td align="left">-1.67</td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(\beta = 0.99\)</span></td>
-<td align="left">{-2, -1}</td>
-<td align="left">-1.01</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\beta = 1.2\)</span></td>
-<td align="left">{-2, -1}</td>
-<td align="left">-0.83</td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(\beta = 2\)</span></td>
-<td align="left">{-2, -1}</td>
-<td align="left">-0.50</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\beta = 10\)</span></td>
-<td align="left">{-2, -1}</td>
-<td align="left">-0.10</td>
-</tr>
-</tbody>
-</table>
-<p>Os gráficos de posição estão apresentados abaixo.</p>
-<p><img src="Imagens/Lab2/prob4Varios.jpg" /></p>
-<p>A simulação feita em <code>Matlab</code> está apresentada na figura abaixo.</p>
-<p><img src="Imagens/Lab2/modelSim4.jpg" /></p>
-<p>O resultado da simulação está apresentado na figura abaixo.</p>
-<p><img src="Imagens/Lab2/prob4SimResult.jpg" /></p>
-<p>É possível perceber que quanto mais alto o valor de <span class="math inline">\(\beta\)</span> maior o sobressinal. Também é possível perceber que há um intervalo no qual o tempo de reação aumenta, encontrando seu tempo de reação mínimo, voltando então a aumentar.</p>
-</div>
-</div>
-<div id="problema-5" class="section level3 unnumbered" number="">
-<h3>Problema 5</h3>
-<p>Considere o sistema de segunda ordem
-<span class="math display">\[
-G(s) = \frac {0.9}{s^2+s+1}.
-\]</span></p>
-<p>Determine os pólos e suas posições no plano <span class="math inline">\(s\)</span> e simule para uma entrada do tipo degrau unitário. Note que há sobressinal. Tal resultado era esperado? Justifique.</p>
-<p>Agora, adicionando um zero, temos
-<span class="math display">\[
-G_z(s) = \frac {0.9(\beta s+1)}{s^2+s+1},
-\]</span>
-onde <span class="math inline">\(\beta = 0.05\)</span>, <span class="math inline">\(\beta = 0.5\)</span>, <span class="math inline">\(\beta = 1\)</span> e <span class="math inline">\(\beta = 2.5\)</span>. Para cada valor de <span class="math inline">\(\beta\)</span> determine os pólos e zeros, suas posições no plano <span class="math inline">\(s\)</span> e simule para uma entrada do tipo degrau unitário. Analise e compare os resultados.</p>
-<div id="resolução-4" class="section level4 unnumbered" number="">
-<h4>Resolução</h4>
-<p>Utilizando a função <code>pzmap()</code> do <code>Matlab</code> para encontrar os pólos da função de transferência <span class="math inline">\(G(s) = \frac {0.9}{s^2+s+1}\)</span> temos que a função não possui zeros e possui pólos para <span class="math inline">\(s = -0.5 + 0.86i\)</span> e <span class="math inline">\(s = -0.5 -0.86i\)</span>. O mapa de posições é apresentado na figura abaixo.</p>
-<p><img src="Imagens/Lab2/prob5.jpg" /></p>
-<p>O resultado da função de transferência é apresentado na figura abaixo.</p>
-<p><img src="Imagens/Lab2/prob5Sim.jpg" /></p>
-<p>É possível perceber que há sobressinal.</p>
-<p>Agora, considerando a função de transferência <span class="math inline">\(G_z(s) = \frac {0.9(\beta s+1)}{s^2+s+1}\)</span>, e substituindo os valores de <span class="math inline">\(\beta\)</span> pelos valores propostos temos os valores de zero e pólo apresentados na tabela abaixo.</p>
-<table>
-<caption><span id="tab:unnamed-chunk-7">Tabela 2.2: </span>Valores de Pólo e Zero variando <span class="math inline">\(\beta\)</span></caption>
-<thead>
-<tr class="header">
-<th></th>
-<th align="left">Pólos</th>
-<th align="left">Zeros</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="math inline">\(\beta = 0.05\)</span></td>
-<td align="left">{<span class="math inline">\(-0.5 \pm 0.86i\)</span>}</td>
-<td align="left">-20.0</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\beta = 0.5\)</span></td>
-<td align="left">{<span class="math inline">\(-0.5 \pm 0.86i\)</span>}</td>
-<td align="left">-2.0</td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(\beta = 1\)</span></td>
-<td align="left">{<span class="math inline">\(-0.5 \pm 0.86i\)</span>}</td>
-<td align="left">-1.0</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\beta = 2.5\)</span></td>
-<td align="left">{<span class="math inline">\(-0.5 \pm 0.86i\)</span>}</td>
-<td align="left">-0.4</td>
-</tr>
-</tbody>
-</table>
-<p>Os gráficos de posição estão apresentados abaixo.</p>
-<p><img src="Imagens/Lab2/prob5Varios.jpg" /></p>
-<p>A simulação feita em <code>Matlab</code> está apresentada na figura abaixo.</p>
-<p><img src="Imagens/Lab2/modelSim5.jpg" /></p>
-<p>O resultado da simulação está apresentado na figura abaixo.</p>
-<p><img src="Imagens/Lab2/prob5SimResult.jpg" /></p>
-<p>É possível perceber que quanto mais alto o valor de <span class="math inline">\(\beta\)</span> maior o sobressinal e o tempo de resposta do sistema.</p>
-</div>
-</div>
-<div id="problema-6" class="section level3 unnumbered" number="">
-<h3>Problema 6</h3>
-<p>Considere o sistema de segunda ordem de fase não-mínima
-<span class="math display">\[
-G(s) = \frac {-s+1}{0.5s^2+1.5s+1}.
-\]</span></p>
-<p>Determine os pólos e o zero, suas posições no plano <span class="math inline">\(s\)</span> e simule para uma entrada do tipo degrau unitário. Note que a resposta é negativa nos instantes iniciais. Justificaremos tal comportamento no que se segue.</p>
-<p>Escrevemos
-<span class="math display">\[
-G(s) = \frac {-s+1}{0.5s^2+1.5s+1} = \overbrace{\frac {1}{0.5s^2+1.5s+1}}^{G_1(s)} - \overbrace{\frac {s}{0.5s^2+1.5s+1}}^{G_2(s) = sG_1(S)}.
-\]</span></p>
-<p>Assim,
-<span class="math display">\[
-Y(s) = G(s)U(s) = G_1(s)U(s)-G_2(s)U(s) = \underbrace{G_1(s)U(s)}_{Y_1(s)} - \underbrace{sG_1(s)U(s)}_{Y_2(s) = sY_1(s)}.
-\]</span></p>
-<p>Relembre-se que se <span class="math inline">\(x(t) \iff X(S)\)</span> com <span class="math inline">\(x(0) = 0\)</span>, então <span class="math inline">\(dx(t)/dt \iff sX(s)\)</span>. Portanto,
-<span class="math display">\[
-y(t) = y_1(t)-y_2(t)=y_1(t)- \frac {dy_1(t)}{dt}.
-\]</span></p>
-<p>Verifique a validade da equação acima no Simulink (utilize o bloco <strong>Derivative</strong> no Simulink) para uma entrada do tipo degrau unitário. Analise o motivo da resposta ser negativa nos instantes iniciais.</p>
-<div id="resolução-5" class="section level4 unnumbered" number="">
-<h4>Resolução</h4>
-<p>Utilizando a função <code>pzmap()</code> do <code>Matlab</code> para encontrar os pólos da função de transferência <span class="math inline">\(G(s) = \frac {-s +1}{0.5s^2+1.5s+1}\)</span> temos que a função possui zeros para <span class="math inline">\(s=1\)</span> e possui pólos para <span class="math inline">\(s = -2\)</span> e <span class="math inline">\(s = -1\)</span>. O mapa de posições é apresentado na figura abaixo.</p>
-<p><img src="Imagens/Lab2/prob6A.jpg" /></p>
-<p>A resposta de <span class="math inline">\(G(s)\)</span> a uma função degrau unitário é apresentada na figura abaixo.</p>
-<p><img src="Imagens/Lab2/prob6B.jpg" /></p>
-<p>A validade da equação proposta pelo programa é apresentada na figura abaixo. Pode-se perceber que a equação é valida pois as curvas são satisfatoriamente similares.</p>
-<p><img src="Imagens/Lab2/prob6C.jpg" /></p>
-<p>O motivo da resposta ser negativa se deve ao fato de o zero da função <span class="math inline">\(G(s)\)</span> se encontrar no SPD.</p>
-
-</div>
-</div>
-</div>
-</div>
             </section>
 
           </div>
         </div>
       </div>
 <a href="simulação-de-sistemas.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="identificação-de-sistemas.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="procedimentos-dolaboratório-2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

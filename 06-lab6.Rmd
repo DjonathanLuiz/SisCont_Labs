@@ -1,3 +1,51 @@
 # Linearização de Sistemas Não-Lineares
 
-Working on it :)
+## Apresentação do Laboratório
+
+### Objetivos
+
+Nesta experiência, veremos como podemos simular um sistema não-linear utilizando pacotes computacionais de simulação. Analisaremos os resultados de simulação do sistema de um tanque do Simulink/Matlab e verificaremos a noção de ponto de equilibrio. Por fim, com base na Função de Transferência do sistema linearizado, compararemos a dinâmica do mesmo com a dinâmica do sistema não-linear original por simulação.
+
+### Sistema de um tanque
+
+Considere o sistema de um tanque ilustrado na Figura \@ref(fig:fig61). A equação diferencial que descreve a dinâmica da altura do nível $H$ do tanque é
+
+\begin{align}
+H(t) = \frac{1}{A}(Q_e(t)-Q_s(t)) = \boxed{\frac{1}{A}(Q_e(t)-\beta\sqrt{H(t)})}, (\#eq:eq61)
+\end{align}
+
+```{r fig61, fig.align='center', echo=FALSE, fig.cap='Tanque', out.width='50%'}
+knitr::include_graphics('Imagens/Lab6/Apresentação/fig1.jpg', dpi = NA)
+```
+
+onde
+
+$$
+  \begin{cases}
+    H & \quad \text{ : altura do nível,}\\
+    Q_e & \quad \text{ : vazão de entrada,}\\
+    Q_s = \beta\sqrt{H} & \quad \text{ : vazão de saída,}\\
+    \beta \geq 0 & \quad \text{ : parâmetro do tanque,}\\
+    A & \quad \text{ : área da base do tanque.}
+  \end{cases}
+$$
+
+Note que \@ref(eq:eq61) é uma equação diferencial não-linear. O diagrama de blocos corresponde à equação diferencial \@ref(eq:eq61) é mostrado abaixo, onde $H(0)$ é a condição inicial.
+
+```{r fig62, fig.align='center', echo=FALSE, fig.cap='Diagrama de blocos da dinâmica da altura do nível $H$ do tanque.', out.width='50%'}
+knitr::include_graphics('Imagens/Lab6/Apresentação/fig2.jpg', dpi = NA)
+```
+
+A implementação deste diagrama de blocos em um pacote computacional de simulação fornece a solução da equação diferencial \@ref(eq:eq61) através de métodos numéricos de integração. Consequentemente, podemos analisar o comportamento dinâmico da altura do nível $H(t)$ em função do tempo $t$ para uma determinada escolha da vazão de entrada $Q_e(t)$, $t\geq 0$.
+
+### Pontos de equilíbrio
+
+Intuitivamente, pensamos que um sistema está em *equilibrio* quando o mesmo apresenta um comportamento estático, ou seja, o sistema não exisbe qualquer dinâmica. Veremos agora como definir matematicamente tal noção.
+
+Considere um sistema não-linear descrito pela equação diferencial
+\begin{align}
+\dot{x}(t) = f(x(t),u(t)), (\#eq:eq62)
+\end{align}
+onde 
+
+

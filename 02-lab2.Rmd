@@ -1,13 +1,11 @@
 # Efeitos de Pólos e Zeros na Dinâmica
 
-## Apresentação do Laboratório
-
-### Objetivo
+### Objetivo {-}
 
 Nesta experiência, verificaremos a influência dos pólos e zeros de uma Função de Transferência na resposta dinâmica para entradas do tipo degrau e também para entradas senoidais. Utilizaremos o Matlab para realizar as
 simulações.
 
-### Pólos e Zeros
+### Pólos e Zeros {-}
 
 Considere uma função de Trasnferência da forma
 
@@ -30,7 +28,7 @@ Considere que $G(s)$ é estável, ou seja, todos os pólos estão no SPE. Em ger
 3. Um zero tende a fazer com que a resposta dinâmica apresente sobressinal. Quanto mais próximo da origem estiver o zero, maior o sobressinal. E, quanto mais longe da origem, menor se torna o sobressinal, podendo o mesmo não existir. Assim, um sistema de segunda ordem com pólos reais e um zero poderá apresentar um sobressinal dependendo do posicionamento do zero no plano $s$;
 4. Um zero bem próximo de um pólo tende a anular os efeitos dos mesmos na resposta dinâmica.
 
-## Procedimentos
+## Procedimentos doLaboratório 2 {-}
 
 ### Problema 1{-}
 

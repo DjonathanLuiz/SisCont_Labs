@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Laboratório 13 Digitalização de Controladores Analógicos | Laboratório de Sistemas de Controle</title>
+  <title>6.1 Apresentação do Laboratório | Laboratório de Sistemas de Controle</title>
   <meta name="description" content="Este livro tem o objetivo de apresentar as respostas dos laboratórios da disciplina DAS5317 Sistemas de Controle da Universidade Federal de Santa Catarina para o semestre 2020.1 desenvolvidas pelo acadêmico Djonathan Luiz de Oliveira Quadras." />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Laboratório 13 Digitalização de Controladores Analógicos | Laboratório de Sistemas de Controle" />
+  <meta property="og:title" content="6.1 Apresentação do Laboratório | Laboratório de Sistemas de Controle" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Laboratório 13 Digitalização de Controladores Analógicos | Laboratório de Sistemas de Controle" />
+  <meta name="twitter:title" content="6.1 Apresentação do Laboratório | Laboratório de Sistemas de Controle" />
   
   <meta name="twitter:description" content="Este livro tem o objetivo de apresentar as respostas dos laboratórios da disciplina DAS5317 Sistemas de Controle da Universidade Federal de Santa Catarina para o semestre 2020.1 desenvolvidas pelo acadêmico Djonathan Luiz de Oliveira Quadras." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="projeto-de-controladores-pelo-diagrama-de-bode.html"/>
-
+<link rel="prev" href="linearização-de-sistemas-não-lineares.html"/>
+<link rel="next" href="controle-de-sistemas-não-lineares.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -228,18 +228,62 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="digitalização-de-controladores-analógicos" class="section level1" number="13">
-<h1><span class="header-section-number">Laboratório 13</span> Digitalização de Controladores Analógicos</h1>
-<p>Working on it :)</p>
+<div id="apresentação-do-laboratório" class="section level2" number="6.1">
+<h2><span class="header-section-number">6.1</span> Apresentação do Laboratório</h2>
+<div id="objetivos" class="section level3" number="6.1.1">
+<h3><span class="header-section-number">6.1.1</span> Objetivos</h3>
+<p>Nesta experiência, veremos como podemos simular um sistema não-linear utilizando pacotes computacionais de simulação. Analisaremos os resultados de simulação do sistema de um tanque do Simulink/Matlab e verificaremos a noção de ponto de equilibrio. Por fim, com base na Função de Transferência do sistema linearizado, compararemos a dinâmica do mesmo com a dinâmica do sistema não-linear original por simulação.</p>
+</div>
+<div id="sistema-de-um-tanque" class="section level3" number="6.1.2">
+<h3><span class="header-section-number">6.1.2</span> Sistema de um tanque</h3>
+<p>Considere o sistema de um tanque ilustrado na Figura <a href="apresentação-do-laboratório.html#fig:fig61">6.1</a>. A equação diferencial que descreve a dinâmica da altura do nível <span class="math inline">\(H\)</span> do tanque é</p>
+<p><span class="math display" id="eq:eq61">\[\begin{align}
+H(t) = \frac{1}{A}(Q_e(t)-Q_s(t)) = \boxed{\frac{1}{A}(Q_e(t)-\beta\sqrt{H(t)})}, \tag{6.1}
+\end{align}\]</span></p>
+<div class="figure" style="text-align: center"><span id="fig:fig61"></span>
+<img src="Imagens/Lab6/Apresentação/fig1.jpg" alt="Tanque" width="50%" />
+<p class="caption">
+Figura 6.1: Tanque
+</p>
+</div>
+<p>onde</p>
+<p><span class="math display">\[
+  \begin{cases}
+    H &amp; \quad \text{ : altura do nível,}\\
+    Q_e &amp; \quad \text{ : vazão de entrada,}\\
+    Q_s = \beta\sqrt{H} &amp; \quad \text{ : vazão de saída,}\\
+    \beta \geq 0 &amp; \quad \text{ : parâmetro do tanque,}\\
+    A &amp; \quad \text{ : área da base do tanque.}
+  \end{cases}
+\]</span></p>
+<p>Note que <a href="apresentação-do-laboratório.html#eq:eq61">(6.1)</a> é uma equação diferencial não-linear. O diagrama de blocos corresponde à equação diferencial <a href="apresentação-do-laboratório.html#eq:eq61">(6.1)</a> é mostrado abaixo, onde <span class="math inline">\(H(0)\)</span> é a condição inicial.</p>
+<div class="figure" style="text-align: center"><span id="fig:fig62"></span>
+<img src="Imagens/Lab6/Apresentação/fig2.jpg" alt="Diagrama de blocos da dinâmica da altura do nível $H$ do tanque." width="50%" />
+<p class="caption">
+Figura 6.2: Diagrama de blocos da dinâmica da altura do nível <span class="math inline">\(H\)</span> do tanque.
+</p>
+</div>
+<p>A implementação deste diagrama de blocos em um pacote computacional de simulação fornece a solução da equação diferencial <a href="apresentação-do-laboratório.html#eq:eq61">(6.1)</a> através de métodos numéricos de integração. Consequentemente, podemos analisar o comportamento dinâmico da altura do nível <span class="math inline">\(H(t)\)</span> em função do tempo <span class="math inline">\(t\)</span> para uma determinada escolha da vazão de entrada <span class="math inline">\(Q_e(t)\)</span>, <span class="math inline">\(t\geq 0\)</span>.</p>
+</div>
+<div id="pontos-de-equilíbrio" class="section level3" number="6.1.3">
+<h3><span class="header-section-number">6.1.3</span> Pontos de equilíbrio</h3>
+<p>Intuitivamente, pensamos que um sistema está em <em>equilibrio</em> quando o mesmo apresenta um comportamento estático, ou seja, o sistema não exisbe qualquer dinâmica. Veremos agora como definir matematicamente tal noção.</p>
+<p>Considere um sistema não-linear descrito pela equação diferencial
+<span class="math display" id="eq:eq62">\[\begin{align}
+\dot{x}(t) = f(x(t),u(t)), \tag{6.2}
+\end{align}\]</span>
+onde</p>
 
 </div>
+</div>
+<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="projeto-de-controladores-pelo-diagrama-de-bode.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="linearização-de-sistemas-não-lineares.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="controle-de-sistemas-não-lineares.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

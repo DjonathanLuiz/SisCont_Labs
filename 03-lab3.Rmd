@@ -1,12 +1,10 @@
 # Identificação de Sistemas
 
-## Apresentação do Laboratório
-
-### Objetivo
+### Objetivo {-}
 
 Nesta experiência, veremos como modelar matematicamente um sistema linear por uma Função de Transferência. Identificaremos os parâmetros de uma Função de Transferência de primeira e de segunda ordem. Compararemos a dinâmica do sistema com a do modelo matemático.
 
-### Modelagem de Sistemas Lineares
+### Modelagem de Sistemas Lineares {-}
 
 Encontrar um modelo matemático que capture as características dinâmicas relevantes de um sistema real é de fundamental importância para a análise e controle do sistema. No Laboratório 1 estudamos um modelo linear com motor CC. Tal modelo pode ser obtido a partir das leis da física (mecânica e eletromagnetismo) e os valores dos parâmetros dependem de constantes e coeficientes físicos (indutância do enrolamento, resistência do enrolamento, constante de torque do motor, coeficiente de atrito ciscoso). Em situações reais, não conheceremos uma estimativa para os mesmos. Por exemplo, todo resistor possui um valor normal e uma faixa de tolerância percentual (e.g. $R = 100 \Omega \pm 5\%$). Além disso, muitas vezes a determinação de um modelo matemático para um sistema a partir de leis naturais é extremamente difícil e, mesmo no caso em que isso é possível, o modelo obtido pode ser demasiadamente complexo para ser estudado matematicamente.
 
@@ -14,7 +12,7 @@ Devido às dificuldades que acabamos de expor, em geral buscamos um modelo matem
 
 Nesta experiência, consideraremos apenas sistemas lineares que possam ser modelados por uma função de Transferência $G(s)$ de primeira ordem ou de segunda ordem. Veremos então como identificar os parâmetros de $G(s)$.
 
-### Identificação de sistemas de primeira ordem
+### Identificação de sistemas de primeira ordem {-}
 
 Toda Função de Transferência $G(s)$ de primeira ordem pode ser escrita na forma padrão como
 
@@ -46,7 +44,7 @@ Logo,
 K = \frac{y(\infty)}{A},  \tau = \frac {t_s(5\%)}{3}. (\#eq:eq32)
 \end{align}
 
-### Identificação de Sistemas de Segunda Ordem
+### Identificação de Sistemas de Segunda Ordem {-}
 
 Toda Função de Transferência $G(s)$ de segunda ordem com pólos não-nulos pode ser escrita como
 
@@ -67,7 +65,7 @@ Temos as seguintes situações:
 4. Sistema super-amortecido ($\xi >1$): os pólos são reais, negativos e diferentes e a resposta ao degrau não apresenta oscilação nem sobressinal.
 5. Sistema instável ($\xi < 0$): os pólos possuem parte real positiva.
 
-#### Sistemas sub-amortecidos
+#### Sistemas sub-amortecidos {-}
 
 Suponha que $G(s)$ é estável com $0 < \xi < 1$ (sub-amortecido). Considere uma entrada $u(t) = A$ do tipo degrau de magnitude $A$. A resposta correspondente $y(t)$ é ilustrada na figura 2.
 
@@ -85,7 +83,7 @@ Logo,
 K = \frac {y(\infty)}{A}, \quad M_p = \frac {y_p - y(\infty)}{y(\infty)}, \quad \xi = \sqrt{\frac {(\ln{M_p})^2}{(\ln{M_p})^2+\pi^2}}, \quad \omega_n = \frac {\pi}{t_p\sqrt{1-\xi^2}}.  (\#eq:eq34)
 \end{align}
 
-#### Sistemas criticamente amortecidos e super-amortecidos
+#### Sistemas criticamente amortecidos e super-amortecidos {-}
 
 Suponha que $G(s)$ é estável com $\xi \geq 1$ (criticamente amortecido ou super-amortecido). Neste caso, os dois pólos de $G(s)$ são reais e a resposta ao degrau se assemelha ao de um sistema de primeira ordem (não apresenta oscilação nem sobressinal). Podemos identificar $G(s)$ indiretamente através da identificação da Função de Transferência $F(s)$ em malha-fechada. Considere o diagrama de blocos em malha-fechada mostrando na Figura 3, onde $K_c > 0$ é o ganho de um controlador proporcional e $r$ é a referência.
 
@@ -102,7 +100,7 @@ Para qualquer $K_c > 0$, temos que $F(s)$ é um sistema de segunda ordem estáve
 F(s) = \frac {K_cG(s)}{1+K_cG(s)} \implies G(s) = \frac {F(s)}{K_c - K_cF(s)}.  (\#eq:eq35)
 \end{align}
 
-## Procedimentos
+## Procedimentos do Laboratório 3 {-}
 
 ### Problema 1 {-}
 

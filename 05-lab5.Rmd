@@ -1,12 +1,10 @@
 # Projeto de Controladores por Métodos Algébricos
 
-## Apresentação do Laboratório
-
-### Objetivos
+### Objetivos {-}
 
 Nesta experiência projetaremos controladores que atendam determinadas especificações de regime transitório e de regime permanente em malha-fechada por métodos algébricos. Comprovaremos por simulação no Matlab o desempenho do sistema em malha-fechada.
 
-### Controladores Clássicos
+### Controladores Clássicos {-}
 
 Considere o diagrama de blocos $G(s)$ em malha-fechada da Figura \@ref(fig:fig51) onde $r(t)$ é a referência, $w(t)$ é uma perturbação externa, $y(t)$ é a saída, $e(t) = r(t) - y(t)$ é o erro de rastreamento, $u(t)$ é o controle e $C(s)$ é o controlador a ser projetado.
 
@@ -28,7 +26,7 @@ e então escolher adequadamente os parâmetros correspondentes de modo que o sis
 
 É importante ressaltar que em situações reais devemos sempre procurar utilizar controladores com a estrutura mais simples possível. Isto implica em menos dificuldades na implementação e em menores custos. Na próxima seção veremos um método algébrico de projeto de controladores.
 
-### Método Algébrico de Projeto de Controladores
+### Método Algébrico de Projeto de Controladores {-}
 
 Considerando que $w=0$ (sem perturbação), temos que a Função de Transferência em malha-fechada  da figura \@ref(fig:fig51) é
 $$
@@ -42,7 +40,7 @@ Uma maneira de projetarmos o controlador é primeiramente escolhermos a estrutur
 3. Mesmo quando fazemos cancelamento pólo-zero em $C(s)G(s)$ que está no SPE (estável), temos que o regime transitório referente à perturbação $w$ será influenciado pelo pólo de $G(s)$ que foi cancelado. Desse modo, se o pólo cancelado de $G(s)$ é muito lento, ou seja, está muito próximo do eixo imaginário, a dinâmica da rejeição de tais perturbações também será bastante lenta;
 4. Quando desejamos que $F(s)$ seja de segunda ordem, muitas vezes não conseguimos atender simultaneamente as especificações de tempo de acomodação ($t_s(5\%)$) e de sobressinal ($M_p$).
 
-### Erro em Regime Permanente
+### Erro em Regime Permanente {-}
 
 Relembramos o Teorema do Valor Final:
 
@@ -69,7 +67,7 @@ $$
 R(s) = \frac{A}{s}, \quad W(s) = \frac{B}{s}.
 $$
 
-#### **$B=0$ (sem perturbação)**
+#### **$B=0$ (sem perturbação)** {-}
 
 Suponha que $D_c(s)D(s) = s\overline{D}(s)$, ou seja, $C(s)G(s)$ tem um pólo em $s=0$ (integrador). Temos que
 $$
@@ -84,7 +82,7 @@ e(\infty) = \lim\limits_{s\to0}{sE(s)} =
 $$
 pois $D_c(0)D(0) + N_c(0)N(0) \neq 0$ ($F(s)$ é estável) enão há divisão por zero! Desse modo, $e(\infty) = 0$ independente da magnitude $A$ de $r(t)$. Isto significa que a saída $y(t)$ rastreia a referência $r(t)$ do tipo degrau em regime permanente.
 
-#### **$B\neq0$ (com perturbação)**
+#### **$B\neq0$ (com perturbação)** {-}
 
 Suponha que $D_c(s) = s\overline{D_c}(s)$, ou seja, $C(s)$ tem um pólo em $s=0$ (integrador). Temos que
 $$
@@ -101,7 +99,7 @@ e(\infty) = \lim\limits_{s\to0}{sE(s)} =
 $$
 pois $D_c(0)D(0) + N_c(0)N(0) \neq 0$ ($F(s)$ é estável) enão há divisão por zero! Desse modo, $e(\infty) = 0$ independente da magnitude $A$ e $B$ de $r(t)$ e $w(t)$, respectivamente. Portanto, em regime permanente, a saída $y(t)$ rastreia a referência $r(t)$ com rejeição da perturbação $w(t)$.
 
-### $F(s)$ de primeira ordem
+### $F(s)$ de primeira ordem{-}
 
 Suponha que $F(s)$ é uma Função de Transferência de primeira ordem da forma
 $$
@@ -112,7 +110,7 @@ $$
 \boxed{t_s(5\%) = 3\tau, \quad e(\infty) =0}.
 $$
 
-### $F(s)$ de segunda ordem
+### $F(s)$ de segunda ordem {-}
 
 Suponha que $F(s)$ é uma Função de Transferência de segunda ordem da forma
 $$
@@ -152,7 +150,7 @@ $$
 \boxed{C(s)=\frac{2.1}{s}}.
 $$
 
-## Procedimentos
+## Procedimentos do Laboratório 5 {-}
 
 ### Problema 1 {-}
 
@@ -162,13 +160,17 @@ G(s) = \frac {0.5}{10s+1}.
 $$
 
 (a) Simule $G(s)$ em malha-aberta para $u(t) = 1$ do tipo degrau. Conforme o esperado, observe que $t_s(5\%) = 30$ e $y(\infty) = G(0) = 0.5$. Agora, aplique uma perturbação $w(t) = 0.25$ do tipo degrau em $t=100$. Note que a perturbação não é rejeitada.
-(b) Projete $C(S)$ de modo que se tenha: (i) erro nulo em regime permanente para $r(s)$ e $w(s)$ do tipo degrau; (ii) $t_s^{MF}(5\%) = \frac {t_s^{MA}(5\%)}{2}$ e a saída $y(t)$ não apresenta sobressinal para referências do tipo degrau. Dica: utilize um controlador PI $C(s) = \frac{K_c(10s+1)}{s}$ (cancelamento pólo-zero.
+(b) Projete $C(S)$ de modo que se tenha: (i) erro nulo em regime permanente para $r(s)$ e $w(s)$ do tipo degrau; (ii) $t_s^{MF}(5\%) = \frac {t_s^{MA}(5\%)}{2}$ e a saída $y(t)$ não apresenta sobressinal para referências do tipo degrau. Dica: utilize um controlador PI $C(s) = \frac{K_c(10s+1)}{s}$ (cancelamento pólo-zero).
 (c) Simule o sistema em malha-fechada para $r(t) =1$ e $w(t) = 0.25$ do tipo degrau, aplicando $w(t)$ em $t=100$. Verifique se os requisitos de desempenho foram realmente atendidos e visualize o sinal de controle $u(t)$. Note que $u(\infty) = \frac {1}{G(0)}-0.25 = 1.75$ Isto era esperado? Justifique.
 (d) Mantendo o mesmo controlador $C(s)$ repita o item anterior para $G(s) = \frac {0.45}{9.9s+1}$. Explique o motivo pelo qual ainda temos $e(\infty) = 0$.
 
 #### Resolução {-}
 
 Working on it :)
+
+
+<!-- ----------------------------------------------------------------------- -->
+
 
 ### Problema 2 {-}
 

@@ -164,7 +164,45 @@ $$
 
 #### Resolução {-}
 
-Working on it :)
+##### Parte A {-}
+
+O resultado da simulação está apresentado na figura \@ref(fig:prob3A1). O resultado não era esperado pois, para Funções de Transferência do segundo grau é esperado um sobressinal.
+
+```{r prob3A1, fig.align='center', echo=FALSE, fig.cap='Simulação C1', out.width='80%'}
+knitr::include_graphics('Imagens/Lab5/Resolução/prob3A1.jpg', dpi = NA)
+```
+
+##### Parte B {-}
+
+Utilizando um controlador do tipo $C(s) = \frac{K_c(s+1)}{s}$ temos que
+$$
+F(s) = \frac{\frac{K_c(s+1)}{s}\frac{1.2}{(s+1)(s+3)}}{1+\frac{K_c(s+1)}{s}\frac{1.2}{(s+1)(s+3)}} \implies \boxed{F(s) = \frac{1.2K_c}{s^2+3s+1.2K_c} = \frac{\omega_n^2}{s^2+2\xi\omega_ns+\omega_n^2}}
+$$
+
+Utilizando $M_p = 0.05$ encontramos que
+$$
+\xi = 0.6901, \quad \omega_n = 2.1736 \implies K_c =3.937.
+$$
+
+Portanto, o controlador calculado é
+$$
+\boxed{C(s) = \frac{3.937(s+1)}{s}}.
+$$
+
+##### Parte C {-}
+
+O resultado da simulação está apresentado na figura \@ref(fig:prob3C1). Percebe-se que os requisitos de desempenho foram alcançados.
+
+```{r prob3C1, fig.align='center', echo=FALSE, fig.cap='Simulação C2', out.width='80%'}
+knitr::include_graphics('Imagens/Lab5/Resolução/prob3C1.jpg', dpi = NA)
+```
+
+O valor de $u(t)$ está apresentado na figura \@ref(fig:prob3C2)
+
+```{r prob3C2, fig.align='center', echo=FALSE, fig.cap='$u(t)$', out.width='80%'}
+knitr::include_graphics('Imagens/Lab5/Resolução/prob3C2.jpg', dpi = NA)
+```
+
 
 ## Problema 5.4 {-}
 
@@ -176,4 +214,8 @@ e simule (dica: basta mudar o numerador do PI projetado no Problema 1 para $s-1$
 
 #### Resolução {-}
 
-Working on it :)
+O resultado da simulação está apresentado na figura \@ref(fig:prob4A1). Conforme esperado o sistema se comporta de forma instável.
+
+```{r prob4A1, fig.align='center', echo=FALSE, fig.cap='Simulação D1', out.width='80%'}
+knitr::include_graphics('Imagens/Lab5/Resolução/prob4A1.jpg', dpi = NA)
+```

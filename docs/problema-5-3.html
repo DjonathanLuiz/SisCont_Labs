@@ -247,7 +247,48 @@ G(s) = \frac{1.2}{s^2+4s+3} = \frac{1.2}{(s+1)(s+3)}.
 </ol>
 <div id="resolução-2" class="section level4 unnumbered" number="">
 <h4>Resolução</h4>
-<p>Working on it :)</p>
+<div id="parte-a-2" class="section level5 unnumbered" number="">
+<h5>Parte A</h5>
+<p>O resultado da simulação está apresentado na figura <a href="problema-5-3.html#fig:prob3A1">5.11</a>. O resultado não era esperado pois, para Funções de Transferência do segundo grau é esperado um sobressinal.</p>
+<div class="figure" style="text-align: center"><span id="fig:prob3A1"></span>
+<img src="Imagens/Lab5/Resolução/prob3A1.jpg" alt="Simulação C1" width="80%" />
+<p class="caption">
+Figura 5.11: Simulação C1
+</p>
+</div>
+</div>
+<div id="parte-b-2" class="section level5 unnumbered" number="">
+<h5>Parte B</h5>
+<p>Utilizando um controlador do tipo <span class="math inline">\(C(s) = \frac{K_c(s+1)}{s}\)</span> temos que
+<span class="math display">\[
+F(s) = \frac{\frac{K_c(s+1)}{s}\frac{1.2}{(s+1)(s+3)}}{1+\frac{K_c(s+1)}{s}\frac{1.2}{(s+1)(s+3)}} \implies \boxed{F(s) = \frac{1.2K_c}{s^2+3s+1.2K_c} = \frac{\omega_n^2}{s^2+2\xi\omega_ns+\omega_n^2}}
+\]</span></p>
+<p>Utilizando <span class="math inline">\(M_p = 0.05\)</span> encontramos que
+<span class="math display">\[
+\xi = 0.6901, \quad \omega_n = 2.1736 \implies K_c =3.937.
+\]</span></p>
+<p>Portanto, o controlador calculado é
+<span class="math display">\[
+\boxed{C(s) = \frac{3.937(s+1)}{s}}.
+\]</span></p>
+</div>
+<div id="parte-c-2" class="section level5 unnumbered" number="">
+<h5>Parte C</h5>
+<p>O resultado da simulação está apresentado na figura <a href="problema-5-3.html#fig:prob3C1">5.12</a>. Percebe-se que os requisitos de desempenho foram alcançados.</p>
+<div class="figure" style="text-align: center"><span id="fig:prob3C1"></span>
+<img src="Imagens/Lab5/Resolução/prob3C1.jpg" alt="Simulação C2" width="80%" />
+<p class="caption">
+Figura 5.12: Simulação C2
+</p>
+</div>
+<p>O valor de <span class="math inline">\(u(t)\)</span> está apresentado na figura <a href="problema-5-3.html#fig:prob3C2">5.13</a></p>
+<div class="figure" style="text-align: center"><span id="fig:prob3C2"></span>
+<img src="Imagens/Lab5/Resolução/prob3C2.jpg" alt="$u(t)$" width="80%" />
+<p class="caption">
+Figura 5.13: <span class="math inline">\(u(t)\)</span>
+</p>
+</div>
+</div>
 </div>
 </div>
             </section>

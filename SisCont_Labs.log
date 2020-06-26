@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.2.3)  25 JUN 2020 21:04
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.2.3)  25 JUN 2020 22:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -813,6 +813,15 @@ LaTeX Warning: Label `parte-d-1' multiply defined.
 LaTeX Warning: Label `resoluuxe7uxe3o-2' multiply defined.
 
 
+LaTeX Warning: Label `parte-a-2' multiply defined.
+
+
+LaTeX Warning: Label `parte-b-2' multiply defined.
+
+
+LaTeX Warning: Label `parte-c-2' multiply defined.
+
+
 LaTeX Warning: Label `resoluuxe7uxe3o-3' multiply defined.
 
 )
@@ -1602,123 +1611,150 @@ DOS ALGÉBRICOS
 File: Imagens/Lab5/Resolução/prob2D1.jpg Graphic file (type bmp)
 <Imagens/Lab5/Resolução/prob2D1.jpg>
 [83]
+File: Imagens/Lab5/Resolução/prob3A1.jpg Graphic file (type bmp)
+<Imagens/Lab5/Resolução/prob3A1.jpg>
+
+Overfull \hbox (3.72426pt too wide) detected at line 1868
+[][][][] [] []  []  []
+ []
+
+
 Overfull \hbox (40.28453pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 84 \TU/lmr/m/sl/10 CHAPTER 5.  PROJETO DE CONTROLADORES POR MÉTO
 DOS ALGÉBRICOS
  []
 
 [84]
+File: Imagens/Lab5/Resolução/prob3C1.jpg Graphic file (type bmp)
+<Imagens/Lab5/Resolução/prob3C1.jpg>
+File: Imagens/Lab5/Resolução/prob3C2.jpg Graphic file (type bmp)
+<Imagens/Lab5/Resolução/prob3C2.jpg>
+File: Imagens/Lab5/Resolução/prob4A1.jpg Graphic file (type bmp)
+<Imagens/Lab5/Resolução/prob4A1.jpg>
+[85]
+Overfull \hbox (40.28453pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 86 \TU/lmr/m/sl/10 CHAPTER 5.  PROJETO DE CONTROLADORES POR MÉTO
+DOS ALGÉBRICOS
+ []
+
+[86] [87]
+Overfull \hbox (40.28453pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 88 \TU/lmr/m/sl/10 CHAPTER 5.  PROJETO DE CONTROLADORES POR MÉTO
+DOS ALGÉBRICOS
+ []
+
+[88
+
+]
 Chapter 6.
 File: Imagens/Lab6/Apresentação/fig1.jpg Graphic file (type bmp)
 <Imagens/Lab6/Apresentação/fig1.jpg>
-[85
-
-]
+[89]
 File: Imagens/Lab6/Apresentação/fig2.jpg Graphic file (type bmp)
 <Imagens/Lab6/Apresentação/fig2.jpg>
 
 Underfull \vbox (badness 1184) has occurred while \output is active []
 
-[86] [87] [88
-
-] [89] [90
-
-]
-Chapter 7.
-[91] [92
+[90] [91] [92
 
 ] [93] [94
 
 ]
-Chapter 8.
+Chapter 7.
 [95] [96
 
 ] [97] [98
 
 ]
+Chapter 8.
+[99] [100
+
+] [101] [102
+
+]
 Chapter 9.
-[99]
+[103]
 Overfull \hbox (28.05342pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 100 \TU/lmr/m/sl/10 CHAPTER 9.  PROJETO DE CONTROLADORES PELO LU
+\TU/lmr/m/n/10 104 \TU/lmr/m/sl/10 CHAPTER 9.  PROJETO DE CONTROLADORES PELO LU
 GAR DAS RAÍZES
  []
 
-[100
+[104
 
-] [101]
+] [105]
 Overfull \hbox (28.05342pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 102 \TU/lmr/m/sl/10 CHAPTER 9.  PROJETO DE CONTROLADORES PELO LU
+\TU/lmr/m/n/10 106 \TU/lmr/m/sl/10 CHAPTER 9.  PROJETO DE CONTROLADORES PELO LU
 GAR DAS RAÍZES
  []
 
-[102
+[106
 
 ]
 Chapter 10.
-[103] [104
-
-] [105] [106
-
-]
-Chapter 11.
 [107] [108
 
 ] [109] [110
 
 ]
-Chapter 12.
-[111]
-Overfull \hbox (40.83342pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 112 \TU/lmr/m/sl/10 CHAPTER 12.  PROJETO DE CONTROLADORES PELO D
-IAGRAMA DE BODE
- []
+Chapter 11.
+[111] [112
 
-[112
-
-] [113]
-Overfull \hbox (40.83342pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 114 \TU/lmr/m/sl/10 CHAPTER 12.  PROJETO DE CONTROLADORES PELO D
-IAGRAMA DE BODE
- []
-
-[114
+] [113] [114
 
 ]
-Chapter 13.
+Chapter 12.
 [115]
-Overfull \hbox (6.85674pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 116 \TU/lmr/m/sl/10 CHAPTER 13.  DIGITALIZAÇÃO DE CONTROLADORES 
-ANALÓGICOS
+Overfull \hbox (40.83342pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 116 \TU/lmr/m/sl/10 CHAPTER 12.  PROJETO DE CONTROLADORES PELO D
+IAGRAMA DE BODE
  []
 
 [116
 
+] [117]
+Overfull \hbox (40.83342pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 118 \TU/lmr/m/sl/10 CHAPTER 12.  PROJETO DE CONTROLADORES PELO D
+IAGRAMA DE BODE
+ []
+
+[118
+
+]
+Chapter 13.
+[119]
+Overfull \hbox (6.85674pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 120 \TU/lmr/m/sl/10 CHAPTER 13.  DIGITALIZAÇÃO DE CONTROLADORES 
+ANALÓGICOS
+ []
+
+[120
+
 ]
 No file SisCont_Labs.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2014.
-[117]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2014.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2081.
+[121]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2081.
 (./SisCont_Labs.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 2014.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2014.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 2081.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2081.
 
 Package rerunfilecheck Info: File `SisCont_Labs.out' has not changed.
-(rerunfilecheck)             Checksum: E46D54D613DE423FF34E2C64153BC343;9759.
+(rerunfilecheck)             Checksum: 49C24821FB0C1ACCD1C4F1871D82B180;9759.
 
 LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2014.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2081.
  ) 
 Here is how much of TeX's memory you used:
- 30178 strings out of 494432
- 554279 string characters out of 6170871
- 728018 words of memory out of 5000000
- 34216 multiletter control sequences out of 15000+600000
+ 30231 strings out of 494432
+ 556010 string characters out of 6170871
+ 728178 words of memory out of 5000000
+ 34268 multiletter control sequences out of 15000+600000
  538780 words of font info for 83 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  55i,13n,115p,966b,2146s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on SisCont_Labs.pdf (117 pages).
+Output written on SisCont_Labs.pdf (121 pages).

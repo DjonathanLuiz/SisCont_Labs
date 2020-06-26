@@ -1843,7 +1843,65 @@ G(s) = \frac{1.2}{s^2+4s+3} = \frac{1.2}{(s+1)(s+3)}.
 \subsubsection*{Resolução}\label{resoluuxe7uxe3o-2}}
 \addcontentsline{toc}{subsubsection}{Resolução}
 
-Working on it :)
+\hypertarget{parte-a-2}{%
+\paragraph*{Parte A}\label{parte-a-2}}
+\addcontentsline{toc}{paragraph}{Parte A}
+
+O resultado da simulação está apresentado na figura \ref{fig:prob3A1}. O resultado não era esperado pois, para Funções de Transferência do segundo grau é esperado um sobressinal.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imagens/Lab5/Resolução/prob3A1} 
+
+}
+
+\caption{Simulação C1}\label{fig:prob3A1}
+\end{figure}
+
+\hypertarget{parte-b-2}{%
+\paragraph*{Parte B}\label{parte-b-2}}
+\addcontentsline{toc}{paragraph}{Parte B}
+
+Utilizando um controlador do tipo \(C(s) = \frac{K_c(s+1)}{s}\) temos que
+\[
+F(s) = \frac{\frac{K_c(s+1)}{s}\frac{1.2}{(s+1)(s+3)}}{1+\frac{K_c(s+1)}{s}\frac{1.2}{(s+1)(s+3)}} \implies \boxed{F(s) = \frac{1.2K_c}{s^2+3s+1.2K_c} = \frac{\omega_n^2}{s^2+2\xi\omega_ns+\omega_n^2}}
+\]
+
+Utilizando \(M_p = 0.05\) encontramos que
+\[
+\xi = 0.6901, \quad \omega_n = 2.1736 \implies K_c =3.937.
+\]
+
+Portanto, o controlador calculado é
+\[
+\boxed{C(s) = \frac{3.937(s+1)}{s}}.
+\]
+
+\hypertarget{parte-c-2}{%
+\paragraph*{Parte C}\label{parte-c-2}}
+\addcontentsline{toc}{paragraph}{Parte C}
+
+O resultado da simulação está apresentado na figura \ref{fig:prob3C1}. Percebe-se que os requisitos de desempenho foram alcançados.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imagens/Lab5/Resolução/prob3C1} 
+
+}
+
+\caption{Simulação C2}\label{fig:prob3C1}
+\end{figure}
+
+O valor de \(u(t)\) está apresentado na figura \ref{fig:prob3C2}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imagens/Lab5/Resolução/prob3C2} 
+
+}
+
+\caption{$u(t)$}\label{fig:prob3C2}
+\end{figure}
 
 \hypertarget{problema-5.4}{%
 \section*{Problema 5.4}\label{problema-5.4}}
@@ -1859,7 +1917,16 @@ e simule (dica: basta mudar o numerador do PI projetado no Problema 1 para \(s-1
 \subsubsection*{Resolução}\label{resoluuxe7uxe3o-3}}
 \addcontentsline{toc}{subsubsection}{Resolução}
 
-Working on it :)
+O resultado da simulação está apresentado na figura \ref{fig:prob4A1}. Conforme esperado o sistema se comporta de forma instável.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imagens/Lab5/Resolução/prob4A1} 
+
+}
+
+\caption{Simulação D1}\label{fig:prob4A1}
+\end{figure}
 
 \hypertarget{linearizauxe7uxe3o-de-sistemas-nuxe3o-lineares}{%
 \chapter{Linearização de Sistemas Não-Lineares}\label{linearizauxe7uxe3o-de-sistemas-nuxe3o-lineares}}

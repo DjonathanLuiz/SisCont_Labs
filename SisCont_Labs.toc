@@ -1,99 +1,107 @@
-\contentsline {chapter}{Apresentação}{5}{chapter*.2}%
-\contentsline {chapter}{\numberline {1}Simulação de Sistemas}{7}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Efeitos de Pólos e Zeros na Dinâmica}{9}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Pólos e Zeros}{9}{section.2.1}%
-\contentsline {section}{Procedimentos Lab 2}{10}{section*.3}%
-\contentsline {subsection}{Problema 2.1}{10}{section*.4}%
-\contentsline {subsubsection}{Resolução}{10}{section*.5}%
-\contentsline {paragraph}{Parte 1}{10}{section*.6}%
-\contentsline {paragraph}{Parte 2}{11}{section*.7}%
-\contentsline {paragraph}{Parte 3}{13}{section*.8}%
-\contentsline {paragraph}{Parte 4}{13}{section*.9}%
-\contentsline {subsection}{Problema 2.2}{15}{section*.10}%
-\contentsline {subsubsection}{Resolução}{15}{section*.11}%
-\contentsline {subsection}{Problema 2.3}{17}{section*.12}%
-\contentsline {subsubsection}{Resolução}{18}{section*.13}%
-\contentsline {subsection}{Problema 2.4}{21}{section*.14}%
-\contentsline {subsubsection}{Resolução}{22}{section*.15}%
-\contentsline {subsection}{Problema 2.5}{26}{section*.16}%
-\contentsline {subsubsection}{Resolução}{26}{section*.17}%
-\contentsline {subsection}{Problema 2.6}{31}{section*.18}%
-\contentsline {subsubsection}{Resolução}{31}{section*.19}%
-\contentsline {chapter}{\numberline {3}Identificação de Sistemas}{35}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Modelagem de Sistemas Lineares}{35}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Identificação de sistemas de primeira ordem}{36}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Identificação de Sistemas de Segunda Ordem}{37}{section.3.3}%
-\contentsline {subsubsection}{Sistemas sub-amortecidos}{37}{section*.20}%
-\contentsline {subsubsection}{Sistemas criticamente amortecidos e super-amortecidos}{38}{section*.21}%
-\contentsline {section}{Procedimentos Lab 3}{39}{section*.22}%
-\contentsline {subsection}{Problema 3.1}{39}{section*.23}%
-\contentsline {subsubsection}{Resolução}{39}{section*.24}%
-\contentsline {subsection}{Problema 3.2}{40}{section*.25}%
-\contentsline {subsubsection}{Resolução}{40}{section*.26}%
-\contentsline {subsection}{Problema 3.3}{42}{section*.27}%
-\contentsline {subsubsection}{Parte A}{42}{section*.28}%
-\contentsline {paragraph}{Resolução}{42}{section*.29}%
-\contentsline {subsubsection}{Parte B}{44}{section*.30}%
-\contentsline {paragraph}{Resolução}{44}{section*.31}%
-\contentsline {chapter}{\numberline {4}Rastreamento de Referências e Rejeição de Perturbações - Erro em Regime Permanente}{47}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Tipos de Sistemas}{47}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Erro em regime permanente.}{48}{section.4.2}%
-\contentsline {section}{Procedimentos Lab 4}{51}{section*.32}%
-\contentsline {subsection}{Problema 4.1}{51}{section*.33}%
-\contentsline {subsubsection}{Resolução}{52}{section*.34}%
-\contentsline {subsubsection}{Parte A}{52}{section*.35}%
-\contentsline {subsubsection}{Parte B}{52}{section*.36}%
-\contentsline {subsubsection}{Parte C}{53}{section*.37}%
-\contentsline {subsection}{Problema 4.2}{53}{section*.38}%
-\contentsline {subsubsection}{Resulução}{55}{section*.39}%
-\contentsline {paragraph}{Parte A}{55}{section*.40}%
-\contentsline {paragraph}{Parte B}{55}{section*.41}%
-\contentsline {paragraph}{Parte C}{55}{section*.42}%
-\contentsline {paragraph}{Parte D}{59}{section*.43}%
-\contentsline {subsection}{Problema 4.3}{59}{section*.44}%
-\contentsline {subsubsection}{Resolução}{59}{section*.45}%
-\contentsline {paragraph}{Parte A}{59}{section*.46}%
-\contentsline {paragraph}{Parte B}{59}{section*.47}%
-\contentsline {paragraph}{Parte C}{61}{section*.48}%
-\contentsline {paragraph}{Parte D}{61}{section*.49}%
-\contentsline {paragraph}{Parte E}{61}{section*.50}%
-\contentsline {subsection}{Problema 4.4}{63}{section*.51}%
-\contentsline {subsubsection}{Parte A}{63}{section*.52}%
-\contentsline {subsubsection}{Parte B}{63}{section*.53}%
-\contentsline {chapter}{\numberline {5}Projeto de Controladores por Métodos Algébricos}{65}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Controladores Clássicos}{65}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Método Algébrico de Projeto de Controladores}{66}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Erro em Regime Permanente}{67}{section.5.3}%
-\contentsline {subsubsection}{\textbf {\(B=0\) (sem perturbação)}}{68}{section*.54}%
-\contentsline {subsubsection}{\textbf {\(B\neq 0\) (com perturbação)}}{68}{section*.55}%
-\contentsline {subsection}{\(F(s)\) de primeira ordem}{68}{section*.56}%
-\contentsline {subsection}{\(F(s)\) de segunda ordem}{69}{section*.57}%
-\contentsline {section}{Procedimentos Lab 5}{70}{section*.58}%
-\contentsline {subsection}{Problema 5.1}{70}{section*.59}%
-\contentsline {subsubsection}{Resolução}{70}{section*.60}%
-\contentsline {paragraph}{Parte A}{70}{section*.61}%
-\contentsline {paragraph}{Parte B}{70}{section*.62}%
-\contentsline {paragraph}{Parte C}{72}{section*.63}%
-\contentsline {paragraph}{Parte D}{72}{section*.64}%
-\contentsline {subsection}{Problema 5.2}{74}{section*.65}%
-\contentsline {subsubsection}{Resolução}{74}{section*.66}%
-\contentsline {paragraph}{Parte A}{74}{section*.67}%
-\contentsline {paragraph}{Parte B}{74}{section*.68}%
-\contentsline {paragraph}{Parte C}{74}{section*.69}%
-\contentsline {paragraph}{Parte D}{76}{section*.70}%
-\contentsline {subsection}{Problema 5.3}{76}{section*.71}%
-\contentsline {subsubsection}{Resolução}{77}{section*.72}%
-\contentsline {subsection}{Problema 5.4}{77}{section*.73}%
-\contentsline {subsubsection}{Resolução}{77}{section*.74}%
-\contentsline {chapter}{\numberline {6}Linearização de Sistemas Não-Lineares}{79}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Apresentação do Laboratório}{79}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Objetivos}{79}{subsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}Sistema de um tanque}{79}{subsection.6.1.2}%
-\contentsline {subsection}{\numberline {6.1.3}Pontos de equilíbrio}{81}{subsection.6.1.3}%
-\contentsline {chapter}{\numberline {7}Controle de Sistemas Não-Lineares}{83}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Análise pelo Lugar das Raízes}{85}{chapter.8}%
-\contentsline {chapter}{\numberline {9}Projeto de Controladores pelo Lugar das Raízes}{87}{chapter.9}%
-\contentsline {chapter}{\numberline {10}Projeto do controlador atraso de fase}{89}{chapter.10}%
-\contentsline {chapter}{\numberline {11}Análise pelos Diagramas de Bode e Nyquist}{91}{chapter.11}%
-\contentsline {chapter}{\numberline {12}Projeto de Controladores pelo Diagrama de Bode}{93}{chapter.12}%
-\contentsline {chapter}{\numberline {13}Digitalização de Controladores Analógicos}{95}{chapter.13}%
+\contentsline {chapter}{Apresentação}{7}{chapter*.2}%
+\contentsline {chapter}{\numberline {1}Simulação de Sistemas}{9}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Efeitos de Pólos e Zeros na Dinâmica}{11}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Pólos e Zeros}{11}{section.2.1}%
+\contentsline {chapter}{Problemas Laboratório 2}{13}{chapter*.3}%
+\contentsline {section}{Problema 2.1}{13}{section*.4}%
+\contentsline {subsubsection}{Resolução}{13}{section*.5}%
+\contentsline {paragraph}{Parte 1}{13}{section*.6}%
+\contentsline {paragraph}{Parte 2}{14}{section*.7}%
+\contentsline {paragraph}{Parte 3}{16}{section*.8}%
+\contentsline {paragraph}{Parte 4}{16}{section*.9}%
+\contentsline {section}{Problema 2.2}{18}{section*.10}%
+\contentsline {subsubsection}{Resolução}{18}{section*.11}%
+\contentsline {section}{Problema 2.3}{20}{section*.12}%
+\contentsline {subsubsection}{Resolução}{21}{section*.13}%
+\contentsline {section}{Problema 2.4}{24}{section*.14}%
+\contentsline {subsubsection}{Resolução}{25}{section*.15}%
+\contentsline {section}{Problema 2.5}{29}{section*.16}%
+\contentsline {subsubsection}{Resolução}{29}{section*.17}%
+\contentsline {section}{Problema 2.6}{34}{section*.18}%
+\contentsline {subsubsection}{Resolução}{34}{section*.19}%
+\contentsline {chapter}{\numberline {3}Identificação de Sistemas}{37}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Modelagem de Sistemas Lineares}{37}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Identificação de sistemas de primeira ordem}{38}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Identificação de Sistemas de Segunda Ordem}{39}{section.3.3}%
+\contentsline {subsubsection}{Sistemas sub-amortecidos}{39}{section*.20}%
+\contentsline {subsubsection}{Sistemas criticamente amortecidos e super-amortecidos}{40}{section*.21}%
+\contentsline {chapter}{Problemas Laboratório 3}{43}{chapter*.22}%
+\contentsline {section}{Problema 3.1}{43}{section*.23}%
+\contentsline {subsubsection}{Resolução}{43}{section*.24}%
+\contentsline {section}{Problema 3.2}{44}{section*.25}%
+\contentsline {subsubsection}{Resolução}{45}{section*.26}%
+\contentsline {section}{Problema 3.3}{46}{section*.27}%
+\contentsline {subsubsection}{Parte A}{46}{section*.28}%
+\contentsline {paragraph}{Resolução}{46}{section*.29}%
+\contentsline {subsubsection}{Parte B}{48}{section*.30}%
+\contentsline {paragraph}{Resolução}{48}{section*.31}%
+\contentsline {chapter}{\numberline {4}Rastreamento de Referências e Rejeição de Perturbações - Erro em Regime Permanente}{51}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Tipos de Sistemas}{51}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Erro em regime permanente.}{52}{section.4.2}%
+\contentsline {chapter}{Problemas Laboratório 4}{57}{chapter*.32}%
+\contentsline {section}{Problema 4.1}{57}{section*.33}%
+\contentsline {subsubsection}{Resolução}{58}{section*.34}%
+\contentsline {subsubsection}{Parte A}{58}{section*.35}%
+\contentsline {subsubsection}{Parte B}{58}{section*.36}%
+\contentsline {subsubsection}{Parte C}{59}{section*.37}%
+\contentsline {section}{Problema 4.2}{59}{section*.38}%
+\contentsline {subsubsection}{Resulução}{61}{section*.39}%
+\contentsline {paragraph}{Parte A}{61}{section*.40}%
+\contentsline {paragraph}{Parte B}{61}{section*.41}%
+\contentsline {paragraph}{Parte C}{61}{section*.42}%
+\contentsline {paragraph}{Parte D}{65}{section*.43}%
+\contentsline {section}{Problema 4.3}{65}{section*.44}%
+\contentsline {subsubsection}{Resolução}{65}{section*.45}%
+\contentsline {paragraph}{Parte A}{65}{section*.46}%
+\contentsline {paragraph}{Parte B}{65}{section*.47}%
+\contentsline {paragraph}{Parte C}{67}{section*.48}%
+\contentsline {paragraph}{Parte D}{67}{section*.49}%
+\contentsline {paragraph}{Parte E}{67}{section*.50}%
+\contentsline {section}{Problema 4.4}{69}{section*.51}%
+\contentsline {subsubsection}{Parte A}{69}{section*.52}%
+\contentsline {subsubsection}{Parte B}{69}{section*.53}%
+\contentsline {chapter}{\numberline {5}Projeto de Controladores por Métodos Algébricos}{71}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Controladores Clássicos}{71}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Método Algébrico de Projeto de Controladores}{72}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Erro em Regime Permanente}{73}{section.5.3}%
+\contentsline {subsubsection}{\textbf {\(B=0\) (sem perturbação)}}{74}{section*.54}%
+\contentsline {subsubsection}{\textbf {\(B\neq 0\) (com perturbação)}}{74}{section*.55}%
+\contentsline {subsection}{\(F(s)\) de primeira ordem}{74}{section*.56}%
+\contentsline {subsection}{\(F(s)\) de segunda ordem}{75}{section*.57}%
+\contentsline {chapter}{Problemas Laboratório 5}{77}{chapter*.58}%
+\contentsline {section}{Problema 5.1}{77}{section*.59}%
+\contentsline {subsubsection}{Resolução}{77}{section*.60}%
+\contentsline {paragraph}{Parte A}{77}{section*.61}%
+\contentsline {paragraph}{Parte B}{79}{section*.62}%
+\contentsline {paragraph}{Parte C}{79}{section*.63}%
+\contentsline {paragraph}{Parte D}{80}{section*.64}%
+\contentsline {section}{Problema 5.2}{80}{section*.65}%
+\contentsline {subsubsection}{Resolução}{81}{section*.66}%
+\contentsline {paragraph}{Parte A}{81}{section*.67}%
+\contentsline {paragraph}{Parte B}{81}{section*.68}%
+\contentsline {paragraph}{Parte C}{83}{section*.69}%
+\contentsline {paragraph}{Parte D}{83}{section*.70}%
+\contentsline {section}{Problema 5.3}{84}{section*.71}%
+\contentsline {subsubsection}{Resolução}{84}{section*.72}%
+\contentsline {section}{Problema 5.4}{84}{section*.73}%
+\contentsline {subsubsection}{Resolução}{84}{section*.74}%
+\contentsline {chapter}{\numberline {6}Linearização de Sistemas Não-Lineares}{85}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Apresentação do Laboratório}{85}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Objetivos}{85}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Sistema de um tanque}{85}{subsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.1.3}Pontos de equilíbrio}{87}{subsection.6.1.3}%
+\contentsline {chapter}{Problemas Laboratório 6}{89}{chapter*.75}%
+\contentsline {chapter}{\numberline {7}Controle de Sistemas Não-Lineares}{91}{chapter.7}%
+\contentsline {chapter}{Problemas Laboratório 7}{93}{chapter*.76}%
+\contentsline {chapter}{\numberline {8}Análise pelo Lugar das Raízes}{95}{chapter.8}%
+\contentsline {chapter}{Problemas Laboratório 8}{97}{chapter*.77}%
+\contentsline {chapter}{\numberline {9}Projeto de Controladores pelo Lugar das Raízes}{99}{chapter.9}%
+\contentsline {chapter}{Problemas Laboratório 9}{101}{chapter*.78}%
+\contentsline {chapter}{\numberline {10}Projeto do controlador atraso de fase}{103}{chapter.10}%
+\contentsline {chapter}{Problemas Laboratório 10}{105}{chapter*.79}%
+\contentsline {chapter}{\numberline {11}Análise pelos Diagramas de Bode e Nyquist}{107}{chapter.11}%
+\contentsline {chapter}{Problemas Laboratório 11}{109}{chapter*.80}%
+\contentsline {chapter}{\numberline {12}Projeto de Controladores pelo Diagrama de Bode}{111}{chapter.12}%
+\contentsline {chapter}{Problemas Laboratório 12}{113}{chapter*.81}%
+\contentsline {chapter}{\numberline {13}Digitalização de Controladores Analógicos}{115}{chapter.13}%
+\contentsline {chapter}{Problemas Laboratório 13}{117}{chapter*.82}%

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.2.3)  25 JUN 2020 19:57
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.2.3)  25 JUN 2020 21:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1182,69 +1182,74 @@ LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 (Font)              scaled to size 6.99925pt on input line 4.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 (Font)              scaled to size 4.99947pt on input line 4.
-[3])
+[3] [4])
 \tf@toc=\write5
 \openout5 = `SisCont_Labs.toc'.
 
-[4] [5
+[5] [6
 
-] [6
+] [7] [8
 
 ]
 Chapter 1.
-[7] [8
+[9] [10
 
 ]
 Chapter 2.
-[9]
+[11] [12]
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 234.
-[10]
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 236.
+[13
+
+]
 File: Imagens/Lab2/tau1.jpg Graphic file (type bmp)
 <Imagens/Lab2/tau1.jpg>
-[11]
+[14]
 File: Imagens/Lab2/tau2.jpg Graphic file (type bmp)
 <Imagens/Lab2/tau2.jpg>
-[12]
+[15]
 File: Imagens/Lab2/sim1.jpg Graphic file (type bmp)
 <Imagens/Lab2/sim1.jpg>
 File: Imagens/Lab2/resultSim1.jpg Graphic file (type bmp)
 <Imagens/Lab2/resultSim1.jpg>
-[13]
+[16]
 File: Imagens/Lab2/tau3.jpg Graphic file (type bmp)
 <Imagens/Lab2/tau3.jpg>
 File: Imagens/Lab2/sim2.jpg Graphic file (type bmp)
 <Imagens/Lab2/sim2.jpg>
-[14]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[17]
 File: Imagens/Lab2/resultSim2.jpg Graphic file (type bmp)
 <Imagens/Lab2/resultSim2.jpg>
-[15]
+[18]
 File: Imagens/Lab2/prob2.jpg Graphic file (type bmp)
 <Imagens/Lab2/prob2.jpg>
 File: Imagens/Lab2/simP2.jpg Graphic file (type bmp)
 <Imagens/Lab2/simP2.jpg>
-[16]
+[19]
 File: Imagens/Lab2/prob2B.jpg Graphic file (type bmp)
 <Imagens/Lab2/prob2B.jpg>
-[17]
+[20]
 File: Imagens/Lab2/prob3.jpg Graphic file (type bmp)
 <Imagens/Lab2/prob3.jpg>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[18]
+[21]
 File: Imagens/Lab2/modelSim3.jpg Graphic file (type bmp)
 <Imagens/Lab2/modelSim3.jpg>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[19]
+[22]
 File: Imagens/Lab2/prob3Sim.jpg Graphic file (type bmp)
 <Imagens/Lab2/prob3Sim.jpg>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[20] [21]
+[23] [24]
 File: Imagens/Lab2/prob4.jpg Graphic file (type bmp)
 <Imagens/Lab2/prob4.jpg>
 File: imagens/Lab2/prob41.jpg Graphic file (type bmp)
@@ -1252,165 +1257,131 @@ File: imagens/Lab2/prob41.jpg Graphic file (type bmp)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[22]
+[25]
 File: Imagens/Lab2/prob4Varios.jpg Graphic file (type bmp)
 <Imagens/Lab2/prob4Varios.jpg>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[23]
+[26]
 File: Imagens/Lab2/modelSim4.jpg Graphic file (type bmp)
 <Imagens/Lab2/modelSim4.jpg>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[24]
+[27]
 File: Imagens/Lab2/prob4SimResult.jpg Graphic file (type bmp)
 <Imagens/Lab2/prob4SimResult.jpg>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[25]
+[28] [29]
 File: Imagens/Lab2/prob5.jpg Graphic file (type bmp)
 <Imagens/Lab2/prob5.jpg>
-[26]
 File: imagens/Lab2/prob5Sim.jpg Graphic file (type bmp)
 <imagens/Lab2/prob5Sim.jpg>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[27]
+[30]
 File: Imagens/Lab2/prob5Varios.jpg Graphic file (type bmp)
 <Imagens/Lab2/prob5Varios.jpg>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[28]
+[31]
 File: Imagens/Lab2/modelSim5.jpg Graphic file (type bmp)
 <Imagens/Lab2/modelSim5.jpg>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[29]
+[32]
 File: Imagens/Lab2/prob5SimResult.jpg Graphic file (type bmp)
 <Imagens/Lab2/prob5SimResult.jpg>
 
 Underfull \vbox (badness 3612) has occurred while \output is active []
 
-[30]
+[33]
 File: Imagens/Lab2/prob6A.jpg Graphic file (type bmp)
 <Imagens/Lab2/prob6A.jpg>
 
-Underfull \vbox (badness 1990) has occurred while \output is active []
+Underfull \vbox (badness 1810) has occurred while \output is active []
 
-[31]
+[34]
 File: Imagens/Lab2/prob6B.jpg Graphic file (type bmp)
 <Imagens/Lab2/prob6B.jpg>
-[32]
+[35]
 File: Imagens/Lab2/prob6C.jpg Graphic file (type bmp)
 <Imagens/Lab2/prob6C.jpg>
-[33] [34
+[36]
+Chapter 3.
+[37
 
 ]
-Chapter 3.
-[35]
 File: Imagens/Lab3/Explicação/fig1.jpg Graphic file (type bmp)
 <Imagens/Lab3/Explicação/fig1.jpg>
-[36]
+[38]
 File: Imagens/Lab3/Explicação/fig2.jpg Graphic file (type bmp)
 <Imagens/Lab3/Explicação/fig2.jpg>
-[37]
+[39]
 File: Imagens/Lab3/Explicação/fig3.jpg Graphic file (type bmp)
 <Imagens/Lab3/Explicação/fig3.jpg>
-[38]
-File: Imagens/Lab3/Resolução/prob1A.jpg Graphic file (type bmp)
-<Imagens/Lab3/Resolução/prob1A.jpg>
-File: Imagens/Lab3/Resolução/prob1B.jpg Graphic file (type bmp)
-<Imagens/Lab3/Resolução/prob1B.jpg>
-[39]
-File: Imagens/Lab3/Resolução/prob2A.jpg Graphic file (type bmp)
-<Imagens/Lab3/Resolução/prob2A.jpg>
-
-Underfull \vbox (badness 1205) has occurred while \output is active []
-
-[40]
-File: Imagens/Lab3/Resolução/prob2B.jpg Graphic file (type bmp)
-<Imagens/Lab3/Resolução/prob2B.jpg>
-[41]
-File: Imagens/Lab3/Resolução/prob3AA.jpg Graphic file (type bmp)
-<Imagens/Lab3/Resolução/prob3AA.jpg>
-File: Imagens/Lab3/Resolução/prob3AB.jpg Graphic file (type bmp)
-<Imagens/Lab3/Resolução/prob3AB.jpg>
-[42]
-File: Imagens/Lab3/Resolução/prob3AC.jpg Graphic file (type bmp)
-<Imagens/Lab3/Resolução/prob3AC.jpg>
-[43]
-
-LaTeX Warning: Reference `eq:eq55' on page 44 undefined on input line 889.
-
-File: Imagens/Lab3/Resolução/prob3BA.jpg Graphic file (type bmp)
-<Imagens/Lab3/Resolução/prob3BA.jpg>
-
-Underfull \vbox (badness 2680) has occurred while \output is active []
-
-[44]
-File: Imagens/Lab3/Resolução/prob3BB.jpg Graphic file (type bmp)
-<Imagens/Lab3/Resolução/prob3BB.jpg>
-[45] [46
+[40] [41] [42
 
 ]
-Chapter 4.
+File: Imagens/Lab3/Resolução/prob1A.jpg Graphic file (type bmp)
+<Imagens/Lab3/Resolução/prob1A.jpg>
+[43]
+File: Imagens/Lab3/Resolução/prob1B.jpg Graphic file (type bmp)
+<Imagens/Lab3/Resolução/prob1B.jpg>
+[44]
+File: Imagens/Lab3/Resolução/prob2A.jpg Graphic file (type bmp)
+<Imagens/Lab3/Resolução/prob2A.jpg>
+File: Imagens/Lab3/Resolução/prob2B.jpg Graphic file (type bmp)
+<Imagens/Lab3/Resolução/prob2B.jpg>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[45]
+File: Imagens/Lab3/Resolução/prob3AA.jpg Graphic file (type bmp)
+<Imagens/Lab3/Resolução/prob3AA.jpg>
+
+Underfull \vbox (badness 6300) has occurred while \output is active []
+
+[46]
+File: Imagens/Lab3/Resolução/prob3AB.jpg Graphic file (type bmp)
+<Imagens/Lab3/Resolução/prob3AB.jpg>
+File: Imagens/Lab3/Resolução/prob3AC.jpg Graphic file (type bmp)
+<Imagens/Lab3/Resolução/prob3AC.jpg>
 [47]
-Overfull \hbox (1.36087pt too wide) detected at line 971
+
+LaTeX Warning: Reference `eq:eq55' on page 48 undefined on input line 893.
+
+[48]
+File: Imagens/Lab3/Resolução/prob3BA.jpg Graphic file (type bmp)
+<Imagens/Lab3/Resolução/prob3BA.jpg>
+File: Imagens/Lab3/Resolução/prob3BB.jpg Graphic file (type bmp)
+<Imagens/Lab3/Resolução/prob3BB.jpg>
+
+Underfull \vbox (badness 1082) has occurred while \output is active []
+
+[49] [50]
+Chapter 4.
+[51
+
+]
+Overfull \hbox (1.36087pt too wide) detected at line 975
 []
  []
 
 File: Imagens/Lab4/Apresentação/fig1.jpg Graphic file (type bmp)
 <Imagens/Lab4/Apresentação/fig1.jpg>
 
-Overfull \hbox (274.57115pt too wide) detected at line 983
+Overfull \hbox (274.57115pt too wide) detected at line 987
 [][][][] [] [][][][] [] [][][][] [] [][][][] [] [][][][][][][][][] [] [][][][][
 ][]   []  [][][][] [] [][][][][] [] [][][][][][]   []  [][][][] [] [] [] []
  []
 
-
-Overfull \hbox (251.97905pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 48 \TU/lmr/m/sl/10 CHAPTER 4.  RASTREAMENTO DE REFERÊNCIAS E REJ
-EIÇÃO DE PERTURBAÇÕES - ERRO EM REGIME PERMANENTE
- []
-
-[48]
-Overfull \hbox (180.34149pt too wide) detected at line 1015
-[][][][][] [] [] [] [] [] [] [] [] [][]  [] [] [] [] [] [] [] [][]
- []
-
-
-Overfull \hbox (125.07266pt too wide) detected at line 1022
-[][][][][] [] [] [] [] [] [][]  [] [] [] [] [] [] [][]
- []
-
-[49]
-File: Imagens/Lab4/Apresentação/fig2.jpg Graphic file (type bmp)
-<Imagens/Lab4/Apresentação/fig2.jpg>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \hbox (251.97905pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 50 \TU/lmr/m/sl/10 CHAPTER 4.  RASTREAMENTO DE REFERÊNCIAS E REJ
-EIÇÃO DE PERTURBAÇÕES - ERRO EM REGIME PERMANENTE
- []
-
-[50]
-File: Imagens/Lab4/Apresentação/fig3.jpg Graphic file (type bmp)
-<Imagens/Lab4/Apresentação/fig3.jpg>
-File: Imagens/Lab4/Resolução/prob1A1.jpg Graphic file (type bmp)
-<Imagens/Lab4/Resolução/prob1A1.jpg>
-[51]
-File: Imagens/Lab4/Resolução/prob1A2.jpg Graphic file (type bmp)
-<Imagens/Lab4/Resolução/prob1A2.jpg>
-File: Imagens/Lab4/Resolução/prob1C1.jpg Graphic file (type bmp)
-<Imagens/Lab4/Resolução/prob1C1.jpg>
 
 Overfull \hbox (251.97905pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 52 \TU/lmr/m/sl/10 CHAPTER 4.  RASTREAMENTO DE REFERÊNCIAS E REJ
@@ -1418,16 +1389,59 @@ EIÇÃO DE PERTURBAÇÕES - ERRO EM REGIME PERMANENTE
  []
 
 [52]
-File: Imagens/Lab4/Resolução/prob1C2.jpg Graphic file (type bmp)
-<Imagens/Lab4/Resolução/prob1C2.jpg>
+Overfull \hbox (180.34149pt too wide) detected at line 1019
+[][][][][] [] [] [] [] [] [] [] [] [][]  [] [] [] [] [] [] [] [][]
+ []
+
+
+Overfull \hbox (125.07266pt too wide) detected at line 1026
+[][][][][] [] [] [] [] [] [][]  [] [] [] [] [] [] [][]
+ []
+
 [53]
+File: Imagens/Lab4/Apresentação/fig2.jpg Graphic file (type bmp)
+<Imagens/Lab4/Apresentação/fig2.jpg>
+
 Overfull \hbox (251.97905pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 54 \TU/lmr/m/sl/10 CHAPTER 4.  RASTREAMENTO DE REFERÊNCIAS E REJ
 EIÇÃO DE PERTURBAÇÕES - ERRO EM REGIME PERMANENTE
  []
 
-[54]
-Underfull \hbox (badness 10000) in paragraph at lines 1192--1193
+[54] [55]
+Overfull \hbox (251.97905pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 56 \TU/lmr/m/sl/10 CHAPTER 4.  RASTREAMENTO DE REFERÊNCIAS E REJ
+EIÇÃO DE PERTURBAÇÕES - ERRO EM REGIME PERMANENTE
+ []
+
+[56
+
+]
+File: Imagens/Lab4/Apresentação/fig3.jpg Graphic file (type bmp)
+<Imagens/Lab4/Apresentação/fig3.jpg>
+File: Imagens/Lab4/Resolução/prob1A1.jpg Graphic file (type bmp)
+<Imagens/Lab4/Resolução/prob1A1.jpg>
+[57]
+File: Imagens/Lab4/Resolução/prob1A2.jpg Graphic file (type bmp)
+<Imagens/Lab4/Resolução/prob1A2.jpg>
+File: Imagens/Lab4/Resolução/prob1C1.jpg Graphic file (type bmp)
+<Imagens/Lab4/Resolução/prob1C1.jpg>
+
+Overfull \hbox (251.97905pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 58 \TU/lmr/m/sl/10 CHAPTER 4.  RASTREAMENTO DE REFERÊNCIAS E REJ
+EIÇÃO DE PERTURBAÇÕES - ERRO EM REGIME PERMANENTE
+ []
+
+[58]
+File: Imagens/Lab4/Resolução/prob1C2.jpg Graphic file (type bmp)
+<Imagens/Lab4/Resolução/prob1C2.jpg>
+[59]
+Overfull \hbox (251.97905pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 60 \TU/lmr/m/sl/10 CHAPTER 4.  RASTREAMENTO DE REFERÊNCIAS E REJ
+EIÇÃO DE PERTURBAÇÕES - ERRO EM REGIME PERMANENTE
+ []
+
+[60]
+Underfull \hbox (badness 10000) in paragraph at lines 1198--1199
 
  []
 
@@ -1443,135 +1457,91 @@ File: Imagens/Lab4/Resolução/prob2C1.jpg Graphic file (type bmp)
 <Imagens/Lab4/Resolução/prob2C1.jpg>
 File: Imagens/Lab4/Resolução/prob2D1.jpg Graphic file (type bmp)
 <Imagens/Lab4/Resolução/prob2D1.jpg>
-[55]
-Overfull \hbox (251.97905pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 56 \TU/lmr/m/sl/10 CHAPTER 4.  RASTREAMENTO DE REFERÊNCIAS E REJ
-EIÇÃO DE PERTURBAÇÕES - ERRO EM REGIME PERMANENTE
- []
-
-[56] [57]
-Overfull \hbox (251.97905pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 58 \TU/lmr/m/sl/10 CHAPTER 4.  RASTREAMENTO DE REFERÊNCIAS E REJ
-EIÇÃO DE PERTURBAÇÕES - ERRO EM REGIME PERMANENTE
- []
-
-[58]
-File: Imagens/Lab4/Resolução/prob3A1.jpg Graphic file (type bmp)
-<Imagens/Lab4/Resolução/prob3A1.jpg>
-File: Imagens/Lab4/Resolução/prob3B1.jpg Graphic file (type bmp)
-<Imagens/Lab4/Resolução/prob3B1.jpg>
-File: Imagens/Lab4/Resolução/prob3C1.jpg Graphic file (type bmp)
-<Imagens/Lab4/Resolução/prob3C1.jpg>
-[59]
-Overfull \hbox (251.97905pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 60 \TU/lmr/m/sl/10 CHAPTER 4.  RASTREAMENTO DE REFERÊNCIAS E REJ
-EIÇÃO DE PERTURBAÇÕES - ERRO EM REGIME PERMANENTE
- []
-
-[60]
-File: Imagens/Lab4/Resolução/prob3D1.jpg Graphic file (type bmp)
-<Imagens/Lab4/Resolução/prob3D1.jpg>
-File: Imagens/Lab4/Resolução/prob3E1.jpg Graphic file (type bmp)
-<Imagens/Lab4/Resolução/prob3E1.jpg>
 [61]
 Overfull \hbox (251.97905pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 62 \TU/lmr/m/sl/10 CHAPTER 4.  RASTREAMENTO DE REFERÊNCIAS E REJ
 EIÇÃO DE PERTURBAÇÕES - ERRO EM REGIME PERMANENTE
  []
 
-[62]
-File: Imagens/Lab4/Resolução/prob4A1.jpg Graphic file (type bmp)
-<Imagens/Lab4/Resolução/prob4A1.jpg>
-File: Imagens/Lab4/Resolução/prob4B1.jpg Graphic file (type bmp)
-<Imagens/Lab4/Resolução/prob4B1.jpg>
-[63]
+[62] [63]
 Overfull \hbox (251.97905pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 64 \TU/lmr/m/sl/10 CHAPTER 4.  RASTREAMENTO DE REFERÊNCIAS E REJ
 EIÇÃO DE PERTURBAÇÕES - ERRO EM REGIME PERMANENTE
  []
 
 [64]
-Chapter 5.
-File: Imagens/Lab4/Apresentação/fig1.jpg Graphic file (type bmp)
-<Imagens/Lab4/Apresentação/fig1.jpg>
-[65
-
-]
-Overfull \hbox (40.28453pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 66 \TU/lmr/m/sl/10 CHAPTER 5.  PROJETO DE CONTROLADORES POR MÉTO
-DOS ALGÉBRICOS
+File: Imagens/Lab4/Resolução/prob3A1.jpg Graphic file (type bmp)
+<Imagens/Lab4/Resolução/prob3A1.jpg>
+File: Imagens/Lab4/Resolução/prob3B1.jpg Graphic file (type bmp)
+<Imagens/Lab4/Resolução/prob3B1.jpg>
+File: Imagens/Lab4/Resolução/prob3C1.jpg Graphic file (type bmp)
+<Imagens/Lab4/Resolução/prob3C1.jpg>
+[65]
+Overfull \hbox (251.97905pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 66 \TU/lmr/m/sl/10 CHAPTER 4.  RASTREAMENTO DE REFERÊNCIAS E REJ
+EIÇÃO DE PERTURBAÇÕES - ERRO EM REGIME PERMANENTE
  []
 
 [66]
-Overfull \hbox (463.00829pt too wide) detected at line 1478
-[][][][] [] [][][][] [] [][][][] [] [][][][] [] [][][][][][][][][][][][][] [] [
-][][][][][][][][][]   []  [][][][] [] [][][][][] [] [][][][][][] [][]
- []
-
-
-Overfull \hbox (65.23848pt too wide) detected at line 1493
-[][][][] [] [][][][][] [] [][][]  [] []
- []
-
+File: Imagens/Lab4/Resolução/prob3D1.jpg Graphic file (type bmp)
+<Imagens/Lab4/Resolução/prob3D1.jpg>
+File: Imagens/Lab4/Resolução/prob3E1.jpg Graphic file (type bmp)
+<Imagens/Lab4/Resolução/prob3E1.jpg>
 [67]
-Overfull \hbox (12.06529pt too wide) detected at line 1499
-[][][][] [] [] [] [] [] [] [] [][] []
+Overfull \hbox (251.97905pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 68 \TU/lmr/m/sl/10 CHAPTER 4.  RASTREAMENTO DE REFERÊNCIAS E REJ
+EIÇÃO DE PERTURBAÇÕES - ERRO EM REGIME PERMANENTE
  []
 
-
-Overfull \hbox (342.95207pt too wide) detected at line 1511
-[][][][] [] [][][][][] [] [][][][][][]  [] [][] [] [][][]  [] []
+[68]
+File: Imagens/Lab4/Resolução/prob4A1.jpg Graphic file (type bmp)
+<Imagens/Lab4/Resolução/prob4A1.jpg>
+File: Imagens/Lab4/Resolução/prob4B1.jpg Graphic file (type bmp)
+<Imagens/Lab4/Resolução/prob4B1.jpg>
+[69]
+Overfull \hbox (251.97905pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 70 \TU/lmr/m/sl/10 CHAPTER 4.  RASTREAMENTO DE REFERÊNCIAS E REJ
+EIÇÃO DE PERTURBAÇÕES - ERRO EM REGIME PERMANENTE
  []
 
+[70]
+Chapter 5.
+File: Imagens/Lab4/Apresentação/fig1.jpg Graphic file (type bmp)
+<Imagens/Lab4/Apresentação/fig1.jpg>
+[71
 
-Overfull \hbox (56.6433pt too wide) detected at line 1518
-[][][][] [] [] [] [] [] [][]  [] [] [] []
- []
-
-
-Overfull \hbox (40.28453pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 68 \TU/lmr/m/sl/10 CHAPTER 5.  PROJETO DE CONTROLADORES POR MÉTO
-DOS ALGÉBRICOS
- []
-
-[68] [69]
-File: Imagens/Lab5/Resolução/prob1A1.jpg Graphic file (type bmp)
-<Imagens/Lab5/Resolução/prob1A1.jpg>
-File: Imagens/Lab5/Resolução/prob1A2.jpg Graphic file (type bmp)
-<Imagens/Lab5/Resolução/prob1A2.jpg>
-
-Overfull \hbox (40.28453pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 70 \TU/lmr/m/sl/10 CHAPTER 5.  PROJETO DE CONTROLADORES POR MÉTO
-DOS ALGÉBRICOS
- []
-
-[70] [71]
-File: Imagens/Lab5/Resolução/prob1C1.jpg Graphic file (type bmp)
-<Imagens/Lab5/Resolução/prob1C1.jpg>
-File: Imagens/Lab5/Resolução/prob1C2.jpg Graphic file (type bmp)
-<Imagens/Lab5/Resolução/prob1C2.jpg>
-File: Imagens/Lab5/Resolução/prob1D1.jpg Graphic file (type bmp)
-<Imagens/Lab5/Resolução/prob1D1.jpg>
-
+]
 Overfull \hbox (40.28453pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 72 \TU/lmr/m/sl/10 CHAPTER 5.  PROJETO DE CONTROLADORES POR MÉTO
 DOS ALGÉBRICOS
  []
 
-[72] [73]
-File: Imagens/Lab5/Resolução/prob2A1.jpg Graphic file (type bmp)
-<Imagens/Lab5/Resolução/prob2A1.jpg>
-
-Overfull \hbox (30.36313pt too wide) detected at line 1762
-[][][][] [] []  []  [][][][] [] [][]   []  [][]
+[72]
+Overfull \hbox (463.00829pt too wide) detected at line 1484
+[][][][] [] [][][][] [] [][][][] [] [][][][] [] [][][][][][][][][][][][][] [] [
+][][][][][][][][][]   []  [][][][] [] [][][][][] [] [][][][][][] [][]
  []
 
-File: Imagens/Lab5/Resolução/prob2C1.jpg Graphic file (type bmp)
-<Imagens/Lab5/Resolução/prob2C1.jpg>
-File: Imagens/Lab5/Resolução/prob2C2.jpg Graphic file (type bmp)
-<Imagens/Lab5/Resolução/prob2C2.jpg>
-File: Imagens/Lab5/Resolução/prob2D1.jpg Graphic file (type bmp)
-<Imagens/Lab5/Resolução/prob2D1.jpg>
+
+Overfull \hbox (65.23848pt too wide) detected at line 1499
+[][][][] [] [][][][][] [] [][][]  [] []
+ []
+
+[73]
+Overfull \hbox (12.06529pt too wide) detected at line 1505
+[][][][] [] [] [] [] [] [] [] [][] []
+ []
+
+
+Overfull \hbox (342.95207pt too wide) detected at line 1517
+[][][][] [] [][][][][] [] [][][][][][]  [] [][] [] [][][]  [] []
+ []
+
+
+Overfull \hbox (56.6433pt too wide) detected at line 1524
+[][][][] [] [] [] [] [] [][]  [] [] [] []
+ []
+
 
 Overfull \hbox (40.28453pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 74 \TU/lmr/m/sl/10 CHAPTER 5.  PROJETO DE CONTROLADORES POR MÉTO
@@ -1584,89 +1554,171 @@ Overfull \hbox (40.28453pt too wide) has occurred while \output is active
 DOS ALGÉBRICOS
  []
 
-[76] [77]
+[76
+
+]
+File: Imagens/Lab5/Resolução/prob1A1.jpg Graphic file (type bmp)
+<Imagens/Lab5/Resolução/prob1A1.jpg>
+File: Imagens/Lab5/Resolução/prob1A2.jpg Graphic file (type bmp)
+<Imagens/Lab5/Resolução/prob1A2.jpg>
+[77]
 Overfull \hbox (40.28453pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 78 \TU/lmr/m/sl/10 CHAPTER 5.  PROJETO DE CONTROLADORES POR MÉTO
 DOS ALGÉBRICOS
  []
 
-[78
+[78]
+File: Imagens/Lab5/Resolução/prob1C1.jpg Graphic file (type bmp)
+<Imagens/Lab5/Resolução/prob1C1.jpg>
+File: Imagens/Lab5/Resolução/prob1C2.jpg Graphic file (type bmp)
+<Imagens/Lab5/Resolução/prob1C2.jpg>
+File: Imagens/Lab5/Resolução/prob1D1.jpg Graphic file (type bmp)
+<Imagens/Lab5/Resolução/prob1D1.jpg>
+[79]
+Overfull \hbox (40.28453pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 80 \TU/lmr/m/sl/10 CHAPTER 5.  PROJETO DE CONTROLADORES POR MÉTO
+DOS ALGÉBRICOS
+ []
 
-]
+[80]
+File: Imagens/Lab5/Resolução/prob2A1.jpg Graphic file (type bmp)
+<Imagens/Lab5/Resolução/prob2A1.jpg>
+
+Overfull \hbox (30.36313pt too wide) detected at line 1770
+[][][][] [] []  []  [][][][] [] [][]   []  [][]
+ []
+
+File: Imagens/Lab5/Resolução/prob2C1.jpg Graphic file (type bmp)
+<Imagens/Lab5/Resolução/prob2C1.jpg>
+File: Imagens/Lab5/Resolução/prob2C2.jpg Graphic file (type bmp)
+<Imagens/Lab5/Resolução/prob2C2.jpg>
+[81]
+Overfull \hbox (40.28453pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 82 \TU/lmr/m/sl/10 CHAPTER 5.  PROJETO DE CONTROLADORES POR MÉTO
+DOS ALGÉBRICOS
+ []
+
+[82]
+File: Imagens/Lab5/Resolução/prob2D1.jpg Graphic file (type bmp)
+<Imagens/Lab5/Resolução/prob2D1.jpg>
+[83]
+Overfull \hbox (40.28453pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 84 \TU/lmr/m/sl/10 CHAPTER 5.  PROJETO DE CONTROLADORES POR MÉTO
+DOS ALGÉBRICOS
+ []
+
+[84]
 Chapter 6.
 File: Imagens/Lab6/Apresentação/fig1.jpg Graphic file (type bmp)
 <Imagens/Lab6/Apresentação/fig1.jpg>
-[79]
+[85
+
+]
 File: Imagens/Lab6/Apresentação/fig2.jpg Graphic file (type bmp)
 <Imagens/Lab6/Apresentação/fig2.jpg>
 
 Underfull \vbox (badness 1184) has occurred while \output is active []
 
-[80] [81] [82
+[86] [87] [88
+
+] [89] [90
 
 ]
 Chapter 7.
-[83] [84
+[91] [92
+
+] [93] [94
 
 ]
 Chapter 8.
-[85] [86
+[95] [96
+
+] [97] [98
 
 ]
 Chapter 9.
-[87]
-Overfull \hbox (23.05342pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 88 \TU/lmr/m/sl/10 CHAPTER 9.  PROJETO DE CONTROLADORES PELO LUG
-AR DAS RAÍZES
+[99]
+Overfull \hbox (28.05342pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 100 \TU/lmr/m/sl/10 CHAPTER 9.  PROJETO DE CONTROLADORES PELO LU
+GAR DAS RAÍZES
  []
 
-[88
+[100
+
+] [101]
+Overfull \hbox (28.05342pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 102 \TU/lmr/m/sl/10 CHAPTER 9.  PROJETO DE CONTROLADORES PELO LU
+GAR DAS RAÍZES
+ []
+
+[102
 
 ]
 Chapter 10.
-[89] [90
+[103] [104
+
+] [105] [106
 
 ]
 Chapter 11.
-[91] [92
+[107] [108
+
+] [109] [110
 
 ]
 Chapter 12.
-[93]
-Overfull \hbox (35.83342pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 94 \TU/lmr/m/sl/10 CHAPTER 12.  PROJETO DE CONTROLADORES PELO DI
-AGRAMA DE BODE
+[111]
+Overfull \hbox (40.83342pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 112 \TU/lmr/m/sl/10 CHAPTER 12.  PROJETO DE CONTROLADORES PELO D
+IAGRAMA DE BODE
  []
 
-[94
+[112
+
+] [113]
+Overfull \hbox (40.83342pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 114 \TU/lmr/m/sl/10 CHAPTER 12.  PROJETO DE CONTROLADORES PELO D
+IAGRAMA DE BODE
+ []
+
+[114
 
 ]
 Chapter 13.
+[115]
+Overfull \hbox (6.85674pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 116 \TU/lmr/m/sl/10 CHAPTER 13.  DIGITALIZAÇÃO DE CONTROLADORES 
+ANALÓGICOS
+ []
+
+[116
+
+]
 No file SisCont_Labs.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1958.
-[95]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1958.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2014.
+[117]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2014.
 (./SisCont_Labs.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1958.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1958.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 2014.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2014.
 
 Package rerunfilecheck Info: File `SisCont_Labs.out' has not changed.
-(rerunfilecheck)             Checksum: 4FEF207AF21E6EDB9A8AF633FFC4B8FD;6290.
+(rerunfilecheck)             Checksum: E46D54D613DE423FF34E2C64153BC343;9759.
 
 LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1958.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2014.
  ) 
 Here is how much of TeX's memory you used:
- 30166 strings out of 494432
- 554179 string characters out of 6170871
- 727587 words of memory out of 5000000
- 34204 multiletter control sequences out of 15000+600000
+ 30178 strings out of 494432
+ 554279 string characters out of 6170871
+ 728018 words of memory out of 5000000
+ 34216 multiletter control sequences out of 15000+600000
  538780 words of font info for 83 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  55i,13n,115p,966b,2146s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on SisCont_Labs.pdf (95 pages).
+Output written on SisCont_Labs.pdf (117 pages).

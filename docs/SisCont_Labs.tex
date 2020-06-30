@@ -113,7 +113,7 @@
 
 \title{Laboratório de Sistemas de Controle}
 \author{Djonathan Luiz de Oliveira Quadras}
-\date{2020-06-25}
+\date{2020-06-30}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Teorema}[chapter]
@@ -1928,19 +1928,13 @@ O resultado da simulação está apresentado na figura \ref{fig:prob4A1}. Confor
 \caption{Simulação D1}\label{fig:prob4A1}
 \end{figure}
 
-\hypertarget{linearizauxe7uxe3o-de-sistemas-nuxe3o-lineares}{%
-\chapter{Linearização de Sistemas Não-Lineares}\label{linearizauxe7uxe3o-de-sistemas-nuxe3o-lineares}}
-
-\hypertarget{apresentauxe7uxe3o-do-laboratuxf3rio}{%
-\section{Apresentação do Laboratório}\label{apresentauxe7uxe3o-do-laboratuxf3rio}}
-
-\hypertarget{objetivos}{%
-\subsection{Objetivos}\label{objetivos}}
+\hypertarget{lab6}{%
+\chapter{Linearização de Sistemas Não-Lineares}\label{lab6}}
 
 Nesta experiência, veremos como podemos simular um sistema não-linear utilizando pacotes computacionais de simulação. Analisaremos os resultados de simulação do sistema de um tanque do Simulink/Matlab e verificaremos a noção de ponto de equilibrio. Por fim, com base na Função de Transferência do sistema linearizado, compararemos a dinâmica do mesmo com a dinâmica do sistema não-linear original por simulação.
 
 \hypertarget{sistema-de-um-tanque}{%
-\subsection{Sistema de um tanque}\label{sistema-de-um-tanque}}
+\section{Sistema de um tanque}\label{sistema-de-um-tanque}}
 
 Considere o sistema de um tanque ilustrado na Figura \ref{fig:fig61}. A equação diferencial que descreve a dinâmica da altura do nível \(H\) do tanque é
 
@@ -1983,7 +1977,7 @@ Note que \eqref{eq:eq61} é uma equação diferencial não-linear. O diagrama de
 A implementação deste diagrama de blocos em um pacote computacional de simulação fornece a solução da equação diferencial \eqref{eq:eq61} através de métodos numéricos de integração. Consequentemente, podemos analisar o comportamento dinâmico da altura do nível \(H(t)\) em função do tempo \(t\) para uma determinada escolha da vazão de entrada \(Q_e(t)\), \(t\geq 0\).
 
 \hypertarget{pontos-de-equiluxedbrio}{%
-\subsection{Pontos de equilíbrio}\label{pontos-de-equiluxedbrio}}
+\section{Pontos de equilíbrio}\label{pontos-de-equiluxedbrio}}
 
 Intuitivamente, pensamos que um sistema está em \emph{equilibrio} quando o mesmo apresenta um comportamento estático, ou seja, o sistema não exisbe qualquer dinâmica. Veremos agora como definir matematicamente tal noção.
 
@@ -1991,13 +1985,74 @@ Considere um sistema não-linear descrito pela equação diferencial
 \begin{align}
 \dot{x}(t) = f(x(t),u(t)), \label{eq:eq62}
 \end{align}
-onde
+onde \(x \in \mathbb{R}^n\) e \(u \in \mathbb{R}^m\) é o controle (ou entrada). Dizemos que um par ordenado \((\overline{x}, \overline{u}) \in \mathbb{R}^n \times \mathbb{R}^m\) é um \emph{ponto de equilíbrio} (ou \emph{ponto de operação}) do sistema \eqref{eq:eq62} quando \(f(\overline{x}, \overline{u}) =0\), ou seja, \(\dot{x} = 0\). Isto é equivalente a dizer que se aplicarmos a entrada constante \(u(t) = \overline{u}\) no sistema \eqref{eq:eq62} com condição inicial \(x(0) = \overline{x}\), obteremos a solução constante (ou \emph{solução estacionária}) \(x(t) = \overline{x}, t\geq0\). Note que, neste caso, o sistema permanece estático, sem dinâmica.
+
+Determinaremos então os pontos de equilíbrio do sistema de um taque. De \eqref{eq:eq61} e do fato de que \(u = Q_e\) é o controle (ou entrada) do sistema, obtemos
+\begin{align}
+\dot{H} = \frac{1}{A}(Q_e-Q_s)=0 \implies \overline{u} = Q_e = Q_s = \beta\sqrt{\overline{H}} \implies \boxed{\overline{H}=\frac{\overline{u}^2}{\beta^2}}. \label{eq:eq63}
+\end{align}
+
+Como era de se esperar, o equilíbrio ocorre quando no tanque a vazão de entrada é igual à vazão saída \((Q_e = Q_s)\). Assim, dado qualquer \(\overline{u}\), temos que \((\overline{H}, \overline{u}) \in \mathbb{R}^2\) é um ponto de equilíbrio do sistema \eqref{eq:eq61}, onde \(\overline{H} = \frac{\overline{u}^2}{\beta^2}\).
+
+Em situações práticas, nem sempre conheceremos completamente a quação diferencial que descreve a dinâmica de um sistema. Entretanto, podemos mesmo assim determinar alguns de seus pontos de equilíbrio com base na propriedade abaixo.
+
+\textbf{Propriedade 1.} \emph{Se a trajetória \(x(t)\) (solução) do sistema para uma dada condição inicial \(x(0)\) satisfaz \(\lim\limits_{t\to\infty}{x(t)} = \overline{x}\) ao aplicarmos a entrada constante \(u(t) = \overline{u}, t \geq 0\), então \((\overline{x}, \overline{u})\) é um ponto de equilíbrio do sistema.}
+
+\hypertarget{linearizauxe7uxe3o-de-sistemas-nuxe3o-lineares}{%
+\section{Linearização de sistemas não-lineares}\label{linearizauxe7uxe3o-de-sistemas-nuxe3o-lineares}}
+
+Considere um sistema não-linear descrito pelas equações diferenciais
+\begin{align}
+\dot{x_1}(t) = f_1(x(t),u(t)), \\
+\vdots \\ \label{eq:eq64}
+\dot{x}_n(t) = f_n(x(t),u(t))
+\end{align}
+onde \(x = (x_1, \dots, x_n) \in \mathbb{R}^n\) e \(u \in \mathbb{R}\) é o controle. Suponha que \(f_1, \dots, f_n\) são continuamente diferenciáveis e que \((\overline{x}, \overline{u}) \in \mathbb{R}^n \times \mathbb{R}\) é um ponto de equilíbrio do sistema, isto é,
+\[
+\dot{x}_i = f_i(\overline{x}, \overline{u}) = 0, \quad \text{para } i = 1, \dots, n.
+\]
+
+Seja \(g:\mathbb{R} \to \mathbb{R}\) uma função diferenciável em \(t_0 \in \mathbb{R}\). Do mesmo modo que a reta tangente no ponto \((t_0,g'(t_0))\) aproxima o gráfico de \(g\) na proximidade de \(t_0\) (i.e.~para \(\Delta t = t - t_0 \cong 0\)), podemos encontrar um sistema linear cuja dinâmica aproxima a dinâmica do sistema não-linear \eqref{eq:eq64} nas proximidades de \((\overline{x}, \overline{u})\). Veremos como aplicar técnicas lineares ao referido sistema linear que possibilitam analisar o sistema não-linear \eqref{eq:eq64} em torno de \((\overline{x}, \overline{u})\).
+
+Suponha que \eqref{eq:eq64} está no equilíbrio \((\overline{x}, \overline{u})\) em \(t=0\), isto é, \(x(0) = \overline{x}\) e \(u(t) = \overline{u}\) para \(t \geq 0\). Agora, considere que \(x(t)\) é a solução de \eqref{eq:eq64} com condição inicial \(x(0) = \overline{x}\) e uma \emph{outr} entrada \(u(t) \neq \overline{u}\). Seja \(\delta x(t) = x(t) -\overline{x}\) o \emph{desvio} em relação à \(\overline{x}\), e \(\delta u(t) = u(t) - \overline{u}\) o \emph{desvio} em relação à entrada de equilíbrio \(\overline{u}\). Assim, \(x(t) = \overline{x} + \delta x(t)\) e \(u(t) = \overline{u} + \delta u(t)\). Note que \(\delta x(0) = 0\). Nosso objetivo é relacionar de modo linear a dinâmica de \(\delta x(t)\) com \(\delta u(t)\), ao menos aproximadamente.
 
 \hypertarget{problemas-laboratuxf3rio-6}{%
 \chapter*{Problemas Laboratório 6}\label{problemas-laboratuxf3rio-6}}
 \addcontentsline{toc}{chapter}{Problemas Laboratório 6}
 
+Estes problemas são relacionados ao assunto abordado no Laboratório \ref{lab6}.
+
+\hypertarget{problema-6.1}{%
+\section*{Problema 6.1}\label{problema-6.1}}
+\addcontentsline{toc}{section}{Problema 6.1}
+
+Considere a equação diferencial \eqref{eq:eq61}, com \(\beta = 0.01\), \(A = 1\). Implemente o diagrama de blocos da Figura \ref{fig:fig62} no Simulink/Matlab com o objetivo de simular a dinâmica da altura do nível \(H\) do tanque. Simule o sistema para a condição \(H(0) = 0\) e vazões de entrada \(Q_e = 0.01\), \(Q_e = 0.02\), \(Q_e = 0.1\) do tipo degrau. Analise os resultados. Observe a não-linearidade do sistema: ao dobrarmos a vazão de entrada de \(Q_e = 0.01\) para \(Q_e = 0.02\) o valor final de \(H(t)\) quadruplicou.
+
+\hypertarget{resoluuxe7uxe3o}{%
+\subsubsection*{Resolução}\label{resoluuxe7uxe3o}}
+\addcontentsline{toc}{subsubsection}{Resolução}
+
 Working on it :)
+
+\hypertarget{problema-6.2}{%
+\section*{Problema 6.2}\label{problema-6.2}}
+\addcontentsline{toc}{section}{Problema 6.2}
+
+Utilizando os mesmos dados do item anterior simule o sistema para a condição inicial \(H(0)=4\) e a vazão de entrada \(Q_e = 0.02\) do tipo degrau. O comportamento observado era esperado? Justifique (dica: veja \eqref{eq:eq63} e relembre o conceito de ponto de equilíbrio). Em seguida, modifique a vazão de entrada para \(Q_e = 0.019\) e simule. Analise os resultados (veja a Propriedade 1 e \eqref{eq:eq63}).
+
+\hypertarget{resoluuxe7uxe3o-1}{%
+\subsubsection*{Resolução}\label{resoluuxe7uxe3o-1}}
+\addcontentsline{toc}{subsubsection}{Resolução}
+
+Working on it :)
+
+\hypertarget{problema-6.3}{%
+\section*{Problema 6.3}\label{problema-6.3}}
+\addcontentsline{toc}{section}{Problema 6.3}
+
+\hypertarget{problema-6.4}{%
+\section*{Problema 6.4}\label{problema-6.4}}
+\addcontentsline{toc}{section}{Problema 6.4}
 
 \hypertarget{controle-de-sistemas-nuxe3o-lineares}{%
 \chapter{Controle de Sistemas Não-Lineares}\label{controle-de-sistemas-nuxe3o-lineares}}

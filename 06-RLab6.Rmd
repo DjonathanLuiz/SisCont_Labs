@@ -1,3 +1,23 @@
 # Problemas Laboratório 6 {-}
 
+Estes problemas são relacionados ao assunto abordado no Laboratório \@ref(lab6).
+
+## Problema 6.1 {-}
+
+Considere a equação diferencial \@ref(eq:eq61), com $\beta = 0.01$, $A = 1$. Implemente o diagrama de blocos da Figura \@ref(fig:fig62) no Simulink/Matlab com o objetivo de simular a dinâmica da altura do nível $H$ do tanque. Simule o sistema para a condição $H(0) = 0$ e vazões de entrada $Q_e = 0.01$, $Q_e = 0.02$, $Q_e = 0.1$ do tipo degrau. Analise os resultados. Observe a não-linearidade do sistema: ao dobrarmos a vazão de entrada de $Q_e = 0.01$ para $Q_e = 0.02$ o valor final de $H(t)$ quadruplicou.
+
+#### Resolução {-}
+
 Working on it :)
+
+## Problema 6.2 {-}
+
+Utilizando os mesmos dados do item anterior simule o sistema para a condição inicial $H(0)=4$ e a vazão de entrada $Q_e = 0.02$ do tipo degrau. O comportamento observado era esperado? Justifique (dica: veja \@ref(eq:eq63) e relembre o conceito de ponto de equilíbrio). Em seguida, modifique a vazão de entrada para $Q_e = 0.019$ e simule. Analise os resultados (veja a Propriedade 1 e \@ref(eq:eq63)).
+
+#### Resolução {-}
+
+Working on it :)
+
+## Problema 6.3 {-}
+
+## Problema 6.4 {-}

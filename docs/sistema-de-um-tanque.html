@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>5.2 Método Algébrico de Projeto de Controladores | Laboratório de Sistemas de Controle</title>
+  <title>6.1 Sistema de um tanque | Laboratório de Sistemas de Controle</title>
   <meta name="description" content="Este livro tem o objetivo de apresentar as respostas dos laboratórios da disciplina DAS5317 Sistemas de Controle da Universidade Federal de Santa Catarina para o semestre 2020.1 desenvolvidas pelo acadêmico Djonathan Luiz de Oliveira Quadras." />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="5.2 Método Algébrico de Projeto de Controladores | Laboratório de Sistemas de Controle" />
+  <meta property="og:title" content="6.1 Sistema de um tanque | Laboratório de Sistemas de Controle" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="5.2 Método Algébrico de Projeto de Controladores | Laboratório de Sistemas de Controle" />
+  <meta name="twitter:title" content="6.1 Sistema de um tanque | Laboratório de Sistemas de Controle" />
   
   <meta name="twitter:description" content="Este livro tem o objetivo de apresentar as respostas dos laboratórios da disciplina DAS5317 Sistemas de Controle da Universidade Federal de Santa Catarina para o semestre 2020.1 desenvolvidas pelo acadêmico Djonathan Luiz de Oliveira Quadras." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="controladores-clássicos.html"/>
-<link rel="next" href="erro-em-regime-permanente.html"/>
+<link rel="prev" href="lab6.html"/>
+<link rel="next" href="pontos-de-equilíbrio.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -237,27 +237,44 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="método-algébrico-de-projeto-de-controladores" class="section level2" number="5.2">
-<h2><span class="header-section-number">5.2</span> Método Algébrico de Projeto de Controladores</h2>
-<p>Considerando que <span class="math inline">\(w=0\)</span> (sem perturbação), temos que a Função de Transferência em malha-fechada da figura <a href="controladores-clássicos.html#fig:fig51">5.1</a> é
-<span class="math display">\[
-F(s) = \frac {Y(s)}{R(s)} = \frac {C(s)G(s)}{1+C(s)G(s)}= \frac {N_c(s)N(s)}{D_c(s)D(s)+N_c(s)N(s)}, \quad \text{ para } w=0.
+<div id="sistema-de-um-tanque" class="section level2" number="6.1">
+<h2><span class="header-section-number">6.1</span> Sistema de um tanque</h2>
+<p>Considere o sistema de um tanque ilustrado na Figura <a href="sistema-de-um-tanque.html#fig:fig61">6.1</a>. A equação diferencial que descreve a dinâmica da altura do nível <span class="math inline">\(H\)</span> do tanque é</p>
+<p><span class="math display" id="eq:eq61">\[\begin{align}
+H(t) = \frac{1}{A}(Q_e(t)-Q_s(t)) = \boxed{\frac{1}{A}(Q_e(t)-\beta\sqrt{H(t)})}, \tag{6.1}
+\end{align}\]</span></p>
+<div class="figure" style="text-align: center"><span id="fig:fig61"></span>
+<img src="Imagens/Lab6/Apresentação/fig1.jpg" alt="Tanque" width="50%" />
+<p class="caption">
+Figura 6.1: Tanque
+</p>
+</div>
+<p>onde</p>
+<p><span class="math display">\[
+  \begin{cases}
+    H &amp; \quad \text{ : altura do nível,}\\
+    Q_e &amp; \quad \text{ : vazão de entrada,}\\
+    Q_s = \beta\sqrt{H} &amp; \quad \text{ : vazão de saída,}\\
+    \beta \geq 0 &amp; \quad \text{ : parâmetro do tanque,}\\
+    A &amp; \quad \text{ : área da base do tanque.}
+  \end{cases}
 \]</span></p>
-<p>Uma maneira de projetarmos o controlador é primeiramente escolhermos a estrutura de <span class="math inline">\(C(s)\)</span> de modo que as especificações de regime permanente sejam atendidas e que <span class="math inline">\(F(s)\)</span> seja uma função de Transferência de primeira ou de segunda ordem (relembre que a ordem de <span class="math inline">\(F(s)\)</span> é igual a ordem de <span class="math inline">\(C(s)G(s)\)</span>). Em muitos casos, isto pode ser alcançado através de um cancelamento entre um zero de <span class="math inline">\(C(s)\)</span> e um pólo de <span class="math inline">\(G(s)\)</span>. Em seguida os parâmetros de <span class="math inline">\(C(s)\)</span> são determinados por igualdade polinomial. Na prática, <span class="math inline">\(F(s)\)</span> sempre feverá ser estável. Assim, sempre consideramos que <span class="math inline">\(F(s)\)</span> é estável. No entanto, tal método algébrico apresenta algumas restrições.</p>
-<ol style="list-style-type: decimal">
-<li>Em geral, o método é válido para <span class="math inline">\(G(s)\)</span> de primeira ou segunda ordem;</li>
-<li>Cancelamentos pólo-zero em <span class="math inline">\(C(s)G(s)\)</span> que estão no SPD (instável) não podem ser efetuados;</li>
-<li>Mesmo quando fazemos cancelamento pólo-zero em <span class="math inline">\(C(s)G(s)\)</span> que está no SPE (estável), temos que o regime transitório referente à perturbação <span class="math inline">\(w\)</span> será influenciado pelo pólo de <span class="math inline">\(G(s)\)</span> que foi cancelado. Desse modo, se o pólo cancelado de <span class="math inline">\(G(s)\)</span> é muito lento, ou seja, está muito próximo do eixo imaginário, a dinâmica da rejeição de tais perturbações também será bastante lenta;</li>
-<li>Quando desejamos que <span class="math inline">\(F(s)\)</span> seja de segunda ordem, muitas vezes não conseguimos atender simultaneamente as especificações de tempo de acomodação (<span class="math inline">\(t_s(5\%)\)</span>) e de sobressinal (<span class="math inline">\(M_p\)</span>).</li>
-</ol>
+<p>Note que <a href="sistema-de-um-tanque.html#eq:eq61">(6.1)</a> é uma equação diferencial não-linear. O diagrama de blocos corresponde à equação diferencial <a href="sistema-de-um-tanque.html#eq:eq61">(6.1)</a> é mostrado abaixo, onde <span class="math inline">\(H(0)\)</span> é a condição inicial.</p>
+<div class="figure" style="text-align: center"><span id="fig:fig62"></span>
+<img src="Imagens/Lab6/Apresentação/fig2.jpg" alt="Diagrama de blocos da dinâmica da altura do nível $H$ do tanque." width="50%" />
+<p class="caption">
+Figura 6.2: Diagrama de blocos da dinâmica da altura do nível <span class="math inline">\(H\)</span> do tanque.
+</p>
+</div>
+<p>A implementação deste diagrama de blocos em um pacote computacional de simulação fornece a solução da equação diferencial <a href="sistema-de-um-tanque.html#eq:eq61">(6.1)</a> através de métodos numéricos de integração. Consequentemente, podemos analisar o comportamento dinâmico da altura do nível <span class="math inline">\(H(t)\)</span> em função do tempo <span class="math inline">\(t\)</span> para uma determinada escolha da vazão de entrada <span class="math inline">\(Q_e(t)\)</span>, <span class="math inline">\(t\geq 0\)</span>.</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="controladores-clássicos.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="erro-em-regime-permanente.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="lab6.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="pontos-de-equilíbrio.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

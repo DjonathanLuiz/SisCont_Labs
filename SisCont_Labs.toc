@@ -89,22 +89,27 @@
 \contentsline {section}{Problema 5.4}{85}{section*.76}%
 \contentsline {subsubsection}{Resolução}{86}{section*.77}%
 \contentsline {chapter}{\numberline {6}Linearização de Sistemas Não-Lineares}{89}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Apresentação do Laboratório}{89}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Objetivos}{89}{subsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}Sistema de um tanque}{89}{subsection.6.1.2}%
-\contentsline {subsection}{\numberline {6.1.3}Pontos de equilíbrio}{91}{subsection.6.1.3}%
+\contentsline {section}{\numberline {6.1}Sistema de um tanque}{89}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Pontos de equilíbrio}{90}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Linearização de sistemas não-lineares}{91}{section.6.3}%
 \contentsline {chapter}{Problemas Laboratório 6}{93}{chapter*.78}%
+\contentsline {section}{Problema 6.1}{93}{section*.79}%
+\contentsline {subsubsection}{Resolução}{93}{section*.80}%
+\contentsline {section}{Problema 6.2}{93}{section*.81}%
+\contentsline {subsubsection}{Resolução}{93}{section*.82}%
+\contentsline {section}{Problema 6.3}{94}{section*.83}%
+\contentsline {section}{Problema 6.4}{94}{section*.84}%
 \contentsline {chapter}{\numberline {7}Controle de Sistemas Não-Lineares}{95}{chapter.7}%
-\contentsline {chapter}{Problemas Laboratório 7}{97}{chapter*.79}%
+\contentsline {chapter}{Problemas Laboratório 7}{97}{chapter*.85}%
 \contentsline {chapter}{\numberline {8}Análise pelo Lugar das Raízes}{99}{chapter.8}%
-\contentsline {chapter}{Problemas Laboratório 8}{101}{chapter*.80}%
+\contentsline {chapter}{Problemas Laboratório 8}{101}{chapter*.86}%
 \contentsline {chapter}{\numberline {9}Projeto de Controladores pelo Lugar das Raízes}{103}{chapter.9}%
-\contentsline {chapter}{Problemas Laboratório 9}{105}{chapter*.81}%
+\contentsline {chapter}{Problemas Laboratório 9}{105}{chapter*.87}%
 \contentsline {chapter}{\numberline {10}Projeto do controlador atraso de fase}{107}{chapter.10}%
-\contentsline {chapter}{Problemas Laboratório 10}{109}{chapter*.82}%
+\contentsline {chapter}{Problemas Laboratório 10}{109}{chapter*.88}%
 \contentsline {chapter}{\numberline {11}Análise pelos Diagramas de Bode e Nyquist}{111}{chapter.11}%
-\contentsline {chapter}{Problemas Laboratório 11}{113}{chapter*.83}%
+\contentsline {chapter}{Problemas Laboratório 11}{113}{chapter*.89}%
 \contentsline {chapter}{\numberline {12}Projeto de Controladores pelo Diagrama de Bode}{115}{chapter.12}%
-\contentsline {chapter}{Problemas Laboratório 12}{117}{chapter*.84}%
+\contentsline {chapter}{Problemas Laboratório 12}{117}{chapter*.90}%
 \contentsline {chapter}{\numberline {13}Digitalização de Controladores Analógicos}{119}{chapter.13}%
-\contentsline {chapter}{Problemas Laboratório 13}{121}{chapter*.85}%
+\contentsline {chapter}{Problemas Laboratório 13}{121}{chapter*.91}%

@@ -1,12 +1,8 @@
-# Linearização de Sistemas Não-Lineares
-
-## Apresentação do Laboratório
-
-### Objetivos
+# Linearização de Sistemas Não-Lineares {#lab6}
 
 Nesta experiência, veremos como podemos simular um sistema não-linear utilizando pacotes computacionais de simulação. Analisaremos os resultados de simulação do sistema de um tanque do Simulink/Matlab e verificaremos a noção de ponto de equilibrio. Por fim, com base na Função de Transferência do sistema linearizado, compararemos a dinâmica do mesmo com a dinâmica do sistema não-linear original por simulação.
 
-### Sistema de um tanque
+## Sistema de um tanque
 
 Considere o sistema de um tanque ilustrado na Figura \@ref(fig:fig61). A equação diferencial que descreve a dinâmica da altura do nível $H$ do tanque é
 
@@ -38,7 +34,7 @@ knitr::include_graphics('Imagens/Lab6/Apresentação/fig2.jpg', dpi = NA)
 
 A implementação deste diagrama de blocos em um pacote computacional de simulação fornece a solução da equação diferencial \@ref(eq:eq61) através de métodos numéricos de integração. Consequentemente, podemos analisar o comportamento dinâmico da altura do nível $H(t)$ em função do tempo $t$ para uma determinada escolha da vazão de entrada $Q_e(t)$, $t\geq 0$.
 
-### Pontos de equilíbrio
+## Pontos de equilíbrio
 
 Intuitivamente, pensamos que um sistema está em *equilibrio* quando o mesmo apresenta um comportamento estático, ou seja, o sistema não exisbe qualquer dinâmica. Veremos agora como definir matematicamente tal noção.
 
@@ -46,6 +42,38 @@ Considere um sistema não-linear descrito pela equação diferencial
 \begin{align}
 \dot{x}(t) = f(x(t),u(t)), (\#eq:eq62)
 \end{align}
-onde 
+onde $x \in \mathbb{R}^n$ e $u \in \mathbb{R}^m$ é o controle (ou entrada). Dizemos que um par ordenado $(\overline{x}, \overline{u}) \in \mathbb{R}^n \times \mathbb{R}^m$ é um *ponto de equilíbrio* (ou *ponto de operação*) do sistema \@ref(eq:eq62) quando $f(\overline{x}, \overline{u}) =0$, ou seja, $\dot{x} = 0$. Isto é equivalente a dizer que se aplicarmos a entrada constante $u(t) = \overline{u}$ no sistema \@ref(eq:eq62) com condição inicial $x(0) = \overline{x}$, obteremos a solução constante (ou *solução estacionária*) $x(t) = \overline{x}, t\geq0$. Note que, neste caso, o sistema permanece estático, sem dinâmica.
+
+Determinaremos então os pontos de equilíbrio do sistema de um taque. De \@ref(eq:eq61) e do fato de que $u = Q_e$ é o controle (ou entrada) do sistema, obtemos
+\begin{align}
+\dot{H} = \frac{1}{A}(Q_e-Q_s)=0 \implies \overline{u} = Q_e = Q_s = \beta\sqrt{\overline{H}} \implies \boxed{\overline{H}=\frac{\overline{u}^2}{\beta^2}}. (\#eq:eq63)
+\end{align}
+
+Como era de se esperar, o equilíbrio ocorre quando no tanque a vazão de entrada é igual à vazão saída $(Q_e = Q_s)$. Assim, dado qualquer $\overline{u}$, temos que $(\overline{H}, \overline{u}) \in \mathbb{R}^2$ é um ponto de equilíbrio do sistema \@ref(eq:eq61), onde $\overline{H} = \frac{\overline{u}^2}{\beta^2}$.
+
+Em situações práticas, nem sempre conheceremos completamente a quação diferencial que descreve a dinâmica de um sistema. Entretanto, podemos mesmo assim determinar alguns de seus pontos de equilíbrio com base na propriedade abaixo.
+
+**Propriedade 1.** *Se a trajetória $x(t)$ (solução) do sistema para uma dada condição inicial $x(0)$ satisfaz $\lim\limits_{t\to\infty}{x(t)} = \overline{x}$ ao aplicarmos a entrada constante $u(t) = \overline{u}, t \geq 0$, então $(\overline{x}, \overline{u})$ é um ponto de equilíbrio do sistema.*
+
+## Linearização de sistemas não-lineares
+
+Considere um sistema não-linear descrito pelas equações diferenciais
+\begin{align}
+\dot{x_1}(t) = f_1(x(t),u(t)), \\
+\vdots \\ (\#eq:eq64)
+\dot{x}_n(t) = f_n(x(t),u(t))
+\end{align}
+onde $x = (x_1, \dots, x_n) \in \mathbb{R}^n$ e $u \in \mathbb{R}$ é o controle. Suponha que $f_1, \dots, f_n$ são continuamente diferenciáveis e que $(\overline{x}, \overline{u}) \in \mathbb{R}^n \times \mathbb{R}$ é um ponto de equilíbrio do sistema, isto é,
+$$
+\dot{x}_i = f_i(\overline{x}, \overline{u}) = 0, \quad \text{para } i = 1, \dots, n.
+$$
+
+Seja $g:\mathbb{R} \to \mathbb{R}$ uma função diferenciável em $t_0 \in \mathbb{R}$. Do mesmo modo que a reta tangente no ponto $(t_0,g'(t_0))$ aproxima o gráfico de $g$ na proximidade de $t_0$ (i.e. para $\Delta t = t - t_0 \cong 0$), podemos encontrar um sistema linear cuja dinâmica aproxima a dinâmica do sistema não-linear \@ref(eq:eq64) nas proximidades de $(\overline{x}, \overline{u})$. Veremos como aplicar técnicas lineares ao referido sistema linear que possibilitam analisar o sistema não-linear \@ref(eq:eq64) em torno de  $(\overline{x}, \overline{u})$.
+
+Suponha que \@ref(eq:eq64) está no equilíbrio $(\overline{x}, \overline{u})$ em $t=0$, isto é, $x(0) = \overline{x}$ e $u(t) = \overline{u}$ para $t \geq 0$. Agora, considere que $x(t)$ é a solução de \@ref(eq:eq64) com condição inicial $x(0) = \overline{x}$ e uma *outr* entrada $u(t) \neq \overline{u}$. Seja $\delta x(t) = x(t) -\overline{x}$ o *desvio* em relação à $\overline{x}$, e $\delta u(t) = u(t) - \overline{u}$ o *desvio* em relação à entrada de equilíbrio $\overline{u}$. Assim, $x(t) = \overline{x} + \delta x(t)$ e $u(t) = \overline{u} + \delta u(t)$. Note que $\delta x(0) = 0$. Nosso objetivo é relacionar de modo linear a dinâmica de $\delta x(t)$ com $\delta u(t)$, ao menos aproximadamente.
+
+
+
+
 
 

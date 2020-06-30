@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>5.2 Método Algébrico de Projeto de Controladores | Laboratório de Sistemas de Controle</title>
+  <title>Problema 6.4 | Laboratório de Sistemas de Controle</title>
   <meta name="description" content="Este livro tem o objetivo de apresentar as respostas dos laboratórios da disciplina DAS5317 Sistemas de Controle da Universidade Federal de Santa Catarina para o semestre 2020.1 desenvolvidas pelo acadêmico Djonathan Luiz de Oliveira Quadras." />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="5.2 Método Algébrico de Projeto de Controladores | Laboratório de Sistemas de Controle" />
+  <meta property="og:title" content="Problema 6.4 | Laboratório de Sistemas de Controle" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="5.2 Método Algébrico de Projeto de Controladores | Laboratório de Sistemas de Controle" />
+  <meta name="twitter:title" content="Problema 6.4 | Laboratório de Sistemas de Controle" />
   
   <meta name="twitter:description" content="Este livro tem o objetivo de apresentar as respostas dos laboratórios da disciplina DAS5317 Sistemas de Controle da Universidade Federal de Santa Catarina para o semestre 2020.1 desenvolvidas pelo acadêmico Djonathan Luiz de Oliveira Quadras." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="controladores-clássicos.html"/>
-<link rel="next" href="erro-em-regime-permanente.html"/>
+<link rel="prev" href="problema-6-3.html"/>
+<link rel="next" href="controle-de-sistemas-não-lineares.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -237,27 +237,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="método-algébrico-de-projeto-de-controladores" class="section level2" number="5.2">
-<h2><span class="header-section-number">5.2</span> Método Algébrico de Projeto de Controladores</h2>
-<p>Considerando que <span class="math inline">\(w=0\)</span> (sem perturbação), temos que a Função de Transferência em malha-fechada da figura <a href="controladores-clássicos.html#fig:fig51">5.1</a> é
-<span class="math display">\[
-F(s) = \frac {Y(s)}{R(s)} = \frac {C(s)G(s)}{1+C(s)G(s)}= \frac {N_c(s)N(s)}{D_c(s)D(s)+N_c(s)N(s)}, \quad \text{ para } w=0.
-\]</span></p>
-<p>Uma maneira de projetarmos o controlador é primeiramente escolhermos a estrutura de <span class="math inline">\(C(s)\)</span> de modo que as especificações de regime permanente sejam atendidas e que <span class="math inline">\(F(s)\)</span> seja uma função de Transferência de primeira ou de segunda ordem (relembre que a ordem de <span class="math inline">\(F(s)\)</span> é igual a ordem de <span class="math inline">\(C(s)G(s)\)</span>). Em muitos casos, isto pode ser alcançado através de um cancelamento entre um zero de <span class="math inline">\(C(s)\)</span> e um pólo de <span class="math inline">\(G(s)\)</span>. Em seguida os parâmetros de <span class="math inline">\(C(s)\)</span> são determinados por igualdade polinomial. Na prática, <span class="math inline">\(F(s)\)</span> sempre feverá ser estável. Assim, sempre consideramos que <span class="math inline">\(F(s)\)</span> é estável. No entanto, tal método algébrico apresenta algumas restrições.</p>
-<ol style="list-style-type: decimal">
-<li>Em geral, o método é válido para <span class="math inline">\(G(s)\)</span> de primeira ou segunda ordem;</li>
-<li>Cancelamentos pólo-zero em <span class="math inline">\(C(s)G(s)\)</span> que estão no SPD (instável) não podem ser efetuados;</li>
-<li>Mesmo quando fazemos cancelamento pólo-zero em <span class="math inline">\(C(s)G(s)\)</span> que está no SPE (estável), temos que o regime transitório referente à perturbação <span class="math inline">\(w\)</span> será influenciado pelo pólo de <span class="math inline">\(G(s)\)</span> que foi cancelado. Desse modo, se o pólo cancelado de <span class="math inline">\(G(s)\)</span> é muito lento, ou seja, está muito próximo do eixo imaginário, a dinâmica da rejeição de tais perturbações também será bastante lenta;</li>
-<li>Quando desejamos que <span class="math inline">\(F(s)\)</span> seja de segunda ordem, muitas vezes não conseguimos atender simultaneamente as especificações de tempo de acomodação (<span class="math inline">\(t_s(5\%)\)</span>) e de sobressinal (<span class="math inline">\(M_p\)</span>).</li>
-</ol>
+<div id="problema-6.4" class="section level2 unnumbered" number="">
+<h2>Problema 6.4</h2>
+
 </div>
+<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="controladores-clássicos.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="erro-em-regime-permanente.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="problema-6-3.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="controle-de-sistemas-não-lineares.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

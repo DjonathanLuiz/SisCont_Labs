@@ -72,7 +72,10 @@ Seja $g:\mathbb{R} \to \mathbb{R}$ uma função diferenciável em $t_0 \in \math
 
 Suponha que \@ref(eq:eq64) está no equilíbrio $(\overline{x}, \overline{u})$ em $t=0$, isto é, $x(0) = \overline{x}$ e $u(t) = \overline{u}$ para $t \geq 0$. Agora, considere que $x(t)$ é a solução de \@ref(eq:eq64) com condição inicial $x(0) = \overline{x}$ e uma *outr* entrada $u(t) \neq \overline{u}$. Seja $\delta x(t) = x(t) -\overline{x}$ o *desvio* em relação à $\overline{x}$, e $\delta u(t) = u(t) - \overline{u}$ o *desvio* em relação à entrada de equilíbrio $\overline{u}$. Assim, $x(t) = \overline{x} + \delta x(t)$ e $u(t) = \overline{u} + \delta u(t)$. Note que $\delta x(0) = 0$. Nosso objetivo é relacionar de modo linear a dinâmica de $\delta x(t)$ com $\delta u(t)$, ao menos aproximadamente.
 
-
+Utilizando a série de Taylor de ordem 1 da função $f_i$ em $(\overline{x}, \overline{u})$, temos que a dinâmica do desvio $\delta x_i(t) = x_i(t)-\overline{x}_i$ é descrita por
+$$
+\dot{\delta}x_i(t) = \dot{x}_i(t) - \underbrace{\dot{\overline{x}}_i}_{=0} = \dot{x}_i(t) = f_i(x(t),u(t)) \cong \underbrace{f_i(\overline{x}, \overline{u})}_{=0} + \sum_{k=1}^n{\frac{\partial f_i}{\partial x_k}} 
+$$
 
 
 

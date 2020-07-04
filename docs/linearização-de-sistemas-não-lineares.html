@@ -24,7 +24,7 @@
 <meta name="author" content="Djonathan Luiz de Oliveira Quadras" />
 
 
-<meta name="date" content="2020-06-30" />
+<meta name="date" content="2020-07-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -251,6 +251,10 @@ onde <span class="math inline">\(x = (x_1, \dots, x_n) \in \mathbb{R}^n\)</span>
 \]</span></p>
 <p>Seja <span class="math inline">\(g:\mathbb{R} \to \mathbb{R}\)</span> uma função diferenciável em <span class="math inline">\(t_0 \in \mathbb{R}\)</span>. Do mesmo modo que a reta tangente no ponto <span class="math inline">\((t_0,g&#39;(t_0))\)</span> aproxima o gráfico de <span class="math inline">\(g\)</span> na proximidade de <span class="math inline">\(t_0\)</span> (i.e. para <span class="math inline">\(\Delta t = t - t_0 \cong 0\)</span>), podemos encontrar um sistema linear cuja dinâmica aproxima a dinâmica do sistema não-linear <a href="linearização-de-sistemas-não-lineares.html#eq:eq64">(6.4)</a> nas proximidades de <span class="math inline">\((\overline{x}, \overline{u})\)</span>. Veremos como aplicar técnicas lineares ao referido sistema linear que possibilitam analisar o sistema não-linear <a href="linearização-de-sistemas-não-lineares.html#eq:eq64">(6.4)</a> em torno de <span class="math inline">\((\overline{x}, \overline{u})\)</span>.</p>
 <p>Suponha que <a href="linearização-de-sistemas-não-lineares.html#eq:eq64">(6.4)</a> está no equilíbrio <span class="math inline">\((\overline{x}, \overline{u})\)</span> em <span class="math inline">\(t=0\)</span>, isto é, <span class="math inline">\(x(0) = \overline{x}\)</span> e <span class="math inline">\(u(t) = \overline{u}\)</span> para <span class="math inline">\(t \geq 0\)</span>. Agora, considere que <span class="math inline">\(x(t)\)</span> é a solução de <a href="linearização-de-sistemas-não-lineares.html#eq:eq64">(6.4)</a> com condição inicial <span class="math inline">\(x(0) = \overline{x}\)</span> e uma <em>outr</em> entrada <span class="math inline">\(u(t) \neq \overline{u}\)</span>. Seja <span class="math inline">\(\delta x(t) = x(t) -\overline{x}\)</span> o <em>desvio</em> em relação à <span class="math inline">\(\overline{x}\)</span>, e <span class="math inline">\(\delta u(t) = u(t) - \overline{u}\)</span> o <em>desvio</em> em relação à entrada de equilíbrio <span class="math inline">\(\overline{u}\)</span>. Assim, <span class="math inline">\(x(t) = \overline{x} + \delta x(t)\)</span> e <span class="math inline">\(u(t) = \overline{u} + \delta u(t)\)</span>. Note que <span class="math inline">\(\delta x(0) = 0\)</span>. Nosso objetivo é relacionar de modo linear a dinâmica de <span class="math inline">\(\delta x(t)\)</span> com <span class="math inline">\(\delta u(t)\)</span>, ao menos aproximadamente.</p>
+<p>Utilizando a série de Taylor de ordem 1 da função <span class="math inline">\(f_i\)</span> em <span class="math inline">\((\overline{x}, \overline{u})\)</span>, temos que a dinâmica do desvio <span class="math inline">\(\delta x_i(t) = x_i(t)-\overline{x}_i\)</span> é descrita por
+<span class="math display">\[
+\dot{\delta}x_i(t) = \dot{x}_i(t) - \underbrace{\dot{\overline{x}}_i}_{=0} = \dot{x}_i(t) = f_i(x(t),u(t)) \cong \underbrace{f_i(\overline{x}, \overline{u})}_{=0} + \sum_{k=1}^n{\frac{\partial f_i}{\partial x_k}} 
+\]</span></p>
 
 </div>
 <!-- </div> -->

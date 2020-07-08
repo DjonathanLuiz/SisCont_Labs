@@ -20,6 +20,16 @@ Working on it :)
 
 ## Problema 6.3 {-}
 
-Considere $G(s)$ em (9), que é a Função de Transferência do sistema linearizado associado ao sistema de um tanque (6) no ponto de equilíbrio
+Considere $G(s)$ em \@ref(eq:eq69), que é a Função de Transferência do sistema linearizado associado ao sistema de um tanque \@ref(eq:eq66) no ponto de equilíbrio $(\overline{H}, \overline{u}) = (4, 0.02)$. Implemete no Simulink/Matlab o diagrama de blocos apresentado na Figura \@ref(fig:fig63) com o objetivo de comparar a dinâmica de $\overline{H} + \delta H(t)$ com a dinâmica de $H(t)$ do sistema não-linear \@ref(eq:eq66). Para isto, escolha $\overline{u} = 0.02, \delta u = 0$, e determine $t_1 > 0$ por simulação (veja \@ref(eq:eq610)). Simule para $\delta u = 0.0001, \delta u = 0.001, \delta u = 0.01$ do tipo degrau e analise os resultados. Baseado no que vimos em aulas anteriores, quais são as características dinâmicas de saída $\delta y(t) = \delta H(t)$ do sistema linearizado (por exemplo: sobressinal, tempo de acomodação, valor em regime permanente)? Tais características eram esperadas? Justifique sua resposta (dica: veja \@ref(eq:eq69)).
+
+#### Resolução {-}
+
+Working on it :)
 
 ## Problema 6.4 {-}
+
+No item anterior, mude o ponto de equilíbrio do sistema de um tanque para $(\overline{H}, \overline{u}) = (16, 0.04)$, mas mantenha a mesma Função de Transferência $G(s)$ de antes. Simule e analise os resultados. Tal comportamento era esperado? Justifique sua resposta.
+
+#### Resolução {-}
+
+Working on it :)

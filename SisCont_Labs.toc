@@ -98,18 +98,20 @@
 \contentsline {section}{Problema 6.2}{95}{section*.81}%
 \contentsline {subsubsection}{Resolução}{95}{section*.82}%
 \contentsline {section}{Problema 6.3}{96}{section*.83}%
-\contentsline {section}{Problema 6.4}{96}{section*.84}%
+\contentsline {subsubsection}{Resolução}{96}{section*.84}%
+\contentsline {section}{Problema 6.4}{96}{section*.85}%
+\contentsline {subsubsection}{Resolução}{96}{section*.86}%
 \contentsline {chapter}{\numberline {7}Controle de Sistemas Não-Lineares}{97}{chapter.7}%
-\contentsline {chapter}{Problemas Laboratório 7}{99}{chapter*.85}%
+\contentsline {chapter}{Problemas Laboratório 7}{99}{chapter*.87}%
 \contentsline {chapter}{\numberline {8}Análise pelo Lugar das Raízes}{101}{chapter.8}%
-\contentsline {chapter}{Problemas Laboratório 8}{103}{chapter*.86}%
+\contentsline {chapter}{Problemas Laboratório 8}{103}{chapter*.88}%
 \contentsline {chapter}{\numberline {9}Projeto de Controladores pelo Lugar das Raízes}{105}{chapter.9}%
-\contentsline {chapter}{Problemas Laboratório 9}{107}{chapter*.87}%
+\contentsline {chapter}{Problemas Laboratório 9}{107}{chapter*.89}%
 \contentsline {chapter}{\numberline {10}Projeto do controlador atraso de fase}{109}{chapter.10}%
-\contentsline {chapter}{Problemas Laboratório 10}{111}{chapter*.88}%
+\contentsline {chapter}{Problemas Laboratório 10}{111}{chapter*.90}%
 \contentsline {chapter}{\numberline {11}Análise pelos Diagramas de Bode e Nyquist}{113}{chapter.11}%
-\contentsline {chapter}{Problemas Laboratório 11}{115}{chapter*.89}%
+\contentsline {chapter}{Problemas Laboratório 11}{115}{chapter*.91}%
 \contentsline {chapter}{\numberline {12}Projeto de Controladores pelo Diagrama de Bode}{117}{chapter.12}%
-\contentsline {chapter}{Problemas Laboratório 12}{119}{chapter*.90}%
+\contentsline {chapter}{Problemas Laboratório 12}{119}{chapter*.92}%
 \contentsline {chapter}{\numberline {13}Digitalização de Controladores Analógicos}{121}{chapter.13}%
-\contentsline {chapter}{Problemas Laboratório 13}{123}{chapter*.91}%
+\contentsline {chapter}{Problemas Laboratório 13}{123}{chapter*.93}%

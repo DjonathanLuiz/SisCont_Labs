@@ -24,7 +24,7 @@
 <meta name="author" content="Djonathan Luiz de Oliveira Quadras" />
 
 
-<meta name="date" content="2020-07-03" />
+<meta name="date" content="2020-07-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -240,24 +240,84 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="linearização-de-sistemas-não-lineares" class="section level2" number="6.3">
 <h2><span class="header-section-number">6.3</span> Linearização de sistemas não-lineares</h2>
 <p>Considere um sistema não-linear descrito pelas equações diferenciais
-<span class="math display" id="eq:eq64">\[\begin{align}
+<span class="math display" id="eq:eq64">\[
 \dot{x_1}(t) = f_1(x(t),u(t)), \\
-\vdots \\ \tag{6.4}
+\vdots \tag{6.4} \\ 
 \dot{x}_n(t) = f_n(x(t),u(t))
-\end{align}\]</span>
+\]</span>
 onde <span class="math inline">\(x = (x_1, \dots, x_n) \in \mathbb{R}^n\)</span> e <span class="math inline">\(u \in \mathbb{R}\)</span> é o controle. Suponha que <span class="math inline">\(f_1, \dots, f_n\)</span> são continuamente diferenciáveis e que <span class="math inline">\((\overline{x}, \overline{u}) \in \mathbb{R}^n \times \mathbb{R}\)</span> é um ponto de equilíbrio do sistema, isto é,
 <span class="math display">\[
 \dot{x}_i = f_i(\overline{x}, \overline{u}) = 0, \quad \text{para } i = 1, \dots, n.
 \]</span></p>
 <p>Seja <span class="math inline">\(g:\mathbb{R} \to \mathbb{R}\)</span> uma função diferenciável em <span class="math inline">\(t_0 \in \mathbb{R}\)</span>. Do mesmo modo que a reta tangente no ponto <span class="math inline">\((t_0,g&#39;(t_0))\)</span> aproxima o gráfico de <span class="math inline">\(g\)</span> na proximidade de <span class="math inline">\(t_0\)</span> (i.e. para <span class="math inline">\(\Delta t = t - t_0 \cong 0\)</span>), podemos encontrar um sistema linear cuja dinâmica aproxima a dinâmica do sistema não-linear <a href="linearização-de-sistemas-não-lineares.html#eq:eq64">(6.4)</a> nas proximidades de <span class="math inline">\((\overline{x}, \overline{u})\)</span>. Veremos como aplicar técnicas lineares ao referido sistema linear que possibilitam analisar o sistema não-linear <a href="linearização-de-sistemas-não-lineares.html#eq:eq64">(6.4)</a> em torno de <span class="math inline">\((\overline{x}, \overline{u})\)</span>.</p>
-<p>Suponha que <a href="linearização-de-sistemas-não-lineares.html#eq:eq64">(6.4)</a> está no equilíbrio <span class="math inline">\((\overline{x}, \overline{u})\)</span> em <span class="math inline">\(t=0\)</span>, isto é, <span class="math inline">\(x(0) = \overline{x}\)</span> e <span class="math inline">\(u(t) = \overline{u}\)</span> para <span class="math inline">\(t \geq 0\)</span>. Agora, considere que <span class="math inline">\(x(t)\)</span> é a solução de <a href="linearização-de-sistemas-não-lineares.html#eq:eq64">(6.4)</a> com condição inicial <span class="math inline">\(x(0) = \overline{x}\)</span> e uma <em>outr</em> entrada <span class="math inline">\(u(t) \neq \overline{u}\)</span>. Seja <span class="math inline">\(\delta x(t) = x(t) -\overline{x}\)</span> o <em>desvio</em> em relação à <span class="math inline">\(\overline{x}\)</span>, e <span class="math inline">\(\delta u(t) = u(t) - \overline{u}\)</span> o <em>desvio</em> em relação à entrada de equilíbrio <span class="math inline">\(\overline{u}\)</span>. Assim, <span class="math inline">\(x(t) = \overline{x} + \delta x(t)\)</span> e <span class="math inline">\(u(t) = \overline{u} + \delta u(t)\)</span>. Note que <span class="math inline">\(\delta x(0) = 0\)</span>. Nosso objetivo é relacionar de modo linear a dinâmica de <span class="math inline">\(\delta x(t)\)</span> com <span class="math inline">\(\delta u(t)\)</span>, ao menos aproximadamente.</p>
+<p>Suponha que <a href="linearização-de-sistemas-não-lineares.html#eq:eq64">(6.4)</a> está no equilíbrio <span class="math inline">\((\overline{x}, \overline{u})\)</span> em <span class="math inline">\(t=0\)</span>, isto é, <span class="math inline">\(x(0) = \overline{x}\)</span> e <span class="math inline">\(u(t) = \overline{u}\)</span> para <span class="math inline">\(t \geq 0\)</span>. Agora, considere que <span class="math inline">\(x(t)\)</span> é a solução de <a href="linearização-de-sistemas-não-lineares.html#eq:eq64">(6.4)</a> com condição inicial <span class="math inline">\(x(0) = \overline{x}\)</span> e uma <em>outra</em> entrada <span class="math inline">\(u(t) \neq \overline{u}\)</span>. Seja <span class="math inline">\(\delta x(t) = x(t) -\overline{x}\)</span> o <em>desvio</em> em relação à <span class="math inline">\(\overline{x}\)</span>, e <span class="math inline">\(\delta u(t) = u(t) - \overline{u}\)</span> o <em>desvio</em> em relação à entrada de equilíbrio <span class="math inline">\(\overline{u}\)</span>. Assim, <span class="math inline">\(x(t) = \overline{x} + \delta x(t)\)</span> e <span class="math inline">\(u(t) = \overline{u} + \delta u(t)\)</span>. Note que <span class="math inline">\(\delta x(0) = 0\)</span>. Nosso objetivo é relacionar de modo linear a dinâmica de <span class="math inline">\(\delta x(t)\)</span> com <span class="math inline">\(\delta u(t)\)</span>, ao menos aproximadamente.</p>
 <p>Utilizando a série de Taylor de ordem 1 da função <span class="math inline">\(f_i\)</span> em <span class="math inline">\((\overline{x}, \overline{u})\)</span>, temos que a dinâmica do desvio <span class="math inline">\(\delta x_i(t) = x_i(t)-\overline{x}_i\)</span> é descrita por
 <span class="math display">\[
-\dot{\delta}x_i(t) = \dot{x}_i(t) - \underbrace{\dot{\overline{x}}_i}_{=0} = \dot{x}_i(t) = f_i(x(t),u(t)) \cong \underbrace{f_i(\overline{x}, \overline{u})}_{=0} + \sum_{k=1}^n{\frac{\partial f_i}{\partial x_k}} 
+\dot{\delta}x_i(t) = \dot{x}_i(t) - \underbrace{\dot{\overline{x}}_i}_{=0} = \dot{x}_i(t) = f_i(x(t),u(t)) \cong \underbrace{f_i(\overline{x}, \overline{u})}_{=0} + 
+\left.\sum_{k=1}^n{\frac{\partial f_i}{\partial x_k}}\right|_{(\overline{x}, \overline{u})}
+\delta x_k(t) + 
+\left.\frac{\partial f_i}{\partial u}\right|_{(\overline{x}, \overline{u})}
+\delta u(t), \\
+\implies \boxed{\dot{\delta}x_i(t) \cong
+\left.\frac{\partial f_i}{\partial x_i}\right|_{(\overline{x}, \overline{u})}\delta x_1(t) + \dots + \left.\frac{\partial f_i}{\partial x_n}\right|_{(\overline{x}, \overline{u})}\delta x_n(t) + \left.\frac{\partial f_i}{\partial u}\right|_{(\overline{x}, \overline{u})}\delta u(t)}.
 \]</span></p>
+<p>Esta aproximação é valida para pequenos desvios em torno do ponto de equilíbrio <span class="math inline">\((\overline{x}, \overline{u})\)</span>, ou seja, <span class="math inline">\(\delta x(t) \cong 0\)</span> e <span class="math inline">\(\delta u(t) \cong 0\)</span>. O sistema de equações lineares
+<span class="math display" id="eq:eq65">\[
+\dot{\delta}x_1(t) = \left.\frac{\partial f_1}{\partial x_1}\right|_{(\overline{x}, \overline{u})}\delta x_1(t) + \dots + \left.\frac{\partial f_1}{\partial x_n}\right|_{(\overline{x}, \overline{u})}\delta x_n(t) + \left.\frac{\partial f_1}{\partial u}\right|_{(\overline{x}, \overline{u})}\delta u(t), \quad \delta x_1(0) = 0 \\
+\vdots \tag{6.5}\\
+\dot{\delta}x_n(t) = \left.\frac{\partial f_n}{\partial x_1}\right|_{(\overline{x}, \overline{u})}\delta x_1(t) + \dots + \left.\frac{\partial f_n}{\partial x_n}\right|_{(\overline{x}, \overline{u})}\delta x_n(t) + \left.\frac{\partial f_n}{\partial u}\right|_{(\overline{x}, \overline{u})}\delta u(t), \quad \delta x_n(0) = 0,
+\]</span>
+onde <span class="math inline">\(\delta u \in \mathbb{R}\)</span> é o controle, é denominado de <em>sistema linearizado</em> associado ao sistema não-linear <a href="linearização-de-sistemas-não-lineares.html#eq:eq64">(6.4)</a> no ponto de equilíbrio <span class="math inline">\((\overline{x}, \overline{u})\)</span>. Note que a condição inicial de <a href="linearização-de-sistemas-não-lineares.html#eq:eq65">(6.5)</a> é de <span class="math inline">\(\delta x(0) = 0\)</span>. Assim, temos que a dinâmica do sistema linearizado <a href="linearização-de-sistemas-não-lineares.html#eq:eq65">(6.5)</a> aproxima a dinâmica do sistema não-linear <a href="linearização-de-sistemas-não-lineares.html#eq:eq64">(6.4)</a> para pequenos desvios em torno do ponto de equilíbrio <span class="math inline">\((\overline{x}, \overline{u})\)</span>. Isto significa que, quando <a href="linearização-de-sistemas-não-lineares.html#eq:eq64">(6.4)</a> está no equilíbrio <span class="math inline">\((\overline{x}, \overline{u})\)</span> em <span class="math inline">\(t=0\)</span>, teremos
+<span class="math display">\[
+\boxed{\delta u(t)  \cong \implies x(t) \cong \overline{x} + \delta x(t), \quad t \geq 0},
+\]</span>
+onde <span class="math inline">\(\delta x(t)\)</span> é a solução do sistema linearizado <a href="linearização-de-sistemas-não-lineares.html#eq:eq65">(6.5)</a> com a entrada <span class="math inline">\(\delta u(t)\)</span>, e <span class="math inline">\(x(t)\)</span> é solução do sistema não-linear original <a href="linearização-de-sistemas-não-lineares.html#eq:eq64">(6.4)</a> com a entrada <span class="math inline">\(u(t) = \overline{u} +\delta u(t)\)</span>.</p>
+<p>Determinaremos então o sistema linearizado associado ao sistema de um tanque. Fazendo <span class="math inline">\(u = Q_e\)</span> (o controle é a vazão de entrada do tanque), rescrevemos <a href="sistema-de-um-tanque.html#eq:eq61">(6.1)</a> como
+<span class="math display" id="eq:eq66">\[
+\dot{H}(t) = f(H(t),u(t)) = \frac{1}{A}(u(t) - \beta\sqrt{H(t)}). \tag{6.6}
+\]</span>
+Para um dado ponto de equilíbrio <span class="math inline">\((\overline{H}, \overline{u})\)</span>, obtemos de <a href="linearização-de-sistemas-não-lineares.html#eq:eq65">(6.5)</a> que o sistema linearizado associado é descrito por
+<span class="math display" id="eq:eq67">\[
+\delta\dot{H}(t) = \left.\frac{\partial f}{\partial H}\right|_{(\overline{H}, \overline{u})}\delta H(t) + \left.\frac{\partial f}{\partial u}\right|_{(\overline{H}, \overline{u})}\delta u(t) = \boxed{\frac{-\beta}{2A\sqrt{\overline{H}}}\delta H(t) + \frac{1}{A} \delta u(t), \quad \delta H(0) = 0},\tag{6.7}
+\]</span>
+Note que os coeficientes dependem do ponto de equilíbrio <span class="math inline">\((\overline{H}, \overline{u})\)</span> escolhido.</p>
+<p>De agora em diante assumiremos que os parâmetros do tanque são dados por <span class="math inline">\(\beta = 0.01\)</span>, <span class="math inline">\(A = 1\)</span> e escolhemos como ponto de equilíbrio <span class="math inline">\((\overline{H}, \overline{u}) = (4, 0.02)\)</span>. Desse modo, concluímos a partir de <a href="linearização-de-sistemas-não-lineares.html#eq:eq67">(6.7)</a> que o sistema linearizado associado ao sistema de um tanque no ponto de equilíbrio <span class="math inline">\((4, 0.002)\)</span> é
+<span class="math display" id="eq:eq68">\[
+\delta\dot{H}(t) = -0.0025\delta H(t) + \delta u(t), \quad \delta H(0) = 0. \tag{6.8}
+\]</span>
+Suponto que <span class="math inline">\(y = H\)</span> é a <em>saída do sistema</em>, determinaremos no que se segue a Função de Transferência <span class="math inline">\(G(s) = \frac{\Delta Y(s)}{\Delta U(s)}\)</span> do sistema linearizado <a href="linearização-de-sistemas-não-lineares.html#eq:eq68">(6.8)</a> onde <span class="math inline">\(\Delta U(s)\)</span> e <span class="math inline">\(\Delta Y(s)\)</span> são as Transformadas de Laplace da entrada <span class="math inline">\(\delta u\)</span> e da saída <span class="math inline">\(\delta y = \delta H\)</span> do sistema linearizado, respectivamente. Aplicando a Transformada de Laplace em ambos os lados de <a href="linearização-de-sistemas-não-lineares.html#eq:eq68">(6.8)</a> obtemos que<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>
+<span class="math display" id="eq:eq69">\[
+s\Delta H(s) = - 0.0025\Delta H(s) + \Delta U(s) \implies \boxed{G(s) = \frac{\Delta H(s)}{\Delta U(s)} = \frac{1}{s + 0.0025}}, \tag{6.9}
+\]</span>
+onde <span class="math inline">\(\Delta H(s)\)</span> é a Transformada de Laplace de <span class="math inline">\(\delta H\)</span>. Observe que <span class="math inline">\(G(s)\)</span> é uma Função de Transferência de primeira ordem.</p>
+<p>O diagrama de blocos da Figura <a href="linearização-de-sistemas-não-lineares.html#fig:fig63">6.3</a> mostra como podemos comparar a dinâmica do sistema linearizado em <span class="math inline">\((\overline{H}, \overline{u}) = (4, 0.02)\)</span> com a dinâmica do sistema não-linear <a href="sistema-de-um-tanque.html#fig:fig61">6.1</a>. O bloco “SNL” é o sistema não-linear com condição inicial <span class="math inline">\(H(0) = 0\)</span>, e <span class="math inline">\(G(s)\)</span> é a Função de Transferência em <a href="linearização-de-sistemas-não-lineares.html#eq:eq69">(6.9)</a>. Para fazermos tal comparação, primeiramente escolhemos um controle que coloque o sistema não-linear no ponto de equilíbrio <span class="math inline">\((\overline{H}, \overline{u}) = (4, 0.02)\)</span>. Assim, aplicamos em <span class="math inline">\(t = 0\)</span> um controle do tipo degrau de amplitude <span class="math inline">\(\overline{u} = 0.02\)</span>. Suponha que
+<span class="math display">\[
+\lim\limits_{t\to\infty}{H(t)}  = \overline{H} =4.
+\]</span>
+Tomamos <span class="math inline">\(t_1 &gt; 0\)</span> tal que
+<span class="math display" id="eq:eq610">\[
+H(t) \cong \overline{H} = 4, \quad \text{para } t\geq t_1. \tag{6.10}
+\]</span>
+Aplicamos então <span class="math inline">\(\delta u(t)\)</span> no instante <span class="math inline">\(t = t_1\)</span>. Relembre que <span class="math inline">\(u(t) = \overline{u} + \delta u(t)\)</span> e que <span class="math inline">\(\delta u(t)\)</span> é a entrada do sistema linearizado. Portanto,
+<span class="math display">\[
+\boxed{\delta u(t) \cong 0 \implies H(t) \cong \overline{H} + \delta H(t), t \geq t_1},
+\]</span>
+onde <span class="math inline">\(\delta H(t)\)</span> é a solução do sistema linearizado <a href="linearização-de-sistemas-não-lineares.html#eq:eq67">(6.7)</a> com entrada <span class="math inline">\(\delta u(t)\)</span>, e <span class="math inline">\(H(t)\)</span> é a solução do sistema não-linear original <a href="sistema-de-um-tanque.html#eq:eq61">(6.1)</a> com entrada <span class="math inline">\(u(t) = \overline{u} + \delta u(t)\)</span>.</p>
+<div class="figure" style="text-align: center"><span id="fig:fig63"></span>
+<img src="Imagens/Lab6/Apresentação/fig3.jpg" alt="Comparação das dinâmicas ( $\delta u \cong 0$ e $H(t) \cong \overline{H} + \delta H(t), t \geq t_1$)." width="50%" />
+<p class="caption">
+Figura 6.3: Comparação das dinâmicas ( <span class="math inline">\(\delta u \cong 0\)</span> e <span class="math inline">\(H(t) \cong \overline{H} + \delta H(t), t \geq t_1\)</span>).
+</p>
+</div>
 
 </div>
 <!-- </div> -->
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p>Para condições iniciais nulas, relembre que <span class="math inline">\(\mathcal{L}\{f(t)\} = sF(s)\)</span>, one <span class="math inline">\(F(s) = \mathcal{L}\{f(t)\}\)</span>.<a href="linearização-de-sistemas-não-lineares.html#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
             </section>
 
           </div>

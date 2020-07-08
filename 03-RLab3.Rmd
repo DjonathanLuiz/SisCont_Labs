@@ -14,7 +14,7 @@ Simulando o sistema do modelo 1 obtemos o resultado abaixo.
 
 Pela curva feita espera-se que a Função de Transferência seja de primeira ordem. Utilizando as ferramentas fornecidas pelo `Simulink` foi estimado que
 $$
-y(\infty) = 1.6 \\
+y(\infty) = 1.6 \\ 
 0.95y(\infty) = 1.52 \implies  t_s(5\%) = 9.97s \implies \tau = 3.33
 $$
 
@@ -41,8 +41,8 @@ Simulando o sistema do modelo 1 obtemos o resultado abaixo.
 
 Pela curva feita espera-se que a Função de Transferência seja de segunda ordem. Utilizando as ferramentas fornecidas pelo `Simulink` foi estimado que
 $$
-y_p = 5.588\\
-y(\infty) = 4.805 \\
+y_p = 5.588 \\  
+y(\infty) = 4.805 \\  
 t_p = 5s
 $$
 
@@ -75,7 +75,7 @@ Simulando o sistema do modelo 1 obtemos o resultado abaixo.
 
 Pela curva feita espera-se que a Função de Transferência seja de primeira ordem. Utilizando as ferramentas fornecidas pelo `Simulink` foi estimado que
 $$
-y(\infty) = 3.9 \\
+y(\infty) = 3.9 \\ 
 0.95y(\infty) = 3.8415 \implies  t_s(5\%) = 3.22s \implies \tau = 1.072
 $$
 
@@ -110,8 +110,8 @@ Note que $G(s)$ é de segunda ordem com pólos reais. Neste momento, temos condi
 
 Simulando o sistema do Sistema 3 em malha fechada e utilizando as ferramentas fornecidas pelo `Simulink` foi estimado que
 $$
-y_p = 0.868 \\
-y(\infty) = 0.796 \\
+y_p = 0.868 \\ 
+y(\infty) = 0.796 \\ 
 t_p = 0.4s
 $$
 

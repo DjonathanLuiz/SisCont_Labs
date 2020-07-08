@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.2.3)  3 JUL 2020 23:30
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.2.3)  8 JUL 2020 14:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1655,36 +1655,48 @@ DOS ALGÉBRICOS
 Chapter 6.
 File: Imagens/Lab6/Apresentação/fig1.jpg Graphic file (type bmp)
 <Imagens/Lab6/Apresentação/fig1.jpg>
-[89]
 File: Imagens/Lab6/Apresentação/fig2.jpg Graphic file (type bmp)
 <Imagens/Lab6/Apresentação/fig2.jpg>
-[90] [91] [92] [93
+[89] [90] [91]
+Overfull \hbox (365.14763pt too wide) detected at line 2028
+[][][][][][] [] [][][][] [] [] [] [][][][] [] [][][][][][][][] [][][][][] [] []
+ [] [][] [][][][][][] [] [][] [][][][][][] []   []  [][]
+ []
 
-] [94]
+
+Overfull \hbox (333.52869pt too wide) detected at line 2035
+[][][][][][] [] [][] [][][][][][] [] [] [] [][] [][][][][][] [] [][] [][][][][]
+[]  [][][][][][] [] [][]  [] [] [][][][][][] [] [][] [][][][][][] [] [] [] [][]
+ [][][][][][] [] [][] [][][][][][]  [][][][][][] [] [][][]
+ []
+
+
+Overfull \hbox (15.37332pt too wide) detected at line 2049
+[][][][][] [] [][] [][][][][] [] [][] [][][][][] [] [][][]
+ []
+
+[92]
+File: Imagens/Lab6/Apresentação/fig3.jpg Graphic file (type bmp)
+<Imagens/Lab6/Apresentação/fig3.jpg>
+[93] [94] [95
+
+] [96]
 Chapter 7.
-[95
+[97
 
-] [96
+] [98
 
-] [97] [98
+] [99] [100
 
 ]
 Chapter 8.
-[99] [100
+[101] [102
 
-] [101] [102
+] [103] [104
 
 ]
 Chapter 9.
-[103]
-Overfull \hbox (28.05342pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 104 \TU/lmr/m/sl/10 CHAPTER 9.  PROJETO DE CONTROLADORES PELO LU
-GAR DAS RAÍZES
- []
-
-[104
-
-] [105]
+[105]
 Overfull \hbox (28.05342pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 106 \TU/lmr/m/sl/10 CHAPTER 9.  PROJETO DE CONTROLADORES PELO LU
 GAR DAS RAÍZES
@@ -1692,29 +1704,29 @@ GAR DAS RAÍZES
 
 [106
 
+] [107]
+Overfull \hbox (28.05342pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 108 \TU/lmr/m/sl/10 CHAPTER 9.  PROJETO DE CONTROLADORES PELO LU
+GAR DAS RAÍZES
+ []
+
+[108
+
 ]
 Chapter 10.
-[107] [108
+[109] [110
 
-] [109] [110
+] [111] [112
 
 ]
 Chapter 11.
-[111] [112
+[113] [114
 
-] [113] [114
+] [115] [116
 
 ]
 Chapter 12.
-[115]
-Overfull \hbox (40.83342pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 116 \TU/lmr/m/sl/10 CHAPTER 12.  PROJETO DE CONTROLADORES PELO D
-IAGRAMA DE BODE
- []
-
-[116
-
-] [117]
+[117]
 Overfull \hbox (40.83342pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 118 \TU/lmr/m/sl/10 CHAPTER 12.  PROJETO DE CONTROLADORES PELO D
 IAGRAMA DE BODE
@@ -1722,24 +1734,32 @@ IAGRAMA DE BODE
 
 [118
 
-]
-Chapter 13.
-[119]
-Overfull \hbox (6.85674pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 120 \TU/lmr/m/sl/10 CHAPTER 13.  DIGITALIZAÇÃO DE CONTROLADORES 
-ANALÓGICOS
+] [119]
+Overfull \hbox (40.83342pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 120 \TU/lmr/m/sl/10 CHAPTER 12.  PROJETO DE CONTROLADORES PELO D
+IAGRAMA DE BODE
  []
 
 [120
 
 ]
-No file SisCont_Labs.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2141.
+Chapter 13.
 [121]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2141.
+Overfull \hbox (6.85674pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 122 \TU/lmr/m/sl/10 CHAPTER 13.  DIGITALIZAÇÃO DE CONTROLADORES 
+ANALÓGICOS
+ []
+
+[122
+
+]
+No file SisCont_Labs.bbl.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2204.
+[123]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2204.
 (./SisCont_Labs.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 2141.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2141.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 2204.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2204.
 
 Package rerunfilecheck Info: File `SisCont_Labs.out' has not changed.
 (rerunfilecheck)             Checksum: 3E338197EBB338A95CC5B0285AE18252;10620.
@@ -1749,15 +1769,15 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2141.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2204.
  ) 
 Here is how much of TeX's memory you used:
- 30237 strings out of 494432
- 556054 string characters out of 6170871
- 728407 words of memory out of 5000000
- 34274 multiletter control sequences out of 15000+600000
+ 30256 strings out of 494432
+ 556538 string characters out of 6170871
+ 733879 words of memory out of 5000000
+ 34293 multiletter control sequences out of 15000+600000
  538780 words of font info for 83 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 55i,13n,115p,966b,2146s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,10n,115p,966b,2146s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on SisCont_Labs.pdf (121 pages).
+Output written on SisCont_Labs.pdf (123 pages).

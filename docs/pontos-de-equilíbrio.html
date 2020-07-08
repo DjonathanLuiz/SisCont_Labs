@@ -24,7 +24,7 @@
 <meta name="author" content="Djonathan Luiz de Oliveira Quadras" />
 
 
-<meta name="date" content="2020-07-03" />
+<meta name="date" content="2020-07-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -241,14 +241,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">6.2</span> Pontos de equilíbrio</h2>
 <p>Intuitivamente, pensamos que um sistema está em <em>equilibrio</em> quando o mesmo apresenta um comportamento estático, ou seja, o sistema não exisbe qualquer dinâmica. Veremos agora como definir matematicamente tal noção.</p>
 <p>Considere um sistema não-linear descrito pela equação diferencial
-<span class="math display" id="eq:eq62">\[\begin{align}
+<span class="math display" id="eq:eq62">\[
 \dot{x}(t) = f(x(t),u(t)), \tag{6.2}
-\end{align}\]</span>
+\]</span>
 onde <span class="math inline">\(x \in \mathbb{R}^n\)</span> e <span class="math inline">\(u \in \mathbb{R}^m\)</span> é o controle (ou entrada). Dizemos que um par ordenado <span class="math inline">\((\overline{x}, \overline{u}) \in \mathbb{R}^n \times \mathbb{R}^m\)</span> é um <em>ponto de equilíbrio</em> (ou <em>ponto de operação</em>) do sistema <a href="pontos-de-equilíbrio.html#eq:eq62">(6.2)</a> quando <span class="math inline">\(f(\overline{x}, \overline{u}) =0\)</span>, ou seja, <span class="math inline">\(\dot{x} = 0\)</span>. Isto é equivalente a dizer que se aplicarmos a entrada constante <span class="math inline">\(u(t) = \overline{u}\)</span> no sistema <a href="pontos-de-equilíbrio.html#eq:eq62">(6.2)</a> com condição inicial <span class="math inline">\(x(0) = \overline{x}\)</span>, obteremos a solução constante (ou <em>solução estacionária</em>) <span class="math inline">\(x(t) = \overline{x}, t\geq0\)</span>. Note que, neste caso, o sistema permanece estático, sem dinâmica.</p>
 <p>Determinaremos então os pontos de equilíbrio do sistema de um taque. De <a href="sistema-de-um-tanque.html#eq:eq61">(6.1)</a> e do fato de que <span class="math inline">\(u = Q_e\)</span> é o controle (ou entrada) do sistema, obtemos
-<span class="math display" id="eq:eq63">\[\begin{align}
+<span class="math display" id="eq:eq63">\[
 \dot{H} = \frac{1}{A}(Q_e-Q_s)=0 \implies \overline{u} = Q_e = Q_s = \beta\sqrt{\overline{H}} \implies \boxed{\overline{H}=\frac{\overline{u}^2}{\beta^2}}. \tag{6.3}
-\end{align}\]</span></p>
+\]</span></p>
 <p>Como era de se esperar, o equilíbrio ocorre quando no tanque a vazão de entrada é igual à vazão saída <span class="math inline">\((Q_e = Q_s)\)</span>. Assim, dado qualquer <span class="math inline">\(\overline{u}\)</span>, temos que <span class="math inline">\((\overline{H}, \overline{u}) \in \mathbb{R}^2\)</span> é um ponto de equilíbrio do sistema <a href="sistema-de-um-tanque.html#eq:eq61">(6.1)</a>, onde <span class="math inline">\(\overline{H} = \frac{\overline{u}^2}{\beta^2}\)</span>.</p>
 <p>Em situações práticas, nem sempre conheceremos completamente a quação diferencial que descreve a dinâmica de um sistema. Entretanto, podemos mesmo assim determinar alguns de seus pontos de equilíbrio com base na propriedade abaixo.</p>
 <p><strong>Propriedade 1.</strong> <em>Se a trajetória <span class="math inline">\(x(t)\)</span> (solução) do sistema para uma dada condição inicial <span class="math inline">\(x(0)\)</span> satisfaz <span class="math inline">\(\lim\limits_{t\to\infty}{x(t)} = \overline{x}\)</span> ao aplicarmos a entrada constante <span class="math inline">\(u(t) = \overline{u}, t \geq 0\)</span>, então <span class="math inline">\((\overline{x}, \overline{u})\)</span> é um ponto de equilíbrio do sistema.</em></p>

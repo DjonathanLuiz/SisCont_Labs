@@ -6,9 +6,9 @@ Nesta experiência, veremos como podemos simular um sistema não-linear utilizan
 
 Considere o sistema de um tanque ilustrado na Figura \@ref(fig:fig61). A equação diferencial que descreve a dinâmica da altura do nível $H$ do tanque é
 
-\begin{align}
+$$
 H(t) = \frac{1}{A}(Q_e(t)-Q_s(t)) = \boxed{\frac{1}{A}(Q_e(t)-\beta\sqrt{H(t)})}, (\#eq:eq61)
-\end{align}
+$$
 
 ```{r fig61, fig.align='center', echo=FALSE, fig.cap='Tanque', out.width='50%'}
 knitr::include_graphics('Imagens/Lab6/Apresentação/fig1.jpg', dpi = NA)
@@ -39,15 +39,15 @@ A implementação deste diagrama de blocos em um pacote computacional de simula�
 Intuitivamente, pensamos que um sistema está em *equilibrio* quando o mesmo apresenta um comportamento estático, ou seja, o sistema não exisbe qualquer dinâmica. Veremos agora como definir matematicamente tal noção.
 
 Considere um sistema não-linear descrito pela equação diferencial
-\begin{align}
+$$
 \dot{x}(t) = f(x(t),u(t)), (\#eq:eq62)
-\end{align}
+$$
 onde $x \in \mathbb{R}^n$ e $u \in \mathbb{R}^m$ é o controle (ou entrada). Dizemos que um par ordenado $(\overline{x}, \overline{u}) \in \mathbb{R}^n \times \mathbb{R}^m$ é um *ponto de equilíbrio* (ou *ponto de operação*) do sistema \@ref(eq:eq62) quando $f(\overline{x}, \overline{u}) =0$, ou seja, $\dot{x} = 0$. Isto é equivalente a dizer que se aplicarmos a entrada constante $u(t) = \overline{u}$ no sistema \@ref(eq:eq62) com condição inicial $x(0) = \overline{x}$, obteremos a solução constante (ou *solução estacionária*) $x(t) = \overline{x}, t\geq0$. Note que, neste caso, o sistema permanece estático, sem dinâmica.
 
 Determinaremos então os pontos de equilíbrio do sistema de um taque. De \@ref(eq:eq61) e do fato de que $u = Q_e$ é o controle (ou entrada) do sistema, obtemos
-\begin{align}
+$$
 \dot{H} = \frac{1}{A}(Q_e-Q_s)=0 \implies \overline{u} = Q_e = Q_s = \beta\sqrt{\overline{H}} \implies \boxed{\overline{H}=\frac{\overline{u}^2}{\beta^2}}. (\#eq:eq63)
-\end{align}
+$$
 
 Como era de se esperar, o equilíbrio ocorre quando no tanque a vazão de entrada é igual à vazão saída $(Q_e = Q_s)$. Assim, dado qualquer $\overline{u}$, temos que $(\overline{H}, \overline{u}) \in \mathbb{R}^2$ é um ponto de equilíbrio do sistema \@ref(eq:eq61), onde $\overline{H} = \frac{\overline{u}^2}{\beta^2}$.
 
@@ -58,11 +58,11 @@ Em situações práticas, nem sempre conheceremos completamente a quação difer
 ## Linearização de sistemas não-lineares
 
 Considere um sistema não-linear descrito pelas equações diferenciais
-\begin{align}
+$$
 \dot{x_1}(t) = f_1(x(t),u(t)), \\
-\vdots \\ (\#eq:eq64)
+\vdots (\#eq:eq64) \\ 
 \dot{x}_n(t) = f_n(x(t),u(t))
-\end{align}
+$$
 onde $x = (x_1, \dots, x_n) \in \mathbb{R}^n$ e $u \in \mathbb{R}$ é o controle. Suponha que $f_1, \dots, f_n$ são continuamente diferenciáveis e que $(\overline{x}, \overline{u}) \in \mathbb{R}^n \times \mathbb{R}$ é um ponto de equilíbrio do sistema, isto é,
 $$
 \dot{x}_i = f_i(\overline{x}, \overline{u}) = 0, \quad \text{para } i = 1, \dots, n.
@@ -70,13 +70,66 @@ $$
 
 Seja $g:\mathbb{R} \to \mathbb{R}$ uma função diferenciável em $t_0 \in \mathbb{R}$. Do mesmo modo que a reta tangente no ponto $(t_0,g'(t_0))$ aproxima o gráfico de $g$ na proximidade de $t_0$ (i.e. para $\Delta t = t - t_0 \cong 0$), podemos encontrar um sistema linear cuja dinâmica aproxima a dinâmica do sistema não-linear \@ref(eq:eq64) nas proximidades de $(\overline{x}, \overline{u})$. Veremos como aplicar técnicas lineares ao referido sistema linear que possibilitam analisar o sistema não-linear \@ref(eq:eq64) em torno de  $(\overline{x}, \overline{u})$.
 
-Suponha que \@ref(eq:eq64) está no equilíbrio $(\overline{x}, \overline{u})$ em $t=0$, isto é, $x(0) = \overline{x}$ e $u(t) = \overline{u}$ para $t \geq 0$. Agora, considere que $x(t)$ é a solução de \@ref(eq:eq64) com condição inicial $x(0) = \overline{x}$ e uma *outr* entrada $u(t) \neq \overline{u}$. Seja $\delta x(t) = x(t) -\overline{x}$ o *desvio* em relação à $\overline{x}$, e $\delta u(t) = u(t) - \overline{u}$ o *desvio* em relação à entrada de equilíbrio $\overline{u}$. Assim, $x(t) = \overline{x} + \delta x(t)$ e $u(t) = \overline{u} + \delta u(t)$. Note que $\delta x(0) = 0$. Nosso objetivo é relacionar de modo linear a dinâmica de $\delta x(t)$ com $\delta u(t)$, ao menos aproximadamente.
+Suponha que \@ref(eq:eq64) está no equilíbrio $(\overline{x}, \overline{u})$ em $t=0$, isto é, $x(0) = \overline{x}$ e $u(t) = \overline{u}$ para $t \geq 0$. Agora, considere que $x(t)$ é a solução de \@ref(eq:eq64) com condição inicial $x(0) = \overline{x}$ e uma *outra* entrada $u(t) \neq \overline{u}$. Seja $\delta x(t) = x(t) -\overline{x}$ o *desvio* em relação à $\overline{x}$, e $\delta u(t) = u(t) - \overline{u}$ o *desvio* em relação à entrada de equilíbrio $\overline{u}$. Assim, $x(t) = \overline{x} + \delta x(t)$ e $u(t) = \overline{u} + \delta u(t)$. Note que $\delta x(0) = 0$. Nosso objetivo é relacionar de modo linear a dinâmica de $\delta x(t)$ com $\delta u(t)$, ao menos aproximadamente.
 
 Utilizando a série de Taylor de ordem 1 da função $f_i$ em $(\overline{x}, \overline{u})$, temos que a dinâmica do desvio $\delta x_i(t) = x_i(t)-\overline{x}_i$ é descrita por
 $$
-\dot{\delta}x_i(t) = \dot{x}_i(t) - \underbrace{\dot{\overline{x}}_i}_{=0} = \dot{x}_i(t) = f_i(x(t),u(t)) \cong \underbrace{f_i(\overline{x}, \overline{u})}_{=0} + \sum_{k=1}^n{\frac{\partial f_i}{\partial x_k}} 
+\dot{\delta}x_i(t) = \dot{x}_i(t) - \underbrace{\dot{\overline{x}}_i}_{=0} = \dot{x}_i(t) = f_i(x(t),u(t)) \cong \underbrace{f_i(\overline{x}, \overline{u})}_{=0} + 
+\left.\sum_{k=1}^n{\frac{\partial f_i}{\partial x_k}}\right|_{(\overline{x}, \overline{u})}
+\delta x_k(t) + 
+\left.\frac{\partial f_i}{\partial u}\right|_{(\overline{x}, \overline{u})}
+\delta u(t), \\
+\implies \boxed{\dot{\delta}x_i(t) \cong
+\left.\frac{\partial f_i}{\partial x_i}\right|_{(\overline{x}, \overline{u})}\delta x_1(t) + \dots + \left.\frac{\partial f_i}{\partial x_n}\right|_{(\overline{x}, \overline{u})}\delta x_n(t) + \left.\frac{\partial f_i}{\partial u}\right|_{(\overline{x}, \overline{u})}\delta u(t)}.
 $$
 
+Esta aproximação é valida para pequenos desvios em torno do ponto de equilíbrio $(\overline{x}, \overline{u})$, ou seja, $\delta x(t) \cong 0$ e $\delta u(t) \cong 0$. O sistema de equações lineares
+$$
+\dot{\delta}x_1(t) = \left.\frac{\partial f_1}{\partial x_1}\right|_{(\overline{x}, \overline{u})}\delta x_1(t) + \dots + \left.\frac{\partial f_1}{\partial x_n}\right|_{(\overline{x}, \overline{u})}\delta x_n(t) + \left.\frac{\partial f_1}{\partial u}\right|_{(\overline{x}, \overline{u})}\delta u(t), \quad \delta x_1(0) = 0 \\
+\vdots (\#eq:eq65)\\
+\dot{\delta}x_n(t) = \left.\frac{\partial f_n}{\partial x_1}\right|_{(\overline{x}, \overline{u})}\delta x_1(t) + \dots + \left.\frac{\partial f_n}{\partial x_n}\right|_{(\overline{x}, \overline{u})}\delta x_n(t) + \left.\frac{\partial f_n}{\partial u}\right|_{(\overline{x}, \overline{u})}\delta u(t), \quad \delta x_n(0) = 0,
+$$
+onde $\delta u \in \mathbb{R}$ é o controle, é denominado de *sistema linearizado* associado ao sistema não-linear \@ref(eq:eq64) no ponto de equilíbrio $(\overline{x}, \overline{u})$. Note que a condição inicial de \@ref(eq:eq65) é de $\delta x(0) = 0$. Assim, temos que a dinâmica do sistema linearizado \@ref(eq:eq65) aproxima a dinâmica do sistema não-linear \@ref(eq:eq64) para pequenos desvios em torno do ponto de equilíbrio $(\overline{x}, \overline{u})$. Isto significa que, quando \@ref(eq:eq64) está no equilíbrio $(\overline{x}, \overline{u})$ em $t=0$, teremos
+$$
+\boxed{\delta u(t)  \cong \implies x(t) \cong \overline{x} + \delta x(t), \quad t \geq 0},
+$$
+onde $\delta x(t)$ é a solução do sistema linearizado \@ref(eq:eq65) com a entrada $\delta u(t)$, e $x(t)$ é solução do sistema não-linear original \@ref(eq:eq64) com a entrada $u(t) = \overline{u} +\delta u(t)$.
 
+Determinaremos então o sistema linearizado associado ao sistema de um tanque. Fazendo $u = Q_e$ (o controle é a vazão de entrada do tanque), rescrevemos \@ref(eq:eq61) como
+$$
+\dot{H}(t) = f(H(t),u(t)) = \frac{1}{A}(u(t) - \beta\sqrt{H(t)}). (\#eq:eq66)
+$$
+Para um dado ponto de equilíbrio $(\overline{H}, \overline{u})$, obtemos de \@ref(eq:eq65) que o sistema linearizado associado é descrito por
+$$
+\delta\dot{H}(t) = \left.\frac{\partial f}{\partial H}\right|_{(\overline{H}, \overline{u})}\delta H(t) + \left.\frac{\partial f}{\partial u}\right|_{(\overline{H}, \overline{u})}\delta u(t) = \boxed{\frac{-\beta}{2A\sqrt{\overline{H}}}\delta H(t) + \frac{1}{A} \delta u(t), \quad \delta H(0) = 0},(\#eq:eq67)
+$$
+Note que os coeficientes dependem do ponto de equilíbrio $(\overline{H}, \overline{u})$ escolhido.
 
+De agora em diante assumiremos que os parâmetros do tanque são dados por $\beta = 0.01$, $A = 1$ e escolhemos como ponto de equilíbrio $(\overline{H}, \overline{u}) = (4, 0.02)$. Desse modo, concluímos a partir de \@ref(eq:eq67) que o sistema linearizado associado ao sistema de um tanque no ponto de equilíbrio $(4, 0.002)$ é
+$$
+\delta\dot{H}(t) = -0.0025\delta H(t) + \delta u(t), \quad \delta H(0) = 0. (\#eq:eq68)
+$$
+Suponto que $y = H$ é a *saída do sistema*, determinaremos no que se segue a Função de Transferência $G(s) = \frac{\Delta Y(s)}{\Delta U(s)}$ do sistema linearizado \@ref(eq:eq68) onde $\Delta U(s)$ e $\Delta Y(s)$ são as Transformadas de Laplace da entrada $\delta u$ e da saída $\delta y = \delta H$ do sistema linearizado, respectivamente. Aplicando a Transformada de Laplace em ambos os lados de \@ref(eq:eq68) obtemos que^[Para condições iniciais nulas, relembre que $\mathcal{L}\{f(t)\} = sF(s)$, one $F(s) = \mathcal{L}\{f(t)\}$.] 
+$$
+s\Delta H(s) = - 0.0025\Delta H(s) + \Delta U(s) \implies \boxed{G(s) = \frac{\Delta H(s)}{\Delta U(s)} = \frac{1}{s + 0.0025}}, (\#eq:eq69)
+$$
+onde $\Delta H(s)$ é a Transformada de Laplace de $\delta H$. Observe que $G(s)$ é uma Função de Transferência de primeira ordem.
+
+O diagrama de blocos da Figura \@ref(fig:fig63) mostra como podemos comparar a dinâmica do sistema linearizado em $(\overline{H}, \overline{u}) = (4, 0.02)$ com a dinâmica do sistema não-linear \@ref(fig:fig61). O bloco "SNL" é o sistema não-linear com condição inicial $H(0) = 0$, e $G(s)$ é a Função de Transferência em \@ref(eq:eq69). Para fazermos tal comparação, primeiramente escolhemos um controle que coloque o sistema não-linear no ponto de equilíbrio $(\overline{H}, \overline{u}) = (4, 0.02)$. Assim, aplicamos em $t = 0$ um controle do tipo degrau de amplitude $\overline{u} = 0.02$. Suponha que
+$$
+\lim\limits_{t\to\infty}{H(t)}  = \overline{H} =4.
+$$
+Tomamos $t_1 > 0$ tal que
+$$
+H(t) \cong \overline{H} = 4, \quad \text{para } t\geq t_1. (\#eq:eq610)
+$$
+Aplicamos então $\delta u(t)$ no instante $t = t_1$. Relembre que $u(t) = \overline{u} + \delta u(t)$ e que $\delta u(t)$ é a entrada do sistema linearizado. Portanto,
+$$
+\boxed{\delta u(t) \cong 0 \implies H(t) \cong \overline{H} + \delta H(t), t \geq t_1},
+$$
+onde $\delta H(t)$ é a solução do sistema linearizado \@ref(eq:eq67) com entrada $\delta u(t)$, e $H(t)$ é a solução do sistema não-linear original \@ref(eq:eq61) com entrada $u(t) = \overline{u} + \delta u(t)$.
+
+```{r fig63, fig.align='center', echo=FALSE, fig.cap='Comparação das dinâmicas ( $\\delta u \\cong 0$ e $H(t) \\cong \\overline{H} + \\delta H(t), t \\geq t_1$).', out.width='50%'}
+knitr::include_graphics('Imagens/Lab6/Apresentação/fig3.jpg', dpi = NA)
+```
 

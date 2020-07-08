@@ -20,4 +20,6 @@ Working on it :)
 
 ## Problema 6.3 {-}
 
+Considere $G(s)$ em (9), que é a Função de Transferência do sistema linearizado associado ao sistema de um tanque (6) no ponto de equilíbrio
+
 ## Problema 6.4 {-}

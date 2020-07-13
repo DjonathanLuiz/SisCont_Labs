@@ -252,7 +252,37 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="método-do-lugar-geométrico-das-raízes" class="section level2" number="8.1">
 <h2><span class="header-section-number">8.1</span> Método do Lugar Geométrico das Raízes</h2>
-<p>Working on it :)</p>
+<p>Considere o diagrama de blocos do processo <span class="math inline">\(G(s)\)</span> em malha-fechada da Figura <a href="método-do-lugar-geométrico-das-raízes.html#fig:fig81">8.1</a>, onde <span class="math inline">\(r(t)\)</span> é a referência, <span class="math inline">\(y(t)\)</span> é a saída, <span class="math inline">\(u(t)\)</span> é o controle e <span class="math inline">\(K&gt;0\)</span> é um ganho que pode ser ajustado.</p>
+<div class="figure" style="text-align: center"><span id="fig:fig81"></span>
+<img src="Imagens/Lab8/Apresentação/fig1.jpg" alt="Diagrama de blocos do processo em malha-fechada." width="50%" />
+<p class="caption">
+Figura 8.1: Diagrama de blocos do processo em malha-fechada.
+</p>
+</div>
+<p>Suponha que
+<span class="math display">\[
+G(s) = \frac{N(s)}{D(s)},
+\]</span>
+com <span class="math inline">\(\text{grau}(N) \leq \text{grau}(D) = n\)</span>, ou seja, <span class="math inline">\(G(s)\)</span> é de ordem <span class="math inline">\(n\)</span>. A Função de Transferência em malha-fechada do diagrama de blocos da Figura <a href="método-do-lugar-geométrico-das-raízes.html#fig:fig81">8.1</a> é
+<span class="math display">\[
+F(s) = \frac{Y(s)}{R(s)} = \frac{KG(s)}{1 + KG(s)}.
+\]</span>
+Assim,
+<span class="math display">\[
+F(s) = \frac{Y(s)}{R(s)} = \frac{K\frac{N(s)}{D(s)}}{1+k\frac{N(s)}{D(s)}} = \frac{KN(s)}{D(s) + KN(s)}.
+\]</span>
+Note que os zeros de <span class="math inline">\(F(s)\)</span> (malha-fechada) são os mesmos que os de <span class="math inline">\(G(s)\)</span> (malha-aberta), e que a equação característica é dada por
+<span class="math display">\[
+D(s) = KN(s) = 0
+\]</span>
+e depende do ganho <span class="math inline">\(K\)</span>. Como os pólos de <span class="math inline">\(F(s)\)</span> são as raízes da equação característica, concluímos que cada escolha de <span class="math inline">\(K&gt;0\)</span> resulta em um conjunto de <span class="math inline">\(n\)</span> pólos de <span class="math inline">\(F(s)\)</span>, os quais podem ser representados no plano <span class="math inline">\(s\)</span>. Desse modo, os <span class="math inline">\(n\)</span> pólos de <span class="math inline">\(F(s)\)</span> formam uma curva no plano <span class="math inline">\(s\)</span> à medida que variamos o ganho <span class="math inline">\(K\)</span> da maneira contínua no intervalo <span class="math inline">\([0,\infty)\)</span>. Tal curva é denominada de Lugar Geométrico das Raízes (LGR) ou, simplesmente, de Lugar das Raízes (LR).</p>
+<p>Nesta experiência, determinamos o LGR com o auxílio do Matlab. No entanto, devemos ter em mente algumas de suas propriedades principais:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Número de segmentos:</strong> o número total de segmentos do LGR é igual ao número de pólos de <span class="math inline">\(G(s)\)</span>;</li>
+<li><strong>Simetria:</strong> O LGR é simétrico em relação ao eixo real (pois se um número complexo for raíz da equação característica, então o seu complxo conjugado também será);</li>
+<li><strong>Pontos Iniciais e Terminais:</strong> O LGR começa no pólo <span class="math inline">\(G(s)\)</span> e termina nos zeros de <span class="math inline">\(G(s)\)</span>. Isto significa que os pólos de <span class="math inline">\(G(s)\)</span> pertencem ao LGR para <span class="math inline">\(K=0\)</span> e que os zeros de <span class="math inline">\(G(s)\)</span> pertencem ao LGR para <span class="math inline">\(K\to\infty\)</span>;</li>
+<li><strong>Segmentos do eixo real (horizontal):</strong> Um segmento do eixo real pertence ao LGR quando o número total de pólos e zeros de <span class="math inline">\(G(s)\)</span> à direita do segmento for ímpar. Caso contrário, o segmento não pertence ao LGR.</li>
+</ol>
 </div>
             </section>
 

@@ -252,7 +252,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="determinação-do-ganho-k-para-sistemas-em-malha-fechada-de-primeira-e-segunda-ordem" class="section level2" number="8.3">
 <h2><span class="header-section-number">8.3</span> Determinação do ganho <span class="math inline">\(K\)</span> para sistemas em malha-fechada de primeira e segunda ordem</h2>
-<p>Working on it :)</p>
+<p>Considere a Função de Transferência de malha-fechada <span class="math inline">\(F(s)\)</span> é estável para um determinado ganho <span class="math inline">\(K&gt;0\)</span>. Se <span class="math inline">\(F(s)\)</span> é de primeira ordem com o pólo em <span class="math inline">\(s = -a\)</span>, onde <span class="math inline">\(a &gt; 0\)</span>, então <span class="math inline">\(t_s(5\%) = \frac{3}{a}\)</span> e não há oscilação para referências do tipo degrau. Se <span class="math inline">\(F(s)\)</span> é de segunda ordem com pólos complexos conjugados em <span class="math inline">\(s=-a \pm jb = -\xi\omega_n \pm j\omega\sqrt{1-\xi^2}\)</span>, onde <span class="math inline">\(a = \xi\omega_n &gt;0\)</span>, então para referências do tipo degrau temos que <span class="math inline">\(t_s(5\%) \cong \frac{3}{a}\)</span> e <span class="math inline">\(\xi = \sqrt{\frac{(\ln{M_p})^2}{(\ln{M_p})^2 + \pi^2}}\)</span>, onde <span class="math inline">\(M_p\)</span> é o sobressinal. Em síntese,
+<span class="math display" id="eq:eq81">\[
+s = -a \implies \boxed{t_s(5\%) = \frac{3}{a}}, \\
+s=-a \pm jb = -\xi\omega_n \pm j\omega\sqrt{1-\xi^2} \\
+\implies \boxed{t_s(5\%) \cong \frac{3}{a}, \quad \xi = \sqrt{\frac{(\ln{M_p})^2}{(\ln{M_p})^2 + \pi^2}}}. \tag{8.1}
+\]</span></p>
+<p>Desse modo, se <span class="math inline">\(F(s)\)</span> é de primeira ou segunda ordem, podemos verificar pelo LGR se existem valores para <span class="math inline">\(K&gt;0\)</span> em que as especificações de desempenho <span class="math inline">\(t_s(5\%)\)</span> e <span class="math inline">\(M_p\)</span> são atendidas. No caso de existirem tais valores, seremos capazes de determiná-los facilmente através do Matlab.</p>
 
 </div>
 <!-- </div> -->

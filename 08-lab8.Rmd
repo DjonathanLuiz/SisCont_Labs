@@ -4,12 +4,50 @@ Nesta experiência estudaremos o Lugar Geométrico das Raízes (LGR) através do
 
 ## Método do Lugar Geométrico das Raízes
 
-Working on it :)
+Considere o diagrama de blocos do processo $G(s)$ em malha-fechada da Figura \@ref(fig:fig81), onde $r(t)$ é a referência, $y(t)$ é a saída, $u(t)$ é o controle e $K>0$ é um ganho que pode ser ajustado.
+
+```{r fig81, fig.align='center', echo=FALSE, fig.cap='Diagrama de blocos do processo em malha-fechada.', out.width='50%'}
+knitr::include_graphics('Imagens/Lab8/Apresentação/fig1.jpg', dpi = NA)
+```
+
+Suponha que
+$$
+G(s) = \frac{N(s)}{D(s)},
+$$
+com $\text{grau}(N) \leq \text{grau}(D) = n$, ou seja, $G(s)$ é de ordem $n$. A Função de Transferência em malha-fechada do diagrama de blocos da Figura \@ref(fig:fig81) é
+$$
+F(s) = \frac{Y(s)}{R(s)} = \frac{KG(s)}{1 + KG(s)}.
+$$
+Assim,
+$$
+F(s) = \frac{Y(s)}{R(s)} = \frac{K\frac{N(s)}{D(s)}}{1+k\frac{N(s)}{D(s)}} = \frac{KN(s)}{D(s) + KN(s)}.
+$$
+Note que os zeros de $F(s)$ (malha-fechada) são os mesmos que os de $G(s)$ (malha-aberta), e que a equação característica é dada por
+$$
+D(s) = KN(s) = 0
+$$
+e depende do ganho $K$. Como os pólos de $F(s)$ são as raízes da equação característica, concluímos que cada escolha de $K>0$ resulta em um conjunto de $n$ pólos de $F(s)$, os quais podem ser representados no plano $s$. Desse modo, os $n$ pólos de $F(s)$ formam uma curva no plano $s$ à medida que variamos o ganho $K$ da maneira contínua no intervalo $[0,\infty)$. Tal curva é denominada de Lugar Geométrico das Raízes (LGR) ou, simplesmente, de Lugar das Raízes (LR).
+
+Nesta experiência, determinamos o LGR com o auxílio do Matlab. No entanto, devemos ter em mente algumas de suas propriedades principais:
+
+1. **Número de segmentos:** o número total de segmentos do LGR é igual ao número de pólos de $G(s)$;
+2. **Simetria:** O LGR é simétrico em relação ao eixo real (pois se um número complexo for raíz da equação característica, então o seu complxo conjugado também será);
+3. **Pontos Iniciais e Terminais:** O LGR começa no pólo $G(s)$ e termina nos zeros de $G(s)$. Isto significa que os pólos de $G(s)$ pertencem ao LGR para $K=0$ e que os zeros de $G(s)$ pertencem ao LGR para $K\to\infty$;
+4. **Segmentos do eixo real (horizontal):** Um segmento do eixo real pertence ao LGR quando o número total de pólos e zeros de $G(s)$ à direita do segmento for ímpar. Caso contrário, o segmento não pertence ao LGR.
 
 ## Estabilidade e Influência de Pólos e Zeros no LGR
 
-Working on it :)
+Relembre que uma Função de Transferência é estável quando todos os pólos estão no SPE (possuem parte real negativa). Desse modo, podemos determinar através do LGR as faixas de valores de $K>0$ em que o sistema em malha-fechada é estável ou instável.
+
+A introdução de pólos e zeros em $G(s)$ influencia o LGR. De modo geral, a introdução de pólos estáveis tende a "empurrar" o LGR para a direita e, consequentemente, a instabilizar o sistema em malha-fechada. A introdução de zeros tende a "atrair" o LGR em sua direção. Assim, se o zero introduzido está no SPE, existe uma tendência de se estabilizar o sistema em malha-fechada. E, se o zero está no SPD, existe uma tendência de se instabilizar o sistema em malha-fechada.
 
 ## Determinação do ganho $K$ para sistemas em malha-fechada de primeira e segunda ordem
 
-Working on it :)
+Considere a Função de Transferência de malha-fechada $F(s)$ é estável para um determinado ganho $K>0$. Se $F(s)$ é de primeira ordem com o pólo em $s = -a$, onde $a > 0$, então $t_s(5\%) = \frac{3}{a}$ e não há oscilação para referências do tipo degrau. Se $F(s)$ é de segunda ordem com pólos complexos conjugados em $s=-a \pm jb = -\xi\omega_n \pm j\omega\sqrt{1-\xi^2}$, onde $a = \xi\omega_n >0$, então para referências do tipo degrau temos que $t_s(5\%) \cong \frac{3}{a}$ e $\xi = \sqrt{\frac{(\ln{M_p})^2}{(\ln{M_p})^2 + \pi^2}}$, onde $M_p$ é o sobressinal. Em síntese,
+$$
+s = -a \implies \boxed{t_s(5\%) = \frac{3}{a}}, \\
+s=-a \pm jb = -\xi\omega_n \pm j\omega\sqrt{1-\xi^2} \\
+\implies \boxed{t_s(5\%) \cong \frac{3}{a}, \quad \xi = \sqrt{\frac{(\ln{M_p})^2}{(\ln{M_p})^2 + \pi^2}}}. (\#eq:eq81)
+$$
+
+Desse modo, se $F(s)$ é de primeira ou segunda ordem, podemos verificar pelo LGR se existem valores para $K>0$ em que as especificações de desempenho $t_s(5\%)$ e $M_p$ são atendidas. No caso de existirem tais valores, seremos capazes de determiná-los facilmente através do Matlab.

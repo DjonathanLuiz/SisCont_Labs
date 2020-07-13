@@ -111,16 +111,16 @@
 \contentsline {subsubsection}{Resolução}{102}{section*.91}%
 \contentsline {chapter}{\numberline {8}Análise pelo Lugar das Raízes}{103}{chapter.8}%
 \contentsline {section}{\numberline {8.1}Método do Lugar Geométrico das Raízes}{103}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Estabilidade e Influência de Pólos e Zeros no LGR}{103}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Determinação do ganho \(K\) para sistemas em malha-fechada de primeira e segunda ordem}{103}{section.8.3}%
-\contentsline {chapter}{Problemas Laboratório 8}{105}{chapter*.92}%
-\contentsline {chapter}{\numberline {9}Projeto de Controladores pelo Lugar das Raízes}{107}{chapter.9}%
-\contentsline {chapter}{Problemas Laboratório 9}{109}{chapter*.93}%
-\contentsline {chapter}{\numberline {10}Projeto do controlador atraso de fase}{111}{chapter.10}%
-\contentsline {chapter}{Problemas Laboratório 10}{113}{chapter*.94}%
-\contentsline {chapter}{\numberline {11}Análise pelos Diagramas de Bode e Nyquist}{115}{chapter.11}%
-\contentsline {chapter}{Problemas Laboratório 11}{117}{chapter*.95}%
-\contentsline {chapter}{\numberline {12}Projeto de Controladores pelo Diagrama de Bode}{119}{chapter.12}%
-\contentsline {chapter}{Problemas Laboratório 12}{121}{chapter*.96}%
-\contentsline {chapter}{\numberline {13}Digitalização de Controladores Analógicos}{123}{chapter.13}%
-\contentsline {chapter}{Problemas Laboratório 13}{125}{chapter*.97}%
+\contentsline {section}{\numberline {8.2}Estabilidade e Influência de Pólos e Zeros no LGR}{104}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Determinação do ganho \(K\) para sistemas em malha-fechada de primeira e segunda ordem}{105}{section.8.3}%
+\contentsline {chapter}{Problemas Laboratório 8}{107}{chapter*.92}%
+\contentsline {chapter}{\numberline {9}Projeto de Controladores pelo Lugar das Raízes}{109}{chapter.9}%
+\contentsline {chapter}{Problemas Laboratório 9}{111}{chapter*.93}%
+\contentsline {chapter}{\numberline {10}Projeto do controlador atraso de fase}{113}{chapter.10}%
+\contentsline {chapter}{Problemas Laboratório 10}{115}{chapter*.94}%
+\contentsline {chapter}{\numberline {11}Análise pelos Diagramas de Bode e Nyquist}{117}{chapter.11}%
+\contentsline {chapter}{Problemas Laboratório 11}{119}{chapter*.95}%
+\contentsline {chapter}{\numberline {12}Projeto de Controladores pelo Diagrama de Bode}{121}{chapter.12}%
+\contentsline {chapter}{Problemas Laboratório 12}{123}{chapter*.96}%
+\contentsline {chapter}{\numberline {13}Digitalização de Controladores Analógicos}{125}{chapter.13}%
+\contentsline {chapter}{Problemas Laboratório 13}{127}{chapter*.97}%

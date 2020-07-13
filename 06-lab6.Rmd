@@ -133,3 +133,9 @@ onde $\delta H(t)$ é a solução do sistema linearizado \@ref(eq:eq67) com entr
 knitr::include_graphics('Imagens/Lab6/Apresentação/fig3.jpg', dpi = NA)
 ```
 
+```{obs}
+Seja $X(s)$ a Transformada de Laplace de um sinal $x(t)$. Suponha que $X(s)$ ou $sX(s)$ tem todos os pólos no SPE. Então, o limite $x(\infty) = \lim\limits_{t \to \infty}{x(t)}$ existe e é dado por
+$$
+x(\infty) = \lim\limits_{t \to \infty}{x(t)} = \lim\limits_{s \to 0}{sX(s)}.
+$$
+```

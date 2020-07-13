@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Laboratório 12 Projeto de Controladores pelo Diagrama de Bode | Laboratório de Sistemas de Controle</title>
+  <title>7.2 Projeto de um controlador integral para o sistema de um tanque | Laboratório de Sistemas de Controle</title>
   <meta name="description" content="Este livro tem o objetivo de apresentar as respostas dos laboratórios da disciplina DAS5317 Sistemas de Controle da Universidade Federal de Santa Catarina para o semestre 2020.1 desenvolvidas pelo acadêmico Djonathan Luiz de Oliveira Quadras." />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Laboratório 12 Projeto de Controladores pelo Diagrama de Bode | Laboratório de Sistemas de Controle" />
+  <meta property="og:title" content="7.2 Projeto de um controlador integral para o sistema de um tanque | Laboratório de Sistemas de Controle" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Laboratório 12 Projeto de Controladores pelo Diagrama de Bode | Laboratório de Sistemas de Controle" />
+  <meta name="twitter:title" content="7.2 Projeto de um controlador integral para o sistema de um tanque | Laboratório de Sistemas de Controle" />
   
   <meta name="twitter:description" content="Este livro tem o objetivo de apresentar as respostas dos laboratórios da disciplina DAS5317 Sistemas de Controle da Universidade Federal de Santa Catarina para o semestre 2020.1 desenvolvidas pelo acadêmico Djonathan Luiz de Oliveira Quadras." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="problemas-laboratório-11.html"/>
-<link rel="next" href="problemas-laboratório-12.html"/>
+<link rel="prev" href="controladores-lineares-para-o-sistema-de-um-tanque.html"/>
+<link rel="next" href="problemas-laboratório-7.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -245,18 +245,47 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="projeto-de-controladores-pelo-diagrama-de-bode" class="section level1" number="12">
-<h1><span class="header-section-number">Laboratório 12</span> Projeto de Controladores pelo Diagrama de Bode</h1>
-<p>Working on it :)</p>
+<div id="projeto-de-um-controlador-integral-para-o-sistema-de-um-tanque" class="section level2" number="7.2">
+<h2><span class="header-section-number">7.2</span> Projeto de um controlador integral para o sistema de um tanque</h2>
+<p>Considere o ponto de equilíbrio <span class="math inline">\((\overline{H}, \overline{u}) = (4, 0.02)\)</span> do sistema não-linear <a href="controladores-lineares-para-o-sistema-de-um-tanque.html#eq:eq71">(7.1)</a>. Assuma que temos as seguintes especificações para a saída <span class="math inline">\(y(t) = H(t)\)</span> dos sitema nas proximidades de <span class="math inline">\(\overline{H} =4\)</span>:</p>
+<ol style="list-style-type: decimal">
+<li>Erro de rastreamento nulo em regime permanente (<span class="math inline">\(t\to\infty\)</span>) para referêncis do tipo degrau;</li>
+<li>Sobressinal máximo de <span class="math inline">\(5\%\)</span>.</li>
+</ol>
+<p>Projetaremos um controlador linear para que o sistema não-linear em malha-fechada satisfaça a tais exigências ao menos nas proximidades de <span class="math inline">\(\overline{H} = 4\)</span>. Pelo o que vimos na seção anterior, devemos projetar um controlador linear para a Função de Transferência <span class="math inline">\(G(s)\)</span> do sistema linearizado em <span class="math inline">\((\overline{H}, \overline{u}) = (4, 0.02)\)</span> de modo que a saída <span class="math inline">\(\delta y(t) = \delta H(t)\)</span> atenda estas mesmas especificações.</p>
+<p>A Figura <a href="controladores-lineares-para-o-sistema-de-um-tanque.html#fig:fig71">7.1</a> apresenta o diagrama de blocos do sistema linearizado em malha-fechada, onde <span class="math inline">\(\delta r\)</span> é a referência a ser rastreada pela saída <span class="math inline">\(\delta y(t) = \delta H(t)\)</span>, <span class="math inline">\(\delta e(t) = \delta r(t) - \delta H(t)\)</span> é o erro de rastreamento, <span class="math inline">\(C(s)\)</span> é o controlador a ser determinado e <span class="math inline">\(\delta u(t)\)</span> é o controle gerado por <span class="math inline">\(C(s)\)</span>.</p>
+<p>Relembre que se <span class="math inline">\(C(s)G(s)\)</span> tiver um pólo em <span class="math inline">\(s=0\)</span> (sistema Tipo 1) e a Função de Transferência do sistema em malha-fechada for estável, isto é, todos os pólos possuem parte real negativa, então o erro de rastreamento será nulo em regime permanente para referências <span class="math inline">\(\delta r\)</span> do tipo degrau. Escolhemos então um controlador integral (I) da forma
+<span class="math display">\[
+C(s) = \frac{K}{s},
+\]</span>
+onde <span class="math inline">\(K &gt; 0\)</span> é o ganho do controlador. Determinaremos o valor de <span class="math inline">\(K\)</span> que assegure sobressinal máximo de <span class="math inline">\(5\%\)</span>. A partir de <a href="controladores-lineares-para-o-sistema-de-um-tanque.html#eq:eq73">(7.3)</a> e da Figura <a href="controladores-lineares-para-o-sistema-de-um-tanque.html#fig:fig71">7.1</a>, temos que a Função de Transferência em malha-fechada é dada por
+<span class="math display" id="eq:eq77">\[
+F(s) = \frac{\Delta H(s)}{\Delta R(s)} = \frac{C(s)G(s)}{1 + C(s)G(s)} = \frac{\frac{K}{s}\frac{1}{(s+0.0025)}}{1 + \frac{K}{s}\frac{1}{(s+0.0025)}} \\
+\implies \boxed{F(s) = \frac{K}{s^2+0.0025s+K}=\frac{\omega^2_n}{s^2 + 2\xi\omega_ns+\omega_n^2}}, \tag{7.7}
+\]</span>
+onde <span class="math inline">\(\Delta R(s)\)</span> e <span class="math inline">\(\Delta H(s)\)</span> são as Transformadas de Laplace de <span class="math inline">\(\delta r(t)\)</span> e <span class="math inline">\(\delta H(t)\)</span>, respectivamente. Para o sistema na forma acima, temos que se <span class="math inline">\(0 &lt; \xi &lt; 1\)</span> (subamortecimento), então a parte real dos pólos complexos conjugados de <span class="math inline">\(F(s)\)</span> é negativa, ou seja, <span class="math inline">\(F(s)\)</span> é estável. Além disso, a relação entre <span class="math inline">\(\xi\)</span> e o sobressinal máximo (percentual) <span class="math inline">\(M_p\)</span> é
+<span class="math display">\[
+\boxed{\xi = \sqrt{\frac{(\ln{M_p})^2}{(\ln{M_p})^2+\pi^2}}}.
+\]</span>
+Para <span class="math inline">\(M_p = 0.05\)</span> (<span class="math inline">\(5\%\)</span> de sobressinal), temos que <span class="math inline">\(\xi = 0.69\)</span>. Obtemos então de <a href="projeto-de-um-controlador-integral-para-o-sistema-de-um-tanque.html#eq:eq77">(7.7)</a> por igualdade polinomial que
+<span class="math display">\[
+2\xi\omega_n = 0.0025 \implies 2\cdot 0.69 \cdot \omega_n = 0.0025 \implies\boxed{\omega_n = \frac{0.0025}{1.38}}, \\
+K = \omega_n^2 \implies \boxed{K \cong 3.3 \cdot 10^{-6}}.
+\]</span>
+Portanto, o controlador integral (I) a ser implementado é
+<span class="math display" id="eq:eq78">\[
+C(s) = \boxed{\frac{3.3\cdot 10^{-6}}{s}}. \tag{7.8}
+\]</span></p>
 
 </div>
+<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="problemas-laboratório-11.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="problemas-laboratório-12.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="controladores-lineares-para-o-sistema-de-um-tanque.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="problemas-laboratório-7.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

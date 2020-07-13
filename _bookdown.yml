@@ -12,6 +12,6 @@ language:
     lem: "Lema "
     cor: "Corolário "
     prp: "Proposição "
-    cnj: "Conjectura "
+    cnj: "Observação "
     def: "Definição "
     exr: "Exercício "

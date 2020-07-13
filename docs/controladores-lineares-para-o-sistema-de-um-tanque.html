@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Laboratório 12 Projeto de Controladores pelo Diagrama de Bode | Laboratório de Sistemas de Controle</title>
+  <title>7.1 Controladores lineares para o sistema de um tanque | Laboratório de Sistemas de Controle</title>
   <meta name="description" content="Este livro tem o objetivo de apresentar as respostas dos laboratórios da disciplina DAS5317 Sistemas de Controle da Universidade Federal de Santa Catarina para o semestre 2020.1 desenvolvidas pelo acadêmico Djonathan Luiz de Oliveira Quadras." />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Laboratório 12 Projeto de Controladores pelo Diagrama de Bode | Laboratório de Sistemas de Controle" />
+  <meta property="og:title" content="7.1 Controladores lineares para o sistema de um tanque | Laboratório de Sistemas de Controle" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Laboratório 12 Projeto de Controladores pelo Diagrama de Bode | Laboratório de Sistemas de Controle" />
+  <meta name="twitter:title" content="7.1 Controladores lineares para o sistema de um tanque | Laboratório de Sistemas de Controle" />
   
   <meta name="twitter:description" content="Este livro tem o objetivo de apresentar as respostas dos laboratórios da disciplina DAS5317 Sistemas de Controle da Universidade Federal de Santa Catarina para o semestre 2020.1 desenvolvidas pelo acadêmico Djonathan Luiz de Oliveira Quadras." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="problemas-laboratório-11.html"/>
-<link rel="next" href="problemas-laboratório-12.html"/>
+<link rel="prev" href="lab7.html"/>
+<link rel="next" href="projeto-de-um-controlador-integral-para-o-sistema-de-um-tanque.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -245,18 +245,70 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="projeto-de-controladores-pelo-diagrama-de-bode" class="section level1" number="12">
-<h1><span class="header-section-number">Laboratório 12</span> Projeto de Controladores pelo Diagrama de Bode</h1>
-<p>Working on it :)</p>
-
+<div id="controladores-lineares-para-o-sistema-de-um-tanque" class="section level2" number="7.1">
+<h2><span class="header-section-number">7.1</span> Controladores lineares para o sistema de um tanque</h2>
+<p>No Laboratório <a href="lab6.html#lab6">6</a>, vimos que a dinâmica da altura do nível <span class="math inline">\(H(t)\)</span> do sistema de um tanque é descrita por
+<span class="math display" id="eq:eq71">\[
+\dot{H}(t) = f(H(t),u(t)) = \frac{1}{A}(u(t)-\beta\sqrt{H(t)}), \tag{7.1}
+\]</span>
+onde <span class="math inline">\(u(t) = Q_e(t)\)</span> é o controle (o controle é a vazão de entrada do sistema). Encontramos também que o sistema linearizado associado num ponto de equilíbrio <span class="math inline">\((\overline{H}, \overline{u})\)</span> é dado por
+<span class="math display" id="eq:eq72">\[
+\delta\dot{H}(t) = \left.\frac{\partial f}{\partial H}\right|_{(\overline{H}, \overline{u})}\delta H(t) + \left.\frac{\partial f}{\partial u}\right|_{(\overline{H}, \overline{u})}\delta u(t) = \boxed{\frac{- \beta}{2A\sqrt{\overline{H}}}\delta H(t) + \frac{1}{A}\delta u(t)}.  \tag{7.2}
+\]</span>
+Ressaltamos que os coeficientes dependem do ponto de equilíbrio <span class="math inline">\((\overline{H}, \overline{u})\)</span> escolhido. Para <span class="math inline">\(\beta = 0.01\)</span>, <span class="math inline">\(A = 1\)</span> e <span class="math inline">\((\overline{H}, \overline{u}) = (4, 0.02)\)</span>, obtivemos que
+<span class="math display" id="eq:eq73">\[
+G(s) = \frac{\Delta H(s)}{\Delta U(s)} = \frac{1}{s + 0.0025}, \tag{7.3}
+\]</span>
+onde <span class="math inline">\(\Delta U(s)\)</span> e <span class="math inline">\(\Delta Y(s)\)</span> são as Transformadas e Laplace da entrada <span class="math inline">\(\delta u(t)\)</span> e da saída <span class="math inline">\(\delta y(t) = \delta H(t)\)</span> do sistema linearizado, respectivamente.</p>
+<p>Nosso objetivo é projetar um controlador linear de modo que a saída <span class="math inline">\(y(t) = H(t)\)</span> do sistema não-linear <a href="controladores-lineares-para-o-sistema-de-um-tanque.html#eq:eq71">(7.1)</a> rastreie referências do tipo degrau com erro nulo em em regime permanente (<span class="math inline">\(t\to\infty\)</span>), e que a dinâmica de <span class="math inline">\(y(t) = H(t)\)</span> atenda certas especificações desejadas durante o regime transitório (sobressinal e tempo de acomodação, por exemplo), ao menos nas proximidades de <span class="math inline">\(\overline{H} = 4\)</span>. Por se tratar de um sistema não-linear, não podemos aplicar diretamente a <a href="controladores-lineares-para-o-sistema-de-um-tanque.html#eq:eq71">(7.1)</a> técnicas lineares de projeto de controladores. Com base no sistema linearizado, no entando, isso pode ser feito indiretamente em dois passos:</p>
+<ol style="list-style-type: decimal">
+<li>projetamos um controlador linear <span class="math inline">\(C(S)\)</span> para controlar em malha-fechada a saída <span class="math inline">\(\delta y(t) = \delta H(t)\)</span> de <span class="math inline">\(G(s)\)</span> em <a href="controladores-lineares-para-o-sistema-de-um-tanque.html#eq:eq73">(7.3)</a>, como mostrado na Figura <a href="controladores-lineares-para-o-sistema-de-um-tanque.html#fig:fig71">7.1</a>. O controlador <span class="math inline">\(C(s)\)</span> deve assegurar que o erro de rastreamento <span class="math inline">\(\delta e(t) = \delta H(t) - \delta r(t)\)</span> seja nulo em regime permanente <span class="math inline">\((t\to\infty)\)</span> para referências <span class="math inline">\(\delta r(t)\)</span> do tipo degrau e que as especificações de regime transitório desejadas para <span class="math inline">\(y(t) = H(t)\)</span> sejam atendidas por <span class="math inline">\(\delta y(t) = \delta H(t)\)</span>;</li>
+<li>Implementamos então o controlador determinado <span class="math inline">\(C(s)\)</span> diretamente no sistema não-linear <a href="controladores-lineares-para-o-sistema-de-um-tanque.html#eq:eq71">(7.1)</a> (bloco “SNL”) em malha-fechada, conforme ilustrado na parte infeior da Figura <a href="controladores-lineares-para-o-sistema-de-um-tanque.html#fig:fig72">7.2</a>. Devemos realizar seguinte procedimento:
+<ol style="list-style-type: lower-alpha">
+<li>Escolhemos uma referência <span class="math inline">\(r\)</span> do tipo degrau para colocar o sistema não-linear no ponto de equilíbrio <span class="math inline">\((\overline{H}, \overline{u})\)</span>. Assim, aplicamos em <span class="math inline">\(t = 0\)</span> uma referência <span class="math inline">\(r\)</span> do tipo degrau de amplitude <span class="math inline">\(\overline{H} = 4\)</span>, e <em>esperamos</em> que
+<span class="math display" id="eq:eq74">\[
+ \lim\limits_{t\to\infty}{H(t) = \overline{H} = 4}.  \tag{7.4}
+ \]</span>
+Em geral, não temos certeza de que tal convergência realmente ocorrerá nem que as especificações de regime transitório serão atendidas, pois como a condição inicial do sistema não-linear é nula (<span class="math inline">\(H(0) = 0\)</span>), poderemos ter um desvio inicial “grande demais” em relação ao ponto de equilíbrio <span class="math inline">\((\overline{H}, \overline{u}) = (4, 0.02)\)</span>. relembre que a Função de Transferência <span class="math inline">\(G(s)\)</span> aproxima a dinâmica do sistema não-linear original nas proximidades do ponto de equilíbrio <span class="math inline">\((\overline{H}, \overline{u})\)</span>, ou seja, quando <span class="math inline">\(H(t) - \overline{H} \cong 0, u(t) - \overline{u} \cong0\)</span>;</li>
+<li>Suponha que <a href="controladores-lineares-para-o-sistema-de-um-tanque.html#eq:eq74">(7.4)</a> é valida. Tome <span class="math inline">\(t_1 &gt; 0\)</span> tal que
+<span class="math display" id="eq:eq75">\[
+ H(t) \cong = \overline{H} = 4, \text{ para todo }t \geq t_1, \tag{7.5}
+ \]</span>
+onde <span class="math inline">\(\delta H(t)\)</span> é a saída do sistema linearizado <a href="controladores-lineares-para-o-sistema-de-um-tanque.html#eq:eq72">(7.2)</a> em malha-fechada e <span class="math inline">\(H(t)\)</span> é a saída do sistema não-linear <a href="controladores-lineares-para-o-sistema-de-um-tanque.html#eq:eq71">(7.1)</a> em malha-fechada (veja a Figura <a href="controladores-lineares-para-o-sistema-de-um-tanque.html#fig:fig72">7.2</a> e a Figura <a href="sistema-de-um-tanque.html#fig:fig61">6.1</a>). Logo,
+<span class="math display">\[
+ \lim_{t\to\infty}{H(t)} = \overline{H} + \delta r = 4 + \delta r.
+ \]</span>
+Em síntese,
+<span class="math display" id="eq:eq76">\[
+ \boxed{\delta r \cong \implies u(t) \cong \overline{u} + \delta u(t) \implies H(t) \cong \overline{H} + \delta H(t), t\geq t_1}. \tag{7.6}
+ \]</span>
+Desse modo, se <span class="math inline">\(\delta r \cong 0\)</span>, então o controlador projetado <span class="math inline">\(C(s)\)</span> assegura que a dinâmica de <span class="math inline">\(y(t) = H(t)\)</span> satisfaz as especificações desejadas, pois tais especificações são atendidas por <span class="math inline">\(\delta y(t) = \delta H(t)\)</span>.</li>
+</ol></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:fig71"></span>
+<img src="Imagens/Lab7/Apresentação/fig1.jpg" alt="Diagrama de blocos do sistema linearizado em malha-fechada." width="50%" />
+<p class="caption">
+Figura 7.1: Diagrama de blocos do sistema linearizado em malha-fechada.
+</p>
+</div>
+<p><strong>Observação 1.</strong> <em>Importante:</em>
+<span class="math display">\[
+\boxed{\delta r \text{ (variação na referência) } \neq \text{ perturbação}}
+\]</span></p>
+<div class="figure" style="text-align: center"><span id="fig:fig72"></span>
+<img src="Imagens/Lab7/Apresentação/fig2.jpg" alt="Comparação das dinâmicas em malha-fechada ($\delta r \cong 0$ e $u(t) \cong \overline{u} + \delta u(t)$, $H(t) \cong \overline{H} + \delta H(t)$, $t \geq t_1$)." width="70%" />
+<p class="caption">
+Figura 7.2: Comparação das dinâmicas em malha-fechada (<span class="math inline">\(\delta r \cong 0\)</span> e <span class="math inline">\(u(t) \cong \overline{u} + \delta u(t)\)</span>, <span class="math inline">\(H(t) \cong \overline{H} + \delta H(t)\)</span>, <span class="math inline">\(t \geq t_1\)</span>).
+</p>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="problemas-laboratório-11.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="problemas-laboratório-12.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="lab7.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="projeto-de-um-controlador-integral-para-o-sistema-de-um-tanque.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -1,3 +1,22 @@
 # Problemas Laboratório 7 {-}
 
+Estes problemas são relacionados ao assunto abordado no Laboratório \@ref(lab7).
+
+## Problema 7.1 {-}
+
+Considere a Função de Transferência $G(s)$ em \@ref(eq:eq73) referente ao sistema linearizado associado ao sistema de um tanque \@ref(eq:eq71) no ponto de equilíbrio $(\overline{H}, \overline{u}) = (4, 0.02)$ e o controlador integral $C(s)$ em \@ref(eq:eq78).
+
+(a) Implemente no Simulink/Matlab o diagrama de blocos apresentado na Figura \@ref(fig:fig72) com o objetivo de comparar a dinâmica de $\overline{H} + \delta H(t)$ do sistema linearizado em malha-fechada com a dinâmica de $H(t)$ do sistema não-linear em malha-fechada. Para ist, escolha $r= \overline{H} = 4$, $\delta r = 0$ e determine $t_1$ por simulação (veja \@ref(eq:eq75)). Talvez seja necessário escolher ``Max step size = 0.1` em `Simulation` $\implies$ `Configuration Parameters` no Simulink para a simulação. Verifique se as especificações de regime transitório foram atendidas. Isto era esperado? Justifique sua resposta.
+(b) Agora, simule para as seguintes *variações* na referência (não é perturbação!): $\delta r = 0.01$, $\delta r = 0.05$, $\delta r = 0.1$, $\delta r = 0.5$, $\delta r = 2$, $\delta r = 10$, $\delta r = 100$. Analise os resultados. As especificações de regime permanente e de regime transitório foram atendidas? Tais resultados eram esperados? Justifique sua resposta. Dica: veja \@ref(eq:eq76) e compare o sinal de controle $u(t)$ do sistema não-linear com o sinal de controle $\delta u(t)$ do sistema linearizado, relembrando que $\overline{u} = 0.02$.
+
+#### Resolução {-}
+
+Working on it :)
+
+## Problema 7.2 {-}
+
+Reprojete o controlador integral da seção anterior considerando que, nas especificações de regime transitório, o sobressinal máximo seja de $20\%$. Repita o Item 1 para o controlador $C(s)$ obtido.
+
+#### Resolução {-}
+
 Working on it :)

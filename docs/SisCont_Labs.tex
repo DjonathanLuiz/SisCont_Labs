@@ -113,14 +113,14 @@
 
 \title{Laboratório de Sistemas de Controle}
 \author{Djonathan Luiz de Oliveira Quadras}
-\date{2020-07-08}
+\date{2020-07-13}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Teorema}[chapter]
 \newtheorem{lemma}{Lema}[chapter]
 \newtheorem{corollary}{Corolário}[chapter]
 \newtheorem{proposition}{Proposição}[chapter]
-\newtheorem{conjecture}{Conjectura}[chapter]
+\newtheorem{conjecture}{Observação}[chapter]
 \theoremstyle{definition}
 \newtheorem{definition}{Definição}[chapter]
 \theoremstyle{definition}
@@ -2082,6 +2082,13 @@ onde \(\delta H(t)\) é a solução do sistema linearizado \eqref{eq:eq67} com e
 \caption{Comparação das dinâmicas ( $\delta u \cong 0$ e $H(t) \cong \overline{H} + \delta H(t), t \geq t_1$).}\label{fig:fig63}
 \end{figure}
 
+\begin{verbatim}
+Seja $X(s)$ a Transformada de Laplace de um sinal $x(t)$. Suponha que $X(s)$ ou $sX(s)$ tem todos os pólos no SPE. Então, o limite $x(\infty) = \lim\limits_{t \to \infty}{x(t)}$ existe e é dado por
+$$
+x(\infty) = \lim\limits_{t \to \infty}{x(t)} = \lim\limits_{s \to 0}{sX(s)}.
+$$
+\end{verbatim}
+
 \hypertarget{problemas-laboratuxf3rio-6}{%
 \chapter*{Problemas Laboratório 6}\label{problemas-laboratuxf3rio-6}}
 \addcontentsline{toc}{chapter}{Problemas Laboratório 6}
@@ -2136,14 +2143,164 @@ No item anterior, mude o ponto de equilíbrio do sistema de um tanque para \((\o
 
 Working on it :)
 
-\hypertarget{controle-de-sistemas-nuxe3o-lineares}{%
-\chapter{Controle de Sistemas Não-Lineares}\label{controle-de-sistemas-nuxe3o-lineares}}
+\hypertarget{lab7}{%
+\chapter{Controle de Sistemas Não-Lineares}\label{lab7}}
 
-Working on it :)
+Nesta experiência, veremos como controlar um sistema não-linear nas proximidades de um ponto de equilíbrio utilizando um controlador linear. Projetaremos um controlador integral (I) para o sistema de um tanque com base na Função de Transferência do sistema linearizado. Compararemos a dinâmica em malha-fechada do sistema linearizado com a dinâmica em malha-fechada do sistema não-linear original por simulação.
+
+\hypertarget{controladores-lineares-para-o-sistema-de-um-tanque}{%
+\section{Controladores lineares para o sistema de um tanque}\label{controladores-lineares-para-o-sistema-de-um-tanque}}
+
+No Laboratório \ref{lab6}, vimos que a dinâmica da altura do nível \(H(t)\) do sistema de um tanque é descrita por
+\[
+\dot{H}(t) = f(H(t),u(t)) = \frac{1}{A}(u(t)-\beta\sqrt{H(t)}), \label{eq:eq71}
+\]
+onde \(u(t) = Q_e(t)\) é o controle (o controle é a vazão de entrada do sistema). Encontramos também que o sistema linearizado associado num ponto de equilíbrio \((\overline{H}, \overline{u})\) é dado por
+\[
+\delta\dot{H}(t) = \left.\frac{\partial f}{\partial H}\right|_{(\overline{H}, \overline{u})}\delta H(t) + \left.\frac{\partial f}{\partial u}\right|_{(\overline{H}, \overline{u})}\delta u(t) = \boxed{\frac{- \beta}{2A\sqrt{\overline{H}}}\delta H(t) + \frac{1}{A}\delta u(t)}.  \label{eq:eq72}
+\]
+Ressaltamos que os coeficientes dependem do ponto de equilíbrio \((\overline{H}, \overline{u})\) escolhido. Para \(\beta = 0.01\), \(A = 1\) e \((\overline{H}, \overline{u}) = (4, 0.02)\), obtivemos que
+\[
+G(s) = \frac{\Delta H(s)}{\Delta U(s)} = \frac{1}{s + 0.0025}, \label{eq:eq73}
+\]
+onde \(\Delta U(s)\) e \(\Delta Y(s)\) são as Transformadas e Laplace da entrada \(\delta u(t)\) e da saída \(\delta y(t) = \delta H(t)\) do sistema linearizado, respectivamente.
+
+Nosso objetivo é projetar um controlador linear de modo que a saída \(y(t) = H(t)\) do sistema não-linear \eqref{eq:eq71} rastreie referências do tipo degrau com erro nulo em em regime permanente (\(t\to\infty\)), e que a dinâmica de \(y(t) = H(t)\) atenda certas especificações desejadas durante o regime transitório (sobressinal e tempo de acomodação, por exemplo), ao menos nas proximidades de \(\overline{H} = 4\). Por se tratar de um sistema não-linear, não podemos aplicar diretamente a \eqref{eq:eq71} técnicas lineares de projeto de controladores. Com base no sistema linearizado, no entando, isso pode ser feito indiretamente em dois passos:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  projetamos um controlador linear \(C(S)\) para controlar em malha-fechada a saída \(\delta y(t) = \delta H(t)\) de \(G(s)\) em \eqref{eq:eq73}, como mostrado na Figura \ref{fig:fig71}. O controlador \(C(s)\) deve assegurar que o erro de rastreamento \(\delta e(t) = \delta H(t) - \delta r(t)\) seja nulo em regime permanente \((t\to\infty)\) para referências \(\delta r(t)\) do tipo degrau e que as especificações de regime transitório desejadas para \(y(t) = H(t)\) sejam atendidas por \(\delta y(t) = \delta H(t)\);
+\item
+  Implementamos então o controlador determinado \(C(s)\) diretamente no sistema não-linear \eqref{eq:eq71} (bloco ``SNL'') em malha-fechada, conforme ilustrado na parte infeior da Figura \ref{fig:fig72}. Devemos realizar seguinte procedimento:
+
+  \begin{enumerate}
+  \def\labelenumii{(\alph{enumii})}
+  \tightlist
+  \item
+    Escolhemos uma referência \(r\) do tipo degrau para colocar o sistema não-linear no ponto de equilíbrio \((\overline{H}, \overline{u})\). Assim, aplicamos em \(t = 0\) uma referência \(r\) do tipo degrau de amplitude \(\overline{H} = 4\), e \emph{esperamos} que
+    \[
+     \lim\limits_{t\to\infty}{H(t) = \overline{H} = 4}.  \label{eq:eq74}
+     \]
+    Em geral, não temos certeza de que tal convergência realmente ocorrerá nem que as especificações de regime transitório serão atendidas, pois como a condição inicial do sistema não-linear é nula (\(H(0) = 0\)), poderemos ter um desvio inicial ``grande demais'' em relação ao ponto de equilíbrio \((\overline{H}, \overline{u}) = (4, 0.02)\). relembre que a Função de Transferência \(G(s)\) aproxima a dinâmica do sistema não-linear original nas proximidades do ponto de equilíbrio \((\overline{H}, \overline{u})\), ou seja, quando \(H(t) - \overline{H} \cong 0, u(t) - \overline{u} \cong0\);
+  \item
+    Suponha que \eqref{eq:eq74} é valida. Tome \(t_1 > 0\) tal que
+    \[
+     H(t) \cong = \overline{H} = 4, \text{ para todo }t \geq t_1, \label{eq:eq75}
+     \]
+    onde \(\delta H(t)\) é a saída do sistema linearizado \eqref{eq:eq72} em malha-fechada e \(H(t)\) é a saída do sistema não-linear \eqref{eq:eq71} em malha-fechada (veja a Figura \ref{fig:fig72} e a Figura \ref{fig:fig61}). Logo,
+    \[
+     \lim_{t\to\infty}{H(t)} = \overline{H} + \delta r = 4 + \delta r.
+     \]
+    Em síntese,
+    \[
+     \boxed{\delta r \cong \implies u(t) \cong \overline{u} + \delta u(t) \implies H(t) \cong \overline{H} + \delta H(t), t\geq t_1}. \label{eq:eq76}
+     \]
+    Desse modo, se \(\delta r \cong 0\), então o controlador projetado \(C(s)\) assegura que a dinâmica de \(y(t) = H(t)\) satisfaz as especificações desejadas, pois tais especificações são atendidas por \(\delta y(t) = \delta H(t)\).
+  \end{enumerate}
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{Imagens/Lab7/Apresentação/fig1} 
+
+}
+
+\caption{Diagrama de blocos do sistema linearizado em malha-fechada.}\label{fig:fig71}
+\end{figure}
+
+\textbf{Observação 1.} \emph{Importante:}
+\[
+\boxed{\delta r \text{ (variação na referência) } \neq \text{ perturbação}}
+\]
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.7\linewidth]{Imagens/Lab7/Apresentação/fig2} 
+
+}
+
+\caption{Comparação das dinâmicas em malha-fechada ($\delta r \cong 0$ e $u(t) \cong \overline{u} + \delta u(t)$, $H(t) \cong \overline{H} + \delta H(t)$, $t \geq t_1$).}\label{fig:fig72}
+\end{figure}
+
+\hypertarget{projeto-de-um-controlador-integral-para-o-sistema-de-um-tanque}{%
+\section{Projeto de um controlador integral para o sistema de um tanque}\label{projeto-de-um-controlador-integral-para-o-sistema-de-um-tanque}}
+
+Considere o ponto de equilíbrio \((\overline{H}, \overline{u}) = (4, 0.02)\) do sistema não-linear \eqref{eq:eq71}. Assuma que temos as seguintes especificações para a saída \(y(t) = H(t)\) dos sitema nas proximidades de \(\overline{H} =4\):
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Erro de rastreamento nulo em regime permanente (\(t\to\infty\)) para referêncis do tipo degrau;
+\item
+  Sobressinal máximo de \(5\%\).
+\end{enumerate}
+
+Projetaremos um controlador linear para que o sistema não-linear em malha-fechada satisfaça a tais exigências ao menos nas proximidades de \(\overline{H} = 4\). Pelo o que vimos na seção anterior, devemos projetar um controlador linear para a Função de Transferência \(G(s)\) do sistema linearizado em \((\overline{H}, \overline{u}) = (4, 0.02)\) de modo que a saída \(\delta y(t) = \delta H(t)\) atenda estas mesmas especificações.
+
+A Figura \ref{fig:fig71} apresenta o diagrama de blocos do sistema linearizado em malha-fechada, onde \(\delta r\) é a referência a ser rastreada pela saída \(\delta y(t) = \delta H(t)\), \(\delta e(t) = \delta r(t) - \delta H(t)\) é o erro de rastreamento, \(C(s)\) é o controlador a ser determinado e \(\delta u(t)\) é o controle gerado por \(C(s)\).
+
+Relembre que se \(C(s)G(s)\) tiver um pólo em \(s=0\) (sistema Tipo 1) e a Função de Transferência do sistema em malha-fechada for estável, isto é, todos os pólos possuem parte real negativa, então o erro de rastreamento será nulo em regime permanente para referências \(\delta r\) do tipo degrau. Escolhemos então um controlador integral (I) da forma
+\[
+C(s) = \frac{K}{s},
+\]
+onde \(K > 0\) é o ganho do controlador. Determinaremos o valor de \(K\) que assegure sobressinal máximo de \(5\%\). A partir de \eqref{eq:eq73} e da Figura \ref{fig:fig71}, temos que a Função de Transferência em malha-fechada é dada por
+\[
+F(s) = \frac{\Delta H(s)}{\Delta R(s)} = \frac{C(s)G(s)}{1 + C(s)G(s)} = \frac{\frac{K}{s}\frac{1}{(s+0.0025)}}{1 + \frac{K}{s}\frac{1}{(s+0.0025)}} \\
+\implies \boxed{F(s) = \frac{K}{s^2+0.0025s+K}=\frac{\omega^2_n}{s^2 + 2\xi\omega_ns+\omega_n^2}}, \label{eq:eq77}
+\]
+onde \(\Delta R(s)\) e \(\Delta H(s)\) são as Transformadas de Laplace de \(\delta r(t)\) e \(\delta H(t)\), respectivamente. Para o sistema na forma acima, temos que se \(0 < \xi < 1\) (subamortecimento), então a parte real dos pólos complexos conjugados de \(F(s)\) é negativa, ou seja, \(F(s)\) é estável. Além disso, a relação entre \(\xi\) e o sobressinal máximo (percentual) \(M_p\) é
+\[
+\boxed{\xi = \sqrt{\frac{(\ln{M_p})^2}{(\ln{M_p})^2+\pi^2}}}.
+\]
+Para \(M_p = 0.05\) (\(5\%\) de sobressinal), temos que \(\xi = 0.69\). Obtemos então de \eqref{eq:eq77} por igualdade polinomial que
+\[
+2\xi\omega_n = 0.0025 \implies 2\cdot 0.69 \cdot \omega_n = 0.0025 \implies\boxed{\omega_n = \frac{0.0025}{1.38}}, \\
+K = \omega_n^2 \implies \boxed{K \cong 3.3 \cdot 10^{-6}}.
+\]
+Portanto, o controlador integral (I) a ser implementado é
+\[
+C(s) = \boxed{\frac{3.3\cdot 10^{-6}}{s}}. \label{eq:eq78}
+\]
 
 \hypertarget{problemas-laboratuxf3rio-7}{%
 \chapter*{Problemas Laboratório 7}\label{problemas-laboratuxf3rio-7}}
 \addcontentsline{toc}{chapter}{Problemas Laboratório 7}
+
+Estes problemas são relacionados ao assunto abordado no Laboratório \ref{lab7}.
+
+\hypertarget{problema-7.1}{%
+\section*{Problema 7.1}\label{problema-7.1}}
+\addcontentsline{toc}{section}{Problema 7.1}
+
+Considere a Função de Transferência \(G(s)\) em \eqref{eq:eq73} referente ao sistema linearizado associado ao sistema de um tanque \eqref{eq:eq71} no ponto de equilíbrio \((\overline{H}, \overline{u}) = (4, 0.02)\) e o controlador integral \(C(s)\) em \eqref{eq:eq78}.
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  Implemente no Simulink/Matlab o diagrama de blocos apresentado na Figura \ref{fig:fig72} com o objetivo de comparar a dinâmica de \(\overline{H} + \delta H(t)\) do sistema linearizado em malha-fechada com a dinâmica de \(H(t)\) do sistema não-linear em malha-fechada. Para ist, escolha \(r= \overline{H} = 4\), \(\delta r = 0\) e determine \(t_1\) por simulação (veja \eqref{eq:eq75}). Talvez seja necessário escolher `\texttt{Max\ step\ size\ =\ 0.1} em \texttt{Simulation} \(\implies\) \texttt{Configuration\ Parameters} no Simulink para a simulação. Verifique se as especificações de regime transitório foram atendidas. Isto era esperado? Justifique sua resposta.
+\item
+  Agora, simule para as seguintes \emph{variações} na referência (não é perturbação!): \(\delta r = 0.01\), \(\delta r = 0.05\), \(\delta r = 0.1\), \(\delta r = 0.5\), \(\delta r = 2\), \(\delta r = 10\), \(\delta r = 100\). Analise os resultados. As especificações de regime permanente e de regime transitório foram atendidas? Tais resultados eram esperados? Justifique sua resposta. Dica: veja \eqref{eq:eq76} e compare o sinal de controle \(u(t)\) do sistema não-linear com o sinal de controle \(\delta u(t)\) do sistema linearizado, relembrando que \(\overline{u} = 0.02\).
+\end{enumerate}
+
+\hypertarget{resoluuxe7uxe3o}{%
+\subsubsection*{Resolução}\label{resoluuxe7uxe3o}}
+\addcontentsline{toc}{subsubsection}{Resolução}
+
+Working on it :)
+
+\hypertarget{problema-7.2}{%
+\section*{Problema 7.2}\label{problema-7.2}}
+\addcontentsline{toc}{section}{Problema 7.2}
+
+Reprojete o controlador integral da seção anterior considerando que, nas especificações de regime transitório, o sobressinal máximo seja de \(20\%\). Repita o Item 1 para o controlador \(C(s)\) obtido.
+
+\hypertarget{resoluuxe7uxe3o-1}{%
+\subsubsection*{Resolução}\label{resoluuxe7uxe3o-1}}
+\addcontentsline{toc}{subsubsection}{Resolução}
 
 Working on it :)
 

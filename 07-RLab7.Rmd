@@ -11,7 +11,21 @@ Considere a Função de Transferência $G(s)$ em \@ref(eq:eq73) referente ao sis
 
 #### Resolução {-}
 
-Working on it :)
+##### Parte A {-}
+
+O resultado da simulação está apresentado na Figura \@ref(fig:f1A1). $t_1 = 6000$. É possivel notar que $e(\infty) = 0$ e $M_p = 0.018 < 0.05$.
+
+```{r f1A1, fig.align='center', echo=FALSE, fig.cap='Simulação 1 do Problema 1A', out.width='80%'}
+knitr::include_graphics('Imagens/Lab7/Resolução/p1A1.jpg', dpi = NA)
+```
+
+##### Parte B {-}
+
+O resultado da simulação está apresentado na Figura \@ref(fig:f1B1). Percebe-se que quanto maior o valor de $\delta r$ mais instável se comporta o sistema e mais distante das especificações. Isso é esperado pois, de acordo com \@ref(eq:eq76), o sistema foi projetado para $\delta r \cong 0$.
+
+```{r f1B1, fig.align='center', echo=FALSE, fig.cap='Simulações do Problema 1B', out.width='80%'}
+knitr::include_graphics('Imagens/Lab7/Resolução/p1B1.jpg', dpi = NA)
+```
 
 ## Problema 7.2 {-}
 
@@ -19,4 +33,8 @@ Reprojete o controlador integral da seção anterior considerando que, nas espec
 
 #### Resolução {-}
 
-Working on it :)
+Para $M_p = 0.2$, temos $\xi = 0.318$. Assim, $\omega_n = \frac{0.0025}{0.636}$ e, finalmente, $K = 15.42 \cdot 10^{-6}$. Os resultados do novo sistema são apresentados na Figura \@ref(fig:f1B1). Apesar de modificar o parâmetro, ele ainda está sendo projetado para $\delta r \cong 0$.
+
+```{r f2, fig.align='center', echo=FALSE, fig.cap='Simulações do Problema 1B', out.width='80%'}
+knitr::include_graphics('Imagens/Lab7/Resolução/p2.jpg', dpi = NA)
+```

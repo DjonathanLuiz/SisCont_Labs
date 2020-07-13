@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.2.3)  13 JUL 2020 01:52
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.2.3)  13 JUL 2020 02:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1735,6 +1735,12 @@ Overfull \hbox (48.29495pt too wide) detected at line 2262
 
 ] [102]
 Chapter 8.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 14.4pt on input line 2323.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 14.40152pt on input line 2323.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 14.39845pt on input line 2323.
 [103
 
 ] [104
@@ -1801,29 +1807,29 @@ ANALÓGICOS
 
 ]
 No file SisCont_Labs.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2375.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2392.
 [125]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2375.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2392.
 (./SisCont_Labs.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 2375.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2375.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 2392.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2392.
 
 Package rerunfilecheck Info: File `SisCont_Labs.out' has not changed.
-(rerunfilecheck)             Checksum: D4DC1CB02D1CEB35ECD3886E49C18AAD;11581.
+(rerunfilecheck)             Checksum: 8C8E42A7CC8C3532F00BE6DE917560A8;12682.
 
 LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2375.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2392.
  ) 
 Here is how much of TeX's memory you used:
- 30297 strings out of 494432
- 557630 string characters out of 6170871
- 735931 words of memory out of 5000000
- 34333 multiletter control sequences out of 15000+600000
- 538780 words of font info for 83 fonts, out of 8000000 for 9000
+ 30310 strings out of 494432
+ 558111 string characters out of 6170871
+ 737414 words of memory out of 5000000
+ 34343 multiletter control sequences out of 15000+600000
+ 539741 words of font info for 89 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  55i,10n,115p,1023b,2146s stack positions out of 5000i,500n,10000p,200000b,80000s
 

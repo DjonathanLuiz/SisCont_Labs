@@ -1,3 +1,5 @@
 # Problemas Laboratório 8 {-}
 
+Estes problemas são relacionados ao assunto abordado no Laboratório \@ref(lab8).
+
 Working on it :)

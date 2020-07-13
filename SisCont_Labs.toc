@@ -110,6 +110,9 @@
 \contentsline {section}{Problema 7.2}{102}{section*.90}%
 \contentsline {subsubsection}{Resolução}{102}{section*.91}%
 \contentsline {chapter}{\numberline {8}Análise pelo Lugar das Raízes}{103}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Método do Lugar Geométrico das Raízes}{103}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Estabilidade e Influência de Pólos e Zeros no LGR}{103}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Determinação do ganho \(K\) para sistemas em malha-fechada de primeira e segunda ordem}{103}{section.8.3}%
 \contentsline {chapter}{Problemas Laboratório 8}{105}{chapter*.92}%
 \contentsline {chapter}{\numberline {9}Projeto de Controladores pelo Lugar das Raízes}{107}{chapter.9}%
 \contentsline {chapter}{Problemas Laboratório 9}{109}{chapter*.93}%

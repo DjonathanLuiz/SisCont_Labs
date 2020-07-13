@@ -1,3 +1,15 @@
-# Análise pelo Lugar das Raízes
+# Análise pelo Lugar das Raízes {#lab8}
+
+Nesta experiência estudaremos o Lugar Geométrico das Raízes (LGR) através do Matlab. Analisaremos a influência de pólos e zeros no LGR. Veremos, ainda, como utilizar o LGR para que o sistema em malha-fechada atenda certas especificações de desempenho.
+
+## Método do Lugar Geométrico das Raízes
+
+Working on it :)
+
+## Estabilidade e Influência de Pólos e Zeros no LGR
+
+Working on it :)
+
+## Determinação do ganho $K$ para sistemas em malha-fechada de primeira e segunda ordem
 
 Working on it :)

@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Problema 3.3 | Laboratório de Sistemas de Controle</title>
+  <title>Problema 8.1 | Laboratório de Sistemas de Controle</title>
   <meta name="description" content="Este livro tem o objetivo de apresentar as respostas dos laboratórios da disciplina DAS5317 Sistemas de Controle da Universidade Federal de Santa Catarina para o semestre 2020.1 desenvolvidas pelo acadêmico Djonathan Luiz de Oliveira Quadras." />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Problema 3.3 | Laboratório de Sistemas de Controle" />
+  <meta property="og:title" content="Problema 8.1 | Laboratório de Sistemas de Controle" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Problema 3.3 | Laboratório de Sistemas de Controle" />
+  <meta name="twitter:title" content="Problema 8.1 | Laboratório de Sistemas de Controle" />
   
   <meta name="twitter:description" content="Este livro tem o objetivo de apresentar as respostas dos laboratórios da disciplina DAS5317 Sistemas de Controle da Universidade Federal de Santa Catarina para o semestre 2020.1 desenvolvidas pelo acadêmico Djonathan Luiz de Oliveira Quadras." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="problema-3-2.html"/>
-<link rel="next" href="lab4.html"/>
+<link rel="prev" href="problemas-laboratório-8.html"/>
+<link rel="next" href="problema-8-2.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -258,75 +258,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="problema-3.3" class="section level2 unnumbered" number="">
-<h2>Problema 3.3</h2>
-<div id="parte-a" class="section level4 unnumbered" number="">
-<h4>Parte A</h4>
-<p>Aplique um degrau <span class="math inline">\(u(t) = 3\)</span> no Sistema 3. Obtenha um modelo aproximado para o Sistema 3 como uma Função de Transferência <span class="math inline">\(G(s)\)</span> de primeira ordem. Agora implemente o diagrama de blocos em malha fechada da Figura 3 para o Sistema 3 com <span class="math inline">\(r(t) = 1\)</span> do tipo degrau e <span class="math inline">\(K_c = 3\)</span>Observamos que, na Figura 3, se <span class="math inline">\(G(s)\)</span> é de primeira ordem, então a Função de Transferência em malha fechada <span class="math inline">\(F(s)\)</span> também será de primeira ordem para qualquer valor de <span class="math inline">\(K_c &gt; 0\)</span>. A resposta do Sistema 3 em malha-fechada está de acordo com tal propriedade? O que pode estar errado?</p>
-<div id="resolução-2" class="section level5 unnumbered" number="">
-<h5>Resolução</h5>
-<p>Simulando o sistema do modelo 1 obtemos o resultado abaixo.</p>
-<p><img src="Imagens/Lab3/Resolução/prob3AA.jpg" /></p>
-<p>Pela curva feita espera-se que a Função de Transferência seja de primeira ordem. Utilizando as ferramentas fornecidas pelo <code>Simulink</code> foi estimado que
+<div id="problema-8.1" class="section level2 unnumbered" number="">
+<h2>Problema 8.1</h2>
+<p>Considere o sistema de primeira ordem
 <span class="math display">\[
-y(\infty) = 3.9 \\ 
-0.95y(\infty) = 3.8415 \implies  t_s(5\%) = 3.22s \implies \tau = 1.072
+G(s) = \frac{0.5}{10s + 1}
 \]</span></p>
-<p>Assim,
-<span class="math display">\[
-G_3(s) = \frac {1.3}{1.072s+1}.
-\]</span></p>
-<p>Simulando <span class="math inline">\(G_1(s)\)</span>, temos o resultado apresentado abaixo.</p>
-<p><img src="Imagens/Lab3/Resolução/prob3AB.jpg" /></p>
-<p>Percebe-se, assim, que a Função de Transferência <span class="math inline">\(G_B(s)\)</span> não se aproxima satisfatoriamente bem ao Sistema 3. Aplicando a malha fechada vista na figura 3, temos o resultado apresentado abaixo.</p>
-<p><img src="Imagens/Lab3/Resolução/prob3AC.jpg" /></p>
-<p>Como <span class="math inline">\(K_c = 3 &gt; 0\)</span> e a Função de Transferência em malha fechada retornou um sistema de segunda ordem, percebe-se a resposta não está de acordo com a propriedade estabelecida. Desta forma, presume-se que <span class="math inline">\(G(s)\)</span> não é de primeira ordem e sim de segunda.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Determine o LGR e observe que o sistema em malha-fechada é estável para qualquer <span class="math inline">\(K&gt;0\)</span>.</li>
+<li>Encontre <span class="math inline">\(K\)</span> de modo que o pólo em malha-fechada seja <span class="math inline">\(s = -0.2\)</span> e simule para <span class="math inline">\(r(t)\)</span> do tipo degrau unitário. Determine <span class="math inline">\(t_s(5\%)\)</span> e visualize o sinal de controle.</li>
+<li>Repita o item anterior para <span class="math inline">\(s = -0.4\)</span> e compare. Note que <span class="math inline">\(t_s(5\%)\)</span> diminui pela metade e que a amplitude do sinal de controle aumentou. Justifique tal comportamento (dica: veja <a href="determinação-do-ganho-k-para-sistemas-em-malha-fechada-de-primeira-e-segunda-ordem.html#eq:eq81">(8.1)</a>).</li>
+</ol>
+<div id="resolução" class="section level4 unnumbered" number="">
+<h4>Resolução</h4>
+<p>Working on it :)</p>
 </div>
 </div>
-<div id="parte-b" class="section level4 unnumbered" number="">
-<h4>Parte B</h4>
-<p>Identifique <span class="math inline">\(F(s)\)</span>. Em seguida, identifique <span class="math inline">\(G(s)\)</span>indiretamente através da equação <a href="#eq:eq55">(<strong>??</strong>)</a>. Para isto, utilize os seguintes comandos no <code>Matlab</code>:</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode matlab"><code class="sourceCode matlab"><span id="cb11-1"><a href="problema-3-3.html#cb11-1"></a><span class="va">F</span> <span class="op">=</span> <span class="va">tf</span>([<span class="va">K</span><span class="op">*</span><span class="va">wn</span><span class="op">^</span><span class="fl">2</span>]<span class="op">,</span> [<span class="fl">1</span> <span class="fl">2</span><span class="op">*</span><span class="va">ksi</span><span class="op">*</span><span class="va">wn</span> <span class="va">wn</span><span class="op">^</span><span class="fl">2</span>])</span>
-<span id="cb11-2"><a href="problema-3-3.html#cb11-2"></a><span class="va">G</span> <span class="op">=</span> <span class="va">F</span><span class="op">/</span>(<span class="va">Kc</span><span class="op">-</span><span class="va">Kc</span><span class="op">*</span><span class="va">F</span>)</span>
-<span id="cb11-3"><a href="problema-3-3.html#cb11-3"></a><span class="va">G</span> <span class="op">=</span> <span class="va">zpk</span>(<span class="va">minreal</span>(<span class="va">G</span>)) <span class="co">% minreal simplifica e zpk fatora</span></span></code></pre></div>
-<p>Note que <span class="math inline">\(G(s)\)</span> é de segunda ordem com pólos reais. Neste momento, temos condições de responderm o que estava errado em nossa modelagem inicial do Sistema 3 como um sistema de primeira ordem. Compare a resposta em malha-aberta de <span class="math inline">\(G(s)\)</span> (identificando indiretamente) com a do Sistema 3 para <span class="math inline">\(u(t) = 3\)</span> do tipo degrau.</p>
-<div id="resolução-3" class="section level5 unnumbered" number="">
-<h5>Resolução</h5>
-<p>Simulando o sistema do Sistema 3 em malha fechada e utilizando as ferramentas fornecidas pelo <code>Simulink</code> foi estimado que
-<span class="math display">\[
-y_p = 0.868 \\ 
-y(\infty) = 0.796 \\ 
-t_p = 0.4s
-\]</span></p>
-<p>Assim, tem-se que:
-<span class="math display">\[
-K = 0.796, \quad M_p = 0.09, \quad \xi = 0.61 \quad \text{e} \quad \omega_n= 9.888.
-\]</span></p>
-<p>Dessa forma, tem-se que
-<span class="math display">\[
-F(s) = \frac {77.83}{s^2+ 12.01s +97.77}
-\]</span>
-que gera a curva abaixo.</p>
-<p><img src="Imagens/Lab3/Resolução/prob3BA.jpg" /></p>
-<p>Assim, é possível calcular <span class="math inline">\(G(s)\)</span> a partir de <span class="math inline">\(F(s)\)</span>, tendo como resultado
-<span class="math display">\[
-G(s) = \frac {25.94}{s^2+12.025s+19.96}.
-\]</span></p>
-<p>Agora é possível comprar <span class="math inline">\(G(s)\)</span> com sua curva anterior, gerando o resultado abaixo.</p>
-<p><img src="Imagens/Lab3/Resolução/prob3BB.jpg" /></p>
-<p>Percebe-se que, considerando o modelo como uma Função de Transferência de segundo grau obtida através de <span class="math inline">\(F(s)\)</span> é possível encontrar a curva exata correspondente ao Sistema 3.</p>
-
-</div>
-</div>
-</div>
-<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="problema-3-2.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="lab4.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="problemas-laboratório-8.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="problema-8-2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

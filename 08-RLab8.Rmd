@@ -17,7 +17,28 @@ c. Repita o item anterior para $s = -0.4$ e compare. Note que $t_s(5\%)$ diminui
 
 #### Resolução {-}
 
-Working on it :)
+##### Parte A {-}
+
+O LGR está apresentado na Figura \@ref(fig:fig8R1). É possivel perceber que como o LGR está no SPE, ele é estável para qualquer $K > 0$.
+
+```{r fig8R1, fig.align='center', echo=FALSE, fig.cap='Localicação das Raízes'}
+knitr::include_graphics('Imagens/Lab8/Resolução/fig1.jpg', dpi = NA)
+```
+
+
+##### Parte B {-}
+
+O ganho do sistema de modo que $s = -0.2$ é $K = 2$ e está apresentado na Figura \@ref(fig:fig8R2).
+
+```{r fig8R2, fig.align='center', echo=FALSE, fig.cap='Ganho'}
+knitr::include_graphics('Imagens/Lab8/Resolução/fig2.jpg', dpi = NA)
+```
+
+O sistema simulado para um degrau unitário está apresentado na Figura \@ref(fig:fig8R3). É possível perceber os valores de $t_s(5\%)$ para os valores de $s = -0.1$ ($t_s(5\%) = 15.3s$) e para $s = -0.2$ ($t_s(5\%) = 3.99s$)
+
+```{r fig8R3, fig.align='center', echo=FALSE, fig.cap='Sistema Simulado'}
+knitr::include_graphics('Imagens/Lab8/Resolução/fig3.jpg', dpi = NA)
+```
 
 ## Problema 8.2 {-}
 
@@ -31,7 +52,15 @@ b. Escolha $K=1$ (instável) e $K=3$ (estável) e simule para $r(t)$ do tipo deg
 
 #### Resolução {-}
 
-working on it :)
+##### Parte A {-}
+
+O LGR está apresentado na Figura \@ref(fig:fig8R4). É possivel perceber que o sistema é instável para $0 < K < 2$ e estável para $K > 2$.
+
+```{r fig8R4, fig.align='center', echo=FALSE, fig.cap='Localicação das Raízes'}
+knitr::include_graphics('Imagens/Lab8/Resolução/fig4.jpg', dpi = NA)
+```
+
+
 
 ## Problema 8.3 {-}
 
@@ -46,7 +75,22 @@ c. Determine a faixa de valores $K$ em que os pólos são complexos conjugados. 
 
 #### Resolução {-}
 
-Working on it :)
+##### Parte A {-}
+
+O LGR está apresentado na Figura \@ref(fig:fig8R5). É possivel perceber que como o LGR está no SPE, ele é estável para qualquer $K > 0$.
+
+```{r fig8R5, fig.align='center', echo=FALSE, fig.cap='Localicação das Raízes'}
+knitr::include_graphics('Imagens/Lab8/Resolução/fig5.jpg', dpi = NA)
+```
+
+
+##### Parte B {-}
+
+De acordo com a Figura \@ref(fig:fig8R5), é possível determinar que os pólos são reais para $K < 0.278$.
+
+##### Parte C {-}
+
+De acordo com a Figura \@ref(fig:fig8R5), é possível determinar que os pólos são complexos para $K \geq 0.278$.
 
 ## Problema 8.4 {-}
 
@@ -61,7 +105,28 @@ c. Mantenha o pólo em $s=0$ e adicione um zero em $s=-2$. Note que o LGR foi "a
 
 #### Resolução {-}
 
-Working on it :)
+##### Parte A {-}
+
+O LGR está apresentado na Figura \@ref(fig:fig8R6). É possivel perceber que como o LGR está no SPE, ele é estável para qualquer $K > 0$.
+
+```{r fig8R6, fig.align='center', echo=FALSE, fig.cap='Localicação das Raízes'}
+knitr::include_graphics('Imagens/Lab8/Resolução/fig6.jpg', dpi = NA)
+```
+
+##### Parte B {-}
+
+Adicionando um pólo em $s=0$ temos
+
+$$
+G(s) = \frac{1.2}{(s+1)(s+3)} = \frac{1.2}{s^3+4s^2+3s}
+$$
+
+O LGR está apresentado na Figura \@ref(fig:fig8R61). É possivel perceber que o sistema é estável para qualquer $K < 10$ e instável para $K > 10$.
+
+```{r fig8R61, fig.align='center', echo=FALSE, fig.cap='Localicação das Raízes'}
+knitr::include_graphics('Imagens/Lab8/Resolução/fig61.jpg', dpi = NA)
+```
+
 
 ## Problema 8.5 {-}
 
@@ -88,4 +153,8 @@ $$
 
 #### Resolução {-}
 
-Working on it :)
+O LGR está apresentado na Figura \@ref(fig:fig8R8).
+
+```{r fig8R8, fig.align='center', echo=FALSE, fig.cap='Localicação das Raízes'}
+knitr::include_graphics('Imagens/Lab8/Resolução/fig8.jpg', dpi = NA)
+```

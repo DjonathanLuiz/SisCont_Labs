@@ -90,7 +90,7 @@
 % Allow footnotes in longtable head/foot
 \IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
 \makesavenoteenv{longtable}
-\usepackage{graphicx}
+\usepackage{graphicx,grffile}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
 \def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
@@ -113,7 +113,7 @@
 
 \title{Laboratório de Sistemas de Controle}
 \author{Djonathan Luiz de Oliveira Quadras}
-\date{2020-07-13}
+\date{2020-11-02}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Teorema}[chapter]
@@ -221,7 +221,7 @@ G(s) = \frac{1}{s-1}.
 A resolução será feita em quatro partes: (1) a resolução para \(\tau = 1\) usando \texttt{pzmap}, (2) a resolução para \(\tau = 0.5\) usando \texttt{pzmap}, (3) a simulação e comparação dos resultados e, por fim, (4) a resolução para \(G(s) =\frac {1}{s-1}\).
 
 \hypertarget{parte-1}{%
-\paragraph*{Parte 1}\label{parte-1}}
+\paragraph{Parte 1}\label{parte-1}}
 \addcontentsline{toc}{paragraph}{Parte 1}
 
 Para \(\tau = 1\), temos a função de transferência dada por
@@ -233,9 +233,9 @@ O código implementado no \texttt{Matlab} foi o apresentado abaixo.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\VariableTok{g} \OperatorTok{=} \VariableTok{tf}\NormalTok{([}\FloatTok{1}\NormalTok{]}\OperatorTok{,}\NormalTok{ [}\FloatTok{1} \FloatTok{1}\NormalTok{])}
-\NormalTok{[}\VariableTok{p}\OperatorTok{,} \VariableTok{z}\NormalTok{] }\OperatorTok{=} \VariableTok{pzmap}\NormalTok{(}\VariableTok{g}\NormalTok{)}
-\VariableTok{pzmap}\NormalTok{(}\VariableTok{g}\NormalTok{)}
+\NormalTok{g = tf([}\FloatTok{1}\NormalTok{], [}\FloatTok{1} \FloatTok{1}\NormalTok{])}
+\NormalTok{[p, z] = pzmap(g)}
+\NormalTok{pzmap(g)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -259,7 +259,7 @@ Ou seja, a função de transferência não apresenta zeros e tem seu pólo em \(
 Como o pólo da função de transferência se encontra na SPE, conclui-se que o sistema se compartará de uma forma estável.
 
 \hypertarget{parte-2}{%
-\paragraph*{Parte 2}\label{parte-2}}
+\paragraph{Parte 2}\label{parte-2}}
 \addcontentsline{toc}{paragraph}{Parte 2}
 
 Para \(\tau = 0.5\), temos a função de transferência dada por
@@ -271,9 +271,9 @@ O código implementado no \texttt{Matlab} foi o apresentado abaixo.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\VariableTok{g} \OperatorTok{=} \VariableTok{tf}\NormalTok{([}\FloatTok{1}\NormalTok{]}\OperatorTok{,}\NormalTok{ [}\FloatTok{0.5} \FloatTok{1}\NormalTok{])}
-\NormalTok{[}\VariableTok{p}\OperatorTok{,} \VariableTok{z}\NormalTok{] }\OperatorTok{=} \VariableTok{pzmap}\NormalTok{(}\VariableTok{g}\NormalTok{)}
-\VariableTok{pzmap}\NormalTok{(}\VariableTok{g}\NormalTok{)}
+\NormalTok{g = tf([}\FloatTok{1}\NormalTok{], [}\FloatTok{0.5} \FloatTok{1}\NormalTok{])}
+\NormalTok{[p, z] = pzmap(g)}
+\NormalTok{pzmap(g)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -297,7 +297,7 @@ Ou seja, a função de transferência não apresenta zeros e tem seu pólo em \(
 Como o pólo da função de transferência se encontra na SPE, conclui-se que o sistema se compartará de uma forma estável. Também é possível concluir que o sistema alcanraça a estabilidade mais rápido para \(\tau = 0.5\).
 
 \hypertarget{parte-3}{%
-\paragraph*{Parte 3}\label{parte-3}}
+\paragraph{Parte 3}\label{parte-3}}
 \addcontentsline{toc}{paragraph}{Parte 3}
 
 A simulação do sistema implementada em \texttt{Matlab} está apresentado na figura abaixo.
@@ -311,7 +311,7 @@ O resultado apresentado pelo \emph{scope} é apresentado na figura abaixo.
 Percebe-se que, assim como esperado, o sistema se comporta de forma estável e tem uma convergência mais rápida para \(\tau = 0.5\).
 
 \hypertarget{parte-4}{%
-\paragraph*{Parte 4}\label{parte-4}}
+\paragraph{Parte 4}\label{parte-4}}
 \addcontentsline{toc}{paragraph}{Parte 4}
 
 Para a última etapa temos a função de transferência dada por
@@ -323,9 +323,9 @@ O código implementado no \texttt{Matlab} foi o apresentado abaixo.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\VariableTok{g} \OperatorTok{=} \VariableTok{tf}\NormalTok{([}\FloatTok{1}\NormalTok{]}\OperatorTok{,}\NormalTok{ [}\FloatTok{1} \OperatorTok{{-}}\FloatTok{1}\NormalTok{])}
-\NormalTok{[}\VariableTok{p}\OperatorTok{,} \VariableTok{z}\NormalTok{] }\OperatorTok{=} \VariableTok{pzmap}\NormalTok{(}\VariableTok{g}\NormalTok{)}
-\VariableTok{pzmap}\NormalTok{(}\VariableTok{g}\NormalTok{)}
+\NormalTok{g = tf([}\FloatTok{1}\NormalTok{], [}\FloatTok{1}\NormalTok{ -}\FloatTok{1}\NormalTok{])}
+\NormalTok{[p, z] = pzmap(g)}
+\NormalTok{pzmap(g)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -375,9 +375,9 @@ O código utilizado no \texttt{Matlab} é apresentado abaixo.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\VariableTok{g} \OperatorTok{=} \VariableTok{tf}\NormalTok{([}\FloatTok{1}\NormalTok{]}\OperatorTok{,}\NormalTok{ [}\FloatTok{1} \FloatTok{0}\NormalTok{])}
-\NormalTok{[}\VariableTok{p}\OperatorTok{,}\VariableTok{z}\NormalTok{] }\OperatorTok{=} \VariableTok{pzmap}\NormalTok{(}\VariableTok{g}\NormalTok{)}
-\VariableTok{pzmap}\NormalTok{(}\VariableTok{g}\NormalTok{)}
+\NormalTok{g = tf([}\FloatTok{1}\NormalTok{], [}\FloatTok{1} \FloatTok{0}\NormalTok{])}
+\NormalTok{[p,z] = pzmap(g)}
+\NormalTok{pzmap(g)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -433,9 +433,9 @@ O código utilizado no \texttt{Matlab} é apresentado abaixo.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\VariableTok{g} \OperatorTok{=} \VariableTok{tf}\NormalTok{([}\FloatTok{1}\NormalTok{]}\OperatorTok{,}\NormalTok{ [}\FloatTok{1} \FloatTok{0} \FloatTok{25}\NormalTok{])}
-\NormalTok{[}\VariableTok{p}\OperatorTok{,}\VariableTok{z}\NormalTok{] }\OperatorTok{=} \VariableTok{pzmap}\NormalTok{(}\VariableTok{g}\NormalTok{)}
-\VariableTok{pzmap}\NormalTok{(}\VariableTok{g}\NormalTok{)}
+\NormalTok{g = tf([}\FloatTok{1}\NormalTok{], [}\FloatTok{1} \FloatTok{0} \FloatTok{25}\NormalTok{])}
+\NormalTok{[p,z] = pzmap(g)}
+\NormalTok{pzmap(g)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -786,8 +786,8 @@ Estes problemas são relacionados ao assunto abordado no Laboratório \ref{lab3}
 Aplique um degrau \(u(t) = 2\) no Sistema 1 do arquivo \texttt{MatLab3.mdl} do Simulink. Pelas características da resposta, modele o Sistema 1 como uma Função de Transferência \(G_1(s)%
 \) de primeira ou segunda ordem. Em seguida, identifique os parâmetros do modelo utilizando a equação \eqref{eq:eq32} ou \eqref{eq:eq34}. Compare a resposta do modelo identificado com a do Sistema 1.
 
-\hypertarget{resoluuxe7uxe3o}{%
-\subsubsection*{Resolução}\label{resoluuxe7uxe3o}}
+\hypertarget{resoluuxe7uxe3o-6}{%
+\subsubsection*{Resolução}\label{resoluuxe7uxe3o-6}}
 \addcontentsline{toc}{subsubsection}{Resolução}
 
 Simulando o sistema do modelo 1 obtemos o resultado abaixo.
@@ -817,8 +817,8 @@ Percebe-se, assim, que a Função de Transferência \(G_1(s)\) se aproxima satis
 
 Aplique um degrau \(u(t) = 4\) no Sistema 2. Pelas características da resposta modele o Sistema 2 como uma Função de Transferência \(G_2(s)\) de primeira ou segunda ordem. Em seguida, identifique os parâmetros do modelo utilizando a equação \eqref{eq:eq32} ou \eqref{eq:eq34}. Realize os cálculos na linha de comando do \texttt{Matlab} (\(\ln{(x)} \implies \log{(x)}\) e \(\sqrt{x} \implies \text{sqrt(x)}\)).Compare a resposta do modelo identificando com a do Sistema 2.
 
-\hypertarget{resoluuxe7uxe3o-1}{%
-\subsubsection*{Resolução}\label{resoluuxe7uxe3o-1}}
+\hypertarget{resoluuxe7uxe3o-7}{%
+\subsubsection*{Resolução}\label{resoluuxe7uxe3o-7}}
 \addcontentsline{toc}{subsubsection}{Resolução}
 
 Simulando o sistema do modelo 1 obtemos o resultado abaixo.
@@ -857,8 +857,8 @@ Percebe-se, assim, que a Função de Transferência \(G_2(s)\) se assemelha ao S
 
 Aplique um degrau \(u(t) = 3\) no Sistema 3. Obtenha um modelo aproximado para o Sistema 3 como uma Função de Transferência \(G(s)\) de primeira ordem. Agora implemente o diagrama de blocos em malha fechada da Figura 3 para o Sistema 3 com \(r(t) = 1\) do tipo degrau e \(K_c = 3\)Observamos que, na Figura 3, se \(G(s)\) é de primeira ordem, então a Função de Transferência em malha fechada \(F(s)\) também será de primeira ordem para qualquer valor de \(K_c > 0\). A resposta do Sistema 3 em malha-fechada está de acordo com tal propriedade? O que pode estar errado?
 
-\hypertarget{resoluuxe7uxe3o-2}{%
-\paragraph*{Resolução}\label{resoluuxe7uxe3o-2}}
+\hypertarget{resoluuxe7uxe3o-8}{%
+\paragraph{Resolução}\label{resoluuxe7uxe3o-8}}
 \addcontentsline{toc}{paragraph}{Resolução}
 
 Simulando o sistema do modelo 1 obtemos o resultado abaixo.
@@ -894,16 +894,16 @@ Identifique \(F(s)\). Em seguida, identifique \(G(s)\)indiretamente através da 
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\VariableTok{F} \OperatorTok{=} \VariableTok{tf}\NormalTok{([}\VariableTok{K}\OperatorTok{*}\VariableTok{wn}\OperatorTok{\^{}}\FloatTok{2}\NormalTok{]}\OperatorTok{,}\NormalTok{ [}\FloatTok{1} \FloatTok{2}\OperatorTok{*}\VariableTok{ksi}\OperatorTok{*}\VariableTok{wn} \VariableTok{wn}\OperatorTok{\^{}}\FloatTok{2}\NormalTok{])}
-\VariableTok{G} \OperatorTok{=} \VariableTok{F}\OperatorTok{/}\NormalTok{(}\VariableTok{Kc}\OperatorTok{{-}}\VariableTok{Kc}\OperatorTok{*}\VariableTok{F}\NormalTok{)}
-\VariableTok{G} \OperatorTok{=} \VariableTok{zpk}\NormalTok{(}\VariableTok{minreal}\NormalTok{(}\VariableTok{G}\NormalTok{)) }\CommentTok{\% minreal simplifica e zpk fatora}
+\NormalTok{F = tf([K*wn^}\FloatTok{2}\NormalTok{], [}\FloatTok{1} \FloatTok{2}\NormalTok{*ksi*wn wn^}\FloatTok{2}\NormalTok{])}
+\NormalTok{G = F/(Kc-Kc*F)}
+\NormalTok{G = zpk(minreal(G)) }\CommentTok{% minreal simplifica e zpk fatora}
 \end{Highlighting}
 \end{Shaded}
 
 Note que \(G(s)\) é de segunda ordem com pólos reais. Neste momento, temos condições de responderm o que estava errado em nossa modelagem inicial do Sistema 3 como um sistema de primeira ordem. Compare a resposta em malha-aberta de \(G(s)\) (identificando indiretamente) com a do Sistema 3 para \(u(t) = 3\) do tipo degrau.
 
-\hypertarget{resoluuxe7uxe3o-3}{%
-\paragraph*{Resolução}\label{resoluuxe7uxe3o-3}}
+\hypertarget{resoluuxe7uxe3o-9}{%
+\paragraph{Resolução}\label{resoluuxe7uxe3o-9}}
 \addcontentsline{toc}{paragraph}{Resolução}
 
 Simulando o sistema do Sistema 3 em malha fechada e utilizando as ferramentas fornecidas pelo \texttt{Simulink} foi estimado que
@@ -1112,12 +1112,12 @@ G(s) = \frac {1}{0.5s+1}, \quad C(s) = K_c \quad \text{(proporcional)}, \quad w=
   Com \(K_c = 1\) simule para \(r(t) = t\) (rampa) e \(r(t) = 0.5t^2\) (parábola). Determine o erro em regime permanente e verifique se os resultados estão de acordo com o esperado.
 \end{enumerate}
 
-\hypertarget{resoluuxe7uxe3o}{%
-\subsubsection*{Resolução}\label{resoluuxe7uxe3o}}
+\hypertarget{resoluuxe7uxe3o-10}{%
+\subsubsection*{Resolução}\label{resoluuxe7uxe3o-10}}
 \addcontentsline{toc}{subsubsection}{Resolução}
 
-\hypertarget{parte-a}{%
-\subsubsection*{Parte A}\label{parte-a}}
+\hypertarget{parte-a-1}{%
+\subsubsection*{Parte A}\label{parte-a-1}}
 \addcontentsline{toc}{subsubsection}{Parte A}
 
 Por meio da simulação foi encontrado o valor de \(e(\infty) = e_r(\infty) = 0.5\) conforme apresenta a Figura \ref{fig:fig41A1}.
@@ -1132,8 +1132,8 @@ Utilizando a Tabela \ref{tab:tab41} temos que \(e_r(\infty)=\frac{A}{1 + K_p}\).
 \includegraphics[width=0.8\linewidth]{Imagens/Lab4/Resolução/prob1A2} \caption{Valores para $K_c = 10$ e $K_c = 100$.}\label{fig:fig41A2}
 \end{figure}
 
-\hypertarget{parte-b}{%
-\subsubsection*{Parte B}\label{parte-b}}
+\hypertarget{parte-b-1}{%
+\subsubsection*{Parte B}\label{parte-b-1}}
 \addcontentsline{toc}{subsubsection}{Parte B}
 
 Teoricamente, é possível encontrar um erro nulo \(e(\infty) = 0\) se utilizado um ganho infinito \(K_c = \infty\). Pois, de acordo com a Tabela \ref{tab:tab41}, temos que
@@ -1191,8 +1191,8 @@ G(s) = \frac {1}{0.5s+1}, \quad C(s) = \frac{K_c}{s} \text{ (integral)}, \quad w
 \subsubsection*{Resulução}\label{resuluuxe7uxe3o}}
 \addcontentsline{toc}{subsubsection}{Resulução}
 
-\hypertarget{parte-a-1}{%
-\paragraph*{Parte A}\label{parte-a-1}}
+\hypertarget{parte-a-2}{%
+\paragraph{Parte A}\label{parte-a-2}}
 \addcontentsline{toc}{paragraph}{Parte A}
 
 Aplicando um controle \(C(s) = \frac {K_c}{s}\) em série a uma função \(G(s) = \frac {1}{0.5s+1}\) temos como resultado a Função de Transferência\\
@@ -1211,8 +1211,8 @@ Simulando para \(K_c = 10\), temos o resultado abaixo.
 \includegraphics[width=0.8\linewidth]{Imagens/Lab4/Resolução/prob2A2} \caption{Valores para $K_c = 10$.}\label{fig:fig42A2}
 \end{figure}
 
-\hypertarget{parte-b-1}{%
-\paragraph*{Parte B}\label{parte-b-1}}
+\hypertarget{parte-b-2}{%
+\paragraph{Parte B}\label{parte-b-2}}
 \addcontentsline{toc}{paragraph}{Parte B}
 
 Simulando o sistema para um \(K_c = 2\) e uma entrada tipo rampa, temos que o sistema tem \(e(\infty) = 0.5\), o que está de acordo com a Tabela \ref{tab:tab41}. O resultado da simulação está apresentado abaixo.
@@ -1234,7 +1234,7 @@ Simulando o sistema o valor foi comprovado.
 \end{figure}
 
 \hypertarget{parte-c-1}{%
-\paragraph*{Parte C}\label{parte-c-1}}
+\paragraph{Parte C}\label{parte-c-1}}
 \addcontentsline{toc}{paragraph}{Parte C}
 
 Simulando o sistema para \(K_c = 2\) e uma entrada do tipo parábola, temos \(e(\infty) = \infty\), o que está de acordo com a Tabela \ref{tab:tab41}.
@@ -1244,7 +1244,7 @@ Simulando o sistema para \(K_c = 2\) e uma entrada do tipo parábola, temos \(e(
 \end{figure}
 
 \hypertarget{parte-d}{%
-\paragraph*{Parte D}\label{parte-d}}
+\paragraph{Parte D}\label{parte-d}}
 \addcontentsline{toc}{paragraph}{Parte D}
 
 Simulando a Função de Transferência \(G(s) = \frac {-s+2}{0.5s +1}\), controle \(C(s) = \frac {2}{s}\) e entrada do tipo degrau temos o resultado apresentado na Figura \ref{fig:fig42D1}.
@@ -1279,12 +1279,12 @@ G(s) = \frac {1}{0.5s +1}, \quad C(s) = \frac {2}{s} \text{ (integral)}.
   Considere que \(r(t) = 2t\) (rampa) e \(w=t\) (rampa). Determine \(e(\infty)\) por simulação e verifique que tal valor é a diferença dos valores obtidos nas letras c e d.~Tal resultado era esperado? Justifique (relembre \eqref{eq:eq41}).
 \end{enumerate}
 
-\hypertarget{resoluuxe7uxe3o-1}{%
-\subsubsection*{Resolução}\label{resoluuxe7uxe3o-1}}
+\hypertarget{resoluuxe7uxe3o-11}{%
+\subsubsection*{Resolução}\label{resoluuxe7uxe3o-11}}
 \addcontentsline{toc}{subsubsection}{Resolução}
 
-\hypertarget{parte-a-2}{%
-\paragraph*{Parte A}\label{parte-a-2}}
+\hypertarget{parte-a-3}{%
+\paragraph{Parte A}\label{parte-a-3}}
 \addcontentsline{toc}{paragraph}{Parte A}
 
 Simulando o sistema com uma referência em zero e uma perturbação do tipo degrau unitário, temos o resultado apresentando na Figura \ref{fig:fig43A1} que está de acordo com o resultado esperado da Tabela \ref{tab:tab42}, retornando um valor de \(y(\infty) = 0\)
@@ -1293,8 +1293,8 @@ Simulando o sistema com uma referência em zero e uma perturbação do tipo degr
 \includegraphics[width=0.8\linewidth]{Imagens/Lab4/Resolução/prob3A1} \caption{Valores para sistema sem referência, apenas com perturbação.}\label{fig:fig43A1}
 \end{figure}
 
-\hypertarget{parte-b-2}{%
-\paragraph*{Parte B}\label{parte-b-2}}
+\hypertarget{parte-b-3}{%
+\paragraph{Parte B}\label{parte-b-3}}
 \addcontentsline{toc}{paragraph}{Parte B}
 
 Simulando o sistema tendo uma entrada degrau de amplitude 5 e uma perturbação de amplitude 1, temos o resultado apresentado na figura \ref{fig:fig43B1}. O resultado mostra que o sistema era estável e havia convergido para 0. Ao receber a perturbação, o sistema se comportou de forma semelhante (a resposta voltou ao pico do sobressinal que havia chegado inicialmente) ao início da simulação, voltando a convergir para 0 em \(t=\infty\).
@@ -1304,7 +1304,7 @@ Simulando o sistema tendo uma entrada degrau de amplitude 5 e uma perturbação 
 \end{figure}
 
 \hypertarget{parte-c-2}{%
-\paragraph*{Parte C}\label{parte-c-2}}
+\paragraph{Parte C}\label{parte-c-2}}
 \addcontentsline{toc}{paragraph}{Parte C}
 
 A simulação para um sistema com referência \(r(t) = 2t\) e sem perturbação é mostrada na Figura \ref{fig:fig43C1}.
@@ -1319,7 +1319,7 @@ e(\infty) = \frac {B}{K_v} = \frac {2}{2} = 1.
 \]
 
 \hypertarget{parte-d-1}{%
-\paragraph*{Parte D}\label{parte-d-1}}
+\paragraph{Parte D}\label{parte-d-1}}
 \addcontentsline{toc}{paragraph}{Parte D}
 
 A simulação para um sistema com referência nula e perturbação \(w(t) = t\) é mostrada na Figura \ref{fig:fig43D1}.
@@ -1334,7 +1334,7 @@ y(\infty) = \frac {B}{K_v} = \frac {1}{2} = 0.5.
 \]
 
 \hypertarget{parte-e}{%
-\paragraph*{Parte E}\label{parte-e}}
+\paragraph{Parte E}\label{parte-e}}
 \addcontentsline{toc}{paragraph}{Parte E}
 
 A simulação para um sistema com referência \(r(t) = 2t\) e perturbação \(w(t) = t\) é mostrada na Figura \ref{fig:fig43E1}.
@@ -1366,8 +1366,8 @@ G(s) = \frac {2s +1}{0.5s+1}, \quad C(s) = \frac {K_c}{s^2}, \quad r(t) = t, \qu
   Considere que \(K_c =2\), \(r(t) = t^2\), \(w(t) = 0.5t^2\). Determine \(e(\infty)\) por simulação e verifique se o mesmo está de acordo com o esperado. Note que \(K_a = K_c\).
 \end{enumerate}
 
-\hypertarget{parte-a-3}{%
-\subsubsection*{Parte A}\label{parte-a-3}}
+\hypertarget{parte-a-4}{%
+\subsubsection*{Parte A}\label{parte-a-4}}
 \addcontentsline{toc}{subsubsection}{Parte A}
 
 O resultado da simulação está apresentado na Figura \ref{fig:fig44A1}.
@@ -1378,8 +1378,8 @@ O resultado da simulação está apresentado na Figura \ref{fig:fig44A1}.
 
 O resultado era esperado pois, para uma entrada tipo rampa com perturbação tipo rampa, um sistema do Tipo 2 retorna \(e_r(\infty) = 0\) e \(y_w(\infty) = 0\), resultando em \(e(\infty) = 0\).
 
-\hypertarget{parte-b-3}{%
-\subsubsection*{Parte B}\label{parte-b-3}}
+\hypertarget{parte-b-4}{%
+\subsubsection*{Parte B}\label{parte-b-4}}
 \addcontentsline{toc}{subsubsection}{Parte B}
 
 O resultado da simulação está apresentado na Figura \ref{fig:fig44B1}.
@@ -1609,12 +1609,12 @@ G(s) = \frac {0.5}{10s+1}.
   Mantendo o mesmo controlador \(C(s)\) repita o item anterior para \(G(s) = \frac {0.45}{9.9s+1}\). Explique o motivo pelo qual ainda temos \(e(\infty) = 0\).
 \end{enumerate}
 
-\hypertarget{resoluuxe7uxe3o}{%
-\subsubsection*{Resolução}\label{resoluuxe7uxe3o}}
+\hypertarget{resoluuxe7uxe3o-12}{%
+\subsubsection*{Resolução}\label{resoluuxe7uxe3o-12}}
 \addcontentsline{toc}{subsubsection}{Resolução}
 
-\hypertarget{parte-a}{%
-\paragraph*{Parte A}\label{parte-a}}
+\hypertarget{parte-a-5}{%
+\paragraph{Parte A}\label{parte-a-5}}
 \addcontentsline{toc}{paragraph}{Parte A}
 
 O resultado da simulação está apresentado na figura \ref{fig:prob1A1}. Conforme esperado, tem-se que \(t_s(5\%) = 30\) e \(y(\infty) = G(0) = 0.5\).
@@ -1639,8 +1639,8 @@ Simulando agora com uma perturbação temos o resultado presente na figura \ref{
 \caption{Simulação A2}\label{fig:prob1A2}
 \end{figure}
 
-\hypertarget{parte-b}{%
-\paragraph*{Parte B}\label{parte-b}}
+\hypertarget{parte-b-5}{%
+\paragraph{Parte B}\label{parte-b-5}}
 \addcontentsline{toc}{paragraph}{Parte B}
 
 Para calcular \(C(s)\) utilizamos \(F(s) = \frac{C(s)G(s)}{1+C(s)G(s)}\), sendo \(G(s) = \frac{0.5}{10s+1}\) e \(C(s) = \frac{k_c(10s+1)}{s}\). Assim,
@@ -1673,8 +1673,8 @@ Portanto,
 C(s) = \frac{0.4(10s+1)}{s}
 \]
 
-\hypertarget{parte-c}{%
-\paragraph*{Parte C}\label{parte-c}}
+\hypertarget{parte-c-3}{%
+\paragraph{Parte C}\label{parte-c-3}}
 \addcontentsline{toc}{paragraph}{Parte C}
 
 O resultado da simulação está apresentado na figura \ref{fig:prob1C1}.
@@ -1701,8 +1701,8 @@ Percebe-se que como esperado o erro é nulo para regime permanente, \(t_s = 15\)
 
 Assim como o esperado, \(u(\infty) =1.75\).
 
-\hypertarget{parte-d}{%
-\paragraph*{Parte D}\label{parte-d}}
+\hypertarget{parte-d-2}{%
+\paragraph{Parte D}\label{parte-d-2}}
 \addcontentsline{toc}{paragraph}{Parte D}
 
 O resultado da simulação está apresentado na figura \ref{fig:prob1D1}.
@@ -1740,12 +1740,12 @@ G(s) = \frac{0.9}{s(s+1)}.
   Repita o item anterior, mas agora aplicando uma perturbação do tipo degrau \(w(t)\) não nula. Explique o motivo pelo qual \(e(\infty) \neq 0\).
 \end{enumerate}
 
-\hypertarget{resoluuxe7uxe3o-1}{%
-\subsubsection*{Resolução}\label{resoluuxe7uxe3o-1}}
+\hypertarget{resoluuxe7uxe3o-13}{%
+\subsubsection*{Resolução}\label{resoluuxe7uxe3o-13}}
 \addcontentsline{toc}{subsubsection}{Resolução}
 
-\hypertarget{parte-a-1}{%
-\paragraph*{Parte A}\label{parte-a-1}}
+\hypertarget{parte-a-6}{%
+\paragraph{Parte A}\label{parte-a-6}}
 \addcontentsline{toc}{paragraph}{Parte A}
 
 O resultado da simulação está apresentado na figura \ref{fig:prob2A1}. O resultado era esperado pois o sistema é um sistema do Tipo 1.
@@ -1759,8 +1759,8 @@ O resultado da simulação está apresentado na figura \ref{fig:prob2A1}. O resu
 \caption{Simulação B1}\label{fig:prob2A1}
 \end{figure}
 
-\hypertarget{parte-b-1}{%
-\paragraph*{Parte B}\label{parte-b-1}}
+\hypertarget{parte-b-6}{%
+\paragraph{Parte B}\label{parte-b-6}}
 \addcontentsline{toc}{paragraph}{Parte B}
 
 Utilizando \(C(s) = K_c\) temos que
@@ -1778,8 +1778,8 @@ encontramos que
 \xi = 0.4559\quad \omega_n = 1.0967 \implies \boxed{K_c = 1.3364}. 
 \]
 
-\hypertarget{parte-c-1}{%
-\paragraph*{Parte C}\label{parte-c-1}}
+\hypertarget{parte-c-4}{%
+\paragraph{Parte C}\label{parte-c-4}}
 \addcontentsline{toc}{paragraph}{Parte C}
 
 O resultado da simulação está apresentado na figura \ref{fig:prob2C1}. Percebe-se que os requisitos de desempenho foram atendidos.
@@ -1804,8 +1804,8 @@ O valor de \(u(t)\) está apresentado abaixo. Percebe-se que o valor é praticam
 \caption{$u(s)$}\label{fig:prob2C2}
 \end{figure}
 
-\hypertarget{parte-d-1}{%
-\paragraph*{Parte D}\label{parte-d-1}}
+\hypertarget{parte-d-3}{%
+\paragraph{Parte D}\label{parte-d-3}}
 \addcontentsline{toc}{paragraph}{Parte D}
 
 O resultado da simulação está apresentado na figura \ref{fig:prob2D1}. O controlador é do tipo P (um ganho), entretanto, para que \(e(\infty) = 0\) quando \(\omega \neq0\) seria necessário de um controlador PI.
@@ -1839,12 +1839,12 @@ G(s) = \frac{1.2}{s^2+4s+3} = \frac{1.2}{(s+1)(s+3)}.
   Simule o sistema em malha-fechada para \(r(t) = 3\) e \(w(t) = 0.5\) do tipo degrau, aplicando \(w(t)\) em \(t=15\). Verifique se os requisitos de desempenho foram realmente atendidos. Visualize o sinal de controle \(u(t)\).
 \end{enumerate}
 
-\hypertarget{resoluuxe7uxe3o-2}{%
-\subsubsection*{Resolução}\label{resoluuxe7uxe3o-2}}
+\hypertarget{resoluuxe7uxe3o-14}{%
+\subsubsection*{Resolução}\label{resoluuxe7uxe3o-14}}
 \addcontentsline{toc}{subsubsection}{Resolução}
 
-\hypertarget{parte-a-2}{%
-\paragraph*{Parte A}\label{parte-a-2}}
+\hypertarget{parte-a-7}{%
+\paragraph{Parte A}\label{parte-a-7}}
 \addcontentsline{toc}{paragraph}{Parte A}
 
 O resultado da simulação está apresentado na figura \ref{fig:prob3A1}. O resultado não era esperado pois, para Funções de Transferência do segundo grau é esperado um sobressinal.
@@ -1858,8 +1858,8 @@ O resultado da simulação está apresentado na figura \ref{fig:prob3A1}. O resu
 \caption{Simulação C1}\label{fig:prob3A1}
 \end{figure}
 
-\hypertarget{parte-b-2}{%
-\paragraph*{Parte B}\label{parte-b-2}}
+\hypertarget{parte-b-7}{%
+\paragraph{Parte B}\label{parte-b-7}}
 \addcontentsline{toc}{paragraph}{Parte B}
 
 Utilizando um controlador do tipo \(C(s) = \frac{K_c(s+1)}{s}\) temos que
@@ -1877,8 +1877,8 @@ Portanto, o controlador calculado é
 \boxed{C(s) = \frac{3.937(s+1)}{s}}.
 \]
 
-\hypertarget{parte-c-2}{%
-\paragraph*{Parte C}\label{parte-c-2}}
+\hypertarget{parte-c-5}{%
+\paragraph{Parte C}\label{parte-c-5}}
 \addcontentsline{toc}{paragraph}{Parte C}
 
 O resultado da simulação está apresentado na figura \ref{fig:prob3C1}. Percebe-se que os requisitos de desempenho foram alcançados.
@@ -1913,8 +1913,8 @@ G(s) = \frac{0.5}{s-1} \quad \text{(instável),}
 \]
 e simule (dica: basta mudar o numerador do PI projetado no Problema 1 para \(s-1\)). Agora mantenha o mesmo controlador \(C(s)\) obtido mas altere o denominador de \(G(s)\) para \(s-0.99\) (incerteza de \(1\%\) no pólo de \(G(s)\)) e simule. Observe que \(y(t) \to -\infty\) quando \(t\to\infty\). Isto mostra o motivo pelo qual não podemos efetual cancelamentos pólo-zero instáveis em \(C(s)G(s)\).
 
-\hypertarget{resoluuxe7uxe3o-3}{%
-\subsubsection*{Resolução}\label{resoluuxe7uxe3o-3}}
+\hypertarget{resoluuxe7uxe3o-15}{%
+\subsubsection*{Resolução}\label{resoluuxe7uxe3o-15}}
 \addcontentsline{toc}{subsubsection}{Resolução}
 
 O resultado da simulação está apresentado na figura \ref{fig:prob4A1}. Conforme esperado o sistema se comporta de forma instável.
@@ -2101,8 +2101,8 @@ Estes problemas são relacionados ao assunto abordado no Laboratório \ref{lab6}
 
 Considere a equação diferencial \eqref{eq:eq61}, com \(\beta = 0.01\), \(A = 1\). Implemente o diagrama de blocos da Figura \ref{fig:fig62} no Simulink/Matlab com o objetivo de simular a dinâmica da altura do nível \(H\) do tanque. Simule o sistema para a condição \(H(0) = 0\) e vazões de entrada \(Q_e = 0.01\), \(Q_e = 0.02\), \(Q_e = 0.1\) do tipo degrau. Analise os resultados. Observe a não-linearidade do sistema: ao dobrarmos a vazão de entrada de \(Q_e = 0.01\) para \(Q_e = 0.02\) o valor final de \(H(t)\) quadruplicou.
 
-\hypertarget{resoluuxe7uxe3o}{%
-\subsubsection*{Resolução}\label{resoluuxe7uxe3o}}
+\hypertarget{resoluuxe7uxe3o-16}{%
+\subsubsection*{Resolução}\label{resoluuxe7uxe3o-16}}
 \addcontentsline{toc}{subsubsection}{Resolução}
 
 Working on it :)
@@ -2113,8 +2113,8 @@ Working on it :)
 
 Utilizando os mesmos dados do item anterior simule o sistema para a condição inicial \(H(0)=4\) e a vazão de entrada \(Q_e = 0.02\) do tipo degrau. O comportamento observado era esperado? Justifique (dica: veja \eqref{eq:eq63} e relembre o conceito de ponto de equilíbrio). Em seguida, modifique a vazão de entrada para \(Q_e = 0.019\) e simule. Analise os resultados (veja a Propriedade 1 e \eqref{eq:eq63}).
 
-\hypertarget{resoluuxe7uxe3o-1}{%
-\subsubsection*{Resolução}\label{resoluuxe7uxe3o-1}}
+\hypertarget{resoluuxe7uxe3o-17}{%
+\subsubsection*{Resolução}\label{resoluuxe7uxe3o-17}}
 \addcontentsline{toc}{subsubsection}{Resolução}
 
 Working on it :)
@@ -2125,8 +2125,8 @@ Working on it :)
 
 Considere \(G(s)\) em \eqref{eq:eq69}, que é a Função de Transferência do sistema linearizado associado ao sistema de um tanque \eqref{eq:eq66} no ponto de equilíbrio \((\overline{H}, \overline{u}) = (4, 0.02)\). Implemete no Simulink/Matlab o diagrama de blocos apresentado na Figura \ref{fig:fig63} com o objetivo de comparar a dinâmica de \(\overline{H} + \delta H(t)\) com a dinâmica de \(H(t)\) do sistema não-linear \eqref{eq:eq66}. Para isto, escolha \(\overline{u} = 0.02, \delta u = 0\), e determine \(t_1 > 0\) por simulação (veja \eqref{eq:eq610}). Simule para \(\delta u = 0.0001, \delta u = 0.001, \delta u = 0.01\) do tipo degrau e analise os resultados. Baseado no que vimos em aulas anteriores, quais são as características dinâmicas de saída \(\delta y(t) = \delta H(t)\) do sistema linearizado (por exemplo: sobressinal, tempo de acomodação, valor em regime permanente)? Tais características eram esperadas? Justifique sua resposta (dica: veja \eqref{eq:eq69}).
 
-\hypertarget{resoluuxe7uxe3o-2}{%
-\subsubsection*{Resolução}\label{resoluuxe7uxe3o-2}}
+\hypertarget{resoluuxe7uxe3o-18}{%
+\subsubsection*{Resolução}\label{resoluuxe7uxe3o-18}}
 \addcontentsline{toc}{subsubsection}{Resolução}
 
 Working on it :)
@@ -2137,8 +2137,8 @@ Working on it :)
 
 No item anterior, mude o ponto de equilíbrio do sistema de um tanque para \((\overline{H}, \overline{u}) = (16, 0.04)\), mas mantenha a mesma Função de Transferência \(G(s)\) de antes. Simule e analise os resultados. Tal comportamento era esperado? Justifique sua resposta.
 
-\hypertarget{resoluuxe7uxe3o-3}{%
-\subsubsection*{Resolução}\label{resoluuxe7uxe3o-3}}
+\hypertarget{resoluuxe7uxe3o-19}{%
+\subsubsection*{Resolução}\label{resoluuxe7uxe3o-19}}
 \addcontentsline{toc}{subsubsection}{Resolução}
 
 Working on it :)
@@ -2286,12 +2286,12 @@ Considere a Função de Transferência \(G(s)\) em \eqref{eq:eq73} referente ao 
   Agora, simule para as seguintes \emph{variações} na referência (não é perturbação!): \(\delta r = 0.01\), \(\delta r = 0.05\), \(\delta r = 0.1\), \(\delta r = 0.5\), \(\delta r = 2\), \(\delta r = 10\), \(\delta r = 100\). Analise os resultados. As especificações de regime permanente e de regime transitório foram atendidas? Tais resultados eram esperados? Justifique sua resposta. Dica: veja \eqref{eq:eq76} e compare o sinal de controle \(u(t)\) do sistema não-linear com o sinal de controle \(\delta u(t)\) do sistema linearizado, relembrando que \(\overline{u} = 0.02\).
 \end{enumerate}
 
-\hypertarget{resoluuxe7uxe3o}{%
-\subsubsection*{Resolução}\label{resoluuxe7uxe3o}}
+\hypertarget{resoluuxe7uxe3o-20}{%
+\subsubsection*{Resolução}\label{resoluuxe7uxe3o-20}}
 \addcontentsline{toc}{subsubsection}{Resolução}
 
-\hypertarget{parte-a}{%
-\paragraph*{Parte A}\label{parte-a}}
+\hypertarget{parte-a-8}{%
+\paragraph{Parte A}\label{parte-a-8}}
 \addcontentsline{toc}{paragraph}{Parte A}
 
 O resultado da simulação está apresentado na Figura \ref{fig:f1A1}. \(t_1 = 6000\). É possivel notar que \(e(\infty) = 0\) e \(M_p = 0.018 < 0.05\).
@@ -2305,8 +2305,8 @@ O resultado da simulação está apresentado na Figura \ref{fig:f1A1}. \(t_1 = 6
 \caption{Simulação 1 do Problema 1A}\label{fig:f1A1}
 \end{figure}
 
-\hypertarget{parte-b}{%
-\paragraph*{Parte B}\label{parte-b}}
+\hypertarget{parte-b-8}{%
+\paragraph{Parte B}\label{parte-b-8}}
 \addcontentsline{toc}{paragraph}{Parte B}
 
 O resultado da simulação está apresentado na Figura \ref{fig:f1B1}. Percebe-se que quanto maior o valor de \(\delta r\) mais instável se comporta o sistema e mais distante das especificações. Isso é esperado pois, de acordo com \eqref{eq:eq76}, o sistema foi projetado para \(\delta r \cong 0\).
@@ -2326,8 +2326,8 @@ O resultado da simulação está apresentado na Figura \ref{fig:f1B1}. Percebe-s
 
 Reprojete o controlador integral da seção anterior considerando que, nas especificações de regime transitório, o sobressinal máximo seja de \(20\%\). Repita o Item 1 para o controlador \(C(s)\) obtido.
 
-\hypertarget{resoluuxe7uxe3o-1}{%
-\subsubsection*{Resolução}\label{resoluuxe7uxe3o-1}}
+\hypertarget{resoluuxe7uxe3o-21}{%
+\subsubsection*{Resolução}\label{resoluuxe7uxe3o-21}}
 \addcontentsline{toc}{subsubsection}{Resolução}
 
 Para \(M_p = 0.2\), temos \(\xi = 0.318\). Assim, \(\omega_n = \frac{0.0025}{0.636}\) e, finalmente, \(K = 15.42 \cdot 10^{-6}\). Os resultados do novo sistema são apresentados na Figura \ref{fig:f1B1}. Apesar de modificar o parâmetro, ele ainda está sendo projetado para \(\delta r \cong 0\).
@@ -2440,11 +2440,50 @@ G(s) = \frac{0.5}{10s + 1}
   Repita o item anterior para \(s = -0.4\) e compare. Note que \(t_s(5\%)\) diminui pela metade e que a amplitude do sinal de controle aumentou. Justifique tal comportamento (dica: veja \eqref{eq:eq81}).
 \end{enumerate}
 
-\hypertarget{resoluuxe7uxe3o}{%
-\subsubsection*{Resolução}\label{resoluuxe7uxe3o}}
+\hypertarget{resoluuxe7uxe3o-22}{%
+\subsubsection*{Resolução}\label{resoluuxe7uxe3o-22}}
 \addcontentsline{toc}{subsubsection}{Resolução}
 
-Working on it :)
+\hypertarget{parte-a-9}{%
+\paragraph{Parte A}\label{parte-a-9}}
+\addcontentsline{toc}{paragraph}{Parte A}
+
+O LGR está apresentado na Figura \ref{fig:fig8R1}. É possivel perceber que como o LGR está no SPE, ele é estável para qualquer \(K > 0\).
+
+\begin{figure}
+
+{\centering \includegraphics{Imagens/Lab8/Resolução/fig1} 
+
+}
+
+\caption{Localicação das Raízes}\label{fig:fig8R1}
+\end{figure}
+
+\hypertarget{parte-b-9}{%
+\paragraph{Parte B}\label{parte-b-9}}
+\addcontentsline{toc}{paragraph}{Parte B}
+
+O ganho do sistema de modo que \(s = -0.2\) é \(K = 2\) e está apresentado na Figura \ref{fig:fig8R2}.
+
+\begin{figure}
+
+{\centering \includegraphics{Imagens/Lab8/Resolução/fig2} 
+
+}
+
+\caption{Ganho}\label{fig:fig8R2}
+\end{figure}
+
+O sistema simulado para um degrau unitário está apresentado na Figura \ref{fig:fig8R3}. É possível perceber os valores de \(t_s(5\%)\) para os valores de \(s = -0.1\) (\(t_s(5\%) = 15.3s\)) e para \(s = -0.2\) (\(t_s(5\%) = 3.99s\))
+
+\begin{figure}
+
+{\centering \includegraphics{Imagens/Lab8/Resolução/fig3} 
+
+}
+
+\caption{Sistema Simulado}\label{fig:fig8R3}
+\end{figure}
 
 \hypertarget{problema-8.2}{%
 \section*{Problema 8.2}\label{problema-8.2}}
@@ -2464,11 +2503,24 @@ G(s) = \frac{0.5}{s-1} \text{ (instável)}
   Escolha \(K=1\) (instável) e \(K=3\) (estável) e simule para \(r(t)\) do tipo degrau unitário.
 \end{enumerate}
 
-\hypertarget{resoluuxe7uxe3o-1}{%
-\subsubsection*{Resolução}\label{resoluuxe7uxe3o-1}}
+\hypertarget{resoluuxe7uxe3o-23}{%
+\subsubsection*{Resolução}\label{resoluuxe7uxe3o-23}}
 \addcontentsline{toc}{subsubsection}{Resolução}
 
-working on it :)
+\hypertarget{parte-a-10}{%
+\paragraph{Parte A}\label{parte-a-10}}
+\addcontentsline{toc}{paragraph}{Parte A}
+
+O LGR está apresentado na Figura \ref{fig:fig8R4}. É possivel perceber que o sistema é instável para \(0 < K < 2\) e estável para \(K > 2\).
+
+\begin{figure}
+
+{\centering \includegraphics{Imagens/Lab8/Resolução/fig4} 
+
+}
+
+\caption{Localicação das Raízes}\label{fig:fig8R4}
+\end{figure}
 
 \hypertarget{problema-8.3}{%
 \section*{Problema 8.3}\label{problema-8.3}}
@@ -2490,11 +2542,36 @@ G(s) = \frac{0.9}{s(s+1)} = \frac{0.9}{s^2+s}
   Determine a faixa de valores \(K\) em que os pólos são complexos conjugados. Simule para \(K = 0.55\) e \(K = 1.3\) com \(r(t)\) do tipo degrau unitário. Analise os resultados. Note que, conforme o esperado, o sobressinal aumentou. Justifique.
 \end{enumerate}
 
-\hypertarget{resoluuxe7uxe3o-2}{%
-\subsubsection*{Resolução}\label{resoluuxe7uxe3o-2}}
+\hypertarget{resoluuxe7uxe3o-24}{%
+\subsubsection*{Resolução}\label{resoluuxe7uxe3o-24}}
 \addcontentsline{toc}{subsubsection}{Resolução}
 
-Working on it :)
+\hypertarget{parte-a-11}{%
+\paragraph{Parte A}\label{parte-a-11}}
+\addcontentsline{toc}{paragraph}{Parte A}
+
+O LGR está apresentado na Figura \ref{fig:fig8R5}. É possivel perceber que como o LGR está no SPE, ele é estável para qualquer \(K > 0\).
+
+\begin{figure}
+
+{\centering \includegraphics{Imagens/Lab8/Resolução/fig5} 
+
+}
+
+\caption{Localicação das Raízes}\label{fig:fig8R5}
+\end{figure}
+
+\hypertarget{parte-b-10}{%
+\paragraph{Parte B}\label{parte-b-10}}
+\addcontentsline{toc}{paragraph}{Parte B}
+
+De acordo com a Figura \ref{fig:fig8R5}, é possível determinar que os pólos são reais para \(K < 0.278\).
+
+\hypertarget{parte-c-6}{%
+\paragraph{Parte C}\label{parte-c-6}}
+\addcontentsline{toc}{paragraph}{Parte C}
+
+De acordo com a Figura \ref{fig:fig8R5}, é possível determinar que os pólos são complexos para \(K \geq 0.278\).
 
 \hypertarget{problema-8.4}{%
 \section*{Problema 8.4}\label{problema-8.4}}
@@ -2516,11 +2593,45 @@ G(s) = \frac{1.2}{(s+1)(s+3)} = \frac{1.2}{s^2+4s+3}
   Mantenha o pólo em \(s=0\) e adicione um zero em \(s=-2\). Note que o LGR foi ``atraído'' em sua direção e que temos estabilidade para qualquer \(K>0\). Por fim, mude a posição do zero para \(s=2\) (sistema de fase não-mínima). Determine a faixa de valores de \(K\) em que o sistema em malha-fechada é estável e a faixa de valores em que é instável. Isto mostra que sistemas de fase não-mínima exigem bastante cuidado em termos de estabilidade. Simule para \(K=6\) com \(r(t)\) do tipo degrau unitário. Como \(G(s)\) tem um pólo em \(s=0\), não deveríamos ter que \(e(\infty) = 0\)? Justifique.
 \end{enumerate}
 
-\hypertarget{resoluuxe7uxe3o-3}{%
-\subsubsection*{Resolução}\label{resoluuxe7uxe3o-3}}
+\hypertarget{resoluuxe7uxe3o-25}{%
+\subsubsection*{Resolução}\label{resoluuxe7uxe3o-25}}
 \addcontentsline{toc}{subsubsection}{Resolução}
 
-Working on it :)
+\hypertarget{parte-a-12}{%
+\paragraph{Parte A}\label{parte-a-12}}
+\addcontentsline{toc}{paragraph}{Parte A}
+
+O LGR está apresentado na Figura \ref{fig:fig8R6}. É possivel perceber que como o LGR está no SPE, ele é estável para qualquer \(K > 0\).
+
+\begin{figure}
+
+{\centering \includegraphics{Imagens/Lab8/Resolução/fig6} 
+
+}
+
+\caption{Localicação das Raízes}\label{fig:fig8R6}
+\end{figure}
+
+\hypertarget{parte-b-11}{%
+\paragraph{Parte B}\label{parte-b-11}}
+\addcontentsline{toc}{paragraph}{Parte B}
+
+Adicionando um pólo em \(s=0\) temos
+
+\[
+G(s) = \frac{1.2}{(s+1)(s+3)} = \frac{1.2}{s^3+4s^2+3s}
+\]
+
+O LGR está apresentado na Figura \ref{fig:fig8R61}. É possivel perceber que o sistema é estável para qualquer \(K < 10\) e instável para \(K > 10\).
+
+\begin{figure}
+
+{\centering \includegraphics{Imagens/Lab8/Resolução/fig61} 
+
+}
+
+\caption{Localicação das Raízes}\label{fig:fig8R61}
+\end{figure}
 
 \hypertarget{problema-8.5}{%
 \section*{Problema 8.5}\label{problema-8.5}}
@@ -2540,8 +2651,8 @@ G(s) = \frac{0.8}{s(s+3)} = \frac{0.8}{s^2 + 3s}
   Escolha \(K\) de modo que \(M_p = 5\% (\xi = 0.7)\). Determine os pólos de malha-fechada e simule para \(r(t)\) do tipo degrau unitário. Verifique se o sobressinal resultante está de acordo com \(K\). Note que \(e(\infty)=0\). Isto era esperado? Justifique.
 \end{enumerate}
 
-\hypertarget{resoluuxe7uxe3o-4}{%
-\subsubsection*{Resolução}\label{resoluuxe7uxe3o-4}}
+\hypertarget{resoluuxe7uxe3o-26}{%
+\subsubsection*{Resolução}\label{resoluuxe7uxe3o-26}}
 \addcontentsline{toc}{subsubsection}{Resolução}
 
 Working on it :)
@@ -2555,11 +2666,20 @@ Analise o LGR de
 G(s) = \frac{s+1}{s^2(s+4)} = \frac{s+1}{s^3+4s^2}
 \]
 
-\hypertarget{resoluuxe7uxe3o-5}{%
-\subsubsection*{Resolução}\label{resoluuxe7uxe3o-5}}
+\hypertarget{resoluuxe7uxe3o-27}{%
+\subsubsection*{Resolução}\label{resoluuxe7uxe3o-27}}
 \addcontentsline{toc}{subsubsection}{Resolução}
 
-Working on it :)
+O LGR está apresentado na Figura \ref{fig:fig8R8}.
+
+\begin{figure}
+
+{\centering \includegraphics{Imagens/Lab8/Resolução/fig8} 
+
+}
+
+\caption{Localicação das Raízes}\label{fig:fig8R8}
+\end{figure}
 
 \hypertarget{projeto-de-controladores-pelo-lugar-das-rauxedzes}{%
 \chapter{Projeto de Controladores pelo Lugar das Raízes}\label{projeto-de-controladores-pelo-lugar-das-rauxedzes}}

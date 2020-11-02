@@ -5,136 +5,180 @@
 \contentsline {chapter}{Problemas Laboratório 2}{13}{chapter*.3}%
 \contentsline {section}{Problema 2.1}{13}{section*.4}%
 \contentsline {subsubsection}{Resolução}{13}{section*.5}%
-\contentsline {paragraph}{Parte 1}{13}{section*.6}%
-\contentsline {paragraph}{Parte 2}{14}{section*.7}%
-\contentsline {paragraph}{Parte 3}{16}{section*.8}%
-\contentsline {paragraph}{Parte 4}{16}{section*.9}%
-\contentsline {section}{Problema 2.2}{18}{section*.10}%
-\contentsline {subsubsection}{Resolução}{18}{section*.11}%
-\contentsline {section}{Problema 2.3}{20}{section*.12}%
-\contentsline {subsubsection}{Resolução}{21}{section*.13}%
-\contentsline {section}{Problema 2.4}{24}{section*.14}%
-\contentsline {subsubsection}{Resolução}{25}{section*.15}%
-\contentsline {section}{Problema 2.5}{29}{section*.16}%
-\contentsline {subsubsection}{Resolução}{29}{section*.17}%
-\contentsline {section}{Problema 2.6}{34}{section*.18}%
-\contentsline {subsubsection}{Resolução}{34}{section*.19}%
+\contentsline {paragraph}{Parte 1}{13}{paragraph.2.1.0.0.1}%
+\contentsline {paragraph}{\numberline {2.1.0.0.1}Parte 1}{13}{paragraph.2.1.0.0.1}%
+\contentsline {paragraph}{Parte 2}{14}{paragraph.2.1.0.0.2}%
+\contentsline {paragraph}{\numberline {2.1.0.0.2}Parte 2}{14}{paragraph.2.1.0.0.2}%
+\contentsline {paragraph}{Parte 3}{16}{paragraph.2.1.0.0.3}%
+\contentsline {paragraph}{\numberline {2.1.0.0.3}Parte 3}{16}{paragraph.2.1.0.0.3}%
+\contentsline {paragraph}{Parte 4}{16}{paragraph.2.1.0.0.4}%
+\contentsline {paragraph}{\numberline {2.1.0.0.4}Parte 4}{16}{paragraph.2.1.0.0.4}%
+\contentsline {section}{Problema 2.2}{18}{section*.6}%
+\contentsline {subsubsection}{Resolução}{18}{section*.7}%
+\contentsline {section}{Problema 2.3}{20}{section*.8}%
+\contentsline {subsubsection}{Resolução}{21}{section*.9}%
+\contentsline {section}{Problema 2.4}{24}{section*.10}%
+\contentsline {subsubsection}{Resolução}{25}{section*.11}%
+\contentsline {section}{Problema 2.5}{29}{section*.12}%
+\contentsline {subsubsection}{Resolução}{29}{section*.13}%
+\contentsline {section}{Problema 2.6}{34}{section*.14}%
+\contentsline {subsubsection}{Resolução}{34}{section*.15}%
 \contentsline {chapter}{\numberline {3}Identificação de Sistemas}{37}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Modelagem de Sistemas Lineares}{37}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Identificação de sistemas de primeira ordem}{38}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Identificação de Sistemas de Segunda Ordem}{39}{section.3.3}%
-\contentsline {subsubsection}{Sistemas sub-amortecidos}{39}{section*.20}%
-\contentsline {subsubsection}{Sistemas criticamente amortecidos e super-amortecidos}{40}{section*.21}%
-\contentsline {chapter}{Problemas Laboratório 3}{43}{chapter*.22}%
-\contentsline {section}{Problema 3.1}{43}{section*.23}%
-\contentsline {subsubsection}{Resolução}{43}{section*.24}%
-\contentsline {section}{Problema 3.2}{44}{section*.25}%
-\contentsline {subsubsection}{Resolução}{45}{section*.26}%
-\contentsline {section}{Problema 3.3}{46}{section*.27}%
-\contentsline {subsubsection}{Parte A}{46}{section*.28}%
-\contentsline {paragraph}{Resolução}{46}{section*.29}%
-\contentsline {subsubsection}{Parte B}{48}{section*.30}%
-\contentsline {paragraph}{Resolução}{48}{section*.31}%
+\contentsline {subsubsection}{Sistemas sub-amortecidos}{39}{section*.16}%
+\contentsline {subsubsection}{Sistemas criticamente amortecidos e super-amortecidos}{40}{section*.17}%
+\contentsline {chapter}{Problemas Laboratório 3}{43}{chapter*.18}%
+\contentsline {section}{Problema 3.1}{43}{section*.19}%
+\contentsline {subsubsection}{Resolução}{43}{section*.20}%
+\contentsline {section}{Problema 3.2}{44}{section*.21}%
+\contentsline {subsubsection}{Resolução}{45}{section*.22}%
+\contentsline {section}{Problema 3.3}{46}{section*.23}%
+\contentsline {subsubsection}{Parte A}{46}{section*.24}%
+\contentsline {paragraph}{Resolução}{46}{paragraph.3.3.0.0.1}%
+\contentsline {paragraph}{\numberline {3.3.0.0.1}Resolução}{46}{paragraph.3.3.0.0.1}%
+\contentsline {subsubsection}{Parte B}{48}{section*.25}%
+\contentsline {paragraph}{Resolução}{48}{paragraph.3.3.0.0.2}%
+\contentsline {paragraph}{\numberline {3.3.0.0.2}Resolução}{49}{paragraph.3.3.0.0.2}%
 \contentsline {chapter}{\numberline {4}Rastreamento de Referências e Rejeição de Perturbações - Erro em Regime Permanente}{51}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Tipos de Sistemas}{51}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Erro em regime permanente.}{52}{section.4.2}%
-\contentsline {chapter}{Problemas Laboratório 4}{57}{chapter*.32}%
-\contentsline {section}{Problema 4.1}{57}{section*.33}%
-\contentsline {subsubsection}{Resolução}{58}{section*.34}%
-\contentsline {subsubsection}{Parte A}{58}{section*.35}%
-\contentsline {subsubsection}{Parte B}{58}{section*.36}%
-\contentsline {subsubsection}{Parte C}{59}{section*.37}%
-\contentsline {section}{Problema 4.2}{59}{section*.38}%
-\contentsline {subsubsection}{Resulução}{61}{section*.39}%
-\contentsline {paragraph}{Parte A}{61}{section*.40}%
-\contentsline {paragraph}{Parte B}{61}{section*.41}%
-\contentsline {paragraph}{Parte C}{61}{section*.42}%
-\contentsline {paragraph}{Parte D}{65}{section*.43}%
-\contentsline {section}{Problema 4.3}{65}{section*.44}%
-\contentsline {subsubsection}{Resolução}{65}{section*.45}%
-\contentsline {paragraph}{Parte A}{65}{section*.46}%
-\contentsline {paragraph}{Parte B}{65}{section*.47}%
-\contentsline {paragraph}{Parte C}{67}{section*.48}%
-\contentsline {paragraph}{Parte D}{67}{section*.49}%
-\contentsline {paragraph}{Parte E}{67}{section*.50}%
-\contentsline {section}{Problema 4.4}{69}{section*.51}%
-\contentsline {subsubsection}{Parte A}{69}{section*.52}%
-\contentsline {subsubsection}{Parte B}{69}{section*.53}%
+\contentsline {chapter}{Problemas Laboratório 4}{57}{chapter*.26}%
+\contentsline {section}{Problema 4.1}{57}{section*.27}%
+\contentsline {subsubsection}{Resolução}{58}{section*.28}%
+\contentsline {subsubsection}{Parte A}{58}{section*.29}%
+\contentsline {subsubsection}{Parte B}{58}{section*.30}%
+\contentsline {subsubsection}{Parte C}{59}{section*.31}%
+\contentsline {section}{Problema 4.2}{59}{section*.32}%
+\contentsline {subsubsection}{Resulução}{61}{section*.33}%
+\contentsline {paragraph}{Parte A}{61}{paragraph.4.2.0.0.1}%
+\contentsline {paragraph}{\numberline {4.2.0.0.1}Parte A}{61}{paragraph.4.2.0.0.1}%
+\contentsline {paragraph}{Parte B}{61}{paragraph.4.2.0.0.2}%
+\contentsline {paragraph}{\numberline {4.2.0.0.2}Parte B}{61}{paragraph.4.2.0.0.2}%
+\contentsline {paragraph}{Parte C}{61}{paragraph.4.2.0.0.3}%
+\contentsline {paragraph}{\numberline {4.2.0.0.3}Parte C}{61}{paragraph.4.2.0.0.3}%
+\contentsline {paragraph}{Parte D}{65}{paragraph.4.2.0.0.4}%
+\contentsline {paragraph}{\numberline {4.2.0.0.4}Parte D}{65}{paragraph.4.2.0.0.4}%
+\contentsline {section}{Problema 4.3}{65}{section*.34}%
+\contentsline {subsubsection}{Resolução}{65}{section*.35}%
+\contentsline {paragraph}{Parte A}{65}{paragraph.4.2.0.0.5}%
+\contentsline {paragraph}{\numberline {4.2.0.0.5}Parte A}{65}{paragraph.4.2.0.0.5}%
+\contentsline {paragraph}{Parte B}{65}{paragraph.4.2.0.0.6}%
+\contentsline {paragraph}{\numberline {4.2.0.0.6}Parte B}{65}{paragraph.4.2.0.0.6}%
+\contentsline {paragraph}{Parte C}{67}{paragraph.4.2.0.0.7}%
+\contentsline {paragraph}{\numberline {4.2.0.0.7}Parte C}{67}{paragraph.4.2.0.0.7}%
+\contentsline {paragraph}{Parte D}{67}{paragraph.4.2.0.0.8}%
+\contentsline {paragraph}{\numberline {4.2.0.0.8}Parte D}{67}{paragraph.4.2.0.0.8}%
+\contentsline {paragraph}{Parte E}{67}{paragraph.4.2.0.0.9}%
+\contentsline {paragraph}{\numberline {4.2.0.0.9}Parte E}{67}{paragraph.4.2.0.0.9}%
+\contentsline {section}{Problema 4.4}{69}{section*.36}%
+\contentsline {subsubsection}{Parte A}{69}{section*.37}%
+\contentsline {subsubsection}{Parte B}{69}{section*.38}%
 \contentsline {chapter}{\numberline {5}Projeto de Controladores por Métodos Algébricos}{71}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Controladores Clássicos}{71}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Método Algébrico de Projeto de Controladores}{72}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Erro em Regime Permanente}{73}{section.5.3}%
-\contentsline {subsubsection}{\textbf {\(B=0\) (sem perturbação)}}{74}{section*.54}%
-\contentsline {subsubsection}{\textbf {\(B\neq 0\) (com perturbação)}}{74}{section*.55}%
-\contentsline {subsection}{\(F(s)\) de primeira ordem}{74}{section*.56}%
-\contentsline {subsection}{\(F(s)\) de segunda ordem}{75}{section*.57}%
-\contentsline {chapter}{Problemas Laboratório 5}{77}{chapter*.58}%
-\contentsline {section}{Problema 5.1}{77}{section*.59}%
-\contentsline {subsubsection}{Resolução}{77}{section*.60}%
-\contentsline {paragraph}{Parte A}{77}{section*.61}%
-\contentsline {paragraph}{Parte B}{79}{section*.62}%
-\contentsline {paragraph}{Parte C}{79}{section*.63}%
-\contentsline {paragraph}{Parte D}{80}{section*.64}%
-\contentsline {section}{Problema 5.2}{80}{section*.65}%
-\contentsline {subsubsection}{Resolução}{81}{section*.66}%
-\contentsline {paragraph}{Parte A}{81}{section*.67}%
-\contentsline {paragraph}{Parte B}{81}{section*.68}%
-\contentsline {paragraph}{Parte C}{83}{section*.69}%
-\contentsline {paragraph}{Parte D}{83}{section*.70}%
-\contentsline {section}{Problema 5.3}{84}{section*.71}%
-\contentsline {subsubsection}{Resolução}{84}{section*.72}%
-\contentsline {paragraph}{Parte A}{84}{section*.73}%
-\contentsline {paragraph}{Parte B}{84}{section*.74}%
-\contentsline {paragraph}{Parte C}{85}{section*.75}%
-\contentsline {section}{Problema 5.4}{85}{section*.76}%
-\contentsline {subsubsection}{Resolução}{86}{section*.77}%
+\contentsline {subsubsection}{\textbf {\(B=0\) (sem perturbação)}}{74}{section*.39}%
+\contentsline {subsubsection}{\textbf {\(B\neq 0\) (com perturbação)}}{74}{section*.40}%
+\contentsline {subsection}{\(F(s)\) de primeira ordem}{74}{section*.41}%
+\contentsline {subsection}{\(F(s)\) de segunda ordem}{75}{section*.42}%
+\contentsline {chapter}{Problemas Laboratório 5}{77}{chapter*.43}%
+\contentsline {section}{Problema 5.1}{77}{section*.44}%
+\contentsline {subsubsection}{Resolução}{77}{section*.45}%
+\contentsline {paragraph}{Parte A}{77}{paragraph.5.3.0.0.1}%
+\contentsline {paragraph}{\numberline {5.3.0.0.1}Parte A}{77}{paragraph.5.3.0.0.1}%
+\contentsline {paragraph}{Parte B}{79}{paragraph.5.3.0.0.2}%
+\contentsline {paragraph}{\numberline {5.3.0.0.2}Parte B}{79}{paragraph.5.3.0.0.2}%
+\contentsline {paragraph}{Parte C}{79}{paragraph.5.3.0.0.3}%
+\contentsline {paragraph}{\numberline {5.3.0.0.3}Parte C}{79}{paragraph.5.3.0.0.3}%
+\contentsline {paragraph}{Parte D}{80}{paragraph.5.3.0.0.4}%
+\contentsline {paragraph}{\numberline {5.3.0.0.4}Parte D}{80}{paragraph.5.3.0.0.4}%
+\contentsline {section}{Problema 5.2}{80}{section*.46}%
+\contentsline {subsubsection}{Resolução}{81}{section*.47}%
+\contentsline {paragraph}{Parte A}{81}{paragraph.5.3.0.0.5}%
+\contentsline {paragraph}{\numberline {5.3.0.0.5}Parte A}{81}{paragraph.5.3.0.0.5}%
+\contentsline {paragraph}{Parte B}{81}{paragraph.5.3.0.0.6}%
+\contentsline {paragraph}{\numberline {5.3.0.0.6}Parte B}{81}{paragraph.5.3.0.0.6}%
+\contentsline {paragraph}{Parte C}{83}{paragraph.5.3.0.0.7}%
+\contentsline {paragraph}{\numberline {5.3.0.0.7}Parte C}{83}{paragraph.5.3.0.0.7}%
+\contentsline {paragraph}{Parte D}{83}{paragraph.5.3.0.0.8}%
+\contentsline {paragraph}{\numberline {5.3.0.0.8}Parte D}{83}{paragraph.5.3.0.0.8}%
+\contentsline {section}{Problema 5.3}{84}{section*.48}%
+\contentsline {subsubsection}{Resolução}{84}{section*.49}%
+\contentsline {paragraph}{Parte A}{84}{paragraph.5.3.0.0.9}%
+\contentsline {paragraph}{\numberline {5.3.0.0.9}Parte A}{84}{paragraph.5.3.0.0.9}%
+\contentsline {paragraph}{Parte B}{84}{paragraph.5.3.0.0.10}%
+\contentsline {paragraph}{\numberline {5.3.0.0.10}Parte B}{85}{paragraph.5.3.0.0.10}%
+\contentsline {paragraph}{Parte C}{85}{paragraph.5.3.0.0.11}%
+\contentsline {paragraph}{\numberline {5.3.0.0.11}Parte C}{85}{paragraph.5.3.0.0.11}%
+\contentsline {section}{Problema 5.4}{85}{section*.50}%
+\contentsline {subsubsection}{Resolução}{86}{section*.51}%
 \contentsline {chapter}{\numberline {6}Linearização de Sistemas Não-Lineares}{89}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Sistema de um tanque}{89}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Pontos de equilíbrio}{90}{section.6.2}%
 \contentsline {section}{\numberline {6.3}Linearização de sistemas não-lineares}{91}{section.6.3}%
-\contentsline {chapter}{Problemas Laboratório 6}{95}{chapter*.78}%
-\contentsline {section}{Problema 6.1}{95}{section*.79}%
-\contentsline {subsubsection}{Resolução}{95}{section*.80}%
-\contentsline {section}{Problema 6.2}{95}{section*.81}%
-\contentsline {subsubsection}{Resolução}{95}{section*.82}%
-\contentsline {section}{Problema 6.3}{96}{section*.83}%
-\contentsline {subsubsection}{Resolução}{96}{section*.84}%
-\contentsline {section}{Problema 6.4}{96}{section*.85}%
-\contentsline {subsubsection}{Resolução}{96}{section*.86}%
+\contentsline {chapter}{Problemas Laboratório 6}{95}{chapter*.52}%
+\contentsline {section}{Problema 6.1}{95}{section*.53}%
+\contentsline {subsubsection}{Resolução}{95}{section*.54}%
+\contentsline {section}{Problema 6.2}{95}{section*.55}%
+\contentsline {subsubsection}{Resolução}{95}{section*.56}%
+\contentsline {section}{Problema 6.3}{96}{section*.57}%
+\contentsline {subsubsection}{Resolução}{96}{section*.58}%
+\contentsline {section}{Problema 6.4}{96}{section*.59}%
+\contentsline {subsubsection}{Resolução}{96}{section*.60}%
 \contentsline {chapter}{\numberline {7}Controle de Sistemas Não-Lineares}{97}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Controladores lineares para o sistema de um tanque}{97}{section.7.1}%
 \contentsline {section}{\numberline {7.2}Projeto de um controlador integral para o sistema de um tanque}{99}{section.7.2}%
-\contentsline {chapter}{Problemas Laboratório 7}{101}{chapter*.87}%
-\contentsline {section}{Problema 7.1}{101}{section*.88}%
-\contentsline {subsubsection}{Resolução}{101}{section*.89}%
-\contentsline {paragraph}{Parte A}{101}{section*.90}%
-\contentsline {paragraph}{Parte B}{101}{section*.91}%
-\contentsline {section}{Problema 7.2}{102}{section*.92}%
-\contentsline {subsubsection}{Resolução}{103}{section*.93}%
+\contentsline {chapter}{Problemas Laboratório 7}{101}{chapter*.61}%
+\contentsline {section}{Problema 7.1}{101}{section*.62}%
+\contentsline {subsubsection}{Resolução}{101}{section*.63}%
+\contentsline {paragraph}{Parte A}{101}{paragraph.7.2.0.0.1}%
+\contentsline {paragraph}{\numberline {7.2.0.0.1}Parte A}{101}{paragraph.7.2.0.0.1}%
+\contentsline {paragraph}{Parte B}{101}{paragraph.7.2.0.0.2}%
+\contentsline {paragraph}{\numberline {7.2.0.0.2}Parte B}{101}{paragraph.7.2.0.0.2}%
+\contentsline {section}{Problema 7.2}{102}{section*.64}%
+\contentsline {subsubsection}{Resolução}{103}{section*.65}%
 \contentsline {chapter}{\numberline {8}Análise pelo Lugar das Raízes}{105}{chapter.8}%
 \contentsline {section}{\numberline {8.1}Método do Lugar Geométrico das Raízes}{105}{section.8.1}%
 \contentsline {section}{\numberline {8.2}Estabilidade e Influência de Pólos e Zeros no LGR}{106}{section.8.2}%
 \contentsline {section}{\numberline {8.3}Determinação do ganho \(K\) para sistemas em malha-fechada de primeira e segunda ordem}{107}{section.8.3}%
-\contentsline {chapter}{Problemas Laboratório 8}{109}{chapter*.94}%
-\contentsline {section}{Problema 8.1}{109}{section*.95}%
-\contentsline {subsubsection}{Resolução}{109}{section*.96}%
-\contentsline {section}{Problema 8.2}{109}{section*.97}%
-\contentsline {subsubsection}{Resolução}{110}{section*.98}%
-\contentsline {section}{Problema 8.3}{110}{section*.99}%
-\contentsline {subsubsection}{Resolução}{110}{section*.100}%
-\contentsline {section}{Problema 8.4}{110}{section*.101}%
-\contentsline {subsubsection}{Resolução}{111}{section*.102}%
-\contentsline {section}{Problema 8.5}{111}{section*.103}%
-\contentsline {subsubsection}{Resolução}{111}{section*.104}%
-\contentsline {section}{Problema 8.6}{111}{section*.105}%
-\contentsline {subsubsection}{Resolução}{112}{section*.106}%
-\contentsline {chapter}{\numberline {9}Projeto de Controladores pelo Lugar das Raízes}{113}{chapter.9}%
-\contentsline {chapter}{Problemas Laboratório 9}{115}{chapter*.107}%
-\contentsline {chapter}{\numberline {10}Projeto do controlador atraso de fase}{117}{chapter.10}%
-\contentsline {chapter}{Problemas Laboratório 10}{119}{chapter*.108}%
-\contentsline {chapter}{\numberline {11}Análise pelos Diagramas de Bode e Nyquist}{121}{chapter.11}%
-\contentsline {chapter}{Problemas Laboratório 11}{123}{chapter*.109}%
-\contentsline {chapter}{\numberline {12}Projeto de Controladores pelo Diagrama de Bode}{125}{chapter.12}%
-\contentsline {chapter}{Problemas Laboratório 12}{127}{chapter*.110}%
-\contentsline {chapter}{\numberline {13}Digitalização de Controladores Analógicos}{129}{chapter.13}%
-\contentsline {chapter}{Problemas Laboratório 13}{131}{chapter*.111}%
+\contentsline {chapter}{Problemas Laboratório 8}{109}{chapter*.66}%
+\contentsline {section}{Problema 8.1}{109}{section*.67}%
+\contentsline {subsubsection}{Resolução}{109}{section*.68}%
+\contentsline {paragraph}{Parte A}{109}{paragraph.8.3.0.0.1}%
+\contentsline {paragraph}{\numberline {8.3.0.0.1}Parte A}{109}{paragraph.8.3.0.0.1}%
+\contentsline {paragraph}{Parte B}{109}{paragraph.8.3.0.0.2}%
+\contentsline {paragraph}{\numberline {8.3.0.0.2}Parte B}{109}{paragraph.8.3.0.0.2}%
+\contentsline {section}{Problema 8.2}{112}{section*.69}%
+\contentsline {subsubsection}{Resolução}{112}{section*.70}%
+\contentsline {paragraph}{Parte A}{112}{paragraph.8.3.0.0.3}%
+\contentsline {paragraph}{\numberline {8.3.0.0.3}Parte A}{112}{paragraph.8.3.0.0.3}%
+\contentsline {section}{Problema 8.3}{113}{section*.71}%
+\contentsline {subsubsection}{Resolução}{113}{section*.72}%
+\contentsline {paragraph}{Parte A}{113}{paragraph.8.3.0.0.4}%
+\contentsline {paragraph}{\numberline {8.3.0.0.4}Parte A}{113}{paragraph.8.3.0.0.4}%
+\contentsline {paragraph}{Parte B}{113}{paragraph.8.3.0.0.5}%
+\contentsline {paragraph}{\numberline {8.3.0.0.5}Parte B}{113}{paragraph.8.3.0.0.5}%
+\contentsline {paragraph}{Parte C}{113}{paragraph.8.3.0.0.6}%
+\contentsline {paragraph}{\numberline {8.3.0.0.6}Parte C}{113}{paragraph.8.3.0.0.6}%
+\contentsline {section}{Problema 8.4}{114}{section*.73}%
+\contentsline {subsubsection}{Resolução}{114}{section*.74}%
+\contentsline {paragraph}{Parte A}{114}{paragraph.8.3.0.0.7}%
+\contentsline {paragraph}{\numberline {8.3.0.0.7}Parte A}{114}{paragraph.8.3.0.0.7}%
+\contentsline {paragraph}{Parte B}{114}{paragraph.8.3.0.0.8}%
+\contentsline {paragraph}{\numberline {8.3.0.0.8}Parte B}{114}{paragraph.8.3.0.0.8}%
+\contentsline {section}{Problema 8.5}{114}{section*.75}%
+\contentsline {subsubsection}{Resolução}{116}{section*.76}%
+\contentsline {section}{Problema 8.6}{116}{section*.77}%
+\contentsline {subsubsection}{Resolução}{116}{section*.78}%
+\contentsline {chapter}{\numberline {9}Projeto de Controladores pelo Lugar das Raízes}{117}{chapter.9}%
+\contentsline {chapter}{Problemas Laboratório 9}{119}{chapter*.79}%
+\contentsline {chapter}{\numberline {10}Projeto do controlador atraso de fase}{121}{chapter.10}%
+\contentsline {chapter}{Problemas Laboratório 10}{123}{chapter*.80}%
+\contentsline {chapter}{\numberline {11}Análise pelos Diagramas de Bode e Nyquist}{125}{chapter.11}%
+\contentsline {chapter}{Problemas Laboratório 11}{127}{chapter*.81}%
+\contentsline {chapter}{\numberline {12}Projeto de Controladores pelo Diagrama de Bode}{129}{chapter.12}%
+\contentsline {chapter}{Problemas Laboratório 12}{131}{chapter*.82}%
+\contentsline {chapter}{\numberline {13}Digitalização de Controladores Analógicos}{133}{chapter.13}%
+\contentsline {chapter}{Problemas Laboratório 13}{135}{chapter*.83}%

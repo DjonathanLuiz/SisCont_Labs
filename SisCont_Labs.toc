@@ -150,35 +150,41 @@
 \contentsline {paragraph}{\numberline {8.3.0.0.1}Parte A}{109}{paragraph.8.3.0.0.1}%
 \contentsline {paragraph}{Parte B}{109}{paragraph.8.3.0.0.2}%
 \contentsline {paragraph}{\numberline {8.3.0.0.2}Parte B}{109}{paragraph.8.3.0.0.2}%
+\contentsline {paragraph}{Parte C}{112}{paragraph.8.3.0.0.3}%
+\contentsline {paragraph}{\numberline {8.3.0.0.3}Parte C}{112}{paragraph.8.3.0.0.3}%
 \contentsline {section}{Problema 8.2}{112}{section*.69}%
-\contentsline {subsubsection}{Resolução}{112}{section*.70}%
-\contentsline {paragraph}{Parte A}{112}{paragraph.8.3.0.0.3}%
-\contentsline {paragraph}{\numberline {8.3.0.0.3}Parte A}{112}{paragraph.8.3.0.0.3}%
-\contentsline {section}{Problema 8.3}{113}{section*.71}%
-\contentsline {subsubsection}{Resolução}{113}{section*.72}%
+\contentsline {subsubsection}{Resolução}{113}{section*.70}%
 \contentsline {paragraph}{Parte A}{113}{paragraph.8.3.0.0.4}%
 \contentsline {paragraph}{\numberline {8.3.0.0.4}Parte A}{113}{paragraph.8.3.0.0.4}%
 \contentsline {paragraph}{Parte B}{113}{paragraph.8.3.0.0.5}%
 \contentsline {paragraph}{\numberline {8.3.0.0.5}Parte B}{113}{paragraph.8.3.0.0.5}%
-\contentsline {paragraph}{Parte C}{113}{paragraph.8.3.0.0.6}%
-\contentsline {paragraph}{\numberline {8.3.0.0.6}Parte C}{113}{paragraph.8.3.0.0.6}%
-\contentsline {section}{Problema 8.4}{114}{section*.73}%
-\contentsline {subsubsection}{Resolução}{114}{section*.74}%
-\contentsline {paragraph}{Parte A}{114}{paragraph.8.3.0.0.7}%
-\contentsline {paragraph}{\numberline {8.3.0.0.7}Parte A}{114}{paragraph.8.3.0.0.7}%
-\contentsline {paragraph}{Parte B}{114}{paragraph.8.3.0.0.8}%
-\contentsline {paragraph}{\numberline {8.3.0.0.8}Parte B}{114}{paragraph.8.3.0.0.8}%
-\contentsline {section}{Problema 8.5}{114}{section*.75}%
-\contentsline {subsubsection}{Resolução}{116}{section*.76}%
-\contentsline {section}{Problema 8.6}{116}{section*.77}%
-\contentsline {subsubsection}{Resolução}{116}{section*.78}%
-\contentsline {chapter}{\numberline {9}Projeto de Controladores pelo Lugar das Raízes}{117}{chapter.9}%
-\contentsline {chapter}{Problemas Laboratório 9}{119}{chapter*.79}%
-\contentsline {chapter}{\numberline {10}Projeto do controlador atraso de fase}{121}{chapter.10}%
-\contentsline {chapter}{Problemas Laboratório 10}{123}{chapter*.80}%
-\contentsline {chapter}{\numberline {11}Análise pelos Diagramas de Bode e Nyquist}{125}{chapter.11}%
-\contentsline {chapter}{Problemas Laboratório 11}{127}{chapter*.81}%
-\contentsline {chapter}{\numberline {12}Projeto de Controladores pelo Diagrama de Bode}{129}{chapter.12}%
-\contentsline {chapter}{Problemas Laboratório 12}{131}{chapter*.82}%
-\contentsline {chapter}{\numberline {13}Digitalização de Controladores Analógicos}{133}{chapter.13}%
-\contentsline {chapter}{Problemas Laboratório 13}{135}{chapter*.83}%
+\contentsline {section}{Problema 8.3}{113}{section*.71}%
+\contentsline {subsubsection}{Resolução}{116}{section*.72}%
+\contentsline {paragraph}{Parte A}{116}{paragraph.8.3.0.0.6}%
+\contentsline {paragraph}{\numberline {8.3.0.0.6}Parte A}{116}{paragraph.8.3.0.0.6}%
+\contentsline {paragraph}{Parte B}{116}{paragraph.8.3.0.0.7}%
+\contentsline {paragraph}{\numberline {8.3.0.0.7}Parte B}{116}{paragraph.8.3.0.0.7}%
+\contentsline {paragraph}{Parte C}{116}{paragraph.8.3.0.0.8}%
+\contentsline {paragraph}{\numberline {8.3.0.0.8}Parte C}{116}{paragraph.8.3.0.0.8}%
+\contentsline {section}{Problema 8.4}{120}{section*.73}%
+\contentsline {subsubsection}{Resolução}{120}{section*.74}%
+\contentsline {paragraph}{Parte A}{120}{paragraph.8.3.0.0.9}%
+\contentsline {paragraph}{\numberline {8.3.0.0.9}Parte A}{120}{paragraph.8.3.0.0.9}%
+\contentsline {paragraph}{Parte B}{120}{paragraph.8.3.0.0.10}%
+\contentsline {paragraph}{\numberline {8.3.0.0.10}Parte B}{120}{paragraph.8.3.0.0.10}%
+\contentsline {paragraph}{Parte C}{124}{paragraph.8.3.0.0.11}%
+\contentsline {paragraph}{\numberline {8.3.0.0.11}Parte C}{124}{paragraph.8.3.0.0.11}%
+\contentsline {section}{Problema 8.5}{124}{section*.75}%
+\contentsline {subsubsection}{Resolução}{125}{section*.76}%
+\contentsline {section}{Problema 8.6}{125}{section*.77}%
+\contentsline {subsubsection}{Resolução}{125}{section*.78}%
+\contentsline {chapter}{\numberline {9}Projeto de Controladores pelo Lugar das Raízes}{127}{chapter.9}%
+\contentsline {chapter}{Problemas Laboratório 9}{129}{chapter*.79}%
+\contentsline {chapter}{\numberline {10}Projeto do controlador atraso de fase}{131}{chapter.10}%
+\contentsline {chapter}{Problemas Laboratório 10}{133}{chapter*.80}%
+\contentsline {chapter}{\numberline {11}Análise pelos Diagramas de Bode e Nyquist}{135}{chapter.11}%
+\contentsline {chapter}{Problemas Laboratório 11}{137}{chapter*.81}%
+\contentsline {chapter}{\numberline {12}Projeto de Controladores pelo Diagrama de Bode}{139}{chapter.12}%
+\contentsline {chapter}{Problemas Laboratório 12}{141}{chapter*.82}%
+\contentsline {chapter}{\numberline {13}Digitalização de Controladores Analógicos}{143}{chapter.13}%
+\contentsline {chapter}{Problemas Laboratório 13}{145}{chapter*.83}%

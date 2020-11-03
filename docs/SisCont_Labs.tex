@@ -2463,27 +2463,33 @@ O LGR está apresentado na Figura \ref{fig:fig8R1}. É possivel perceber que com
 \paragraph{Parte B}\label{parte-b-9}}
 \addcontentsline{toc}{paragraph}{Parte B}
 
-O ganho do sistema de modo que \(s = -0.2\) é \(K = 2\) e está apresentado na Figura \ref{fig:fig8R2}.
+O ganho do sistema de modo que \(s = -0.2\) é \(K = 2\). O sistema simulado para um degrau unitário está apresentado na Figura \ref{fig:fig8R3}. O valor de \(t_s(5\%)\) para um ganho \(K = 2\) é \(t_s(5\%) = 15s\).
 
 \begin{figure}
 
-{\centering \includegraphics{Imagens/Lab8/Resolução/fig2} 
-
-}
-
-\caption{Ganho}\label{fig:fig8R2}
-\end{figure}
-
-O sistema simulado para um degrau unitário está apresentado na Figura \ref{fig:fig8R3}. É possível perceber os valores de \(t_s(5\%)\) para os valores de \(s = -0.1\) (\(t_s(5\%) = 15.3s\)) e para \(s = -0.2\) (\(t_s(5\%) = 3.99s\))
-
-\begin{figure}
-
-{\centering \includegraphics{Imagens/Lab8/Resolução/fig3} 
+{\centering \includegraphics{Imagens/Lab8/Resolução/fig1b} 
 
 }
 
 \caption{Sistema Simulado}\label{fig:fig8R3}
 \end{figure}
+
+\hypertarget{parte-c-6}{%
+\paragraph{Parte C}\label{parte-c-6}}
+\addcontentsline{toc}{paragraph}{Parte C}
+
+O ganho do sistema de modo que \(s = -0.4\) é \(K = 6\). O sistema simulado para um degrau unitário está apresentado na Figura \ref{fig:fig81C}. O valor de \(t_s(5\%)\) para um ganho \(K = 6\) é \(t_s(5\%) = 7.44s\).
+
+\begin{figure}
+
+{\centering \includegraphics{Imagens/Lab8/Resolução/fig1c} 
+
+}
+
+\caption{Sistema Simulado}\label{fig:fig81C}
+\end{figure}
+
+Pode-se perceber que \(t_s(5\%)\) caiu pela metade e que a amplitude aumentou de \(0.5\) para \(0.75\). Tal comportamento era esperado. Como não há zeros que atraiam os pólos o LGR tem sem inicio em \(s = -0.1\) com ganho 0 e, conforme \(s\) diminui a partir desse ponto \(K\) também aumenta. Conforme o ganho \(K\) aumenta, maior será a amplitude de saída em um tempo menor.
 
 \hypertarget{problema-8.2}{%
 \section*{Problema 8.2}\label{problema-8.2}}
@@ -2520,6 +2526,32 @@ O LGR está apresentado na Figura \ref{fig:fig8R4}. É possivel perceber que o s
 }
 
 \caption{Localicação das Raízes}\label{fig:fig8R4}
+\end{figure}
+
+\hypertarget{parte-b-10}{%
+\paragraph{Parte B}\label{parte-b-10}}
+\addcontentsline{toc}{paragraph}{Parte B}
+
+O sistema simulado para \(K = 1\) está apresentado na Figura \ref{fig:fig82b1}.
+
+\begin{figure}
+
+{\centering \includegraphics{Imagens/Lab8/Resolução/fig2b1} 
+
+}
+
+\caption{Simulação}\label{fig:fig82b1}
+\end{figure}
+
+O sistema simulado para \(K = 3\) está apresentado na Figura \ref{fig:fig82b2}.
+
+\begin{figure}
+
+{\centering \includegraphics{Imagens/Lab8/Resolução/fig2b2} 
+
+}
+
+\caption{Simulação}\label{fig:fig82b2}
 \end{figure}
 
 \hypertarget{problema-8.3}{%
@@ -2561,17 +2593,48 @@ O LGR está apresentado na Figura \ref{fig:fig8R5}. É possivel perceber que com
 \caption{Localicação das Raízes}\label{fig:fig8R5}
 \end{figure}
 
-\hypertarget{parte-b-10}{%
-\paragraph{Parte B}\label{parte-b-10}}
+\hypertarget{parte-b-11}{%
+\paragraph{Parte B}\label{parte-b-11}}
 \addcontentsline{toc}{paragraph}{Parte B}
 
-De acordo com a Figura \ref{fig:fig8R5}, é possível determinar que os pólos são reais para \(K < 0.278\).
+De acordo com a Figura \ref{fig:fig8R5}, é possível determinar que os pólos são reais para \(0 < K < 0.278\). A simulação para \(K = 0.2\) está apresentado na Figura \ref{fig:fig83b}.
 
-\hypertarget{parte-c-6}{%
-\paragraph{Parte C}\label{parte-c-6}}
+\begin{figure}
+
+{\centering \includegraphics{Imagens/Lab8/Resolução/fig3b} 
+
+}
+
+\caption{Localicação das Raízes}\label{fig:fig83b}
+\end{figure}
+
+\hypertarget{parte-c-7}{%
+\paragraph{Parte C}\label{parte-c-7}}
 \addcontentsline{toc}{paragraph}{Parte C}
 
-De acordo com a Figura \ref{fig:fig8R5}, é possível determinar que os pólos são complexos para \(K \geq 0.278\).
+De acordo com a Figura \ref{fig:fig8R5}, é possível determinar que os pólos são complexos para \(K \geq 0.278\). A simulação para \(K = 0.55\) está apresentada na figura \ref{fig:fig83c1}.
+
+\begin{figure}
+
+{\centering \includegraphics{Imagens/Lab8/Resolução/fig3c1} 
+
+}
+
+\caption{Localicação das Raízes}\label{fig:fig83c1}
+\end{figure}
+
+A simulação para \(K = 1.3\) está apresentada na figura \ref{fig:fig83c2}.
+
+\begin{figure}
+
+{\centering \includegraphics{Imagens/Lab8/Resolução/fig3c2} 
+
+}
+
+\caption{Localicação das Raízes}\label{fig:fig83c2}
+\end{figure}
+
+Conforme esperado o sobressinal aumenta conforme \(K\) aumenta uma vez que \(K\) aumenta conforme os pólos complexos aumentam.
 
 \hypertarget{problema-8.4}{%
 \section*{Problema 8.4}\label{problema-8.4}}
@@ -2612,8 +2675,8 @@ O LGR está apresentado na Figura \ref{fig:fig8R6}. É possivel perceber que com
 \caption{Localicação das Raízes}\label{fig:fig8R6}
 \end{figure}
 
-\hypertarget{parte-b-11}{%
-\paragraph{Parte B}\label{parte-b-11}}
+\hypertarget{parte-b-12}{%
+\paragraph{Parte B}\label{parte-b-12}}
 \addcontentsline{toc}{paragraph}{Parte B}
 
 Adicionando um pólo em \(s=0\) temos
@@ -2631,6 +2694,43 @@ O LGR está apresentado na Figura \ref{fig:fig8R61}. É possivel perceber que o 
 }
 
 \caption{Localicação das Raízes}\label{fig:fig8R61}
+\end{figure}
+
+O sistema simulado está apresentado na Figura \ref{fig:fig84b1}. De acordo com o esperado, \(e(\infty) = 0\). Isso se dá devido ao fato de o sistema se comportar de forma estável para \(K<4\).
+
+\begin{figure}
+
+{\centering \includegraphics{Imagens/Lab8/Resolução/fig4b1} 
+
+}
+
+\caption{Localicação das Raízes}\label{fig:fig84b1}
+\end{figure}
+
+\hypertarget{parte-c-8}{%
+\paragraph{Parte C}\label{parte-c-8}}
+\addcontentsline{toc}{paragraph}{Parte C}
+
+Mantendo o pólo e adicionando um zero em \(s = -2\). Percebe-se ques agora o sistema se mantém estável para qualquer \(K > 0\). o LGR está apresentado na Figura \ref{fig:fig84c1}.
+
+\begin{figure}
+
+{\centering \includegraphics{Imagens/Lab8/Resolução/fig4c1} 
+
+}
+
+\caption{Localicação das Raízes}\label{fig:fig84c1}
+\end{figure}
+
+Mantendo o pólo e adicionando um zero em \(s = 2\). O LGR está apresentado na Figura \ref{fig:fig84c2}.
+
+\begin{figure}
+
+{\centering \includegraphics{Imagens/Lab8/Resolução/fig4c2} 
+
+}
+
+\caption{Localicação das Raízes}\label{fig:fig84c2}
 \end{figure}
 
 \hypertarget{problema-8.5}{%

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.1)  2 NOV 2020 21:40
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.1)  8 NOV 2020 21:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1538,14 +1538,15 @@ Overfull \hbox (216.06792pt too wide) has occurred while \output is active
 ]
 Chapter 9.
 [127]
+File: Imagens/Lab9/Apresentação/fig1.jpg Graphic file (type bmp)
+<Imagens/Lab9/Apresentação/fig1.jpg>
+
 Overfull \hbox (28.05342pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 128 \TU/lmr/m/sl/10 CHAPTER 9.  PROJETO DE CONTROLADORES PELO LU
 GAR DAS RAÍZES
  []
 
-[128
-
-] [129]
+[128] [129]
 Overfull \hbox (28.05342pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 130 \TU/lmr/m/sl/10 CHAPTER 9.  PROJETO DE CONTROLADORES PELO LU
 GAR DAS RAÍZES
@@ -1553,62 +1554,76 @@ GAR DAS RAÍZES
 
 [130
 
+] [131]
+Overfull \hbox (28.05342pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 132 \TU/lmr/m/sl/10 CHAPTER 9.  PROJETO DE CONTROLADORES PELO LU
+GAR DAS RAÍZES
+ []
+
+[132] [133]
+Overfull \hbox (28.05342pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 134 \TU/lmr/m/sl/10 CHAPTER 9.  PROJETO DE CONTROLADORES PELO LU
+GAR DAS RAÍZES
+ []
+
+[134
+
 ]
 Chapter 10.
-[131] [132
-
-] [133] [134
-
-]
-Chapter 11.
 [135] [136
 
 ] [137] [138
 
 ]
-Chapter 12.
-[139]
-Overfull \hbox (40.83342pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 140 \TU/lmr/m/sl/10 CHAPTER 12.  PROJETO DE CONTROLADORES PELO D
-IAGRAMA DE BODE
- []
+Chapter 11.
+[139] [140
 
-[140
-
-] [141]
-Overfull \hbox (40.83342pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 142 \TU/lmr/m/sl/10 CHAPTER 12.  PROJETO DE CONTROLADORES PELO D
-IAGRAMA DE BODE
- []
-
-[142
+] [141] [142
 
 ]
-Chapter 13.
+Chapter 12.
 [143]
-Overfull \hbox (6.85674pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 144 \TU/lmr/m/sl/10 CHAPTER 13.  DIGITALIZAÇÃO DE CONTROLADORES 
-ANALÓGICOS
+Overfull \hbox (40.83342pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 144 \TU/lmr/m/sl/10 CHAPTER 12.  PROJETO DE CONTROLADORES PELO D
+IAGRAMA DE BODE
  []
 
 [144
 
+] [145]
+Overfull \hbox (40.83342pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 146 \TU/lmr/m/sl/10 CHAPTER 12.  PROJETO DE CONTROLADORES PELO D
+IAGRAMA DE BODE
+ []
+
+[146
+
+]
+Chapter 13.
+[147]
+Overfull \hbox (6.85674pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 148 \TU/lmr/m/sl/10 CHAPTER 13.  DIGITALIZAÇÃO DE CONTROLADORES 
+ANALÓGICOS
+ []
+
+[148
+
 ]
 No file SisCont_Labs.bbl.
-[145] (./SisCont_Labs.aux)
+[149] (./SisCont_Labs.aux)
 Package rerunfilecheck Info: File `SisCont_Labs.out' has not changed.
-(rerunfilecheck)             Checksum: 6AA7A210BF576404DF881BB71DA77767;13400.
+(rerunfilecheck)             Checksum: 95BDE393BF73BAAB12C8F08E17E32850;14700.
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 18350 strings out of 479410
- 333816 string characters out of 5878655
- 791385 words of memory out of 5000000
- 37382 multiletter control sequences out of 15000+600000
- 542548 words of font info for 94 fonts, out of 8000000 for 9000
+ 18384 strings out of 479410
+ 334627 string characters out of 5878655
+ 793493 words of memory out of 5000000
+ 37413 multiletter control sequences out of 15000+600000
+ 542556 words of font info for 95 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
- 94i,10n,118p,1017b,499s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 94i,10n,118p,1043b,499s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on SisCont_Labs.pdf (145 pages).
+Output written on SisCont_Labs.pdf (149 pages).

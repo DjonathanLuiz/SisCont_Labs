@@ -71,6 +71,7 @@ fig:fig84b1
 fig:fig84c1
 fig:fig84c2
 fig:fig8R8
+fig:fig9A1
 simulação-de-sistemas
 lab2
 pólos-e-zeros
@@ -96,7 +97,10 @@ lab8
 método-do-lugar-geométrico-das-raízes
 estabilidade-e-influência-de-pólos-e-zeros-no-lgr
 determinação-do-ganho-k-para-sistemas-em-malha-fechada-de-primeira-e-segunda-ordem
-projeto-de-controladores-pelo-lugar-das-raízes
+lab9
+pólos-dominantes
+projeto-de-controladores
+projeto-do-controlador-avanço-de-fase
 projeto-do-controlador-atraso-de-fase
 análise-pelos-diagramas-de-bode-e-nyquist
 projeto-de-controladores-pelo-diagrama-de-bode

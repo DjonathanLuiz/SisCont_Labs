@@ -1,3 +1,70 @@
-# Projeto de Controladores pelo Lugar das Raízes
+# Projeto de Controladores pelo Lugar das Raízes {#lab9}
 
-Working on it :)
+Nesta experiência, projetaremos controladores utilizando o Lugar das Raízes. Veremos alguns métodos de projeto de controladores para que as especificações de regime transitório e de regime permanente sejam atendidas. Utilizaremos o Matlab para verificar se as especificações em malha-fechada foram realmente satisfeitas.
+
+## Pólos Dominantes
+
+O conceito de dominância desempenha um papel fundamental no projeto de controladores através do Lugar das Raízes. Seja $M(s)$ uma Função de Transferência de malha-fechada, e $s_d$ um pólo real ou um par de pólos complexos conjugados de $M(s)$ no SPE (Semi-Plano Esquerdo do plano complexo). Dizemos que $s_d$ é dominante quando:
+
+1. Pólos e zeros à esquerda de $s_d$ estão afastados;
+2. Pólos e zeros à direita de $s_d$ sempre ocorrem aos pares e, além disso, cada zero está muito próximo do pólo do par correspondente. Isto significa que o zero praticamente anula o efeito do pólo na resposta dinâmica, e vice versa (o pólo anula o efeito do zero).
+
+Desse modo, se $M(s)$ tem um pólo real dominante, então a resposta dinâmica de $M(s)$ terá características muito próximas às de um sistema de primeira ordem. E, se $M(s)$ tem um par de pólos complexos conjugados dominante, então a resposta dinâmica terá características muito próximas às de um sistema de segunda ordem com pólos complexos (sistema subamortecido).
+
+## Projeto de Controladores
+
+Considere o sistema em malha-fechada ilustrado na Figura \@ref(fig:fig9A1), onde $G(s)$ é o sistema a ser controlado, $C(s)$ é o controlador, $F(s)$ é um pré-filtro, $r(t)$ é a referência, $y(t)$ é a saída, e $u(t)$ é o controle (ou entrada). Aqui, estamos assumindo que $G(s)$ corresponde a um processo a ser controlado em série com possíveis controladores integrais que foram incluídos de forma que $G(s)$ seja um sistema de tipo compatível com certas referências $r(t)$ e perturbações externas $\omega (t)$, de modo a se alcançar erro nulo de rastreamento em regime permanente com rejeição de perturbação (veja os Laboratórios \@ref(lab4) e \@ref(lab5)).
+
+```{r fig9A1, fig.align='center', echo=FALSE, fig.cap='Diagrama de blocos do processo em malha-fechada.', out.width='50%'}
+knitr::include_graphics('Imagens/Lab9/Apresentação/fig1.jpg', dpi = NA)
+```
+
+Relembre que a Função de Transferência em malha-fechada é dada por
+
+$$
+M(s) = \frac{Y(s)}{R(s)} = F(s)\frac{C(s)G(s)}{1+C(s)G(s)}
+$$
+
+Nesta experiência, estudaremos controladores da forma
+
+$$
+C(s) = C_{AV}(s)C_{AT}(s) = \underbrace{K\frac{s+z_1}{s+p_1}}_{C_{AV}(s)} \underbrace{\frac{s+z_2}{s+p_2}}_{C_{AT}(s)}.
+$$
+
+onde $K>0$ é um ganho ajustável, e $z_1,z_2,p_1,p_2 >0$, com $z_1>p_1$ (zero à direita do pólo) e $z_2<p_1$ (zero à esquerda do pólo). Denominamos $C_{AV}(s)$ de controlador *avançp de fase* e $C_{AT}(s)$ de controlador *atraso de fase*.
+
+Suponha que foram dadas certas especificações de regime transitório (tempo de acomodação, sobressinal, etc) e de regime permanente ($e(\infty) \neq 0$ para $r$ do tipo rampa, constante de velocidade ou de aceleração, etc) para a resposta dinâmica em malha-fechada. Nosso objetivo é encontrar um controlador $C(s)$ de modo que tais especificações sejam atendidas. Para isso, separamos o problema em duas partes:
+
+1. Primeiramente, projetamos um controlador avanço avanço de fase $C_{AV}(s)$ para as especificações de regime transitório.
+2. Em seguida, projetamos um controlador atraso de fase $C_{AT}(s)$ em série com $C_{AV}(s)G(s)$ para as especificações de regime permanente. O controlador final desejado será então
+
+$$
+C(s) = C_{AV}(s)C_{AT}(s).
+$$
+
+Relembre que, quanto menor for a ordem do controlador, menor serão a complexidade e os custos envolvidos na implementação.
+
+
+
+
+
+
+
+
+## Projeto do controlador avanço de fase
+
+Para projetarmos o controlador avanço de fase $C_{AV}(s)$, o qual refere às especificações de regime transitório, realizamos os seguintes passos:
+
+1. **(Determinação de RD)** Traçamos o Lugar das Raízes (LR) de $G(s)$ e delimitamos a região do plano complexo que satisfaz as especificações de regime transitório ($T_s(5\%),M_p$, etc). Denominamos tal delimitação de *região desejada* (RD). Temos que RD está no SPE. Nosso objetivo é projetar $C_{AV}(s)$ de modo que a Função de Transferência de malha-fechada $M(s)$ tenha um pólo dominante (um pólo real ou um par de pólos complexos conjugados) em RD.
+2. **(Controlador Proporcional)** Se o Lugar das Raízes de $G(s)$ passa por Rd, então $C_{AV}(s) = K$ (controlador proporcional), onde $K>0$ é obtido a partir do Lugar das Raízes de modo que em malha-fechada tenhamos um pólo (quase^[Aqui, o termo *quase* dominante significa que é a presençaa de um único zero no SPE,
+ou de um único par pólo-zero no SPE, que tira a dominância do referido pólo]) dominante em^[Quanto mais longe da origem estiver o pólo dominante em RD, mais rápida será a dinâmica de malha-fechada, o que poderá resultar em sinais de controle demasiadamente elevados. Desse modo, devemos procurar obter um pólo (quase) dominante na parte de RD que está mais próxima da origem.] RD. Seguimos então para o Passo 4.
+3. **(Posicionamento do Zero e do Pólo)** Se o Lugar das Raízes de $G(s)$ não passa por RD, devemos posicionar o zero e o pólo de $C_{AV}(s)$ no plano complexo de maneira que o Lugar das Raízes de $C_{AV}(s)G(s)$ passe por RD. Para o posicionamento do zero e do pólo, temos duas situações:
+a. **(Sem Perturbações na Entrada)** Suponha que $G(s)$ é um sistema de Tipo 1 ou superior. Então, em geral, escolhemos o zero de $C_{AV}(s)$ de modo a cancelar^[Se o zero estiver bem próximo do pólo, os efeitos são semelhantes ao de um cancelamento perfeito.] o pólo de G(s) no SPE (estável!) que está mais próximo da origem, com exceção dos pólos em $s = 0$. O pólo de $C_{AV}(s)$ é então posicionado^[Em geral, quanto mais perto da origem estiver o pólo, menos suscetível será o sistema em malha-fechada a possíveis ruídos externos de alta frequÊncia.] à esquerda do zero de modo que o Lugar das Raázes de $C_{AV}(s)G(s)$ apresente um pólo (quase) dominante em RD. Isto é feito por tentativa e erro^[A busca pelo posicionamento adequado do pólo se torna menos onerosa à medida que ganhamos experiência com o método.] (uma escolha inicial usual é $p_1 = 10z_1$). Neste momento, podemos especificar o ganho $K > 0$ de $C_{AV}(s)$ com base no LR.
+
+
+
+
+
+
+
+

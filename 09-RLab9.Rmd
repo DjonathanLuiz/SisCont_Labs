@@ -1,3 +1,111 @@
 # Problemas Laboratório 9 {-}
 
+Estes problemas são relacionados ao assunto abordado no Laboratório \@ref(lab9).
+
+Utilize o pacote `rltool` do Matlab para projetar controladores para os problemas abaixo com base do Lugar das Raízes.
+
+## Problema 9.1 {-}
+
+Considere o processo de segunda ordem 
+
+$$
+G(s) = \frac{0.5}{s(s+1)}
+$$
+
+e as seguintes especificações em malha-fechada:
+
+a. Erro nulo em regime permanente para referências do tipo degrau.
+b. $M_p \leq 5\%$ e $t_s(5\%)\leq8s$.
+
+#### Resolução {-}
+
 Working on it :)
+
+
+
+
+## Problema 9.2 {-}
+
+Considere o processo do processo de primeira ordem
+
+$$
+G(s) = \frac{0.5}{s+1}
+$$
+
+e as seguintes especificações em malha-fechada:
+
+a. Erro nulo em regime permanente^[Para atender a essa especificação, acrescentamos um pólo em $s = 0$ em $G(s)$. Isto equivale a colocarmos um controlador integral (I) em série com o processo.] para referências do tipo degrau.
+b. Sem sobressinal na resposta dinâmica e $t_s(5\%) \leq1.5s$.
+
+**Dica:** Faça um cancelamento pólo-zero
+
+#### Resolução {-}
+
+Working on it :)
+
+## Problema 9.3 {-}
+
+Considere o processo de segunda-ordem
+
+$$
+G(s) = \frac{0.9}{(s+3)(s+4)}=\frac{0.9}{s^2+7s+12}
+$$
+
+e as seguintes especificações em malha-fechada:
+
+a. Erro nulo em regime permanente para referências do tipo degrau
+b. $M_p\leq 10\%$ e $t_s(5\%)\leq1.75s$.
+
+**Dica:** Faça um cancelamento pólo-zero
+
+#### Resolução {-}
+
+Working on it :)
+
+## Problema 9.4 {-}
+
+Repita o Item 2, mas agora considerando que existem perturbações na entrada de $G(s)$. **Dica:** utilize um pré-filtro $F(s)$.
+
+#### Resolução {-}
+
+Working on it :)
+
+## Problema 9.5 {-}
+
+Considere o processo de segunda ordem
+
+$$
+G(s) = \frac{0.9}{(s+2)(s+9)} = \frac{0.9}{s^2+6s+8}
+$$
+
+E as seguintes especificações em malha-fechada:
+
+a. Erro nulo em regime permanente para referências e perturbações na entrada do tipo degrau.
+b. $M_p \leq 20\%$ e $t_s(5\%)\leq1.25s$.
+
+**Dica:** utilize dois controladores avanço de fase em série.
+
+#### Resolução {-}
+
+Working on it :)
+
+## Problema 9.6 {-}
+
+Considere o processo de terceira ordem
+
+$$
+G(s) = \frac{0.8}{s(s+1)(s+2)} = \frac{0.8}{s^3+3s^2+2s}
+$$
+
+e as seguintes especificações em malha-fechada:
+
+a. Erro nulo em regime permanente para referências do tipo degrau
+b. $M_p \leq 5\%$ e $t_s(5\%)\leq5s$
+c. $K_v\geq2$
+
+#### Resolução {-}
+
+Working on it :)
+
+
+

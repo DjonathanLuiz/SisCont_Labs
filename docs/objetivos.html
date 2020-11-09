@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>5.1 Objetivos | Laboratório de Sistemas de Controle</title>
+  <title>9.1 Objetivos | Laboratório de Sistemas de Controle</title>
   <meta name="description" content="Este livro tem o objetivo de apresentar as respostas dos laboratórios da disciplina DAS5317 Sistemas de Controle da Universidade Federal de Santa Catarina para o semestre 2020.1 desenvolvidas pelo acadêmico Djonathan Luiz de Oliveira Quadras." />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="5.1 Objetivos | Laboratório de Sistemas de Controle" />
+  <meta property="og:title" content="9.1 Objetivos | Laboratório de Sistemas de Controle" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="5.1 Objetivos | Laboratório de Sistemas de Controle" />
+  <meta name="twitter:title" content="9.1 Objetivos | Laboratório de Sistemas de Controle" />
   
   <meta name="twitter:description" content="Este livro tem o objetivo de apresentar as respostas dos laboratórios da disciplina DAS5317 Sistemas de Controle da Universidade Federal de Santa Catarina para o semestre 2020.1 desenvolvidas pelo acadêmico Djonathan Luiz de Oliveira Quadras." />
   
@@ -24,16 +24,15 @@
 <meta name="author" content="Djonathan Luiz de Oliveira Quadras" />
 
 
-<meta name="date" content="2020-06-25" />
+<meta name="date" content="2020-11-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="projeto-de-controladores-por-métodos-algébricos.html"/>
-<link rel="next" href="controladores-clássicos.html"/>
-<script src="libs/header-attrs-2.3/header-attrs.js"></script>
+<link rel="prev" href="lab9.html"/>
+<link rel="next" href="pólos-dominantes.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -52,20 +51,23 @@
 
 
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -85,7 +87,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -136,80 +138,97 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Apresentação</a></li>
 <li class="chapter" data-level="1" data-path="simulação-de-sistemas.html"><a href="simulação-de-sistemas.html"><i class="fa fa-check"></i><b>1</b> Simulação de Sistemas</a></li>
-<li class="chapter" data-level="2" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html"><i class="fa fa-check"></i><b>2</b> Efeitos de Pólos e Zeros na Dinâmica</a>
-<ul>
-<li class="chapter" data-level="" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#objetivo"><i class="fa fa-check"></i>Objetivo</a></li>
-<li class="chapter" data-level="" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#pólos-e-zeros"><i class="fa fa-check"></i>Pólos e Zeros</a></li>
-<li class="chapter" data-level="" data-path="procedimentos-dolaboratório-2.html"><a href="procedimentos-dolaboratório-2.html"><i class="fa fa-check"></i>Procedimentos doLaboratório 2</a>
-<ul>
-<li class="chapter" data-level="" data-path="procedimentos-dolaboratório-2.html"><a href="procedimentos-dolaboratório-2.html#problema-1"><i class="fa fa-check"></i>Problema 1</a></li>
-<li class="chapter" data-level="" data-path="procedimentos-dolaboratório-2.html"><a href="procedimentos-dolaboratório-2.html#problema-2"><i class="fa fa-check"></i>Problema 2</a></li>
-<li class="chapter" data-level="" data-path="procedimentos-dolaboratório-2.html"><a href="procedimentos-dolaboratório-2.html#problema-3"><i class="fa fa-check"></i>Problema 3</a></li>
-<li class="chapter" data-level="" data-path="procedimentos-dolaboratório-2.html"><a href="procedimentos-dolaboratório-2.html#problema-4"><i class="fa fa-check"></i>Problema 4</a></li>
-<li class="chapter" data-level="" data-path="procedimentos-dolaboratório-2.html"><a href="procedimentos-dolaboratório-2.html#problema-5"><i class="fa fa-check"></i>Problema 5</a></li>
-<li class="chapter" data-level="" data-path="procedimentos-dolaboratório-2.html"><a href="procedimentos-dolaboratório-2.html#problema-6"><i class="fa fa-check"></i>Problema 6</a></li>
+<li class="chapter" data-level="2" data-path="lab2.html"><a href="lab2.html"><i class="fa fa-check"></i><b>2</b> Efeitos de Pólos e Zeros na Dinâmica</a><ul>
+<li class="chapter" data-level="2.1" data-path="pólos-e-zeros.html"><a href="pólos-e-zeros.html"><i class="fa fa-check"></i><b>2.1</b> Pólos e Zeros</a></li>
 </ul></li>
+<li class="chapter" data-level="" data-path="problemas-laboratório-2.html"><a href="problemas-laboratório-2.html"><i class="fa fa-check"></i>Problemas Laboratório 2</a><ul>
+<li class="chapter" data-level="" data-path="problema-2-1.html"><a href="problema-2-1.html"><i class="fa fa-check"></i>Problema 2.1</a></li>
+<li class="chapter" data-level="" data-path="problema-2-2.html"><a href="problema-2-2.html"><i class="fa fa-check"></i>Problema 2.2</a></li>
+<li class="chapter" data-level="" data-path="problema-2-3.html"><a href="problema-2-3.html"><i class="fa fa-check"></i>Problema 2.3</a></li>
+<li class="chapter" data-level="" data-path="problema-2-4.html"><a href="problema-2-4.html"><i class="fa fa-check"></i>Problema 2.4</a></li>
+<li class="chapter" data-level="" data-path="problema-2-5.html"><a href="problema-2-5.html"><i class="fa fa-check"></i>Problema 2.5</a></li>
+<li class="chapter" data-level="" data-path="problema-2-6.html"><a href="problema-2-6.html"><i class="fa fa-check"></i>Problema 2.6</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html"><i class="fa fa-check"></i><b>3</b> Identificação de Sistemas</a>
-<ul>
-<li class="chapter" data-level="" data-path="efeitos-de-pólos-e-zeros-na-dinâmica.html"><a href="efeitos-de-pólos-e-zeros-na-dinâmica.html#objetivo"><i class="fa fa-check"></i>Objetivo</a></li>
-<li class="chapter" data-level="" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#modelagem-de-sistemas-lineares"><i class="fa fa-check"></i>Modelagem de Sistemas Lineares</a></li>
-<li class="chapter" data-level="" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#identificação-de-sistemas-de-primeira-ordem"><i class="fa fa-check"></i>Identificação de sistemas de primeira ordem</a></li>
-<li class="chapter" data-level="" data-path="identificação-de-sistemas.html"><a href="identificação-de-sistemas.html#identificação-de-sistemas-de-segunda-ordem"><i class="fa fa-check"></i>Identificação de Sistemas de Segunda Ordem</a></li>
-<li class="chapter" data-level="" data-path="procedimentos-do-laboratório-3.html"><a href="procedimentos-do-laboratório-3.html"><i class="fa fa-check"></i>Procedimentos do Laboratório 3</a>
-<ul>
-<li class="chapter" data-level="" data-path="procedimentos-dolaboratório-2.html"><a href="procedimentos-dolaboratório-2.html#problema-1"><i class="fa fa-check"></i>Problema 1</a></li>
-<li class="chapter" data-level="" data-path="procedimentos-dolaboratório-2.html"><a href="procedimentos-dolaboratório-2.html#problema-2"><i class="fa fa-check"></i>Problema 2</a></li>
-<li class="chapter" data-level="" data-path="procedimentos-dolaboratório-2.html"><a href="procedimentos-dolaboratório-2.html#problema-3"><i class="fa fa-check"></i>Problema 3</a></li>
+<li class="chapter" data-level="3" data-path="lab3.html"><a href="lab3.html"><i class="fa fa-check"></i><b>3</b> Identificação de Sistemas</a><ul>
+<li class="chapter" data-level="3.1" data-path="modelagem-de-sistemas-lineares.html"><a href="modelagem-de-sistemas-lineares.html"><i class="fa fa-check"></i><b>3.1</b> Modelagem de Sistemas Lineares</a></li>
+<li class="chapter" data-level="3.2" data-path="identificação-de-sistemas-de-primeira-ordem.html"><a href="identificação-de-sistemas-de-primeira-ordem.html"><i class="fa fa-check"></i><b>3.2</b> Identificação de sistemas de primeira ordem</a></li>
+<li class="chapter" data-level="3.3" data-path="identificação-de-sistemas-de-segunda-ordem.html"><a href="identificação-de-sistemas-de-segunda-ordem.html"><i class="fa fa-check"></i><b>3.3</b> Identificação de Sistemas de Segunda Ordem</a></li>
 </ul></li>
+<li class="chapter" data-level="" data-path="problemas-laboratório-3.html"><a href="problemas-laboratório-3.html"><i class="fa fa-check"></i>Problemas Laboratório 3</a><ul>
+<li class="chapter" data-level="" data-path="problema-3-1.html"><a href="problema-3-1.html"><i class="fa fa-check"></i>Problema 3.1</a></li>
+<li class="chapter" data-level="" data-path="problema-3-2.html"><a href="problema-3-2.html"><i class="fa fa-check"></i>Problema 3.2</a></li>
+<li class="chapter" data-level="" data-path="problema-3-3.html"><a href="problema-3-3.html"><i class="fa fa-check"></i>Problema 3.3</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html"><a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html"><i class="fa fa-check"></i><b>4</b> Rastreamento de Referências e Rejeição de Perturbações - Erro em Regime Permanente</a>
-<ul>
-<li class="chapter" data-level="" data-path="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html"><a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#objetivos"><i class="fa fa-check"></i>Objetivos</a></li>
-<li class="chapter" data-level="" data-path="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html"><a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#tipos-de-sistemas"><i class="fa fa-check"></i>Tipos de Sistemas</a></li>
-<li class="chapter" data-level="" data-path="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html"><a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#erro-em-regime-permanente"><i class="fa fa-check"></i>Erro em regime permanente</a></li>
-<li class="chapter" data-level="" data-path="procedimentos-do-laboratório-4.html"><a href="procedimentos-do-laboratório-4.html"><i class="fa fa-check"></i>Procedimentos do Laboratório 4</a>
-<ul>
-<li class="chapter" data-level="" data-path="procedimentos-dolaboratório-2.html"><a href="procedimentos-dolaboratório-2.html#problema-1"><i class="fa fa-check"></i>Problema 1</a></li>
-<li class="chapter" data-level="" data-path="procedimentos-dolaboratório-2.html"><a href="procedimentos-dolaboratório-2.html#problema-2"><i class="fa fa-check"></i>Problema 2</a></li>
-<li class="chapter" data-level="" data-path="procedimentos-dolaboratório-2.html"><a href="procedimentos-dolaboratório-2.html#problema-3"><i class="fa fa-check"></i>Problema 3</a></li>
-<li class="chapter" data-level="" data-path="procedimentos-dolaboratório-2.html"><a href="procedimentos-dolaboratório-2.html#problema-4"><i class="fa fa-check"></i>Problema 4</a></li>
+<li class="chapter" data-level="4" data-path="lab4.html"><a href="lab4.html"><i class="fa fa-check"></i><b>4</b> Rastreamento de Referências e Rejeição de Perturbações - Erro em Regime Permanente</a><ul>
+<li class="chapter" data-level="4.1" data-path="tipos-de-sistemas.html"><a href="tipos-de-sistemas.html"><i class="fa fa-check"></i><b>4.1</b> Tipos de Sistemas</a></li>
+<li class="chapter" data-level="4.2" data-path="erro-em-regime-permanente-.html"><a href="erro-em-regime-permanente-.html"><i class="fa fa-check"></i><b>4.2</b> Erro em regime permanente.</a></li>
 </ul></li>
+<li class="chapter" data-level="" data-path="problemas-laboratório-4.html"><a href="problemas-laboratório-4.html"><i class="fa fa-check"></i>Problemas Laboratório 4</a><ul>
+<li class="chapter" data-level="" data-path="problema-4-1.html"><a href="problema-4-1.html"><i class="fa fa-check"></i>Problema 4.1</a></li>
+<li class="chapter" data-level="" data-path="problema-4-2.html"><a href="problema-4-2.html"><i class="fa fa-check"></i>Problema 4.2</a></li>
+<li class="chapter" data-level="" data-path="problema-4-3.html"><a href="problema-4-3.html"><i class="fa fa-check"></i>Problema 4.3</a></li>
+<li class="chapter" data-level="" data-path="problema-4-4.html"><a href="problema-4-4.html"><i class="fa fa-check"></i>Problema 4.4</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="projeto-de-controladores-por-métodos-algébricos.html"><a href="projeto-de-controladores-por-métodos-algébricos.html"><i class="fa fa-check"></i><b>5</b> Projeto de Controladores por Métodos Algébricos</a>
-<ul>
-<li class="chapter" data-level="5.1" data-path="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html"><a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#objetivos"><i class="fa fa-check"></i><b>5.1</b> Objetivos</a></li>
-<li class="chapter" data-level="5.2" data-path="controladores-clássicos.html"><a href="controladores-clássicos.html"><i class="fa fa-check"></i><b>5.2</b> Controladores Clássicos</a></li>
-<li class="chapter" data-level="5.3" data-path="método-algébrico-de-projeto-de-controladores.html"><a href="método-algébrico-de-projeto-de-controladores.html"><i class="fa fa-check"></i><b>5.3</b> Método Algébrico de Projeto de Controladores</a></li>
-<li class="chapter" data-level="5.4" data-path="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html"><a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#erro-em-regime-permanente"><i class="fa fa-check"></i><b>5.4</b> Erro em Regime Permanente</a>
-<ul>
+<li class="chapter" data-level="5" data-path="lab5.html"><a href="lab5.html"><i class="fa fa-check"></i><b>5</b> Projeto de Controladores por Métodos Algébricos</a><ul>
+<li class="chapter" data-level="5.1" data-path="controladores-clássicos.html"><a href="controladores-clássicos.html"><i class="fa fa-check"></i><b>5.1</b> Controladores Clássicos</a></li>
+<li class="chapter" data-level="5.2" data-path="método-algébrico-de-projeto-de-controladores.html"><a href="método-algébrico-de-projeto-de-controladores.html"><i class="fa fa-check"></i><b>5.2</b> Método Algébrico de Projeto de Controladores</a></li>
+<li class="chapter" data-level="5.3" data-path="erro-em-regime-permanente.html"><a href="erro-em-regime-permanente.html"><i class="fa fa-check"></i><b>5.3</b> Erro em Regime Permanente</a><ul>
 <li><a href="erro-em-regime-permanente.html#fs-de-primeira-ordem"><span class="math inline">\(F(s)\)</span> de primeira ordem</a></li>
 <li><a href="erro-em-regime-permanente.html#fs-de-segunda-ordem"><span class="math inline">\(F(s)\)</span> de segunda ordem</a></li>
 </ul></li>
-<li class="chapter" data-level="5.5" data-path="procedimentos.html"><a href="procedimentos.html"><i class="fa fa-check"></i><b>5.5</b> Procedimentos</a>
-<ul>
-<li class="chapter" data-level="" data-path="procedimentos-dolaboratório-2.html"><a href="procedimentos-dolaboratório-2.html#problema-1"><i class="fa fa-check"></i>Problema 1</a></li>
-<li class="chapter" data-level="" data-path="procedimentos-dolaboratório-2.html"><a href="procedimentos-dolaboratório-2.html#problema-2"><i class="fa fa-check"></i>Problema 2</a></li>
-<li class="chapter" data-level="" data-path="procedimentos-dolaboratório-2.html"><a href="procedimentos-dolaboratório-2.html#problema-3"><i class="fa fa-check"></i>Problema 3</a></li>
-<li class="chapter" data-level="" data-path="procedimentos-dolaboratório-2.html"><a href="procedimentos-dolaboratório-2.html#problema-4"><i class="fa fa-check"></i>Problema 4</a></li>
 </ul></li>
+<li class="chapter" data-level="" data-path="problemas-laboratório-5.html"><a href="problemas-laboratório-5.html"><i class="fa fa-check"></i>Problemas Laboratório 5</a><ul>
+<li class="chapter" data-level="" data-path="problema-5-1.html"><a href="problema-5-1.html"><i class="fa fa-check"></i>Problema 5.1</a></li>
+<li class="chapter" data-level="" data-path="problema-5-2.html"><a href="problema-5-2.html"><i class="fa fa-check"></i>Problema 5.2</a></li>
+<li class="chapter" data-level="" data-path="problema-5-3.html"><a href="problema-5-3.html"><i class="fa fa-check"></i>Problema 5.3</a></li>
+<li class="chapter" data-level="" data-path="problema-5-4.html"><a href="problema-5-4.html"><i class="fa fa-check"></i>Problema 5.4</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="linearização-de-sistemas-não-lineares.html"><a href="linearização-de-sistemas-não-lineares.html"><i class="fa fa-check"></i><b>6</b> Linearização de Sistemas Não-Lineares</a>
-<ul>
-<li class="chapter" data-level="6.1" data-path="apresentação-do-laboratório.html"><a href="apresentação-do-laboratório.html"><i class="fa fa-check"></i><b>6.1</b> Apresentação do Laboratório</a>
-<ul>
-<li class="chapter" data-level="6.1.1" data-path="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html"><a href="rastreamento-de-referências-e-rejeição-de-perturbações-erro-em-regime-permanente.html#objetivos"><i class="fa fa-check"></i><b>6.1.1</b> Objetivos</a></li>
-<li class="chapter" data-level="6.1.2" data-path="apresentação-do-laboratório.html"><a href="apresentação-do-laboratório.html#sistema-de-um-tanque"><i class="fa fa-check"></i><b>6.1.2</b> Sistema de um tanque</a></li>
-<li class="chapter" data-level="6.1.3" data-path="apresentação-do-laboratório.html"><a href="apresentação-do-laboratório.html#pontos-de-equilíbrio"><i class="fa fa-check"></i><b>6.1.3</b> Pontos de equilíbrio</a></li>
+<li class="chapter" data-level="6" data-path="lab6.html"><a href="lab6.html"><i class="fa fa-check"></i><b>6</b> Linearização de Sistemas Não-Lineares</a><ul>
+<li class="chapter" data-level="6.1" data-path="sistema-de-um-tanque.html"><a href="sistema-de-um-tanque.html"><i class="fa fa-check"></i><b>6.1</b> Sistema de um tanque</a></li>
+<li class="chapter" data-level="6.2" data-path="pontos-de-equilíbrio.html"><a href="pontos-de-equilíbrio.html"><i class="fa fa-check"></i><b>6.2</b> Pontos de equilíbrio</a></li>
+<li class="chapter" data-level="6.3" data-path="linearização-de-sistemas-não-lineares.html"><a href="linearização-de-sistemas-não-lineares.html"><i class="fa fa-check"></i><b>6.3</b> Linearização de sistemas não-lineares</a></li>
 </ul></li>
+<li class="chapter" data-level="" data-path="problemas-laboratório-6.html"><a href="problemas-laboratório-6.html"><i class="fa fa-check"></i>Problemas Laboratório 6</a><ul>
+<li class="chapter" data-level="" data-path="problema-6-1.html"><a href="problema-6-1.html"><i class="fa fa-check"></i>Problema 6.1</a></li>
+<li class="chapter" data-level="" data-path="problema-6-2.html"><a href="problema-6-2.html"><i class="fa fa-check"></i>Problema 6.2</a></li>
+<li class="chapter" data-level="" data-path="problema-6-3.html"><a href="problema-6-3.html"><i class="fa fa-check"></i>Problema 6.3</a></li>
+<li class="chapter" data-level="" data-path="problema-6-4.html"><a href="problema-6-4.html"><i class="fa fa-check"></i>Problema 6.4</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="controle-de-sistemas-não-lineares.html"><a href="controle-de-sistemas-não-lineares.html"><i class="fa fa-check"></i><b>7</b> Controle de Sistemas Não-Lineares</a></li>
-<li class="chapter" data-level="8" data-path="análise-pelo-lugar-das-raízes.html"><a href="análise-pelo-lugar-das-raízes.html"><i class="fa fa-check"></i><b>8</b> Análise pelo Lugar das Raízes</a></li>
-<li class="chapter" data-level="9" data-path="projeto-de-controladores-pelo-lugar-das-raízes.html"><a href="projeto-de-controladores-pelo-lugar-das-raízes.html"><i class="fa fa-check"></i><b>9</b> Projeto de Controladores pelo Lugar das Raízes</a></li>
+<li class="chapter" data-level="7" data-path="lab7.html"><a href="lab7.html"><i class="fa fa-check"></i><b>7</b> Controle de Sistemas Não-Lineares</a><ul>
+<li class="chapter" data-level="7.1" data-path="controladores-lineares-para-o-sistema-de-um-tanque.html"><a href="controladores-lineares-para-o-sistema-de-um-tanque.html"><i class="fa fa-check"></i><b>7.1</b> Controladores lineares para o sistema de um tanque</a></li>
+<li class="chapter" data-level="7.2" data-path="projeto-de-um-controlador-integral-para-o-sistema-de-um-tanque.html"><a href="projeto-de-um-controlador-integral-para-o-sistema-de-um-tanque.html"><i class="fa fa-check"></i><b>7.2</b> Projeto de um controlador integral para o sistema de um tanque</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="problemas-laboratório-7.html"><a href="problemas-laboratório-7.html"><i class="fa fa-check"></i>Problemas Laboratório 7</a><ul>
+<li class="chapter" data-level="" data-path="problema-7-1.html"><a href="problema-7-1.html"><i class="fa fa-check"></i>Problema 7.1</a></li>
+<li class="chapter" data-level="" data-path="problema-7-2.html"><a href="problema-7-2.html"><i class="fa fa-check"></i>Problema 7.2</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="lab8.html"><a href="lab8.html"><i class="fa fa-check"></i><b>8</b> Análise pelo Lugar das Raízes</a><ul>
+<li class="chapter" data-level="8.1" data-path="método-do-lugar-geométrico-das-raízes.html"><a href="método-do-lugar-geométrico-das-raízes.html"><i class="fa fa-check"></i><b>8.1</b> Método do Lugar Geométrico das Raízes</a></li>
+<li class="chapter" data-level="8.2" data-path="estabilidade-e-influência-de-pólos-e-zeros-no-lgr.html"><a href="estabilidade-e-influência-de-pólos-e-zeros-no-lgr.html"><i class="fa fa-check"></i><b>8.2</b> Estabilidade e Influência de Pólos e Zeros no LGR</a></li>
+<li class="chapter" data-level="8.3" data-path="determinação-do-ganho-k-para-sistemas-em-malha-fechada-de-primeira-e-segunda-ordem.html"><a href="determinação-do-ganho-k-para-sistemas-em-malha-fechada-de-primeira-e-segunda-ordem.html"><i class="fa fa-check"></i><b>8.3</b> Determinação do ganho <span class="math inline">\(K\)</span> para sistemas em malha-fechada de primeira e segunda ordem</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="problemas-laboratório-8.html"><a href="problemas-laboratório-8.html"><i class="fa fa-check"></i>Problemas Laboratório 8</a><ul>
+<li class="chapter" data-level="" data-path="problema-8-1.html"><a href="problema-8-1.html"><i class="fa fa-check"></i>Problema 8.1</a></li>
+<li class="chapter" data-level="" data-path="problema-8-2.html"><a href="problema-8-2.html"><i class="fa fa-check"></i>Problema 8.2</a></li>
+<li class="chapter" data-level="" data-path="problema-8-3.html"><a href="problema-8-3.html"><i class="fa fa-check"></i>Problema 8.3</a></li>
+<li class="chapter" data-level="" data-path="problema-8-4.html"><a href="problema-8-4.html"><i class="fa fa-check"></i>Problema 8.4</a></li>
+<li class="chapter" data-level="" data-path="problema-8-5.html"><a href="problema-8-5.html"><i class="fa fa-check"></i>Problema 8.5</a></li>
+<li class="chapter" data-level="" data-path="problema-8-6.html"><a href="problema-8-6.html"><i class="fa fa-check"></i>Problema 8.6</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="lab9.html"><a href="lab9.html"><i class="fa fa-check"></i><b>9</b> Projeto de Controladores pelo Lugar das Raízes</a><ul>
+<li class="chapter" data-level="9.1" data-path="objetivos.html"><a href="objetivos.html"><i class="fa fa-check"></i><b>9.1</b> Objetivos</a></li>
+<li class="chapter" data-level="9.2" data-path="pólos-dominantes.html"><a href="pólos-dominantes.html"><i class="fa fa-check"></i><b>9.2</b> Pólos Dominantes</a></li>
+<li class="chapter" data-level="9.3" data-path="projeto-de-controladores.html"><a href="projeto-de-controladores.html"><i class="fa fa-check"></i><b>9.3</b> Projeto de Controladores</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="problemas-laboratório-9.html"><a href="problemas-laboratório-9.html"><i class="fa fa-check"></i>Problemas Laboratório 9</a></li>
 <li class="chapter" data-level="10" data-path="projeto-do-controlador-atraso-de-fase.html"><a href="projeto-do-controlador-atraso-de-fase.html"><i class="fa fa-check"></i><b>10</b> Projeto do controlador atraso de fase</a></li>
+<li class="chapter" data-level="" data-path="problemas-laboratório-10.html"><a href="problemas-laboratório-10.html"><i class="fa fa-check"></i>Problemas Laboratório 10</a></li>
 <li class="chapter" data-level="11" data-path="análise-pelos-diagramas-de-bode-e-nyquist.html"><a href="análise-pelos-diagramas-de-bode-e-nyquist.html"><i class="fa fa-check"></i><b>11</b> Análise pelos Diagramas de Bode e Nyquist</a></li>
+<li class="chapter" data-level="" data-path="problemas-laboratório-11.html"><a href="problemas-laboratório-11.html"><i class="fa fa-check"></i>Problemas Laboratório 11</a></li>
 <li class="chapter" data-level="12" data-path="projeto-de-controladores-pelo-diagrama-de-bode.html"><a href="projeto-de-controladores-pelo-diagrama-de-bode.html"><i class="fa fa-check"></i><b>12</b> Projeto de Controladores pelo Diagrama de Bode</a></li>
+<li class="chapter" data-level="" data-path="problemas-laboratório-12.html"><a href="problemas-laboratório-12.html"><i class="fa fa-check"></i>Problemas Laboratório 12</a></li>
 <li class="chapter" data-level="13" data-path="digitalização-de-controladores-analógicos.html"><a href="digitalização-de-controladores-analógicos.html"><i class="fa fa-check"></i><b>13</b> Digitalização de Controladores Analógicos</a></li>
+<li class="chapter" data-level="" data-path="problemas-laboratório-13.html"><a href="problemas-laboratório-13.html"><i class="fa fa-check"></i>Problemas Laboratório 13</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -230,17 +249,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="objetivos" class="section level2" number="5.1">
-<h2><span class="header-section-number">5.1</span> Objetivos</h2>
-<p>Nesta experiência projetaremos controladores que atendam determinadas especificações de regime transitório e de regime permanente em malha-fechada por métodos algébricos. Comprovaremos por simulação no Matlab o desempenho do sistema em malha-fechada.</p>
+<div id="objetivos" class="section level2">
+<h2><span class="header-section-number">9.1</span> Objetivos</h2>
+<p>Nesta experiência, projetaremos controladores utilizando o Lugar das Raízes. Veremos alguns métodos de projeto de controladores para que as especificações de regime transitório e de regime permanente sejam atendidas. Utilizaremos o Matlab para verificar se as especificações em malha-fechada foram realmente satisfeitas.</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="projeto-de-controladores-por-métodos-algébricos.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="controladores-clássicos.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="lab9.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="pólos-dominantes.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

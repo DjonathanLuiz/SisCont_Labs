@@ -179,12 +179,27 @@
 \contentsline {section}{Problema 8.6}{125}{section*.77}%
 \contentsline {subsubsection}{Resolução}{125}{section*.78}%
 \contentsline {chapter}{\numberline {9}Projeto de Controladores pelo Lugar das Raízes}{127}{chapter.9}%
-\contentsline {chapter}{Problemas Laboratório 9}{129}{chapter*.79}%
-\contentsline {chapter}{\numberline {10}Projeto do controlador atraso de fase}{131}{chapter.10}%
-\contentsline {chapter}{Problemas Laboratório 10}{133}{chapter*.80}%
-\contentsline {chapter}{\numberline {11}Análise pelos Diagramas de Bode e Nyquist}{135}{chapter.11}%
-\contentsline {chapter}{Problemas Laboratório 11}{137}{chapter*.81}%
-\contentsline {chapter}{\numberline {12}Projeto de Controladores pelo Diagrama de Bode}{139}{chapter.12}%
-\contentsline {chapter}{Problemas Laboratório 12}{141}{chapter*.82}%
-\contentsline {chapter}{\numberline {13}Digitalização de Controladores Analógicos}{143}{chapter.13}%
-\contentsline {chapter}{Problemas Laboratório 13}{145}{chapter*.83}%
+\contentsline {section}{\numberline {9.1}Pólos Dominantes}{127}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Projeto de Controladores}{128}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Projeto do controlador avanço de fase}{129}{section.9.3}%
+\contentsline {chapter}{Problemas Laboratório 9}{131}{chapter*.79}%
+\contentsline {section}{Problema 9.1}{131}{section*.80}%
+\contentsline {subsubsection}{Resolução}{131}{section*.81}%
+\contentsline {section}{Problema 9.2}{131}{section*.82}%
+\contentsline {subsubsection}{Resolução}{132}{section*.83}%
+\contentsline {section}{Problema 9.3}{132}{section*.84}%
+\contentsline {subsubsection}{Resolução}{132}{section*.85}%
+\contentsline {section}{Problema 9.4}{132}{section*.86}%
+\contentsline {subsubsection}{Resolução}{132}{section*.87}%
+\contentsline {section}{Problema 9.5}{133}{section*.88}%
+\contentsline {subsubsection}{Resolução}{133}{section*.89}%
+\contentsline {section}{Problema 9.6}{133}{section*.90}%
+\contentsline {subsubsection}{Resolução}{133}{section*.91}%
+\contentsline {chapter}{\numberline {10}Projeto do controlador atraso de fase}{135}{chapter.10}%
+\contentsline {chapter}{Problemas Laboratório 10}{137}{chapter*.92}%
+\contentsline {chapter}{\numberline {11}Análise pelos Diagramas de Bode e Nyquist}{139}{chapter.11}%
+\contentsline {chapter}{Problemas Laboratório 11}{141}{chapter*.93}%
+\contentsline {chapter}{\numberline {12}Projeto de Controladores pelo Diagrama de Bode}{143}{chapter.12}%
+\contentsline {chapter}{Problemas Laboratório 12}{145}{chapter*.94}%
+\contentsline {chapter}{\numberline {13}Digitalização de Controladores Analógicos}{147}{chapter.13}%
+\contentsline {chapter}{Problemas Laboratório 13}{149}{chapter*.95}%

@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="projeto-de-controladores.html"/>
-<link rel="next" href="problemas-laboratório-9.html"/>
+<link rel="next" href="projeto-do-controlador-atraso-de-fase.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -219,6 +219,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.1" data-path="pólos-dominantes.html"><a href="pólos-dominantes.html"><i class="fa fa-check"></i><b>9.1</b> Pólos Dominantes</a></li>
 <li class="chapter" data-level="9.2" data-path="projeto-de-controladores.html"><a href="projeto-de-controladores.html"><i class="fa fa-check"></i><b>9.2</b> Projeto de Controladores</a></li>
 <li class="chapter" data-level="9.3" data-path="projeto-do-controlador-avanço-de-fase.html"><a href="projeto-do-controlador-avanço-de-fase.html"><i class="fa fa-check"></i><b>9.3</b> Projeto do controlador avanço de fase</a></li>
+<li class="chapter" data-level="9.4" data-path="projeto-do-controlador-atraso-de-fase.html"><a href="projeto-do-controlador-atraso-de-fase.html"><i class="fa fa-check"></i><b>9.4</b> Projeto do Controlador atraso de fase</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="problemas-laboratório-9.html"><a href="problemas-laboratório-9.html"><i class="fa fa-check"></i>Problemas Laboratório 9</a><ul>
 <li class="chapter" data-level="" data-path="problema-9-1.html"><a href="problema-9-1.html"><i class="fa fa-check"></i>Problema 9.1</a></li>
@@ -257,26 +258,67 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="projeto-do-controlador-avanço-de-fase" class="section level2">
 <h2><span class="header-section-number">9.3</span> Projeto do controlador avanço de fase</h2>
 <p>Para projetarmos o controlador avanço de fase <span class="math inline">\(C_{AV}(s)\)</span>, o qual refere às especificações de regime transitório, realizamos os seguintes passos:</p>
-<ol style="list-style-type: decimal">
-<li><strong>(Determinação de RD)</strong> Traçamos o Lugar das Raízes (LR) de <span class="math inline">\(G(s)\)</span> e delimitamos a região do plano complexo que satisfaz as especificações de regime transitório (<span class="math inline">\(T_s(5\%),M_p\)</span>, etc). Denominamos tal delimitação de <em>região desejada</em> (RD). Temos que RD está no SPE. Nosso objetivo é projetar <span class="math inline">\(C_{AV}(s)\)</span> de modo que a Função de Transferência de malha-fechada <span class="math inline">\(M(s)\)</span> tenha um pólo dominante (um pólo real ou um par de pólos complexos conjugados) em RD.</li>
-<li><strong>(Controlador Proporcional)</strong> Se o Lugar das Raízes de <span class="math inline">\(G(s)\)</span> passa por Rd, então <span class="math inline">\(C_{AV}(s) = K\)</span> (controlador proporcional), onde <span class="math inline">\(K&gt;0\)</span> é obtido a partir do Lugar das Raízes de modo que em malha-fechada tenhamos um pólo (quase<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>) dominante em<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a> RD. Seguimos então para o Passo 4.</li>
-<li><strong>(Posicionamento do Zero e do Pólo)</strong> Se o Lugar das Raízes de <span class="math inline">\(G(s)\)</span> não passa por RD, devemos posicionar o zero e o pólo de <span class="math inline">\(C_{AV}(s)\)</span> no plano complexo de maneira que o Lugar das Raízes de <span class="math inline">\(C_{AV}(s)G(s)\)</span> passe por RD. Para o posicionamento do zero e do pólo, temos duas situações:</li>
+<ol>
+<li>
+<strong>(Determinação de RD)</strong> Traçamos o Lugar das Raízes (LR) de <span class="math inline">\(G(s)\)</span> e delimitamos a região do plano complexo que satisfaz as especificações de regime transitório (<span class="math inline">\(T_s(5\%),M_p\)</span>, etc). Denominamos tal delimitação de <em>região desejada</em> (RD). Temos que RD está no SPE. Nosso objetivo é projetar <span class="math inline">\(C_{AV}(s)\)</span> de modo que a Função de Transferência de malha-fechada <span class="math inline">\(M(s)\)</span> tenha um pólo dominante (um pólo real ou um par de pólos complexos conjugados) em RD.
+</li>
+<li>
+<strong>(Controlador Proporcional)</strong> Se o Lugar das Raízes de <span class="math inline">\(G(s)\)</span> passa por Rd, então <span class="math inline">\(C_{AV}(s) = K\)</span> (controlador proporcional), onde <span class="math inline">\(K&gt;0\)</span> é obtido a partir do Lugar das Raízes de modo que em malha-fechada tenhamos um pólo (quase<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>) dominante em<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a> RD. Seguimos então para o Passo 4.
+</li>
+<li>
+<strong>(Posicionamento do Zero e do Pólo)</strong> Se o Lugar das Raízes de <span class="math inline">\(G(s)\)</span> não passa por RD, devemos posicionar o zero e o pólo de <span class="math inline">\(C_{AV}(s)\)</span> no plano complexo de maneira que o Lugar das Raízes de <span class="math inline">\(C_{AV}(s)G(s)\)</span> passe por RD. Para o posicionamento do zero e do pólo, temos duas situações:
+<ol>
+<li>
+<strong>(Sem Perturbações na Entrada)</strong> Suponha que <span class="math inline">\(G(s)\)</span> é um sistema de Tipo 1 ou superior. Então, em geral, escolhemos o zero de <span class="math inline">\(C_{AV}(s)\)</span> de modo a cancelar<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a> o pólo de G(s) no SPE (estável!) que está mais próximo da origem, com exceção dos pólos em <span class="math inline">\(s = 0\)</span>. O pólo de <span class="math inline">\(C_{AV}(s)\)</span> é então posicionado<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a> à esquerda do zero de modo que o Lugar das Raázes de <span class="math inline">\(C_{AV}(s)G(s)\)</span> apresente um pólo (quase) dominante em RD. Isto é feito por tentativa e erro<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a> (uma escolha inicial usual é <span class="math inline">\(p_1 = 10z_1\)</span>). Neste momento, podemos especificar o ganho <span class="math inline">\(K &gt; 0\)</span> de <span class="math inline">\(C_{AV}(s)\)</span> com base no LR.
+</li>
+<dl>
+<dd>
+<strong>Observação 1:</strong> Pólos de <span class="math inline">\(G(s)\)</span> muito próximos da origem <em>não</em> devem ser cancelados. Isto porque, na prática, não haverã um cancelamento perfeito entre o zero do controlador e o pólo do processo real. Assim, se um pólo de <span class="math inline">\(G(s)\)</span> muito perto da origem for cancelado, é possível que o regime transitório do processo real para referências <span class="math inline">\(r(t)\)</span> do tipo degrau apresente uma “cauda” com decaimento relativamente lento.
+</dd>
+<dd>
+<strong>Observação 2:</strong> Quando existirem perturbações externas <span class="math inline">\(W(s)\)</span> na entrada de <span class="math inline">\(G(s)\)</span> (não é na saída!), o pólo cancelado sempre aparecerá na Função de Transferência <span class="math inline">\(Y(s)/W(s) = G(s)/(1+C(s)G(s))\)</span>. Assim, um cancelamento pólo-zero poderá ser efetuado se o pólo cancelado não acarretar em uma dinâmica de rejeição de perturbações demasiadamente lenta.
+</dd>
+</dl>
+<li>
+<strong>(Com Perturbações na Entrada)</strong> o zero de <span class="math inline">\(C_{AV}(s)\)</span> é posicionado<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a> em RD de modo que o LR de <span class="math inline">\(C_{AV}(s)G(s)\)</span> apresente um pólo (quase) dominante<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a> em RD (por tentativa e erro). O pólo de <span class="math inline">\(C_{AV}(s)\)</span> é então posicionado<a href="#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a> à esquerda do zero (uma escolha inicial usual é <span class="math inline">\(p_1 = 10z_1\)</span>). Podemos agora escolher o ganho <span class="math inline">\(K&gt;0\)</span> do controlador.
+</li>
 </ol>
-<ol style="list-style-type: lower-alpha">
-<li><strong>(Sem Perturbações na Entrada)</strong> Suponha que <span class="math inline">\(G(s)\)</span> é um sistema de Tipo 1 ou superior. Então, em geral, escolhemos o zero de <span class="math inline">\(C_{AV}(s)\)</span> de modo a cancelar<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a> o pólo de G(s) no SPE (estável!) que está mais próximo da origem, com exceção dos pólos em <span class="math inline">\(s = 0\)</span>. O pólo de <span class="math inline">\(C_{AV}(s)\)</span> é então posicionado<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a> à esquerda do zero de modo que o Lugar das Raázes de <span class="math inline">\(C_{AV}(s)G(s)\)</span> apresente um pólo (quase) dominante em RD. Isto é feito por tentativa e erro<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a> (uma escolha inicial usual é <span class="math inline">\(p_1 = 10z_1\)</span>). Neste momento, podemos especificar o ganho <span class="math inline">\(K &gt; 0\)</span> de <span class="math inline">\(C_{AV}(s)\)</span> com base no LR.</li>
+</li>
+Pode acontecer de constatarmos que, para quaisquer posicionamentos do zero e do pólo de <span class="math inline">\(C_{AV}(s)\)</span> no plano complexo, o Lugar das Raízes de <span class="math inline">\(C_{AV}(s)G(s)\)</span> nunca passe por RD. Nesse caso, vamos para o Passo 5.
+<li>
+(<strong>Filtro</strong> <span class="math inline">\(F(s)\)</span>) Após termos projetado o controlador <span class="math inline">\(C_{AV}(s)\)</span> nos passos anteriores, temos ainda duas situações:
+<ol>
+<li>
+(<strong>Sem Filtro</strong> (<span class="math inline">\(F(s)=1\)</span>)) Se há pólos dominantes em RD, devemos então verificar por simulação que as especificações de regime transitório foram realmente atendidas. Em caso afirmativo, seguimos para o projeto do controlador atraso de fase <span class="math inline">\(C_{AT}(s)\)</span> da próxima seção. Caso contrário, voltamos para o Passo 3 e ajustamos o <span class="math inline">\(C_{AV}(S)\)</span>.
+</li>
+<li>
+(<strong>Com Filtro</strong>) Se a referência <span class="math inline">\(r(t)\)</span> é sempre do tipo degrau (como ocorre em muitas situações) e é a presença de um único zero em <span class="math inline">\(s=-z\)</span> no SPE que impede que tenhamos pólos dominantes em RD, devemos inserir um pré-filtro da forma
+<span class="math display">\[
+    \boxed{F(s)=\frac{z}{s+z}}
+    \]</span>
+de modo a cancelar o referido zero. Consequentemente, teremos um pólo dominante em RD. E, se são um zero em <span class="math inline">\(s=-z\)</span> e um pólo em <span class="math inline">\(s=-p\)</span> que impedem que tenhamos pólos dominantes em RD, utilizamos um pré-filtro da forma
+<span class="math display">\[
+    F(s)=\frac{p}{z}\frac{s+z}{s+p}.
+    \]</span>
+</li>
 </ol>
-
+</li>
+<li>
+Se <span class="math inline">\(G(s)\)</span> é relativamente complexa e/ou as especificações de regime transitório são muito rigorosas (por exemplo, <span class="math inline">\(t_s(5\%\)</span>) é relativamente pequeno em relação à dinâmica do processo em malha-aberta), é possível que os passos anteriores não permitiram a determinação de um controlador <span class="math inline">\(C_{AV}(s)\)</span> que atenda as especificações de regime transitório. Neste caso, ou (i) utilizamos controladores mais complexos ou (ii) relaxamos as especificações (aumentando-se <span class="math inline">\(t_s(5\%)\)</span>, por exemplo). No primeiro caso, voltamos ao Passo 3 e projetamos um outro controlador avanço <span class="math inline">\(C_{AV2}(s)\)</span> que é colocado em série com o já projetado <span class="math inline">\(C_{AV}(s)\)</span>.
+</li>
+</ol>
 </div>
-<!-- </div> -->
 <div class="footnotes">
 <hr />
 <ol start="2">
-<li id="fn2"><p>Aqui, o termo <em>quase</em> dominante significa que é a presençaa de um único zero no SPE,
-ou de um único par pólo-zero no SPE, que tira a dominância do referido pólo<a href="projeto-do-controlador-avanço-de-fase.html#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>Aqui, o termo <em>quase</em> dominante significa que é a presençaa de um único zero no SPE, ou de um único par pólo-zero no SPE, que tira a dominância do referido pólo<a href="projeto-do-controlador-avanço-de-fase.html#fnref2" class="footnote-back">↩︎</a></p></li>
 <li id="fn3"><p>Quanto mais longe da origem estiver o pólo dominante em RD, mais rápida será a dinâmica de malha-fechada, o que poderá resultar em sinais de controle demasiadamente elevados. Desse modo, devemos procurar obter um pólo (quase) dominante na parte de RD que está mais próxima da origem.<a href="projeto-do-controlador-avanço-de-fase.html#fnref3" class="footnote-back">↩︎</a></p></li>
 <li id="fn4"><p>Se o zero estiver bem próximo do pólo, os efeitos são semelhantes ao de um cancelamento perfeito.<a href="projeto-do-controlador-avanço-de-fase.html#fnref4" class="footnote-back">↩︎</a></p></li>
 <li id="fn5"><p>Em geral, quanto mais perto da origem estiver o pólo, menos suscetível será o sistema em malha-fechada a possíveis ruídos externos de alta frequÊncia.<a href="projeto-do-controlador-avanço-de-fase.html#fnref5" class="footnote-back">↩︎</a></p></li>
 <li id="fn6"><p>A busca pelo posicionamento adequado do pólo se torna menos onerosa à medida que ganhamos experiência com o método.<a href="projeto-do-controlador-avanço-de-fase.html#fnref6" class="footnote-back">↩︎</a></p></li>
+<li id="fn7"><p>De maneira geral, quanto mais longe o zero estiver da origem, menos suscetível será o sistema em malha-fechada a possíveis ruídos externos de alta frequência.<a href="projeto-do-controlador-avanço-de-fase.html#fnref7" class="footnote-back">↩︎</a></p></li>
+<li id="fn8"><p>Novamente, quanto mais longe da origem estiver o pólo dominante em RD, mais rápida será a dinâmica de malha-fechada, o que poderá resultar em sinais de controle demasiadamente elevados. Desse modo, devemos procurar obter um pólo (quase) dominante na parte de RD que está mais próxima da origem.<a href="projeto-do-controlador-avanço-de-fase.html#fnref8" class="footnote-back">↩︎</a></p></li>
+<li id="fn9"><p>Mais uma vez, quanto mais perto da origem estiver o pólo, menos suscetível será o sistema em malha-fechada a possíveis ruídos externos de alta frequência.<a href="projeto-do-controlador-avanço-de-fase.html#fnref9" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
@@ -285,7 +327,7 @@ ou de um único par pólo-zero no SPE, que tira a dominância do referido pólo<
         </div>
       </div>
 <a href="projeto-de-controladores.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="problemas-laboratório-9.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="projeto-do-controlador-atraso-de-fase.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

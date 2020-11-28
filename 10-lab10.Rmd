@@ -1,3 +1,7 @@
 # Análise pelos Diagramas de Bode e Nyquist
 
 Working on it :)
+
+
+
+

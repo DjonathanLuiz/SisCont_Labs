@@ -44,22 +44,88 @@ $$
 
 Relembre que, quanto menor for a ordem do controlador, menor serão a complexidade e os custos envolvidos na implementação.
 
-
-
-
-
-
-
-
 ## Projeto do controlador avanço de fase
 
 Para projetarmos o controlador avanço de fase $C_{AV}(s)$, o qual refere às especificações de regime transitório, realizamos os seguintes passos:
 
-1. **(Determinação de RD)** Traçamos o Lugar das Raízes (LR) de $G(s)$ e delimitamos a região do plano complexo que satisfaz as especificações de regime transitório ($T_s(5\%),M_p$, etc). Denominamos tal delimitação de *região desejada* (RD). Temos que RD está no SPE. Nosso objetivo é projetar $C_{AV}(s)$ de modo que a Função de Transferência de malha-fechada $M(s)$ tenha um pólo dominante (um pólo real ou um par de pólos complexos conjugados) em RD.
-2. **(Controlador Proporcional)** Se o Lugar das Raízes de $G(s)$ passa por Rd, então $C_{AV}(s) = K$ (controlador proporcional), onde $K>0$ é obtido a partir do Lugar das Raízes de modo que em malha-fechada tenhamos um pólo (quase^[Aqui, o termo *quase* dominante significa que é a presençaa de um único zero no SPE,
-ou de um único par pólo-zero no SPE, que tira a dominância do referido pólo]) dominante em^[Quanto mais longe da origem estiver o pólo dominante em RD, mais rápida será a dinâmica de malha-fechada, o que poderá resultar em sinais de controle demasiadamente elevados. Desse modo, devemos procurar obter um pólo (quase) dominante na parte de RD que está mais próxima da origem.] RD. Seguimos então para o Passo 4.
-3. **(Posicionamento do Zero e do Pólo)** Se o Lugar das Raízes de $G(s)$ não passa por RD, devemos posicionar o zero e o pólo de $C_{AV}(s)$ no plano complexo de maneira que o Lugar das Raízes de $C_{AV}(s)G(s)$ passe por RD. Para o posicionamento do zero e do pólo, temos duas situações:
-a. **(Sem Perturbações na Entrada)** Suponha que $G(s)$ é um sistema de Tipo 1 ou superior. Então, em geral, escolhemos o zero de $C_{AV}(s)$ de modo a cancelar^[Se o zero estiver bem próximo do pólo, os efeitos são semelhantes ao de um cancelamento perfeito.] o pólo de G(s) no SPE (estável!) que está mais próximo da origem, com exceção dos pólos em $s = 0$. O pólo de $C_{AV}(s)$ é então posicionado^[Em geral, quanto mais perto da origem estiver o pólo, menos suscetível será o sistema em malha-fechada a possíveis ruídos externos de alta frequÊncia.] à esquerda do zero de modo que o Lugar das Raázes de $C_{AV}(s)G(s)$ apresente um pólo (quase) dominante em RD. Isto é feito por tentativa e erro^[A busca pelo posicionamento adequado do pólo se torna menos onerosa à medida que ganhamos experiência com o método.] (uma escolha inicial usual é $p_1 = 10z_1$). Neste momento, podemos especificar o ganho $K > 0$ de $C_{AV}(s)$ com base no LR.
+<ol>
+  <li>**(Determinação de RD)** Traçamos o Lugar das Raízes (LR) de $G(s)$ e delimitamos a região do plano complexo que satisfaz as especificações de regime transitório ($T_s(5\%),M_p$, etc). Denominamos tal delimitação de *região desejada* (RD). Temos que RD está no SPE. Nosso objetivo é projetar $C_{AV}(s)$ de modo que a Função de Transferência de malha-fechada $M(s)$ tenha um pólo dominante (um pólo real ou um par de pólos complexos conjugados) em RD.</li>
+  <li>**(Controlador Proporcional)** Se o Lugar das Raízes de $G(s)$ passa por Rd, então $C_{AV}(s) = K$ (controlador proporcional), onde $K>0$ é obtido a partir do Lugar das Raízes de modo que em malha-fechada tenhamos um pólo (quase^[Aqui, o termo *quase* dominante significa que é a presençaa de um único zero no SPE, ou de um único par pólo-zero no SPE, que tira a dominância do referido pólo]) dominante em^[Quanto mais longe da origem estiver o pólo dominante em RD, mais rápida será a dinâmica de malha-fechada, o que poderá resultar em sinais de controle demasiadamente elevados. Desse modo, devemos procurar obter um pólo (quase) dominante na parte de RD que está mais próxima da origem.] RD. Seguimos então para o Passo 4. </li>
+  <li>**(Posicionamento do Zero e do Pólo)** Se o Lugar das Raízes de $G(s)$ não passa por RD, devemos posicionar o zero e o pólo de $C_{AV}(s)$ no plano complexo de maneira que o Lugar das Raízes de $C_{AV}(s)G(s)$ passe por RD. Para o posicionamento do zero e do pólo, temos duas situações:
+  <ol>
+    <li>**(Sem Perturbações na Entrada)** Suponha que $G(s)$ é um sistema de Tipo 1 ou superior. Então, em geral, escolhemos o zero de $C_{AV}(s)$ de modo a cancelar^[Se o zero estiver bem próximo do pólo, os efeitos são semelhantes ao de um cancelamento perfeito.] o pólo de G(s) no SPE (estável!) que está mais próximo da origem, com exceção dos pólos em $s = 0$. O pólo de $C_{AV}(s)$ é então posicionado^[Em geral, quanto mais perto da origem estiver o pólo, menos suscetível será o sistema em malha-fechada a possíveis ruídos externos de alta frequÊncia.] à esquerda do zero de modo que o Lugar das Raázes de $C_{AV}(s)G(s)$ apresente um pólo (quase) dominante em RD. Isto é feito por tentativa e erro^[A busca pelo posicionamento adequado do pólo se torna menos onerosa à medida que ganhamos experiência com o método.] (uma escolha inicial usual é $p_1 = 10z_1$). Neste momento, podemos especificar o ganho $K > 0$ de $C_{AV}(s)$ com base no LR.</li>
+    <dl>
+      <dd>**Observação 1:** Pólos de $G(s)$ muito próximos da origem *não* devem ser cancelados. Isto porque, na prática, não haverã um cancelamento perfeito entre o zero do controlador e o pólo do processo real. Assim, se um pólo de $G(s)$ muito perto da origem for cancelado, é possível que o regime transitório do processo real para referências $r(t)$ do tipo degrau apresente uma "cauda" com decaimento relativamente lento.</dd>
+      <dd>**Observação 2:** Quando existirem perturbações externas $W(s)$ na entrada de $G(s)$ (não é na saída!), o pólo cancelado sempre aparecerá na Função de Transferência $Y(s)/W(s) = G(s)/(1+C(s)G(s))$. Assim, um cancelamento pólo-zero poderá ser efetuado se o pólo cancelado não acarretar em uma dinâmica de rejeição de perturbações demasiadamente lenta.</dd> 
+    </dl>
+    <li>**(Com Perturbações na Entrada)** o zero de $C_{AV}(s)$ é posicionado^[De maneira geral, quanto mais longe o zero estiver da origem, menos suscetível será o sistema em malha-fechada a possíveis ruídos externos de alta frequência.] em RD de modo que o LR de $C_{AV}(s)G(s)$ apresente um pólo (quase) dominante^[Novamente, quanto mais longe da origem estiver o pólo dominante em RD, mais rápida será a dinâmica de malha-fechada, o que poderá resultar em sinais de controle demasiadamente elevados. Desse modo, devemos procurar obter um pólo (quase) dominante na parte de RD que está mais próxima da origem.] em RD (por tentativa e erro). O pólo de $C_{AV}(s)$ é então posicionado^[Mais uma vez, quanto mais perto da origem estiver o pólo, menos suscetível será o sistema em malha-fechada a possíveis ruídos externos de alta frequência.] à esquerda do zero (uma escolha inicial usual é $p_1 = 10z_1$). Podemos agora escolher o ganho $K>0$ do controlador. </li>
+    </ol>
+    </li>
+Pode acontecer de constatarmos que, para quaisquer posicionamentos do zero e do pólo de $C_{AV}(s)$ no plano complexo, o Lugar das Raízes de $C_{AV}(s)G(s)$ nunca passe por RD. Nesse caso, vamos para o Passo 5.
+  <li>(**Filtro** $F(s)$) Após termos projetado o controlador $C_{AV}(s)$ nos passos anteriores, temos ainda duas situações:
+  <ol>
+    <li>
+      (**Sem Filtro** ($F(s)=1$)) Se há pólos dominantes em RD, devemos então verificar por simulação que as especificações de regime transitório foram realmente atendidas. Em caso afirmativo, seguimos para o projeto do controlador atraso de fase $C_{AT}(s)$ da próxima seção. Caso contrário, voltamos para o Passo 3 e ajustamos o $C_{AV}(S)$.
+    </li>
+    <li>
+    (**Com Filtro**) Se a referência $r(t)$ é sempre do tipo degrau (como ocorre em muitas situações) e é a presença de um único zero em $s=-z$ no SPE que impede que tenhamos pólos dominantes em RD, devemos inserir um pré-filtro da forma
+    $$
+    \boxed{F(s)=\frac{z}{s+z}}
+    $$
+    de modo a cancelar o referido zero. Consequentemente, teremos um pólo dominante em RD. E, se são um zero em $s=-z$ e um pólo em $s=-p$ que impedem que tenhamos pólos dominantes em RD, utilizamos um pré-filtro da forma
+    $$
+    F(s)=\frac{p}{z}\frac{s+z}{s+p}.
+    $$
+    </li>
+  </ol>
+  </li>
+  <li>
+   Se $G(s)$ é relativamente complexa e/ou as especificações de regime transitório são muito rigorosas (por exemplo, $t_s(5\%$) é relativamente pequeno em relação à dinâmica do processo em malha-aberta), é possível que os passos anteriores não permitiram a determinação de um controlador $C_{AV}(s)$ que atenda as especificações de regime transitório. Neste caso, ou (i) utilizamos controladores mais complexos ou (ii) relaxamos as especificações (aumentando-se $t_s(5\%)$, por exemplo). No primeiro caso, voltamos ao Passo 3 e projetamos um outro controlador avanço $C_{AV2}(s)$ que é colocado em série com o já projetado $C_{AV}(s)$.
+  </li>
+</ol>
+
+## Projeto do Controlador atraso de fase
+
+Suponha que as especificações de regime permanente são $K_v$ (constante de velocidade para sistema de Tipo 1) ou $K_a$ (constante de aceleração para sistemas de Tipo 2). Determine $\overline{K_v}$ (ou $\overline{K_a}$) de $C_{AV}(s)G(s)$. Relembre que
+
+$$
+\overline{K_v} = \lim_{s\to0}{s C_{AV}(s)G(s)}
+$$
+
+(e $\overline{K_a} = \lim_{s\to0}{s^2C_{AV}(s)G(s)}$).
+
+Para que as especificações de regime permanente sejam atendidas, realizamos os seguintes passos:
+<ol>
+  <li>
+   Se $\overline{K_v} \geq K_v$ (ou $\overline{K_a} ≥ K_a$), então o controlador $C_{AV}(s)$ projetado na seção anterior atende tanto as especificações de regime transitório quanto as de regime permanente. Neste caso, não há necessidade de utilizarmos um controlador atraso de fase, ou seja, $C_{AT}(s) = 1$.
+  </li>
+  <li>
+   Caso contr´ario, defina
+   $$
+   \boxed{\alpha = \frac{K_v}{\overline{K_v}}} \quad \text{(ou } \alpha = K_a/\overline{K_a}\text{)}
+   $$
+   (note que $\alpha > 1$). Seja $R(R < 0)$ a parte real de $s_d$, onde $s_d$ é o pólo dominante em RD determinado na seção anterior. Para o controlador atraso de fase.
+   $$
+   C_{AT}(s) = \frac{s+z_2}{s+p_2}=\frac{s+z_2}{s+(z_2/\alpha)},
+   $$
+   escolhemos $\beta > 0$ (por exemplo, $\beta=10$ ou $\beta=100$) de modo que o zero
+   $$
+   \boxed{z_2=\frac{R}{\beta}\cong0}
+   $$
+   esteja próximo da origem. Observer que $C_{AT}(0) = \alpha$ e que o pólo é
+   $$
+   \boxed{p_2=\frac{z_2}{\alpha}}
+   $$
+   Note que, quando $\alpha \cong 1$ ($\alpha$ não é muito grande), teremos praticamente um cancelamento póloo-zero. A consequência disto é que a dominância de $s_d$ será pouco afetada pela inclusão de $C_{AT}(s)$. Por sua vez, isto implica que o pólo e o zero de $C_{AT}(s)$ terão uma influância muito pequena no regime transitório em relação à referência (o qual já foi ajustado pelo $C_{AV}(s)$ da seção anterior). No entanto, o transitório para referências do tipo degrau geralmente apresenta uma “cauda” com decaimento relativamente lento. Em muitos casos, tal comportamento não acarreta em nenhum problema.
+
+**Observação:** Quando existirem perturbações externas $W(s)$ na entrada de
+$G(s)$ (não é na saída!), temos que o zero $z_2$ de $C_{AT}(s)$ não aparecerá na Função de Transferência $Y(s)/W(s) = G(s)/(1 + C(s)G(s))$. Portanto, a dinâmica de rejeição da perturbação em malha-fechada pode se tornar demasiadamente lenta.
+Um valor usual máximo para $\alpha$ é $\alpha_{max}=10$ ($\alpha_{max}$ depende de restrições práticas referentes à implementação de $C_{AT}(s))$. 
+
+Caso $\alpha > \alpha_{max}$, devemos utilizar vários controladores atraso de fase em série ou então reprojetar o controlador avançoo de fase $C_{AV}(s)$ de modo que $\overline{K_v}$ (ou $\overline{K_a}$) aumente.
+  </li>
+</ol>
+
 
 
 

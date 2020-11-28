@@ -101,6 +101,7 @@ lab9
 pólos-dominantes
 projeto-de-controladores
 projeto-do-controlador-avanço-de-fase
+projeto-do-controlador-atraso-de-fase
 análise-pelos-diagramas-de-bode-e-nyquist
 projeto-de-controladores-pelo-diagrama-de-bode
 digitalização-de-controladores-analógicos

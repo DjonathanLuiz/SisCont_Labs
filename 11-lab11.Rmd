@@ -1,3 +1,3 @@
-# Análise pelos Diagramas de Bode e Nyquist
+# Projeto de Controladores pelo Diagrama de Bode
 
 Working on it :)

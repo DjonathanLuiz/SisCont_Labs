@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.1)  8 NOV 2020 21:06
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.1)  28 NOV 2020 10:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1576,54 +1576,48 @@ Chapter 10.
 
 ]
 Chapter 11.
-[139] [140
+[139]
+Overfull \hbox (40.83342pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 140 \TU/lmr/m/sl/10 CHAPTER 11.  PROJETO DE CONTROLADORES PELO D
+IAGRAMA DE BODE
+ []
 
-] [141] [142
+[140
+
+] [141]
+Overfull \hbox (40.83342pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 142 \TU/lmr/m/sl/10 CHAPTER 11.  PROJETO DE CONTROLADORES PELO D
+IAGRAMA DE BODE
+ []
+
+[142
 
 ]
 Chapter 12.
 [143]
-Overfull \hbox (40.83342pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 144 \TU/lmr/m/sl/10 CHAPTER 12.  PROJETO DE CONTROLADORES PELO D
-IAGRAMA DE BODE
+Overfull \hbox (6.85674pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 144 \TU/lmr/m/sl/10 CHAPTER 12.  DIGITALIZAÇÃO DE CONTROLADORES 
+ANALÓGICOS
  []
 
 [144
 
-] [145]
-Overfull \hbox (40.83342pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 146 \TU/lmr/m/sl/10 CHAPTER 12.  PROJETO DE CONTROLADORES PELO D
-IAGRAMA DE BODE
- []
-
-[146
-
-]
-Chapter 13.
-[147]
-Overfull \hbox (6.85674pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 148 \TU/lmr/m/sl/10 CHAPTER 13.  DIGITALIZAÇÃO DE CONTROLADORES 
-ANALÓGICOS
- []
-
-[148
-
 ]
 No file SisCont_Labs.bbl.
-[149] (./SisCont_Labs.aux)
+[145] (./SisCont_Labs.aux)
 Package rerunfilecheck Info: File `SisCont_Labs.out' has not changed.
-(rerunfilecheck)             Checksum: 95BDE393BF73BAAB12C8F08E17E32850;14700.
+(rerunfilecheck)             Checksum: A20855D7E054F376F41A0E3F03BCE233;14280.
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 18384 strings out of 479410
- 334627 string characters out of 5878655
- 793493 words of memory out of 5000000
- 37413 multiletter control sequences out of 15000+600000
+ 18382 strings out of 479410
+ 334559 string characters out of 5878655
+ 792917 words of memory out of 5000000
+ 37411 multiletter control sequences out of 15000+600000
  542556 words of font info for 95 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
  94i,10n,118p,1043b,499s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on SisCont_Labs.pdf (149 pages).
+Output written on SisCont_Labs.pdf (145 pages).

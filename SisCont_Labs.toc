@@ -195,11 +195,9 @@
 \contentsline {subsubsection}{Resolução}{133}{section*.89}%
 \contentsline {section}{Problema 9.6}{133}{section*.90}%
 \contentsline {subsubsection}{Resolução}{133}{section*.91}%
-\contentsline {chapter}{\numberline {10}Projeto do controlador atraso de fase}{135}{chapter.10}%
+\contentsline {chapter}{\numberline {10}Análise pelos Diagramas de Bode e Nyquist}{135}{chapter.10}%
 \contentsline {chapter}{Problemas Laboratório 10}{137}{chapter*.92}%
-\contentsline {chapter}{\numberline {11}Análise pelos Diagramas de Bode e Nyquist}{139}{chapter.11}%
+\contentsline {chapter}{\numberline {11}Projeto de Controladores pelo Diagrama de Bode}{139}{chapter.11}%
 \contentsline {chapter}{Problemas Laboratório 11}{141}{chapter*.93}%
-\contentsline {chapter}{\numberline {12}Projeto de Controladores pelo Diagrama de Bode}{143}{chapter.12}%
+\contentsline {chapter}{\numberline {12}Digitalização de Controladores Analógicos}{143}{chapter.12}%
 \contentsline {chapter}{Problemas Laboratório 12}{145}{chapter*.94}%
-\contentsline {chapter}{\numberline {13}Digitalização de Controladores Analógicos}{147}{chapter.13}%
-\contentsline {chapter}{Problemas Laboratório 13}{149}{chapter*.95}%

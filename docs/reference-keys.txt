@@ -82,6 +82,16 @@ fig:fig10RA5
 fig:fig10RA6
 fig:fig10RA7
 fig:fig10RA8
+fig:fig10RC1
+fig:fig10RC2
+fig:fig10RC3
+fig:fig10RC4
+fig:fig10RC5
+fig:fig10RC6
+fig:fig10RC7
+fig:fig10RC8
+fig:fig10RC9
+fig:fig10RC10
 simulação-de-sistemas
 lab2
 pólos-e-zeros

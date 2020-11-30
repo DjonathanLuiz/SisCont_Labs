@@ -224,11 +224,15 @@
 \contentsline {paragraph}{\numberline {10.4.0.0.8}Parte D}{145}{paragraph.10.4.0.0.8}%
 \contentsline {section}{Problema 10.3}{145}{section*.97}%
 \contentsline {subsubsection}{Resolução}{145}{section*.98}%
-\contentsline {section}{Problema 10.4}{146}{section*.99}%
-\contentsline {subsubsection}{Resolução}{146}{section*.100}%
-\contentsline {section}{Problema 10.5}{146}{section*.101}%
-\contentsline {subsubsection}{Resolução}{147}{section*.102}%
-\contentsline {chapter}{\numberline {11}Projeto de Controladores pelo Diagrama de Bode}{149}{chapter.11}%
-\contentsline {chapter}{Problemas Laboratório 11}{151}{chapter*.103}%
-\contentsline {chapter}{\numberline {12}Digitalização de Controladores Analógicos}{153}{chapter.12}%
-\contentsline {chapter}{Problemas Laboratório 12}{155}{chapter*.104}%
+\contentsline {paragraph}{Parte A}{145}{paragraph.10.4.0.0.9}%
+\contentsline {paragraph}{\numberline {10.4.0.0.9}Parte A}{145}{paragraph.10.4.0.0.9}%
+\contentsline {paragraph}{Parte B}{148}{paragraph.10.4.0.0.10}%
+\contentsline {paragraph}{\numberline {10.4.0.0.10}Parte B}{148}{paragraph.10.4.0.0.10}%
+\contentsline {section}{Problema 10.4}{148}{section*.99}%
+\contentsline {subsubsection}{Resolução}{150}{section*.100}%
+\contentsline {section}{Problema 10.5}{150}{section*.101}%
+\contentsline {subsubsection}{Resolução}{150}{section*.102}%
+\contentsline {chapter}{\numberline {11}Projeto de Controladores pelo Diagrama de Bode}{151}{chapter.11}%
+\contentsline {chapter}{Problemas Laboratório 11}{153}{chapter*.103}%
+\contentsline {chapter}{\numberline {12}Digitalização de Controladores Analógicos}{155}{chapter.12}%
+\contentsline {chapter}{Problemas Laboratório 12}{157}{chapter*.104}%

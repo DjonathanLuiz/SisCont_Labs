@@ -118,7 +118,53 @@ b.  Em cada caso, analise a estabilidade em malha-fechada pelo critério e pelo 
 
 #### Resolução {-}
 
-Working on it :)
+##### Parte A {-}
+
+As simulações para os diferentes cenários estão apresentados nas Figuras \@ref(fig:fig10RC1), \@ref(fig:fig10RC2), \@ref(fig:fig10RC3), \@ref(fig:fig10RC4) e \@ref(fig:fig10RC5).
+
+```{r fig10RC1, fig.align='center', echo=FALSE, fig.cap='Resultado para $K = 1$', out.width='50%'}
+knitr::include_graphics('Imagens/Lab10/Resolução/fig9a.jpg', dpi = NA)
+```
+
+```{r fig10RC2, fig.align='center', echo=FALSE, fig.cap='Resultado para $K = 10$', out.width='50%'}
+knitr::include_graphics('Imagens/Lab10/Resolução/fig10a.jpg', dpi = NA)
+```
+
+```{r fig10RC3, fig.align='center', echo=FALSE, fig.cap='Resultado para $K = 40$', out.width='50%'}
+knitr::include_graphics('Imagens/Lab10/Resolução/fig11a.jpg', dpi = NA)
+```
+
+```{r fig10RC4, fig.align='center', echo=FALSE, fig.cap='Resultado para $K = 60$', out.width='50%'}
+knitr::include_graphics('Imagens/Lab10/Resolução/fig12a.jpg', dpi = NA)
+```
+
+```{r fig10RC5, fig.align='center', echo=FALSE, fig.cap='Resultado para $K = 80$', out.width='50%'}
+knitr::include_graphics('Imagens/Lab10/Resolução/fig13a.jpg', dpi = NA)
+```
+
+##### Parte B {-}
+
+As simulações para os diferentes cenários estão apresentados nas Figuras \@ref(fig:fig10RC6), \@ref(fig:fig10RC7), \@ref(fig:fig10RC8), \@ref(fig:fig10RC9) e \@ref(fig:fig10RC10).
+
+```{r fig10RC6, fig.align='center', echo=FALSE, fig.cap='Resultado para $K = 1$', out.width='50%'}
+knitr::include_graphics('Imagens/Lab10/Resolução/fig9b.jpg', dpi = NA)
+```
+
+```{r fig10RC7, fig.align='center', echo=FALSE, fig.cap='Resultado para $K = 10$', out.width='50%'}
+knitr::include_graphics('Imagens/Lab10/Resolução/fig10b.jpg', dpi = NA)
+```
+
+```{r fig10RC8, fig.align='center', echo=FALSE, fig.cap='Resultado para $K = 40$', out.width='50%'}
+knitr::include_graphics('Imagens/Lab10/Resolução/fig11b.jpg', dpi = NA)
+```
+
+```{r fig10RC9, fig.align='center', echo=FALSE, fig.cap='Resultado para $K = 60$', out.width='50%'}
+knitr::include_graphics('Imagens/Lab10/Resolução/fig12b.jpg', dpi = NA)
+```
+
+```{r fig10RC10, fig.align='center', echo=FALSE, fig.cap='Resultado para $K = 80$', out.width='50%'}
+knitr::include_graphics('Imagens/Lab10/Resolução/fig13b.jpg', dpi = NA)
+```
 
 
 

@@ -74,6 +74,10 @@ fig:fig8R8
 fig:fig9A1
 fig:fig10A1
 eq:eq101
+fig:fig10RA1
+fig:fig10RA2
+fig:fig10RA3
+fig:fig10RA4
 simulação-de-sistemas
 lab2
 pólos-e-zeros

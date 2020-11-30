@@ -17,7 +17,38 @@ d. Comprove a estabilidade em malha-fechada também pelo LR.
 
 #### Resolução {-}
 
-Working on it :)
+##### Parte A {-}
+
+O resultado da simulação está apresentado na Figura \@ref(fig:fig10RA1). Percebe-se que o sistema é estável.
+
+```{r fig10RA1, fig.align='center', echo=FALSE, fig.cap='Resultado A', out.width='50%'}
+knitr::include_graphics('Imagens/Lab10/Resolução/fig1.jpg', dpi = NA)
+```
+
+
+##### Parte B {-}
+
+O resultado da simulação está apresentado na Figura \@ref(fig:fig10RA2). Percebe-se que o sistema é estável.
+
+```{r fig10RA2, fig.align='center', echo=FALSE, fig.cap='Resultado B', out.width='50%'}
+knitr::include_graphics('Imagens/Lab10/Resolução/fig2.jpg', dpi = NA)
+```
+
+##### Parte C {-}
+
+O resultado da simulação está apresentado na Figura \@ref(fig:fig10RA3). Percebe-se que o sistema é estável para $K=1$.
+
+```{r fig10RA3, fig.align='center', echo=FALSE, fig.cap='Resultado C', out.width='50%'}
+knitr::include_graphics('Imagens/Lab10/Resolução/fig3.jpg', dpi = NA)
+```
+
+##### Parte D {-}
+
+O resultado da simulação está apresentado na Figura \@ref(fig:fig10RA4). Percebe-se que o sistema é estável.
+
+```{r fig10RA4, fig.align='center', echo=FALSE, fig.cap='Resultado D', out.width='50%'}
+knitr::include_graphics('Imagens/Lab10/Resolução/fig4.jpg', dpi = NA)
+```
 
 
 ## Problema 10.2 {-}

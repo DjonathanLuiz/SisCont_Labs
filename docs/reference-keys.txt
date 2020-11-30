@@ -72,6 +72,8 @@ fig:fig84c1
 fig:fig84c2
 fig:fig8R8
 fig:fig9A1
+fig:fig10A1
+eq:eq101
 simulação-de-sistemas
 lab2
 pólos-e-zeros
@@ -102,6 +104,10 @@ pólos-dominantes
 projeto-de-controladores
 projeto-do-controlador-avanço-de-fase
 projeto-do-controlador-atraso-de-fase
-análise-pelos-diagramas-de-bode-e-nyquist
+lab10
+revisão-de-estabilidade
+diagramas-de-bode-e-nyquist
+margem-de-fase-e-margem-de-ganho
+projeto-do-controlador-proporcional-para-ajuste-da-margem-de-fase
 projeto-de-controladores-pelo-diagrama-de-bode
 digitalização-de-controladores-analógicos

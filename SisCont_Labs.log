@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.1)  28 NOV 2020 15:56
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.1)  29 NOV 2020 22:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1576,54 +1576,68 @@ GAR DAS RAÍZES
 
 ]
 Chapter 10.
-[137] [138
+File: Imagens/Lab10/Apresentação/fig1.jpg Graphic file (type bmp)
+<Imagens/Lab10/Apresentação/fig1.jpg>
+[137] [138]
+Overfull \hbox (115.42012pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/10 10.4.  PROJETO DO CONTROLADOR PROPORCIONAL PARA AJUSTE DA MARGE
+M DE FASE \TU/lmr/m/n/10 139
+ []
 
-] [139] [140
+[139] [140
 
-]
+] [141] [142]
+Overfull \hbox (115.42012pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/10 10.4.  PROJETO DO CONTROLADOR PROPORCIONAL PARA AJUSTE DA MARGE
+M DE FASE \TU/lmr/m/n/10 143
+ []
+
+[143] [144]
 Chapter 11.
-[141]
-Overfull \hbox (40.83342pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 142 \TU/lmr/m/sl/10 CHAPTER 11.  PROJETO DE CONTROLADORES PELO D
-IAGRAMA DE BODE
- []
-
-[142
-
-] [143]
-Overfull \hbox (40.83342pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 144 \TU/lmr/m/sl/10 CHAPTER 11.  PROJETO DE CONTROLADORES PELO D
-IAGRAMA DE BODE
- []
-
-[144
+[145
 
 ]
-Chapter 12.
-[145]
-Overfull \hbox (6.85674pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 146 \TU/lmr/m/sl/10 CHAPTER 12.  DIGITALIZAÇÃO DE CONTROLADORES 
-ANALÓGICOS
+Overfull \hbox (40.83342pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 146 \TU/lmr/m/sl/10 CHAPTER 11.  PROJETO DE CONTROLADORES PELO D
+IAGRAMA DE BODE
  []
 
 [146
 
+] [147]
+Overfull \hbox (40.83342pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 148 \TU/lmr/m/sl/10 CHAPTER 11.  PROJETO DE CONTROLADORES PELO D
+IAGRAMA DE BODE
+ []
+
+[148
+
+]
+Chapter 12.
+[149]
+Overfull \hbox (6.85674pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 150 \TU/lmr/m/sl/10 CHAPTER 12.  DIGITALIZAÇÃO DE CONTROLADORES 
+ANALÓGICOS
+ []
+
+[150
+
 ]
 No file SisCont_Labs.bbl.
-[147] (./SisCont_Labs.aux)
+[151] (./SisCont_Labs.aux)
 Package rerunfilecheck Info: File `SisCont_Labs.out' has not changed.
-(rerunfilecheck)             Checksum: 378F938F3AE143E77FBB0DFFC9AE3EFE;14535.
+(rerunfilecheck)             Checksum: 47A9E79D64F3F7576ED73947F775EC2E;16192.
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 18383 strings out of 479410
- 334598 string characters out of 5878655
- 793249 words of memory out of 5000000
- 37412 multiletter control sequences out of 15000+600000
+ 18414 strings out of 479410
+ 335397 string characters out of 5878655
+ 794816 words of memory out of 5000000
+ 37442 multiletter control sequences out of 15000+600000
  542556 words of font info for 95 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
  94i,10n,118p,1043b,499s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on SisCont_Labs.pdf (147 pages).
+Output written on SisCont_Labs.pdf (151 pages).

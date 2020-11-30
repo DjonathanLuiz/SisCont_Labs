@@ -113,7 +113,7 @@
 
 \title{Laboratório de Sistemas de Controle}
 \author{Djonathan Luiz de Oliveira Quadras}
-\date{2020-11-28}
+\date{2020-11-29}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Teorema}[chapter]
@@ -3085,14 +3085,239 @@ e as seguintes especificações em malha-fechada:
 
 Working on it :)
 
-\hypertarget{anuxe1lise-pelos-diagramas-de-bode-e-nyquist}{%
-\chapter{Análise pelos Diagramas de Bode e Nyquist}\label{anuxe1lise-pelos-diagramas-de-bode-e-nyquist}}
+\hypertarget{lab10}{%
+\chapter{Análise pelos Diagramas de Bode e Nyquist}\label{lab10}}
 
-Working on it :)
+Nesta experiência, estudaremos o diagrama de Bode e o diagrama de Nyquist. Analisaremos a estabilidade do sistema em malha-fechada pela margem de ganho e pela margem de fase. Investigaremos a influência de pólos e zeros na margem de fase. Por fim, veremos como projetar um controlador proporcional de modo a ajustar a margem de fase.
+
+\hypertarget{revisuxe3o-de-estabilidade}{%
+\section{Revisão de Estabilidade}\label{revisuxe3o-de-estabilidade}}
+
+Considere o diagrama de blocos do processo \(G(s)\) em malha-fechada da Figura \ref{fig:fig10A1} , onde \(r(t)\) é a referência, \(y(t)\) é a saída e \(u(t)\) é o controle.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{Imagens/Lab10/Apresentação/fig1} 
+
+}
+
+\caption{Diagrama de blocos do processo em malha-fechada.}\label{fig:fig10A1}
+\end{figure}
+
+A Função de Transferência em malha-fechada é dada por
+
+\[
+F(s) = \frac{Y(s)}{R(s)} = \frac{G(s)}{1+G(s)}.
+\label{eq:eq101}
+\]
+
+Relembramos que:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(F(s)\) é estável quando todos os pólos estão no SPE, ou seja, possuem parte real negativa.
+\item
+  \(F(s)\) é instável quando possui ao menos um pólo no SPD (parte real positiva).
+\item
+  \(F(s)\) é marginalmente estável quando possui ao menos um pólo no eixo imaginário (parte real nula).
+\item
+  \(G(s)\) (processo) é de fase mínima quando todos os pólos e zeros estão no SPE.
+\end{enumerate}
+
+Na prática, no entanto, sempre teremos diferençaas entre o modelo matemático \(G(s)\) e o processo real. Desse modo, o fato de termos F(s) estável nem sempre assegura que o processo real em malha-fechada será estável. Por este motivo, em muitos casos, desejamos saber também o ``quão estável'' é \(F(s)\), ou seja, qual o ``grau de estabilidade'' de \(F(s)\) ou o ``quão longe'' da instabilidade está \(F(s)\). Isto é o que denominamos de estabilidade relativa.
+Veremos como definir matematicamente a estabilidade relativa na próxima seção.
+
+\hypertarget{diagramas-de-bode-e-nyquist}{%
+\section{Diagramas de Bode e Nyquist}\label{diagramas-de-bode-e-nyquist}}
+
+Seja \(G(s)\) a Função de TransferÊncia de um sistema. O diagrama de Bode de \(G(s)\) é composto por duas curvas:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \emph{Diagrama de amplitude}: é a curva \(\omega \times |G(j\omega)|_{dB}\), onde a frequência \(\omega \geq 0\) é apresentada em escala logarítmica e \(|G(j\omega)|_{dB} = 20 \log |G(j\omega)|\).
+\item
+  \emph{Diagrama de fase}: é a curva \(\omega \times\angle{G(j\omega)}\), onde \(\omega \geq 0\) é dada em escala logarítmica e a fase \(\angle{G(j\omega)}\) é apresentada em graus negativos.
+\end{enumerate}
+
+O \emph{diagrama de Nyquist} de \(G(s)\) é a curva \(\text{Re}[G(j\omega)] \times \text{Im}[G(j\omega)]\) (parte real \(\times\) parte imaginária), com \(-\infty < \omega < \infty\).
+
+\hypertarget{margem-de-fase-e-margem-de-ganho}{%
+\section{Margem de fase e margem de ganho}\label{margem-de-fase-e-margem-de-ganho}}
+
+Considere \(F(s)\) em \eqref{eq:eq101}, que é a Função de Transferência em malha-fechada de \(G(s)\) com realimentação unitária. Relembre que \(F(s)\) é marginalmente estável com pólos em \(s = \pm j\omega\) se e somente se \(G(\pm j\omega) = 1 \angle−180^{\circ}\). Temos duas formas de medir a estabilidade relativa de \(F(s)\), pela \emph{margem de ganho} e pela \emph{margem de fase}:
+
+Margem de ganho no diagrama de Bode: a \emph{margem de ganho MG} é definida por
+
+\[
+  \boxed{MG = -|G(j\omega_\phi)|_{dB}, \quad \text{ onde } \omega_\phi \text{é tal que } \angle{G(j\omega_\phi)}=-180^\circ}.
+  \]
+
+Margem de fase no diagrama de Bode: a margem de fase MF é definida por
+
+\[
+  \boxed{MF = 180^\circ + \angle{G(j\omega_g)}, \quad \text{ onde } \omega_g \text{ é tal que } |G(j\omega_g)|_{dB}=0\text{ dB}}.
+  \]
+
+\hypertarget{projeto-do-controlador-proporcional-para-ajuste-da-margem-de-fase}{%
+\section{Projeto do controlador proporcional para ajuste da margem de fase}\label{projeto-do-controlador-proporcional-para-ajuste-da-margem-de-fase}}
 
 \hypertarget{problemas-laboratuxf3rio-10}{%
 \chapter*{Problemas Laboratório 10}\label{problemas-laboratuxf3rio-10}}
 \addcontentsline{toc}{chapter}{Problemas Laboratório 10}
+
+Utilize o pacote \texttt{rltool} do Matlab para determinar o diagrama de Bode e o diagrama de Nyquist de cada \(G(s)\) dada abaixo.
+
+\hypertarget{problema-10.1}{%
+\section*{Problema 10.1}\label{problema-10.1}}
+\addcontentsline{toc}{section}{Problema 10.1}
+
+Considere
+
+\[
+G(s) = \frac{2}{0.02s^3+0.3s^2+s}
+\]
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Determine o diagrama de Bode, \emph{MF} e \emph{MG}. O sistema em malha-fechada (com \(K=1\)) é estável? Justifique (veja o critério de estabilidade).
+\item
+  Determine o diagrama de Nyquist, \emph{MF}, \emph{MG}. Note que, conforme o esperado, \emph{MF} e \emph{MG} são iguais aos obtidos pelo diagrama de Bode.
+\item
+  Simule para uma referência \(r(t)\) do tipo degrau unitário para verificar a estabilidade em malha-fechada.
+\item
+  Comprove a estabilidade em malha-fechada também pelo LR.
+\end{enumerate}
+
+\hypertarget{resoluuxe7uxe3o-34}{%
+\subsubsection*{Resolução}\label{resoluuxe7uxe3o-34}}
+\addcontentsline{toc}{subsubsection}{Resolução}
+
+Working on it :)
+
+\hypertarget{problema-10.2}{%
+\section*{Problema 10.2}\label{problema-10.2}}
+\addcontentsline{toc}{section}{Problema 10.2}
+
+Considere
+
+\[
+G(s) = \frac{20}{0.02s^3+0.3s^2+s}
+\]
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Determine o diagrama de Bode, \emph{MF} e \emph{MG}. O sistema em malha-fechada (com \(K=1\)) é estável? Justifique (veja o critério de estabilidade).
+\item
+  Determine o diagrama de Nyquist, \emph{MF} e \emph{MG}. Note que, conforme o esperado, \emph{MF} e \emph{MG} são iguais pelo diagama de Bode.
+\item
+  Simule para uma referência \(r(t)\) do tipo degrau unitário para verificar a instabilidade em malha-fechada.
+\item
+  Comprove a instabilidade em malha-fechada também pelo LR.
+\end{enumerate}
+
+\hypertarget{resoluuxe7uxe3o-35}{%
+\subsubsection*{Resolução}\label{resoluuxe7uxe3o-35}}
+\addcontentsline{toc}{subsubsection}{Resolução}
+
+Working on it :)
+
+\hypertarget{problema-10.3}{%
+\section*{Problema 10.3}\label{problema-10.3}}
+\addcontentsline{toc}{section}{Problema 10.3}
+
+Considere
+
+\[
+G(s) \frac{0.1}{s^3+3s^2+2s}
+\]
+
+Suponha que temos um controlador proporcional \(C(s) = K > 0\) em série com \(G(s)\). Assim, a Função de Transferência em malha-aberta é
+
+\[
+KG(s) = K\frac{0.1}{s^3+3s^2+2s}
+\]
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Determine o diagrama de Bode, \emph{MF}, e a frequência \(\omega_g\) para os seguintes casos: \(K=1\), \(K=10\), \(K=40\), \(K=60\), \(K=80\). Dica: modifique \(K\) diretamente pelo \texttt{rltool}.
+\item
+  Em cada caso, analise a estabilidade em malha-fechada pelo critério e pelo LR, observando também que a resposta de fase não se altera, e que a resposta de amplitude possui a mesma forma,exceto por uma translação decorrente da variação do ganho \(K\) (relembre a Seção 4.4). Desse modo, perceba que variações no ganho \(K\) alteram a frequência \(\omega_g\), que por sua vez modifica \emph{MF} e a condição de estabilidade. Consequentemente, temos que a margem de fase \emph{MF} depende do ganho \(K\) escolhido.
+\end{enumerate}
+
+\hypertarget{resoluuxe7uxe3o-36}{%
+\subsubsection*{Resolução}\label{resoluuxe7uxe3o-36}}
+\addcontentsline{toc}{subsubsection}{Resolução}
+
+Working on it :)
+
+\hypertarget{problema-10.4}{%
+\section*{Problema 10.4}\label{problema-10.4}}
+\addcontentsline{toc}{section}{Problema 10.4}
+
+Considere o sistema de segunda ordem
+
+\[
+G(s) = \frac{0.9}{s^2+2}
+\]
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Determine o diagrama de Bode e \emph{MF}. Observe que a resposta de fase está sempre acima \(−180^\circ\) e nunca passa por \(−180^\circ\). Assim, \(MG = \infty\). O sistema em malha-fechada é estável para qualquer \(K > 0\)? Justifique (dica: veja a Observação 3). Verifique sua resposta pelo \emph{LR} e pela determinação da margem de fase de \(KG(s)\) para \(K = 0.1\), \(K = 1\), \(K = 50\), \(K = 200\).
+  b.Considere o sistema
+  \[
+  G_1(s) = \frac{0.9(0.5s + 1)}{s^2 + s},
+  \]
+  correspondente à introdução de um zero em \(s=-2\) em relação ao sistema do item (a). Observe que \emph{MF} aumentou, resultando em um maior ``grau de estabilidade'' em malha-fechada. Comprove este maior ``grau de estabilidade'' pelo \emph{LR}.
+\item
+  Agora, considere o sistema
+  \[
+  G_2(s) = \frac{0.9}{(s^2 + s)(0.5s + 1)},
+  \]
+  correspondente à introdução de um pólo em \(s = −2\) em relação ao sistema do item (a). Observe que \emph{MF} diminui, resultando em um menor ``grau de estabilidade'' em malha-fechada. Comprove este menor ``grau de estabilidade'' pelo \emph{LR}.
+\end{enumerate}
+
+\hypertarget{resoluuxe7uxe3o-37}{%
+\subsubsection*{Resolução}\label{resoluuxe7uxe3o-37}}
+\addcontentsline{toc}{subsubsection}{Resolução}
+
+Working on it :)
+
+\hypertarget{problema-10.5}{%
+\section*{Problema 10.5}\label{problema-10.5}}
+\addcontentsline{toc}{section}{Problema 10.5}
+
+Considere
+
+\[
+G(s) = \frac{40}{0.02s^3+0.3s^2+s}
+\]
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Determine o diagrama de Bode e \emph{MF}. Note que \(MF < 0\) e, portanto, o sistema em malha-fechada (com \(K = 1\)) é instável. Comprove isto pelo \emph{LR} e também por simulação para uma referência \(r(t)\) do tipo degrau unitário.
+\item
+  Desejamos encontrar o valor do ganho \(K > 0\) (se existir) de um controlador proporcional de modo que a margem de fase de \(KG(s)\) seja \(MF = 60^\circ\). Siga as etapas da Seção 5 para determinar que \(K \cong 0.048\).
+\item
+  Determine o diagrama de Bode de \(KG(s)\), verificando que sua margem de fase é realmente \(MF = 60^\circ\). Comprove a estabilidade em malha-fechada pelo \emph{LR} e também por simulação para uma referência \(r(t)\) do tipo degrau unitário.
+\end{enumerate}
+
+\hypertarget{resoluuxe7uxe3o-38}{%
+\subsubsection*{Resolução}\label{resoluuxe7uxe3o-38}}
+\addcontentsline{toc}{subsubsection}{Resolução}
 
 Working on it :)
 

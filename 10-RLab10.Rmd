@@ -1,3 +1,103 @@
 # Problemas Laboratório 10 {-}
 
+Utilize o pacote `rltool` do Matlab para determinar o diagrama de Bode e o diagrama de Nyquist de cada $G(s)$ dada abaixo.
+
+## Problema 10.1 {-}
+
+Considere
+
+$$
+G(s) = \frac{2}{0.02s^3+0.3s^2+s}
+$$
+
+a. Determine o diagrama de Bode, *MF* e *MG*. O sistema em malha-fechada (com $K=1$) é estável? Justifique (veja o critério de estabilidade).
+b. Determine o diagrama de Nyquist, *MF*, *MG*. Note que, conforme o esperado, *MF* e *MG* são iguais aos obtidos pelo diagrama de Bode.
+c. Simule para uma referência $r(t)$ do tipo degrau unitário para verificar a estabilidade em malha-fechada.
+d. Comprove a estabilidade em malha-fechada também pelo LR.
+
+#### Resolução {-}
+
+Working on it :)
+
+
+## Problema 10.2 {-}
+
+Considere
+
+$$
+G(s) = \frac{20}{0.02s^3+0.3s^2+s}
+$$
+
+a. Determine o diagrama de Bode, *MF* e *MG*. O sistema em malha-fechada (com $K=1$) é estável? Justifique (veja o critério de estabilidade).
+b. Determine o diagrama de Nyquist, *MF* e *MG*. Note que, conforme o esperado, *MF* e *MG* são iguais pelo diagama de Bode.
+c. Simule para uma referência $r(t)$ do tipo degrau unitário para verificar a instabilidade em malha-fechada.
+d. Comprove a instabilidade em malha-fechada também pelo LR.
+
+#### Resolução {-}
+
+Working on it :)
+
+
+## Problema 10.3 {-}
+
+Considere
+
+$$
+G(s) \frac{0.1}{s^3+3s^2+2s}
+$$
+
+Suponha que temos um controlador proporcional $C(s) = K > 0$ em série com $G(s)$. Assim, a Função de Transferência em malha-aberta é
+
+$$
+KG(s) = K\frac{0.1}{s^3+3s^2+2s}
+$$
+
+a. Determine o diagrama de Bode, *MF*, e a frequência $\omega_g$ para os seguintes casos: $K=1$, $K=10$, $K=40$, $K=60$, $K=80$. Dica: modifique $K$ diretamente pelo `rltool`.
+b.  Em cada caso, analise a estabilidade em malha-fechada pelo critério e pelo LR, observando também que a resposta de fase não se altera, e que a resposta de amplitude possui a mesma forma,exceto por uma translação decorrente da variação do ganho $K$ (relembre a Seção 4.4). Desse modo, perceba que variações no ganho $K$ alteram a frequência $\omega_g$, que por sua vez modifica *MF* e a condição de estabilidade. Consequentemente, temos que a margem de fase *MF* depende do ganho $K$ escolhido.
+
+#### Resolução {-}
+
+Working on it :)
+
+
+
+## Problema 10.4 {-}
+
+Considere o sistema de segunda ordem
+
+$$
+G(s) = \frac{0.9}{s^2+2}
+$$
+
+a. Determine o diagrama de Bode e *MF*. Observe que a resposta de fase está sempre acima $−180^\circ$ e nunca passa por $−180^\circ$. Assim, $MG = \infty$. O sistema em malha-fechada é estável para qualquer $K > 0$? Justifique (dica: veja a Observação 3). Verifique sua resposta pelo *LR* e pela determinação da margem de fase de $KG(s)$ para $K = 0.1$, $K = 1$, $K = 50$, $K = 200$.
+b.Considere o sistema
+$$
+G_1(s) = \frac{0.9(0.5s + 1)}{s^2 + s},
+$$
+correspondente à introdução de um zero em $s=-2$ em relação ao sistema do item (a). Observe que *MF* aumentou, resultando em um maior “grau de estabilidade” em malha-fechada. Comprove este maior “grau de estabilidade” pelo *LR*.
+c. Agora, considere o sistema
+$$
+G_2(s) = \frac{0.9}{(s^2 + s)(0.5s + 1)},
+$$
+correspondente à introdução de um pólo em $s = −2$ em relação ao sistema do item (a). Observe que *MF* diminui, resultando em um menor “grau de estabilidade” em malha-fechada. Comprove este menor “grau de estabilidade” pelo *LR*.
+
+
+#### Resolução {-}
+
+Working on it :)
+
+## Problema 10.5 {-}
+
+Considere
+
+$$
+G(s) = \frac{40}{0.02s^3+0.3s^2+s}
+$$
+
+a.  Determine o diagrama de Bode e *MF*. Note que $MF < 0$ e, portanto, o sistema em malha-fechada (com $K = 1$) é instável. Comprove isto pelo *LR* e também por simulação para uma referência $r(t)$ do tipo degrau unitário.
+b. Desejamos encontrar o valor do ganho $K > 0$ (se existir) de um controlador proporcional de modo que a margem de fase de $KG(s)$ seja $MF = 60^\circ$. Siga as etapas da Seção 5 para determinar que $K \cong 0.048$.
+c. Determine o diagrama de Bode de $KG(s)$, verificando que sua margem de fase é realmente $MF = 60^\circ$. Comprove a estabilidade em malha-fechada pelo *LR* e também por simulação para uma referência $r(t)$ do tipo degrau unitário.
+
+#### Resolução {-}
+
 Working on it :)

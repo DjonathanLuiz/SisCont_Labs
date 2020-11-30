@@ -197,8 +197,22 @@
 \contentsline {section}{Problema 9.6}{135}{section*.90}%
 \contentsline {subsubsection}{Resolução}{135}{section*.91}%
 \contentsline {chapter}{\numberline {10}Análise pelos Diagramas de Bode e Nyquist}{137}{chapter.10}%
-\contentsline {chapter}{Problemas Laboratório 10}{139}{chapter*.92}%
-\contentsline {chapter}{\numberline {11}Projeto de Controladores pelo Diagrama de Bode}{141}{chapter.11}%
-\contentsline {chapter}{Problemas Laboratório 11}{143}{chapter*.93}%
-\contentsline {chapter}{\numberline {12}Digitalização de Controladores Analógicos}{145}{chapter.12}%
-\contentsline {chapter}{Problemas Laboratório 12}{147}{chapter*.94}%
+\contentsline {section}{\numberline {10.1}Revisão de Estabilidade}{137}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Diagramas de Bode e Nyquist}{138}{section.10.2}%
+\contentsline {section}{\numberline {10.3}Margem de fase e margem de ganho}{138}{section.10.3}%
+\contentsline {section}{\numberline {10.4}Projeto do controlador proporcional para ajuste da margem de fase}{139}{section.10.4}%
+\contentsline {chapter}{Problemas Laboratório 10}{141}{chapter*.92}%
+\contentsline {section}{Problema 10.1}{141}{section*.93}%
+\contentsline {subsubsection}{Resolução}{141}{section*.94}%
+\contentsline {section}{Problema 10.2}{141}{section*.95}%
+\contentsline {subsubsection}{Resolução}{142}{section*.96}%
+\contentsline {section}{Problema 10.3}{142}{section*.97}%
+\contentsline {subsubsection}{Resolução}{142}{section*.98}%
+\contentsline {section}{Problema 10.4}{143}{section*.99}%
+\contentsline {subsubsection}{Resolução}{143}{section*.100}%
+\contentsline {section}{Problema 10.5}{143}{section*.101}%
+\contentsline {subsubsection}{Resolução}{144}{section*.102}%
+\contentsline {chapter}{\numberline {11}Projeto de Controladores pelo Diagrama de Bode}{145}{chapter.11}%
+\contentsline {chapter}{Problemas Laboratório 11}{147}{chapter*.103}%
+\contentsline {chapter}{\numberline {12}Digitalização de Controladores Analógicos}{149}{chapter.12}%
+\contentsline {chapter}{Problemas Laboratório 12}{151}{chapter*.104}%

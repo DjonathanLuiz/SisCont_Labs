@@ -1,7 +1,64 @@
-# Análise pelos Diagramas de Bode e Nyquist
+# Análise pelos Diagramas de Bode e Nyquist {#lab10}
 
-Working on it :)
+Nesta experiência, estudaremos o diagrama de Bode e o diagrama de Nyquist. Analisaremos a estabilidade do sistema em malha-fechada pela margem de ganho e pela margem de fase. Investigaremos a influência de pólos e zeros na margem de fase. Por fim, veremos como projetar um controlador proporcional de modo a ajustar a margem de fase.
+
+## Revisão de Estabilidade
+
+Considere o diagrama de blocos do processo $G(s)$ em malha-fechada da Figura \@ref(fig:fig10A1) , onde $r(t)$ é a referência, $y(t)$ é a saída e $u(t)$ é o controle.
+
+```{r fig10A1, fig.align='center', echo=FALSE, fig.cap='Diagrama de blocos do processo em malha-fechada.', out.width='50%'}
+knitr::include_graphics('Imagens/Lab10/Apresentação/fig1.jpg', dpi = NA)
+```
+
+A Função de Transferência em malha-fechada é dada por
+
+$$
+F(s) = \frac{Y(s)}{R(s)} = \frac{G(s)}{1+G(s)}.
+(\#eq:eq101)
+$$
+
+Relembramos que:
+
+1. $F(s)$ é estável quando todos os pólos estão no SPE, ou seja, possuem parte real negativa.
+2. $F(s)$ é instável quando possui ao menos um pólo no SPD (parte real positiva).
+3. $F(s)$ é marginalmente estável quando possui ao menos um pólo no eixo imaginário (parte real nula).
+4. $G(s)$ (processo) é de fase mínima quando todos os pólos e zeros estão no SPE.
+
+Na prática, no entanto, sempre teremos diferençaas entre o modelo matemático $G(s)$ e o processo real. Desse modo, o fato de termos F(s) estável nem sempre assegura que o processo real em malha-fechada será estável. Por este motivo, em muitos casos, desejamos saber também o “quão estável” é $F(s)$, ou seja, qual o “grau de estabilidade” de $F(s)$ ou o “quão longe” da instabilidade está $F(s)$. Isto é o que denominamos de estabilidade relativa.
+Veremos como definir matematicamente a estabilidade relativa na próxima seção.
+
+## Diagramas de Bode e Nyquist
+
+Seja $G(s)$ a Função de TransferÊncia de um sistema. O diagrama de Bode de $G(s)$ é composto por duas curvas:
+
+1. *Diagrama de amplitude*: é a curva $\omega \times |G(j\omega)|_{dB}$, onde a frequência $\omega \geq 0$ é apresentada em escala logarítmica e $|G(j\omega)|_{dB} = 20 \log |G(j\omega)|$.
+2. *Diagrama de fase*: é a curva $\omega \times\angle{G(j\omega)}$, onde $\omega \geq 0$ é dada em escala logarítmica e a fase $\angle{G(j\omega)}$ é apresentada em graus negativos.
+
+O *diagrama de Nyquist* de $G(s)$ é a curva $\text{Re}[G(j\omega)] \times \text{Im}[G(j\omega)]$ (parte real $\times$ parte imaginária), com $-\infty < \omega < \infty$.
+
+## Margem de fase e margem de ganho
+
+Considere $F(s)$ em \@ref(eq:eq101), que é a Função de Transferência em malha-fechada de $G(s)$ com realimentação unitária. Relembre que $F(s)$ é marginalmente estável com pólos em $s = \pm j\omega$ se e somente se $G(\pm j\omega) = 1 \angle−180^{\circ}$. Temos duas formas de medir a estabilidade relativa de $F(s)$, pela *margem de ganho* e pela *margem de fase*:
+
+<ol>
+  <li>
+  Margem de ganho no diagrama de Bode: a *margem de ganho MG* é definida por
+  
+  $$
+  \boxed{MG = -|G(j\omega_\phi)|_{dB}, \quad \text{ onde } \omega_\phi \text{é tal que } \angle{G(j\omega_\phi)}=-180^\circ}.
+  $$
+  </li>
+  <li>
+  Margem de fase no diagrama de Bode: a margem de fase MF é definida por
+  
+  $$
+  \boxed{MF = 180^\circ + \angle{G(j\omega_g)}, \quad \text{ onde } \omega_g \text{ é tal que } |G(j\omega_g)|_{dB}=0\text{ dB}}.
+  $$
+  </li>
+</ol>
 
 
+
+## Projeto do controlador proporcional para ajuste da margem de fase
 
 

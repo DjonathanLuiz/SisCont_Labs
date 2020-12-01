@@ -1,3 +1,127 @@
 # Problemas Laboratório 11 {-}
 
+Utilize o pacote `rltool` do Matlab para projetar os controladores dos
+problemas abaixo com base no digrama de Bode.
+
+## Problema 11.1 {-}
+
+Considere o sistema
+
+$$
+G(s) = \frac{1}{s(s+2)}.
+$$
+
+a. Determine um controlador avanço de fase $C(s)$ considerando que: (i) $MF \geq 60^\circ$ e (ii) $K_v \geq10$.
+b. Verifique que o controlador obtido realmente atende tais especificações.
+c. Determine $t_s(5\%)$ e a largura de banda $\omega_{LB}$ de malha-fechada (`Analysis` $\to$ `Closed-Loop Bode`).
+
+#### Resolução {-}
+
+##### Parte A{-}
+
+Tendo
+
+$$
+K\overline{K_v}\geq K_v
+$$
+
+Sabendo-se que $K_v \cong 0.5$, escolhe-se $K \geq 20$. Para $K=20$, tem-se $MF = 25.2$.
+
+```{r fig11RA1, fig.align='center', echo=FALSE, fig.cap='Resultado A', out.width='50%'}
+knitr::include_graphics('Imagens/Lab11/Resolução/fig1.jpg', dpi = NA)
+```
+
+E, tendo-se $\omega_c = 5.16$, e sendo
+
+$$
+C(s) = K\frac{\frac{1}{\omega_c}s +1}{\alpha\frac{1}{\omega_c}s+1}
+$$
+
+Portanto:
+
+$$
+C(s) = 20\frac{`r 1/5.16`s +1}{`r 0.1*1/5.16`s+1}
+$$
+
+##### Parte B {-}
+
+O Diagrama de Bode está apresentado na Figura \@ref(fig:fig11RA2).
+
+```{r fig11RA2, fig.align='center', echo=FALSE, fig.cap='Diagrama de Bode', out.width='50%'}
+knitr::include_graphics('Imagens/Lab11/Resolução/fig2.jpg', dpi = NA)
+```
+
+A simulação do sistema está apresentada na Figura \@ref(fig:fig11RA3).
+
+```{r fig11RA3, fig.align='center', echo=FALSE, fig.cap='Simulação', out.width='50%'}
+knitr::include_graphics('Imagens/Lab11/Resolução/fig3.jpg', dpi = NA)
+```
+
+##### Parte C {-}
+
+O $t_s(5\%)$ está apresentado na Figura \@ref(fig:fig11RA4).
+
+```{r fig11RA4, fig.align='center', echo=FALSE, fig.cap='Tempo de 5%', out.width='50%'}
+knitr::include_graphics('Imagens/Lab11/Resolução/fig4.jpg', dpi = NA)
+```
+
+## Problema 11.2 {-}
+
+Repita o item anterior para um controlador atraso de fase, comparando $t_s(5\%)$ e $\omega_{LB}$ de malha-fechada. Analise os resultados.
+
+#### Resolução {-}
+
 Working on it :)
+
+## Problema 11.3 {-}
+
+Considere o sistema
+
+$$
+G(s) = \frac{50}{s(s+5)(s+10)} = \frac{50}{s^3 + 15s^2 + 50s}
+$$
+
+a. Determine um controlador avanço de fase $C(s)$ considerando que: (i) $MF \geq20^\circ$ e (ii) $K_v \geq 20$.
+b. Verifique que o controlador obtido realmente atende tais especificações.
+
+#### Resolução
+
+##### Parte A{-}
+
+Tendo
+
+$$
+K\overline{K_v}\geq K_v
+$$
+
+Escolhe-se $K \geq 20$. Para $K=20$, tem-se $MF = -7.52$.
+
+```{r fig11RC1, fig.align='center', echo=FALSE, fig.cap='Resultado A', out.width='50%'}
+knitr::include_graphics('Imagens/Lab11/Resolução/fig5.jpg', dpi = NA)
+```
+
+E, tendo-se $\omega_c = 9.5$, e sendo
+
+$$
+C(s) = K\frac{\frac{1}{\omega_c}s +1}{\alpha\frac{1}{\omega_c}s+1}
+$$
+
+Portanto:
+
+$$
+C(s) = 20\frac{`r 1/9.5`s +1}{`r 0.1*1/9.5`s+1}
+$$
+
+##### Parte B {-}
+
+O Diagrama de Bode está apresentado na Figura \@ref(fig:fig11RC2).
+
+```{r fig11RC2, fig.align='center', echo=FALSE, fig.cap='Diagrama de Bode', out.width='50%'}
+knitr::include_graphics('Imagens/Lab11/Resolução/fig6.jpg', dpi = NA)
+```
+
+A simulação do sistema está apresentada na Figura \@ref(fig:fig11RC3).
+
+```{r fig11RC3, fig.align='center', echo=FALSE, fig.cap='Simulação', out.width='50%'}
+knitr::include_graphics('Imagens/Lab11/Resolução/fig7.jpg', dpi = NA)
+```

@@ -109,6 +109,13 @@ fig:fig10REA1
 fig:fig10REA2
 fig:fig10REC1
 fig:fig10REC2
+fig:fig11RA1
+fig:fig11RA2
+fig:fig11RA3
+fig:fig11RA4
+fig:fig11RC1
+fig:fig11RC2
+fig:fig11RC3
 simulação-de-sistemas
 lab2
 pólos-e-zeros
@@ -145,4 +152,5 @@ diagramas-de-bode-e-nyquist
 margem-de-fase-e-margem-de-ganho
 projeto-do-controlador-proporcional-para-ajuste-da-margem-de-fase
 projeto-de-controladores-pelo-diagrama-de-bode
+resolução-41
 digitalização-de-controladores-analógicos

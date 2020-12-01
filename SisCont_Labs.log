@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.1)  30 NOV 2020 22:04
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.1)  30 NOV 2020 23:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1722,40 +1722,70 @@ IAGRAMA DE BODE
 
 [158
 
-] [159]
+]
+File: Imagens/Lab11/Resolução/fig1.jpg Graphic file (type bmp)
+<Imagens/Lab11/Resolução/fig1.jpg>
+[159]
+File: Imagens/Lab11/Resolução/fig2.jpg Graphic file (type bmp)
+<Imagens/Lab11/Resolução/fig2.jpg>
+File: Imagens/Lab11/Resolução/fig3.jpg Graphic file (type bmp)
+<Imagens/Lab11/Resolução/fig3.jpg>
+File: Imagens/Lab11/Resolução/fig4.jpg Graphic file (type bmp)
+<Imagens/Lab11/Resolução/fig4.jpg>
+
 Overfull \hbox (40.83342pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 160 \TU/lmr/m/sl/10 CHAPTER 11.  PROJETO DE CONTROLADORES PELO D
 IAGRAMA DE BODE
  []
 
-[160
+[160] [161]
+File: Imagens/Lab11/Resolução/fig5.jpg Graphic file (type bmp)
+<Imagens/Lab11/Resolução/fig5.jpg>
+
+Overfull \hbox (40.83342pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 162 \TU/lmr/m/sl/10 CHAPTER 11.  PROJETO DE CONTROLADORES PELO D
+IAGRAMA DE BODE
+ []
+
+[162]
+File: Imagens/Lab11/Resolução/fig6.jpg Graphic file (type bmp)
+<Imagens/Lab11/Resolução/fig6.jpg>
+File: Imagens/Lab11/Resolução/fig7.jpg Graphic file (type bmp)
+<Imagens/Lab11/Resolução/fig7.jpg>
+[163]
+Overfull \hbox (40.83342pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 164 \TU/lmr/m/sl/10 CHAPTER 11.  PROJETO DE CONTROLADORES PELO D
+IAGRAMA DE BODE
+ []
+
+[164
 
 ]
 Chapter 12.
-[161]
+[165]
 Overfull \hbox (6.85674pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 162 \TU/lmr/m/sl/10 CHAPTER 12.  DIGITALIZAÇÃO DE CONTROLADORES 
+\TU/lmr/m/n/10 166 \TU/lmr/m/sl/10 CHAPTER 12.  DIGITALIZAÇÃO DE CONTROLADORES 
 ANALÓGICOS
  []
 
-[162
+[166
 
 ]
 No file SisCont_Labs.bbl.
-[163] (./SisCont_Labs.aux)
+[167] (./SisCont_Labs.aux)
 Package rerunfilecheck Info: File `SisCont_Labs.out' has not changed.
-(rerunfilecheck)             Checksum: 47A9E79D64F3F7576ED73947F775EC2E;16192.
+(rerunfilecheck)             Checksum: D02E46A583DF5CB1CAECF756D5B895A7;16573.
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 18914 strings out of 479410
- 350674 string characters out of 5878655
- 801010 words of memory out of 5000000
- 37913 multiletter control sequences out of 15000+600000
+ 19018 strings out of 479410
+ 353733 string characters out of 5878655
+ 802857 words of memory out of 5000000
+ 38016 multiletter control sequences out of 15000+600000
  542556 words of font info for 95 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
  94i,10n,118p,1043b,499s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on SisCont_Labs.pdf (163 pages).
+Output written on SisCont_Labs.pdf (167 pages).

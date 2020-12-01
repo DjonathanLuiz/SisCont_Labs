@@ -3733,7 +3733,200 @@ Working on it :)
 \chapter*{Problemas Laboratório 11}\label{problemas-laboratuxf3rio-11}}
 \addcontentsline{toc}{chapter}{Problemas Laboratório 11}
 
+Utilize o pacote \texttt{rltool} do Matlab para projetar os controladores dos
+problemas abaixo com base no digrama de Bode.
+
+\hypertarget{problema-11.1}{%
+\section*{Problema 11.1}\label{problema-11.1}}
+\addcontentsline{toc}{section}{Problema 11.1}
+
+Considere o sistema
+
+\[
+G(s) = \frac{1}{s(s+2)}.
+\]
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Determine um controlador avanço de fase \(C(s)\) considerando que: (i) \(MF \geq 60^\circ\) e (ii) \(K_v \geq10\).
+\item
+  Verifique que o controlador obtido realmente atende tais especificações.
+\item
+  Determine \(t_s(5\%)\) e a largura de banda \(\omega_{LB}\) de malha-fechada (\texttt{Analysis} \(\to\) \texttt{Closed-Loop\ Bode}).
+\end{enumerate}
+
+\hypertarget{resoluuxe7uxe3o-39}{%
+\subsubsection*{Resolução}\label{resoluuxe7uxe3o-39}}
+\addcontentsline{toc}{subsubsection}{Resolução}
+
+\hypertarget{parte-a-18}{%
+\paragraph{Parte A}\label{parte-a-18}}
+\addcontentsline{toc}{paragraph}{Parte A}
+
+Tendo
+
+\[
+K\overline{K_v}\geq K_v
+\]
+
+Sabendo-se que \(K_v \cong 0.5\), escolhe-se \(K \geq 20\). Para \(K=20\), tem-se \(MF = 25.2\).
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{Imagens/Lab11/Resolução/fig1} 
+
+}
+
+\caption{Resultado A}\label{fig:fig11RA1}
+\end{figure}
+
+E, tendo-se \(\omega_c = 5.16\), e sendo
+
+\[
+C(s) = K\frac{\frac{1}{\omega_c}s +1}{\alpha\frac{1}{\omega_c}s+1}
+\]
+
+Portanto:
+
+\[
+C(s) = 20\frac{0.1937984s +1}{0.0193798s+1}
+\]
+
+\hypertarget{parte-b-18}{%
+\paragraph{Parte B}\label{parte-b-18}}
+\addcontentsline{toc}{paragraph}{Parte B}
+
+O Diagrama de Bode está apresentado na Figura \ref{fig:fig11RA2}.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{Imagens/Lab11/Resolução/fig2} 
+
+}
+
+\caption{Diagrama de Bode}\label{fig:fig11RA2}
+\end{figure}
+
+A simulação do sistema está apresentada na Figura \ref{fig:fig11RA3}.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{Imagens/Lab11/Resolução/fig3} 
+
+}
+
+\caption{Simulação}\label{fig:fig11RA3}
+\end{figure}
+
+\hypertarget{parte-c-13}{%
+\paragraph{Parte C}\label{parte-c-13}}
+\addcontentsline{toc}{paragraph}{Parte C}
+
+O \(t_s(5\%)\) está apresentado na Figura \ref{fig:fig11RA4}.
+
+\textbackslash begin\{figure\}
+
+\{\centering \includegraphics[width=0.5\linewidth]{Imagens/Lab11/Resolução/fig4}
+
+\}
+
+\textbackslash caption\{Tempo de 5\%\}\label{fig:fig11RA4}
+\textbackslash end\{figure\}
+
+\hypertarget{problema-11.2}{%
+\section*{Problema 11.2}\label{problema-11.2}}
+\addcontentsline{toc}{section}{Problema 11.2}
+
+Repita o item anterior para um controlador atraso de fase, comparando \(t_s(5\%)\) e \(\omega_{LB}\) de malha-fechada. Analise os resultados.
+
+\hypertarget{resoluuxe7uxe3o-40}{%
+\subsubsection*{Resolução}\label{resoluuxe7uxe3o-40}}
+\addcontentsline{toc}{subsubsection}{Resolução}
+
 Working on it :)
+
+\hypertarget{problema-11.3}{%
+\section*{Problema 11.3}\label{problema-11.3}}
+\addcontentsline{toc}{section}{Problema 11.3}
+
+Considere o sistema
+
+\[
+G(s) = \frac{50}{s(s+5)(s+10)} = \frac{50}{s^3 + 15s^2 + 50s}
+\]
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Determine um controlador avanço de fase \(C(s)\) considerando que: (i) \(MF \geq20^\circ\) e (ii) \(K_v \geq 20\).
+\item
+  Verifique que o controlador obtido realmente atende tais especificações.
+\end{enumerate}
+
+\hypertarget{resoluuxe7uxe3o-41}{%
+\subsubsection{Resolução}\label{resoluuxe7uxe3o-41}}
+
+\hypertarget{parte-a-19}{%
+\paragraph{Parte A}\label{parte-a-19}}
+\addcontentsline{toc}{paragraph}{Parte A}
+
+Tendo
+
+\[
+K\overline{K_v}\geq K_v
+\]
+
+Escolhe-se \(K \geq 20\). Para \(K=20\), tem-se \(MF = -7.52\).
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{Imagens/Lab11/Resolução/fig5} 
+
+}
+
+\caption{Resultado A}\label{fig:fig11RC1}
+\end{figure}
+
+E, tendo-se \(\omega_c = 9.5\), e sendo
+
+\[
+C(s) = K\frac{\frac{1}{\omega_c}s +1}{\alpha\frac{1}{\omega_c}s+1}
+\]
+
+Portanto:
+
+\[
+C(s) = 20\frac{0.1052632s +1}{0.0105263s+1}
+\]
+
+\hypertarget{parte-b-19}{%
+\paragraph{Parte B}\label{parte-b-19}}
+\addcontentsline{toc}{paragraph}{Parte B}
+
+O Diagrama de Bode está apresentado na Figura \ref{fig:fig11RC2}.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{Imagens/Lab11/Resolução/fig6} 
+
+}
+
+\caption{Diagrama de Bode}\label{fig:fig11RC2}
+\end{figure}
+
+A simulação do sistema está apresentada na Figura \ref{fig:fig11RC3}.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{Imagens/Lab11/Resolução/fig7} 
+
+}
+
+\caption{Simulação}\label{fig:fig11RC3}
+\end{figure}
 
 \hypertarget{digitalizauxe7uxe3o-de-controladores-analuxf3gicos}{%
 \chapter{Digitalização de Controladores Analógicos}\label{digitalizauxe7uxe3o-de-controladores-analuxf3gicos}}

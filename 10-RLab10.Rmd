@@ -191,7 +191,74 @@ correspondente à introdução de um pólo em $s = −2$ em relação ao sistema
 
 #### Resolução {-}
 
-Working on it :)
+##### Parte A {-}
+
+A simulação está apresentada na Figura \@ref(fig:fig10RCD1). De acordo com a observação 3 temos que o sistema em malha-fechada é estável.
+
+```{r fig10RCD1, fig.align='center', echo=FALSE, fig.cap='Resultado A', out.width='50%'}
+knitr::include_graphics('Imagens/Lab10/Resolução/fig14.jpg', dpi = NA)
+```
+
+As respostas para os diferentes valores de $K$ estão apresentados nas Figuras \@ref(fig:fig10RCD2), \@ref(fig:fig10RCD3), \@ref(fig:fig10RCD4), \@ref(fig:fig10RCD5), \@ref(fig:fig10RCD6), \@ref(fig:fig10RCD7), \@ref(fig:fig10RCD8) e \@ref(fig:fig10RCD9).
+
+```{r fig10RCD2, fig.align='center', echo=FALSE, fig.cap='Resultado para $K = 0.1$', out.width='50%'}
+knitr::include_graphics('Imagens/Lab10/Resolução/fig16a.jpg', dpi = NA)
+```
+
+```{r fig10RCD3, fig.align='center', echo=FALSE, fig.cap='Resultado para $K = 0.1$', out.width='50%'}
+knitr::include_graphics('Imagens/Lab10/Resolução/fig16b.jpg', dpi = NA)
+```
+
+```{r fig10RCD4, fig.align='center', echo=FALSE, fig.cap='Resultado para $K = 1$', out.width='50%'}
+knitr::include_graphics('Imagens/Lab10/Resolução/fig17a.jpg', dpi = NA)
+```
+
+```{r fig10RCD5, fig.align='center', echo=FALSE, fig.cap='Resultado para $K = 1$', out.width='50%'}
+knitr::include_graphics('Imagens/Lab10/Resolução/fig17b.jpg', dpi = NA)
+```
+
+```{r fig10RCD6, fig.align='center', echo=FALSE, fig.cap='Resultado para $K = 50$', out.width='50%'}
+knitr::include_graphics('Imagens/Lab10/Resolução/fig18a.jpg', dpi = NA)
+```
+
+```{r fig10RCD7, fig.align='center', echo=FALSE, fig.cap='Resultado para $K = 50$', out.width='50%'}
+knitr::include_graphics('Imagens/Lab10/Resolução/fig18b.jpg', dpi = NA)
+```
+
+```{r fig10RCD8, fig.align='center', echo=FALSE, fig.cap='Resultado para $K = 200$', out.width='50%'}
+knitr::include_graphics('Imagens/Lab10/Resolução/fig19a.jpg', dpi = NA)
+```
+
+```{r fig10RCD9, fig.align='center', echo=FALSE, fig.cap='Resultado para $K = 200$', out.width='50%'}
+knitr::include_graphics('Imagens/Lab10/Resolução/fig19b.jpg', dpi = NA)
+```
+
+##### Parte B {-}
+
+Os valores estão apresentados nas Figuras \@ref(fig:fig10RCD10), \@ref(fig:fig10RCD11).
+
+```{r fig10RCD10, fig.align='center', echo=FALSE, fig.cap='MF$', out.width='50%'}
+knitr::include_graphics('Imagens/Lab10/Resolução/fig20.jpg', dpi = NA)
+```
+
+```{r fig10RCD11, fig.align='center', echo=FALSE, fig.cap='LR$', out.width='50%'}
+knitr::include_graphics('Imagens/Lab10/Resolução/fig20b.jpg', dpi = NA)
+```
+
+##### Parte C {-}
+
+
+Os valores estão apresentados nas Figuras \@ref(fig:fig10RCD12), \@ref(fig:fig10RCD13).
+
+```{r fig10RCD12, fig.align='center', echo=FALSE, fig.cap='MF$', out.width='50%'}
+knitr::include_graphics('Imagens/Lab10/Resolução/fig21a.jpg', dpi = NA)
+```
+
+```{r fig10RCD13, fig.align='center', echo=FALSE, fig.cap='LR$', out.width='50%'}
+knitr::include_graphics('Imagens/Lab10/Resolução/fig21b.jpg', dpi = NA)
+```
+
+
 
 ## Problema 10.5 {-}
 

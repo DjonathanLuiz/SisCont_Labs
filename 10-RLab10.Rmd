@@ -274,4 +274,30 @@ c. Determine o diagrama de Bode de $KG(s)$, verificando que sua margem de fase �
 
 #### Resolução {-}
 
+##### Parte A {-}
+
+Os resultados estão apresentados nas Figuras \@ref(fig:fig10REA1) e \@ref(fig:fig10REA2).
+
+```{r fig10REA1, fig.align='center', echo=FALSE, fig.cap='LR', out.width='50%'}
+knitr::include_graphics('Imagens/Lab10/Resolução/fig22a.jpg', dpi = NA)
+```
+
+```{r fig10REA2, fig.align='center', echo=FALSE, fig.cap='Bode', out.width='50%'}
+knitr::include_graphics('Imagens/Lab10/Resolução/fig22b.jpg', dpi = NA)
+```
+
+##### Parte B {-}
+
 Working on it :)
+
+##### Parte C {-}
+
+Os resultados estão apresentados nas Figuras \@ref(fig:fig10REC1) e \@ref(fig:fig10REC2).
+
+```{r fig10REC1, fig.align='center', echo=FALSE, fig.cap='LR', out.width='50%'}
+knitr::include_graphics('Imagens/Lab10/Resolução/fig23a.jpg', dpi = NA)
+```
+
+```{r fig10REC2, fig.align='center', echo=FALSE, fig.cap='Bode', out.width='50%'}
+knitr::include_graphics('Imagens/Lab10/Resolução/fig23b.jpg', dpi = NA)
+```

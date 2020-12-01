@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.1)  30 NOV 2020 21:52
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.1)  30 NOV 2020 22:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1696,16 +1696,25 @@ File: Imagens/Lab10/Resolução/fig21a.jpg Graphic file (type bmp)
 File: Imagens/Lab10/Resolução/fig21b.jpg Graphic file (type bmp)
 <Imagens/Lab10/Resolução/fig21b.jpg>
 [154]
+File: Imagens/Lab10/Resolução/fig22a.jpg Graphic file (type bmp)
+<Imagens/Lab10/Resolução/fig22a.jpg>
+File: Imagens/Lab10/Resolução/fig22b.jpg Graphic file (type bmp)
+<Imagens/Lab10/Resolução/fig22b.jpg>
+File: Imagens/Lab10/Resolução/fig23a.jpg Graphic file (type bmp)
+<Imagens/Lab10/Resolução/fig23a.jpg>
+File: Imagens/Lab10/Resolução/fig23b.jpg Graphic file (type bmp)
+<Imagens/Lab10/Resolução/fig23b.jpg>
+
 Overfull \hbox (115.42012pt too wide) has occurred while \output is active
 \TU/lmr/m/sl/10 10.4.  PROJETO DO CONTROLADOR PROPORCIONAL PARA AJUSTE DA MARGE
 M DE FASE \TU/lmr/m/n/10 155
  []
 
-[155] [156
+[155] [156]
+Chapter 11.
+[157
 
 ]
-Chapter 11.
-[157]
 Overfull \hbox (40.83342pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 158 \TU/lmr/m/sl/10 CHAPTER 11.  PROJETO DE CONTROLADORES PELO D
 IAGRAMA DE BODE
@@ -1741,10 +1750,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 18855 strings out of 479410
- 348882 string characters out of 5878655
- 800708 words of memory out of 5000000
- 37858 multiletter control sequences out of 15000+600000
+ 18914 strings out of 479410
+ 350674 string characters out of 5878655
+ 801010 words of memory out of 5000000
+ 37913 multiletter control sequences out of 15000+600000
  542556 words of font info for 95 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
  94i,10n,118p,1043b,499s stack positions out of 5000i,500n,10000p,200000b,80000s

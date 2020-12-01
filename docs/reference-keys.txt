@@ -105,6 +105,10 @@ fig:fig10RCD10
 fig:fig10RCD11
 fig:fig10RCD12
 fig:fig10RCD13
+fig:fig10REA1
+fig:fig10REA2
+fig:fig10REC1
+fig:fig10REC2
 simulação-de-sistemas
 lab2
 pólos-e-zeros

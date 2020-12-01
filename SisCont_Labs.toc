@@ -238,6 +238,12 @@
 \contentsline {paragraph}{\numberline {10.4.0.0.13}Parte C}{153}{paragraph.10.4.0.0.13}%
 \contentsline {section}{Problema 10.5}{154}{section*.101}%
 \contentsline {subsubsection}{Resolução}{155}{section*.102}%
+\contentsline {paragraph}{Parte A}{155}{paragraph.10.4.0.0.14}%
+\contentsline {paragraph}{\numberline {10.4.0.0.14}Parte A}{155}{paragraph.10.4.0.0.14}%
+\contentsline {paragraph}{Parte B}{155}{paragraph.10.4.0.0.15}%
+\contentsline {paragraph}{\numberline {10.4.0.0.15}Parte B}{155}{paragraph.10.4.0.0.15}%
+\contentsline {paragraph}{Parte C}{155}{paragraph.10.4.0.0.16}%
+\contentsline {paragraph}{\numberline {10.4.0.0.16}Parte C}{155}{paragraph.10.4.0.0.16}%
 \contentsline {chapter}{\numberline {11}Projeto de Controladores pelo Diagrama de Bode}{157}{chapter.11}%
 \contentsline {chapter}{Problemas Laboratório 11}{159}{chapter*.103}%
 \contentsline {chapter}{\numberline {12}Digitalização de Controladores Analógicos}{161}{chapter.12}%
